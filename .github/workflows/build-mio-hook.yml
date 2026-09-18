@@ -1,0 +1,53 @@
+name: Build MIO low-cost hook variant
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-mio-hook.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SOURCE_URL: "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/67be5dc5664972e84bcd3903/6aa6312aea19ca0bde329a87/6aa923ec2ed6f71891913108_video.mp4"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install ffmpeg
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Build controlled hook variant
+        shell: bash
+        run: |
+          mkdir -p media
+          curl --fail --location --retry 3 "$SOURCE_URL" -o source.mp4
+          ffmpeg -hide_banner -loglevel warning -y -i source.mp4 \
+            -filter_complex "              [0:v]trim=start=0:end=0.8,setpts=PTS-STARTPTS,crop=iw/1.08:ih/1.08:(iw-ow)/2:(ih-oh)/2,scale=1080:1920[v0];              [0:v]trim=start=0.8:end=5,setpts=PTS-STARTPTS,scale=1080:1920[v1];              [v0][v1]concat=n=2:v=1:a=0[v]" \
+            -map "[v]" -an -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart \
+            media/mio-hook-002.mp4
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,width,height -of json media/mio-hook-002.mp4
+          SIZE=$(stat -c%s media/mio-hook-002.mp4)
+          test "$SIZE" -gt 10000
+          test "$SIZE" -lt 95000000
+      - name: Commit durable public asset
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/mio-hook-002.mp4
+          if git diff --cached --quiet; then
+            echo "Asset unchanged."
+            exit 0
+          fi
+          git commit -m "Add MIO low-cost hook variant"
+          git pull --rebase origin main
+          git push
