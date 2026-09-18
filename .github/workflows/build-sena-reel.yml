@@ -1,0 +1,53 @@
+name: Build SENA reel format test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-sena-reel.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SOURCE_URL: "https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3.1-flash-lite-image/images/5882c9ac-bb25-479e-a947-6e760bb2a53c/149376da-527c-4b8e-87f5-e4b55cd8cce4/Use__sena_as_the_identity_reference__Keep_the_same_adult_fic.jpg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjBkMDRkMTg3ZTQ3MGY4MCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc4OTgwNjM2MH0.qZbpfFIDdXdtTDZ_yONexLfaBuZejj4ri7aB_Lk91P0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install ffmpeg
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Build vertical reel from existing SENA creative
+        shell: bash
+        run: |
+          mkdir -p media
+          curl --fail --location --retry 3 "$SOURCE_URL" -o sena-source.jpg
+          ffmpeg -hide_banner -loglevel warning -y -loop 1 -i sena-source.jpg \
+            -filter_complex "              [0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=30[bg];              [0:v]scale=980:-2[fg];              [bg][fg]overlay=(W-w)/2:(H-h)/2,zoompan=z='min(zoom+0.00025,1.035)':d=180:s=1080x1920:fps=30[v]" \
+            -map "[v]" -t 6 -an -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart \
+            media/sena-reel-format-test-001.mp4
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,width,height -of json media/sena-reel-format-test-001.mp4
+          SIZE=$(stat -c%s media/sena-reel-format-test-001.mp4)
+          test "$SIZE" -gt 10000
+          test "$SIZE" -lt 95000000
+      - name: Commit durable reel asset
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/sena-reel-format-test-001.mp4
+          if git diff --cached --quiet; then
+            echo "Asset unchanged."
+            exit 0
+          fi
+          git commit -m "Add SENA reel format test asset"
+          git pull --rebase origin main
+          git push
