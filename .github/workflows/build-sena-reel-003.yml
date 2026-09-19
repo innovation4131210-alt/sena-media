@@ -1,0 +1,56 @@
+name: Build SENA reel replication 003
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-sena-reel-003.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install ffmpeg
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Fetch exact paired static source
+        shell: bash
+        env:
+          SOURCE_URL: "https://buffer-media-uploads.s3.amazonaws.com/6aa723c842d6dc792a0a1ee1/6aa72f7278e1a25e5f037c38/48cdb21a16c085fc232d34b621a5f118.original.png"
+        run: |
+          set -e
+          curl -fL --retry 3 --retry-delay 2 "$SOURCE_URL" -o /tmp/sena-control-003.png
+          test -s /tmp/sena-control-003.png
+      - name: Build paired Reel with format-only change
+        shell: bash
+        run: |
+          set -e
+          ffmpeg -hide_banner -loglevel warning -y -loop 1 -i /tmp/sena-control-003.png             -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=30[bg];[0:v]scale=980:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,zoompan=z='min(zoom+0.00025,1.035)':d=180:s=1080x1920:fps=30[v]"             -map "[v]" -t 6 -an -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart             media/sena-reel-format-test-003.mp4
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,width,height -of json media/sena-reel-format-test-003.mp4
+          SIZE=$(stat -c%s media/sena-reel-format-test-003.mp4)
+          test "$SIZE" -gt 10000
+          test "$SIZE" -lt 95000000
+      - name: Commit durable paired Reel
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/sena-reel-format-test-003.mp4
+          if git diff --cached --quiet; then
+            echo "Asset unchanged."
+            exit 0
+          fi
+          git commit -m "Add SENA paired Reel replication 003"
+          git pull --rebase origin main
+          git push
