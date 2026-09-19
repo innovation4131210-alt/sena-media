@@ -1,0 +1,47 @@
+name: Build MIO Instagram growth reel 002
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-mio-instagram-002.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Build zero-credit Instagram Reel
+        shell: bash
+        run: |
+          set -e
+          test -s media/54613924-5877-4C81-A2A6-72E69C259AD7.png
+          ffmpeg -hide_banner -loglevel warning -y -loop 1             -i media/54613924-5877-4C81-A2A6-72E69C259AD7.png             -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=24[bg];[0:v]scale=1000:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,zoompan=z='1.02+0.00022*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=180:s=1080x1920:fps=30[v]"             -map "[v]" -t 6 -an -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart             media/mio-ig-growth-002.mp4
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,width,height -of json media/mio-ig-growth-002.mp4
+          SIZE=$(stat -c%s media/mio-ig-growth-002.mp4)
+          test "$SIZE" -gt 10000
+          test "$SIZE" -lt 95000000
+      - name: Commit durable Reel
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/mio-ig-growth-002.mp4
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Add MIO Instagram growth Reel 002"
+          git pull --rebase origin main
+          git push
