@@ -38,7 +38,7 @@ build_one() {
     -loop 1 -framerate "$FPS" -t 2 -i "$s1" \
     -loop 1 -framerate "$FPS" -t 2 -i "$s2" \
     -loop 1 -framerate "$FPS" -t 2 -i "$s3" \
-    -filter_complex "[0:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(4*t)':y='(ih-oh)/2+3*sin(3*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v0];[1:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2-3*sin(3*t)':y='(ih-oh)/2+4*sin(4*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v1];[2:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(5*t)':y='(ih-oh)/2-3*sin(2*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v2];[v0][v1][v2]concat=n=3:v=1:a=0,format=yuv420p[v]" \
+    -filter_complex "[0:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(4*t)':y='(ih-oh)/2+3*sin(3*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v0];[1:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2-3*sin(3*t)':y='(ih-oh)/2+4*sin(4*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v1];[2:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(5*t)':y='(ih-oh)/2-3*sin(2*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v2];[v0][v1][v2]concat=n=3:v=1:a=0,fps=30,settb=1/30,setpts=N,format=yuv420p[v]" \
     -map "[v]" -an -t 6 \
     -c:v libx264 -preset medium -crf 19 -pix_fmt yuv420p \
     -movflags +faststart -map_metadata -1 "$out"
