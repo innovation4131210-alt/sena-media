@@ -27,6 +27,7 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
           DMM_API_ID: ${{ secrets.DMM_API_ID }}
+          ENABLE_DMM_MEDIA: "false"
         run: python3 automation/dmm-x/buffer_queue.py
       - name: Save posting history
         if: always()
