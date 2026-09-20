@@ -28,6 +28,9 @@ def main():
     safe = {
         "top_level_keys": sorted(item.keys()),
         "prices_schema": key_tree(item.get("prices") or {}),
+        "campaign_schema": key_tree(item.get("campaign") or {}),
+        "review_schema": key_tree(item.get("review") or {}),
+        "date_type": type(item.get("date")).__name__,
         "imageURL_schema": key_tree(item.get("imageURL") or {}),
         "sampleImageURL_schema": key_tree(item.get("sampleImageURL") or {}),
         "sampleMovieURL_schema": key_tree(item.get("sampleMovieURL") or {}),
