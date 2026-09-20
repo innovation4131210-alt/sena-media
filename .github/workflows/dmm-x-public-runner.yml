@@ -2,6 +2,10 @@ name: Queue DMM X daily batch (public runner)
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "automation/dmm-x/run-trigger.txt"
 
 permissions:
   contents: write
