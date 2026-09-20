@@ -13,6 +13,7 @@ DMM_API_URL = "https://api.dmm.com/affiliate/v3/ItemList"
 BUFFER_KEY = os.environ.get("BUFFER_API_KEY", "").strip()
 DMM_API_ID = os.environ.get("DMM_API_ID", "").strip()
 RUN_SCHEDULE = os.environ.get("RUN_SCHEDULE", "").strip()
+ENABLE_DMM_MEDIA = os.environ.get("ENABLE_DMM_MEDIA", "false").strip().lower() == "true"
 DMM_AFFILIATE_ID = "eromimimimi-990"
 STATE_PATH = Path("automation/dmm-x/state.json")
 
@@ -149,13 +150,36 @@ def build_decision_text(template_index, title, sort_order, affiliate_url, facts=
     short_title = compact_title(title, limit=48)
     meta = meta or {}
     discount = int(meta.get("discount_pct") or 0)
+    campaign = bool(meta.get("campaign_active"))
+    recent = bool(meta.get("recent_release"))
 
-    if discount >= 10:
+    if campaign and discount >= 10:
         body = (
-            f"【PR】今夜は買い時が分かりやすい1本。約{discount}%OFFになっています。\n"
+            f"【PR】今夜はキャンペーン対象＋約{discount}%OFFの1本。\n"
+            f"『{short_title}』"
+            + facts_line(facts)
+            + "\n今見る理由がはっきりしている候補です。18歳未満閲覧禁止。"
+        )
+    elif discount >= 10:
+        body = (
+            f"【PR】今夜は買い時が分かりやすい1本。約{discount}%OFF。\n"
             f"『{short_title}』"
             + facts_line(facts)
             + "\n価格条件を確認するならこちら。18歳未満閲覧禁止。"
+        )
+    elif campaign:
+        body = (
+            f"【PR】キャンペーン対象から1本だけ。\n"
+            f"『{short_title}』"
+            + facts_line(facts)
+            + "\n今の候補として確認するならこちら。18歳未満閲覧禁止。"
+        )
+    elif recent:
+        body = (
+            f"【PR】新着側から今夜の候補を1本。\n"
+            f"『{short_title}』"
+            + facts_line(facts)
+            + "\n新しい作品を先に見るならこちら。18歳未満閲覧禁止。"
         )
     else:
         template = DECISION_TEMPLATES[template_index % len(DECISION_TEMPLATES)]
@@ -228,6 +252,52 @@ def main_image_url(item):
     return str(images.get("large") or images.get("list") or images.get("small") or "").strip()
 
 
+def parse_dmm_datetime(value):
+    text = str(value or "").strip()
+    if not text:
+        return None
+    for candidate in (text, text.replace("/", "-")):
+        try:
+            return datetime.fromisoformat(candidate.replace("Z", "+00:00"))
+        except ValueError:
+            pass
+        try:
+            return datetime.strptime(candidate[:19], "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            pass
+    return None
+
+
+def active_campaign(item):
+    campaigns = item.get("campaign") or []
+    if isinstance(campaigns, dict):
+        campaigns = [campaigns]
+    now = datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    for campaign in campaigns:
+        if not isinstance(campaign, dict):
+            continue
+        begin = parse_dmm_datetime(campaign.get("date_begin"))
+        end = parse_dmm_datetime(campaign.get("date_end"))
+        if begin is not None and begin.tzinfo is not None:
+            begin = begin.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
+        if end is not None and end.tzinfo is not None:
+            end = end.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
+        if (begin is None or begin <= now) and (end is None or now <= end):
+            return True
+    return False
+
+
+def recent_release(item, days=14):
+    released = parse_dmm_datetime(item.get("date"))
+    if released is None:
+        return False
+    if released.tzinfo is not None:
+        released = released.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    now = datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    delta = now - released
+    return timedelta(0) <= delta <= timedelta(days=days)
+
+
 def review_values(item):
     review = item.get("review") or {}
     try:
@@ -265,6 +335,8 @@ def eligible_candidates(items, used_ids):
             "list_price": list_price_value(item),
             "discount_pct": discount_percent(item),
             "image_url": main_image_url(item),
+            "campaign_active": active_campaign(item),
+            "recent_release": recent_release(item),
             "review_average": average,
             "review_count": review_count,
         })
@@ -287,7 +359,9 @@ def choose_conversion_candidate(candidates):
             discount_tier = 1
         else:
             discount_tier = 2
+        trend_tier = 0 if c.get("campaign_active") else (1 if c.get("recent_release") else 2)
         return (
+            trend_tier,
             discount_tier,
             -discount,
             c["price"] is None,
@@ -326,20 +400,31 @@ def choose_product(used_ids, preferred_sort):
                     "review_average": chosen["review_average"],
                     "review_count": chosen["review_count"],
                     "image_url": chosen["image_url"],
+                    "campaign_active": bool(chosen.get("campaign_active")),
+                    "recent_release": bool(chosen.get("recent_release")),
                 },
             )
     raise RuntimeError("No eligible unpublished DMM product was found")
 
 
-def create_post(text, channel_id, *, first_reply=None):
+def create_post(text, channel_id, *, first_reply=None, image_url=None):
+    image_url = str(image_url or "").strip() if ENABLE_DMM_MEDIA else ""
+    top_assets = ""
     metadata = ""
+
     if first_reply:
+        root_assets = ""
+        if image_url:
+            root_assets = ", assets: [{ image: { url: " + esc(image_url) + " } }]"
         metadata = (
             ", metadata: { twitter: { thread: ["
-            + "{ text: " + esc(text) + " }, "
+            + "{ text: " + esc(text) + root_assets + " }, "
             + "{ text: " + esc(first_reply) + " }"
             + "] } }"
         )
+    elif image_url:
+        top_assets = ", assets: [{ image: { url: " + esc(image_url) + " } }]"
+
     mutation = """mutation {
       createPost(input: {
         text: %s,
@@ -347,11 +432,12 @@ def create_post(text, channel_id, *, first_reply=None):
         schedulingType: automatic,
         mode: addToQueue
         %s
+        %s
       }) {
-        ... on PostActionSuccess { post { id text dueAt } }
+        ... on PostActionSuccess { post { id text dueAt assets { id mimeType } } }
         ... on MutationError { message }
       }
-    }""" % (esc(text), esc(channel_id), metadata)
+    }""" % (esc(text), esc(channel_id), top_assets, metadata)
     result = gql(mutation)["createPost"]
     if result.get("message"):
         raise RuntimeError(result["message"])
@@ -396,14 +482,19 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
             "【PR】作品詳細はこちら。価格・配信条件はリンク先でご確認ください。"
             "18歳未満閲覧禁止。\n" + affiliate_url
         )
-        post = create_post(lead_text, channel_id, first_reply=reply_text)
+        post = create_post(
+            lead_text,
+            channel_id,
+            first_reply=reply_text,
+            image_url=meta.get("image_url"),
+        )
         state["discovery_template_index"] = index + 1
         link_mode = "first_reply"
     else:
         format_name = "decision"
         index = int(state.get("decision_template_index", 0)) % len(DECISION_TEMPLATES)
         text = build_decision_text(index, title, actual_sort, affiliate_url, facts, meta)
-        post = create_post(text, channel_id)
+        post = create_post(text, channel_id, image_url=meta.get("image_url"))
         state["decision_template_index"] = index + 1
         link_mode = "direct"
 
@@ -423,7 +514,10 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     state["post_history"][-1]["format"] = format_name
     state["post_history"][-1]["discount_pct"] = int(meta.get("discount_pct") or 0)
     state["post_history"][-1]["has_image_url"] = bool(meta.get("image_url"))
-    state["content_strategy_version"] = "real-selection-v2"
+    state["post_history"][-1]["campaign_active"] = bool(meta.get("campaign_active"))
+    state["post_history"][-1]["recent_release"] = bool(meta.get("recent_release"))
+    state["post_history"][-1]["media_enabled"] = bool(ENABLE_DMM_MEDIA and meta.get("image_url"))
+    state["content_strategy_version"] = "real-selection-v3"
     return f"affiliate/{format_name}/{actual_sort}/{link_mode}", post
 
 
