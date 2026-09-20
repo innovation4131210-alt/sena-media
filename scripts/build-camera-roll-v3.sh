@@ -35,10 +35,10 @@ build_one() {
   echo "Building camera-roll v3: $id"
 
   ffmpeg -hide_banner -loglevel warning -y \
-    -loop 1 -t 2 -i "$s1" \
-    -loop 1 -t 2 -i "$s2" \
-    -loop 1 -t 2 -i "$s3" \
-    -filter_complex "[0:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='20+4*sin(4*t)':y='36+3*sin(3*t)',zoompan=z='1.000+0.00020*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=60:s=1080x1920:fps=30,setsar=1[v0];[1:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='24+3*sin(3*t)':y='34+4*sin(4*t)',zoompan=z='1.012-0.00016*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=60:s=1080x1920:fps=30,setsar=1[v1];[2:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='18+4*sin(5*t)':y='38+3*sin(2*t)',zoompan=z='1.002+0.00018*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=60:s=1080x1920:fps=30,setsar=1[v2];[v0][v1][v2]concat=n=3:v=1:a=0,format=yuv420p[v]" \
+    -loop 1 -framerate "$FPS" -t 2 -i "$s1" \
+    -loop 1 -framerate "$FPS" -t 2 -i "$s2" \
+    -loop 1 -framerate "$FPS" -t 2 -i "$s3" \
+    -filter_complex "[0:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(4*t)':y='(ih-oh)/2+3*sin(3*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v0];[1:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2-3*sin(3*t)':y='(ih-oh)/2+4*sin(4*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v1];[2:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(5*t)':y='(ih-oh)/2-3*sin(2*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v2];[v0][v1][v2]concat=n=3:v=1:a=0,format=yuv420p[v]" \
     -map "[v]" -an -t 6 \
     -c:v libx264 -preset medium -crf 19 -pix_fmt yuv420p \
     -movflags +faststart -map_metadata -1 "$out"
