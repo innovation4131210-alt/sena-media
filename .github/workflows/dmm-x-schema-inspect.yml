@@ -1,0 +1,23 @@
+name: Inspect DMM item schema (no values)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "automation/dmm-x/schema-trigger.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v5
+      - name: Inspect DMM response schema only
+        env:
+          BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
+          DMM_API_ID: ${{ secrets.DMM_API_ID }}
+        run: python3 automation/dmm-x/inspect_schema.py
