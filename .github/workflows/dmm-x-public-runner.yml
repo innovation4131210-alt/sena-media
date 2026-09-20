@@ -1,0 +1,33 @@
+name: Queue DMM X daily batch (public runner)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dmm-x-public-runner
+  cancel-in-progress: false
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Queue today's DMM posts
+        env:
+          BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
+          DMM_API_ID: ${{ secrets.DMM_API_ID }}
+        run: python3 automation/dmm-x/buffer_queue.py
+      - name: Save posting history
+        run: |
+          if git diff --quiet -- automation/dmm-x/state.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/dmm-x/state.json
+          git commit -m "chore: remember queued DMM public-runner batch"
+          git push
