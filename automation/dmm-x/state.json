@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6aaf95394594e3153f4f1eb0",
-  "last_due_at": "2026-09-20T14:30:00.000Z",
+  "last_buffer_post_id": "6ab068f04bfa52a2ee2128b8",
+  "last_due_at": "2026-09-21T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -18,10 +18,12 @@
     "jur00093",
     "roe00471",
     "dvmm00290",
-    "jur00088"
+    "jur00088",
+    "huntb00222",
+    "jur00227"
   ],
-  "last_content_id": "jur00088",
-  "affiliate_template_index": 4,
+  "last_content_id": "jur00227",
+  "affiliate_template_index": 6,
   "post_history": [
     {
       "buffer_post_id": "6aa606eff7b1958d5cdb3f93",
@@ -192,7 +194,46 @@
       "template_index": 3,
       "content_id": "jur00088",
       "sort": "review"
+    },
+    {
+      "buffer_post_id": "6ab068ec4bfa52a2ee212820",
+      "due_at": "2026-09-21T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 7
+    },
+    {
+      "buffer_post_id": "6ab068ed9644849c89a364dd",
+      "due_at": "2026-09-21T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 4,
+      "content_id": "huntb00222",
+      "sort": "rank",
+      "link_mode": "first_reply"
+    },
+    {
+      "buffer_post_id": "6ab068f04bfa52a2ee2128b8",
+      "due_at": "2026-09-21T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 5,
+      "content_id": "jur00227",
+      "sort": "review",
+      "link_mode": "direct"
     }
   ],
-  "engagement_index": 7
+  "engagement_index": 8,
+  "batch_date": "2026-09-21",
+  "batch_slots": {
+    "engagement": {
+      "buffer_post_id": "6ab068ec4bfa52a2ee212820",
+      "due_at": "2026-09-21T03:30:00.000Z"
+    },
+    "rank_first_reply": {
+      "buffer_post_id": "6ab068ed9644849c89a364dd",
+      "due_at": "2026-09-21T12:30:00.000Z"
+    },
+    "review_direct": {
+      "buffer_post_id": "6ab068f04bfa52a2ee2128b8",
+      "due_at": "2026-09-21T14:30:00.000Z"
+    }
+  }
 }
