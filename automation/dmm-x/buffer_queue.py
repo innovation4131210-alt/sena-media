@@ -101,12 +101,15 @@ def compact_title(value, limit=54):
 
 def product_facts(item):
     facts = []
-    prices = item.get("prices") or {}
-    raw_price = prices.get("price")
-    if raw_price is not None:
-        digits = "".join(ch for ch in str(raw_price) if ch.isdigit())
-        if digits:
-            facts.append(f"{int(digits):,}円")
+    price = price_value(item)
+    list_price = list_price_value(item)
+    discount = discount_percent(item)
+
+    if price is not None:
+        if discount >= 10 and list_price:
+            facts.append(f"{price:,}円（参考{list_price:,}円・約{discount}%OFF）")
+        else:
+            facts.append(f"{price:,}円")
 
     review = item.get("review") or {}
     try:
@@ -142,10 +145,22 @@ def build_discovery_text(template_index, title, sort_order, facts=""):
     )
 
 
-def build_decision_text(template_index, title, sort_order, affiliate_url, facts=""):
+def build_decision_text(template_index, title, sort_order, affiliate_url, facts="", meta=None):
     short_title = compact_title(title, limit=48)
-    template = DECISION_TEMPLATES[template_index % len(DECISION_TEMPLATES)]
-    body = template.format(title=short_title, facts_line=facts_line(facts))
+    meta = meta or {}
+    discount = int(meta.get("discount_pct") or 0)
+
+    if discount >= 10:
+        body = (
+            f"【PR】今夜は買い時が分かりやすい1本。約{discount}%OFFになっています。\n"
+            f"『{short_title}』"
+            + facts_line(facts)
+            + "\n価格条件を確認するならこちら。18歳未満閲覧禁止。"
+        )
+    else:
+        template = DECISION_TEMPLATES[template_index % len(DECISION_TEMPLATES)]
+        body = template.format(title=short_title, facts_line=facts_line(facts))
+
     return ensure_x_length(body + "\n" + affiliate_url, affiliate_url)
 
 
@@ -194,6 +209,25 @@ def price_value(item):
     return int(digits) if digits else None
 
 
+def list_price_value(item):
+    raw = (item.get("prices") or {}).get("list_price")
+    digits = "".join(ch for ch in str(raw or "") if ch.isdigit())
+    return int(digits) if digits else None
+
+
+def discount_percent(item):
+    price = price_value(item)
+    list_price = list_price_value(item)
+    if not price or not list_price or list_price <= price:
+        return 0
+    return int(round((list_price - price) * 100 / list_price))
+
+
+def main_image_url(item):
+    images = item.get("imageURL") or {}
+    return str(images.get("large") or images.get("list") or images.get("small") or "").strip()
+
+
 def review_values(item):
     review = item.get("review") or {}
     try:
@@ -228,6 +262,9 @@ def eligible_candidates(items, used_ids):
             "title": title,
             "affiliate_url": affiliate_url,
             "price": price_value(item),
+            "list_price": list_price_value(item),
+            "discount_pct": discount_percent(item),
+            "image_url": main_image_url(item),
             "review_average": average,
             "review_count": review_count,
         })
@@ -236,22 +273,31 @@ def eligible_candidates(items, used_ids):
 
 def choose_conversion_candidate(candidates):
     # First-sale pilot:
-    # keep relevance by considering only the highest-ranked/reviewed eligible cohort,
-    # then favor lower purchase friction (lower known price), using review strength
-    # as a tie-breaker. Missing prices are kept behind known-price candidates.
+    # Within the strongest eligible cohort, real discounts get first priority.
+    # Otherwise favor lower purchase friction, then stronger review evidence.
     cohort = candidates[:20]
     if not cohort:
         return None
-    return min(
-        cohort,
-        key=lambda c: (
+
+    def score(c):
+        discount = c.get("discount_pct") or 0
+        if discount >= 30:
+            discount_tier = 0
+        elif discount >= 10:
+            discount_tier = 1
+        else:
+            discount_tier = 2
+        return (
+            discount_tier,
+            -discount,
             c["price"] is None,
             c["price"] if c["price"] is not None else 10**12,
             -c["review_average"],
             -c["review_count"],
             c["position"],
-        ),
-    )
+        )
+
+    return min(cohort, key=score)
 
 
 def choose_product(used_ids, preferred_sort):
@@ -273,6 +319,14 @@ def choose_product(used_ids, preferred_sort):
                 chosen["affiliate_url"],
                 sort_order,
                 product_facts(item),
+                {
+                    "price": chosen["price"],
+                    "list_price": chosen["list_price"],
+                    "discount_pct": chosen["discount_pct"],
+                    "review_average": chosen["review_average"],
+                    "review_count": chosen["review_count"],
+                    "image_url": chosen["image_url"],
+                },
             )
     raise RuntimeError("No eligible unpublished DMM product was found")
 
@@ -332,7 +386,7 @@ def queue_engagement(state, channel_id):
 
 def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     used_ids = set(str(value) for value in state.get("used_content_ids", []))
-    content_id, title, affiliate_url, actual_sort, facts = choose_product(used_ids, preferred_sort)
+    content_id, title, affiliate_url, actual_sort, facts, meta = choose_product(used_ids, preferred_sort)
 
     if first_reply:
         format_name = "discovery"
@@ -348,7 +402,7 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     else:
         format_name = "decision"
         index = int(state.get("decision_template_index", 0)) % len(DECISION_TEMPLATES)
-        text = build_decision_text(index, title, actual_sort, affiliate_url, facts)
+        text = build_decision_text(index, title, actual_sort, affiliate_url, facts, meta)
         post = create_post(text, channel_id)
         state["decision_template_index"] = index + 1
         link_mode = "direct"
@@ -367,7 +421,9 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     )
     state["post_history"][-1]["link_mode"] = link_mode
     state["post_history"][-1]["format"] = format_name
-    state["content_strategy_version"] = "real-selection-v1"
+    state["post_history"][-1]["discount_pct"] = int(meta.get("discount_pct") or 0)
+    state["post_history"][-1]["has_image_url"] = bool(meta.get("image_url"))
+    state["content_strategy_version"] = "real-selection-v2"
     return f"affiliate/{format_name}/{actual_sort}/{link_mode}", post
 
 
