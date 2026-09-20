@@ -1,0 +1,108 @@
+name: Persist SENA camera-roll 001 media
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "ops/sena-camera-roll-001-sources.json"
+      - ".github/workflows/persist-sena-camera-roll-001.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: persist-sena-camera-roll-001
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
+      - name: Download three source shots
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR="media/camera-roll-v3/sena-camera-roll-001"
+          mkdir -p "$DIR" /tmp/sena-camera-roll-001
+          python - <<'PY'
+          import json, pathlib
+          d=json.load(open("ops/sena-camera-roll-001-sources.json"))
+          p=pathlib.Path("/tmp/sena-camera-roll-001")
+          for i,u in enumerate(d["sourceUrls"],1):
+              (p/f"url-{i}.txt").write_text(u)
+          PY
+          for N in 1 2 3; do
+            URL="$(cat /tmp/sena-camera-roll-001/url-$N.txt)"
+            curl --fail --location --retry 4 --silent --show-error "$URL" -o "$DIR/shot-$N.jpg"
+            test -s "$DIR/shot-$N.jpg"
+          done
+
+      - name: Build exact six-second clip
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR="media/camera-roll-v3/sena-camera-roll-001"
+          OUT="media/camera-roll-v3/sena-camera-roll-001.mp4"
+          ffmpeg -hide_banner -loglevel warning -y             -loop 1 -framerate 30 -t 2 -i "$DIR/shot-1.jpg"             -loop 1 -framerate 30 -t 2 -i "$DIR/shot-2.jpg"             -loop 1 -framerate 30 -t 2 -i "$DIR/shot-3.jpg"             -filter_complex "[0:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(4*t)':y='(ih-oh)/2+3*sin(3*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v0];[1:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2-3*sin(3*t)':y='(ih-oh)/2+4*sin(4*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v1];[2:v]scale=1120:1992:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-ow)/2+4*sin(5*t)':y='(ih-oh)/2-3*sin(2*t)',fps=30,setpts=PTS-STARTPTS,setsar=1[v2];[v0][v1][v2]concat=n=3:v=1:a=0,fps=30,settb=1/30,setpts=N,format=yuv420p[v]"             -map "[v]" -an -t 6 -r 30 -fps_mode cfr             -c:v libx264 -preset medium -crf 19 -pix_fmt yuv420p             -movflags +faststart -map_metadata -1 "$OUT"
+
+      - name: Technical QC and preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="media/camera-roll-v3/sena-camera-roll-001.mp4"
+          DIR="media/camera-roll-v3/sena-camera-roll-001"
+          ffprobe -v error -show_entries format=duration,size             -show_entries stream=codec_name,width,height,r_frame_rate             -of json "$OUT" > /tmp/sena-camera-roll-001/probe.json
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/sena-camera-roll-001/probe.json"))
+          dur=float(d["format"]["duration"]); size=int(d["format"]["size"])
+          v=next(s for s in d["streams"] if s.get("codec_name")=="h264")
+          assert 5.9 <= dur <= 6.1, dur
+          assert (int(v["width"]),int(v["height"])) == (1080,1920), v
+          assert v["r_frame_rate"] == "30/1", v
+          assert 10_000 < size < 95_000_000, size
+          PY
+          ffmpeg -hide_banner -loglevel warning -y             -i "$DIR/shot-1.jpg" -i "$DIR/shot-2.jpg" -i "$DIR/shot-3.jpg"             -filter_complex "[0:v]scale=360:640:force_original_aspect_ratio=increase,crop=360:640[a];[1:v]scale=360:640:force_original_aspect_ratio=increase,crop=360:640[b];[2:v]scale=360:640:force_original_aspect_ratio=increase,crop=360:640[c];[a][b][c]hstack=inputs=3[v]"             -map "[v]" -frames:v 1 /tmp/sena-camera-roll-001/contact-sheet.jpg
+          sha256sum "$OUT" > "media/camera-roll-v3/sena-camera-roll-001.sha256"
+
+      - name: Upload QA preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sena-camera-roll-001-preview
+          path: |
+            media/camera-roll-v3/sena-camera-roll-001.mp4
+            /tmp/sena-camera-roll-001/contact-sheet.jpg
+            /tmp/sena-camera-roll-001/probe.json
+          compression-level: 0
+          retention-days: 2
+
+      - name: Commit durable public media
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             media/camera-roll-v3/sena-camera-roll-001/shot-1.jpg             media/camera-roll-v3/sena-camera-roll-001/shot-2.jpg             media/camera-roll-v3/sena-camera-roll-001/shot-3.jpg             media/camera-roll-v3/sena-camera-roll-001.mp4             media/camera-roll-v3/sena-camera-roll-001.sha256
+          if git diff --cached --quiet; then
+            echo "Media already current."
+            exit 0
+          fi
+          git commit -m "Persist SENA camera-roll 001 media"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then git rebase --abort || true; exit 1; fi
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
