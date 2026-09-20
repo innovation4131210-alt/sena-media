@@ -1,0 +1,72 @@
+name: Build camera-roll v3 clips
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "media/camera-roll-v3/**/shot-1.png"
+      - "media/camera-roll-v3/**/shot-2.png"
+      - "media/camera-roll-v3/**/shot-3.png"
+      - "media/camera-roll-v3/**/shot-1.jpg"
+      - "media/camera-roll-v3/**/shot-2.jpg"
+      - "media/camera-roll-v3/**/shot-3.jpg"
+      - "media/camera-roll-v3/**/shot-1.jpeg"
+      - "media/camera-roll-v3/**/shot-2.jpeg"
+      - "media/camera-roll-v3/**/shot-3.jpeg"
+      - "media/camera-roll-v3/**/shot-1.webp"
+      - "media/camera-roll-v3/**/shot-2.webp"
+      - "media/camera-roll-v3/**/shot-3.webp"
+      - "scripts/build-camera-roll-v3.sh"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-camera-roll-v3
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
+      - name: Build complete three-shot clips
+        shell: bash
+        run: |
+          chmod +x scripts/build-camera-roll-v3.sh
+          scripts/build-camera-roll-v3.sh
+
+      - name: Commit generated clips
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/camera-roll-v3/*.mp4
+          if git diff --cached --quiet; then
+            echo "No complete new three-shot clips to commit."
+            exit 0
+          fi
+          git commit -m "Build camera-roll v3 clips"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
