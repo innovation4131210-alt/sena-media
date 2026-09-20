@@ -18,7 +18,7 @@ def main():
 
     try:
         used_ids = set(str(v) for v in state.get("used_content_ids", []))
-        content_id, title, affiliate_url, actual_sort, facts = app.choose_product(used_ids, "rank")
+        content_id, title, affiliate_url, actual_sort, facts, meta = app.choose_product(used_ids, "rank")
         if not content_id or not title or not affiliate_url:
             raise RuntimeError("eligible product candidate not found")
 
@@ -27,7 +27,7 @@ def main():
 
         discovery = app.build_discovery_text(discovery_index, title, actual_sort, facts)
         reply = "【PR】作品詳細はこちら。価格・配信条件はリンク先でご確認ください。18歳未満閲覧禁止。\n" + affiliate_url
-        decision = app.build_decision_text(decision_index, title, "review", affiliate_url, facts)
+        decision = app.build_decision_text(decision_index, title, "review", affiliate_url, facts, meta)
 
         for label, text in (
             ("discovery", discovery),
@@ -39,6 +39,7 @@ def main():
 
         print("DMM_OK: API responded and eligible product candidate exists")
         print("COPY_OK: discovery, reply and decision formats fit X length limits")
+        print(f"DISCOUNT_SCHEMA_OK: discount={int(meta.get('discount_pct') or 0)} image_url={bool(meta.get('image_url'))}")
     except Exception as exc:
         failures.append("DMM_OR_COPY")
         print(f"DMM_OR_COPY_FAIL: {exc}")
