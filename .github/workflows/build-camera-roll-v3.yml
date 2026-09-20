@@ -17,7 +17,7 @@ on:
       - "media/camera-roll-v3/**/shot-1.webp"
       - "media/camera-roll-v3/**/shot-2.webp"
       - "media/camera-roll-v3/**/shot-3.webp"
-      - "scripts/build-camera-roll-v3.sh"
+      - "scripts/build-camera-roll-v3.sh"\n      - ".github/workflows/build-camera-roll-v3.yml"
 
 permissions:
   contents: write
@@ -52,9 +52,15 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add media/camera-roll-v3/*.mp4
+          shopt -s nullglob
+          files=(media/camera-roll-v3/*.mp4)
+          if (( ${#files[@]} == 0 )); then
+            echo "No complete three-shot clips exist yet."
+            exit 0
+          fi
+          git add "${files[@]}"
           if git diff --cached --quiet; then
-            echo "No complete new three-shot clips to commit."
+            echo "Generated clips are already current."
             exit 0
           fi
           git commit -m "Build camera-roll v3 clips"
