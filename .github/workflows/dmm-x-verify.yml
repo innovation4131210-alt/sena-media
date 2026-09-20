@@ -1,0 +1,25 @@
+name: Verify DMM X credentials (no posting)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "automation/dmm-x/verify-trigger.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v5
+      - name: Verify Buffer and DMM without creating posts
+        env:
+          BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
+          DMM_API_ID: ${{ secrets.DMM_API_ID }}
+        run: |
+          cd automation/dmm-x
+          python3 verify_connections.py
