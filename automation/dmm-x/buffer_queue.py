@@ -6,6 +6,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
 
 BUFFER_API_URL = "https://api.buffer.com"
 DMM_API_URL = "https://api.dmm.com/affiliate/v3/ItemList"
@@ -365,24 +366,65 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     return f"affiliate/{actual_sort}/{link_mode}", post
 
 
-def main():
-    state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
-    channel_id = find_x_channel()
-
-    # Cost-saving batch mode:
-    # Buffer owns the publication slots (12:30, 21:30, 23:30 JST).
-    # One GitHub Actions run queues all three posts in order, instead of
-    # spending one Actions run per post.
-    queued = []
-    queued.append(queue_engagement(state, channel_id))
-    queued.append(queue_affiliate(state, channel_id, "rank", first_reply=True))
-    queued.append(queue_affiliate(state, channel_id, "review", first_reply=False))
-
-    state.pop("next_index", None)
+def persist_state(state):
     STATE_PATH.write_text(
         json.dumps(state, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
+
+def main():
+    state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    channel_id = find_x_channel()
+
+    # Idempotent daily batch:
+    # if a later queue item fails, successful earlier items are marked done
+    # and will be skipped on retry instead of being duplicated.
+    jst = timezone(timedelta(hours=9))
+    batch_date = datetime.now(jst).date().isoformat()
+    if state.get("batch_date") != batch_date:
+        state["batch_date"] = batch_date
+        state["batch_slots"] = {}
+        persist_state(state)
+
+    slots = state.setdefault("batch_slots", {})
+    queued = []
+
+    if not slots.get("engagement"):
+        label, post = queue_engagement(state, channel_id)
+        slots["engagement"] = {
+            "buffer_post_id": post.get("id"),
+            "due_at": post.get("dueAt"),
+        }
+        persist_state(state)
+        queued.append((label, post))
+    else:
+        print("Skip engagement: already queued for this JST date")
+
+    if not slots.get("rank_first_reply"):
+        label, post = queue_affiliate(state, channel_id, "rank", first_reply=True)
+        slots["rank_first_reply"] = {
+            "buffer_post_id": post.get("id"),
+            "due_at": post.get("dueAt"),
+        }
+        persist_state(state)
+        queued.append((label, post))
+    else:
+        print("Skip rank_first_reply: already queued for this JST date")
+
+    if not slots.get("review_direct"):
+        label, post = queue_affiliate(state, channel_id, "review", first_reply=False)
+        slots["review_direct"] = {
+            "buffer_post_id": post.get("id"),
+            "due_at": post.get("dueAt"),
+        }
+        persist_state(state)
+        queued.append((label, post))
+    else:
+        print("Skip review_direct: already queued for this JST date")
+
+    state.pop("next_index", None)
+    persist_state(state)
 
     for label, post in queued:
         print(f"Queued {label} post for {post.get('dueAt')}")
