@@ -2,6 +2,9 @@ name: Queue DMM X daily batch (public runner)
 
 on:
   workflow_dispatch:
+  schedule:
+    # 06:00 JST daily; queues Buffer slots for 12:30, 21:30 and 23:30 JST.
+    - cron: "0 21 * * *"
   push:
     branches: [main]
     paths:
