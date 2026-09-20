@@ -20,6 +20,4 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
           DMM_API_ID: ${{ secrets.DMM_API_ID }}
-        run: |
-          cd automation/dmm-x
-          python3 verify_connections.py
+        run: python3 automation/dmm-x/verify_connections.py
