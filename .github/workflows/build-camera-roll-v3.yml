@@ -2,22 +2,6 @@ name: Build camera-roll v3 clips
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "media/camera-roll-v3/**/shot-1.png"
-      - "media/camera-roll-v3/**/shot-2.png"
-      - "media/camera-roll-v3/**/shot-3.png"
-      - "media/camera-roll-v3/**/shot-1.jpg"
-      - "media/camera-roll-v3/**/shot-2.jpg"
-      - "media/camera-roll-v3/**/shot-3.jpg"
-      - "media/camera-roll-v3/**/shot-1.jpeg"
-      - "media/camera-roll-v3/**/shot-2.jpeg"
-      - "media/camera-roll-v3/**/shot-3.jpeg"
-      - "media/camera-roll-v3/**/shot-1.webp"
-      - "media/camera-roll-v3/**/shot-2.webp"
-      - "media/camera-roll-v3/**/shot-3.webp"
-      - "scripts/build-camera-roll-v3.sh"\n      - ".github/workflows/build-camera-roll-v3.yml"
 
 permissions:
   contents: write
