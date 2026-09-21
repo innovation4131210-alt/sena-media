@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ab068f04bfa52a2ee2128b8",
-  "last_due_at": "2026-09-21T14:30:00.000Z",
+  "last_buffer_post_id": "6ab19b4a1177eabccaee8f29",
+  "last_due_at": "2026-09-22T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -20,9 +20,11 @@
     "dvmm00290",
     "jur00088",
     "huntb00222",
-    "jur00227"
+    "jur00227",
+    "miab00301",
+    "1hbad00608"
   ],
-  "last_content_id": "jur00227",
+  "last_content_id": "1hbad00608",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -218,22 +220,61 @@
       "content_id": "jur00227",
       "sort": "review",
       "link_mode": "direct"
+    },
+    {
+      "buffer_post_id": "6ab19b451b349ea8ed954f89",
+      "due_at": "2026-09-22T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 0
+    },
+    {
+      "buffer_post_id": "6ab19b4774d4ff403e10b931",
+      "due_at": "2026-09-22T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "miab00301",
+      "sort": "rank",
+      "link_mode": "first_reply",
+      "format": "discovery",
+      "discount_pct": 50,
+      "has_image_url": true,
+      "campaign_active": true,
+      "recent_release": false,
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ab19b4a1177eabccaee8f29",
+      "due_at": "2026-09-22T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "1hbad00608",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "recent_release": false,
+      "media_enabled": false
     }
   ],
-  "engagement_index": 8,
-  "batch_date": "2026-09-21",
+  "engagement_index": 1,
+  "batch_date": "2026-09-22",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ab068ec4bfa52a2ee212820",
-      "due_at": "2026-09-21T03:30:00.000Z"
+      "buffer_post_id": "6ab19b451b349ea8ed954f89",
+      "due_at": "2026-09-22T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ab068ed9644849c89a364dd",
-      "due_at": "2026-09-21T12:30:00.000Z"
+      "buffer_post_id": "6ab19b4774d4ff403e10b931",
+      "due_at": "2026-09-22T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ab068f04bfa52a2ee2128b8",
-      "due_at": "2026-09-21T14:30:00.000Z"
+      "buffer_post_id": "6ab19b4a1177eabccaee8f29",
+      "due_at": "2026-09-22T14:30:00.000Z"
     }
-  }
+  },
+  "discovery_template_index": 1,
+  "content_strategy_version": "real-selection-v3",
+  "decision_template_index": 1
 }
