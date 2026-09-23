@@ -35,7 +35,10 @@ let capacity=Math.max(0,9-queued.length);
 for(const item of manifest.sena){
  if(item.account!=='sena.virtual.studio'||item.aiDisclosure!==true||item.qcStatus!=='accepted')throw new Error(`Invalid account/disclosure/QC at D${item.day}`);
  const recorded=state.scheduled.find(x=>x.day===item.day);
- if(recorded){const live=known.find(x=>x.id===recorded.bufferPostId);if(live)recorded.lastObservedStatus=live.status;if(recorded.mediaSha256&&recorded.mediaSha256!==item.sha256)throw new Error(`Scheduled media changed at D${item.day}`);continue;}
+ if(recorded){const live=known.find(x=>x.id===recorded.bufferPostId);if(live)recorded.lastObservedStatus=live.status;
+  if(!live)state.blocked.push({day:item.day,bufferPostId:recorded.bufferPostId,reason:'recorded_post_missing_from_api'});
+  else if(live.status==='error')state.blocked.push({day:item.day,bufferPostId:recorded.bufferPostId,reason:'recorded_post_failed'});
+  else if(live.text!==item.caption||new Date(live.dueAt).getTime()!==new Date(item.publishAt).getTime())state.blocked.push({day:item.day,bufferPostId:recorded.bufferPostId,reason:'recorded_post_content_or_time_drift'});if(recorded.mediaSha256&&recorded.mediaSha256!==item.sha256)throw new Error(`Scheduled media changed at D${item.day}`);continue;}
  const matches=known.filter(x=>x.text===item.caption);
  if(matches.length>1)throw new Error(`Multiple exact-caption posts at D${item.day}`);
  if(matches.length){const p=matches[0];if(new Date(p.dueAt).getTime()!==new Date(item.publishAt).getTime())throw new Error(`Existing caption has different date at D${item.day}`);state.scheduled.push({day:item.day,bufferPostId:p.id,dueAt:p.dueAt,reconciled:true,lastObservedStatus:p.status,mediaVerification:'requires API media verification; not recreated'});await save();continue;}

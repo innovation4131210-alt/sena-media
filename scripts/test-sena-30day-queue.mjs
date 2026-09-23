@@ -7,12 +7,13 @@ import assert from 'node:assert/strict';
 const runner=resolve('scripts/sena-30day-rolling-queue.mjs');
 const cid='6aa72524ea19ca0bde39313c', bytes=Buffer.from('verified-fixture');
 const hash=createHash('sha256').update(bytes).digest('hex');
-for(const scenario of ['capacity','create','known','conflict','ambiguous','bad_hash']){
+for(const scenario of ['capacity','create','known','conflict','ambiguous','bad_hash','recorded_missing','recorded_error','recorded_drift']){
  const dir=await mkdtemp(join(tmpdir(),'sena-queue-'));
  try{
   await mkdir(join(dir,'automation/30day'),{recursive:true});await mkdir(join(dir,'media/sena-30day-2026-09-28'),{recursive:true});
   const item={day:1,date:'2099-09-28',publishAt:'2099-09-28T20:30:00+09:00',account:'sena.virtual.studio',aiDisclosure:true,qcStatus:'accepted',caption:'fixture',filename:'SENA_2099-09-28_D01.jpeg',mediaPath:'media/sena-30day-2026-09-28/SENA_2099-09-28_D01.jpeg',sha256:scenario==='bad_hash'?'bad':hash};
   await writeFile(join(dir,'automation/30day/publishing-manifest.json'),JSON.stringify({sena:[item]}));await writeFile(join(dir,item.mediaPath),bytes);
+  if(scenario.startsWith('recorded_'))await writeFile(join(dir,'automation/30day/sena-state.json'),JSON.stringify({version:2,scheduled:[{day:1,bufferPostId:'recorded',mediaSha256:hash}]}));
   const mock=`import {writeFile} from 'node:fs/promises';let creates=0;const cid=${JSON.stringify(cid)},scenario=${JSON.stringify(scenario)};
   globalThis.fetch=async(url,options)=>{
    if(url.startsWith('https://raw.'))return new Response(Buffer.from('verified-fixture'));
@@ -23,15 +24,22 @@ for(const scenario of ['capacity','create','known','conflict','ambiguous','bad_h
    else{let nodes=[];if(query.includes('[scheduled]')){
     if(scenario==='capacity')nodes=Array.from({length:9},(_,i)=>({id:'old'+i,channelId:'other',text:'old',dueAt:'2099-01-01',status:'scheduled'}));
     if(['known','conflict'].includes(scenario))nodes=[{id:'existing',channelId:cid,text:scenario==='known'?'fixture':'different',dueAt:'2099-09-28T11:30:00Z',status:'scheduled'}];
-   }data={posts:{edges:nodes.map(node=>({node}))}};}return Response.json({data});};
+   }if(scenario==='recorded_error'&&query.includes('[error]'))nodes=[{id:'recorded',channelId:cid,text:'fixture',dueAt:'2099-09-28T11:30:00Z',status:'error'}];
+   if(scenario==='recorded_drift'&&query.includes('[scheduled]'))nodes=[{id:'recorded',channelId:cid,text:'changed',dueAt:'2099-09-28T11:30:00Z',status:'scheduled'}];
+   data={posts:{edges:nodes.map(node=>({node}))}};}return Response.json({data});};
   await import(${JSON.stringify(runner)});`;
   await writeFile(join(dir,'mock.mjs'),mock);
   const run=()=>spawnSync(process.execPath,['mock.mjs'],{cwd:dir,env:{...process.env,BUFFER_API_KEY:'fixture'},encoding:'utf8'});
   let r=run();assert.equal(r.status,['ambiguous','bad_hash'].includes(scenario)?1:0,r.stderr);
   const state=JSON.parse(await readFile(join(dir,'automation/30day/sena-state.json'),'utf8').catch(()=>'{"scheduled":[]}'));
-  assert.equal(state.scheduled.length,['create','known'].includes(scenario)?1:0);
+  assert.equal(state.scheduled.length,(['create','known'].includes(scenario)||scenario.startsWith('recorded_'))?1:0);
   if(['create','ambiguous'].includes(scenario)){r=run();assert.equal(r.status,0,r.stderr);const count=JSON.parse(await readFile(join(dir,'creates.json'),'utf8'));assert.equal(count,1);}
   if(scenario==='conflict')assert.equal(state.blocked[0].reason,'existing_post_on_tokyo_date');
+  if(scenario.startsWith('recorded_')){
+   const reasons={recorded_missing:'recorded_post_missing_from_api',recorded_error:'recorded_post_failed',recorded_drift:'recorded_post_content_or_time_drift'};
+   assert.equal(state.blocked[0].reason,reasons[scenario]);
+   assert.equal(await readFile(join(dir,'creates.json'),'utf8').catch(()=>'0'),'0');
+  }
   console.log('PASS',scenario);
  }finally{await rm(dir,{recursive:true,force:true});}
 }
