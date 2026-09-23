@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: node --check scripts/audit-mio-instagram-buffer.mjs
-      - name: Read MIO Instagram queue
+      - name: Read MIO Instagram queue with configured key
         env:
           BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
         run: node scripts/audit-mio-instagram-buffer.mjs
