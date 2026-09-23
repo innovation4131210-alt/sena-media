@@ -1,13 +1,14 @@
 name: MIO X one-off recovery
 on:
   push:
+    branches: [main]
     paths:
       - .github/workflows/mio-x-one-off.yml
   workflow_dispatch:
 permissions:
   contents: write
 concurrency:
-  group: mio-x-one-off
+  group: mio-x-publishing
   cancel-in-progress: false
 jobs:
   schedule:
@@ -18,6 +19,7 @@ jobs:
       - run: node --check scripts/mio-x-one-off.mjs
       - name: Schedule or recover exact MIO X post
         env:
-          BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+          # Verified by known historical MIO X post, not by the secret label.
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
         run: node scripts/mio-x-one-off.mjs
