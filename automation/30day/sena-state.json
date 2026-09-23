@@ -10,17 +10,48 @@
       "mediaSha256": "c74ba9f60a425b2dd88cee4028ad693ce605ab0d1385944c013018693f4786a1",
       "caption": "出る前の最終確認。今日はチャコールだけで十分。足すなら何色？",
       "lastObservedStatus": "scheduled"
+    },
+    {
+      "day": 2,
+      "date": "2026-09-29",
+      "bufferPostId": "6ab3ddf7a75742f2cd11395c",
+      "dueAt": "2026-09-29T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/ac84f84b13fe00f38374c0f3cb3013124acd2200/media/sena-30day-2026-09-28/SENA_2026-09-29_D02.jpeg",
+      "mediaSha256": "047a672b9f66053d996517d6f61cfee705c9c03b647ee74ff1113ddd144cb748",
+      "caption": "予定の合間に少しだけ。窓際の席は、街を見ているだけで時間が過ぎる。",
+      "lastObservedStatus": "scheduled"
+    },
+    {
+      "day": 3,
+      "date": "2026-09-30",
+      "bufferPostId": "6ab3ddf8c81095d33c9a1f4a",
+      "dueAt": "2026-09-30T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/ac84f84b13fe00f38374c0f3cb3013124acd2200/media/sena-30day-2026-09-28/SENA_2026-09-30_D03.jpeg",
+      "mediaSha256": "7957c506d60d234d7387e2d63b0e6e2b9c7239bf003525e3ef608dd3f5687883",
+      "caption": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？",
+      "lastObservedStatus": "scheduled"
     }
   ],
-  "lastRunAt": "2026-09-23T09:31:48.138Z",
+  "lastRunAt": "2026-09-23T14:11:03.049Z",
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio",
     "displayName": "sena.virtual.studio"
   },
-  "observedOrganizationScheduledCount": 9,
-  "createdThisRun": [],
+  "observedOrganizationScheduledCount": 7,
+  "createdThisRun": [
+    {
+      "day": 2,
+      "id": "6ab3ddf7a75742f2cd11395c",
+      "dueAt": "2026-09-29T11:30:00.000Z"
+    },
+    {
+      "day": 3,
+      "id": "6ab3ddf8c81095d33c9a1f4a",
+      "dueAt": "2026-09-30T11:30:00.000Z"
+    }
+  ],
   "blocked": [],
   "pendingCreates": [],
-  "lastVerifiedAt": "2026-09-23T09:31:48.145Z"
+  "lastVerifiedAt": "2026-09-23T14:11:05.123Z"
 }
