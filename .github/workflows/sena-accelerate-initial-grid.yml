@@ -1,0 +1,20 @@
+name: Accelerate SENA initial grid
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sena-accelerate-initial-grid.mjs"
+      - ".github/workflows/sena-accelerate-initial-grid.yml"
+
+jobs:
+  reschedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Reschedule SENA initial 9
+        env:
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+        run: node scripts/sena-accelerate-initial-grid.mjs
