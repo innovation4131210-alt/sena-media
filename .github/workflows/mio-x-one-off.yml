@@ -1,0 +1,23 @@
+name: MIO X one-off recovery
+on:
+  push:
+    paths:
+      - .github/workflows/mio-x-one-off.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mio-x-one-off
+  cancel-in-progress: false
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - run: node --check scripts/mio-x-one-off.mjs
+      - name: Schedule or recover exact MIO X post
+        env:
+          BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/mio-x-one-off.mjs
