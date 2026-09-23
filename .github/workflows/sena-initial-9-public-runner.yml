@@ -1,0 +1,53 @@
+name: Schedule SENA initial 9 (free public runner)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "incoming/SENA_initial_9_posts.zip"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sena-initial-9-public-runner
+  cancel-in-progress: false
+
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Stage exact finalized SENA media
+        shell: bash
+        run: |
+          set -e
+          if [ -f incoming/SENA_initial_9_posts.zip ]; then
+            rm -rf /tmp/sena-launch
+            mkdir -p /tmp/sena-launch media/sena-initial-9
+            unzip -q -o incoming/SENA_initial_9_posts.zip -d /tmp/sena-launch
+            cp /tmp/sena-launch/SENA_initial_9_posts/*.jpeg media/sena-initial-9/
+          fi
+          test "$(find media/sena-initial-9 -maxdepth 1 -name 'SENA_*.jpeg' | wc -l)" -eq 9
+      - name: Verify SENA secret exists
+        shell: bash
+        env:
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+        run: |
+          test -n "$BUFFER_API_KEY" || { echo "SENA_BUFFER_API_KEY is required"; exit 2; }
+      - name: Schedule finalized 9 posts to SENA Buffer
+        env:
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+        run: node scripts/sena-initial-9-public-runner.mjs
+      - name: Persist staged media and verified Buffer state
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/sena-initial-9 automation/sena-launch/state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Schedule SENA finalized initial 9"
+          git push
