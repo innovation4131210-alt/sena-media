@@ -1,0 +1,23 @@
+name: Cancel duplicate MIO Instagram Buffer overflow
+on:
+  push:
+    paths:
+      - .github/workflows/cancel-mio-instagram-buffer-duplicates.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mio-instagram-duplicate-repair
+  cancel-in-progress: false
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - run: node --check scripts/cancel-mio-instagram-buffer-duplicates.mjs
+      - name: Cancel exact six later Buffer duplicates
+        env:
+          BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/cancel-mio-instagram-buffer-duplicates.mjs
