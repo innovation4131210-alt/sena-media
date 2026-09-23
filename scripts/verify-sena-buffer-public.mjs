@@ -22,7 +22,7 @@ if(!matches.some(c=>String(c.service).toLowerCase()==="instagram" && [c.name,c.d
 const auditAccount=await gql("query { account { organizations { id } } }");
 for(const o of auditAccount.account.organizations){
  const d=await gql("query($organizationId: OrganizationId!) { channels(input:{organizationId:$organizationId}) { id name displayName service isQueuePaused isDisconnected isLocked } }",{organizationId:o.id});
- for(const c of d.channels.filter(c=>String(c.service).toLowerCase()==="tiktok" && [c.name,c.displayName].some(n=>/mio|sena/i.test(String(n))))){
+ for(const c of d.channels.filter(c=>["tiktok","threads"].includes(String(c.service).toLowerCase()) && [c.name,c.displayName].some(n=>/mio|sena/i.test(String(n))))){
   const ps=await gql("query($organizationId: OrganizationId!, $channelId: ChannelId!) { posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}) { edges { node { id text status dueAt sentAt externalLink } } pageInfo { hasNextPage } } }",{organizationId:o.id,channelId:c.id});
   console.log(JSON.stringify({audit:"tiktok-refresh-2026-09-23",channel:c,...ps}));
  }
