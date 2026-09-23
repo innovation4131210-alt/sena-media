@@ -19,20 +19,22 @@ const dues=['2026-09-23T07:30:00.000Z','2026-09-23T10:30:00.000Z','2026-09-23T13
 async function gql(query,variables={}){const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${key}`},body:JSON.stringify({query,variables})});const j=await r.json();if(!r.ok||j.errors?.length)throw new Error(JSON.stringify(j.errors??j));return j.data;}
 async function channel(){const a=await gql('query { account { organizations { id name } } }');for(const o of a.account.organizations){const d=await gql('query($organizationId: OrganizationId!) { channels(input:{organizationId:$organizationId}) { id name displayName service isQueuePaused isDisconnected isLocked } }',{organizationId:o.id});const c=d.channels.find(c=>String(c.service).toLowerCase()==='instagram'&&[c.name,c.displayName].filter(Boolean).some(v=>String(v).toLowerCase().includes('sena.virtual.studio')));if(c)return {...c,organizationId:o.id};}throw new Error('SENA channel missing');}
 const c=await channel();
-const created=[];
-try{
- for(let i=0;i<9;i++){
-  const url=`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/media/sena-initial-9/${files[i]}`;
-  const data=await gql('mutation($input: CreatePostInput!) { createPost(input:$input) { __typename ... on PostActionSuccess { post { id dueAt status } } ... on MutationError { message } } }',{input:{text:captions[i],channelId:c.id,schedulingType:'automatic',mode:'customScheduled',dueAt:dues[i],aiAssisted:true,assets:[{image:{url,metadata:{altText:'SENA AI-generated lifestyle image'}}}],metadata:{instagram:{type:'post',shouldShareToFeed:true,isAiGenerated:true}}}});
-  if(!data.createPost?.post?.id) throw new Error(data.createPost?.message??JSON.stringify(data.createPost));
-  created.push(data.createPost.post);
- }
-}catch(e){
- for(const p of created){try{await gql('mutation($input: DeletePostInput!){deletePost(input:$input){__typename ... on DeletePostSuccess{id} ... on VoidMutationError{message}}}',{input:{id:p.id}});}catch{}}
- throw e;
+async function createAt(i,dueAt){
+ const url=`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/media/sena-initial-9/${files[i]}`;
+ const data=await gql('mutation($input: CreatePostInput!) { createPost(input:$input) { __typename ... on PostActionSuccess { post { id dueAt status } } ... on MutationError { message } } }',{input:{text:captions[i],channelId:c.id,schedulingType:'automatic',mode:'customScheduled',dueAt,aiAssisted:true,assets:[{image:{url,metadata:{altText:'SENA AI-generated lifestyle image'}}}],metadata:{instagram:{type:'post',shouldShareToFeed:true,isAiGenerated:true}}}});
+ if(!data.createPost?.post?.id) throw new Error(data.createPost?.message??JSON.stringify(data.createPost));
+ return data.createPost.post;
 }
-for(const id of oldIds){
- const d=await gql('mutation($input: DeletePostInput!){deletePost(input:$input){__typename ... on DeletePostSuccess{id} ... on VoidMutationError{message}}}',{input:{id}});
- if(d.deletePost?.message) throw new Error(`Delete old ${id}: ${d.deletePost.message}`);
+const oldDues=['2026-09-23T11:30:00.000Z','2026-09-24T11:30:00.000Z','2026-09-25T11:30:00.000Z','2026-09-26T11:30:00.000Z','2026-09-27T11:30:00.000Z','2026-09-28T11:30:00.000Z','2026-09-29T11:30:00.000Z','2026-09-30T11:30:00.000Z','2026-10-01T11:30:00.000Z'];
+const created=[];
+for(let i=0;i<9;i++){
+ const del=await gql('mutation($input: DeletePostInput!){deletePost(input:$input){__typename ... on DeletePostSuccess{id} ... on VoidMutationError{message}}}',{input:{id:oldIds[i]}});
+ if(del.deletePost?.message) throw new Error(`Delete old ${oldIds[i]}: ${del.deletePost.message}`);
+ try{
+  created.push(await createAt(i,dues[i]));
+ }catch(e){
+  try{await createAt(i,oldDues[i]);}catch(rollback){throw new Error(`Replacement failed: ${e.message}; rollback also failed: ${rollback.message}`);}
+  throw e;
+ }
 }
 console.log(JSON.stringify({ok:true,newPosts:created},null,2));
