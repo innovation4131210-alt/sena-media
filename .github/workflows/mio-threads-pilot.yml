@@ -1,0 +1,24 @@
+name: MIO Threads pilot
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/mio-threads-pilot.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: mio-threads-pilot
+  cancel-in-progress: false
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Validate syntax
+        run: node --check scripts/mio-threads-pilot.mjs
+      - name: Schedule and verify MIO Threads only
+        env:
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/mio-threads-pilot.mjs
