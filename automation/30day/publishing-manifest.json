@@ -16,7 +16,7 @@
   "accounts": {
     "mio": {
       "handle": "mio.ai_life",
-      "scheduler": "Metricool",
+      "scheduler": "Metricool through 2026-10-21 (except held D20); Buffer 2026-10-22 through 2026-10-27",
       "time": "18:30",
       "transportStatus": "connected; schedule after exact 30-day media is staged"
     },
@@ -691,15 +691,18 @@
       "filename": "MIO_2026-10-22_D25.jpeg",
       "caption": "待ち合わせより少し早く着いた。ガラスに映る自分を見てるのは内緒。",
       "publishAt": "2026-10-22T18:30:00+09:00",
-      "scheduler": "Metricool",
-      "status": "media_staged",
+      "scheduler": "Buffer",
+      "status": "scheduled",
       "plannedScene": "友達を待つ設定で店先のガラスに映る自分を見る",
       "qcStatus": "accepted",
       "mediaPath": "media/mio-30day-2026-09-28/MIO_2026-10-22_D25.jpeg",
       "sha256": "11c9d6111dbd7dc86e3d74afcb69c1db892d4d6b54e5e53c698b902e0fb96552",
       "width": 1122,
       "height": 1402,
-      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification."
+      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification.",
+      "bufferPostId": "6ab45b0bb54e50f39d0c061d",
+      "bufferChannelId": "6aa630b7ea19ca0bde329146",
+      "schedulingVerification": "Buffer runner 35931716555 succeeded; readback status scheduled; Metricool October 22-27 absent as of 2026-09-24 JST."
     },
     {
       "day": 26,
@@ -718,15 +721,18 @@
       "filename": "MIO_2026-10-23_D26.jpeg",
       "caption": "旅先の朝って、カーテンを開ける瞬間がいちばん好きかもしれない。",
       "publishAt": "2026-10-23T18:30:00+09:00",
-      "scheduler": "Metricool",
-      "status": "media_staged",
+      "scheduler": "Buffer",
+      "status": "scheduled",
       "plannedScene": "旅行先ホテルでカーテンを開ける朝",
       "qcStatus": "accepted",
       "mediaPath": "media/mio-30day-2026-09-28/MIO_2026-10-23_D26.jpeg",
       "sha256": "d3e7bf5e312a3f62429b66ea6eea6bfbef652ec6e12a77734f23b1d4485bcd7f",
       "width": 1122,
       "height": 1402,
-      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification."
+      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification.",
+      "bufferPostId": "6ab45b0fc1b9b7f12c1e7e46",
+      "bufferChannelId": "6aa630b7ea19ca0bde329146",
+      "schedulingVerification": "Buffer runner 35931716555 succeeded; readback status scheduled; Metricool October 22-27 absent as of 2026-09-24 JST."
     },
     {
       "day": 27,
@@ -745,15 +751,18 @@
       "filename": "MIO_2026-10-24_D27.jpeg",
       "caption": "熱いって分かってるのにすぐ食べた。たい焼きは待てない。",
       "publishAt": "2026-10-24T18:30:00+09:00",
-      "scheduler": "Metricool",
-      "status": "media_staged",
+      "scheduler": "Buffer",
+      "status": "scheduled",
       "plannedScene": "ローカル商店街でたい焼きを持ち熱そうに笑う",
       "qcStatus": "accepted",
       "mediaPath": "media/mio-30day-2026-09-28/MIO_2026-10-24_D27.jpeg",
       "sha256": "a765760ca4c43d2441b8cdda9ae0dd83186ddd5f72c73ce9ff33a2a58aa3cea2",
       "width": 1122,
       "height": 1402,
-      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification."
+      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification.",
+      "bufferPostId": "6ab45b12b4fa591f3ecb94ae",
+      "bufferChannelId": "6aa630b7ea19ca0bde329146",
+      "schedulingVerification": "Buffer runner 35931716555 succeeded; readback status scheduled; Metricool October 22-27 absent as of 2026-09-24 JST."
     },
     {
       "day": 28,
@@ -772,15 +781,18 @@
       "filename": "MIO_2026-10-25_D28.jpeg",
       "caption": "靴紐を結んだら出発。今日はちゃんと迷わず着けますように。",
       "publishAt": "2026-10-25T18:30:00+09:00",
-      "scheduler": "Metricool",
-      "status": "media_staged",
+      "scheduler": "Buffer",
+      "status": "scheduled",
       "plannedScene": "白T＋デニムで床に座りスニーカー紐を結ぶ",
       "qcStatus": "accepted",
       "mediaPath": "media/mio-30day-2026-09-28/MIO_2026-10-25_D28.jpeg",
       "sha256": "32feed0d528c347022dfff2048627f830b2660b1c3443fb19d8fd81c881dda11",
       "width": 1122,
       "height": 1402,
-      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification."
+      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification.",
+      "bufferPostId": "6ab45b15ccbef1e0a53d4c1d",
+      "bufferChannelId": "6aa630b7ea19ca0bde329146",
+      "schedulingVerification": "Buffer runner 35931716555 succeeded; readback status scheduled; Metricool October 22-27 absent as of 2026-09-24 JST."
     },
     {
       "day": 29,
@@ -799,15 +811,18 @@
       "filename": "MIO_2026-10-26_D29.jpeg",
       "caption": "一日が終わる音って、アクセサリーを外す時の小さな音かもしれない。",
       "publishAt": "2026-10-26T18:30:00+09:00",
-      "scheduler": "Metricool",
-      "status": "media_staged",
+      "scheduler": "Buffer",
+      "status": "scheduled",
       "plannedScene": "夜、部屋でアクセサリーを外して小皿に置く",
       "qcStatus": "accepted",
       "mediaPath": "media/mio-30day-2026-09-28/MIO_2026-10-26_D29.jpeg",
       "sha256": "5c3a76a1a4962a43b84f162a5fd97e8f9ba5d58d244712acab291924f4a2cb2b",
       "width": 1122,
       "height": 1402,
-      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification."
+      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification.",
+      "bufferPostId": "6ab45b1acdc0a64118060013",
+      "bufferChannelId": "6aa630b7ea19ca0bde329146",
+      "schedulingVerification": "Buffer runner 35931716555 succeeded; readback status scheduled; Metricool October 22-27 absent as of 2026-09-24 JST."
     },
     {
       "day": 30,
@@ -826,15 +841,18 @@
       "filename": "MIO_2026-10-27_D30.jpeg",
       "caption": "まだ少し眠い朝。次はどんな一日にしよう。",
       "publishAt": "2026-10-27T18:30:00+09:00",
-      "scheduler": "Metricool",
-      "status": "media_staged",
+      "scheduler": "Buffer",
+      "status": "scheduled",
       "plannedScene": "朝、ベッド脇でカーテン越しの光に目を細める",
       "qcStatus": "accepted",
       "mediaPath": "media/mio-30day-2026-09-28/MIO_2026-10-27_D30.jpeg",
       "sha256": "c19211b835837c77f8eb49f1b6342819827246f26c8a38eea8eeb30c3197592a",
       "width": 1122,
       "height": 1402,
-      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification."
+      "sourceVerification": "Exact uploaded bytes; scene matched visually to QC day; no crop or image modification.",
+      "bufferPostId": "6ab45b1e4ee8bfc2fd2263e5",
+      "bufferChannelId": "6aa630b7ea19ca0bde329146",
+      "schedulingVerification": "Buffer runner 35931716555 succeeded; readback status scheduled; Metricool October 22-27 absent as of 2026-09-24 JST."
     }
   ],
   "sena": [
