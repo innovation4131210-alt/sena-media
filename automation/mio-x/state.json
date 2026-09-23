@@ -11,10 +11,11 @@
     },
     {
       "key": "mio-x-learning-v2-003",
-      "status": "created_unverified",
+      "status": "scheduled",
       "dueAt": "2026-09-25T03:15:00.000Z",
       "createdForReason": "Continue the approved MIO X queue after repairing credential routing. The private runner is unavailable; use the existing guarded public one-off runner, not a second scheduler.",
-      "id": "6ab46246ccbef1e0a53e1ac8"
+      "id": "6ab46246ccbef1e0a53e1ac8",
+      "verifiedAt": "2026-09-23T23:35:36.029Z"
     }
   ],
   "channel": {
@@ -22,5 +23,5 @@
     "name": "mio_ai_life_jp",
     "service": "twitter"
   },
-  "lastRunAt": "2026-09-23T23:29:40.116Z"
+  "lastRunAt": "2026-09-23T23:35:36.031Z"
 }
