@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "reason": "Continue the approved MIO X queue after repairing credential routing. The private runner is unavailable; use the existing guarded public one-off runner, not a second scheduler.",
+  "source": {
+    "repository": "innovation4131210-alt/sena-auto-post",
+    "queuePath": "queue/mio-x-posts.json",
+    "queueId": "mio-x-learning-v2-003"
+  },
+  "channelGuard": {
+    "knownBufferPostId": "6aad59f2bce81a431d4ceabb",
+    "serviceCandidates": ["twitter", "x"]
+  },
+  "post": {
+    "key": "mio-x-learning-v2-003",
+    "dueAt": "2026-09-25T03:15:00.000Z",
+    "text": "今日の学び：「似合う」と「好き」は、同じ答えじゃなくてもいい。\nMIOの人間練習帳③。\n服を選ぶとき、最後に頼るのは鏡？ 気分？\n次は、お気に入りを長く使う方法へ。\n※架空の成人AIキャラクターによる創作です。"
+  },
+  "policy": {
+    "onePostOnly": true,
+    "noCatchup": true,
+    "noAutomatedEngagement": true,
+    "duplicateCheck": ["known post ID channel identity", "exact text", "exact dueAt", "occupied JST date"],
+    "persistIntentBeforeCreate": true,
+    "readbackRequired": true
+  }
+}
