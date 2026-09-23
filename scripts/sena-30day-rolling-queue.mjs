@@ -41,6 +41,7 @@ const q=await gql('query($organizationId: OrganizationId!) { posts(first:50,inpu
 const allScheduled=(q.posts?.edges??[]).map(e=>e.node);
 let capacity=Math.max(0,9-allScheduled.length);
 const created=[];
+let changed=false;
 
 for(const item of manifest.items){
   if(capacity<=0) break;
@@ -48,6 +49,7 @@ for(const item of manifest.items){
   if(allScheduled.some(x=>x.channelId===c.id && x.text===item.caption)){
     const p=allScheduled.find(x=>x.channelId===c.id && x.text===item.caption);
     state.items.push({day:item.day,filenameBase:item.filenameBase,bufferPostId:p.id,dueAt:p.dueAt,reconciled:true});
+    changed=true;
     continue;
   }
   const url=await mediaUrl(item.filenameBase);
@@ -69,6 +71,7 @@ for(const item of manifest.items){
   if(!data.createPost?.post?.id) throw new Error(data.createPost?.message??JSON.stringify(data.createPost));
   state.items.push({day:item.day,filenameBase:item.filenameBase,bufferPostId:data.createPost.post.id,dueAt:data.createPost.post.dueAt,mediaUrl:url});
   created.push({day:item.day,id:data.createPost.post.id,dueAt:data.createPost.post.dueAt});
+  changed=true;
   capacity--;
 }
 state.lastRunAt=new Date().toISOString();
