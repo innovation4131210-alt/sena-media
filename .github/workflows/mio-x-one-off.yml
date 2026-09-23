@@ -22,4 +22,5 @@ jobs:
           # Verified by known historical MIO X post, not by the secret label.
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
+          MIO_X_MANIFEST_PATH: automation/mio-x/one-off-2026-09-25.json
         run: node scripts/mio-x-one-off.mjs
