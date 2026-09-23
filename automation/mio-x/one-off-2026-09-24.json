@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "reason": "Private sena-auto-post Actions runner unavailable; 2026-09-24 MIO X item due within hours. One-off public-runner substitution under operations.md.",
+  "source": {
+    "repository": "innovation4131210-alt/sena-auto-post",
+    "queuePath": "queue/mio-x-posts.json",
+    "queueId": "mio-x-learning-v2-002"
+  },
+  "channelGuard": {
+    "knownBufferPostId": "6aad59f2bce81a431d4ceabb",
+    "serviceCandidates": [
+      "twitter",
+      "x"
+    ]
+  },
+  "post": {
+    "key": "mio-x-learning-v2-002",
+    "dueAt": "2026-09-24T03:15:00.000Z",
+    "text": "5分早く起きれば、5分余裕ができると思ってた。\nでも服を選ぶ時間が5分増えました。\nMIOの人間練習帳②。\n朝の服、前夜に決める？ 当日の気分？\n次は「迷わない選び方」を練習します。\n※架空の成人AIキャラクターによる創作です。"
+  },
+  "policy": {
+    "onePostOnly": true,
+    "noCatchup": true,
+    "noAutomatedEngagement": true,
+    "duplicateCheck": [
+      "known post ID channel identity",
+      "exact text",
+      "exact dueAt"
+    ],
+    "persistIntentBeforeCreate": true,
+    "readbackRequired": true
+  }
+}
