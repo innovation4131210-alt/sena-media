@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "scheduled": [],
+  "policy": {
+    "account": "sena.virtual.studio",
+    "platform": "instagram",
+    "timezone": "Asia/Tokyo",
+    "slot": "20:30",
+    "postsPerDay": 1,
+    "aiDisclosure": true,
+    "dedupeByExactCaption": true,
+    "sourceBundle": "SENA_initial_9_posts.zip"
+  }
+}
