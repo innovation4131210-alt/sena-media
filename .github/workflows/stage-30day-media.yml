@@ -38,11 +38,7 @@ jobs:
             for n in $(seq -w 1 30); do
               found="$(find "/tmp/$character" -type f \( -iname "*_D${n}.jpeg" -o -iname "*_D${n}.jpg" -o -iname "*_D${n}.png" \) | head -n 1)"
               [ -n "$found" ] || { echo "Missing $character D$n"; exit 2; }
-              date="$(python - <<PY
-from datetime import date,timedelta
-print((date(2026,9,28)+timedelta(days=int("$n")-1)).isoformat())
-PY
-)"
+              date="$(python -c 'import sys; from datetime import date,timedelta; print(date(2026,9,28)+timedelta(days=int(sys.argv[1])-1))' "$n")"
               ext="${found##*.}"
               ext="$(echo "$ext" | tr '[:upper:]' '[:lower:]')"
               [ "$ext" = "jpg" ] && ext="jpeg"

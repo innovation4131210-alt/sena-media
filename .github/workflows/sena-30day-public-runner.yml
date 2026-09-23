@@ -2,16 +2,12 @@ name: Schedule SENA 30-day feed
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "media/sena-30day-2026-09-28/**"
 
 permissions:
   contents: write
 
 concurrency:
-  group: sena-30day-feed
+  group: sena-30day-publishing
   cancel-in-progress: false
 
 jobs:
@@ -38,7 +34,7 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
         run: node scripts/sena-30day-public-runner.mjs
       - name: Persist verified state
-        if: success()
+        if: always()
         shell: bash
         run: |
           set -e

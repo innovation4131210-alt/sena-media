@@ -14,7 +14,7 @@ async function findChannel(){
   const a=await gql('query { account { organizations { id name } } }');
   for(const o of a.account.organizations){
     const d=await gql('query($organizationId: OrganizationId!) { channels(input:{organizationId:$organizationId}) { id name displayName service isQueuePaused isDisconnected isLocked } }',{organizationId:o.id});
-    const c=d.channels.find(c=>String(c.service).toLowerCase()==='instagram'&&[c.name,c.displayName].filter(Boolean).some(v=>String(v).toLowerCase().includes('sena.virtual.studio')));
+    const c=d.channels.find(c=>String(c.service).toLowerCase()==='instagram'&&[c.name,c.displayName].filter(Boolean).some(v=>String(v).toLowerCase()==='sena.virtual.studio'));
     if(c) return {organizationId:o.id,organization:o.name,...c};
   }
   throw new Error('sena.virtual.studio is not connected to this Buffer key');
