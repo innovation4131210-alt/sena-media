@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Check SENA delivery and collect Buffer metrics
         env:
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
@@ -37,4 +39,5 @@ jobs:
           git add analytics/sena-buffer-latest.json analytics/sena-buffer-history/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Snapshot SENA Buffer delivery and metrics"
+          git pull --rebase origin main
           git push
