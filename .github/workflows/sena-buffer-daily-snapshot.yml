@@ -1,0 +1,40 @@
+name: SENA daily delivery and metrics check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 13 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sena-buffer-daily-snapshot.mjs"
+      - ".github/workflows/sena-buffer-daily-snapshot.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sena-buffer-daily-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check SENA delivery and collect Buffer metrics
+        env:
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+        run: node scripts/sena-buffer-daily-snapshot.mjs
+      - name: Persist analytics snapshot
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f analytics/sena-buffer-latest.json ]; then exit 1; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analytics/sena-buffer-latest.json analytics/sena-buffer-history/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Snapshot SENA Buffer delivery and metrics"
+          git push
