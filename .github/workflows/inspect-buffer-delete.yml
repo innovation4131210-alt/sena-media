@@ -1,0 +1,16 @@
+name: Inspect Buffer delete mutation
+on:
+  push:
+    paths:
+      - .github/workflows/inspect-buffer-delete.yml
+  workflow_dispatch:
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Inspect schema
+        env:
+          BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+        run: node scripts/inspect-buffer-delete.mjs
