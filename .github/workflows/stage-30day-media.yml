@@ -1,0 +1,68 @@
+name: Stage MIO SENA 30-day media
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "incoming/MIO_30day_2026-09-28.zip"
+      - "incoming/SENA_30day_2026-09-28.zip"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mio-sena-30day-media-stage
+  cancel-in-progress: false
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Stage exact media
+        shell: bash
+        run: |
+          set -euo pipefail
+          stage_one () {
+            character="$1"
+            zip="incoming/${character}_30day_2026-09-28.zip"
+            out="media/$(echo "$character" | tr '[:upper:]' '[:lower:]')-30day-2026-09-28"
+            [ -f "$zip" ] || return 0
+            rm -rf "/tmp/$character" "$out"
+            mkdir -p "/tmp/$character" "$out"
+            unzip -q -o "$zip" -d "/tmp/$character"
+            for n in $(seq -w 1 30); do
+              found="$(find "/tmp/$character" -type f \( -iname "*_D${n}.jpeg" -o -iname "*_D${n}.jpg" -o -iname "*_D${n}.png" \) | head -n 1)"
+              [ -n "$found" ] || { echo "Missing $character D$n"; exit 2; }
+              date="$(python - <<PY
+from datetime import date,timedelta
+print((date(2026,9,28)+timedelta(days=int("$n")-1)).isoformat())
+PY
+)"
+              ext="${found##*.}"
+              ext="$(echo "$ext" | tr '[:upper:]' '[:lower:]')"
+              [ "$ext" = "jpg" ] && ext="jpeg"
+              cp "$found" "$out/${character}_${date}_D${n}.${ext}"
+            done
+            test "$(find "$out" -maxdepth 1 -type f | wc -l)" -eq 30
+          }
+          stage_one MIO
+          stage_one SENA
+      - name: Commit staged media
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/mio-30day-2026-09-28 media/sena-30day-2026-09-28 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No media changes."
+            exit 0
+          fi
+          git commit -m "Stage finalized MIO SENA 30-day media"
+          git pull --rebase origin main
+          git push
