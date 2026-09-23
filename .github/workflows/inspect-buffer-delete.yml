@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - .github/workflows/inspect-buffer-delete.yml
+      - scripts/inspect-buffer-delete.mjs
   workflow_dispatch:
 jobs:
   inspect:
@@ -10,7 +11,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
-      - name: Inspect schema
+      - name: Inspect exact schema contract
         env:
           BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
         run: node scripts/inspect-buffer-delete.mjs
