@@ -1,6 +1,61 @@
 {
   "version": 1,
-  "scheduled": [],
+  "scheduled": [
+    {
+      "order": 1,
+      "bufferPostId": "6ab35020557b1c68e6c3bc9d",
+      "dueAt": "2026-09-23T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_01_mirror_fitcheck.jpeg"
+    },
+    {
+      "order": 2,
+      "bufferPostId": "6ab3502198ae6feaa623f718",
+      "dueAt": "2026-09-24T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_02_cafe.jpeg"
+    },
+    {
+      "order": 3,
+      "bufferPostId": "6ab350222aa0e20bb4721fa6",
+      "dueAt": "2026-09-25T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_03_city_shopping.jpeg"
+    },
+    {
+      "order": 4,
+      "bufferPostId": "6ab35022557b1c68e6c3bce4",
+      "dueAt": "2026-09-26T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_04_private_room.jpeg"
+    },
+    {
+      "order": 5,
+      "bufferPostId": "6ab350222aa0e20bb4721fcd",
+      "dueAt": "2026-09-27T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_05_hotel_morning.jpeg"
+    },
+    {
+      "order": 6,
+      "bufferPostId": "6ab35023557b1c68e6c3bd24",
+      "dueAt": "2026-09-28T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_06_evening_city.jpeg"
+    },
+    {
+      "order": 7,
+      "bufferPostId": "6ab3502498ae6feaa623f755",
+      "dueAt": "2026-09-29T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_07_black_dress_vanity.jpeg"
+    },
+    {
+      "order": 8,
+      "bufferPostId": "6ab350242aa0e20bb4721ffe",
+      "dueAt": "2026-09-30T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_08_station_travel.jpeg"
+    },
+    {
+      "order": 9,
+      "bufferPostId": "6ab350257f829c668079b70b",
+      "dueAt": "2026-10-01T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_09_hotel_lounge_night.jpeg"
+    }
+  ],
   "policy": {
     "account": "sena.virtual.studio",
     "platform": "instagram",
@@ -10,5 +65,11 @@
     "aiDisclosure": true,
     "dedupeByExactCaption": true,
     "sourceBundle": "SENA_initial_9_posts.zip"
+  },
+  "lastVerifiedAt": "2026-09-23T04:05:57.237Z",
+  "channel": {
+    "id": "6aa72524ea19ca0bde39313c",
+    "name": "sena.virtual.studio",
+    "displayName": "sena.virtual.studio"
   }
 }
