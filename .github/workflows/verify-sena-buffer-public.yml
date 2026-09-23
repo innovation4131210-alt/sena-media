@@ -1,0 +1,23 @@
+name: Verify SENA via public runner
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/verify-sena-buffer-public.mjs"
+      - ".github/workflows/verify-sena-buffer-public.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v5
+      - name: Verify SENA Buffer channel without posting
+        env:
+          BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
+        run: node scripts/verify-sena-buffer-public.mjs
