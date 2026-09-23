@@ -32,26 +32,15 @@
       "lastObservedStatus": "scheduled"
     }
   ],
-  "lastRunAt": "2026-09-23T14:11:03.049Z",
+  "lastRunAt": "2026-09-23T23:06:27.540Z",
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio",
     "displayName": "sena.virtual.studio"
   },
-  "observedOrganizationScheduledCount": 7,
-  "createdThisRun": [
-    {
-      "day": 2,
-      "id": "6ab3ddf7a75742f2cd11395c",
-      "dueAt": "2026-09-29T11:30:00.000Z"
-    },
-    {
-      "day": 3,
-      "id": "6ab3ddf8c81095d33c9a1f4a",
-      "dueAt": "2026-09-30T11:30:00.000Z"
-    }
-  ],
+  "observedOrganizationScheduledCount": 17,
+  "createdThisRun": [],
   "blocked": [],
   "pendingCreates": [],
-  "lastVerifiedAt": "2026-09-23T14:11:05.123Z"
+  "lastVerifiedAt": "2026-09-23T23:06:27.544Z"
 }
