@@ -1,5 +1,8 @@
 import {readFile} from 'node:fs/promises';
-const manifest=JSON.parse(await readFile('automation/mio-x/one-off-2026-09-24.json','utf8'));
+const manifestPath=process.env.MIO_X_MANIFEST_PATH||'automation/mio-x/one-off-2026-09-24.json';
+if(!/^automation\/mio-x\/one-off-\d{4}-\d{2}-\d{2}\.json$/.test(manifestPath))throw Error('Expected a dated MIO X manifest');
+const manifest=JSON.parse(await readFile(manifestPath,'utf8'));
+if(manifest.policy?.onePostOnly!==true||manifest.policy?.noCatchup!==true||!manifest.post?.text||!Number.isFinite(Date.parse(manifest.post?.dueAt)))throw Error('Invalid guarded MIO X manifest');
 const repo=process.env.GITHUB_REPOSITORY;
 const statePath='automation/mio-x/state.json';
 async function github(method,body){
@@ -52,6 +55,9 @@ if(exact.length===1){
 }
 if(entry)throw Error('Saved intent missing from Buffer inventory; manual reconciliation required, no retry');
 if(new Date(target.dueAt)<=new Date())throw Error('Target is past due; no catch-up');
+const jstDate=value=>new Date(value).toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo'});
+if(channel.posts.some(post=>['scheduled','sent','pending','sending'].includes(post.status)&&jstDate(post.dueAt||post.sentAt)===jstDate(target.dueAt)))throw Error('Target JST date already occupied; no second daily post');
+if(channel.posts.filter(post=>post.status==='scheduled').length>=9)throw Error('Safe queue cap reached');
 entry={key:target.key,status:'intent',dueAt:target.dueAt,createdForReason:manifest.reason};state.posts.push(entry);
 state.channel={id:channel.id,name:channel.name,service:channel.service};await save();
 const created=await gql('mutation($input: CreatePostInput!) { createPost(input:$input) { __typename ... on PostActionSuccess { post { id text dueAt } } ... on MutationError { message } } }',{input:{channelId:channel.id,text:target.text,schedulingType:'automatic',mode:'customScheduled',dueAt:target.dueAt,aiAssisted:true}});
