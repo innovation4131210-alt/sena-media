@@ -1,0 +1,40 @@
+name: SENA 30-day rolling queue
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 14 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "media/sena-30day/**"
+      - "automation/sena-month/manifest.json"
+      - "scripts/sena-30day-rolling-queue.mjs"
+      - ".github/workflows/sena-30day-rolling-queue.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sena-30day-rolling-queue
+  cancel-in-progress: false
+
+jobs:
+  refill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - name: Fill SENA Buffer queue safely
+        env:
+          BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+        run: node scripts/sena-30day-rolling-queue.mjs
+      - name: Persist rolling queue state
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/sena-month/state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update SENA rolling queue state"
+          git push
