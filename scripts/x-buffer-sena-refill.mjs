@@ -153,7 +153,7 @@ async function main() {
   }
 
   const now = Date.now();
-  const maxScheduled = Math.min(9, queue.policy?.maxScheduled ?? 9);
+  const maxScheduled = Math.min(10, queue.policy?.maxScheduled ?? 10);
   let scheduledCount = existing.filter((p) => p.status === "scheduled").length;
   let created = 0;
 
