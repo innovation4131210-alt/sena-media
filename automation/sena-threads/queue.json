@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T17:17:18.254Z",
+  "updatedAt": "2026-09-24T23:26:08.297Z",
   "policy": {
     "enabled": false,
     "maxScheduled": 9,
@@ -65,6 +65,21 @@
       "key": "sena-threads-09",
       "dueAt": "2026-10-11T11:10:00.000Z",
       "text": "予定のない夜に、少しだけ遠回りして帰るのが好き。\n\n何もない日に寄り道するなら、カフェ？ 本屋？ 夜景？\n\n※SENAは架空のAIキャラクターです。エピソードは創作です。"
+    },
+    {
+      "key": "sena-threads-garcia-01",
+      "dueAt": "2026-10-13T11:10:00.000Z",
+      "text": "【PR】\n男性のシルバーアクセ、つけるなら細め？ 少し存在感あり？\n\nGARCIAの「thin snake necklace」は、シンプルだけど線がきれいなタイプ。\nhttps://r.8to.jp/bgyai4tF3Luy\n\n※アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。",
+      "status": "pending",
+      "monetization": {
+        "network": "A8.net",
+        "program": "細くても、存在感があるアクセサリーGARCIA",
+        "platform": "Threads",
+        "trackingUrl": "https://r.8to.jp/bgyai4tF3Luy",
+        "creative": "material-001 thin snake necklace",
+        "sku": "thin snake necklace (silver) #n52",
+        "firstCommercialTestForProgram": true
+      }
     }
   ]
 }
