@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "preparedOn": "2026-09-24",
+  "timezone": "Asia/Tokyo",
+  "purpose": "Owner requested complete separate reservation packages to work through during spare time without a conversation round trip for each post. This handoff covers the initial nine-image sets only, not 30-day D01-D30.",
+  "ownerRequest": "手隙で予約しとくので、それぞれまとめて送っといて",
+  "status": "prepared_for_owner_manual_reservation_not_scheduled_by_assistant",
+  "source": {
+    "repository": "innovation4131210-alt/sena-auto-post",
+    "path": "strategy/initial-image-launch-2026-09-23.json",
+    "blobSha": "f5b2820450cf4be820dabfa71c52517d2b789858",
+    "rule": "Preserve exact approved image bytes and caption wording; title, line breaks, AI disclosure and hashtags are native TikTok packaging. Do not reuse this source file's old Instagram schedule as current TikTok inventory."
+  },
+  "mio": {
+    "account": "mio.ai_life",
+    "latestOwnerCompletionReport": {
+      "sourceAssetKey": "MIO_06_海辺の駅",
+      "statement": "できた",
+      "reportDate": "2026-09-24",
+      "reportedScheduledAt": "2026-09-29T20:30:00+09:00",
+      "status": "scheduled_owner_reported_not_platform_verified",
+      "externalPostId": null,
+      "scheduledAtIndependentlyVerified": false,
+      "aiDisclosureIndependentlyVerified": false,
+      "automaticPublicationVerified": false,
+      "doNotDuplicate": true
+    },
+    "existingNativeReservations": [
+      {"initialOrder": 2, "scene": "雨の日のパン屋", "at": "2026-09-25T20:30:00+09:00", "evidence": "native_reservation_screenshot_confirmed"},
+      {"initialOrder": 3, "scene": "ブーツ支度", "at": "2026-09-26T20:30:00+09:00", "evidence": "owner_report_only"},
+      {"initialOrder": 4, "scene": "カフェでパスタ", "at": "2026-09-27T20:30:00+09:00", "evidence": "owner_report_only"},
+      {"initialOrder": 5, "scene": "鏡でコーデ確認", "at": "2026-09-28T20:30:00+09:00", "evidence": "owner_report_only"},
+      {"initialOrder": 6, "scene": "海辺の駅", "at": "2026-09-29T20:30:00+09:00", "evidence": "owner_report_only"}
+    ],
+    "excludedInitialOrders": [1, 2, 3, 4, 5, 6],
+    "excludedFirstPostId": "7688677166724173108",
+    "sourceZip": "MIO_initial_9_posts(1).zip",
+    "sourceZipSha256": "bc82a8361e7e18bdafaa4b4fdd22280213451443e78c45361aa326d7e04734c3",
+    "package": {"filename": "MIO_TikTok_initial_batch.zip", "sha256": "a5ae88cf1f555dd11ae449190fbde8800a86d0cedb83ff7fadb43cd8729903e2", "imageCount": 3, "bytes": 7108427, "guide": "MIO_TikTok_initial_guide.html", "captionList": "MIO_TikTok_initial_posts.txt"},
+    "preparedPosts": [
+      {"initialOrder": 7, "sourceAssetKey": "MIO_07_夕暮れの街", "proposedAt": "2026-09-30T20:30:00+09:00", "title": "帰るつもりが、もう少し。", "caption": "帰るつもりだったのに、夕方の街がきれいでもう少し歩いた。\n夜まで寄り道する？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #夕暮れ #街歩き #日常", "imageSha256": "c33535dbf649f3f118f91ea3288352ff7f282d992ea45bb00926df3d0750d9b2", "status": "prepared_not_scheduled"},
+      {"initialOrder": 8, "sourceAssetKey": "MIO_08_イヤリング選び", "proposedAt": "2026-10-01T20:30:00+09:00", "title": "右と左、まだ決められない。", "caption": "右と左でずっと迷ってる。\nAとB、どっちにする？次は選ばれた方で出かける。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #イヤリング #お出かけコーデ #日常", "imageSha256": "903a59dc1f386f205313633c70f84a98d4e7d303d2eb141b8d68e5ccbe87171c", "status": "prepared_not_scheduled"},
+      {"initialOrder": 9, "sourceAssetKey": "MIO_09_花屋", "proposedAt": "2026-10-02T20:30:00+09:00", "title": "予定になかった、今日のお土産。", "caption": "予定になかったのに連れて帰ってきた。\n部屋に飾るなら、何色の花が好き？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #花のある暮らし #寄り道 #日常", "imageSha256": "294b89616de3568a3d4178935c21ce30724cfb9a9ce37442df5f60a998b47986", "status": "prepared_not_scheduled"}
+    ]
+  },
+  "sena": {
+    "exactTikTokHandleVerified": false,
+    "nativeInventoryVerified": false,
+    "status": "draft_package_requires_native_identity_and_duplicate_check",
+    "note": "Do not assume a SENA Instagram handle, connection, or reservation is a TikTok fact. The dates below are optional empty-slot proposals, not a finding that these posts are unreserved. Use only the SENA TikTok account after checking existing published and reserved images. Never put these assets on MIO.",
+    "sourceZip": "SENA_initial_9_posts.zip",
+    "sourceZipLibraryFileId": "file_000000003cc8821197753a30cdf527aa",
+    "sourceZipSha256": "ee692ca8a3a1d97ad831b4026bc53b1514edc318642fee8285f94628d919f6d7",
+    "package": {"filename": "SENA_TikTok_initial_batch.zip", "sha256": "54120e3c976d6ac8a89b0124e62e92067a4211c96a3fa79798f1278efa3f1f2c", "imageCount": 9, "bytes": 3754122, "guide": "SENA_TikTok_initial_guide.html", "captionList": "SENA_TikTok_initial_posts.txt"},
+    "preparedPosts": [
+      {"initialOrder": 1, "sourceAssetKey": "SENA_01_mirror_fitcheck", "proposedAt": "2026-09-25T21:00:00+09:00", "title": "白とチャコールで、出かける。", "tags": "#SENA #AIモデル #今日のコーデ #シンプルコーデ #日常", "imageSha256": "a11bb3441dc45624007f0a5b72dbcc7421954bee24de82c13c43c24593cd0f3a"},
+      {"initialOrder": 2, "sourceAssetKey": "SENA_02_cafe", "proposedAt": "2026-09-26T21:00:00+09:00", "title": "予定の合間に、少しだけ。", "tags": "#SENA #AIモデル #カフェ #ひとり時間 #日常", "imageSha256": "73775b92ead0d12496c170b855ac62c15dab7e37a65144d9c769bcabf803f779"},
+      {"initialOrder": 3, "sourceAssetKey": "SENA_03_city_shopping", "proposedAt": "2026-09-27T21:00:00+09:00", "title": "見るだけ、のはずだった。", "tags": "#SENA #AIモデル #買い物 #街歩き #日常", "imageSha256": "f5b6dcb795d2bcb10515da19c0df86bf534c7ab0f3e1f19c2347e51f685bffb1"},
+      {"initialOrder": 4, "sourceAssetKey": "SENA_04_private_room", "proposedAt": "2026-09-28T21:00:00+09:00", "title": "外に出ない日の、私。", "tags": "#SENA #AIモデル #おうち時間 #休日 #日常", "imageSha256": "72926770ec938a697761491edbc7f11c8cd52587f759adac70a58c1a4c850c2e"},
+      {"initialOrder": 5, "sourceAssetKey": "SENA_05_hotel_morning", "proposedAt": "2026-09-29T21:00:00+09:00", "title": "予定を決める前の、朝。", "tags": "#SENA #AIモデル #旅先の朝 #ホテルステイ #日常", "imageSha256": "adba993b8f5ea176cd2130ecb5420f89cbcfed35b034a9e717f61ba911cf3f4e"},
+      {"initialOrder": 6, "sourceAssetKey": "SENA_06_evening_city", "proposedAt": "2026-09-30T21:00:00+09:00", "title": "もう一軒、それとも帰る？", "tags": "#SENA #AIモデル #夕暮れ #街歩き #日常", "imageSha256": "68fcdc23c7c6e3a547bd046b22179c852b093a716bb0c29d0cffc62245d74c22"},
+      {"initialOrder": 7, "sourceAssetKey": "SENA_07_black_dress_vanity", "proposedAt": "2026-10-01T21:00:00+09:00", "title": "最後に、イヤリングだけ。", "tags": "#SENA #AIモデル #ブラックコーデ #イヤリング #日常", "imageSha256": "6081e8ce141609c921f40f40f0be256ed64bac367365f0d97e813d6c1ec605b7"},
+      {"initialOrder": 8, "sourceAssetKey": "SENA_08_station_travel", "proposedAt": "2026-10-02T21:00:00+09:00", "title": "コーヒーを買ったら、出発。", "tags": "#SENA #AIモデル #旅の始まり #駅 #日常", "imageSha256": "24187812ece924eee735354e4e34bf1b4dcb8930b91b44ac342c8bf865fae316"},
+      {"initialOrder": 9, "sourceAssetKey": "SENA_09_hotel_lounge_night", "proposedAt": "2026-10-03T21:00:00+09:00", "title": "帰る直前の、一枚。", "tags": "#SENA #AIモデル #ホテルラウンジ #夜のお出かけ #日常", "imageSha256": "71c7cb72f4abfecc0156cce7152a8efdc1cdf1e74ae833e18ff77c293a262414"}
+    ],
+    "captionRecipe": "Use the corresponding approved SENA caption from source.mio/sena posts (sena only), preserve words and add a line break at the first sentence. Append two newlines, the exact disclosure below, two newlines, then that entry's tags.",
+    "disclosure": "※SENAは架空のAIキャラクターです。画像はAIで制作しています。"
+  },
+  "checks": {
+    "originalImagesGenerated": false,
+    "imagesReencoded": false,
+    "zipCrcTestsPassed": true,
+    "packagedImageHashesMatchSourceBytes": true,
+    "imageCounts": {"MIO": 3, "SENA": 9},
+    "scopeDoesNotInclude30dayD01ToD30": true,
+    "nativeQueuesRequeriedThisHandoff": false,
+    "noReservationOrPublicPostCreatedByAssistant": true,
+    "instagramAndXQueuesUnchanged": true,
+    "mioD20HoldUnchanged": true,
+    "newMonitoringAutomationCreated": false,
+    "additionalPayment": false
+  },
+  "operatorRules": [
+    "Reserve one photo per post, never all package images as one carousel.",
+    "Enable TikTok native AI-generated-content disclosure on every post; a caption disclosure is not a replacement.",
+    "Do not create a duplicate if the same photo or proposed time is already published or reserved.",
+    "If a proposed time is past when working through the package, use a future empty slot; never switch to immediate publication.",
+    "SENA reservation UI capability is not established by the MIO screen evidence; stop before publication if its photo reservation or AI disclosure options are absent.",
+    "The HTML checkboxes are local work notes, not verified reservation evidence or a publishing integration.",
+    "One consolidated native reservation-list screenshot after a batch is sufficient for the next verification; do not request a message after every item."
+  ]
+}
