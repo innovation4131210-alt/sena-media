@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "createdAt": "2026-09-24T17:26:46.975Z",
+  "program": {
+    "network": "A8.net",
+    "advertiser": "エステールホールディングス株式会社",
+    "name": "BLOOM（ブルーム）公式ストア",
+    "commission": "purchase 10%",
+    "ownerCharacter": "SENA"
+  },
+  "platforms": {
+    "x": {
+      "account": "sena_ai_studio",
+      "plannedAt": "2026-10-04T13:05:00+09:00",
+      "queueKey": "sena-d07",
+      "trackingUrl": "https://r.8to.jp/Zv7PTYBUicQd",
+      "externalPostUrl": null,
+      "a8PlacementUrlSubmitted": false,
+      "status": "queued_pending_capacity",
+      "metrics": {
+        "h24": null,
+        "h72": null,
+        "d7": null
+      }
+    },
+    "instagram": {
+      "account": "sena.virtual.studio",
+      "plannedAt": "2026-10-04T20:35:00+09:00",
+      "format": "story_from_D07_feed",
+      "trackingUrl": "https://px.a8.net/svt/ejp?a8mat=4BCJJR+7JHQ6A+4ZUQ+BX3J6&a8sns=instagram",
+      "externalPostUrl": null,
+      "a8PlacementUrlSubmitted": false,
+      "status": "native_story_action_scheduled",
+      "metrics": {
+        "h24": null,
+        "h72": null,
+        "d7": null
+      }
+    },
+    "threads": {
+      "account": "sena.virtual.studio",
+      "plannedAt": "2026-10-07T20:10:00+09:00",
+      "queueKey": "sena-threads-07",
+      "trackingUrl": "https://r.8to.jp/sPiE3rrNPMTp",
+      "externalPostUrl": null,
+      "a8PlacementUrlSubmitted": false,
+      "status": "staged_behind_buffer_slot_gate",
+      "metrics": {
+        "h24": null,
+        "h72": null,
+        "d7": null
+      }
+    },
+    "tiktok": {
+      "account": "sena.virtual.studio",
+      "plannedAt": "2026-10-09T20:30:00+09:00",
+      "trackingUrl": "https://px.a8.net/svt/ejp?a8mat=4BCJJR+7JHQ6A+4ZUQ+BX3J6&a8sns=tiktok",
+      "externalPostUrl": null,
+      "a8PlacementUrlSubmitted": false,
+      "status": "native_profile_website_gate",
+      "metrics": {
+        "h24": null,
+        "h72": null,
+        "d7": null
+      }
+    }
+  },
+  "rules": {
+    "missingMetricsRemainNull": true,
+    "doNotCrossUsePlatformLinks": true,
+    "prDisclosureRequired": true,
+    "aiCharacterDisclosureRequired": true,
+    "noFabricatedUseClaims": true,
+    "noDuplicatePosting": true
+  }
+}
