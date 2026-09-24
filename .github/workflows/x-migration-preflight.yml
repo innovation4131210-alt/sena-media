@@ -1,0 +1,45 @@
+name: X migration preflight
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/x-migration-preflight.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x-migration-preflight
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      MIO_BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+      SENA_BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Read current old-Buffer channel state
+        run: node scripts/mio-sena-connection-audit.mjs
+      - name: Persist current audit
+        shell: bash
+        run: |
+          if git diff --quiet -- analytics/mio-sena-connection-audit.json; then
+            echo "Audit file unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analytics/mio-sena-connection-audit.json
+          git commit -m "Refresh X migration preflight audit"
+          git pull --rebase origin main
+          git push
