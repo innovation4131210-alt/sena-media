@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "capturedOn": "2026-09-24",
   "timezone": "Asia/Tokyo",
-  "scope": "Read-only TikTok handover verification. Observation date is not a provider metric-update timestamp.",
+  "scope": "Earlier read-only TikTok audit plus later owner-operated native Studio reservation evidence. Provider metrics and inventories below retain their original observation scope and are not refreshed by the screenshot update.",
   "account": "mio.ai_life",
   "metricoolBrandId": "6940494",
   "strategySource": {
@@ -30,10 +30,11 @@
   },
   "reservations": {
     "metricool": {
-      "source": "Metricool.getScheduledPosts called in this continuation",
+      "source": "Metricool.getScheduledPosts called in the earlier continuation",
       "queryPeriod": {"fromDate": "2026-09-24T00:00:00+09:00", "toDate": "2026-10-28T23:59:59+09:00"},
       "tiktokReservations": 0,
-      "method": "Filter actual providers for network=tiktok. All returned records were Instagram, including some already published records."
+      "method": "Filter actual providers for network=tiktok. All returned records were Instagram, including some already published records.",
+      "scopeNote": "Historical Metricool inventory only. Zero here does not imply no TikTok Studio native reservations."
     },
     "buffer": {
       "source": "analytics/mio-sena-connection-audit.json",
@@ -46,32 +47,82 @@
       "scheduledAtSnapshot": 0,
       "sentAtSnapshot": 7,
       "liveBufferRequeriedThisContinuation": false,
-      "note": "Saved 10:04 JST audit, not a current live Buffer inventory. Re-read Buffer before any new scheduling."
+      "note": "Saved 10:04 JST audit, not a current live Buffer inventory. Re-read Buffer and native Studio before new scheduling. Do not overwrite native reservation evidence with an empty Buffer queue."
+    },
+    "nativeStudio": {
+      "source": "Owner screenshots in the SNS operation handover conversation",
+      "observedOn": "2026-09-24",
+      "screenClock": "15:56",
+      "observedReservationCount": 1,
+      "inventoryComplete": false,
+      "accountAttribution": "Continuous MIO account workflow and matching approved asset/caption; the exact handle is not printed in the final management screenshot.",
+      "posts": [
+        {
+          "key": "mio-tt-initial-02-rain-bakery",
+          "sourceAssetKey": "MIO_02_雨の日_パン屋",
+          "sourceCohort": "initial_9_not_30day_D02",
+          "type": "PHOTO",
+          "imageCount": 1,
+          "providedImageSha256": "d1487f5a523b7082f55a2aedbb5cd87266046564342036dbc28b200039d73b70",
+          "status": "scheduled_native_ui_confirmed",
+          "scheduledAt": "2026-09-25T20:30:00+09:00",
+          "externalPostId": null,
+          "publicUrl": null,
+          "nativeDisplayStatus": "投稿予約済み",
+          "nativeDisplayDateTime": "9/25 8:30 PM",
+          "successToast": "投稿が予約されました",
+          "visibleCaptionPrefix": "急に降ってきた。自分より先にパンを守ったのは正解だ…",
+          "fullSavedTitleVerified": false,
+          "fullSavedCaptionVerified": false,
+          "aiDisclosureEnabledBeforeSubmission": true,
+          "savedReservationAiFlagReadbackVerified": false,
+          "publishedAiLabelVerified": false,
+          "automaticPublicationVerified": false,
+          "doNotDuplicate": true,
+          "evidence": [
+            {"filename": "IMG_8034.png", "sha256": "7921b3f9c79cf9cc8d474303f582568192e9b009c8227ec35925100ef951fef4", "proves": "AI-generated-content toggle ON in the native photo composer before submission"},
+            {"filename": "IMG_8035.png", "sha256": "70192af7f51ea7169991378d7dd5cb8185a65f4417c94a9a93ae898913c4f6ee", "proves": "Photo composer has Sep25 20:30 selected and the final reservation button"},
+            {"filename": "IMG_8036.png", "sha256": "2f16d0cbb23fbf12c7aedc962d05cdf323c594e1a9086bf7d3ec7909c39853f9", "proves": "Management list shows matching bakery photo as reserved for Sep25 8:30 PM and a reservation-success toast"}
+          ],
+          "evidenceStorage": "Screenshots remain in the conversation; raw screenshots were not uploaded to this repository. Image hash identifies the supplied asset, not a server-downloaded reserved image."
+        }
+      ],
+      "schedulingHorizonObservation": {
+        "source": "IMG_8032.png",
+        "selectedDate": "2026-10-24",
+        "daysAheadSelectable": 30,
+        "maximumAllowedDateIndependentlyVerified": false,
+        "reservationCountLimit": null
+      }
     }
   },
   "automation": {
-    "status": "recurring_photo_publication_not_operationally_verified",
-    "blocker": "Connected Metricool and Buffer routes do not support forwarding native AI disclosure on TikTok photos.",
+    "status": "native_manual_photo_reservation_confirmed_automatic_delivery_unverified",
+    "blocker": "Earlier connector audit: unattended Metricool/Buffer photo publishing with native AI declaration remains unverified. This does not block the owner-operated native Studio route now evidenced above.",
     "nativeTikTokPhotoApiSupportsDisclosure": true,
     "nativeApiField": "Top-level is_aigc=true on /v2/post/publish/content/init/",
     "nativeApiDocumentationUpdated": "2026-08-24",
-    "currentMetricoolToolPhotoAiFlag": "isAigc is silently omitted for photo-only posts",
-    "bufferPublishedDocumentation": "AI declaration is supported for TikTok video; photo flag requests return a validation error",
+    "currentMetricoolToolPhotoFlagFromEarlierAudit": "isAigc is silently omitted for photo-only posts",
+    "bufferPublishedDocumentationFromEarlierAudit": "AI declaration is supported for TikTok video; photo flag requests return a validation error",
     "sources": [
       "https://developers.tiktok.com/docs/en/content-posting-api-reference-photo-post",
       "https://help.metricool.com/schedule-and-post-on-tiktok-bkepi",
       "https://support.buffer.com/en-us/articles/flagging-posts-as-ai-generated-in-buffer-V7jAnzYJ5n"
     ],
-    "qualifyingNoChargeRouteVerified": false,
+    "qualifyingUnattendedNoChargeRouteVerified": false,
     "nativeStudioRecurringPhotoSchedulingVerified": false,
+    "nativeStudioSingleManualPhotoReservationVerified": true,
+    "nativeStudioSinglePhotoAutomaticDeliveryVerified": false,
+    "ownerAcceptedManualBatchReservation": true,
+    "manualBatchMeaning": "Owner registers each photo in Studio ahead of time. Scheduled automatic publication is configured; continuous automatic queue refill is not implemented.",
     "notAnApiWidePhotoLimitation": true,
-    "completionGate": "One approved, nonduplicate photo successfully published through an authorized no-charge route, with native AI disclosure verified; then rolling reservations, publication-ID synchronization, and failure monitoring verified. A notification requiring daily owner completion is not unattended publishing."
+    "completionGate": "Native reservation registration is complete for the bakery photo. Verify actual publication and the live AI label after the scheduled time. Do not call the entire recurring pipeline automated based on one reservation."
   },
   "sena": {
     "metricoolBrandAvailableInCurrentConnection": false,
     "tiktokConnectionVerifiedThisContinuation": false,
     "tiktokReservationsVerifiedThisContinuation": false,
-    "note": "Do not confuse SENA Instagram reservations with TikTok automation or infer that no SENA TikTok account exists elsewhere."
+    "note": "MIO native Studio evidence does not prove SENA capability, account connection or reservations."
   },
   "preservedDecisions": {
     "keepApprovedCharacterAndNativePhotoFormat": true,
@@ -81,12 +132,29 @@
     "additionalPaidServicesAllowed": false,
     "doNotReofferPreviouslyDeclinedPaidUploadPostRoute": true,
     "doNotRepostIds": ["7688677166724173108"],
+    "doNotRescheduleAssetKeys": ["MIO_02_雨の日_パン屋"],
+    "dedupeRecordIsNotAnImplementedCodeGuard": true,
     "mioD20QualityHoldPreserved": true,
     "instagramAndXReservationsUnchanged": true,
     "noNewImageGeneration": true
   },
-  "recommendedNextStepNotExecuted": "Resolve the photo/native-AI-disclosure connector gate for MIO before expanding to SENA. Preserve current photo content variables while testing the delivery route. Do not bulk-create reservations before queue reconciliation and a verified single-post delivery test.",
-  "socialMutationsThisContinuation": false,
+  "nextPreparedCandidate": {
+    "sourceAssetKey": "MIO_03_ブーツ支度",
+    "sourceCohort": "initial_9_not_30day_D03",
+    "status": "prepared_for_owner_native_reservation_not_scheduled",
+    "proposedScheduledAt": "2026-09-26T20:30:00+09:00",
+    "title": "まだ片方。もう出る時間なのに。",
+    "caption": "まだ片方。出る時間はもう過ぎてます。\nこういう日に限って靴だけ最後まで決まらない。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #お出かけコーデ #ブーツ #日常",
+    "approvedCaptionSource": "innovation4131210-alt/sena-auto-post:strategy/initial-image-launch-2026-09-23.json, mio order 3; title and disclosure/hashtags are TikTok packaging",
+    "retrievedLibraryFilename": "image-gen-1(1).png",
+    "retrievedImageSha256": "678d06a7ae26e66e90f975e56290b17bf0215d5e2992c68be3f2087932b78951",
+    "assetPreparation": "Retrieved the existing Library image matching the explicitly adopted navy-top/denim/long-boots creative and copied bytes unchanged. The Metricool CDN was unreachable from the container, so byte equality with its hosted copy was not independently tested.",
+    "externalPostId": null,
+    "guard": "Owner must not add a second reservation if this same photo is already present in native Studio. This is preparation only, not a verified empty live slot."
+  },
+  "nextOperationalCheck": "After Sep25 20:30 JST, reconcile the exact native bakery reservation with actual publication and its AI label before describing automatic delivery as successful. There is no new background check scheduled by this file update.",
+  "socialMutationsByAssistantThisContinuation": false,
+  "socialMutationByOwner": "One TikTok Studio native photo reservation, screenshot confirmed",
   "publishingCodeChangesThisContinuation": false,
   "newRecurringTaskCreated": false,
   "additionalPayment": false
