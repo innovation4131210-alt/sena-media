@@ -9,7 +9,8 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/bf85c83ec55429e7a41e49a03d568c5717780a8c/media/sena-30day-2026-09-28/SENA_2026-09-28_D01.jpeg",
       "mediaSha256": "c74ba9f60a425b2dd88cee4028ad693ce605ab0d1385944c013018693f4786a1",
       "caption": "出る前の最終確認。今日はチャコールだけで十分。足すなら何色？",
-      "lastObservedStatus": "scheduled"
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-09-24T01:41:44.902Z"
     },
     {
       "day": 2,
@@ -19,7 +20,8 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/ac84f84b13fe00f38374c0f3cb3013124acd2200/media/sena-30day-2026-09-28/SENA_2026-09-29_D02.jpeg",
       "mediaSha256": "047a672b9f66053d996517d6f61cfee705c9c03b647ee74ff1113ddd144cb748",
       "caption": "予定の合間に少しだけ。窓際の席は、街を見ているだけで時間が過ぎる。",
-      "lastObservedStatus": "scheduled"
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-09-24T01:41:44.902Z"
     },
     {
       "day": 3,
@@ -29,18 +31,26 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/ac84f84b13fe00f38374c0f3cb3013124acd2200/media/sena-30day-2026-09-28/SENA_2026-09-30_D03.jpeg",
       "mediaSha256": "7957c506d60d234d7387e2d63b0e6e2b9c7239bf003525e3ef608dd3f5687883",
       "caption": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？",
-      "lastObservedStatus": "scheduled"
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-09-24T01:41:44.902Z"
     }
   ],
-  "lastRunAt": "2026-09-23T23:06:27.540Z",
+  "lastRunAt": "2026-09-24T01:41:44.788Z",
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio",
     "displayName": "sena.virtual.studio"
   },
-  "observedOrganizationScheduledCount": 17,
   "createdThisRun": [],
   "blocked": [],
   "pendingCreates": [],
-  "lastVerifiedAt": "2026-09-23T23:06:27.544Z"
+  "lastVerifiedAt": "2026-09-24T01:41:44.903Z",
+  "legacyOrganizationCountObservation": {
+    "count": 17,
+    "note": "Historical organization-wide count; never use for per-channel capacity."
+  },
+  "observedChannelScheduledCount": 9,
+  "capacityScope": "channel",
+  "safeQueueLimit": 9,
+  "remainingChannelCapacity": 0
 }
