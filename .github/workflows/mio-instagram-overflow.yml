@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: mio-instagram-overflow
+  group: mio-instagram-publishing
   cancel-in-progress: false
 jobs:
   schedule:
@@ -16,8 +16,12 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v5
-      - run: node --check scripts/mio-instagram-overflow.mjs
-      - name: Schedule exact six MIO posts
+      - name: Verify restoration guards before external actions
+        run: |
+          node --check scripts/mio-instagram-overflow.mjs
+          node --check scripts/mio-instagram-transfer-guard.mjs
+          node scripts/test-mio-instagram-transfer-guard.mjs
+      - name: Restore exact six authorized Buffer-only dates and read back
         env:
           BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
