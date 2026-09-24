@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T10:43:36.379Z",
+  "updatedAt": "2026-09-24T13:21:16.058Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -272,6 +272,22 @@
       "text": "アクセサリーを外したら、今日も終わり。窓の外だけもう少し見ていたい。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-27_D30.jpeg",
       "status": "pending"
+    },
+    {
+      "key": "sena-x-strong-60-a01",
+      "dueAt": "2026-09-27T12:30:00.000Z",
+      "text": "最後にイヤリングだけ。\\n黒の日は、少しだけ強くなれる気がする。\\n\\n今夜は足す？ それとも引く？\\n\\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\\n\\n#SENA",
+      "status": "held_media_upload",
+      "experiment": {
+        "type": "x_visual_hook",
+        "sensualityTarget": 60,
+        "variant": "black_hotel_earring"
+      },
+      "mediaStaging": {
+        "conversationFileId": "file_0000000030b481fb800c77cdcedfab3c",
+        "canonicalName": "SENA_X_60_A01.jpeg",
+        "sha256": "51427c1fcf7a4c408d704f643ff686e8702478592148a530ea14e56010780adb"
+      }
     }
   ],
   "activationRequestedAt": "2026-09-24T10:43:18.218Z",
