@@ -1,4 +1,5 @@
 name: MIO SENA read-only connection audit
+# Reconcile live scheduler inventories after the Sep 24 continuation check.
 on:
   workflow_dispatch:
   push:
