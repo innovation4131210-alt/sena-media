@@ -1,0 +1,50 @@
+name: Refill SENA X Buffer queue
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 0,12 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "automation/x-buffer/sena-queue.json"
+      - "scripts/x-buffer-sena-refill.mjs"
+      - ".github/workflows/x-buffer-sena-refill.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x-buffer-sena-refill
+  cancel-in-progress: false
+
+jobs:
+  refill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      X_BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate scheduler syntax
+        run: node --check scripts/x-buffer-sena-refill.mjs
+      - name: Refill SENA X queue
+        run: node scripts/x-buffer-sena-refill.mjs
+      - name: Persist verified queue state
+        shell: bash
+        run: |
+          if git diff --quiet -- automation/x-buffer/sena-queue.json; then
+            echo "Queue state did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/x-buffer/sena-queue.json
+          git commit -m "Refill SENA X Buffer queue"
+          git pull --rebase origin main
+          git push
