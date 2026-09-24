@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T11:24:43.768Z",
+  "updatedAt": "2026-09-24T17:17:18.254Z",
   "policy": {
     "enabled": false,
     "maxScheduled": 9,
@@ -46,7 +46,15 @@
     {
       "key": "sena-threads-07",
       "dueAt": "2026-10-07T11:10:00.000Z",
-      "text": "服を選ぶとき、似合うより気分を優先したくなる日がある。\n\n今日は「似合う」と「着たい」、どっちで選ぶ？\n\n※SENAは架空のAIキャラクターです。エピソードは創作です。"
+      "text": "【PR】\n黒コーデに合わせるなら、ジュエリーは足す？ 引く？\n\nBLOOM公式ストアで、シンプルに合わせやすいものを探すならこちら↓\nhttps://r.8to.jp/sPiE3rrNPMTp\n\n※アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。",
+      "status": "pending",
+      "monetization": {
+        "network": "A8.net",
+        "program": "BLOOM（ブルーム）公式ストア",
+        "platform": "Threads",
+        "trackingUrl": "https://r.8to.jp/sPiE3rrNPMTp",
+        "firstCommercialTest": true
+      }
     },
     {
       "key": "sena-threads-08",
