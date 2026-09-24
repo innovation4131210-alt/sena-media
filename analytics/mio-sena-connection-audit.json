@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-24T00:20:26.602Z",
+  "checkedAt": "2026-09-24T01:04:08.586Z",
   "readOnly": true,
   "connections": [
     {
@@ -88,9 +88,58 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
+            "scheduled": 6,
             "sent": 10
           },
           "posts": [
+            {
+              "id": "6ab46e12cdc0a64118080c1d",
+              "status": "scheduled",
+              "dueAt": "2026-10-27T09:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "7c2e732af5c4eb4e402dcb2c55e019f1c554b4d8ee4889ab4d7576742d6bfdbf"
+            },
+            {
+              "id": "6ab46e0eccbef1e0a53f6300",
+              "status": "scheduled",
+              "dueAt": "2026-10-26T09:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "83430fe754209a5fd164b5c1c4c97fc0189e2319cbfbc0e8f9fdaff204dae7ec"
+            },
+            {
+              "id": "6ab46e0bccbef1e0a53f62cc",
+              "status": "scheduled",
+              "dueAt": "2026-10-25T09:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "d762f84bfa6392b0fa4fff2cb2e4ff5eab395ff4d02008f77a6a84c3df0418c8"
+            },
+            {
+              "id": "6ab46e084ee8bfc2fd2477cc",
+              "status": "scheduled",
+              "dueAt": "2026-10-24T09:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "3316cb6aae54a607af9cbffc00015261fc05eb5f6045280b0dd70dd0f02c0664"
+            },
+            {
+              "id": "6ab46e05b4fa591f3ecdc46f",
+              "status": "scheduled",
+              "dueAt": "2026-10-23T09:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "def8930ccb98917ff72df593dfe7cc206bbe4333a00c6b7bb6a3b723cc9ced6b"
+            },
+            {
+              "id": "6ab46e02b54e50f39d0dfaf9",
+              "status": "scheduled",
+              "dueAt": "2026-10-22T09:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "252ff90f42b8dd640a8976436ae0fe1984d60d4334fa7a84a8ef61cf834d78dc"
+            },
             {
               "id": "6ab4195f1b59884126898704",
               "status": "sent",
