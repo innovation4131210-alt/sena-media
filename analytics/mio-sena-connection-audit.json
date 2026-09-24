@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-24T10:46:05.018Z",
+  "checkedAt": "2026-09-24T13:44:39.313Z",
   "readOnly": true,
   "connections": [
     {
@@ -232,8 +232,8 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 2,
-            "sent": 40
+            "scheduled": 1,
+            "sent": 41
           },
           "posts": [
             {
@@ -246,10 +246,10 @@
             },
             {
               "id": "6ab43e6677db9b2961b9cb3e",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-09-24T12:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-09-24T12:30:22.570Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2103099721745080563",
               "textHash": "ab159b893374b52d973c0dd1efdb1a1578da5bb5d55cde2cc50be626817180fd"
             },
             {
@@ -670,10 +670,18 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": true,
           "counts": {
-            "scheduled": 2,
+            "scheduled": 3,
             "sent": 7
           },
           "posts": [
+            {
+              "id": "6ab52799977152ab73d63fbc",
+              "status": "scheduled",
+              "dueAt": "2026-09-25T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "d57703597a0ac0efafde09d30806460d44b53bc081fc717dce0557897bd64117"
+            },
             {
               "id": "6ab46c5ab4fa591f3ecd98b5",
               "status": "scheduled",
@@ -758,8 +766,8 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 7,
-            "sent": 11
+            "scheduled": 6,
+            "sent": 12
           },
           "posts": [
             {
@@ -812,10 +820,10 @@
             },
             {
               "id": "6ab357d798ae6feaa624a5f2",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-09-24T12:00:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-09-24T12:02:00.010Z",
+              "externalLink": "https://www.instagram.com/p/Ddq1onhFKXi/",
               "textHash": "3370d9773b54231f7ea81a90faf0d1f01e50112c6aba42b3d0876321f77d9ed7"
             },
             {
