@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T13:21:16.053Z",
+  "updatedAt": "2026-09-24T13:38:29.201Z",
   "policy": {
     "enabled": false,
     "maxScheduled": 9,
@@ -42,9 +42,9 @@
     },
     {
       "key": "mio-x-strong-60-a01",
-      "dueAt": "2026-09-27T11:30:00.000Z",
+      "dueAt": "2026-09-25T11:30:00.000Z",
       "text": "今日はちょっとだけ、いつもより近め。\\n\\nこういう雰囲気、あり？\\n\\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\\n\\n#MIO",
-      "status": "held_media_upload",
+      "status": "scheduled_old_buffer",
       "experiment": {
         "type": "x_visual_hook",
         "sensualityTarget": 60,
@@ -54,13 +54,18 @@
         "conversationFileId": "file_00000000af4881fbb4543a88cc1e82f0",
         "canonicalName": "MIO_X_60_A01.jpeg",
         "sha256": "863f96133277f401efb8c9202c3e851de340c97c12e3b43944368273fe86d21e"
-      }
+      },
+      "bufferPostId": "6ab52799977152ab73d63fbc",
+      "bufferDueAt": "2026-09-25T11:30:00.000Z",
+      "channelId": "6aa88d58ea19ca0bde4490c3",
+      "transport": "old_sena_buffer_before_cutover",
+      "verifiedAt": "2026-09-24T13:37:29.844Z"
     },
     {
       "key": "mio-x-strong-60-a02",
-      "dueAt": "2026-09-28T11:30:00.000Z",
+      "dueAt": "2026-09-27T11:30:00.000Z",
       "text": "このブーツ、やっぱり好き。\\n出る直前まで服を迷ってました。\\n\\n黒ブーツ、あり？なし？\\n\\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\\n\\n#MIO #今日のコーデ",
-      "status": "held_media_upload",
+      "status": "held_refresh_after_cutover",
       "experiment": {
         "type": "x_visual_hook",
         "sensualityTarget": 60,
@@ -70,7 +75,8 @@
         "conversationFileId": "file_000000002174820793ede8862b445358",
         "canonicalName": "MIO_X_60_A02.jpeg",
         "sha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca"
-      }
+      },
+      "holdReason": "Runway-hosted URL must be refreshed after MIO X cutover; do not schedule on old Buffer or as text-only fallback."
     }
   ]
 }
