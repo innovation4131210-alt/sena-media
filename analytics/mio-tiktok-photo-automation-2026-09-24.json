@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "capturedOn": "2026-09-24",
+  "timezone": "Asia/Tokyo",
+  "scope": "Read-only TikTok handover verification. Observation date is not a provider metric-update timestamp.",
+  "account": "mio.ai_life",
+  "metricoolBrandId": "6940494",
+  "strategySource": {
+    "repository": "innovation4131210-alt/sena-auto-post",
+    "path": "strategy/tiktok-instagram-aligned-refresh-2026-09-23.json",
+    "blobSha": "dad9596ed415f642536191102b4df537e8ce0a50"
+  },
+  "postMetrics": {
+    "source": "Metricool.getAnalyticsDataByMetrics",
+    "fieldDefinitionsVerifiedWith": "Metricool.getAnalyticsAvailableMetrics network=tiktok connector=posts",
+    "queryPeriod": {"from": "2026-09-12T00:00:00+09:00", "to": "2026-09-24T23:59:59+09:00"},
+    "requestedFields": ["TKPO02", "TKPO03", "TKPO05", "TKPO07", "TKPO08", "TKPO09", "TKPO10", "TKPO22"],
+    "fieldMap": {"TKPO02": "publicationTimestampRaw", "TKPO03": "shareUrl", "TKPO05": "description", "TKPO07": "views", "TKPO08": "likes", "TKPO09": "comments", "TKPO10": "shares", "TKPO22": "type"},
+    "posts": [
+      {"postId": "7688677166724173108", "publicationTimestampRaw": "20260923103418", "type": "PHOTO", "cohort": "refreshed_character", "description": "出る直前に、やっぱりこっちにした。 こういう最後の1分で迷うの、私だけ？ ※MIOは架空のAIキャラクターです。画像はAIで制作しています。 #MIO #日常 #お出かけコーデ #AIモデル", "views": 45, "likes": 6, "comments": 0, "shares": 0, "saves": null, "attributedFollows": null, "profileVisits": null, "likesPerViewPercent": 13.333333333333334, "metricsUpdatedAt": null},
+      {"postId": "7687957782213037320", "publicationTimestampRaw": "20260921120236", "type": "VIDEO", "cohort": "legacy", "views": 39, "likes": 0, "comments": 0, "shares": 0},
+      {"postId": "7687215571083037973", "publicationTimestampRaw": "20260919120225", "type": "VIDEO", "cohort": "legacy", "views": 248, "likes": 10, "comments": 1, "shares": 0},
+      {"postId": "7685731192016096513", "publicationTimestampRaw": "20260915120251", "type": "VIDEO", "cohort": "legacy", "views": 149, "likes": 1, "comments": 0, "shares": 0},
+      {"postId": "7685360139288726791", "publicationTimestampRaw": "20260914120222", "type": "VIDEO", "cohort": "legacy", "views": 0, "likes": 0, "comments": 0, "shares": 0},
+      {"postId": "7684988500642483472", "publicationTimestampRaw": "20260913120030", "type": "VIDEO", "cohort": "legacy", "views": 0, "likes": 0, "comments": 0, "shares": 0},
+      {"postId": "7684878377999666440", "publicationTimestampRaw": "20260913045309", "type": "VIDEO", "cohort": "legacy", "views": 22, "likes": 1, "comments": 0, "shares": 0}
+    ],
+    "interpretation": "Encouraging early likes-per-view signal for one photo, not proof of higher reach, follow conversion, or a causal character/format effect. Different publication ages and unknown provider freshness prevent a controlled comparison.",
+    "visibilityLimitation": "Historical analytics and scheduler sent records do not prove current public visibility or the current native AI label. Do not restore legacy posts or repost the first refreshed photo."
+  },
+  "reservations": {
+    "metricool": {
+      "source": "Metricool.getScheduledPosts called in this continuation",
+      "queryPeriod": {"fromDate": "2026-09-24T00:00:00+09:00", "toDate": "2026-10-28T23:59:59+09:00"},
+      "tiktokReservations": 0,
+      "method": "Filter actual providers for network=tiktok. All returned records were Instagram, including some already published records."
+    },
+    "buffer": {
+      "source": "analytics/mio-sena-connection-audit.json",
+      "sourceBlobSha": "96a547fe5c5af3fa445bc8a657d4dedd8edd7418",
+      "snapshotCheckedAt": "2026-09-24T01:04:08.586Z",
+      "channelId": "6aa6312aea19ca0bde329a87",
+      "inventoryComplete": true,
+      "isDisconnected": false,
+      "isQueuePaused": false,
+      "scheduledAtSnapshot": 0,
+      "sentAtSnapshot": 7,
+      "liveBufferRequeriedThisContinuation": false,
+      "note": "Saved 10:04 JST audit, not a current live Buffer inventory. Re-read Buffer before any new scheduling."
+    }
+  },
+  "automation": {
+    "status": "recurring_photo_publication_not_operationally_verified",
+    "blocker": "Connected Metricool and Buffer routes do not support forwarding native AI disclosure on TikTok photos.",
+    "nativeTikTokPhotoApiSupportsDisclosure": true,
+    "nativeApiField": "Top-level is_aigc=true on /v2/post/publish/content/init/",
+    "nativeApiDocumentationUpdated": "2026-08-24",
+    "currentMetricoolToolPhotoAiFlag": "isAigc is silently omitted for photo-only posts",
+    "bufferPublishedDocumentation": "AI declaration is supported for TikTok video; photo flag requests return a validation error",
+    "sources": [
+      "https://developers.tiktok.com/docs/en/content-posting-api-reference-photo-post",
+      "https://help.metricool.com/schedule-and-post-on-tiktok-bkepi",
+      "https://support.buffer.com/en-us/articles/flagging-posts-as-ai-generated-in-buffer-V7jAnzYJ5n"
+    ],
+    "qualifyingNoChargeRouteVerified": false,
+    "nativeStudioRecurringPhotoSchedulingVerified": false,
+    "notAnApiWidePhotoLimitation": true,
+    "completionGate": "One approved, nonduplicate photo successfully published through an authorized no-charge route, with native AI disclosure verified; then rolling reservations, publication-ID synchronization, and failure monitoring verified. A notification requiring daily owner completion is not unattended publishing."
+  },
+  "sena": {
+    "metricoolBrandAvailableInCurrentConnection": false,
+    "tiktokConnectionVerifiedThisContinuation": false,
+    "tiktokReservationsVerifiedThisContinuation": false,
+    "note": "Do not confuse SENA Instagram reservations with TikTok automation or infer that no SENA TikTok account exists elsewhere."
+  },
+  "preservedDecisions": {
+    "keepApprovedCharacterAndNativePhotoFormat": true,
+    "doNotConvertStillPhotosToFakeMotion": true,
+    "nativeAiDisclosureRequired": true,
+    "noCaptionOnlySubstitution": true,
+    "additionalPaidServicesAllowed": false,
+    "doNotReofferPreviouslyDeclinedPaidUploadPostRoute": true,
+    "doNotRepostIds": ["7688677166724173108"],
+    "mioD20QualityHoldPreserved": true,
+    "instagramAndXReservationsUnchanged": true,
+    "noNewImageGeneration": true
+  },
+  "recommendedNextStepNotExecuted": "Resolve the photo/native-AI-disclosure connector gate for MIO before expanding to SENA. Preserve current photo content variables while testing the delivery route. Do not bulk-create reservations before queue reconciliation and a verified single-post delivery test.",
+  "socialMutationsThisContinuation": false,
+  "publishingCodeChangesThisContinuation": false,
+  "newRecurringTaskCreated": false,
+  "additionalPayment": false
+}
