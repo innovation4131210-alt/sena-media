@@ -1,0 +1,50 @@
+name: Refill MIO X Buffer queue
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "22 0,12 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "automation/x-buffer/mio-queue.json"
+      - "scripts/x-buffer-mio-refill.mjs"
+      - ".github/workflows/x-buffer-mio-refill.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x-buffer-mio-refill
+  cancel-in-progress: false
+
+jobs:
+  refill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      X_BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate scheduler syntax
+        run: node --check scripts/x-buffer-mio-refill.mjs
+      - name: Refill MIO X queue when migration is enabled
+        run: node scripts/x-buffer-mio-refill.mjs
+      - name: Persist verified queue state
+        shell: bash
+        run: |
+          if git diff --quiet -- automation/x-buffer/mio-queue.json; then
+            echo "Queue state did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/x-buffer/mio-queue.json
+          git commit -m "Refill MIO X Buffer queue"
+          git pull --rebase origin main
+          git push
