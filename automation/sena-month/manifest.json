@@ -7,7 +7,7 @@
     "mode": "rolling",
     "bufferPlanConstraint": "Keep organization scheduled queue at or below 9 to leave one safety slot under the observed 10-post limit.",
     "refill": "daily and whenever media files are pushed",
-    "defaultTime": "20:30"
+    "defaultTime": "D01-D10 growth test: alternate 10:00 / 20:30; later days unchanged until results"
   },
   "items": [
     {
@@ -23,8 +23,8 @@
       "referenceFace": "SENA_fixed_reference",
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-09-28_D01",
-      "publishAt": "2026-09-28T20:30:00+09:00",
-      "caption": "今日は少しだけ、いつもよりきちんと。チャコールの日はアクセサリーを足す？それとも引く？"
+      "publishAt": "2026-09-28T10:00:00+09:00",
+      "caption": "出る直前、アクセサリーだけ決まらない。足す？引く？"
     },
     {
       "day": 2,
@@ -40,7 +40,7 @@
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-09-29_D02",
       "publishAt": "2026-09-29T20:30:00+09:00",
-      "caption": "予定のない午後。窓際の席が空いてると、それだけで少し得した気分になる。"
+      "caption": "窓際が空いてたから予定をひとつ遅らせた。こういう寄り道、する？"
     },
     {
       "day": 3,
@@ -55,8 +55,8 @@
       "referenceFace": "SENA_fixed_reference",
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-09-30_D03",
-      "publishAt": "2026-09-30T20:30:00+09:00",
-      "caption": "見るだけのつもりだったのに。こういう日は袋が増える。買い物は即決する？"
+      "publishAt": "2026-09-30T10:00:00+09:00",
+      "caption": "見るだけのつもりだった。こういう時、止められる？"
     },
     {
       "day": 4,
@@ -72,7 +72,7 @@
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-01_D04",
       "publishAt": "2026-10-01T20:30:00+09:00",
-      "caption": "夜のラウンジは、話さなくても時間が進む感じが好き。"
+      "caption": "帰るにはまだ早い。もう一杯だけ、あり？"
     },
     {
       "day": 5,
@@ -87,8 +87,8 @@
       "referenceFace": "SENA_fixed_reference",
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-02_D05",
-      "publishAt": "2026-10-02T20:30:00+09:00",
-      "caption": "旅先の朝。予定を決める前のこの時間がいちばん贅沢かもしれない。"
+      "publishAt": "2026-10-02T10:00:00+09:00",
+      "caption": "予定を決める前の10分。朝から動く？まだここにいる？"
     },
     {
       "day": 6,
@@ -104,7 +104,7 @@
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-03_D06",
       "publishAt": "2026-10-03T20:30:00+09:00",
-      "caption": "静かな場所では、いつもよりゆっくり歩きたくなる。美術館は一人で行ける？"
+      "caption": "気づいたら同じ作品の前に5分。美術館、一人で行ける？"
     },
     {
       "day": 7,
@@ -119,8 +119,8 @@
       "referenceFace": "SENA_fixed_reference",
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-04_D07",
-      "publishAt": "2026-10-04T20:30:00+09:00",
-      "caption": "最後にイヤリングだけ。黒の日は、小さな光がひとつあれば十分。"
+      "publishAt": "2026-10-04T10:00:00+09:00",
+      "caption": "最後にイヤリングだけ。黒なら小さく光る方？何も付けない？"
     },
     {
       "day": 8,
@@ -136,7 +136,7 @@
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-05_D08",
       "publishAt": "2026-10-05T20:30:00+09:00",
-      "caption": "コーヒーを買ったら出発。行き先より、移動してる時間が好きな日もある。"
+      "caption": "コーヒー買ったら出発。移動日は早めに着く派？ギリギリ派？"
     },
     {
       "day": 9,
@@ -151,8 +151,8 @@
       "referenceFace": "SENA_fixed_reference",
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-06_D09",
-      "publishAt": "2026-10-06T20:30:00+09:00",
-      "caption": "雨の夜はタクシーが来るまで少し長く感じる。こういう街の光は嫌いじゃない。"
+      "publishAt": "2026-10-06T10:00:00+09:00",
+      "caption": "雨の夜、タクシーが来ない。歩く？もう少し待つ？"
     },
     {
       "day": 10,
@@ -168,7 +168,7 @@
       "aiDisclosure": true,
       "filenameBase": "SENA_2026-10-07_D10",
       "publishAt": "2026-10-07T20:30:00+09:00",
-      "caption": "今日は外に出る前に少しだけ仕事。集中するとコーヒーを忘れるタイプです。"
+      "caption": "仕事するつもりだったのに、コーヒー冷めてた。集中するとこうなる？"
     },
     {
       "day": 11,
