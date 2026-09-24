@@ -27,6 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          # The publishing lock is acquired before checkout. A queued push
+          # must read state written by the preceding run, not its event SHA.
+          ref: main
           fetch-depth: 0
       - name: Test per-channel capacity and duplicate recovery
         run: |
