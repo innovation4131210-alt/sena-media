@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "preparedOn": "2026-09-24",
   "timezone": "Asia/Tokyo",
   "purpose": "Owner requested complete separate reservation packages to work through during spare time without a conversation round trip for each post. This handoff covers the initial nine-image sets only, not 30-day D01-D30.",
@@ -110,7 +110,7 @@
   "sena": {
     "exactTikTokHandleVerified": false,
     "nativeInventoryVerified": false,
-    "status": "native_ui_verified_one_date_error_requires_fix",
+    "status": "all_9_scheduled_correction_owner_reported_pending_final_readback",
     "note": "Do not assume a SENA Instagram handle, connection, or reservation is a TikTok fact. The dates below are optional empty-slot proposals, not a finding that these posts are unreserved. Use only the SENA TikTok account after checking existing published and reserved images. Never put these assets on MIO.",
     "sourceZip": "SENA_initial_9_posts.zip",
     "sourceZipLibraryFileId": "file_000000003cc8821197753a30cdf527aa",
@@ -312,7 +312,9 @@
     "senaAllNineOwnerReportedScheduled": true,
     "senaNativeReservationListReadbackVerified": true,
     "mioNativeReservationListReadbackVerified": true,
-    "senaScheduleCorrectionRequired": true
+    "senaScheduleCorrectionRequired": true,
+    "senaScheduleCorrectionOwnerReported": true,
+    "senaScheduleCorrectionPlatformReverified": false
   },
   "operatorRules": [
     "Reserve one photo per post, never all package images as one carousel.",
@@ -391,7 +393,15 @@
         "basis": "Grid image sequence: bottom row Sep25 mirror, Sep26 cafe, Sep27 city shopping; next image is private-room scene showing Sep29, followed by hotel-morning also Sep29."
       },
       "reservationInventoryVerifiedFromNativeUi": true,
-      "profileBioVisibleAndMatchesCurrentDirection": true
+      "profileBioVisibleAndMatchesCurrentDirection": true,
+      "correctionOwnerReport": {
+        "statement": "修正完了",
+        "reportDate": "2026-09-24",
+        "correctedAssetKey": "SENA_04_private_room",
+        "from": "2026-09-29T21:00:00+09:00",
+        "to": "2026-09-28T21:00:00+09:00",
+        "status": "corrected_owner_reported_not_platform_reverified"
+      }
     }
   }
 }
