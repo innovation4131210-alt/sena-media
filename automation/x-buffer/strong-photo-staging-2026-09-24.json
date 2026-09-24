@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "createdAt": "2026-09-24T13:21:23.561Z",
+  "note": "User explicitly approved these exact conversation images for X use. Do not regenerate or face-swap.",
+  "assets": [
+    {
+      "id": "MIO-X-60-A01",
+      "character": "MIO",
+      "fileId": "file_00000000af4881fbb4543a88cc1e82f0",
+      "canonicalName": "MIO_X_60_A01.jpeg",
+      "sha256": "863f96133277f401efb8c9202c3e851de340c97c12e3b43944368273fe86d21e",
+      "plannedAtJst": "2026-09-27 20:30",
+      "queueKey": "mio-x-strong-60-a01"
+    },
+    {
+      "id": "MIO-X-60-A02",
+      "character": "MIO",
+      "fileId": "file_000000002174820793ede8862b445358",
+      "canonicalName": "MIO_X_60_A02.jpeg",
+      "sha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca",
+      "plannedAtJst": "2026-09-28 20:30",
+      "queueKey": "mio-x-strong-60-a02"
+    },
+    {
+      "id": "SENA-X-60-A01",
+      "character": "SENA",
+      "fileId": "file_0000000030b481fb800c77cdcedfab3c",
+      "canonicalName": "SENA_X_60_A01.jpeg",
+      "sha256": "51427c1fcf7a4c408d704f643ff686e8702478592148a530ea14e56010780adb",
+      "plannedAtJst": "2026-09-27 21:30",
+      "queueKey": "sena-x-strong-60-a01"
+    }
+  ],
+  "activationGate": "Provide durable externally fetchable media URLs, then change held_media_upload to pending. Do not schedule text-only fallbacks."
+}
