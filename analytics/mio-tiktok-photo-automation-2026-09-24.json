@@ -1,8 +1,8 @@
 {
-  "version": 3,
+  "version": 4,
   "capturedOn": "2026-09-24",
   "timezone": "Asia/Tokyo",
-  "scope": "Earlier read-only TikTok audit plus later owner-operated native Studio reservation evidence and an owner completion report. Provider metrics and inventories below retain their original observation scope and are not refreshed by the screenshot or owner-report updates.",
+  "scope": "Earlier read-only TikTok audit plus later owner-operated native Studio reservation evidence and owner completion reports. Provider metrics and inventories below retain their original observation scope and are not refreshed by screenshot or owner-report updates.",
   "account": "mio.ai_life",
   "metricoolBrandId": "6940494",
   "strategySource": {
@@ -50,15 +50,15 @@
       "note": "Saved 10:04 JST audit, not a current live Buffer inventory. Re-read Buffer and native Studio before new scheduling. Do not overwrite native reservation evidence with an empty Buffer queue."
     },
     "nativeStudio": {
-      "source": "Owner screenshots and subsequent completion report in the SNS operation handover conversation",
+      "source": "Owner screenshots and subsequent completion reports in the SNS operation handover conversation",
       "observedOn": "2026-09-24",
       "screenClock": "15:56",
       "observedReservationCount": 1,
-      "userReportedAdditionalReservationCount": 1,
-      "trackedReservationCount": 2,
+      "userReportedAdditionalReservationCount": 2,
+      "trackedReservationCount": 3,
       "inventoryComplete": false,
-      "countExplanation": "One bakery reservation was observed in a screenshot. One boots reservation was subsequently reported complete by the owner; it was not independently inspected. This is not a complete live native inventory.",
-      "accountAttribution": "Continuous MIO account workflow and matching approved asset/caption; the exact handle is not printed in the final management screenshot. Boots account attribution is from the same continuous owner workflow, not a new identity readback.",
+      "countExplanation": "One bakery reservation was observed in a screenshot. Boots and pasta reservations were subsequently reported complete by the owner; neither was independently inspected. This is not a complete live native inventory.",
+      "accountAttribution": "Continuous MIO account workflow and matching approved asset/caption; the exact handle is not printed in the final management screenshot. Boots and pasta account attribution is from the same continuous owner workflow, not a new identity readback.",
       "posts": [
         {
           "key": "mio-tt-initial-02-rain-bakery",
@@ -119,6 +119,36 @@
           "assetPreparation": "Existing Library asset retrieved in the previous continuation without reencoding. Its SHA256 now also matches the exact MIO_03 member of the finalized MIO_initial_9_posts(1).zip. CDN byte equality remains untested.",
           "doNotDuplicate": true,
           "guard": "Do not recreate or requeue based on missing externalPostId or lack of screenshot. Reconcile with native Studio before any repair."
+        },
+        {
+          "key": "mio-tt-initial-04-cafe-pasta",
+          "sourceAssetKey": "MIO_04_カフェ_パスタ",
+          "sourceCohort": "initial_9_not_30day_D04",
+          "type": "PHOTO",
+          "imageCount": 1,
+          "providedImageSha256": "ad389c824845757c329ec6628cf0ac52a200f84db1ed867403455767e6aa0025",
+          "status": "scheduled_owner_reported_not_platform_verified",
+          "reportedScheduledAt": "2026-09-27T20:30:00+09:00",
+          "scheduledAt": null,
+          "scheduleEvidence": "Owner replied できた immediately after the instruction to reserve the initial cafe/pasta photo for Sep27 20:30 JST with AI disclosure enabled. No new reservation screenshot or API readback was supplied.",
+          "ownerStatement": "できた",
+          "ownerReportDate": "2026-09-24",
+          "externalPostId": null,
+          "publicUrl": null,
+          "uiReservationVerified": false,
+          "fullSavedTitleVerified": false,
+          "fullSavedCaptionVerified": false,
+          "aiDisclosureEnabledBeforeSubmission": null,
+          "savedReservationAiFlagReadbackVerified": false,
+          "publishedAiLabelVerified": false,
+          "automaticPublicationVerified": false,
+          "intendedTitle": "一口目の前に、撮られてた。",
+          "intendedCaption": "一口目の前に撮られると思ってなかった。\nパスタはトマト系とクリーム系、どっちが好き？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #カフェ #パスタ #日常",
+          "intendedAiDisclosure": true,
+          "approvedCaptionSource": "innovation4131210-alt/sena-auto-post:strategy/initial-image-launch-2026-09-23.json, blob f5b2820450cf4be820dabfa71c52517d2b789858, mio order 4; title and disclosure/hashtags are TikTok packaging",
+          "assetPreparation": "Extracted the exact MIO_04_カフェ_パスタ.png from the finalized ZIP in the preceding continuation without changing image bytes. PNG dimensions 1122x1402, 2333472 bytes.",
+          "doNotDuplicate": true,
+          "guard": "Do not recreate or requeue based on missing externalPostId or lack of screenshot. Reconcile with native Studio before any repair."
         }
       ],
       "schedulingHorizonObservation": {
@@ -150,7 +180,7 @@
     "ownerAcceptedManualBatchReservation": true,
     "manualBatchMeaning": "Owner registers each photo in Studio ahead of time. Scheduled automatic publication is configured; continuous automatic queue refill is not implemented.",
     "notAnApiWidePhotoLimitation": true,
-    "completionGate": "Native reservation registration is screenshot-confirmed for the bakery photo and owner-reported for the boots photo. Verify actual publication and the live AI label after each scheduled time. Do not call the entire recurring pipeline automated based on reservations."
+    "completionGate": "Native reservation registration is screenshot-confirmed for the bakery photo and owner-reported for the boots and pasta photos. Verify actual publication and the live AI label after each scheduled time. Do not call the entire recurring pipeline automated based on reservations."
   },
   "sena": {
     "metricoolBrandAvailableInCurrentConnection": false,
@@ -166,7 +196,7 @@
     "additionalPaidServicesAllowed": false,
     "doNotReofferPreviouslyDeclinedPaidUploadPostRoute": true,
     "doNotRepostIds": ["7688677166724173108"],
-    "doNotRescheduleAssetKeys": ["MIO_02_雨の日_パン屋", "MIO_03_ブーツ支度"],
+    "doNotRescheduleAssetKeys": ["MIO_02_雨の日_パン屋", "MIO_03_ブーツ支度", "MIO_04_カフェ_パスタ"],
     "dedupeRecordIsNotAnImplementedCodeGuard": true,
     "mioD20QualityHoldPreserved": true,
     "instagramAndXReservationsUnchanged": true,
@@ -194,21 +224,21 @@
     ]
   },
   "nextPreparedCandidate": {
-    "sourceAssetKey": "MIO_04_カフェ_パスタ",
-    "sourceCohort": "initial_9_not_30day_D04",
+    "sourceAssetKey": "MIO_05_鏡_FitCheck",
+    "sourceCohort": "initial_9_not_30day_D05",
     "status": "prepared_for_owner_native_reservation_not_scheduled",
-    "proposedScheduledAt": "2026-09-27T20:30:00+09:00",
-    "title": "一口目の前に、撮られてた。",
-    "caption": "一口目の前に撮られると思ってなかった。\nパスタはトマト系とクリーム系、どっちが好き？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #カフェ #パスタ #日常",
-    "approvedCaptionSource": "innovation4131210-alt/sena-auto-post:strategy/initial-image-launch-2026-09-23.json, blob f5b2820450cf4be820dabfa71c52517d2b789858, mio order 4; title and disclosure/hashtags are TikTok packaging",
-    "retrievedImageSha256": "ad389c824845757c329ec6628cf0ac52a200f84db1ed867403455767e6aa0025",
-    "assetPreparation": "Extracted the exact MIO_04_カフェ_パスタ.png from the finalized ZIP without changing image bytes. Opened the image and verified the cafe/pasta scene. PNG dimensions 1122x1402, 2333472 bytes.",
+    "proposedScheduledAt": "2026-09-28T20:30:00+09:00",
+    "title": "出る直前に、また迷う。",
+    "caption": "鏡の前では良かったのに、外に出る直前また迷う。\nこれで行っていい？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。\n\n#MIO #AIモデル #お出かけコーデ #ワンピース #日常",
+    "approvedCaptionSource": "innovation4131210-alt/sena-auto-post:strategy/initial-image-launch-2026-09-23.json, blob f5b2820450cf4be820dabfa71c52517d2b789858, mio order 5; title and disclosure/hashtags are TikTok packaging",
+    "retrievedImageSha256": "40e4a8369f3c471e592cca0ca7794df5817818576142b86809e33a4a2469304b",
+    "assetPreparation": "Verified finalized ZIP SHA256 and extracted its sole MIO_05 PNG member without reencoding. Exact image SHA256 matches the saved bundle manifest. Opened the image and verified the mirror/fashion scene. PNG dimensions 1122x1402, 2102953 bytes.",
     "externalPostId": null,
-    "guard": "This is preparation only. No current native or Buffer queue readback was performed for Sep27. Owner must not add a duplicate if this same photo or target slot is already reserved. Existing Instagram use of the same approved creative is not a TikTok duplicate."
+    "guard": "This is preparation only. No current native or Buffer queue readback was performed for Sep28. Owner must not add a duplicate if this same photo or target slot is already reserved. Existing Instagram use of the same approved creative is not a TikTok duplicate. This initial photo sequence does not modify the separate Instagram 30-day schedule or mark TikTok 30-day D01 as scheduled."
   },
-  "nextOperationalCheck": "After Sep25 20:30 JST, reconcile the exact native bakery reservation with actual publication and its AI label; also verify the owner-reported boots reservation and its saved time/settings. There is no new background check scheduled by this file update.",
+  "nextOperationalCheck": "After Sep25 20:30 JST, reconcile the exact native bakery reservation with actual publication and its AI label; also verify the owner-reported boots and pasta reservations and their saved times/settings. There is no new background check scheduled by this file update.",
   "socialMutationsByAssistantThisContinuation": false,
-  "socialMutationByOwner": "Bakery native photo reservation screenshot-confirmed in the preceding turn; boots reservation reported complete by the owner in this turn without a screenshot.",
+  "socialMutationByOwner": "Bakery native photo reservation screenshot-confirmed earlier; boots reservation owner-reported earlier; pasta reservation now reported complete by the owner without a screenshot.",
   "publishingCodeChangesThisContinuation": false,
   "newRecurringTaskCreated": false,
   "additionalPayment": false
