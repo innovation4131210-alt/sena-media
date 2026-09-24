@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T13:32:56.789Z",
+  "updatedAt": "2026-09-24T17:06:21.274Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -108,9 +108,18 @@
     {
       "key": "sena-d07",
       "dueAt": "2026-10-04T04:05:00Z",
-      "text": "黒の日は最後のイヤリングで迷う。小さく足すか、何も足さないか。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
+      "text": "【PR】\n黒の日は、最後のジュエリーで印象が変わる。\nシンプルに足すなら、こういう揺れるタイプも気になる。\n\nBLOOM公式ストア\nhttps://r.8to.jp/Zv7PTYBUicQd\n\n※広告・アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。画像はAI制作しています。画像内のアクセサリーは紹介商品そのものではありません。\n\n#PR #BLOOM #ジュエリー",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-04_D07.jpeg",
-      "status": "pending"
+      "status": "pending",
+      "monetization": {
+        "network": "A8.net",
+        "program": "BLOOM（ブルーム）公式ストア",
+        "platform": "X",
+        "trackingUrl": "https://r.8to.jp/Zv7PTYBUicQd",
+        "disclosure": "PR + affiliate disclosure",
+        "productMatch": "generic_store_link; image accessory is not claimed to be BLOOM product",
+        "firstCommercialTest": true
+      }
     },
     {
       "key": "sena-d08",
