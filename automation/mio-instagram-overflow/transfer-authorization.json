@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "id": "mio-ig-october-buffer-restoration-2026-09-24",
+  "brandId": "6940494",
+  "handle": "mio.ai_life",
+  "destination": "buffer",
+  "channelId": "6aa630b7ea19ca0bde329146",
+  "observationWindow": {
+    "startedAt": "2026-09-24T00:17:03Z",
+    "completedBefore": "2026-09-24T00:20:26.602Z",
+    "note": "Conservative window bounds for the actual Metricool full-range and focused empty-range reads in this continuation, not a claimed provider timestamp. Creation authorization expires one hour after startedAt."
+  },
+  "reason": "The live Metricool October 22-27 range is empty and the complete Buffer inventory has no reservations for those dates. Historical Metricool IDs were incorrectly treated as current during prior Buffer cancellation. The authoritative publishing manifest already assigns these six dates to Buffer to preserve the monthly free allocation.",
+  "authoritativeManifest": {
+    "path": "automation/30day/publishing-manifest.json",
+    "blobSha": "772ae560ed1c5489b8ee3a123b01c9e13360cdbd",
+    "allocation": "Metricool through 2026-10-21 except D20; Buffer 2026-10-22 through 2026-10-27"
+  },
+  "metricool": {
+    "source": "Metricool.getScheduledPosts",
+    "timezone": "Asia/Tokyo",
+    "fullRange": ["2026-09-24", "2026-10-27"],
+    "fullRangeReturnedCount": 29,
+    "rangeStart": "2026-10-22",
+    "rangeEnd": "2026-10-27",
+    "rangeResultCount": 0,
+    "octoberRemainingCount": 20,
+    "currentScheduledIds": [380478977,380478990,380479002,380479013,380479022,380479044,380554529,380554697,380554721,380554743,380554758,380554769,380554782,380554803,380554823,380554841,380554859,380554883,380554913,380554933,380554946,380554965,380554973,380554984,380555016,380555029,380555044,380555067,380555079],
+    "draftsAndPublishedPostsNotQueried": true,
+    "freeLimitSource": "https://help.metricool.com/main-differences-between-free-and-paid-plans-bl0v9",
+    "freeLimitVerifiedOn": "2026-09-24"
+  },
+  "bufferPreflight": {
+    "path": "analytics/mio-sena-connection-audit.json",
+    "blobSha": "74e3e761d5d21395c3b932a09dd1cf71233bffc4",
+    "checkedAt": "2026-09-24T00:20:26.602Z",
+    "channelInventoryComplete": true,
+    "mioInstagramScheduledCount": 0,
+    "note": "Runner must still read Buffer immediately before every create and verify exact account, empty date and absent retired ID."
+  },
+  "slots": [
+    {"date":"2026-10-22","day":25,"dueAt":"2026-10-22T09:30:00.000Z","retiredMetricoolId":380555136,"retiredBufferId":"6ab45b0bb54e50f39d0c061d","mediaSha256":"11c9d6111dbd7dc86e3d74afcb69c1db892d4d6b54e5e53c698b902e0fb96552"},
+    {"date":"2026-10-23","day":26,"dueAt":"2026-10-23T09:30:00.000Z","retiredMetricoolId":380555202,"retiredBufferId":"6ab45b0fc1b9b7f12c1e7e46","mediaSha256":"d3e7bf5e312a3f62429b66ea6eea6bfbef652ec6e12a77734f23b1d4485bcd7f"},
+    {"date":"2026-10-24","day":27,"dueAt":"2026-10-24T09:30:00.000Z","retiredMetricoolId":380555219,"retiredBufferId":"6ab45b12b4fa591f3ecb94ae","mediaSha256":"a765760ca4c43d2441b8cdda9ae0dd83186ddd5f72c73ce9ff33a2a58aa3cea2"},
+    {"date":"2026-10-25","day":28,"dueAt":"2026-10-25T09:30:00.000Z","retiredMetricoolId":380555247,"retiredBufferId":"6ab45b15ccbef1e0a53d4c1d","mediaSha256":"32feed0d528c347022dfff2048627f830b2660b1c3443fb19d8fd81c881dda11"},
+    {"date":"2026-10-26","day":29,"dueAt":"2026-10-26T09:30:00.000Z","retiredMetricoolId":380555261,"retiredBufferId":"6ab45b1acdc0a64118060013","mediaSha256":"5c3a76a1a4962a43b84f162a5fd97e8f9ba5d58d244712acab291924f4a2cb2b"},
+    {"date":"2026-10-27","day":30,"dueAt":"2026-10-27T09:30:00.000Z","retiredMetricoolId":380555280,"retiredBufferId":"6ab45b1e4ee8bfc2fd2263e5","mediaSha256":"c19211b835837c77f8eb49f1b6342819827246f26c8a38eea8eeb30c3197592a"}
+  ],
+  "noMetricoolCreates": true,
+  "noImageGeneration": true,
+  "noD20Release": true,
+  "preserveCancelledHistory": true
+}
