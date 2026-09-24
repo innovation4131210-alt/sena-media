@@ -8,13 +8,15 @@ on:
     branches: [main]
     paths:
       - "scripts/sena-buffer-daily-snapshot.mjs"
+      - "scripts/test-sena-buffer-daily-snapshot.mjs"
       - ".github/workflows/sena-buffer-daily-snapshot.yml"
 
 permissions:
   contents: write
 
+# Serialize with the existing on-demand two-key audit writing the same file.
 concurrency:
-  group: sena-buffer-daily-snapshot
+  group: mio-sena-connection-audit
   cancel-in-progress: false
 
 jobs:
@@ -25,19 +27,29 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+      - name: Validate read-only collectors
+        run: |
+          node --check scripts/sena-buffer-daily-snapshot.mjs
+          node scripts/test-sena-buffer-daily-snapshot.mjs
+          node scripts/test-mio-sena-connection-audit.mjs
       - name: Check SENA delivery and collect Buffer metrics
         env:
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
         run: node scripts/sena-buffer-daily-snapshot.mjs
-      - name: Persist analytics snapshot
+      - name: Refresh MIO and SENA Buffer delivery without mutations
+        if: always()
+        env:
+          MIO_BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+          SENA_BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+        run: node scripts/mio-sena-connection-audit.mjs
+      - name: Persist newly observed analytics only
         if: always()
         shell: bash
         run: |
-          if [ ! -f analytics/sena-buffer-latest.json ]; then exit 1; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analytics/sena-buffer-latest.json analytics/sena-buffer-history/
+          git add analytics/sena-buffer-latest.json analytics/sena-buffer-history/ analytics/mio-sena-connection-audit.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Snapshot SENA Buffer delivery and metrics"
+          git commit -m "Snapshot SENA metrics and MIO SENA live delivery"
           git pull --rebase origin main
           git push
