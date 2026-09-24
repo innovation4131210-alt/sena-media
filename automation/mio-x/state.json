@@ -16,6 +16,12 @@
       "createdForReason": "Continue the approved MIO X queue after repairing credential routing. The private runner is unavailable; use the existing guarded public one-off runner, not a second scheduler.",
       "id": "6ab46246ccbef1e0a53e1ac8",
       "verifiedAt": "2026-09-23T23:35:36.029Z"
+    },
+    {
+      "key": "mio-x-learning-v2-004",
+      "status": "intent",
+      "dueAt": "2026-09-26T03:15:00.000Z",
+      "createdForReason": "Refill the next approved MIO X item after the verified Sep 24-25 recovery. Use the existing guarded public runner and unchanged source text/date; no duplicate scheduler or catch-up."
     }
   ],
   "channel": {
