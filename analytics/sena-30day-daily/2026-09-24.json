@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "tokyoDate": "2026-09-24",
-  "reviewedAt": "2026-09-24T01:06:07.477Z",
+  "reviewedAt": "2026-09-24T01:11:21.974Z",
   "account": {
     "platform": "instagram",
     "handle": "sena.virtual.studio",
@@ -23,8 +23,8 @@
     {
       "repository": "innovation4131210-alt/sena-media",
       "path": "analytics/sena-buffer-latest.json",
-      "blobSha": "1fa273da36cf105cb1f70727bdf18982238b285a",
-      "sourceCapturedAt": "2026-09-23T13:43:45.348Z"
+      "blobSha": "5210e022778c79fd38dabb8567b5504132fec967",
+      "sourceCapturedAt": "2026-09-24T01:04:07.867Z"
     }
   ],
   "plan": {
@@ -39,7 +39,7 @@
   },
   "buffer": {
     "latestStateVerifiedAt": "2026-09-23T23:06:27.544Z",
-    "connection": "available_at_latest_rolling_queue_check",
+    "connection": "available_verified_by_read_only_snapshot",
     "observedOrganizationScheduledCount": 17,
     "safetyMaximum": 9,
     "additionalCapacity": 0,
@@ -86,7 +86,21 @@
     ],
     "duplicateReservationDetected": false,
     "failedPostDetected": false,
-    "action": "hold_refill_until_organization_scheduled_count_is_below_9"
+    "action": "hold_refill_until_organization_scheduled_count_is_below_9; preserve all existing reservations",
+    "latestSnapshot": {
+      "capturedAt": "2026-09-24T01:04:07.867Z",
+      "tokyoDate": "2026-09-24",
+      "workflowRunId": "35941264779",
+      "inventoryComplete": true,
+      "channelAvailable": true,
+      "channelFlags": {
+        "isDisconnected": false,
+        "isLocked": false,
+        "isQueuePaused": false
+      },
+      "senaChannelScheduledCount": 9,
+      "failedCount": 0
+    }
   },
   "performance": {
     "scope": "SENA 30-day manifest posts",
@@ -99,7 +113,9 @@
     "shares": null,
     "saves": null,
     "comments": null,
-    "reason": "No 30-day manifest post has been published yet; unavailable metrics are preserved as null."
+    "reason": "No 30-day manifest post has been published yet; unavailable metrics are preserved as null.",
+    "latestAvailableSnapshotAt": "2026-09-24T01:04:07.867Z",
+    "note": "The 30-day manifest remains prelaunch. Existing older posts may contain API-reported zero values or null metrics; these are not used as 30-day results."
   },
   "improvementCandidate": {
     "status": "deferred_until_post_publish_data",
