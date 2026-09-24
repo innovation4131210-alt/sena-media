@@ -69,14 +69,15 @@
       "date": "2026-10-22",
       "day": 25,
       "dueAt": "2026-10-22T09:30:00.000Z",
-      "status": "created_unverified",
+      "status": "scheduled",
       "mediaSha256": "11c9d6111dbd7dc86e3d74afcb69c1db892d4d6b54e5e53c698b902e0fb96552",
       "captionSha256": "252ff90f42b8dd640a8976436ae0fe1984d60d4334fa7a84a8ef61cf834d78dc",
       "restorationAuthorizationId": "mio-ig-october-buffer-restoration-2026-09-24",
       "previousBufferId": "6ab45b0bb54e50f39d0c061d",
       "id": "6ab46e02b54e50f39d0dfaf9",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/bf85c83ec55429e7a41e49a03d568c5717780a8c/media/mio-30day-2026-09-28/MIO_2026-10-22_D25.jpeg",
-      "aiDisclosureSubmitted": true
+      "aiDisclosureSubmitted": true,
+      "verifiedAt": "2026-09-24T00:25:39.557Z"
     }
   ],
   "channelId": "6aa630b7ea19ca0bde329146",
