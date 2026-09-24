@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T17:07:59.241Z",
+  "updatedAt": "2026-09-24T23:26:02.512Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -166,9 +166,19 @@
     {
       "key": "sena-d14",
       "dueAt": "2026-10-11T04:05:00Z",
-      "text": "出る前に髪だけもう一度。黒は、少しだけ気持ちを強くしてくれる。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
+      "text": "【PR】\n男性のシルバーアクセ、細め派？ それとも何もつけない派？\n\nGARCIAの「thin snake necklace」は、細いのに存在感が出るタイプ。\nhttps://r.8to.jp/SiCNUReShCPJ\n\n※アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。画像はAI制作です。画像内のネックレスは紹介商品ではありません。\n\n#PR",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-11_D14.jpeg",
-      "status": "pending"
+      "status": "pending",
+      "monetization": {
+        "network": "A8.net",
+        "program": "細くても、存在感があるアクセサリーGARCIA",
+        "platform": "X",
+        "trackingUrl": "https://r.8to.jp/SiCNUReShCPJ",
+        "creative": "material-001 thin snake necklace",
+        "sku": "thin snake necklace (silver) #n52",
+        "firstCommercialTestForProgram": true,
+        "truthfulnessGuardrail": "image necklace is not the promoted product"
+      }
     },
     {
       "key": "sena-d15",
