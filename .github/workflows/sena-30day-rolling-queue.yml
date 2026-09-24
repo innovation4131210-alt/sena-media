@@ -10,6 +10,7 @@ on:
       - "media/sena-30day-2026-09-28/**"
       - "automation/30day/publishing-manifest.json"
       - "scripts/sena-30day-rolling-queue.mjs"
+      - "scripts/test-sena-30day-rolling-queue.mjs"
       - ".github/workflows/sena-30day-rolling-queue.yml"
 
 permissions:
@@ -27,6 +28,10 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+      - name: Test per-channel capacity and duplicate recovery
+        run: |
+          node --check scripts/sena-30day-rolling-queue.mjs
+          node scripts/test-sena-30day-rolling-queue.mjs
       - name: Fill SENA Buffer queue safely
         env:
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
