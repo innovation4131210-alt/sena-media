@@ -1,19 +1,6 @@
 {
   "posts": [
     {
-      "date": "2026-10-25",
-      "day": 28,
-      "dueAt": "2026-10-25T09:30:00.000Z",
-      "status": "cancelled_duplicate_metricool_primary",
-      "mediaSha256": "32feed0d528c347022dfff2048627f830b2660b1c3443fb19d8fd81c881dda11",
-      "id": "6ab45b15ccbef1e0a53d4c1d",
-      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/bf85c83ec55429e7a41e49a03d568c5717780a8c/media/mio-30day-2026-09-28/MIO_2026-10-25_D28.jpeg",
-      "verifiedAt": "2026-09-23T23:04:55.059Z",
-      "duplicateOfMetricoolId": 380555247,
-      "cancelledAt": "2026-09-23T23:09:53.405Z",
-      "cancellationReason": "Existing Metricool reservation is authoritative; Buffer overflow was created later at the same date/time."
-    },
-    {
       "date": "2026-10-26",
       "day": 29,
       "dueAt": "2026-10-26T09:30:00.000Z",
@@ -80,6 +67,16 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/bf85c83ec55429e7a41e49a03d568c5717780a8c/media/mio-30day-2026-09-28/MIO_2026-10-24_D27.jpeg",
       "aiDisclosureSubmitted": true,
       "verifiedAt": "2026-09-24T00:25:45.784Z"
+    },
+    {
+      "date": "2026-10-25",
+      "day": 28,
+      "dueAt": "2026-10-25T09:30:00.000Z",
+      "status": "intent",
+      "mediaSha256": "32feed0d528c347022dfff2048627f830b2660b1c3443fb19d8fd81c881dda11",
+      "captionSha256": "d762f84bfa6392b0fa4fff2cb2e4ff5eab395ff4d02008f77a6a84c3df0418c8",
+      "restorationAuthorizationId": "mio-ig-october-buffer-restoration-2026-09-24",
+      "previousBufferId": "6ab45b15ccbef1e0a53d4c1d"
     }
   ],
   "channelId": "6aa630b7ea19ca0bde329146",
@@ -129,6 +126,21 @@
       "cancelledAt": "2026-09-23T23:09:52.285Z",
       "cancellationReason": "Existing Metricool reservation is authoritative; Buffer overflow was created later at the same date/time.",
       "retiredFromActiveStateAt": "2026-09-24T00:25:43.701Z",
+      "restorationAuthorizationId": "mio-ig-october-buffer-restoration-2026-09-24"
+    },
+    {
+      "date": "2026-10-25",
+      "day": 28,
+      "dueAt": "2026-10-25T09:30:00.000Z",
+      "status": "cancelled_duplicate_metricool_primary",
+      "mediaSha256": "32feed0d528c347022dfff2048627f830b2660b1c3443fb19d8fd81c881dda11",
+      "id": "6ab45b15ccbef1e0a53d4c1d",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/bf85c83ec55429e7a41e49a03d568c5717780a8c/media/mio-30day-2026-09-28/MIO_2026-10-25_D28.jpeg",
+      "verifiedAt": "2026-09-23T23:04:55.059Z",
+      "duplicateOfMetricoolId": 380555247,
+      "cancelledAt": "2026-09-23T23:09:53.405Z",
+      "cancellationReason": "Existing Metricool reservation is authoritative; Buffer overflow was created later at the same date/time.",
+      "retiredFromActiveStateAt": "2026-09-24T00:25:46.865Z",
       "restorationAuthorizationId": "mio-ig-october-buffer-restoration-2026-09-24"
     }
   ]
