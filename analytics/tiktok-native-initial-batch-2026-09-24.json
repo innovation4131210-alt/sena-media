@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "preparedOn": "2026-09-24",
   "timezone": "Asia/Tokyo",
   "purpose": "Owner requested complete separate reservation packages to work through during spare time without a conversation round trip for each post. This handoff covers the initial nine-image sets only, not 30-day D01-D30.",
@@ -104,12 +104,13 @@
         "imageSha256": "294b89616de3568a3d4178935c21ce30724cfb9a9ce37442df5f60a998b47986",
         "status": "prepared_not_scheduled"
       }
-    ]
+    ],
+    "status": "all_initial_02_to_09_reserved_native_ui_verified"
   },
   "sena": {
     "exactTikTokHandleVerified": false,
     "nativeInventoryVerified": false,
-    "status": "all_9_scheduled_owner_reported_not_platform_verified",
+    "status": "native_ui_verified_one_date_error_requires_fix",
     "note": "Do not assume a SENA Instagram handle, connection, or reservation is a TikTok fact. The dates below are optional empty-slot proposals, not a finding that these posts are unreserved. Use only the SENA TikTok account after checking existing published and reserved images. Never put these assets on MIO.",
     "sourceZip": "SENA_initial_9_posts.zip",
     "sourceZipLibraryFileId": "file_000000003cc8821197753a30cdf527aa",
@@ -221,10 +222,10 @@
       "reportDate": "2026-09-24",
       "scope": "SENA initial 9 native TikTok photo reservations",
       "allNineReportedScheduled": true,
-      "platformListReadbackVerified": false,
+      "platformListReadbackVerified": true,
       "savedAiDisclosureReadbackVerified": false,
       "automaticPublicationVerified": false,
-      "note": "Treat all nine as do-not-duplicate based on owner report. Reconcile later from one consolidated native reservation-list screenshot or post-publication evidence before changing times or repairing."
+      "note": "Native profile grid readback confirms all nine SENA images are present, but SENA_04_private_room is dated Sep29 instead of intended Sep28, causing two Sep29 entries and no Sep28 entry."
     },
     "reportedReservations": [
       {
@@ -309,7 +310,9 @@
     "newMonitoringAutomationCreated": false,
     "additionalPayment": false,
     "senaAllNineOwnerReportedScheduled": true,
-    "senaNativeReservationListReadbackVerified": false
+    "senaNativeReservationListReadbackVerified": true,
+    "mioNativeReservationListReadbackVerified": true,
+    "senaScheduleCorrectionRequired": true
   },
   "operatorRules": [
     "Reserve one photo per post, never all package images as one carousel.",
@@ -319,5 +322,76 @@
     "SENA reservation UI capability is not established by the MIO screen evidence; stop before publication if its photo reservation or AI disclosure options are absent.",
     "The HTML checkboxes are local work notes, not verified reservation evidence or a publishing integration.",
     "One consolidated native reservation-list screenshot after a batch is sufficient for the next verification; do not request a message after every item."
-  ]
+  ],
+  "verification": {
+    "checkedAtLocal": "2026-09-24T17:30:00+09:00",
+    "source": "Owner-provided native TikTok profile screenshots IMG_8070.jpeg (SENA) and IMG_8071.jpeg (MIO)",
+    "mio": {
+      "profile": "mio.ai_life",
+      "publishedInitialVisible": true,
+      "publishedInitialDisplayedViews": 219,
+      "futureReservationDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02"
+      ],
+      "expectedFutureReservationDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02"
+      ],
+      "dateCoverage": "matches_expected",
+      "visibleImageOrder": "matches_initial_02_to_09",
+      "duplicateDateDetected": false,
+      "missingDateDetected": false,
+      "reservationInventoryVerifiedFromNativeUi": true,
+      "profileCopyMismatchStillVisible": true,
+      "visibleProfileCopy": "美容・ファッション・カフェ / ※画像・動画はAIで制作"
+    },
+    "sena": {
+      "profile": "sena.virtual.studio",
+      "visibleReservationDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-29",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03"
+      ],
+      "expectedReservationDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03"
+      ],
+      "missingDate": "2026-09-28",
+      "duplicateDate": "2026-09-29",
+      "suspectedWrongPost": {
+        "sourceAssetKey": "SENA_04_private_room",
+        "visibleDate": "2026-09-29",
+        "intendedDate": "2026-09-28",
+        "basis": "Grid image sequence: bottom row Sep25 mirror, Sep26 cafe, Sep27 city shopping; next image is private-room scene showing Sep29, followed by hotel-morning also Sep29."
+      },
+      "reservationInventoryVerifiedFromNativeUi": true,
+      "profileBioVisibleAndMatchesCurrentDirection": true
+    }
+  }
 }
