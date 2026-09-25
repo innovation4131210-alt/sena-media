@@ -53,3 +53,5 @@ jobs:
           git commit -m "Snapshot SENA metrics and MIO SENA live delivery"
           git pull --rebase origin main
           git push
+
+# manual snapshot trigger 2026-09-25T14:48+09:00
