@@ -11,10 +11,12 @@
       "sha256": "863f96133277f401efb8c9202c3e851de340c97c12e3b43944368273fe86d21e",
       "plannedAtJst": "2026-09-27 20:30",
       "queueKey": "mio-x-strong-60-a01",
-      "status": "scheduled",
+      "status": "scheduled_now_test",
       "bufferPostId": "6ab52799977152ab73d63fbc",
-      "scheduledAtJst": "2026-09-25 20:30",
-      "transport": "old_sena_buffer_before_cutover"
+      "scheduledAtJst": "2026-09-25 16:10",
+      "transport": "old_sena_buffer_before_cutover",
+      "caption": "今日はちょっとだけ近め。\nこういう距離感、あり？なし？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "testReason": "Immediate photo-first binary-choice test inspired by current high-performing AI X patterns; exact approved image reused."
     },
     {
       "id": "MIO-X-60-A02",
@@ -41,5 +43,5 @@
     }
   ],
   "activationGate": "MIO-X-60-A02 only: after MIO X cutover, refresh its Runway asset URL, then schedule and verify on X-only Buffer. MIO-X-60-A01 and SENA-X-60-A01 are already scheduled and verified with image assets.",
-  "updatedAt": "2026-09-24T13:38:29.201Z"
+  "updatedAt": "2026-09-25T06:55:08.287Z"
 }
