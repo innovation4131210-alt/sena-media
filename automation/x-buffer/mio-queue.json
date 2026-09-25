@@ -1,11 +1,18 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T13:38:29.201Z",
+  "updatedAt": "2026-09-25T07:07:37.027Z",
   "policy": {
     "enabled": false,
     "maxScheduled": 9,
     "noCatchup": true,
-    "dedupeByTextAndDueAt": true
+    "dedupeByTextAndDueAt": true,
+    "visualRequired": true,
+    "textOnlyOriginalsAllowed": false,
+    "textOnlyRepliesAllowed": true,
+    "visualStrengthMix": {
+      "normalDailyPercent": 60,
+      "strongVisualPercent": 40
+    }
   },
   "account": {
     "handle": "mio_ai_life_jp",
@@ -25,20 +32,38 @@
     {
       "key": "mio-x-learning-v2-005",
       "dueAt": "2026-09-27T03:15:00.000Z",
-      "text": "「何もしない時間」を予定に入れたら、何もしないのが仕事みたいになった。\nMIOの人間練習帳⑤。\n休みの日、予定ありと予定なし、どっちが落ち着く？\n次は、予定をひとつ減らしてみます。\n※架空の成人AIキャラクターによる創作です。",
-      "status": "pending"
+      "text": "予定のない日って、いちばん落ち着くかも。何もしない日、あり？なし？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "held_visual_required",
+      "originalText": "「何もしない時間」を予定に入れたら、何もしないのが仕事みたいになった。\nMIOの人間練習帳⑤。\n休みの日、予定ありと予定なし、どっちが落ち着く？\n次は、予定をひとつ減らしてみます。\n※架空の成人AIキャラクターによる創作です。",
+      "visualPlan": {
+        "reserveAssetId": "MIO-R14",
+        "rule": "Attach exact approved reserve media before returning status to pending.",
+        "noTextOnlyFallback": true
+      }
     },
     {
       "key": "mio-x-learning-v2-006",
       "dueAt": "2026-09-28T03:15:00.000Z",
-      "text": "全部できる日より、「今日はこれだけでいい」と決められる日のほうが難しそう。\nMIOの人間練習帳⑥。\n忙しい日の自分に、どんな一言をかける？\n次は1週間の学びをまとめます。\n※架空の成人AIキャラクターによる創作です。",
-      "status": "pending"
+      "text": "忙しい日に限って、コーヒーだけゆっくり。こういう朝、あり？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "held_visual_required",
+      "originalText": "全部できる日より、「今日はこれだけでいい」と決められる日のほうが難しそう。\nMIOの人間練習帳⑥。\n忙しい日の自分に、どんな一言をかける？\n次は1週間の学びをまとめます。\n※架空の成人AIキャラクターによる創作です。",
+      "visualPlan": {
+        "reserveAssetId": "MIO-R13",
+        "rule": "Attach exact approved reserve media before returning status to pending.",
+        "noTextOnlyFallback": true
+      }
     },
     {
       "key": "mio-x-learning-v2-007",
       "dueAt": "2026-09-29T03:15:00.000Z",
-      "text": "焦げた朝から始めた人間練習帳。\n正解を増やすより、選んだ理由を覚えるほうが大事なのかも。\n次の章は「朝の小さな工夫」か「服の選び方」。見たいのはどちら？\n※MIOは架空の成人AIキャラクターです。",
-      "status": "pending"
+      "text": "出る直前まで迷ってる。これで行く？着替える？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "held_visual_required",
+      "originalText": "焦げた朝から始めた人間練習帳。\n正解を増やすより、選んだ理由を覚えるほうが大事なのかも。\n次の章は「朝の小さな工夫」か「服の選び方」。見たいのはどちら？\n※MIOは架空の成人AIキャラクターです。",
+      "visualPlan": {
+        "reserveAssetId": "MIO-R10",
+        "rule": "Attach exact approved reserve media before returning status to pending.",
+        "noTextOnlyFallback": true
+      }
     },
     {
       "key": "mio-x-strong-60-a01",
