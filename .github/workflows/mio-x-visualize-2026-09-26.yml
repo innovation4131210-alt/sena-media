@@ -1,0 +1,96 @@
+name: Visualize MIO X Sep 26
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ops/mio-x-visualize-2026-09-26.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  edit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Edit exact scheduled MIO post to visual-first
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs=require("fs");
+          const m=JSON.parse(fs.readFileSync("automation/mio-x/visualize-2026-09-26.json","utf8"));
+          async function gql(query,variables={}){
+            const r=await fetch("https://api.buffer.com",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${process.env.BUFFER_API_KEY}`},body:JSON.stringify({query,variables}),signal:AbortSignal.timeout(30000)});
+            const j=await r.json();
+            if(!r.ok||j.errors?.length) throw new Error(JSON.stringify(j.errors??j));
+            return j.data;
+          }
+          const media=await fetch(m.mediaUrl,{method:"GET",headers:{Range:"bytes=0-64"},redirect:"follow",signal:AbortSignal.timeout(20000)});
+          if(!media.ok && media.status!==206) throw new Error("Media unavailable "+media.status);
+          const ct=media.headers.get("content-type")||"";
+          if(!ct.startsWith("image/")) throw new Error("Unexpected media type "+ct);
+
+          const acc=await gql("query { account { organizations { id } } }");
+          let orgId=null,target=null;
+          for(const org of acc.account.organizations){
+            const d=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}){edges{node{id text status dueAt channelId assets{id mimeType}}}pageInfo{hasNextPage}}}`,{organizationId:org.id,channelId:m.channelId});
+            if(d.posts?.pageInfo?.hasNextPage) throw new Error("Incomplete inventory");
+            const hit=(d.posts?.edges??[]).map(e=>e.node).find(p=>p.id===m.targetBufferPostId);
+            if(hit){orgId=org.id;target=hit;break;}
+          }
+          if(!target) throw new Error("Target post missing");
+          if(target.status!=="scheduled") throw new Error("Target no longer scheduled: "+target.status);
+          if(Date.parse(target.dueAt)!==Date.parse(m.dueAt)) throw new Error("dueAt drift");
+
+          const edited=await gql(`mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id text status dueAt channelId assets{id mimeType}}} ... on MutationError{message}}}`,{input:{
+            id:m.targetBufferPostId,
+            text:m.text,
+            dueAt:m.dueAt,
+            mode:"customScheduled",
+            schedulingType:"automatic",
+            aiAssisted:true,
+            assets:[{image:{url:m.mediaUrl}}],
+            saveToDraft:false
+          }});
+          if(!edited.editPost?.post?.id) throw new Error(edited.editPost?.message??"Edit failed");
+
+          const rb=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}){edges{node{id text status dueAt channelId assets{id mimeType}}}pageInfo{hasNextPage}}}`,{organizationId:orgId,channelId:m.channelId});
+          if(rb.posts?.pageInfo?.hasNextPage) throw new Error("Incomplete readback");
+          const p=(rb.posts?.edges??[]).map(e=>e.node).find(x=>x.id===m.targetBufferPostId);
+          if(!p||p.status!=="scheduled"||p.text!==m.text||Date.parse(p.dueAt)!==Date.parse(m.dueAt)) throw new Error("Readback mismatch");
+          if(!(p.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/"))) throw new Error("Image asset missing after edit");
+
+          m.status="scheduled_verified";
+          m.verifiedAt=new Date().toISOString();
+          m.readback={id:p.id,status:p.status,dueAt:p.dueAt,assets:p.assets};
+          fs.writeFileSync("automation/mio-x/visualize-2026-09-26.json",JSON.stringify(m,null,2)+"\n");
+
+          const statePath="automation/mio-x/state.json";
+          const s=JSON.parse(fs.readFileSync(statePath,"utf8"));
+          const e=s.posts.find(x=>x.id===m.targetBufferPostId);
+          if(e){
+            e.visualizedAt=m.verifiedAt;
+            e.text=m.text;
+            e.mediaUrl=m.mediaUrl;
+            e.visualFirst=true;
+          }
+          s.lastRunAt=m.verifiedAt;
+          fs.writeFileSync(statePath,JSON.stringify(s,null,2)+"\n");
+          console.log(JSON.stringify({ok:true,id:p.id,status:p.status,dueAt:p.dueAt,assets:p.assets},null,2));
+          NODE
+      - name: Persist verified visual state
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/mio-x/visualize-2026-09-26.json automation/mio-x/state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Verify MIO Sep 26 visual post"
+          git pull --rebase origin main
+          git push
