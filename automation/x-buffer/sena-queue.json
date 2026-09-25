@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T23:26:02.512Z",
+  "updatedAt": "2026-09-25T12:38:31.612Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -110,7 +110,7 @@
       "dueAt": "2026-10-04T04:05:00Z",
       "text": "【PR】\n黒コーデの日、最後に足すならどっち？\n揺れるピアスか、小さめの一粒か。\n\nBLOOM公式ストアでジュエリーを見る↓\nhttps://r.8to.jp/Zv7PTYBUicQd\n\n※アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。画像はAI制作です。画像内のアクセサリーはBLOOMの商品ではありません。\n\n#PR",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-04_D07.jpeg",
-      "status": "pending",
+      "status": "scheduled",
       "monetization": {
         "network": "A8.net",
         "program": "BLOOM（ブルーム）公式ストア",
@@ -119,14 +119,20 @@
         "disclosure": "PR + affiliate disclosure",
         "productMatch": "generic_store_link; image accessory is not claimed to be BLOOM product",
         "firstCommercialTest": true
-      }
+      },
+      "bufferPostId": "6ab66b46db73444101edb95b",
+      "bufferDueAt": "2026-10-04T04:05:00.000Z",
+      "processedAt": "2026-09-25T12:38:30.972Z"
     },
     {
       "key": "sena-d08",
       "dueAt": "2026-10-05T04:05:00Z",
       "text": "移動の日。コーヒーと小さなスーツケースがあれば、だいたい大丈夫。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-05_D08.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "bufferPostId": "6ab66b478c95968bb0395fb5",
+      "bufferDueAt": "2026-10-05T04:05:00.000Z",
+      "processedAt": "2026-09-25T12:38:31.527Z"
     },
     {
       "key": "sena-d09",
@@ -321,7 +327,7 @@
     "channelId": "6ab4f318ea19ca0bded37a49",
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
-    "created": 1,
-    "verifiedAt": "2026-09-24T13:32:56.789Z"
+    "created": 2,
+    "verifiedAt": "2026-09-25T12:38:31.612Z"
   }
 }
