@@ -22,8 +22,8 @@ jobs:
       - name: Edit exact scheduled MIO post to visual-first
         shell: bash
         run: |
-          node <<'NODE'
-          const fs=require("fs");
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
           const m=JSON.parse(fs.readFileSync("automation/mio-x/visualize-2026-09-26.json","utf8"));
           async function gql(query,variables={}){
             const r=await fetch("https://api.buffer.com",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${process.env.BUFFER_API_KEY}`},body:JSON.stringify({query,variables}),signal:AbortSignal.timeout(30000)});
