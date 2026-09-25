@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-25T05:39:18.290Z",
+  "checkedAt": "2026-09-25T07:44:15.891Z",
   "readOnly": true,
   "connections": [
     {
@@ -726,17 +726,25 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": true,
           "counts": {
-            "scheduled": 2,
-            "sent": 8
+            "sent": 10,
+            "scheduled": 1
           },
           "posts": [
             {
+              "id": "6ab614f4d9ff65ab6164ebe0",
+              "status": "sent",
+              "dueAt": "2026-09-14T23:53:11.000Z",
+              "sentAt": "2026-09-14T23:53:11.000Z",
+              "externalLink": "https://x.com/1450766167/status/2099647680838594762",
+              "textHash": "e29668030b4d6db914b367c7de718693d7fb5b190b5dd44deec973615515e5cd"
+            },
+            {
               "id": "6ab52799977152ab73d63fbc",
-              "status": "scheduled",
-              "dueAt": "2026-09-25T11:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
-              "textHash": "d57703597a0ac0efafde09d30806460d44b53bc081fc717dce0557897bd64117"
+              "status": "sent",
+              "dueAt": "2026-09-25T07:10:00.000Z",
+              "sentAt": "2026-09-25T07:10:03.033Z",
+              "externalLink": "https://x.com/1450766167/status/2103381498111857078",
+              "textHash": "7b5591814dbfbd6a6c93ad03d638488f71a3727b294314d45b01b8afd82f918b"
             },
             {
               "id": "6ab46c5ab4fa591f3ecd98b5",
