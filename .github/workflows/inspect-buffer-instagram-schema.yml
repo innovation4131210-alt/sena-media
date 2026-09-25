@@ -31,7 +31,7 @@ jobs:
             return j.data;
           }
           const q = `query($name:String!){__type(name:$name){name kind inputFields{name type{kind name ofType{kind name ofType{kind name}}}} enumValues{name}}}`;
-          const names=["CreatePostInput","UpdatePostInput","AssetInput","ImageAssetInput","VideoAssetInput","VideoMetadataInput","PostInputMetaData","InstagramPostMetadataInput","PostType"];
+          const names=["CreatePostInput","EditPostInput","DeletePostInput","AssetInput","ImageAssetInput","VideoAssetInput","VideoMetadataInput","PostInputMetaData","InstagramPostMetadataInput","PostType"];
           for (const name of names) {
             const d = await gql(q,{name});
             console.log("TYPE",name,JSON.stringify(d.__type));
