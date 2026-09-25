@@ -1,7 +1,7 @@
 {
   "version": 1,
   "purpose": "Replace one zero-reach SENA static Instagram reservation with a Reel using the exact same approved image/caption/date; format is the only deliberate variable.",
-  "status": "ready_to_edit",
+  "status": "scheduled_verified",
   "originalBufferPostId": "6ab357d87f829c66807a5ea5",
   "expectedDueAt": "2026-09-26T03:30:00.000Z",
   "expectedText": "コーヒーを買ったら出発。行き先は着いてから少しずつ残します。",
@@ -12,5 +12,19 @@
     "shouldShareToFeed": true,
     "isAiGenerated": true
   },
-  "rationale": "Recent SENA Instagram static feed posts show verified zero reach/views; switch one upcoming slot to Reel without increasing posting volume."
+  "rationale": "Recent SENA Instagram static feed posts show verified zero reach/views; switch one upcoming slot to Reel without increasing posting volume.",
+  "newBufferPostId": "6ab357d87f829c66807a5ea5",
+  "oldBufferPostId": "6ab357d87f829c66807a5ea5",
+  "channelId": "6aa72524ea19ca0bde39313c",
+  "verifiedAt": "2026-09-25T05:43:05.376Z",
+  "readback": {
+    "status": "scheduled",
+    "dueAt": "2026-09-26T03:30:00.000Z",
+    "videoAssets": [
+      {
+        "id": null,
+        "mimeType": "video/mp4"
+      }
+    ]
+  }
 }
