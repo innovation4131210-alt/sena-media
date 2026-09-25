@@ -59,7 +59,7 @@ async function inventory(channel) {
         filter:{channelIds:[$channelId]},
         sort:[{field:dueAt,direction:asc}]
       }) {
-        edges { node { id text status dueAt sentAt externalLink channelId } }
+        edges { node { id text status dueAt sentAt externalLink channelId assets { id mimeType } } }
         pageInfo { hasNextPage }
       }
     }`,
@@ -74,12 +74,30 @@ function sameTarget(post,target) {
   return post.text===target.text && Number.isFinite(when) && Math.abs(when-Date.parse(target.dueAt))<=60000;
 }
 
+async function verifyMedia(url) {
+  if (!url) throw new Error("visualRequired post is missing mediaUrl");
+  const response = await fetch(url, {
+    method:"GET",
+    headers:{Range:"bytes=0-64"},
+    redirect:"follow",
+    signal:AbortSignal.timeout(20000),
+  });
+  if (!response.ok && response.status!==206) throw new Error(`Media unavailable (${response.status}): ${url}`);
+  const type=response.headers.get("content-type") ?? "";
+  if (!type.startsWith("image/") && !type.startsWith("video/")) throw new Error(`Unsupported media type (${type})`);
+  return type;
+}
+
 async function createPost(target,channel) {
+  const mediaType=await verifyMedia(target.mediaUrl);
+  const asset = mediaType.startsWith("video/")
+    ? {video:{url:target.mediaUrl}}
+    : {image:{url:target.mediaUrl}};
   const data = await gql(
     `mutation($input: CreatePostInput!) {
       createPost(input:$input) {
         __typename
-        ... on PostActionSuccess { post { id text status dueAt channelId } }
+        ... on PostActionSuccess { post { id text status dueAt channelId assets { id mimeType } } }
         ... on MutationError { message }
       }
     }`,
@@ -90,7 +108,7 @@ async function createPost(target,channel) {
       schedulingType:"automatic",
       mode:"customScheduled",
       aiAssisted:true,
-      assets:[],
+      assets:[asset],
       needsApproval:false,
       saveToDraft:false
     }}
@@ -139,6 +157,12 @@ async function main() {
       continue;
     }
     if (scheduledCount>=cap) break;
+    if (queue.policy?.visualRequired===true && !target.mediaUrl) {
+      target.status="held_visual_required";
+      target.holdReason="Every MIO X original post must include an approved image or video.";
+      changed=true;
+      continue;
+    }
     const made=await createPost(target,channel);
     target.status="scheduled";
     target.bufferPostId=made.id;
@@ -151,6 +175,9 @@ async function main() {
     const readback=existing.find(p=>p.id===made.id);
     if (!readback || readback.status!=="scheduled" || readback.text!==target.text) {
       throw new Error(`Buffer readback failed: ${target.key}`);
+    }
+    if (queue.policy?.visualRequired===true && !(readback.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/") || String(a.mimeType??"").startsWith("video/"))) {
+      throw new Error(`Visual asset readback failed: ${target.key}`);
     }
   }
 
