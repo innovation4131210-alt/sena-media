@@ -1,0 +1,45 @@
+name: Build SENA Discovery Reel 001
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ops/build-sena-discovery-reel-001.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install ffmpeg
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Build 7s vertical Reel from approved SENA station image
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="media/sena-initial-9/SENA_08_station_travel.jpeg"
+          OUT="media/growth/sena-discovery-reel-001.mp4"
+          mkdir -p "$(dirname "$OUT")"
+          test -s "$SRC"
+          ffmpeg -y -loop 1 -i "$SRC" -filter_complex             "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=20:2[bg];             [0:v]scale=1080:1350,zoompan=z='min(zoom+0.00018,1.035)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=210:s=1080x1350:fps=30[fg];             [bg][fg]overlay=0:285,format=yuv420p[v]"             -map "[v]" -t 7 -r 30 -c:v libx264 -preset medium -crf 20 -movflags +faststart "$OUT"
+          ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$OUT"
+          test -s "$OUT"
+      - name: Commit built asset
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/growth/sena-discovery-reel-001.mp4
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add SENA Discovery Reel 001"
+          git pull --rebase origin main
+          git push
