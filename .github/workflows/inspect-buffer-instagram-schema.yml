@@ -30,8 +30,8 @@ jobs:
             if (!r.ok || j.errors) throw new Error(JSON.stringify(j.errors||j));
             return j.data;
           }
-          const q = `query($name:String!){__type(name:$name){name kind inputFields{name type{kind name ofType{kind name ofType{kind name}}}}}}`;
-          const names=["CreatePostInput","AssetInput","ImageAssetInput","VideoAssetInput","PostMetadataInput","InstagramPostMetadataInput","InstagramMetadataInput"];
+          const q = `query($name:String!){__type(name:$name){name kind inputFields{name type{kind name ofType{kind name ofType{kind name}}}} enumValues{name}}}`;
+          const names=["CreatePostInput","AssetInput","ImageAssetInput","VideoAssetInput","VideoMetadataInput","PostInputMetaData","InstagramPostMetadataInput","PostType"];
           for (const name of names) {
             const d = await gql(q,{name});
             console.log("TYPE",name,JSON.stringify(d.__type));
