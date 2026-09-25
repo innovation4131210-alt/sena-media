@@ -1,0 +1,86 @@
+name: MIO X strong photo now
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ops/mio-x-strong-now-trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  edit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move verified MIO photo post to now-ish and sharpen hook
+        shell: bash
+        run: |
+          node <<'NODE'
+          const endpoint="https://api.buffer.com";
+          const key=process.env.BUFFER_API_KEY;
+          const postId="6ab52799977152ab73d63fbc";
+          const channelId="6aa88d58ea19ca0bde4490c3";
+          const dueAt="2026-09-25T07:10:00.000Z";
+          const text="今日はちょっとだけ近め。\nこういう距離感、あり？なし？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO";
+          const imageUrl="https://d2jqrm6oza8nb6.cloudfront.net/datasets/e1c2ca52-593a-4c0e-8111-d19063d00690.jpeg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNWQ2ZWVlZjVjYjVlZTYyOSIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MDM3NjgyMX0.OCgftN330CcWdUpt_lkka04FNMTzXa1KLMmFeWr1Jo0";
+          async function gql(query,variables={}){
+            const r=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${key}`},body:JSON.stringify({query,variables}),signal:AbortSignal.timeout(30000)});
+            const j=await r.json();
+            if(!r.ok||j.errors?.length) throw new Error(JSON.stringify(j.errors??j));
+            return j.data;
+          }
+          const acc=await gql("query { account { organizations { id } } }");
+          let orgId=null, target=null;
+          for(const org of acc.account.organizations){
+            const d=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}){edges{node{id text status dueAt channelId assets{id mimeType source type}}}pageInfo{hasNextPage}}}`,{organizationId:org.id,channelId});
+            if(d.posts?.pageInfo?.hasNextPage) throw new Error("Incomplete inventory");
+            const hit=(d.posts?.edges??[]).map(e=>e.node).find(p=>p.id===postId);
+            if(hit){orgId=org.id;target=hit;break;}
+          }
+          if(!target) throw new Error("Target MIO X post missing");
+          if(target.status!=="scheduled") throw new Error(`Target status ${target.status}; refusing edit`);
+          if(!(target.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/"))) throw new Error("Target has no image asset before edit");
+          const edited=await gql(`mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id text status dueAt channelId assets{id mimeType source type}}} ... on MutationError{message}}}`,{input:{
+            id:postId,
+            text,
+            dueAt,
+            mode:"customScheduled",
+            schedulingType:"automatic",
+            aiAssisted:true,
+            assets:[{image:{url:imageUrl}}],
+            saveToDraft:false
+          }});
+          const p=edited.editPost?.post;
+          if(!p?.id) throw new Error(edited.editPost?.message??"Edit failed");
+          const rb=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}){edges{node{id text status dueAt channelId assets{id mimeType source type}}}pageInfo{hasNextPage}}}`,{organizationId:orgId,channelId});
+          if(rb.posts?.pageInfo?.hasNextPage) throw new Error("Incomplete readback");
+          const q=(rb.posts?.edges??[]).map(e=>e.node).find(x=>x.id===postId);
+          if(!q||q.status!=="scheduled"||q.text!==text||Date.parse(q.dueAt)!==Date.parse(dueAt)||!(q.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/"))) throw new Error("Readback mismatch");
+          console.log(JSON.stringify({ok:true,id:q.id,status:q.status,dueAt:q.dueAt,text:q.text,assets:q.assets},null,2));
+          NODE
+      - name: Update local staging record
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs=require("fs");
+          const p="automation/x-buffer/strong-photo-staging-2026-09-24.json";
+          const j=JSON.parse(fs.readFileSync(p,"utf8"));
+          const a=j.assets.find(x=>x.id==="MIO-X-60-A01");
+          a.scheduledAtJst="2026-09-25 16:10";
+          a.status="scheduled_now_test";
+          a.caption="今日はちょっとだけ近め。\nこういう距離感、あり？なし？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO";
+          a.testReason="Immediate photo-first binary-choice test inspired by current high-performing AI X patterns; exact approved image reused.";
+          j.updatedAt=new Date().toISOString();
+          fs.writeFileSync(p,JSON.stringify(j,null,2)+"\n");
+          NODE
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/x-buffer/strong-photo-staging-2026-09-24.json
+          git commit -m "Move MIO photo test to immediate slot"
+          git pull --rebase origin main
+          git push
