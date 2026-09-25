@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T23:26:08.297Z",
+  "updatedAt": "2026-09-25T05:59:04.151Z",
   "policy": {
     "enabled": false,
     "maxScheduled": 9,
@@ -47,14 +47,15 @@
       "key": "sena-threads-07",
       "dueAt": "2026-10-07T11:10:00.000Z",
       "text": "【PR】\n黒コーデに合わせるなら、ジュエリーは足す？ 引く？\n\nBLOOM公式ストアで、シンプルに合わせやすいものを探すならこちら↓\nhttps://r.8to.jp/sPiE3rrNPMTp\n\n※アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。",
-      "status": "pending",
+      "status": "held_meta_branded_content_eligibility",
       "monetization": {
         "network": "A8.net",
         "program": "BLOOM（ブルーム）公式ストア",
         "platform": "Threads",
         "trackingUrl": "https://r.8to.jp/sPiE3rrNPMTp",
         "firstCommercialTest": true
-      }
+      },
+      "holdReason": "Meta says affiliate-link content should use the Paid partnership label and branded-content eligibility must be met; current Instagram account status shows Established Presence monetization issue."
     },
     {
       "key": "sena-threads-08",
@@ -70,7 +71,7 @@
       "key": "sena-threads-garcia-01",
       "dueAt": "2026-10-13T11:10:00.000Z",
       "text": "【PR】\n男性のシルバーアクセ、つけるなら細め？ 少し存在感あり？\n\nGARCIAの「thin snake necklace」は、シンプルだけど線がきれいなタイプ。\nhttps://r.8to.jp/bgyai4tF3Luy\n\n※アフィリエイトリンクを含みます。\n※SENAは架空のAIキャラクターです。",
-      "status": "pending",
+      "status": "held_meta_branded_content_eligibility",
       "monetization": {
         "network": "A8.net",
         "program": "細くても、存在感があるアクセサリーGARCIA",
@@ -79,7 +80,8 @@
         "creative": "material-001 thin snake necklace",
         "sku": "thin snake necklace (silver) #n52",
         "firstCommercialTestForProgram": true
-      }
+      },
+      "holdReason": "Meta says affiliate-link content should use the Paid partnership label and branded-content eligibility must be met; current Instagram account status shows Established Presence monetization issue."
     }
   ]
 }
