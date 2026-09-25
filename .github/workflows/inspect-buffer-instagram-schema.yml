@@ -31,9 +31,13 @@ jobs:
             return j.data;
           }
           const q = `query($name:String!){__type(name:$name){name kind inputFields{name type{kind name ofType{kind name ofType{kind name}}}} enumValues{name}}}`;
-          const names=["CreatePostInput","AssetInput","ImageAssetInput","VideoAssetInput","VideoMetadataInput","PostInputMetaData","InstagramPostMetadataInput","PostType"];
+          const names=["CreatePostInput","UpdatePostInput","AssetInput","ImageAssetInput","VideoAssetInput","VideoMetadataInput","PostInputMetaData","InstagramPostMetadataInput","PostType"];
           for (const name of names) {
             const d = await gql(q,{name});
             console.log("TYPE",name,JSON.stringify(d.__type));
+          }
+          const schema = await gql(`query { __schema { mutationType { fields { name args { name type { kind name ofType { kind name ofType { kind name } } } } } } } }`);
+          for (const field of schema.__schema?.mutationType?.fields ?? []) {
+            if (/post/i.test(field.name)) console.log("MUTATION",field.name,JSON.stringify(field.args));
           }
           NODE
