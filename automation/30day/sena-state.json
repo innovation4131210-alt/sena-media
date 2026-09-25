@@ -10,7 +10,7 @@
       "mediaSha256": "c74ba9f60a425b2dd88cee4028ad693ce605ab0d1385944c013018693f4786a1",
       "caption": "出る前の最終確認。今日はチャコールだけで十分。足すなら何色？",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-24T14:11:07.860Z"
+      "verifiedAt": "2026-09-25T14:11:12.106Z"
     },
     {
       "day": 2,
@@ -21,7 +21,7 @@
       "mediaSha256": "047a672b9f66053d996517d6f61cfee705c9c03b647ee74ff1113ddd144cb748",
       "caption": "予定の合間に少しだけ。窓際の席は、街を見ているだけで時間が過ぎる。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-24T14:11:07.860Z"
+      "verifiedAt": "2026-09-25T14:11:12.106Z"
     },
     {
       "day": 3,
@@ -32,7 +32,7 @@
       "mediaSha256": "7957c506d60d234d7387e2d63b0e6e2b9c7239bf003525e3ef608dd3f5687883",
       "caption": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-24T14:11:07.860Z"
+      "verifiedAt": "2026-09-25T14:11:12.106Z"
     },
     {
       "day": 4,
@@ -43,7 +43,7 @@
       "mediaSha256": "0a14e4d23ef8b58fe1621d70f82c891c8d7787a4ecbda34e80bb5214c2c72fad",
       "caption": "夜のラウンジは、話すより静かに過ごしたくなる日がある。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-24T14:11:08.752Z"
+      "verifiedAt": "2026-09-25T14:11:12.106Z"
     },
     {
       "day": 5,
@@ -54,7 +54,7 @@
       "mediaSha256": "9530942224af1426dc854cd9ea117180768898eef92730e3ef5157d80c009a1e",
       "caption": "旅先の朝。予定を決める前のこの時間がいちばん好き。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-24T14:11:10.101Z"
+      "verifiedAt": "2026-09-25T14:11:12.106Z"
     },
     {
       "day": 6,
@@ -65,10 +65,21 @@
       "mediaSha256": "92e905550beee9f7888f9bd97b75d71195cf49d7564c65e6a7d8855f4db4222a",
       "caption": "作品の前では、少しだけ時間が遅くなる。今日は言葉より色を見たい。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-24T14:11:11.337Z"
+      "verifiedAt": "2026-09-25T14:11:12.106Z"
+    },
+    {
+      "day": 7,
+      "date": "2026-10-04",
+      "bufferPostId": "6ab681004be5473030b59a9d",
+      "dueAt": "2026-10-04T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/c45e6a61279e705f832f7b1a7352a73ba59b4cde/media/sena-30day-2026-09-28/SENA_2026-10-04_D07.jpeg",
+      "mediaSha256": "4381abd8941628ec3f5afec82f2f07337fdaafdfad771ca4ae0585e8340caeb7",
+      "caption": "黒を着る夜は、最後のアクセサリーで迷う。足す？引く？",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-09-25T14:11:13.160Z"
     }
   ],
-  "lastRunAt": "2026-09-24T14:11:07.860Z",
+  "lastRunAt": "2026-09-25T14:11:12.105Z",
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio",
@@ -76,32 +87,20 @@
   },
   "createdThisRun": [
     {
-      "day": 4,
-      "id": "6ab52f7cd0d12c23fa5b8e7d",
-      "dueAt": "2026-10-01T11:30:00.000Z",
-      "verifiedAt": "2026-09-24T14:11:08.752Z"
-    },
-    {
-      "day": 5,
-      "id": "6ab52f7d3e8c1aa3fcccf9e1",
-      "dueAt": "2026-10-02T11:30:00.000Z",
-      "verifiedAt": "2026-09-24T14:11:10.101Z"
-    },
-    {
-      "day": 6,
-      "id": "6ab52f7ef2918b28ff7437c0",
-      "dueAt": "2026-10-03T11:30:00.000Z",
-      "verifiedAt": "2026-09-24T14:11:11.337Z"
+      "day": 7,
+      "id": "6ab681004be5473030b59a9d",
+      "dueAt": "2026-10-04T11:30:00.000Z",
+      "verifiedAt": "2026-09-25T14:11:13.160Z"
     }
   ],
   "blocked": [],
   "pendingCreates": [],
-  "lastVerifiedAt": "2026-09-24T14:11:11.338Z",
+  "lastVerifiedAt": "2026-09-25T14:11:13.162Z",
   "legacyOrganizationCountObservation": {
     "count": 17,
     "note": "Historical organization-wide count; never use for per-channel capacity."
   },
-  "observedChannelScheduledCount": 6,
+  "observedChannelScheduledCount": 8,
   "capacityScope": "channel",
   "safeQueueLimit": 9,
   "remainingChannelCapacity": 0
