@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:21:41.303Z",
+  "updatedAt": "2026-09-26T05:21:55.615Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -25,9 +25,12 @@
       "key": "sena-threads-visual-2026-09-26",
       "dueAt": "2026-09-26T11:10:00.000Z",
       "text": "夜の予定、終わってから決めるくらいがちょうどいい。\nもう一軒寄る？そのまま帰る？\n\n※SENAは架空のAIキャラクターです。画像はAI制作です。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_09_hotel_lounge_night.jpeg",
-      "visualFirst": true
+      "visualFirst": true,
+      "bufferPostId": "6ab75673dffba3cec6efc51c",
+      "bufferDueAt": "2026-09-26T11:10:00.000Z",
+      "processedAt": "2026-09-26T05:21:55.524Z"
     },
     {
       "key": "sena-threads-02",
@@ -151,7 +154,7 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 7,
-    "verifiedAt": "2026-09-26T05:19:16.966Z"
+    "scheduledCount": 8,
+    "verifiedAt": "2026-09-26T05:21:55.615Z"
   }
 }
