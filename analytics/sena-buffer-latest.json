@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-26T03:25:44.775Z",
+  "capturedAt": "2026-09-26T05:16:11.957Z",
   "tokyoDate": "2026-09-26",
   "readOnly": true,
   "inventoryComplete": true,
@@ -13,6 +13,16 @@
   },
   "channelAvailable": true,
   "sent": [
+    {
+      "id": "6ab357d87f829c66807a5ea5",
+      "text": "コーヒーを買ったら出発。行き先は着いてから少しずつ残します。",
+      "status": "sent",
+      "dueAt": "2026-09-26T03:30:00.000Z",
+      "sentAt": "2026-09-26T03:30:57.014Z",
+      "externalLink": "https://www.instagram.com/reel/DdvEqcND8Lf/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-09-23T04:38:48.897Z"
+    },
     {
       "id": "6ab357d87f829c66807a5e75",
       "text": "最後にイヤリングだけ。黒の日は、アクセサリーを足す？それとも引く？",
@@ -825,12 +835,6 @@
   "failed": [],
   "scheduled": [
     {
-      "id": "6ab357d87f829c66807a5ea5",
-      "text": "コーヒーを買ったら出発。行き先は着いてから少しずつ残します。",
-      "status": "scheduled",
-      "dueAt": "2026-09-26T03:30:00.000Z"
-    },
-    {
       "id": "6ab357d9b777b65977f0a8d2",
       "text": "帰る直前に呼ばれて振り返っただけ。こういう一枚の方が、あとで残る。",
       "status": "scheduled",
@@ -879,5 +883,5 @@
       "dueAt": "2026-10-04T11:30:00.000Z"
     }
   ],
-  "workflowRunId": "36214763775"
+  "workflowRunId": "36220289420"
 }
