@@ -1,0 +1,47 @@
+name: Fix MIO TikTok photo formats
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ops/fix-mio-tiktok-photo-formats.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install image converter
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y imagemagick
+      - name: Convert pending TikTok PNG assets to JPEG
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p media/growth/tiktok-fixes
+          curl -L --fail --silent --show-error             "https://static.metricool.com/planner/202609/6940494-file-17310859244211750584.png"             -o /tmp/mio-0926.png
+          curl -L --fail --silent --show-error             "https://static.metricool.com/planner/202609/6940494-file-17411390939031309488.png"             -o /tmp/mio-0927.png
+          identify /tmp/mio-0926.png
+          identify /tmp/mio-0927.png
+          convert /tmp/mio-0926.png -background white -alpha remove -alpha off -quality 94             media/growth/tiktok-fixes/mio-tiktok-2026-09-26.jpg
+          convert /tmp/mio-0927.png -background white -alpha remove -alpha off -quality 94             media/growth/tiktok-fixes/mio-tiktok-2026-09-27.jpg
+          test -s media/growth/tiktok-fixes/mio-tiktok-2026-09-26.jpg
+          test -s media/growth/tiktok-fixes/mio-tiktok-2026-09-27.jpg
+      - name: Commit converted assets
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/growth/tiktok-fixes/mio-tiktok-2026-09-26.jpg media/growth/tiktok-fixes/mio-tiktok-2026-09-27.jpg
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add JPEG fixes for MIO TikTok photo posts"
+          git pull --rebase origin main
+          git push
