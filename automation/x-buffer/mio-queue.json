@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:20:53.140Z",
+  "updatedAt": "2026-09-26T05:21:09.500Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -136,46 +136,55 @@
       "key": "mio-x-visual-evening-2026-09-26",
       "dueAt": "2026-09-26T11:30:00.000Z",
       "text": "髪まとめる？このまま下ろす？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-01_D04.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-01_D04.jpeg",
       "experiment": {
         "type": "x_visual_hook",
         "strength": "strong",
         "variant": "close_hair_choice"
-      }
+      },
+      "bufferPostId": "6ab7564384e8fc26af220c8f",
+      "bufferDueAt": "2026-09-26T11:30:00.000Z",
+      "processedAt": "2026-09-26T05:21:07.229Z"
     },
     {
       "key": "mio-x-visual-evening-2026-09-27",
       "dueAt": "2026-09-27T11:30:00.000Z",
       "text": "今日はもう外出ない。\n映画見る？早く寝る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-04_D07.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-04_D07.jpeg",
       "experiment": {
         "type": "x_visual_hook",
         "strength": "strong",
         "variant": "sofa_weekend_choice"
-      }
+      },
+      "bufferPostId": "6ab75644dffba3cec6efc396",
+      "bufferDueAt": "2026-09-27T11:30:00.000Z",
+      "processedAt": "2026-09-26T05:21:08.277Z"
     },
     {
       "key": "mio-x-visual-evening-2026-09-28",
       "dueAt": "2026-09-28T11:30:00.000Z",
       "text": "本屋に来ると予定より長くなる。\n目的買い？偶然見つける派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-06_D09.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-06_D09.jpeg",
       "experiment": {
         "type": "x_visual_hook",
         "strength": "normal",
         "variant": "bookstore_choice"
-      }
+      },
+      "bufferPostId": "6ab75645b097c5b401ae69cb",
+      "bufferDueAt": "2026-09-28T11:30:00.000Z",
+      "processedAt": "2026-09-26T05:21:09.334Z"
     }
   ],
   "lastRun": {
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
-    "scheduledCount": 3,
-    "verifiedAt": "2026-09-26T05:06:57.194Z"
+    "scheduledCount": 6,
+    "verifiedAt": "2026-09-26T05:21:09.500Z"
   }
 }
