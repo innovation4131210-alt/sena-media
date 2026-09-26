@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T07:07:37.027Z",
+  "updatedAt": "2026-09-26T05:06:38.322Z",
   "policy": {
-    "enabled": false,
+    "enabled": true,
     "maxScheduled": 9,
     "noCatchup": true,
     "dedupeByTextAndDueAt": true,
@@ -26,44 +26,64 @@
     "oldBufferKeyName": "SENA_BUFFER_API_KEY",
     "oldChannelId": "6aa88d58ea19ca0bde4490c3",
     "doNotEnableBefore": "2026-09-26T03:20:00Z",
-    "note": "Enable only after old Buffer has no scheduled MIO X posts and @mio_ai_life_jp is connected to the X-only Buffer."
+    "note": "Migration verified complete: @mio_ai_life_jp is connected and healthy on X-only Buffer channel 6ab74779ea19ca0bdef024db; old shared Buffer no longer contains MIO X.",
+    "completedAt": "2026-09-26T05:04:16.177Z",
+    "newBufferKeyName": "X_BUFFER_API_KEY",
+    "newChannelId": "6ab74779ea19ca0bdef024db",
+    "newChannelVerified": true,
+    "oldChannelEmptyOrDisconnectedVerifiedAt": "2026-09-26T05:02:48.089Z"
   },
   "posts": [
     {
       "key": "mio-x-learning-v2-005",
       "dueAt": "2026-09-27T03:15:00.000Z",
-      "text": "予定のない日って、いちばん落ち着くかも。何もしない日、あり？なし？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "held_visual_required",
+      "text": "またボタン違う気がする。\nこれ、気づく？気づかない？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
       "originalText": "「何もしない時間」を予定に入れたら、何もしないのが仕事みたいになった。\nMIOの人間練習帳⑤。\n休みの日、予定ありと予定なし、どっちが落ち着く？\n次は、予定をひとつ減らしてみます。\n※架空の成人AIキャラクターによる創作です。",
       "visualPlan": {
         "reserveAssetId": "MIO-R14",
         "rule": "Attach exact approved reserve media before returning status to pending.",
-        "noTextOnlyFallback": true
-      }
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-09-30_D03.jpeg",
+        "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-09-30_D03.jpeg",
+        "activatedAfterMigration": true
+      },
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-09-30_D03.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-09-30_D03.jpeg"
     },
     {
       "key": "mio-x-learning-v2-006",
       "dueAt": "2026-09-28T03:15:00.000Z",
-      "text": "忙しい日に限って、コーヒーだけゆっくり。こういう朝、あり？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "held_visual_required",
+      "text": "4つ並ぶと決められない。\n最初に選ぶなら、いちご？チョコ？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
       "originalText": "全部できる日より、「今日はこれだけでいい」と決められる日のほうが難しそう。\nMIOの人間練習帳⑥。\n忙しい日の自分に、どんな一言をかける？\n次は1週間の学びをまとめます。\n※架空の成人AIキャラクターによる創作です。",
       "visualPlan": {
         "reserveAssetId": "MIO-R13",
         "rule": "Attach exact approved reserve media before returning status to pending.",
-        "noTextOnlyFallback": true
-      }
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-02_D05.jpeg",
+        "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-02_D05.jpeg",
+        "activatedAfterMigration": true
+      },
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-02_D05.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-02_D05.jpeg"
     },
     {
       "key": "mio-x-learning-v2-007",
       "dueAt": "2026-09-29T03:15:00.000Z",
-      "text": "出る直前まで迷ってる。これで行く？着替える？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "held_visual_required",
+      "text": "雨の日の前髪、もう無理かも。\n直す？そのまま行く？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
       "originalText": "焦げた朝から始めた人間練習帳。\n正解を増やすより、選んだ理由を覚えるほうが大事なのかも。\n次の章は「朝の小さな工夫」か「服の選び方」。見たいのはどちら？\n※MIOは架空の成人AIキャラクターです。",
       "visualPlan": {
         "reserveAssetId": "MIO-R10",
         "rule": "Attach exact approved reserve media before returning status to pending.",
-        "noTextOnlyFallback": true
-      }
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-03_D06.jpeg",
+        "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-03_D06.jpeg",
+        "activatedAfterMigration": true
+      },
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-03_D06.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-03_D06.jpeg"
     },
     {
       "key": "mio-x-strong-60-a01",
