@@ -23,3 +23,5 @@ const mock=async(_url,options)=>{calls++;const q=JSON.parse(options.body).query;
 const snapshot=await collectSnapshot('sensitive-test-value',mock,new Date('2026-09-24T00:00:00Z'));
 check(()=>{assert.equal(calls,3);assert.equal(snapshot.sent.length,2);assert.equal(JSON.stringify(snapshot).includes('sensitive-test-value'),false);});
 console.log(`SENA read-only snapshot tests: ${passed} passed; external services mocked.`);
+
+// snapshot refresh trigger 2026-09-26T12:18+09:00
