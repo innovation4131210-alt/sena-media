@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:19:16.966Z",
+  "updatedAt": "2026-09-26T05:21:41.303Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -21,6 +21,14 @@
     "note": "Enable only after MIO X leaves this Buffer and SENA Threads is connected to the freed slot."
   },
   "posts": [
+    {
+      "key": "sena-threads-visual-2026-09-26",
+      "dueAt": "2026-09-26T11:10:00.000Z",
+      "text": "夜の予定、終わってから決めるくらいがちょうどいい。\nもう一軒寄る？そのまま帰る？\n\n※SENAは架空のAIキャラクターです。画像はAI制作です。",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_09_hotel_lounge_night.jpeg",
+      "visualFirst": true
+    },
     {
       "key": "sena-threads-02",
       "dueAt": "2026-09-27T11:10:00.000Z",
