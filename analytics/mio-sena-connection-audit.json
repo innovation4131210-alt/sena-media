@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-26T05:16:12.780Z",
+  "checkedAt": "2026-09-26T05:27:51.797Z",
   "readOnly": true,
   "connections": [
     {
@@ -687,9 +687,74 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
+            "scheduled": 8,
             "sent": 1
           },
           "posts": [
+            {
+              "id": "6ab75673dffba3cec6efc51c",
+              "status": "scheduled",
+              "dueAt": "2026-09-26T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "ef7c712174c10eaa5fe0c66a47829ea01d0f4d857c20ee48ebc86a2d36c94788"
+            },
+            {
+              "id": "6ab755d480521ded552266e7",
+              "status": "scheduled",
+              "dueAt": "2026-10-11T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "d8abc75e7ae5c542f2eb829108ceef96119d646abed99c06d01de9de7cfe3865"
+            },
+            {
+              "id": "6ab755d384e8fc26af220211",
+              "status": "scheduled",
+              "dueAt": "2026-10-09T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "f3a8ffe95a146bfc0370c6eabb5123f5c6e6c65d2237913db3819e90715c8ac5"
+            },
+            {
+              "id": "6ab755d2f59168c975366bc7",
+              "status": "scheduled",
+              "dueAt": "2026-10-05T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "ddb57d0b366dcca27915d64aefd32a6d396d88bdc7451891757f88bb1af9a9c8"
+            },
+            {
+              "id": "6ab755d184e8fc26af2201cc",
+              "status": "scheduled",
+              "dueAt": "2026-10-03T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "2996d5affe76967b54c869fd964040670533881dcd248901577a2609183866c8"
+            },
+            {
+              "id": "6ab755d080521ded5522668c",
+              "status": "scheduled",
+              "dueAt": "2026-10-01T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "b8fc0457bb5966932b5aa9704f432aa7e5f46e03f64314f04d2aada8923d158d"
+            },
+            {
+              "id": "6ab755cf84e8fc26af2201a4",
+              "status": "scheduled",
+              "dueAt": "2026-09-29T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "d507ada6e6ab7b6d87f749a434ee03784f42f742538bc0348afc67d5e1f09cb8"
+            },
+            {
+              "id": "6ab755cf80521ded55226665",
+              "status": "scheduled",
+              "dueAt": "2026-09-27T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "86af430b6959c2d247e31062ed73a17b775cd880c4e2dce1bde005d3ec787bbc"
+            },
             {
               "id": "6ab7534862beb624fb0f8239",
               "status": "sent",
