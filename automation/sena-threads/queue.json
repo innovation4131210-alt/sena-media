@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:16:56.602Z",
+  "updatedAt": "2026-09-26T05:18:04.232Z",
   "policy": {
-    "enabled": false,
+    "enabled": true,
     "maxScheduled": 9,
     "noCatchup": true,
     "dedupeByTextAndDueAt": true,
@@ -104,5 +104,12 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-11_D14.jpeg",
       "visualFirst": true
     }
-  ]
+  ],
+  "activation": {
+    "verifiedAt": "2026-09-26T14:16:12+09:00",
+    "channelId": "6ab75347ea19ca0bdef0d04a",
+    "channelName": "sena.virtual.studio",
+    "transportKey": "SENA_BUFFER_API_KEY",
+    "note": "SENA Threads connection verified healthy after MIO X migration freed the slot."
+  }
 }
