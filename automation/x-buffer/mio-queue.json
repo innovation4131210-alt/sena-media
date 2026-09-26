@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:06:57.194Z",
+  "updatedAt": "2026-09-26T05:20:53.140Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -131,6 +131,45 @@
         "sha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca"
       },
       "holdReason": "Runway-hosted URL must be refreshed after MIO X cutover; do not schedule on old Buffer or as text-only fallback."
+    },
+    {
+      "key": "mio-x-visual-evening-2026-09-26",
+      "dueAt": "2026-09-26T11:30:00.000Z",
+      "text": "髪まとめる？このまま下ろす？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-01_D04.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-01_D04.jpeg",
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "strong",
+        "variant": "close_hair_choice"
+      }
+    },
+    {
+      "key": "mio-x-visual-evening-2026-09-27",
+      "dueAt": "2026-09-27T11:30:00.000Z",
+      "text": "今日はもう外出ない。\n映画見る？早く寝る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-04_D07.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-04_D07.jpeg",
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "strong",
+        "variant": "sofa_weekend_choice"
+      }
+    },
+    {
+      "key": "mio-x-visual-evening-2026-09-28",
+      "dueAt": "2026-09-28T11:30:00.000Z",
+      "text": "本屋に来ると予定より長くなる。\n目的買い？偶然見つける派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-06_D09.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-06_D09.jpeg",
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "bookstore_choice"
+      }
     }
   ],
   "lastRun": {
