@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - "automation/dmm-x/audit_actress_popularity.py"
+      - "automation/dmm-x/preview_selection.py"
+      - "automation/dmm-x/buffer_queue.py"
       - ".github/workflows/dmm-x-actress-popularity.yml"
 
 permissions:
