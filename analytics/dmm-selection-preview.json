@@ -1,9 +1,10 @@
 {
   "version": 1,
-  "strategy": "real-selection-v5-actress-first",
+  "strategy": "real-selection-v7-campaign-demand-first",
   "picks": [
     {
       "preferredSort": "rank",
+      "campaignFocus": true,
       "actualSort": "rank",
       "contentId": "hsoda00036",
       "actressName": "胡桃さくら",
@@ -14,11 +15,14 @@
       "reviewAverage": 4.53,
       "reviewCount": 40,
       "campaignActive": true,
+      "campaignTitle": "こだわりのフェラ50％OFF",
+      "campaignEnd": "2026-09-28 09:59:59",
       "recentRelease": false,
       "facts": "出演：胡桃さくら / 150円（参考300円・約50%OFF）"
     },
     {
       "preferredSort": "review",
+      "campaignFocus": false,
       "actualSort": "review",
       "contentId": "sqte00589",
       "actressName": "天月あず",
@@ -29,6 +33,8 @@
       "reviewAverage": 5.0,
       "reviewCount": 45,
       "campaignActive": false,
+      "campaignTitle": "",
+      "campaignEnd": "",
       "recentRelease": false,
       "facts": "出演：天月あず / 210円（参考300円・約30%OFF）"
     }
