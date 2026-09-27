@@ -32,9 +32,9 @@ SORT_LABELS = {
 }
 
 DISCOVERY_TEMPLATES = (
-    "【PR】今夜の人妻・熟女系。人気順から条件で絞ると、今日はこれが残りました。\n『{title}』{facts_line}\n詳細は返信に。18歳未満閲覧禁止。",
-    "【PR】人気上位を全部並べるより、候補は1本だけ。\n『{title}』{facts_line}\n続きは返信に置きます。18歳未満閲覧禁止。",
-    "【PR】今夜の候補メモ。人気順の中から、価格と評価まで見て残った1本。\n『{title}』{facts_line}\n詳細は返信に。18歳未満閲覧禁止。",
+    "【PR】今夜の人妻・熟女系。人気順から条件で絞ると、今日はこれが残りました。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
+    "【PR】人気上位を全部並べるより、候補は1本だけ。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
+    "【PR】今夜の候補メモ。人気順の中から、価格と評価まで見て残った1本。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止.",
 )
 
 DECISION_TEMPLATES = (
@@ -138,12 +138,11 @@ def ensure_x_length(text, affiliate_url=None):
     raise RuntimeError("Generated post exceeds 280 characters")
 
 
-def build_discovery_text(template_index, title, sort_order, facts=""):
+def build_discovery_text(template_index, title, sort_order, affiliate_url, facts=""):
     short_title = compact_title(title, limit=48)
     template = DISCOVERY_TEMPLATES[template_index % len(DISCOVERY_TEMPLATES)]
-    return ensure_x_length(
-        template.format(title=short_title, facts_line=facts_line(facts))
-    )
+    body = template.format(title=short_title, facts_line=facts_line(facts))
+    return ensure_x_length(body + "\n" + affiliate_url, affiliate_url)
 
 
 def build_decision_text(template_index, title, sort_order, affiliate_url, facts="", meta=None):
@@ -475,21 +474,21 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     content_id, title, affiliate_url, actual_sort, facts, meta = choose_product(used_ids, preferred_sort)
 
     if first_reply:
+        # Live Buffer audit on 2026-09-27 showed the first-reply cohort at
+        # 0 clicks / 134 impressions (6 posts) versus direct-link cohort at
+        # 2 clicks / 211 impressions (6 posts). Preserve the discovery copy
+        # and product-selection logic, but move the affiliate URL into the
+        # lead post so only link placement changes in the next test window.
         format_name = "discovery"
         index = int(state.get("discovery_template_index", 0)) % len(DISCOVERY_TEMPLATES)
-        lead_text = build_discovery_text(index, title, actual_sort, facts)
-        reply_text = (
-            "【PR】作品詳細はこちら。価格・配信条件はリンク先でご確認ください。"
-            "18歳未満閲覧禁止。\n" + affiliate_url
-        )
+        lead_text = build_discovery_text(index, title, actual_sort, affiliate_url, facts)
         post = create_post(
             lead_text,
             channel_id,
-            first_reply=reply_text,
             image_url=meta.get("image_url"),
         )
         state["discovery_template_index"] = index + 1
-        link_mode = "first_reply"
+        link_mode = "direct"
     else:
         format_name = "decision"
         index = int(state.get("decision_template_index", 0)) % len(DECISION_TEMPLATES)
@@ -517,7 +516,7 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     state["post_history"][-1]["campaign_active"] = bool(meta.get("campaign_active"))
     state["post_history"][-1]["recent_release"] = bool(meta.get("recent_release"))
     state["post_history"][-1]["media_enabled"] = bool(ENABLE_DMM_MEDIA and meta.get("image_url"))
-    state["content_strategy_version"] = "real-selection-v3"
+    state["content_strategy_version"] = "real-selection-v4-direct-link"
     return f"affiliate/{format_name}/{actual_sort}/{link_mode}", post
 
 
