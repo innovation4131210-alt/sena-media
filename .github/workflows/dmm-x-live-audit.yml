@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/dmm-x-live-audit.mjs"
+      - "automation/dmm-x/buffer_queue.py"
       - ".github/workflows/dmm-x-live-audit.yml"
   schedule:
     # Read-only snapshots around the daily queue lifecycle.
@@ -30,8 +31,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Validate audit script
-        run: node --check scripts/dmm-x-live-audit.mjs
+      - name: Validate DMM scripts
+        run: |
+          node --check scripts/dmm-x-live-audit.mjs
+          python3 -m py_compile automation/dmm-x/buffer_queue.py
       - name: Read DMM X Buffer state and metrics
         env:
           DMM_BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
