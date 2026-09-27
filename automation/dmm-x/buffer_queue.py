@@ -16,6 +16,7 @@ RUN_SCHEDULE = os.environ.get("RUN_SCHEDULE", "").strip()
 ENABLE_DMM_MEDIA = os.environ.get("ENABLE_DMM_MEDIA", "false").strip().lower() == "true"
 DMM_AFFILIATE_ID = "eromimimimi-990"
 STATE_PATH = Path("automation/dmm-x/state.json")
+ACTRESS_POPULARITY_PATH = Path("analytics/dmm-actress-popularity.json")
 
 # 未成年・非同意・違法性を連想させる商品は自動選定から除外します。
 BLOCKED_WORDS = (
@@ -30,6 +31,65 @@ SORT_LABELS = {
     "review": "高評価",
     "date": "新着",
 }
+
+# If a currently popular performer exists in the eligible cohort, prefer that
+# cohort instead of selecting an unknown performer solely on price/discount.
+KNOWN_ACTRESS_SCORE_THRESHOLD = 150.0
+
+
+def item_actresses(item):
+    raw = (item.get("iteminfo") or {}).get("actress") or []
+    if isinstance(raw, dict):
+        raw = [raw]
+    out = []
+    for actress in raw:
+        if not isinstance(actress, dict):
+            continue
+        name = str(actress.get("name") or "").strip()
+        actress_id = actress.get("id")
+        if name:
+            out.append({"id": actress_id, "name": name})
+    return out
+
+
+def load_actress_popularity():
+    try:
+        data = json.loads(ACTRESS_POPULARITY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+    scores = {}
+    for row in data.get("topOverall", []):
+        score = float(row.get("popularityScore") or 0)
+        if row.get("id") is not None:
+            scores[f"id:{row['id']}"] = max(score, scores.get(f"id:{row['id']}", 0))
+        name = str(row.get("name") or "").strip()
+        if name:
+            scores[f"name:{name}"] = max(score, scores.get(f"name:{name}", 0))
+    return scores
+
+
+ACTRESS_POPULARITY = load_actress_popularity()
+
+
+def actress_signal(item):
+    best_name = ""
+    best_score = 0.0
+    names = []
+    for actress in item_actresses(item):
+        name = actress["name"]
+        names.append(name)
+        score = 0.0
+        if actress.get("id") is not None:
+            score = max(score, ACTRESS_POPULARITY.get(f"id:{actress['id']}", 0.0))
+        score = max(score, ACTRESS_POPULARITY.get(f"name:{name}", 0.0))
+        if score > best_score:
+            best_score = score
+            best_name = name
+    if not best_name and names:
+        best_name = names[0]
+    return best_name, round(best_score, 3), names
+
 
 DISCOVERY_TEMPLATES = (
     "【PR】今夜の人妻・熟女系。人気順から条件で絞ると、今日はこれが残りました。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
