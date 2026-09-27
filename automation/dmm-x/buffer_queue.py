@@ -34,7 +34,7 @@ SORT_LABELS = {
 DISCOVERY_TEMPLATES = (
     "【PR】今夜の人妻・熟女系。人気順から条件で絞ると、今日はこれが残りました。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
     "【PR】人気上位を全部並べるより、候補は1本だけ。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
-    "【PR】今夜の候補メモ。人気順の中から、価格と評価まで見て残った1本。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止.",
+    "【PR】今夜の候補メモ。人気順の中から、価格と評価まで見て残った1本。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
 )
 
 DECISION_TEMPLATES = (
