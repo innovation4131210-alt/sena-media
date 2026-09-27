@@ -92,9 +92,9 @@ def actress_signal(item):
 
 
 DISCOVERY_TEMPLATES = (
-    "【PR】今夜の人妻・熟女系。人気順から条件で絞ると、今日はこれが残りました。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
-    "【PR】人気上位を全部並べるより、候補は1本だけ。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
-    "【PR】今夜の候補メモ。人気順の中から、価格と評価まで見て残った1本。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
+    "【PR】今夜の人気女優から、条件で絞ると今日はこれ。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
+    "【PR】人気作品を全部並べるより、知っている女優から1本だけ。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
+    "【PR】今夜の候補メモ。人気女優の作品から価格と評価まで見て残った1本。\n『{title}』{facts_line}\n詳細はこちら。18歳未満閲覧禁止。",
 )
 
 DECISION_TEMPLATES = (
@@ -385,8 +385,9 @@ def eligible_candidates(items, used_ids):
             continue
         if any(word in searchable for word in BLOCKED_WORDS):
             continue
-        if not any(word in searchable for word in TARGET_WORDS):
-            continue
+        # The account persona is a mature-wife curator; the product itself does
+        # not need to be in the 人妻/熟女 genre. Requiring those keywords was
+        # over-constraining the pool and causing unknown-performer selections.
         average, review_count = review_values(item)
         actress_name, actress_popularity_score, actress_names = actress_signal(item)
         candidates.append({
@@ -464,10 +465,10 @@ def choose_conversion_candidate(candidates):
 
 
 def choose_product(used_ids, preferred_sort):
-    # 78 verified DMM clicks produced 0 conversions through 2026-09-21.
-    # For the next controlled pilot, preserve rank/review relevance but select
-    # a lower-friction offer from the top eligible cohort instead of blindly
-    # taking the first API item.
+    # Actress-first conversion strategy:
+    # the mature-wife account persona curates mainstream/popular performers.
+    # Product genre is not forced to 人妻/熟女; recognition, current rank,
+    # price/discount and review strength determine the pick.
     orders = [preferred_sort]
     if preferred_sort != "date":
         orders.append("date")
