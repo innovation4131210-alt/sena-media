@@ -9,9 +9,11 @@ on:
       - "automation/dmm-x/buffer_queue.py"
       - ".github/workflows/dmm-x-live-audit.yml"
   schedule:
-    # Read-only snapshots around the daily queue lifecycle.
-    - cron: "45 20 * * *" # 05:45 JST, before the 06:00 daily refill
-    - cron: "40 14 * * *" # 23:40 JST, after the last daily slot
+    # Read-only snapshots every 6 hours for faster feedback loops.
+    - cron: "45 20 * * *" # 05:45 JST
+    - cron: "45 2 * * *"  # 11:45 JST
+    - cron: "45 8 * * *"  # 17:45 JST
+    - cron: "45 14 * * *" # 23:45 JST
 
 permissions:
   contents: write
