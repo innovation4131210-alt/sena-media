@@ -3,6 +3,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -116,20 +117,39 @@ ENGAGEMENT_POSTS = (
 )
 
 
-def request_json(url, *, data=None, headers=None):
+def request_json(url, *, data=None, headers=None, service_name="External API"):
     req = urllib.request.Request(
         url,
         data=data,
         headers=headers or {},
         method="POST" if data is not None else "GET",
     )
-    try:
-        with urllib.request.urlopen(req, timeout=30) as res:
-            return json.load(res)
-    except urllib.error.HTTPError as exc:
-        raise RuntimeError(f"External API returned HTTP {exc.code}") from exc
-    except urllib.error.URLError as exc:
-        raise RuntimeError("External API connection failed") from exc
+    retry_delays = (10, 30, 60)
+    for attempt in range(len(retry_delays) + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as res:
+                return json.load(res)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429 and attempt < len(retry_delays):
+                raw_retry_after = str(exc.headers.get("Retry-After") or "").strip()
+                try:
+                    retry_after = max(1, min(90, int(raw_retry_after)))
+                except ValueError:
+                    retry_after = retry_delays[attempt]
+                print(
+                    f"{service_name} rate limited; retrying after {retry_after}s "
+                    f"(attempt {attempt + 1}/{len(retry_delays) + 1})",
+                    file=sys.stderr,
+                )
+                time.sleep(retry_after)
+                continue
+            if exc.code == 429:
+                raise RuntimeError(
+                    f"{service_name} rate limited after {len(retry_delays) + 1} attempts"
+                ) from exc
+            raise RuntimeError(f"{service_name} returned HTTP {exc.code}") from exc
+        except urllib.error.URLError as exc:
+            raise RuntimeError(f"{service_name} connection failed") from exc
 
 
 def gql(query):
@@ -142,6 +162,7 @@ def gql(query):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {BUFFER_KEY}",
         },
+        service_name="Buffer API",
     )
     if data.get("errors"):
         raise RuntimeError(data["errors"][0].get("message", "Buffer GraphQL error"))
@@ -389,6 +410,7 @@ def dmm_items(sort_order):
     data = request_json(
         DMM_API_URL + "?" + urllib.parse.urlencode(params),
         headers={"User-Agent": "dmm-x-auto-post/2.0"},
+        service_name="DMM API",
     )
     result = data.get("result") or {}
     if result.get("status") not in (None, 200, "200"):
@@ -896,6 +918,15 @@ def main():
     state.pop("next_index", None)
     persist_state(state)
 
+    state["last_run"] = {
+        "status": "success",
+        "at": datetime.now(timezone.utc).isoformat(),
+        "batch_date": batch_date,
+        "recovered_count": len(recovered),
+        "created_count": len(queued),
+    }
+    persist_state(state)
+
     for label, post in queued:
         print(f"Queued {label} post for {post.get('dueAt')}")
 
@@ -905,4 +936,14 @@ if __name__ == "__main__":
         main()
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
+        try:
+            failed_state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+            failed_state["last_run"] = {
+                "status": "failed",
+                "at": datetime.now(timezone.utc).isoformat(),
+                "error": str(exc),
+            }
+            persist_state(failed_state)
+        except Exception as state_exc:
+            print(f"ERROR: failed to persist run status: {state_exc}", file=sys.stderr)
         sys.exit(1)
