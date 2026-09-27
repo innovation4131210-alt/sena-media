@@ -160,8 +160,11 @@ def compact_title(value, limit=54):
     return title[: limit - 1].rstrip() + "…"
 
 
-def product_facts(item):
+def product_facts(item, actress_name=""):
     facts = []
+    if actress_name:
+        facts.append(f"出演：{actress_name}")
+
     price = price_value(item)
     list_price = list_price_value(item)
     discount = discount_percent(item)
@@ -172,14 +175,15 @@ def product_facts(item):
         else:
             facts.append(f"{price:,}円")
 
-    review = item.get("review") or {}
-    try:
-        average = float(review.get("average"))
-        count = int(review.get("count") or 0)
-        if average > 0 and count > 0:
-            facts.append(f"★{average:.1f}（{count}件）")
-    except (TypeError, ValueError):
-        pass
+    if len(facts) < 2:
+        review = item.get("review") or {}
+        try:
+            average = float(review.get("average"))
+            count = int(review.get("count") or 0)
+            if average > 0 and count > 0:
+                facts.append(f"★{average:.1f}（{count}件）")
+        except (TypeError, ValueError):
+            pass
 
     return " / ".join(facts[:2])
 
@@ -384,6 +388,7 @@ def eligible_candidates(items, used_ids):
         if not any(word in searchable for word in TARGET_WORDS):
             continue
         average, review_count = review_values(item)
+        actress_name, actress_popularity_score, actress_names = actress_signal(item)
         candidates.append({
             "item": item,
             "position": position,
@@ -398,30 +403,53 @@ def eligible_candidates(items, used_ids):
             "recent_release": recent_release(item),
             "review_average": average,
             "review_count": review_count,
+            "actress_name": actress_name,
+            "actress_names": actress_names,
+            "actress_popularity_score": actress_popularity_score,
         })
     return candidates
 
 
 def choose_conversion_candidate(candidates):
-    # First-sale pilot:
-    # Within the strongest eligible cohort, real discounts get first priority.
-    # Otherwise favor lower purchase friction, then stronger review evidence.
-    cohort = candidates[:20]
+    # Recognition-first conversion pilot:
+    # If the current eligible cohort contains actresses who repeatedly appear
+    # in current FANZA rank/review/date lists, unknown-actress candidates are
+    # removed from the selection pool. Price, campaign and review strength
+    # then decide among the recognized-actress works.
+    cohort = candidates[:40]
     if not cohort:
         return None
 
+    known = [
+        c for c in cohort
+        if (c.get("actress_popularity_score") or 0) >= KNOWN_ACTRESS_SCORE_THRESHOLD
+    ]
+    pool = known if known else cohort
+    using_known_pool = bool(known)
+
     def score(c):
         discount = c.get("discount_pct") or 0
+        actress_score = c.get("actress_popularity_score") or 0
+        if actress_score >= 300:
+            actress_tier = 0
+        elif actress_score >= KNOWN_ACTRESS_SCORE_THRESHOLD:
+            actress_tier = 1
+        else:
+            actress_tier = 2
+
         if discount >= 30:
             discount_tier = 0
         elif discount >= 10:
             discount_tier = 1
         else:
             discount_tier = 2
+
         trend_tier = 0 if c.get("campaign_active") else (1 if c.get("recent_release") else 2)
         return (
+            actress_tier,
             trend_tier,
             discount_tier,
+            -actress_score,
             -discount,
             c["price"] is None,
             c["price"] if c["price"] is not None else 10**12,
@@ -430,7 +458,9 @@ def choose_conversion_candidate(candidates):
             c["position"],
         )
 
-    return min(cohort, key=score)
+    chosen = min(pool, key=score)
+    chosen["known_actress_pool_used"] = using_known_pool
+    return chosen
 
 
 def choose_product(used_ids, preferred_sort):
@@ -451,7 +481,7 @@ def choose_product(used_ids, preferred_sort):
                 chosen["title"],
                 chosen["affiliate_url"],
                 sort_order,
-                product_facts(item),
+                product_facts(item, chosen.get("actress_name") or ""),
                 {
                     "price": chosen["price"],
                     "list_price": chosen["list_price"],
@@ -461,6 +491,10 @@ def choose_product(used_ids, preferred_sort):
                     "image_url": chosen["image_url"],
                     "campaign_active": bool(chosen.get("campaign_active")),
                     "recent_release": bool(chosen.get("recent_release")),
+                    "actress_name": chosen.get("actress_name") or "",
+                    "actress_names": chosen.get("actress_names") or [],
+                    "actress_popularity_score": chosen.get("actress_popularity_score") or 0,
+                    "known_actress_pool_used": bool(chosen.get("known_actress_pool_used")),
                 },
             )
     raise RuntimeError("No eligible unpublished DMM product was found")
@@ -575,8 +609,11 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     state["post_history"][-1]["has_image_url"] = bool(meta.get("image_url"))
     state["post_history"][-1]["campaign_active"] = bool(meta.get("campaign_active"))
     state["post_history"][-1]["recent_release"] = bool(meta.get("recent_release"))
+    state["post_history"][-1]["actress_name"] = meta.get("actress_name") or ""
+    state["post_history"][-1]["actress_popularity_score"] = meta.get("actress_popularity_score") or 0
+    state["post_history"][-1]["known_actress_pool_used"] = bool(meta.get("known_actress_pool_used"))
     state["post_history"][-1]["media_enabled"] = bool(ENABLE_DMM_MEDIA and meta.get("image_url"))
-    state["content_strategy_version"] = "real-selection-v4-direct-link"
+    state["content_strategy_version"] = "real-selection-v5-actress-first"
     return f"affiliate/{format_name}/{actual_sort}/{link_mode}", post
 
 
