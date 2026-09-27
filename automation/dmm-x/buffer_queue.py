@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -251,6 +252,21 @@ def build_decision_text(template_index, title, sort_order, affiliate_url, facts=
     return ensure_x_length(body + "\n" + affiliate_url, affiliate_url)
 
 
+def channel_inventory(organization_id, channel_id):
+    query = (
+        "query { posts(first: 100, input: { organizationId: "
+        + esc(organization_id)
+        + ", filter: { channelIds: ["
+        + esc(channel_id)
+        + "] } }) { edges { node { id text status dueAt sentAt externalLink } } "
+        + "pageInfo { hasNextPage } } }"
+    )
+    result = gql(query)["posts"]
+    if result["pageInfo"]["hasNextPage"]:
+        raise RuntimeError("Incomplete DMM X Buffer inventory; stop before mutation")
+    return [edge["node"] for edge in result["edges"]]
+
+
 def find_x_channel():
     orgs = gql("query { account { organizations { id name } } }")["account"]["organizations"]
     for org in orgs:
@@ -263,8 +279,98 @@ def find_x_channel():
             if channel["service"] == "twitter" and channel["name"].lower() == "ero_mimimimi":
                 if channel["isDisconnected"] or channel["isLocked"] or channel["isQueuePaused"]:
                     raise RuntimeError("X channel is disconnected, locked, or paused")
-                return channel["id"]
+                return channel["id"], channel_inventory(org["id"], channel["id"])
     raise RuntimeError("Connected X channel ero_mimimimi was not found")
+
+
+def due_timestamp(value):
+    parsed = parse_dmm_datetime(value)
+    if parsed is None:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc).timestamp()
+
+
+def batch_due_slots(batch_date):
+    jst = timezone(timedelta(hours=9))
+    day = datetime.fromisoformat(batch_date)
+    return {
+        "engagement": day.replace(hour=12, minute=30, second=0, microsecond=0, tzinfo=jst),
+        "rank_first_reply": day.replace(hour=21, minute=30, second=0, microsecond=0, tzinfo=jst),
+        "review_direct": day.replace(hour=23, minute=30, second=0, microsecond=0, tzinfo=jst),
+    }
+
+
+def recovered_content_id(text):
+    raw = str(text or "")
+    patterns = (
+        r"/cid=([a-zA-Z0-9_]+)/",
+        r"cid%3D([a-zA-Z0-9_]+)",
+        r"[?&]cid=([a-zA-Z0-9_]+)",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, raw)
+        if match:
+            return match.group(1)
+    return None
+
+
+def recover_existing_batch(state, posts, batch_date):
+    slots = state.setdefault("batch_slots", {})
+    history = list(state.get("post_history", []))
+    used_ids = list(state.get("used_content_ids", []))
+    recovered = []
+
+    for slot_name, expected_at in batch_due_slots(batch_date).items():
+        expected_ts = expected_at.astimezone(timezone.utc).timestamp()
+        matches = []
+        for post in posts:
+            if post.get("status") not in ("scheduled", "sent"):
+                continue
+            actual_ts = due_timestamp(post.get("dueAt"))
+            if actual_ts is not None and abs(actual_ts - expected_ts) <= 60:
+                matches.append(post)
+
+        if len(matches) > 1:
+            raise RuntimeError(
+                f"Multiple DMM X posts occupy {slot_name} for {batch_date}; stop before mutation"
+            )
+        if not matches:
+            continue
+
+        post = matches[0]
+        existing_slot = slots.get(slot_name)
+        if existing_slot and existing_slot.get("buffer_post_id") not in (None, post.get("id")):
+            raise RuntimeError(f"Saved {slot_name} conflicts with live Buffer inventory")
+
+        slots[slot_name] = {
+            "buffer_post_id": post.get("id"),
+            "due_at": post.get("dueAt"),
+            "recovered_from_buffer": True,
+        }
+
+        if not any(row.get("buffer_post_id") == post.get("id") for row in history):
+            content_id = recovered_content_id(post.get("text"))
+            row = {
+                "buffer_post_id": post.get("id"),
+                "due_at": post.get("dueAt"),
+                "kind": "engagement" if slot_name == "engagement" else "affiliate",
+                "recovered_from_buffer": True,
+            }
+            if slot_name != "engagement":
+                row["format"] = "discovery" if slot_name == "rank_first_reply" else "decision"
+                row["link_mode"] = "direct"
+                if content_id:
+                    row["content_id"] = content_id
+                    if content_id not in used_ids:
+                        used_ids.append(content_id)
+            history.append(row)
+        recovered.append({"slot": slot_name, "id": post.get("id"), "status": post.get("status")})
+
+    state["post_history"] = history[-100:]
+    state["used_content_ids"] = used_ids[-300:]
+    return recovered
 
 
 def dmm_items(sort_order):
@@ -729,17 +835,25 @@ def persist_state(state):
 
 def main():
     state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
-    channel_id = find_x_channel()
+    channel_id, live_posts = find_x_channel()
 
     # Idempotent daily batch:
-    # if a later queue item fails, successful earlier items are marked done
-    # and will be skipped on retry instead of being duplicated.
+    # before creating anything, recover today's existing Buffer IDs by their
+    # fixed queue slots. This prevents duplicates when external creation
+    # succeeded but the previous state push did not.
     jst = timezone(timedelta(hours=9))
     batch_date = datetime.now(jst).date().isoformat()
     if state.get("batch_date") != batch_date:
         state["batch_date"] = batch_date
         state["batch_slots"] = {}
-        persist_state(state)
+
+    recovered = recover_existing_batch(state, live_posts, batch_date)
+    persist_state(state)
+    for item in recovered:
+        print(
+            f"Recovered existing {item['slot']} post "
+            f"{item['id']} ({item['status']}) for {batch_date}"
+        )
 
     slots = state.setdefault("batch_slots", {})
     queued = []
