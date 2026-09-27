@@ -331,7 +331,16 @@ def parse_dmm_datetime(value):
     return None
 
 
-def active_campaign_info(item):
+def next_jst_slot(hour, minute):
+    jst = timezone(timedelta(hours=9))
+    now = datetime.now(jst).replace(tzinfo=None)
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if target <= now:
+        target += timedelta(days=1)
+    return target
+
+
+def active_campaign_info(item, required_at=None):
     campaigns = item.get("campaign") or []
     if isinstance(campaigns, dict):
         campaigns = [campaigns]
@@ -345,7 +354,9 @@ def active_campaign_info(item):
             begin = begin.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
         if end is not None and end.tzinfo is not None:
             end = end.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
-        if (begin is None or begin <= now) and (end is None or now <= end):
+        active_now = (begin is None or begin <= now) and (end is None or now <= end)
+        covers_post = required_at is None or end is None or required_at <= end
+        if active_now and covers_post:
             return {
                 "active": True,
                 "title": str(campaign.get("title") or "").strip(),
@@ -355,8 +366,8 @@ def active_campaign_info(item):
     return {"active": False, "title": "", "date_begin": "", "date_end": ""}
 
 
-def active_campaign(item):
-    return bool(active_campaign_info(item).get("active"))
+def active_campaign(item, required_at=None):
+    return bool(active_campaign_info(item, required_at=required_at).get("active"))
 
 
 def recent_release(item, days=14):
@@ -383,7 +394,7 @@ def review_values(item):
     return average, count
 
 
-def eligible_candidates(items, used_ids, source_sort):
+def eligible_candidates(items, used_ids, source_sort, campaign_required_at=None):
     candidates = []
     for position, item in enumerate(items):
         content_id = str(item.get("content_id") or item.get("product_id") or "").strip()
@@ -399,7 +410,7 @@ def eligible_candidates(items, used_ids, source_sort):
         # over-constraining the pool and causing unknown-performer selections.
         average, review_count = review_values(item)
         actress_name, actress_popularity_score, actress_names = actress_signal(item)
-        campaign_info = active_campaign_info(item)
+        campaign_info = active_campaign_info(item, required_at=campaign_required_at)
         candidates.append({
             "item": item,
             "position": position + 1,
@@ -530,13 +541,17 @@ def choose_product(used_ids, preferred_sort, *, campaign_focus=False):
     # Product genre is not forced to 人妻/熟女; recognition, current rank,
     # price/discount and review strength determine the pick.
     # Newness alone is not enough. Only rank/review sources are used.
+    campaign_required_at = next_jst_slot(21, 30) if campaign_focus else next_jst_slot(23, 30)
     orders = [preferred_sort, "rank" if preferred_sort != "rank" else "review"]
     seen_orders = []
     for sort_order in orders:
         if sort_order in seen_orders:
             continue
         seen_orders.append(sort_order)
-        candidates = eligible_candidates(dmm_items(sort_order), used_ids, sort_order)
+        candidates = eligible_candidates(
+            dmm_items(sort_order), used_ids, sort_order,
+            campaign_required_at=campaign_required_at,
+        )
         chosen = choose_conversion_candidate(candidates, campaign_focus=campaign_focus)
         if chosen:
             item = chosen["item"]
@@ -651,12 +666,10 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False, cam
             campaign_title = str(meta.get("campaign_title") or "").strip()
             campaign_end = str(meta.get("campaign_end") or "").strip()
             end_label = campaign_end[:10] if campaign_end else ""
-            if campaign_title and end_label:
-                campaign_note = f"\n開催中：{campaign_title}（{end_label}まで）"
-            elif campaign_title:
-                campaign_note = f"\n開催中：{campaign_title}"
-            elif end_label:
-                campaign_note = f"\nキャンペーン対象（{end_label}まで）"
+            if end_label:
+                campaign_note = f"\nFANZA公式キャンペーン対象（{end_label}まで）"
+            else:
+                campaign_note = "\nFANZA公式キャンペーン対象"
         lead_text = build_discovery_text(
             index, title, actual_sort, affiliate_url, facts + campaign_note
         )
