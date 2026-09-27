@@ -1,0 +1,1184 @@
+{
+  "version": 1,
+  "source": "DMM/FANZA Affiliate API ItemList",
+  "sorts": [
+    "rank",
+    "review",
+    "date"
+  ],
+  "samples": {
+    "rank": 100,
+    "review": 100,
+    "date": 100
+  },
+  "method": {
+    "rankWeight": 3.0,
+    "reviewWeight": 1.5,
+    "dateWeight": 0.5,
+    "positionBase": "101-position",
+    "note": "Popularity proxy from current work rankings; not an official performer ranking."
+  },
+  "topOverall": [
+    {
+      "id": 1088602,
+      "name": "逢沢みゆ",
+      "rankScore": 342.0,
+      "rankAppearances": 3,
+      "reviewScore": 552.0,
+      "reviewAppearances": 6,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 40,
+      "contentIds": [
+        "savr01205",
+        "sone00066",
+        "mird00281",
+        "sqte00632",
+        "sqte00675",
+        "sqte00689",
+        "sqte00638",
+        "1jera00026",
+        "waaa00648"
+      ],
+      "popularityScore": 894.0
+    },
+    {
+      "id": 1099472,
+      "name": "瀬戸環奈",
+      "rankScore": 864.0,
+      "rankAppearances": 4,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 3,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "oae00291",
+        "snos00334",
+        "snos00313"
+      ],
+      "popularityScore": 864.0
+    },
+    {
+      "id": 1072127,
+      "name": "石川澪",
+      "rankScore": 762.0,
+      "rankAppearances": 3,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 8,
+      "contentIds": [
+        "mida00533",
+        "mdvr00369",
+        "midv00488"
+      ],
+      "popularityScore": 762.0
+    },
+    {
+      "id": 1075066,
+      "name": "胡桃さくら",
+      "rankScore": 288.0,
+      "rankAppearances": 1,
+      "reviewScore": 315.0,
+      "reviewAppearances": 4,
+      "dateScore": 128.0,
+      "dateAppearances": 5,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 5,
+      "contentIds": [
+        "hsoda00036",
+        "sqte00577",
+        "sqte00658",
+        "sqde00029",
+        "mkmp00591",
+        "urvrsp00615",
+        "rlmp00027",
+        "rlmp00025",
+        "mkmp00767",
+        "mdbk00435"
+      ],
+      "popularityScore": 731.0
+    },
+    {
+      "id": 1044864,
+      "name": "河北彩花（河北彩伽）",
+      "rankScore": 699.0,
+      "rankAppearances": 3,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "snos00377",
+        "ssis00334"
+      ],
+      "popularityScore": 699.0
+    },
+    {
+      "id": 1082666,
+      "name": "天月あず",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 699.0,
+      "reviewAppearances": 6,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00589",
+        "sqte00636",
+        "sqte00655",
+        "sqde00011",
+        "sqte00577",
+        "sqte00638"
+      ],
+      "popularityScore": 699.0
+    },
+    {
+      "id": 1030262,
+      "name": "三上悠亜",
+      "rankScore": 564.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "ssis00698"
+      ],
+      "popularityScore": 564.0
+    },
+    {
+      "id": 1087701,
+      "name": "兒玉七海",
+      "rankScore": 558.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "sone00972"
+      ],
+      "popularityScore": 558.0
+    },
+    {
+      "id": 1075302,
+      "name": "柏木こなつ",
+      "rankScore": 21.0,
+      "rankAppearances": 1,
+      "reviewScore": 351.0,
+      "reviewAppearances": 3,
+      "dateScore": 175.5,
+      "dateAppearances": 6,
+      "targetAppearances": 0,
+      "top20Appearances": 4,
+      "bestRankPosition": 94,
+      "contentIds": [
+        "mird00281",
+        "sqte00657",
+        "sqde00022",
+        "sqte00638",
+        "vrkm01943",
+        "savr01180",
+        "rlmp00027",
+        "rlmp00025",
+        "mkmp00766",
+        "mdbk00434"
+      ],
+      "popularityScore": 547.5
+    },
+    {
+      "id": 1010958,
+      "name": "小島みなみ",
+      "rankScore": 546.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 2,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "jums00143"
+      ],
+      "popularityScore": 546.0
+    },
+    {
+      "id": 1086581,
+      "name": "浅野こころ",
+      "rankScore": 546.0,
+      "rankAppearances": 3,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "sone00235",
+        "mird00281"
+      ],
+      "popularityScore": 546.0
+    },
+    {
+      "id": 1088706,
+      "name": "美咲音",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 505.5,
+      "reviewAppearances": 4,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 3,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00584",
+        "sqte00665",
+        "sqte00679",
+        "sqte00577"
+      ],
+      "popularityScore": 505.5
+    },
+    {
+      "id": 1064154,
+      "name": "月野かすみ",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 441.0,
+      "reviewAppearances": 5,
+      "dateScore": 63.0,
+      "dateAppearances": 3,
+      "targetAppearances": 1,
+      "top20Appearances": 2,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00639",
+        "sqde00011",
+        "sqte00577",
+        "sqte00638",
+        "1bkynb00050",
+        "uzu00041",
+        "mkmp00764",
+        "mdbk00435"
+      ],
+      "popularityScore": 504.0
+    },
+    {
+      "id": 1099813,
+      "name": "花守夏歩",
+      "rankScore": 225.0,
+      "rankAppearances": 2,
+      "reviewScore": 261.0,
+      "reviewAppearances": 3,
+      "dateScore": 1.5,
+      "dateAppearances": 1,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 43,
+      "contentIds": [
+        "1namh00076",
+        "sqte00683",
+        "sqte00647",
+        "waaa00598",
+        "sqte00693",
+        "halt00095"
+      ],
+      "popularityScore": 487.5
+    },
+    {
+      "id": 1092091,
+      "name": "金松季歩",
+      "rankScore": 453.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "ofje00539"
+      ],
+      "popularityScore": 453.0
+    },
+    {
+      "id": 30130,
+      "name": "大槻ひびき",
+      "rankScore": 288.0,
+      "rankAppearances": 1,
+      "reviewScore": 126.0,
+      "reviewAppearances": 3,
+      "dateScore": 18.5,
+      "dateAppearances": 2,
+      "targetAppearances": 3,
+      "top20Appearances": 1,
+      "bestRankPosition": 5,
+      "contentIds": [
+        "hsoda00036",
+        "waaa00617",
+        "waaa00623",
+        "waaa00650",
+        "nask00451",
+        "hyjd00007"
+      ],
+      "popularityScore": 432.5
+    },
+    {
+      "id": 1063214,
+      "name": "七ツ森りり",
+      "rankScore": 414.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "sivr00513"
+      ],
+      "popularityScore": 414.0
+    },
+    {
+      "id": 1093790,
+      "name": "小野坂ゆいか",
+      "rankScore": 21.0,
+      "rankAppearances": 1,
+      "reviewScore": 334.5,
+      "reviewAppearances": 4,
+      "dateScore": 48.0,
+      "dateAppearances": 1,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 94,
+      "contentIds": [
+        "mird00281",
+        "sqte00657",
+        "sqte00652",
+        "sqte00638",
+        "miab00567",
+        "urvrsp00615"
+      ],
+      "popularityScore": 403.5
+    },
+    {
+      "id": 1075010,
+      "name": "宍戸里帆",
+      "rankScore": 111.0,
+      "rankAppearances": 1,
+      "reviewScore": 222.0,
+      "reviewAppearances": 2,
+      "dateScore": 69.5,
+      "dateAppearances": 2,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 64,
+      "contentIds": [
+        "midv00283",
+        "sqte00635",
+        "sqte00654",
+        "savr01180",
+        "nsfs00522"
+      ],
+      "popularityScore": 402.5
+    },
+    {
+      "id": 30317,
+      "name": "椎名ゆな",
+      "rankScore": 396.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "knd00029"
+      ],
+      "popularityScore": 396.0
+    },
+    {
+      "id": 2752,
+      "name": "風間ゆみ",
+      "rankScore": 396.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "knd00029"
+      ],
+      "popularityScore": 396.0
+    },
+    {
+      "id": 1096544,
+      "name": "釈アリス",
+      "rankScore": 354.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 40.5,
+      "dateAppearances": 1,
+      "targetAppearances": 0,
+      "top20Appearances": 2,
+      "bestRankPosition": 11,
+      "contentIds": [
+        "urvrsp00618",
+        "pred00901",
+        "urvrsp00619"
+      ],
+      "popularityScore": 394.5
+    },
+    {
+      "id": 29949,
+      "name": "北条麻妃",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 141.0,
+      "reviewAppearances": 1,
+      "dateScore": 3.0,
+      "dateAppearances": 1,
+      "targetAppearances": 3,
+      "top20Appearances": 2,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "mfyd00129",
+        "hyjd00007"
+      ],
+      "popularityScore": 390.0
+    },
+    {
+      "id": 1092427,
+      "name": "北岡果林",
+      "rankScore": 36.0,
+      "rankAppearances": 2,
+      "reviewScore": 321.0,
+      "reviewAppearances": 3,
+      "dateScore": 21.5,
+      "dateAppearances": 2,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 94,
+      "contentIds": [
+        "mird00281",
+        "sqte00628",
+        "sqte00641",
+        "sqte00688",
+        "sqte00638",
+        "mkmp00766",
+        "mdbk00434"
+      ],
+      "popularityScore": 378.5
+    },
+    {
+      "id": 1068671,
+      "name": "北野未奈",
+      "rankScore": 267.0,
+      "rankAppearances": 2,
+      "reviewScore": 96.0,
+      "reviewAppearances": 1,
+      "dateScore": 2.5,
+      "dateAppearances": 1,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "mird00281",
+        "sqte00671",
+        "homa00170"
+      ],
+      "popularityScore": 365.5
+    },
+    {
+      "id": 1092582,
+      "name": "Himari",
+      "rankScore": 243.0,
+      "rankAppearances": 1,
+      "reviewScore": 121.5,
+      "reviewAppearances": 2,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 20,
+      "contentIds": [
+        "midv00790",
+        "mida00280",
+        "ofes00016"
+      ],
+      "popularityScore": 364.5
+    },
+    {
+      "id": 1102327,
+      "name": "木村愛心",
+      "rankScore": 360.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 0,
+      "bestRankPosition": 35,
+      "contentIds": [
+        "sone00866",
+        "snos00385"
+      ],
+      "popularityScore": 360.0
+    },
+    {
+      "id": 1034491,
+      "name": "姫川ゆうな（月城らん）",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 354.0,
+      "reviewAppearances": 3,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00584",
+        "sqde00011",
+        "sqte00577"
+      ],
+      "popularityScore": 354.0
+    },
+    {
+      "id": 1073977,
+      "name": "宮西ひかる",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 354.0,
+      "reviewAppearances": 3,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00584",
+        "sqde00011",
+        "sqte00577"
+      ],
+      "popularityScore": 354.0
+    },
+    {
+      "id": 1019323,
+      "name": "夢乃あいか",
+      "rankScore": 300.0,
+      "rankAppearances": 1,
+      "reviewScore": 46.5,
+      "reviewAppearances": 1,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 0,
+      "top20Appearances": 1,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "sone00960"
+      ],
+      "popularityScore": 346.5
+    }
+  ],
+  "topTargetRelevant": [
+    {
+      "id": 1010958,
+      "name": "小島みなみ",
+      "rankScore": 546.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 2,
+      "bestRankPosition": 1,
+      "contentIds": [
+        "ofje00540",
+        "jums00143"
+      ],
+      "popularityScore": 546.0
+    },
+    {
+      "id": 1064154,
+      "name": "月野かすみ",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 441.0,
+      "reviewAppearances": 5,
+      "dateScore": 63.0,
+      "dateAppearances": 3,
+      "targetAppearances": 1,
+      "top20Appearances": 2,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00639",
+        "sqde00011",
+        "sqte00577",
+        "sqte00638",
+        "1bkynb00050",
+        "uzu00041",
+        "mkmp00764",
+        "mdbk00435"
+      ],
+      "popularityScore": 504.0
+    },
+    {
+      "id": 30130,
+      "name": "大槻ひびき",
+      "rankScore": 288.0,
+      "rankAppearances": 1,
+      "reviewScore": 126.0,
+      "reviewAppearances": 3,
+      "dateScore": 18.5,
+      "dateAppearances": 2,
+      "targetAppearances": 3,
+      "top20Appearances": 1,
+      "bestRankPosition": 5,
+      "contentIds": [
+        "hsoda00036",
+        "waaa00617",
+        "waaa00623",
+        "waaa00650",
+        "nask00451",
+        "hyjd00007"
+      ],
+      "popularityScore": 432.5
+    },
+    {
+      "id": 1075010,
+      "name": "宍戸里帆",
+      "rankScore": 111.0,
+      "rankAppearances": 1,
+      "reviewScore": 222.0,
+      "reviewAppearances": 2,
+      "dateScore": 69.5,
+      "dateAppearances": 2,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 64,
+      "contentIds": [
+        "midv00283",
+        "sqte00635",
+        "sqte00654",
+        "savr01180",
+        "nsfs00522"
+      ],
+      "popularityScore": 402.5
+    },
+    {
+      "id": 30317,
+      "name": "椎名ゆな",
+      "rankScore": 396.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "knd00029"
+      ],
+      "popularityScore": 396.0
+    },
+    {
+      "id": 2752,
+      "name": "風間ゆみ",
+      "rankScore": 396.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "knd00029"
+      ],
+      "popularityScore": 396.0
+    },
+    {
+      "id": 29949,
+      "name": "北条麻妃",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 141.0,
+      "reviewAppearances": 1,
+      "dateScore": 3.0,
+      "dateAppearances": 1,
+      "targetAppearances": 3,
+      "top20Appearances": 2,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "mfyd00129",
+        "hyjd00007"
+      ],
+      "popularityScore": 390.0
+    },
+    {
+      "id": 1068671,
+      "name": "北野未奈",
+      "rankScore": 267.0,
+      "rankAppearances": 2,
+      "reviewScore": 96.0,
+      "reviewAppearances": 1,
+      "dateScore": 2.5,
+      "dateAppearances": 1,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "mird00281",
+        "sqte00671",
+        "homa00170"
+      ],
+      "popularityScore": 365.5
+    },
+    {
+      "id": 1041897,
+      "name": "神宮寺ナオ",
+      "rankScore": 327.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "midv00251"
+      ],
+      "popularityScore": 327.0
+    },
+    {
+      "id": 1028857,
+      "name": "大島優香",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 63.0,
+      "reviewAppearances": 1,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "roe00471"
+      ],
+      "popularityScore": 309.0
+    },
+    {
+      "id": 1020685,
+      "name": "森沢かな（飯岡かなこ）",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 25.0,
+      "dateAppearances": 2,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "mvg00176",
+        "mght00405"
+      ],
+      "popularityScore": 271.0
+    },
+    {
+      "id": 1068871,
+      "name": "小松杏",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 10.5,
+      "dateAppearances": 1,
+      "targetAppearances": 2,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143",
+        "mght00405"
+      ],
+      "popularityScore": 256.5
+    },
+    {
+      "id": 1075159,
+      "name": "一乃あおい",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1076338,
+      "name": "上羽絢",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1090554,
+      "name": "今井栞菜",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1032833,
+      "name": "吹石れな",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1021367,
+      "name": "希島あいり",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1083260,
+      "name": "広瀬ゆり",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1069634,
+      "name": "愛弓りょう",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1024513,
+      "name": "橘メアリー",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1044731,
+      "name": "水野優香",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1085279,
+      "name": "沖宮那美",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1087873,
+      "name": "沙月ふみの",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1053420,
+      "name": "竹内有紀",
+      "rankScore": 246.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 0.0,
+      "dateAppearances": 0,
+      "targetAppearances": 1,
+      "top20Appearances": 1,
+      "bestRankPosition": 19,
+      "contentIds": [
+        "jums00143"
+      ],
+      "popularityScore": 246.0
+    },
+    {
+      "id": 1098399,
+      "name": "糸井瑠花",
+      "rankScore": 0.0,
+      "rankAppearances": 0,
+      "reviewScore": 189.0,
+      "reviewAppearances": 2,
+      "dateScore": 27.5,
+      "dateAppearances": 1,
+      "targetAppearances": 1,
+      "top20Appearances": 0,
+      "bestRankPosition": null,
+      "contentIds": [
+        "sqte00677",
+        "h_1814nmsl00039",
+        "rlmp00021"
+      ],
+      "popularityScore": 216.5
+    },
+    {
+      "id": 23130,
+      "name": "川上ゆう（森野雫）",
+      "rankScore": 183.0,
+      "rankAppearances": 2,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 13.5,
+      "dateAppearances": 2,
+      "targetAppearances": 4,
+      "top20Appearances": 0,
+      "bestRankPosition": 51,
+      "contentIds": [
+        "knd00029",
+        "savr01207",
+        "mght00405",
+        "hyjd00007"
+      ],
+      "popularityScore": 196.5
+    },
+    {
+      "id": 1014614,
+      "name": "小早川怜子",
+      "rankScore": 150.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 13.0,
+      "dateAppearances": 2,
+      "targetAppearances": 3,
+      "top20Appearances": 0,
+      "bestRankPosition": 51,
+      "contentIds": [
+        "knd00029",
+        "mght00404",
+        "hyjd00007"
+      ],
+      "popularityScore": 163.0
+    },
+    {
+      "id": 1012910,
+      "name": "本真ゆり",
+      "rankScore": 150.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 10.5,
+      "dateAppearances": 1,
+      "targetAppearances": 2,
+      "top20Appearances": 0,
+      "bestRankPosition": 51,
+      "contentIds": [
+        "knd00029",
+        "mght00405"
+      ],
+      "popularityScore": 160.5
+    },
+    {
+      "id": 1004617,
+      "name": "伊織涼子",
+      "rankScore": 150.0,
+      "rankAppearances": 1,
+      "reviewScore": 0.0,
+      "reviewAppearances": 0,
+      "dateScore": 10.0,
+      "dateAppearances": 1,
+      "targetAppearances": 2,
+      "top20Appearances": 0,
+      "bestRankPosition": 51,
+      "contentIds": [
+        "knd00029",
+        "mght00404"
+      ],
+      "popularityScore": 160.0
+    },
+    {
+      "id": 26225,
+      "name": "波多野結衣",
+      "rankScore": 21.0,
+      "rankAppearances": 1,
+      "reviewScore": 67.5,
+      "reviewAppearances": 1,
+      "dateScore": 71.5,
+      "dateAppearances": 3,
+      "targetAppearances": 2,
+      "top20Appearances": 0,
+      "bestRankPosition": 94,
+      "contentIds": [
+        "mird00281",
+        "savr00968",
+        "umso00660",
+        "rlmp00025",
+        "hyjd00007"
+      ],
+      "popularityScore": 160.0
+    }
+  ]
+}
