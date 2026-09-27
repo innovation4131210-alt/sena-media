@@ -12,10 +12,14 @@ def main():
     picks = []
 
     for preferred in ("rank", "review"):
-        content_id, title, affiliate_url, actual_sort, facts, meta = app.choose_product(used, preferred)
+        campaign_focus = preferred == "rank"
+        content_id, title, affiliate_url, actual_sort, facts, meta = app.choose_product(
+            used, preferred, campaign_focus=campaign_focus
+        )
         used.add(content_id)
         picks.append({
             "preferredSort": preferred,
+            "campaignFocus": campaign_focus,
             "actualSort": actual_sort,
             "contentId": content_id,
             "actressName": meta.get("actress_name"),
@@ -26,6 +30,8 @@ def main():
             "reviewAverage": meta.get("review_average"),
             "reviewCount": meta.get("review_count"),
             "campaignActive": meta.get("campaign_active"),
+            "campaignTitle": meta.get("campaign_title"),
+            "campaignEnd": meta.get("campaign_end"),
             "recentRelease": meta.get("recent_release"),
             "facts": facts,
         })
@@ -33,7 +39,7 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({
         "version": 1,
-        "strategy": "real-selection-v5-actress-first",
+        "strategy": "real-selection-v7-campaign-demand-first",
         "picks": picks,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"picks": picks}, ensure_ascii=False, indent=2))
