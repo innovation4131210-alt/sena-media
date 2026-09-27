@@ -1,0 +1,57 @@
+name: DMM X live Buffer audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/dmm-x-live-audit.mjs"
+      - ".github/workflows/dmm-x-live-audit.yml"
+  schedule:
+    # Read-only snapshots around the daily queue lifecycle.
+    - cron: "45 20 * * *" # 05:45 JST, before the 06:00 daily refill
+    - cron: "40 14 * * *" # 23:40 JST, after the last daily slot
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dmm-x-live-buffer-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate audit script
+        run: node --check scripts/dmm-x-live-audit.mjs
+      - name: Read DMM X Buffer state and metrics
+        env:
+          DMM_BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
+        run: node scripts/dmm-x-live-audit.mjs
+      - name: Persist credential-free audit
+        run: |
+          set -e
+          test -f analytics/dmm-x-live-audit.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git add analytics/dmm-x-live-audit.json
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Record DMM X live Buffer audit" || true
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git fetch origin main
+            git rebase origin/main
+          done
+          exit 1
