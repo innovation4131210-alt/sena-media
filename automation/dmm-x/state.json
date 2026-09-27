@@ -466,5 +466,10 @@
   },
   "discovery_template_index": 3,
   "content_strategy_version": "real-selection-v3",
-  "decision_template_index": 3
+  "decision_template_index": 3,
+  "last_run": {
+    "status": "failed",
+    "at": "2026-09-27T23:46:36.145410+00:00",
+    "error": "Buffer API rate limited after 4 attempts"
+  }
 }
