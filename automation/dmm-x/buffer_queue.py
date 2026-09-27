@@ -374,7 +374,7 @@ def review_values(item):
     return average, count
 
 
-def eligible_candidates(items, used_ids):
+def eligible_candidates(items, used_ids, source_sort):
     candidates = []
     for position, item in enumerate(items):
         content_id = str(item.get("content_id") or item.get("product_id") or "").strip()
@@ -392,7 +392,8 @@ def eligible_candidates(items, used_ids):
         actress_name, actress_popularity_score, actress_names = actress_signal(item)
         candidates.append({
             "item": item,
-            "position": position,
+            "position": position + 1,
+            "source_sort": source_sort,
             "content_id": content_id,
             "title": title,
             "affiliate_url": affiliate_url,
@@ -412,55 +413,98 @@ def eligible_candidates(items, used_ids):
 
 
 def choose_conversion_candidate(candidates):
-    # Recognition-first conversion pilot:
-    # If the current eligible cohort contains actresses who repeatedly appear
-    # in current FANZA rank/review/date lists, unknown-actress candidates are
-    # removed from the selection pool. Price, campaign and review strength
-    # then decide among the recognized-actress works.
-    cohort = candidates[:40]
+    # Demand-first selector:
+    # 1) current FANZA rank/review evidence
+    # 2) recognized actress
+    # 3) review depth / rating
+    # 4) discount and price
+    # This prevents a cheap but weak-demand title from beating a proven title.
+    cohort = candidates[:50]
     if not cohort:
         return None
 
+    def has_demand(c):
+        source = c.get("source_sort")
+        pos = int(c.get("position") or 999)
+        review_count = int(c.get("review_count") or 0)
+        actress_score = float(c.get("actress_popularity_score") or 0)
+
+        if source == "rank" and pos <= 30:
+            return True
+        if source == "review" and pos <= 30 and review_count >= 10:
+            return True
+        if actress_score >= KNOWN_ACTRESS_SCORE_THRESHOLD and pos <= 40:
+            return True
+        return False
+
+    demand_pool = [c for c in cohort if has_demand(c)]
+    if not demand_pool:
+        return None
+
     known = [
-        c for c in cohort
+        c for c in demand_pool
         if (c.get("actress_popularity_score") or 0) >= KNOWN_ACTRESS_SCORE_THRESHOLD
     ]
-    pool = known if known else cohort
+    pool = known if known else demand_pool
     using_known_pool = bool(known)
 
     def score(c):
-        discount = c.get("discount_pct") or 0
-        actress_score = c.get("actress_popularity_score") or 0
-        if actress_score >= 300:
-            actress_tier = 0
-        elif actress_score >= KNOWN_ACTRESS_SCORE_THRESHOLD:
-            actress_tier = 1
+        source = c.get("source_sort")
+        pos = int(c.get("position") or 999)
+        discount = int(c.get("discount_pct") or 0)
+        actress_score = float(c.get("actress_popularity_score") or 0)
+        review_average = float(c.get("review_average") or 0)
+        review_count = int(c.get("review_count") or 0)
+
+        if source == "rank" and pos <= 10:
+            demand_tier = 0
+        elif source == "rank" and pos <= 30:
+            demand_tier = 1
+        elif source == "review" and pos <= 10 and review_count >= 20:
+            demand_tier = 1
         else:
+            demand_tier = 2
+
+        if actress_score >= 500:
+            actress_tier = 0
+        elif actress_score >= 300:
+            actress_tier = 1
+        elif actress_score >= KNOWN_ACTRESS_SCORE_THRESHOLD:
             actress_tier = 2
+        else:
+            actress_tier = 3
+
+        if review_count >= 50 and review_average >= 4.5:
+            proof_tier = 0
+        elif review_count >= 10 and review_average >= 4.0:
+            proof_tier = 1
+        else:
+            proof_tier = 2
 
         if discount >= 30:
-            discount_tier = 0
+            value_tier = 0
         elif discount >= 10:
-            discount_tier = 1
+            value_tier = 1
         else:
-            discount_tier = 2
+            value_tier = 2
 
-        trend_tier = 0 if c.get("campaign_active") else (1 if c.get("recent_release") else 2)
         return (
+            demand_tier,
             actress_tier,
-            trend_tier,
-            discount_tier,
+            proof_tier,
+            pos,
             -actress_score,
+            -review_count,
+            -review_average,
+            value_tier,
             -discount,
             c["price"] is None,
             c["price"] if c["price"] is not None else 10**12,
-            -c["review_average"],
-            -c["review_count"],
-            c["position"],
         )
 
     chosen = min(pool, key=score)
     chosen["known_actress_pool_used"] = using_known_pool
+    chosen["demand_gate_passed"] = True
     return chosen
 
 
@@ -469,11 +513,14 @@ def choose_product(used_ids, preferred_sort):
     # the mature-wife account persona curates mainstream/popular performers.
     # Product genre is not forced to 人妻/熟女; recognition, current rank,
     # price/discount and review strength determine the pick.
-    orders = [preferred_sort]
-    if preferred_sort != "date":
-        orders.append("date")
+    # Newness alone is not enough. Only rank/review sources are used.
+    orders = [preferred_sort, "rank" if preferred_sort != "rank" else "review"]
+    seen_orders = []
     for sort_order in orders:
-        candidates = eligible_candidates(dmm_items(sort_order), used_ids)
+        if sort_order in seen_orders:
+            continue
+        seen_orders.append(sort_order)
+        candidates = eligible_candidates(dmm_items(sort_order), used_ids, sort_order)
         chosen = choose_conversion_candidate(candidates)
         if chosen:
             item = chosen["item"]
@@ -496,6 +543,9 @@ def choose_product(used_ids, preferred_sort):
                     "actress_names": chosen.get("actress_names") or [],
                     "actress_popularity_score": chosen.get("actress_popularity_score") or 0,
                     "known_actress_pool_used": bool(chosen.get("known_actress_pool_used")),
+                    "demand_gate_passed": bool(chosen.get("demand_gate_passed")),
+                    "source_position": chosen.get("position"),
+                    "source_sort": chosen.get("source_sort"),
                 },
             )
     raise RuntimeError("No eligible unpublished DMM product was found")
@@ -613,8 +663,11 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     state["post_history"][-1]["actress_name"] = meta.get("actress_name") or ""
     state["post_history"][-1]["actress_popularity_score"] = meta.get("actress_popularity_score") or 0
     state["post_history"][-1]["known_actress_pool_used"] = bool(meta.get("known_actress_pool_used"))
+    state["post_history"][-1]["demand_gate_passed"] = bool(meta.get("demand_gate_passed"))
+    state["post_history"][-1]["source_position"] = meta.get("source_position")
+    state["post_history"][-1]["source_sort"] = meta.get("source_sort")
     state["post_history"][-1]["media_enabled"] = bool(ENABLE_DMM_MEDIA and meta.get("image_url"))
-    state["content_strategy_version"] = "real-selection-v5-actress-first"
+    state["content_strategy_version"] = "real-selection-v6-demand-first"
     return f"affiliate/{format_name}/{actual_sort}/{link_mode}", post
 
 
