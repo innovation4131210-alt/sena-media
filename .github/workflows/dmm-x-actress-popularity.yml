@@ -2,6 +2,9 @@ name: Audit DMM actress popularity
 
 on:
   workflow_dispatch:
+  schedule:
+    # Refresh performer popularity before the 06:00 JST DMM queue refill.
+    - cron: "25 20 * * *"
   push:
     branches: [main]
     paths:
