@@ -4,7 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 import buffer_queue as app
 
-OUT = Path("analytics/dmm-actress-popularity.json")
+OUT = Path(__file__).resolve().parents[2] / "analytics" / "dmm-actress-popularity.json"
 SORTS = ("rank", "review", "date")
 
 def actress_entries(item):
