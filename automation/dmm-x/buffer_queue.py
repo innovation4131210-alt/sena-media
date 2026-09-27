@@ -331,7 +331,7 @@ def parse_dmm_datetime(value):
     return None
 
 
-def active_campaign(item):
+def active_campaign_info(item):
     campaigns = item.get("campaign") or []
     if isinstance(campaigns, dict):
         campaigns = [campaigns]
@@ -346,8 +346,17 @@ def active_campaign(item):
         if end is not None and end.tzinfo is not None:
             end = end.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
         if (begin is None or begin <= now) and (end is None or now <= end):
-            return True
-    return False
+            return {
+                "active": True,
+                "title": str(campaign.get("title") or "").strip(),
+                "date_begin": begin.isoformat(sep=" ") if begin else "",
+                "date_end": end.isoformat(sep=" ") if end else "",
+            }
+    return {"active": False, "title": "", "date_begin": "", "date_end": ""}
+
+
+def active_campaign(item):
+    return bool(active_campaign_info(item).get("active"))
 
 
 def recent_release(item, days=14):
@@ -390,6 +399,7 @@ def eligible_candidates(items, used_ids, source_sort):
         # over-constraining the pool and causing unknown-performer selections.
         average, review_count = review_values(item)
         actress_name, actress_popularity_score, actress_names = actress_signal(item)
+        campaign_info = active_campaign_info(item)
         candidates.append({
             "item": item,
             "position": position + 1,
@@ -401,7 +411,9 @@ def eligible_candidates(items, used_ids, source_sort):
             "list_price": list_price_value(item),
             "discount_pct": discount_percent(item),
             "image_url": main_image_url(item),
-            "campaign_active": active_campaign(item),
+            "campaign_active": bool(campaign_info.get("active")),
+            "campaign_title": campaign_info.get("title") or "",
+            "campaign_end": campaign_info.get("date_end") or "",
             "recent_release": recent_release(item),
             "review_average": average,
             "review_count": review_count,
@@ -412,7 +424,7 @@ def eligible_candidates(items, used_ids, source_sort):
     return candidates
 
 
-def choose_conversion_candidate(candidates):
+def choose_conversion_candidate(candidates, campaign_focus=False):
     # Demand-first selector:
     # 1) current FANZA rank/review evidence
     # 2) recognized actress
@@ -440,6 +452,10 @@ def choose_conversion_candidate(candidates):
     demand_pool = [c for c in cohort if has_demand(c)]
     if not demand_pool:
         return None
+
+    campaign_pool = [c for c in demand_pool if c.get("campaign_active")]
+    if campaign_focus and campaign_pool:
+        demand_pool = campaign_pool
 
     known = [
         c for c in demand_pool
@@ -508,7 +524,7 @@ def choose_conversion_candidate(candidates):
     return chosen
 
 
-def choose_product(used_ids, preferred_sort):
+def choose_product(used_ids, preferred_sort, *, campaign_focus=False):
     # Actress-first conversion strategy:
     # the mature-wife account persona curates mainstream/popular performers.
     # Product genre is not forced to 人妻/熟女; recognition, current rank,
@@ -521,7 +537,7 @@ def choose_product(used_ids, preferred_sort):
             continue
         seen_orders.append(sort_order)
         candidates = eligible_candidates(dmm_items(sort_order), used_ids, sort_order)
-        chosen = choose_conversion_candidate(candidates)
+        chosen = choose_conversion_candidate(candidates, campaign_focus=campaign_focus)
         if chosen:
             item = chosen["item"]
             return (
@@ -538,6 +554,8 @@ def choose_product(used_ids, preferred_sort):
                     "review_count": chosen["review_count"],
                     "image_url": chosen["image_url"],
                     "campaign_active": bool(chosen.get("campaign_active")),
+                    "campaign_title": chosen.get("campaign_title") or "",
+                    "campaign_end": chosen.get("campaign_end") or "",
                     "recent_release": bool(chosen.get("recent_release")),
                     "actress_name": chosen.get("actress_name") or "",
                     "actress_names": chosen.get("actress_names") or [],
@@ -614,9 +632,11 @@ def queue_engagement(state, channel_id):
     return "engagement", post
 
 
-def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
+def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False, campaign_focus=False):
     used_ids = set(str(value) for value in state.get("used_content_ids", []))
-    content_id, title, affiliate_url, actual_sort, facts, meta = choose_product(used_ids, preferred_sort)
+    content_id, title, affiliate_url, actual_sort, facts, meta = choose_product(
+        used_ids, preferred_sort, campaign_focus=campaign_focus
+    )
 
     if first_reply:
         # Live Buffer audit on 2026-09-27 showed the first-reply cohort at
@@ -626,7 +646,20 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
         # lead post so only link placement changes in the next test window.
         format_name = "discovery"
         index = int(state.get("discovery_template_index", 0)) % len(DISCOVERY_TEMPLATES)
-        lead_text = build_discovery_text(index, title, actual_sort, affiliate_url, facts)
+        campaign_note = ""
+        if meta.get("campaign_active"):
+            campaign_title = str(meta.get("campaign_title") or "").strip()
+            campaign_end = str(meta.get("campaign_end") or "").strip()
+            end_label = campaign_end[:10] if campaign_end else ""
+            if campaign_title and end_label:
+                campaign_note = f"\n開催中：{campaign_title}（{end_label}まで）"
+            elif campaign_title:
+                campaign_note = f"\n開催中：{campaign_title}"
+            elif end_label:
+                campaign_note = f"\nキャンペーン対象（{end_label}まで）"
+        lead_text = build_discovery_text(
+            index, title, actual_sort, affiliate_url, facts + campaign_note
+        )
         post = create_post(
             lead_text,
             channel_id,
@@ -659,6 +692,9 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     state["post_history"][-1]["discount_pct"] = int(meta.get("discount_pct") or 0)
     state["post_history"][-1]["has_image_url"] = bool(meta.get("image_url"))
     state["post_history"][-1]["campaign_active"] = bool(meta.get("campaign_active"))
+    state["post_history"][-1]["campaign_title"] = meta.get("campaign_title") or ""
+    state["post_history"][-1]["campaign_end"] = meta.get("campaign_end") or ""
+    state["post_history"][-1]["campaign_focus"] = bool(campaign_focus)
     state["post_history"][-1]["recent_release"] = bool(meta.get("recent_release"))
     state["post_history"][-1]["actress_name"] = meta.get("actress_name") or ""
     state["post_history"][-1]["actress_popularity_score"] = meta.get("actress_popularity_score") or 0
@@ -667,7 +703,7 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False):
     state["post_history"][-1]["source_position"] = meta.get("source_position")
     state["post_history"][-1]["source_sort"] = meta.get("source_sort")
     state["post_history"][-1]["media_enabled"] = bool(ENABLE_DMM_MEDIA and meta.get("image_url"))
-    state["content_strategy_version"] = "real-selection-v6-demand-first"
+    state["content_strategy_version"] = "real-selection-v7-campaign-demand-first"
     return f"affiliate/{format_name}/{actual_sort}/{link_mode}", post
 
 
@@ -707,7 +743,9 @@ def main():
         print("Skip engagement: already queued for this JST date")
 
     if not slots.get("rank_first_reply"):
-        label, post = queue_affiliate(state, channel_id, "rank", first_reply=True)
+        label, post = queue_affiliate(
+            state, channel_id, "rank", first_reply=True, campaign_focus=True
+        )
         slots["rank_first_reply"] = {
             "buffer_post_id": post.get("id"),
             "due_at": post.get("dueAt"),
