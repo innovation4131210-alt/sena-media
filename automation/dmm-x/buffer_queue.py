@@ -16,7 +16,7 @@ RUN_SCHEDULE = os.environ.get("RUN_SCHEDULE", "").strip()
 ENABLE_DMM_MEDIA = os.environ.get("ENABLE_DMM_MEDIA", "false").strip().lower() == "true"
 DMM_AFFILIATE_ID = "eromimimimi-990"
 STATE_PATH = Path("automation/dmm-x/state.json")
-ACTRESS_POPULARITY_PATH = Path("analytics/dmm-actress-popularity.json")
+ACTRESS_POPULARITY_PATH = Path(__file__).resolve().parents[2] / "analytics" / "dmm-actress-popularity.json"
 
 # 未成年・非同意・違法性を連想させる商品は自動選定から除外します。
 BLOCKED_WORDS = (
