@@ -1,0 +1,42 @@
+name: Audit DMM actress popularity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "automation/dmm-x/audit_actress_popularity.py"
+      - ".github/workflows/dmm-x-actress-popularity.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Audit current DMM actress popularity proxy
+        env:
+          DMM_API_ID: ${{ secrets.DMM_API_ID }}
+          BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
+        run: |
+          python3 -m py_compile automation/dmm-x/audit_actress_popularity.py
+          cd automation/dmm-x
+          python3 audit_actress_popularity.py
+          cd ../..
+      - name: Persist audit
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analytics/dmm-actress-popularity.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Record DMM actress popularity audit"
+          git pull --rebase origin main
+          git push
