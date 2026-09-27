@@ -10,7 +10,7 @@
       "mediaSha256": "c74ba9f60a425b2dd88cee4028ad693ce605ab0d1385944c013018693f4786a1",
       "caption": "出る前の最終確認。今日はチャコールだけで十分。足すなら何色？",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.236Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 2,
@@ -21,7 +21,7 @@
       "mediaSha256": "047a672b9f66053d996517d6f61cfee705c9c03b647ee74ff1113ddd144cb748",
       "caption": "予定の合間に少しだけ。窓際の席は、街を見ているだけで時間が過ぎる。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.236Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 3,
@@ -32,7 +32,7 @@
       "mediaSha256": "7957c506d60d234d7387e2d63b0e6e2b9c7239bf003525e3ef608dd3f5687883",
       "caption": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.236Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 4,
@@ -43,7 +43,7 @@
       "mediaSha256": "0a14e4d23ef8b58fe1621d70f82c891c8d7787a4ecbda34e80bb5214c2c72fad",
       "caption": "夜のラウンジは、話すより静かに過ごしたくなる日がある。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.236Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 5,
@@ -54,7 +54,7 @@
       "mediaSha256": "9530942224af1426dc854cd9ea117180768898eef92730e3ef5157d80c009a1e",
       "caption": "旅先の朝。予定を決める前のこの時間がいちばん好き。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.237Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 6,
@@ -65,7 +65,7 @@
       "mediaSha256": "92e905550beee9f7888f9bd97b75d71195cf49d7564c65e6a7d8855f4db4222a",
       "caption": "作品の前では、少しだけ時間が遅くなる。今日は言葉より色を見たい。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.237Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 7,
@@ -76,7 +76,7 @@
       "mediaSha256": "4381abd8941628ec3f5afec82f2f07337fdaafdfad771ca4ae0585e8340caeb7",
       "caption": "黒を着る夜は、最後のアクセサリーで迷う。足す？引く？",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:47.237Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
     },
     {
       "day": 8,
@@ -87,10 +87,21 @@
       "mediaSha256": "17ea4c20a8755f5b7c8ab84e3922fcdc62af72a6d32789ee7f1db8fafc8c869f",
       "caption": "コーヒーを買ったら出発。行き先は、着いてから少しずつ。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-09-26T14:09:48.057Z"
+      "verifiedAt": "2026-09-27T14:09:43.419Z"
+    },
+    {
+      "day": 9,
+      "date": "2026-10-06",
+      "bufferPostId": "6ab923a8612c9e6ac926f9fa",
+      "dueAt": "2026-10-06T11:30:00.000Z",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/a385611bad1cadce17301556fe852c6f4a1c10fd/media/sena-30day-2026-09-28/SENA_2026-10-06_D09.jpeg",
+      "mediaSha256": "37db235eab8faef542263869d0622944e5cf3b22fa0824db456d0877f2d809a8",
+      "caption": "雨の夜は街の光がきれいに見える。タクシーを待つ時間も悪くない。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-09-27T14:09:44.393Z"
     }
   ],
-  "lastRunAt": "2026-09-26T14:09:47.236Z",
+  "lastRunAt": "2026-09-27T14:09:43.418Z",
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio",
@@ -98,15 +109,15 @@
   },
   "createdThisRun": [
     {
-      "day": 8,
-      "id": "6ab7d22bccccb9429c2f6164",
-      "dueAt": "2026-10-05T11:30:00.000Z",
-      "verifiedAt": "2026-09-26T14:09:48.057Z"
+      "day": 9,
+      "id": "6ab923a8612c9e6ac926f9fa",
+      "dueAt": "2026-10-06T11:30:00.000Z",
+      "verifiedAt": "2026-09-27T14:09:44.393Z"
     }
   ],
   "blocked": [],
   "pendingCreates": [],
-  "lastVerifiedAt": "2026-09-26T14:09:48.059Z",
+  "lastVerifiedAt": "2026-09-27T14:09:44.394Z",
   "legacyOrganizationCountObservation": {
     "count": 17,
     "note": "Historical organization-wide count; never use for per-channel capacity."
