@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ab832c93d66d464e5bd1e17",
-  "last_due_at": "2026-09-27T14:30:00.000Z",
+  "last_buffer_post_id": "6abad608c5484f9414a01cc1",
+  "last_due_at": "2026-09-29T03:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -446,22 +446,20 @@
       "campaign_active": false,
       "recent_release": false,
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abad608c5484f9414a01cc1",
+      "due_at": "2026-09-29T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 6
     }
   ],
-  "engagement_index": 6,
-  "batch_date": "2026-09-27",
+  "engagement_index": 7,
+  "batch_date": "2026-09-29",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ab832c39f89edbefe7e8944",
-      "due_at": "2026-09-27T03:30:00.000Z"
-    },
-    "rank_first_reply": {
-      "buffer_post_id": "6ab832c50f79a37c5d3b0095",
-      "due_at": "2026-09-27T12:30:00.000Z"
-    },
-    "review_direct": {
-      "buffer_post_id": "6ab832c93d66d464e5bd1e17",
-      "due_at": "2026-09-27T14:30:00.000Z"
+      "buffer_post_id": "6abad608c5484f9414a01cc1",
+      "due_at": "2026-09-29T03:30:00.000Z"
     }
   },
   "discovery_template_index": 3,
@@ -469,7 +467,7 @@
   "decision_template_index": 3,
   "last_run": {
     "status": "failed",
-    "at": "2026-09-27T23:46:36.145410+00:00",
-    "error": "Buffer API rate limited after 4 attempts"
+    "at": "2026-09-28T21:03:07.839323+00:00",
+    "error": "Invalid post: Twitter / X posts cannot exceed 280 characters."
   }
 }
