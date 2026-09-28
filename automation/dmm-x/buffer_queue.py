@@ -214,14 +214,44 @@ def facts_line(facts):
     return ("\n" + facts) if facts else ""
 
 
+def x_weighted_length(text):
+    """Return the twitter-text weighted length used by X's 280 limit.
+
+    X counts most CJK characters as weight 2 and HTTP(S) URLs as 23
+    characters regardless of their literal length.
+    """
+    total = 0
+    cursor = 0
+    for match in re.finditer(r"https?://\\S+", str(text or "")):
+        for char in text[cursor:match.start()]:
+            codepoint = ord(char)
+            total += 1 if (
+                0x0000 <= codepoint <= 0x10FF
+                or 0x2000 <= codepoint <= 0x200D
+                or 0x2010 <= codepoint <= 0x201F
+                or 0x2032 <= codepoint <= 0x2037
+            ) else 2
+        total += 23
+        cursor = match.end()
+    for char in text[cursor:]:
+        codepoint = ord(char)
+        total += 1 if (
+            0x0000 <= codepoint <= 0x10FF
+            or 0x2000 <= codepoint <= 0x200D
+            or 0x2010 <= codepoint <= 0x201F
+            or 0x2032 <= codepoint <= 0x2037
+        ) else 2
+    return total
+
+
 def ensure_x_length(text, affiliate_url=None):
-    if len(text) <= 280:
+    if x_weighted_length(text) <= 280:
         return text
     if affiliate_url and affiliate_url in text:
         compact = "【PR】作品情報はこちら。18歳未満閲覧禁止。\n" + affiliate_url
-        if len(compact) <= 280:
+        if x_weighted_length(compact) <= 280:
             return compact
-    raise RuntimeError("Generated post exceeds 280 characters")
+    raise RuntimeError("Generated post exceeds X weighted length 280")
 
 
 def build_discovery_text(template_index, title, sort_order, affiliate_url, facts=""):
