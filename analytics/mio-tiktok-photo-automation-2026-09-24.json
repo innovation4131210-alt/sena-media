@@ -13,17 +13,107 @@
   "postMetrics": {
     "source": "Metricool.getAnalyticsDataByMetrics",
     "fieldDefinitionsVerifiedWith": "Metricool.getAnalyticsAvailableMetrics network=tiktok connector=posts",
-    "queryPeriod": {"from": "2026-09-12T00:00:00+09:00", "to": "2026-09-24T23:59:59+09:00"},
-    "requestedFields": ["TKPO02", "TKPO03", "TKPO05", "TKPO07", "TKPO08", "TKPO09", "TKPO10", "TKPO22"],
-    "fieldMap": {"TKPO02": "publicationTimestampRaw", "TKPO03": "shareUrl", "TKPO05": "description", "TKPO07": "views", "TKPO08": "likes", "TKPO09": "comments", "TKPO10": "shares", "TKPO22": "type"},
+    "queryPeriod": {
+      "from": "2026-09-12T00:00:00+09:00",
+      "to": "2026-09-24T23:59:59+09:00"
+    },
+    "requestedFields": [
+      "TKPO02",
+      "TKPO03",
+      "TKPO05",
+      "TKPO07",
+      "TKPO08",
+      "TKPO09",
+      "TKPO10",
+      "TKPO22"
+    ],
+    "fieldMap": {
+      "TKPO02": "publicationTimestampRaw",
+      "TKPO03": "shareUrl",
+      "TKPO05": "description",
+      "TKPO07": "views",
+      "TKPO08": "likes",
+      "TKPO09": "comments",
+      "TKPO10": "shares",
+      "TKPO22": "type"
+    },
     "posts": [
-      {"postId": "7688677166724173108", "publicationTimestampRaw": "20260923103418", "type": "PHOTO", "cohort": "refreshed_character", "description": "出る直前に、やっぱりこっちにした。 こういう最後の1分で迷うの、私だけ？ ※MIOは架空のAIキャラクターです。画像はAIで制作しています。 #MIO #日常 #お出かけコーデ #AIモデル", "views": 45, "likes": 6, "comments": 0, "shares": 0, "saves": null, "attributedFollows": null, "profileVisits": null, "likesPerViewPercent": 13.333333333333334, "metricsUpdatedAt": null},
-      {"postId": "7687957782213037320", "publicationTimestampRaw": "20260921120236", "type": "VIDEO", "cohort": "legacy", "views": 39, "likes": 0, "comments": 0, "shares": 0},
-      {"postId": "7687215571083037973", "publicationTimestampRaw": "20260919120225", "type": "VIDEO", "cohort": "legacy", "views": 248, "likes": 10, "comments": 1, "shares": 0},
-      {"postId": "7685731192016096513", "publicationTimestampRaw": "20260915120251", "type": "VIDEO", "cohort": "legacy", "views": 149, "likes": 1, "comments": 0, "shares": 0},
-      {"postId": "7685360139288726791", "publicationTimestampRaw": "20260914120222", "type": "VIDEO", "cohort": "legacy", "views": 0, "likes": 0, "comments": 0, "shares": 0},
-      {"postId": "7684988500642483472", "publicationTimestampRaw": "20260913120030", "type": "VIDEO", "cohort": "legacy", "views": 0, "likes": 0, "comments": 0, "shares": 0},
-      {"postId": "7684878377999666440", "publicationTimestampRaw": "20260913045309", "type": "VIDEO", "cohort": "legacy", "views": 22, "likes": 1, "comments": 0, "shares": 0}
+      {
+        "postId": "7688677166724173108",
+        "publicationTimestampRaw": "20260923103418",
+        "type": "PHOTO",
+        "cohort": "refreshed_character",
+        "description": "出る直前に、やっぱりこっちにした。 こういう最後の1分で迷うの、私だけ？ ※MIOは架空のAIキャラクターです。画像はAIで制作しています。 #MIO #日常 #お出かけコーデ #AIモデル",
+        "views": 45,
+        "likes": 6,
+        "comments": 0,
+        "shares": 0,
+        "saves": null,
+        "attributedFollows": null,
+        "profileVisits": null,
+        "likesPerViewPercent": 13.333333333333334,
+        "metricsUpdatedAt": null
+      },
+      {
+        "postId": "7687957782213037320",
+        "publicationTimestampRaw": "20260921120236",
+        "type": "VIDEO",
+        "cohort": "legacy",
+        "views": 39,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "postId": "7687215571083037973",
+        "publicationTimestampRaw": "20260919120225",
+        "type": "VIDEO",
+        "cohort": "legacy",
+        "views": 248,
+        "likes": 10,
+        "comments": 1,
+        "shares": 0
+      },
+      {
+        "postId": "7685731192016096513",
+        "publicationTimestampRaw": "20260915120251",
+        "type": "VIDEO",
+        "cohort": "legacy",
+        "views": 149,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "postId": "7685360139288726791",
+        "publicationTimestampRaw": "20260914120222",
+        "type": "VIDEO",
+        "cohort": "legacy",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "postId": "7684988500642483472",
+        "publicationTimestampRaw": "20260913120030",
+        "type": "VIDEO",
+        "cohort": "legacy",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "postId": "7684878377999666440",
+        "publicationTimestampRaw": "20260913045309",
+        "type": "VIDEO",
+        "cohort": "legacy",
+        "views": 22,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0
+      }
     ],
     "interpretation": "Encouraging early likes-per-view signal for one photo, not proof of higher reach, follow conversion, or a causal character/format effect. Different publication ages and unknown provider freshness prevent a controlled comparison.",
     "visibilityLimitation": "Historical analytics and scheduler sent records do not prove current public visibility or the current native AI label. Do not restore legacy posts or repost the first refreshed photo."
@@ -31,7 +121,10 @@
   "reservations": {
     "metricool": {
       "source": "Metricool.getScheduledPosts called in the earlier continuation",
-      "queryPeriod": {"fromDate": "2026-09-24T00:00:00+09:00", "toDate": "2026-10-28T23:59:59+09:00"},
+      "queryPeriod": {
+        "fromDate": "2026-09-24T00:00:00+09:00",
+        "toDate": "2026-10-28T23:59:59+09:00"
+      },
       "tiktokReservations": 0,
       "method": "Filter actual providers for network=tiktok. All returned records were Instagram, including some already published records.",
       "scopeNote": "Historical Metricool inventory only. Zero here does not imply no TikTok Studio native reservations."
@@ -83,9 +176,21 @@
           "automaticPublicationVerified": false,
           "doNotDuplicate": true,
           "evidence": [
-            {"filename": "IMG_8034.png", "sha256": "7921b3f9c79cf9cc8d474303f582568192e9b009c8227ec35925100ef951fef4", "proves": "AI-generated-content toggle ON in the native photo composer before submission"},
-            {"filename": "IMG_8035.png", "sha256": "70192af7f51ea7169991378d7dd5cb8185a65f4417c94a9a93ae898913c4f6ee", "proves": "Photo composer has Sep25 20:30 selected and the final reservation button"},
-            {"filename": "IMG_8036.png", "sha256": "2f16d0cbb23fbf12c7aedc962d05cdf323c594e1a9086bf7d3ec7909c39853f9", "proves": "Management list shows matching bakery photo as reserved for Sep25 8:30 PM and a reservation-success toast"}
+            {
+              "filename": "IMG_8034.png",
+              "sha256": "7921b3f9c79cf9cc8d474303f582568192e9b009c8227ec35925100ef951fef4",
+              "proves": "AI-generated-content toggle ON in the native photo composer before submission"
+            },
+            {
+              "filename": "IMG_8035.png",
+              "sha256": "70192af7f51ea7169991378d7dd5cb8185a65f4417c94a9a93ae898913c4f6ee",
+              "proves": "Photo composer has Sep25 20:30 selected and the final reservation button"
+            },
+            {
+              "filename": "IMG_8036.png",
+              "sha256": "2f16d0cbb23fbf12c7aedc962d05cdf323c594e1a9086bf7d3ec7909c39853f9",
+              "proves": "Management list shows matching bakery photo as reserved for Sep25 8:30 PM and a reservation-success toast"
+            }
           ],
           "evidenceStorage": "Screenshots remain in the conversation; raw screenshots were not uploaded to this repository. Image hash identifies the supplied asset, not a server-downloaded reserved image."
         },
@@ -225,8 +330,15 @@
     "noCaptionOnlySubstitution": true,
     "additionalPaidServicesAllowed": false,
     "doNotReofferPreviouslyDeclinedPaidUploadPostRoute": true,
-    "doNotRepostIds": ["7688677166724173108"],
-    "doNotRescheduleAssetKeys": ["MIO_02_雨の日_パン屋", "MIO_03_ブーツ支度", "MIO_04_カフェ_パスタ", "MIO_05_鏡_FitCheck"],
+    "doNotRepostIds": [
+      "7688677166724173108"
+    ],
+    "doNotRescheduleAssetKeys": [
+      "MIO_02_雨の日_パン屋",
+      "MIO_03_ブーツ支度",
+      "MIO_04_カフェ_パスタ",
+      "MIO_05_鏡_FitCheck"
+    ],
     "dedupeRecordIsNotAnImplementedCodeGuard": true,
     "mioD20QualityHoldPreserved": true,
     "instagramAndXReservationsUnchanged": true,
@@ -246,15 +358,42 @@
       "Raw GitHub hostname resolution failed from the container in this continuation. The GitHub connector succeeded; use its fetch_file/update_file actions rather than repeatedly retrying raw network downloads."
     ],
     "members": [
-      {"filename": "MIO_01_外出直前_イヤリング.png", "sha256": "3df4dbffc1708d27f47702f2fb37c5fc34bf4d4be4ddcaf8e86db29ff5ba8172"},
-      {"filename": "MIO_02_雨の日_パン屋.png", "sha256": "d1487f5a523b7082f55a2aedbb5cd87266046564342036dbc28b200039d73b70"},
-      {"filename": "MIO_03_ブーツ支度.png", "sha256": "678d06a7ae26e66e90f975e56290b17bf0215d5e2992c68be3f2087932b78951"},
-      {"filename": "MIO_04_カフェ_パスタ.png", "sha256": "ad389c824845757c329ec6628cf0ac52a200f84db1ed867403455767e6aa0025"},
-      {"filename": "MIO_05_鏡_FitCheck.png", "sha256": "40e4a8369f3c471e592cca0ca7794df5817818576142b86809e33a4a2469304b"},
-      {"filename": "MIO_06_海辺の駅.png", "sha256": "febeb7d98c4c0cac919f2a14dda9e4a5f5743d5b6161da6c93eefcc44eba086f"},
-      {"filename": "MIO_07_夕暮れの街.png", "sha256": "c33535dbf649f3f118f91ea3288352ff7f282d992ea45bb00926df3d0750d9b2"},
-      {"filename": "MIO_08_イヤリング選び.png", "sha256": "903a59dc1f386f205313633c70f84a98d4e7d303d2eb141b8d68e5ccbe87171c"},
-      {"filename": "MIO_09_花屋.png", "sha256": "294b89616de3568a3d4178935c21ce30724cfb9a9ce37442df5f60a998b47986"}
+      {
+        "filename": "MIO_01_外出直前_イヤリング.png",
+        "sha256": "3df4dbffc1708d27f47702f2fb37c5fc34bf4d4be4ddcaf8e86db29ff5ba8172"
+      },
+      {
+        "filename": "MIO_02_雨の日_パン屋.png",
+        "sha256": "d1487f5a523b7082f55a2aedbb5cd87266046564342036dbc28b200039d73b70"
+      },
+      {
+        "filename": "MIO_03_ブーツ支度.png",
+        "sha256": "678d06a7ae26e66e90f975e56290b17bf0215d5e2992c68be3f2087932b78951"
+      },
+      {
+        "filename": "MIO_04_カフェ_パスタ.png",
+        "sha256": "ad389c824845757c329ec6628cf0ac52a200f84db1ed867403455767e6aa0025"
+      },
+      {
+        "filename": "MIO_05_鏡_FitCheck.png",
+        "sha256": "40e4a8369f3c471e592cca0ca7794df5817818576142b86809e33a4a2469304b"
+      },
+      {
+        "filename": "MIO_06_海辺の駅.png",
+        "sha256": "febeb7d98c4c0cac919f2a14dda9e4a5f5743d5b6161da6c93eefcc44eba086f"
+      },
+      {
+        "filename": "MIO_07_夕暮れの街.png",
+        "sha256": "c33535dbf649f3f118f91ea3288352ff7f282d992ea45bb00926df3d0750d9b2"
+      },
+      {
+        "filename": "MIO_08_イヤリング選び.png",
+        "sha256": "903a59dc1f386f205313633c70f84a98d4e7d303d2eb141b8d68e5ccbe87171c"
+      },
+      {
+        "filename": "MIO_09_花屋.png",
+        "sha256": "294b89616de3568a3d4178935c21ce30724cfb9a9ce37442df5f60a998b47986"
+      }
     ]
   },
   "nextPreparedCandidate": {
@@ -275,5 +414,74 @@
   "socialMutationByOwner": "Bakery native photo reservation screenshot-confirmed earlier; boots and pasta reservations owner-reported earlier; mirror reservation now reported complete by the owner without a screenshot.",
   "publishingCodeChangesThisContinuation": false,
   "newRecurringTaskCreated": false,
-  "additionalPayment": false
+  "additionalPayment": false,
+  "latestDeliveryIncident": {
+    "observedAt": "2026-09-28T09:27:41.367Z",
+    "account": "mio.ai_life",
+    "source": "Metricool live API",
+    "failedPost": {
+      "id": 381660069,
+      "uuid": "-4187082355941226032",
+      "due": "2026-09-28T18:00:00+09:00",
+      "status": "ERROR",
+      "reason": "resolution specifications max1080p; maximum allowed height and width exceeded"
+    },
+    "heldReservations": [
+      {
+        "id": 383302986,
+        "uuid": "8330933626933038028",
+        "date": {
+          "dateTime": "2026-09-29T10:00:00",
+          "timezone": "Asia/Tokyo"
+        },
+        "draft": true,
+        "autoPublish": false,
+        "media": [
+          "https://static.metricool.com/planner/202609/6940494-file-14525653258781395398.jpeg"
+        ],
+        "text": "落とす0.2秒前。こういう時だけ変な声出るの、私だけ？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。 #MIO #日常 #AIモデル"
+      },
+      {
+        "id": 383303009,
+        "uuid": "-8806172508844832936",
+        "date": {
+          "dateTime": "2026-09-30T18:00:00",
+          "timezone": "Asia/Tokyo"
+        },
+        "draft": true,
+        "autoPublish": false,
+        "media": [
+          "https://static.metricool.com/planner/202609/6940494-file-2097435299877832640.jpeg"
+        ],
+        "text": "このまま外に出るところだった。何秒で違和感に気づいた？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。 #MIO #GRWM #AIモデル"
+      },
+      {
+        "id": 383303025,
+        "uuid": "198333863857048346",
+        "date": {
+          "dateTime": "2026-10-01T10:00:00",
+          "timezone": "Asia/Tokyo"
+        },
+        "draft": true,
+        "autoPublish": false,
+        "media": [
+          "https://static.metricool.com/planner/202609/6940494-file-2933575159586944.jpeg"
+        ],
+        "text": "この一束だけ、朝からずっと言うこと聞かない。直す？そのまま行く？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。 #MIO #朝 #AIモデル"
+      }
+    ],
+    "holdReasons": [
+      "Same 1122x1402 source dimensions as failed item in exact publishing manifest",
+      "Native AI label not present in live TikTok data; existing project gate prohibits caption-only substitution"
+    ],
+    "resumeConditions": [
+      "Verify native Studio inventory and avoid replay of initial launch reservations",
+      "Create platform-compatible derivative without changing identity, scene or composition; keep original intact",
+      "Verify native AI disclosure saved before enabling autopublish",
+      "Re-read exact existing UUID before repair; no new duplicate create"
+    ],
+    "otherPlatforms": "Instagram and Threads remain active and were not modified. SENA Buffer no mutation.",
+    "status": "failure_contained_not_repaired",
+    "cost": 0
+  }
 }
