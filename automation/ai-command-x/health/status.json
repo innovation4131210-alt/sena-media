@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-29T15:41:01+00:00",
+  "checkedAt": "2026-09-29T21:26:35+00:00",
   "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -9,8 +9,75 @@
     "isQueuePaused": false
   },
   "scheduledCount": 10,
+  "queueIntegrity": {
+    "allMappedToSourceOfTruth": true,
+    "noDuplicateContentIds": true,
+    "inSourceOrder": true,
+    "items": [
+      {
+        "bufferPostId": "6abbafb02305e87051012bb8",
+        "contentId": "D01-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-09-30T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb16de47e3caa020590",
+        "contentId": "D01-NOON",
+        "contentType": "実行ログ",
+        "dueAtJst": "2026-09-30T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb235689b9f490e2472",
+        "contentId": "D01-PM",
+        "contentType": "作戦報告",
+        "dueAtJst": "2026-09-30T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb36de47e3caa020591",
+        "contentId": "D02-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-01T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb4083556d5fa088ec5",
+        "contentId": "D02-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-10-01T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb558fe17a50e004e57",
+        "contentId": "D02-PM",
+        "contentType": "note導線",
+        "dueAtJst": "2026-10-01T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb63e336c80b605052a",
+        "contentId": "D03-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-02T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb7749a5baab60960c9",
+        "contentId": "D03-NOON",
+        "contentType": "司令室メモ",
+        "dueAtJst": "2026-10-02T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6abbafb83cff9362c50f2498",
+        "contentId": "D03-PM",
+        "contentType": "参加型",
+        "dueAtJst": "2026-10-02T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6abbb8661c9809a958f65016",
+        "contentId": "D04-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-03T08:10+09:00"
+      }
+    ]
+  },
   "unusedPreparedCount": 80,
-  "analyticsAgeMinutes": 78.4,
+  "analyticsAgeMinutes": 423.9,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
