@@ -22,6 +22,7 @@ STATUS_PATH = HEALTH_DIR / "status.json"
 NOTE_URLS = {
     "home": "https://note.com/ai_command",
     "free_entry": "https://note.com/ai_command/n/ne79f153b4665",
+    "front_product": "https://note.com/ai_command/n/nbb052c3cb0ad",
     "paid_product": "https://note.com/ai_command/n/n7b74f56a03dc",
 }
 
@@ -203,6 +204,8 @@ def main():
             ok = code == 200
             if label == "free_entry":
                 ok = ok and ("ChatGPTが質問ばかり" in body or "ne79f153b4665" in body)
+            elif label == "front_product":
+                ok = ok and ("AI司令書" in body or "nbb052c3cb0ad" in body)
             elif label == "paid_product":
                 ok = ok and ("完成まで任せる" in body or "n7b74f56a03dc" in body)
             elif label == "home":
