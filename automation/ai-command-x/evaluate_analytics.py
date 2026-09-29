@@ -90,6 +90,40 @@ def main():
     else:
         lines.append("- Note-link content: no link-post type has 3 samples yet. No CTA winner declared.")
 
+    exp_posts = [p for p in posts if p.get("experimentId") == "AM_HOOK_V1" and p.get("hookVariant")]
+    if exp_posts:
+        variant_groups = defaultdict(list)
+        for p in exp_posts:
+            variant_groups[p["hookVariant"]].append(p)
+
+        lines += ["", "## AM_HOOK_V1", ""]
+        lines += [
+            "| Hook variant | n | Median impressions | Median interaction % |",
+            "|---|---:|---:|---:|",
+        ]
+
+        eligible_variants = []
+        for variant in sorted(variant_groups):
+            items = variant_groups[variant]
+            imp = median([p.get("impressions") for p in items])
+            ir = median([p.get("interactionRatePct") for p in items])
+            lines.append(f"| {variant} | {len(items)} | {imp:g} | {ir:g} |")
+            if len(items) >= 3:
+                eligible_variants.append((variant, imp, ir, len(items)))
+
+        if len(eligible_variants) == 3:
+            best = sorted(eligible_variants, key=lambda x: (x[1], x[2]), reverse=True)[0]
+            lines += [
+                "",
+                f"- All three variants reached n>=3. Highest current median impressions: **{best[0]}** ({best[1]:g}).",
+                "- Treat this as the next control hook; keep posting time fixed when testing the next variable.",
+            ]
+        else:
+            lines += [
+                "",
+                "- Hook experiment is still collecting samples. Do not declare a variant winner until every A/B/C group has at least 3 posts.",
+            ]
+
     note_posts = [p for p in posts if p.get("hasNoteLink")]
     if len(note_posts) >= 3:
         impressions = sum(num(p.get("impressions")) for p in note_posts)
