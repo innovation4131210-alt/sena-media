@@ -1,0 +1,18 @@
+name: AI Command X one-time D04 R.E.I. sync
+on:
+  push:
+    branches: [main]
+    paths:
+      - "automation/ai-command-x/rei_voice_migration_d04.py"
+      - ".github/workflows/ai-command-x-rei-d04-sync.yml"
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync scheduled D04-AM to R.E.I. voice
+        env:
+          BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+        run: python3 automation/ai-command-x/rei_voice_migration_d04.py
