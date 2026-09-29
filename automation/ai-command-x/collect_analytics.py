@@ -134,6 +134,19 @@ def iso_to_jst(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(JST)
 
 
+def note_destination(text):
+    text = text or ""
+    if "note.com/ai_command/n/ne79f153b4665" in text:
+        return "free_entry"
+    if "note.com/ai_command/n/nbb052c3cb0ad" in text:
+        return "front_product"
+    if "note.com/ai_command/n/n7b74f56a03dc" in text:
+        return "core_product"
+    if "note.com/ai_command" in text:
+        return "note_home"
+    return None
+
+
 def main():
     prepared = json.loads(POSTS_PATH.read_text(encoding="utf-8"))
     by_text = {p["text"].strip(): p for p in prepared}
@@ -171,6 +184,7 @@ def main():
             "externalLink": post.get("externalLink"),
             "text": post.get("text"),
             "hasNoteLink": "note.com/" in (post.get("text") or ""),
+            "noteDestination": note_destination(post.get("text")),
             "metricsUpdatedAt": post.get("metricsUpdatedAt"),
             "impressions": impressions,
             "likes": likes,
@@ -237,7 +251,7 @@ def main():
     DAILY_PATH.write_text(json.dumps(daily_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     fields = [
-        "contentId","contentType","experimentId","hookVariant","bufferPostId","sentAt","externalLink","hasNoteLink",
+        "contentId","contentType","experimentId","hookVariant","bufferPostId","sentAt","externalLink","hasNoteLink","noteDestination",
         "impressions","likes","comments","reposts","quotes","clicks","saves",
         "bufferEngagementRate","interactionRatePct","clickRatePct","metricsUpdatedAt","text"
     ]
