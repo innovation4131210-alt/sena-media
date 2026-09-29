@@ -1,0 +1,45 @@
+name: AI Command X one-time R.E.I. voice migration
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ai-command-x-rei-voice-migration.yml"
+      - "automation/ai-command-x/rei_voice_migration.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-command-x-rei-voice-migration
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Edit the nine scheduled AI Command X posts in place
+        env:
+          BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+          BUFFER_CHANNEL_HINT: ai_command_jp
+        run: python3 automation/ai-command-x/rei_voice_migration.py
+
+      - name: Persist R.E.I. voice Source of Truth and completion marker
+        shell: bash
+        run: |
+          if git diff --quiet -- automation/ai-command-x/posts.json automation/ai-command-x/rei_voice_migration_done.json; then
+            echo "Migration files did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/ai-command-x/posts.json automation/ai-command-x/rei_voice_migration_done.json
+          git commit -m "Apply R.E.I. voice to AI Command X queue"
+          git pull --rebase origin main
+          git push
