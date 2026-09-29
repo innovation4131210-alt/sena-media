@@ -38,13 +38,13 @@ jobs:
       - name: Persist analytics snapshot
         shell: bash
         run: |
-          if git diff --quiet -- automation/ai-command-x/analytics; then
-            echo "Analytics did not change."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation/ai-command-x/analytics
+          if git diff --cached --quiet; then
+            echo "Analytics did not change."
+            exit 0
+          fi
           git commit -m "Update AI Command X analytics"
           git pull --rebase origin main
           git push
