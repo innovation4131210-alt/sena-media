@@ -1,6 +1,6 @@
 # AI Command X Data Decision
 
-- Sent posts in 30-day window: 0
+- Sent posts in 30-day window: 1
 - Rule: do not change strategy from a single post; compare at least 3 posts in the same role.
 
 ## Current decision
@@ -12,6 +12,7 @@ Collect at least 6 sent posts before the first content-level adjustment.
 
 | Type | n | Median impressions | Median interaction % | Median click % | Total clicks |
 |---|---:|---:|---:|---:|---:|
+| unmapped | 1 | 0 | 0 | 0 | 0 |
 
 ## Evidence-based next test
 
