@@ -125,6 +125,27 @@ def main():
             ]
 
     note_posts = [p for p in posts if p.get("hasNoteLink")]
+    if note_posts:
+        destination_groups = defaultdict(list)
+        for p in note_posts:
+            destination_groups[p.get("noteDestination") or "other_note"].append(p)
+
+        lines += [
+            "",
+            "## Note funnel destinations",
+            "",
+            "| Destination | n | Impressions | Clicks | CTR % |",
+            "|---|---:|---:|---:|---:|",
+        ]
+        for destination in sorted(destination_groups):
+            items = destination_groups[destination]
+            impressions = sum(num(p.get("impressions")) for p in items)
+            clicks = sum(num(p.get("clicks")) for p in items)
+            ctr = round((clicks / impressions) * 100, 4) if impressions else 0
+            lines.append(
+                f"| {destination} | {len(items)} | {int(impressions)} | {int(clicks)} | {ctr:g} |"
+            )
+
     if len(note_posts) >= 3:
         impressions = sum(num(p.get("impressions")) for p in note_posts)
         clicks = sum(num(p.get("clicks")) for p in note_posts)
