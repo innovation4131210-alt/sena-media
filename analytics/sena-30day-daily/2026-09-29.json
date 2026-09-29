@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-09-29",
+  "reviewedAt": "2026-09-29T00:57:10.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "cab17c64ca9b2ece98c2158d2855a682a05ab78e",
+      "lastRunAt": "2026-09-28T14:12:42.240Z",
+      "lastVerifiedAt": "2026-09-28T14:12:43.612Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "772ae560ed1c5489b8ee3a123b01c9e13360cdbd"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "54bbc849ebf6b0cb41e818d513c6bc7d04c069ca",
+      "capturedAt": "2026-09-28T13:46:51.428Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "02ec6acd486ebcdad31445c06414719fc4a4adf2",
+      "checkedAt": "2026-09-28T13:46:52.104Z"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-27",
+    "manifestItems": 30,
+    "phase": "live_day_2",
+    "manifestChanged": false
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "connection": "healthy",
+    "inventoryComplete": true,
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "countDerivation": {
+      "completeSnapshotAfterD01PublishBeforeNightlyRefill": 8,
+      "createdAndReadBackByLatestRunner": 1
+    },
+    "scheduled30DayManifestCount": 9,
+    "remainingChannelCapacity": 0,
+    "createdInLatestRun": {
+      "manifestId": "D10",
+      "postId": "6aba75db3f092d970340f383",
+      "dueAt": "2026-10-07T11:30:00.000Z",
+      "tokyoTime": "2026-10-07T20:30:00+09:00",
+      "status": "scheduled",
+      "verifiedAt": "2026-09-28T14:12:43.610Z"
+    },
+    "scheduledManifestPosts": [
+      {
+        "manifestId": "D02",
+        "postId": "6ab3ddf7a75742f2cd11395c",
+        "tokyoDate": "2026-09-29",
+        "dueAt": "2026-09-29T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D03",
+        "postId": "6ab3ddf8c81095d33c9a1f4a",
+        "tokyoDate": "2026-09-30",
+        "dueAt": "2026-09-30T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D04",
+        "postId": "6ab52f7cd0d12c23fa5b8e7d",
+        "tokyoDate": "2026-10-01",
+        "dueAt": "2026-10-01T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D05",
+        "postId": "6ab52f7d3e8c1aa3fcccf9e1",
+        "tokyoDate": "2026-10-02",
+        "dueAt": "2026-10-02T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D06",
+        "postId": "6ab52f7ef2918b28ff7437c0",
+        "tokyoDate": "2026-10-03",
+        "dueAt": "2026-10-03T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D07",
+        "postId": "6ab681004be5473030b59a9d",
+        "tokyoDate": "2026-10-04",
+        "dueAt": "2026-10-04T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D08",
+        "postId": "6ab7d22bccccb9429c2f6164",
+        "tokyoDate": "2026-10-05",
+        "dueAt": "2026-10-05T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D09",
+        "postId": "6ab923a8612c9e6ac926f9fa",
+        "tokyoDate": "2026-10-06",
+        "dueAt": "2026-10-06T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D10",
+        "postId": "6aba75db3f092d970340f383",
+        "tokyoDate": "2026-10-07",
+        "dueAt": "2026-10-07T11:30:00.000Z",
+        "status": "scheduled"
+      }
+    ],
+    "validation": {
+      "allDatesMatchManifest": true,
+      "allCaptionsMatchManifest": true,
+      "allMediaHashesMatchManifest": true,
+      "allCurrentPostsReadBackAsScheduled": true
+    },
+    "pendingCreates": [],
+    "blocked": [],
+    "duplicateDetected": false,
+    "failedPostDetected": false,
+    "action": "No additional creation. The channel is at the safety limit; the existing 23:00 JST workflow will refill after D02 publishes."
+  },
+  "publishing": {
+    "thirtyDayPostsPublished": 1,
+    "latestCampaignPublication": {
+      "manifestId": "D01",
+      "postId": "6ab38b29c5fe69b4e884239f",
+      "sentAt": "2026-09-28T11:31:06.372Z",
+      "tokyoSentAt": "2026-09-28T20:31:06.372+09:00",
+      "publicUrl": "https://www.instagram.com/p/Dd1FR6VFoP2/",
+      "status": "sent"
+    },
+    "campaignPostDueToday": {
+      "manifestId": "D02",
+      "postId": "6ab3ddf7a75742f2cd11395c",
+      "dueAt": "2026-09-29T11:30:00.000Z",
+      "tokyoTime": "2026-09-29T20:30:00+09:00",
+      "status": "scheduled"
+    }
+  },
+  "performance": {
+    "scope": "SENA 30-day manifest posts",
+    "status": "D01_live_under_24h_at_review",
+    "dataCapturedAt": "2026-09-28T13:46:51.428Z",
+    "ageAtDataCaptureMinutes": 136,
+    "reach": null,
+    "profileVisits": null,
+    "follows": null,
+    "profileVisitToFollowConversion": null,
+    "shares": null,
+    "saves": null,
+    "comments": null,
+    "note": "D01 metrics were unavailable in the latest complete snapshot, captured about 2h16m after publication. Missing values remain null. No performance judgment is made before the 24-hour observation point."
+  },
+  "userActionRequired": false,
+  "additionalCost": false
+}
