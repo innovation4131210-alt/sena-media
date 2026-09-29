@@ -1,0 +1,50 @@
+name: AI Command X analytics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 22 * * *" # 07:15 JST
+    - cron: "45 13 * * *" # 22:45 JST
+  push:
+    branches: [main]
+    paths:
+      - "automation/ai-command-x/collect_analytics.py"
+      - "automation/ai-command-x/posts.json"
+      - ".github/workflows/ai-command-x-analytics.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-command-x-analytics
+  cancel-in-progress: true
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect AI Command X post metrics
+        env:
+          BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+          BUFFER_CHANNEL_HINT: ai_command_jp
+          LOOKBACK_DAYS: "30"
+        run: python3 automation/ai-command-x/collect_analytics.py
+
+      - name: Persist analytics snapshot
+        shell: bash
+        run: |
+          if git diff --quiet -- automation/ai-command-x/analytics; then
+            echo "Analytics did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/ai-command-x/analytics
+          git commit -m "Update AI Command X analytics"
+          git pull --rebase origin main
+          git push
