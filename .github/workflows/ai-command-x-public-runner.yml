@@ -33,7 +33,7 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
           BUFFER_CHANNEL_HINT: ai_command_jp
-          TARGET_QUEUE_SIZE: "9"
+          TARGET_QUEUE_SIZE: "10"
         run: python3 automation/ai-command-x/buffer_queue.py
 
       - name: Persist AI Command queue state
