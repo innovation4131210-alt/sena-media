@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6abafa5c85cca6b129738f1c",
-  "last_due_at": "2026-09-29T14:30:00.000Z",
+  "last_buffer_post_id": "6abc27665df9296bd8d31ea7",
+  "last_due_at": "2026-09-30T13:03:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -34,9 +34,11 @@
     "smjb00001",
     "scpx00569",
     "sone00150",
-    "sqte00589"
+    "sqte00589",
+    "snos00313",
+    "sqte00647"
   ],
-  "last_content_id": "sqte00589",
+  "last_content_id": "sqte00647",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -502,33 +504,86 @@
       "source_position": 2,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abc2761a1ba5ce146dc49bf",
+      "due_at": "2026-09-30T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 7
+    },
+    {
+      "buffer_post_id": "6abc27633b1eb12e6e373037",
+      "due_at": "2026-09-30T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "snos00313",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "瀬戸環奈",
+      "actress_popularity_score": 1107.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 1,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abc27665df9296bd8d31ea7",
+      "due_at": "2026-09-30T13:03:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "sqte00647",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "ブランドストア30％OFF",
+      "campaign_end": "2026-10-06 23:59:59",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "花守夏歩",
+      "actress_popularity_score": 655.5,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 3,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 7,
-  "batch_date": "2026-09-29",
+  "engagement_index": 8,
+  "batch_date": "2026-09-30",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6abad608c5484f9414a01cc1",
-      "due_at": "2026-09-29T03:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6abc2761a1ba5ce146dc49bf",
+      "due_at": "2026-09-30T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6abafa5c85cca6b129738ef6",
-      "due_at": "2026-09-29T12:30:00.000Z"
+      "buffer_post_id": "6abc27633b1eb12e6e373037",
+      "due_at": "2026-09-30T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6abafa5c85cca6b129738f1c",
-      "due_at": "2026-09-29T14:30:00.000Z"
+      "buffer_post_id": "6abc27665df9296bd8d31ea7",
+      "due_at": "2026-09-30T13:03:00.000Z"
     }
   },
-  "discovery_template_index": 1,
+  "discovery_template_index": 2,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 1,
+  "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-09-28T23:38:04.577437+00:00",
-    "batch_date": "2026-09-29",
-    "recovered_count": 1,
-    "created_count": 2
+    "at": "2026-09-29T21:02:30.259201+00:00",
+    "batch_date": "2026-09-30",
+    "recovered_count": 0,
+    "created_count": 3
   }
 }
