@@ -124,7 +124,8 @@ def main():
     now = datetime.now(JST)
     slot = target_slot(now)
     if slot is None:
-        raise RuntimeError("No publish slot is old enough to verify yet")
+        print("No publish slot is old enough to verify yet; skipping.")
+        return
 
     org, channel = select_channel()
     sent, scheduled = fetch_posts(org["id"], channel["id"])
