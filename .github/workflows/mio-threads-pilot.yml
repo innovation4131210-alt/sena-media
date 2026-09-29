@@ -3,7 +3,10 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/workflows/mio-threads-pilot.yml"]
+    paths:
+      - ".github/workflows/mio-threads-pilot.yml"
+      - "automation/mio-threads/manifest.json"
+      - "scripts/mio-threads-pilot.mjs"
 permissions:
   contents: write
 concurrency:

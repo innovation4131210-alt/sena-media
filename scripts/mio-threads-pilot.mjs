@@ -32,9 +32,42 @@ async function inventory(){
  if(d.posts.pageInfo.hasNextPage)throw Error('Incomplete history; stop for pagination');
  return d.posts.edges.map(e=>e.node);
 }
+async function editPostText(id,text){
+ const d=await gql('mutation($input: EditPostInput!) { editPost(input:$input) { __typename ... on PostActionSuccess { post { id text status dueAt } } ... on MutationError { message } } }',{input:{id,text,aiAssisted:true}});
+ if(!d.editPost?.post?.id)throw Error(d.editPost?.message??'Unknown edit mutation result');
+ return d.editPost.post;
+}
 let existing=await inventory();
 for(const p of manifest.posts){
  const old=state.posts.find(x=>x.key===p.key);
+ if(old){
+  let byId=existing.find(x=>x.id===old.id);
+  if(!byId)throw Error('Prior intent missing from remote inventory; manual reconciliation required, no retry');
+  const expectedAt=new Date(p.dueAt).getTime();
+  const remoteAt=new Date(byId.dueAt??byId.sentAt).getTime();
+  if(!Number.isFinite(remoteAt)||Math.abs(remoteAt-expectedAt)>60000)throw Error('Existing date mismatch');
+  if(byId.status==='scheduled'&&byId.text!==p.text){
+   await editPostText(byId.id,p.text);
+   existing=await inventory();
+   byId=existing.find(x=>x.id===old.id);
+   if(!byId||byId.text!==p.text||byId.status!=='scheduled'||Math.abs(new Date(byId.dueAt).getTime()-expectedAt)>60000)throw Error('Edit readback failed');
+   Object.assign(old,{id:byId.id,status:byId.status,dueAt:byId.dueAt,textReconciledAt:new Date().toISOString(),verifiedAt:new Date().toISOString()});
+   await save();
+   console.log(JSON.stringify({key:p.key,id:byId.id,dueAt:byId.dueAt,status:byId.status,edited:true}));
+   continue;
+  }
+  if(byId.text===p.text){
+   Object.assign(old,{id:byId.id,status:byId.status,dueAt:byId.dueAt??p.dueAt});
+   await save();
+   continue;
+  }
+  if(byId.status==='sent'){
+   Object.assign(old,{id:byId.id,status:byId.status,dueAt:byId.dueAt??p.dueAt});
+   await save();
+   continue;
+  }
+  throw Error('Existing post text mismatch');
+ }
  const same=existing.filter(x=>x.text===p.text);
  if(same.length>1)throw Error('Duplicate text already exists');
  if(same.length===1){
@@ -43,7 +76,6 @@ for(const p of manifest.posts){
   else Object.assign(old,{id:x.id,status:x.status,dueAt:x.dueAt});
   await save();continue;
  }
- if(old)throw Error('Prior intent missing from remote inventory; manual reconciliation required, no retry');
  if(new Date(p.dueAt)<=new Date())throw Error('Past date; no catchup');
  if(existing.filter(x=>x.status==='scheduled').length>=10)throw Error('Free queue cap reached');
  const intent={key:p.key,status:'intent',dueAt:p.dueAt};state.posts.push(intent);await save();

@@ -110,6 +110,21 @@ async function createPost(target,channel) {
   return data.createPost.post;
 }
 
+async function editPostText(postId,text) {
+  const data = await gql(
+    `mutation($input: EditPostInput!) {
+      editPost(input:$input) {
+        __typename
+        ... on PostActionSuccess { post { id text status dueAt channelId assets { id mimeType } } }
+        ... on MutationError { message }
+      }
+    }`,
+    {input:{id:postId,text,aiAssisted:true}}
+  );
+  if (!data.editPost?.post?.id) throw new Error(data.editPost?.message ?? "Unknown Buffer editPost error");
+  return data.editPost.post;
+}
+
 async function main() {
   const queue=JSON.parse(await readFile(QUEUE_FILE,"utf8"));
   if (queue.policy?.enabled !== true) {
@@ -124,6 +139,33 @@ async function main() {
   const channel=await resolveChannel();
   let existing=await inventory(channel);
   let changed=false;
+
+  for (const target of queue.posts.filter(p=>p.status==="scheduled" && p.bufferPostId)) {
+    let remote=existing.find(p=>p.id===target.bufferPostId);
+    if (!remote) throw new Error(`Scheduled Buffer post missing: ${target.key}`);
+    if (remote.status==="sent") {
+      target.status="sent";
+      target.externalLink=remote.externalLink ?? target.externalLink ?? null;
+      target.sentAt=remote.sentAt ?? null;
+      target.statusSyncedAt=new Date().toISOString();
+      changed=true;
+      continue;
+    }
+    if (remote.status!=="scheduled") throw new Error(`Unexpected Buffer status for ${target.key}: ${remote.status}`);
+    const due=Date.parse(remote.dueAt ?? "");
+    if (!Number.isFinite(due) || Math.abs(due-Date.parse(target.dueAt))>60000) throw new Error(`Buffer dueAt mismatch: ${target.key}`);
+    if (remote.text!==target.text) {
+      await editPostText(remote.id,target.text);
+      existing=await inventory(channel);
+      remote=existing.find(p=>p.id===target.bufferPostId);
+      if (!remote || remote.status!=="scheduled" || remote.text!==target.text) throw new Error(`Buffer edit readback failed: ${target.key}`);
+      if (queue.policy?.visualRequired===true && !(remote.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/") || String(a.mimeType??"").startsWith("video/"))) {
+        throw new Error(`Threads media lost after edit: ${target.key}`);
+      }
+      target.textReconciledAt=new Date().toISOString();
+      changed=true;
+    }
+  }
 
   for (const target of queue.posts.filter(p=>p.status==="pending")) {
     const found=existing.find(p=>sameTarget(p,target));
