@@ -132,6 +132,56 @@ def main():
     if len(unused) < MIN_UNUSED:
         errors.append(f"Prepared backlog too low: {len(unused)} unused < {MIN_UNUSED}")
 
+    by_text = {p.get("text", "").strip(): p for p in posts}
+    index_by_id = {p.get("id"): i for i, p in enumerate(posts)}
+    queue_items = []
+    unknown_scheduled = []
+    seen_ids = set()
+    duplicate_ids = []
+    allowed_slots = {(8, 10), (12, 20), (20, 30)}
+    mapped_indexes = []
+
+    for item in scheduled:
+        due_jst = parse_dt(item["dueAt"]).astimezone(JST)
+        source = by_text.get((item.get("text") or "").strip())
+        content_id = source.get("id") if source else None
+
+        queue_items.append({
+            "bufferPostId": item.get("id"),
+            "contentId": content_id,
+            "contentType": source.get("type") if source else None,
+            "dueAtJst": due_jst.isoformat(timespec="minutes"),
+        })
+
+        if not source:
+            unknown_scheduled.append(item.get("id"))
+            continue
+
+        if content_id in seen_ids:
+            duplicate_ids.append(content_id)
+        seen_ids.add(content_id)
+
+        if (due_jst.hour, due_jst.minute) not in allowed_slots:
+            errors.append(
+                f"Unexpected Buffer slot time for {content_id}: "
+                f"{due_jst.isoformat(timespec='minutes')}"
+            )
+
+        mapped_indexes.append(index_by_id[content_id])
+
+    if unknown_scheduled:
+        errors.append(
+            "Scheduled Buffer post(s) do not match the current Source of Truth: "
+            + ", ".join(unknown_scheduled)
+        )
+    if duplicate_ids:
+        errors.append(
+            "Duplicate content IDs in scheduled Buffer queue: "
+            + ", ".join(sorted(set(duplicate_ids)))
+        )
+    if mapped_indexes and mapped_indexes != sorted(mapped_indexes):
+        errors.append("Scheduled Buffer queue is not in Source of Truth order")
+
     analytics_age_minutes = None
     if ANALYTICS_PATH.exists():
         analytics = json.loads(ANALYTICS_PATH.read_text(encoding="utf-8"))
@@ -175,6 +225,12 @@ def main():
             "isQueuePaused": channel.get("isQueuePaused"),
         },
         "scheduledCount": len(scheduled),
+        "queueIntegrity": {
+            "allMappedToSourceOfTruth": not unknown_scheduled,
+            "noDuplicateContentIds": not duplicate_ids,
+            "inSourceOrder": (not mapped_indexes) or mapped_indexes == sorted(mapped_indexes),
+            "items": queue_items,
+        },
         "unusedPreparedCount": len(unused),
         "analyticsAgeMinutes": analytics_age_minutes,
         "notePublicPages": note_status,
