@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-29T21:26:35+00:00",
+  "checkedAt": "2026-09-29T21:29:43+00:00",
   "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -77,7 +77,7 @@
     ]
   },
   "unusedPreparedCount": 80,
-  "analyticsAgeMinutes": 423.9,
+  "analyticsAgeMinutes": 427.1,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -86,6 +86,11 @@
     },
     "free_entry": {
       "url": "https://note.com/ai_command/n/ne79f153b4665",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "front_product": {
+      "url": "https://note.com/ai_command/n/nbb052c3cb0ad",
       "httpStatus": 200,
       "ok": true
     },
