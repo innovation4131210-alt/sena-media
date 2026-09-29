@@ -48,8 +48,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation/ai-command-x/state.json
           git commit -m "Refill AI Command X Buffer queue"
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            echo "Push race detected (attempt $attempt/3); retrying."
+            sleep $((attempt * 2))
+          done
+          echo "Failed to persist generated state after 3 attempts."
+          exit 1
 
       - name: Fail if scheduler failed
         if: steps.refill.outcome == 'failure'
