@@ -74,6 +74,11 @@ function sameTarget(post,target) {
   return post.text===target.text && Number.isFinite(when) && Math.abs(when-Date.parse(target.dueAt))<=60000;
 }
 
+function sameSlot(post,target) {
+  const when=Date.parse(post.dueAt ?? post.sentAt ?? "");
+  return Number.isFinite(when) && Math.abs(when-Date.parse(target.dueAt))<=60000;
+}
+
 async function verifyMedia(url) {
   if (!url) throw new Error("visualRequired post is missing mediaUrl");
   const response = await fetch(url, {
@@ -157,6 +162,10 @@ async function main() {
       continue;
     }
     if (scheduledCount>=cap) break;
+    const occupied=existing.find(p=>sameSlot(p,target));
+    if (occupied) {
+      throw new Error(`MIO X dueAt already occupied by Buffer post ${occupied.id}: ${target.key}`);
+    }
     if (queue.policy?.visualRequired===true && !target.mediaUrl) {
       target.status="held_visual_required";
       target.holdReason="Every MIO X original post must include an approved image or video.";
