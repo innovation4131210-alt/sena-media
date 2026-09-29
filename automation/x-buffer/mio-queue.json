@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:21:09.500Z",
+  "updatedAt": "2026-09-29T23:44:00.000Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -179,6 +179,35 @@
       "bufferPostId": "6ab75645b097c5b401ae69cb",
       "bufferDueAt": "2026-09-28T11:30:00.000Z",
       "processedAt": "2026-09-26T05:21:09.334Z"
+    },
+    {
+      "key": "mio-x-ops-bridge-2026-09-30",
+      "dueAt": "2026-09-30T03:15:00.000Z",
+      "text": "駅でまた反対方向見てた。\nこのあと右？左？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-05_D08.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-05_D08.jpeg",
+      "intervention": {
+        "owner": "all-business-daily-audit",
+        "reason": "Owner refill workflow remained successful but produced no approved MIO X queue item for the 2026-09-30 deadline. Existing queue, external IDs, held assets, and processing state were rechecked before one-post bridge.",
+        "changeId": "MIO-X-OPS-BRIDGE-2026-09-30",
+        "duplicatePrevention": "Exact target recovery plus occupied-dueAt guard; no text-only fallback.",
+        "recordedAt": "2026-09-29T23:44:00.000Z"
+      },
+      "visualPlan": {
+        "reserveAssetId": "MIO-D08",
+        "rule": "Use the approved existing 30-day asset for a single deadline bridge; return future replenishment to the MIO owner.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-05_D08.jpeg",
+        "activatedBy": "all-business-daily-audit"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "station_direction_choice",
+        "promotionEligible": false,
+        "note": "Operational continuity bridge; not an experiment promotion."
+      }
     }
   ],
   "lastRun": {
