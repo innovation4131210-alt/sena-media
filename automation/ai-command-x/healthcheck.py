@@ -19,6 +19,12 @@ ANALYTICS_PATH = BASE / "analytics" / "posts.json"
 HEALTH_DIR = BASE / "health"
 STATUS_PATH = HEALTH_DIR / "status.json"
 
+NOTE_URLS = {
+    "home": "https://note.com/ai_command",
+    "free_entry": "https://note.com/ai_command/n/ne79f153b4665",
+    "paid_product": "https://note.com/ai_command/n/n7b74f56a03dc",
+}
+
 
 def gql(query: str):
     key = os.environ["BUFFER_API_KEY"]
@@ -92,6 +98,17 @@ def parse_dt(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 
+def check_public_url(url):
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Mozilla/5.0 AI-Command-Healthcheck/1.0"},
+        method="GET",
+    )
+    with urllib.request.urlopen(req, timeout=30) as r:
+        body = r.read(300000).decode("utf-8", errors="replace")
+        return r.status, body
+
+
 def main():
     errors = []
     now_utc = datetime.now(timezone.utc)
@@ -129,6 +146,24 @@ def main():
     else:
         errors.append("Analytics snapshot file missing")
 
+    note_status = {}
+    for label, url in NOTE_URLS.items():
+        try:
+            code, body = check_public_url(url)
+            ok = code == 200
+            if label == "free_entry":
+                ok = ok and ("ChatGPTが質問ばかり" in body or "ne79f153b4665" in body)
+            elif label == "paid_product":
+                ok = ok and ("完成まで任せる" in body or "n7b74f56a03dc" in body)
+            elif label == "home":
+                ok = ok and ("ai_command" in body)
+            note_status[label] = {"url": url, "httpStatus": code, "ok": ok}
+            if not ok:
+                errors.append(f"note public page check failed: {label} HTTP {code}")
+        except Exception as exc:
+            note_status[label] = {"url": url, "ok": False, "error": str(exc)}
+            errors.append(f"note public page unavailable: {label}")
+
     status = {
         "checkedAt": now_utc.isoformat(timespec="seconds"),
         "ok": not errors,
@@ -142,6 +177,7 @@ def main():
         "scheduledCount": len(scheduled),
         "unusedPreparedCount": len(unused),
         "analyticsAgeMinutes": analytics_age_minutes,
+        "notePublicPages": note_status,
         "errors": errors,
     }
 
