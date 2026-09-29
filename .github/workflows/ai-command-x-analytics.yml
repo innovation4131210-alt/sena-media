@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - "automation/ai-command-x/collect_analytics.py"
+      - "automation/ai-command-x/evaluate_analytics.py"
       - "automation/ai-command-x/posts.json"
       - ".github/workflows/ai-command-x-analytics.yml"
 
@@ -34,6 +35,9 @@ jobs:
           BUFFER_CHANNEL_HINT: ai_command_jp
           LOOKBACK_DAYS: "30"
         run: python3 automation/ai-command-x/collect_analytics.py
+
+      - name: Evaluate current data
+        run: python3 automation/ai-command-x/evaluate_analytics.py
 
       - name: Persist analytics snapshot
         shell: bash
