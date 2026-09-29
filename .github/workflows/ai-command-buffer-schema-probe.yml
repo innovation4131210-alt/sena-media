@@ -38,20 +38,32 @@ jobs:
 
           query=r"""
           query SchemaProbe {
-            postType: __type(name:"Post") {
-              fields { name type { kind name ofType { kind name } } args { name type { kind name ofType { kind name } } } }
-            }
             metricType: __type(name:"PostMetric") {
-              fields { name type { kind name ofType { kind name } } }
+              fields { name type { kind name ofType { kind name ofType { kind name } } } }
             }
             metricEnum: __type(name:"PostMetricType") {
               enumValues { name }
             }
-            queryType: __schema {
-              queryType { fields { name args { name type { kind name ofType { kind name } } } } }
+            metricUnit: __type(name:"PostMetricUnit") {
+              enumValues { name }
+            }
+            aggInput: __type(name:"AggregatedPostMetricsInput") {
+              inputFields { name type { kind name ofType { kind name ofType { kind name } } } }
+            }
+            queryRoot: __type(name:"Query") {
+              fields {
+                name
+                type { kind name ofType { kind name } }
+                args { name type { kind name ofType { kind name } } }
+              }
             }
           }
           """
-          data=gql(query)
-          print(json.dumps(data,ensure_ascii=False,indent=2))
+          data=gql(query)["data"]
+          print("PostMetric_fields=" + json.dumps(data["metricType"],ensure_ascii=False,separators=(",",":")))
+          print("PostMetricType_values=" + json.dumps(data["metricEnum"],ensure_ascii=False,separators=(",",":")))
+          print("PostMetricUnit_values=" + json.dumps(data["metricUnit"],ensure_ascii=False,separators=(",",":")))
+          print("AggregatedPostMetricsInput=" + json.dumps(data["aggInput"],ensure_ascii=False,separators=(",",":")))
+          wanted=[x for x in data["queryRoot"]["fields"] if x["name"] in ("posts","post","aggregatedPostMetrics")]
+          print("analytics_queries=" + json.dumps(wanted,ensure_ascii=False,separators=(",",":")))
           PY
