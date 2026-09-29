@@ -7,7 +7,7 @@ This directory is an execution mirror. The canonical content/strategy lives in:
 - `innovation4131210-alt/ai-command-x-autopost`
 
 Files:
-- `posts.json`: mirrored posting backlog
+- `posts.json`: mirrored posting backlog (D01〜D30 / 90 posts)
 - `buffer_queue.py`: Buffer queue reader/refiller
 - `state.json`: verified used-content IDs and write history
 - `collect_analytics.py`: Buffer post-performance collector
@@ -57,3 +57,23 @@ Collected metrics:
 
 ## Current measurement status
 The analytics pipeline is verified end-to-end. At initial setup time there were no sent Buffer posts yet, so the first snapshot contains zero rows. Once the first scheduled post is published, the next analytics run will populate the dataset automatically.
+
+
+## Healthcheck
+Workflow:
+- `.github/workflows/ai-command-x-healthcheck.yml`
+- Daily at 00:25 JST
+
+Checks:
+- Buffer channel resolves to `ai_command_jp`
+- channel is not disconnected / locked / paused
+- scheduled queue is at least 9 immediately after refill
+- prepared unused backlog is at least 9 posts
+- analytics snapshot is fresh
+- note home / free-entry article / paid-product article are publicly reachable
+
+Latest verified status (2026-09-29):
+- health: OK
+- scheduled: 10
+- unused prepared: 80
+- note public pages: all HTTP 200
