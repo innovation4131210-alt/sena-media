@@ -1,0 +1,57 @@
+name: AI Command X publish verification
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 23 * * *" # 08:45 JST
+    - cron: "55 3 * * *"  # 12:55 JST
+    - cron: "5 12 * * *"  # 21:05 JST
+  push:
+    branches: [main]
+    paths:
+      - "automation/ai-command-x/verify_publish.py"
+      - ".github/workflows/ai-command-x-publish-verification.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-command-x-publish-verification
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify latest X publish slot
+        id: verify
+        continue-on-error: true
+        env:
+          BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+          BUFFER_CHANNEL_HINT: ai_command_jp
+          PUBLISH_GRACE_MINUTES: "25"
+        run: python3 automation/ai-command-x/verify_publish.py
+
+      - name: Persist publish verification
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/ai-command-x/health/publish_verification.json
+          if git diff --cached --quiet; then
+            echo "Publish verification did not change."
+            exit 0
+          fi
+          git commit -m "Update AI Command X publish verification"
+          git pull --rebase origin main
+          git push
+
+      - name: Fail if publication is not verified
+        if: steps.verify.outcome == 'failure'
+        run: exit 1
