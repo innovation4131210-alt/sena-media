@@ -565,11 +565,13 @@
   "batch_slots": {
     "engagement": {
       "buffer_post_id": "6abc2761a1ba5ce146dc49bf",
-      "due_at": "2026-09-30T03:30:00.000Z"
+      "due_at": "2026-09-30T03:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "rank_first_reply": {
       "buffer_post_id": "6abc27633b1eb12e6e373037",
-      "due_at": "2026-09-30T12:30:00.000Z"
+      "due_at": "2026-09-30T12:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "review_direct": {
       "buffer_post_id": "6abc27665df9296bd8d31ea7",
@@ -581,9 +583,9 @@
   "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-09-29T21:02:30.259201+00:00",
+    "at": "2026-09-29T21:56:08.511318+00:00",
     "batch_date": "2026-09-30",
-    "recovered_count": 0,
-    "created_count": 3
+    "recovered_count": 2,
+    "created_count": 0
   }
 }
