@@ -6,12 +6,6 @@ on:
     - cron: "45 23 * * *" # 08:45 JST
     - cron: "55 3 * * *"  # 12:55 JST
     - cron: "5 12 * * *"  # 21:05 JST
-  push:
-    branches: [main]
-    paths:
-      - "automation/ai-command-x/verify_publish.py"
-      - ".github/workflows/ai-command-x-publish-verification.yml"
-
 permissions:
   contents: write
 
