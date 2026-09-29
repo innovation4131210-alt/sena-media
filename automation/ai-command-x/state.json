@@ -8,7 +8,15 @@
     "D02-PM",
     "D03-AM",
     "D03-NOON",
-    "D03-PM"
+    "D03-PM",
+    "D04-AM"
   ],
-  "scheduledHistory": []
+  "scheduledHistory": [
+    {
+      "contentId": "D04-AM",
+      "bufferPostId": "6abbb8661c9809a958f65016",
+      "dueAt": "2026-10-02T23:10:00.000Z",
+      "recordedAt": "2026-09-29T13:08:54+00:00"
+    }
+  ]
 }
