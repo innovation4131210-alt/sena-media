@@ -693,13 +693,23 @@ def choose_conversion_candidate(candidates, campaign_focus=False):
     return chosen
 
 
-def choose_product(used_ids, preferred_sort, *, campaign_focus=False):
+def choose_product(used_ids, preferred_sort, *, campaign_focus=False, required_at=None):
     # Actress-first conversion strategy:
     # the mature-wife account persona curates mainstream/popular performers.
     # Product genre is not forced to 人妻/熟女; recognition, current rank,
     # price/discount and review strength determine the pick.
     # Newness alone is not enough. Only rank/review sources are used.
-    campaign_required_at = next_jst_slot(21, 30) if campaign_focus else next_jst_slot(23, 30)
+    if required_at is not None:
+        if required_at.tzinfo is not None:
+            campaign_required_at = required_at.astimezone(
+                timezone(timedelta(hours=9))
+            ).replace(tzinfo=None)
+        else:
+            campaign_required_at = required_at
+    else:
+        campaign_required_at = (
+            next_jst_slot(21, 30) if campaign_focus else next_jst_slot(23, 30)
+        )
     orders = [preferred_sort, "rank" if preferred_sort != "rank" else "review"]
     seen_orders = []
     for sort_order in orders:
@@ -742,7 +752,7 @@ def choose_product(used_ids, preferred_sort, *, campaign_focus=False):
     raise RuntimeError("No eligible unpublished DMM product was found")
 
 
-def create_post(text, channel_id, *, first_reply=None, image_url=None):
+def create_post(text, channel_id, *, due_at, first_reply=None, image_url=None):
     image_url = str(image_url or "").strip() if ENABLE_DMM_MEDIA else ""
     top_assets = ""
     metadata = ""
@@ -760,19 +770,27 @@ def create_post(text, channel_id, *, first_reply=None, image_url=None):
     elif image_url:
         top_assets = ", assets: [{ image: { url: " + esc(image_url) + " } }]"
 
+    if due_at.tzinfo is None:
+        raise RuntimeError("DMM X due_at must be timezone-aware")
+    due_at_utc = due_at.astimezone(timezone.utc)
+    if due_at_utc <= datetime.now(timezone.utc):
+        raise RuntimeError("Refusing to schedule a DMM X post in the past")
+    due_at_iso = due_at_utc.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+
     mutation = """mutation {
       createPost(input: {
         text: %s,
         channelId: %s,
         schedulingType: automatic,
-        mode: addToQueue
+        mode: customScheduled,
+        dueAt: %s
         %s
         %s
       }) {
         ... on PostActionSuccess { post { id text dueAt assets { id mimeType } } }
         ... on MutationError { message }
       }
-    }""" % (esc(text), esc(channel_id), top_assets, metadata)
+    }""" % (esc(text), esc(channel_id), esc(due_at_iso), top_assets, metadata)
     result = gql(mutation)["createPost"]
     if result.get("message"):
         raise RuntimeError(result["message"])
@@ -797,18 +815,20 @@ def remember(state, post, *, kind, template_index, content_id=None, sort_order=N
     state["last_due_at"] = post.get("dueAt")
 
 
-def queue_engagement(state, channel_id):
+def queue_engagement(state, channel_id, due_at):
     index = int(state.get("engagement_index", 0)) % len(ENGAGEMENT_POSTS)
-    post = create_post(ENGAGEMENT_POSTS[index], channel_id)
+    post = create_post(ENGAGEMENT_POSTS[index], channel_id, due_at=due_at)
     state["engagement_index"] = index + 1
     remember(state, post, kind="engagement", template_index=index)
     return "engagement", post
 
 
-def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False, campaign_focus=False):
+def queue_affiliate(
+    state, channel_id, preferred_sort, *, due_at, first_reply=False, campaign_focus=False
+):
     used_ids = set(str(value) for value in state.get("used_content_ids", []))
     content_id, title, affiliate_url, actual_sort, facts, meta = choose_product(
-        used_ids, preferred_sort, campaign_focus=campaign_focus
+        used_ids, preferred_sort, campaign_focus=campaign_focus, required_at=due_at
     )
 
     if first_reply:
@@ -834,6 +854,7 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False, cam
         post = create_post(
             lead_text,
             channel_id,
+            due_at=due_at,
             image_url=meta.get("image_url"),
         )
         state["discovery_template_index"] = index + 1
@@ -842,7 +863,9 @@ def queue_affiliate(state, channel_id, preferred_sort, *, first_reply=False, cam
         format_name = "decision"
         index = int(state.get("decision_template_index", 0)) % len(DECISION_TEMPLATES)
         text = build_decision_text(index, title, actual_sort, affiliate_url, facts, meta)
-        post = create_post(text, channel_id, image_url=meta.get("image_url"))
+        post = create_post(
+            text, channel_id, due_at=due_at, image_url=meta.get("image_url")
+        )
         state["decision_template_index"] = index + 1
         link_mode = "direct"
 
@@ -908,22 +931,31 @@ def main():
         )
 
     slots = state.setdefault("batch_slots", {})
+    due_slots = batch_due_slots(batch_date)
+    now_jst = datetime.now(jst)
     queued = []
 
-    if not slots.get("engagement"):
-        label, post = queue_engagement(state, channel_id)
+    if not slots.get("engagement") and due_slots["engagement"] > now_jst:
+        label, post = queue_engagement(state, channel_id, due_slots["engagement"])
         slots["engagement"] = {
             "buffer_post_id": post.get("id"),
             "due_at": post.get("dueAt"),
         }
         persist_state(state)
         queued.append((label, post))
-    else:
+    elif slots.get("engagement"):
         print("Skip engagement: already queued for this JST date")
+    else:
+        print("Skip engagement: fixed 12:30 JST slot already passed")
 
-    if not slots.get("rank_first_reply"):
+    if not slots.get("rank_first_reply") and due_slots["rank_first_reply"] > now_jst:
         label, post = queue_affiliate(
-            state, channel_id, "rank", first_reply=True, campaign_focus=True
+            state,
+            channel_id,
+            "rank",
+            due_at=due_slots["rank_first_reply"],
+            first_reply=True,
+            campaign_focus=True,
         )
         slots["rank_first_reply"] = {
             "buffer_post_id": post.get("id"),
@@ -931,19 +963,29 @@ def main():
         }
         persist_state(state)
         queued.append((label, post))
-    else:
+    elif slots.get("rank_first_reply"):
         print("Skip rank_first_reply: already queued for this JST date")
+    else:
+        print("Skip rank_first_reply: fixed 21:30 JST slot already passed")
 
-    if not slots.get("review_direct"):
-        label, post = queue_affiliate(state, channel_id, "review", first_reply=False)
+    if not slots.get("review_direct") and due_slots["review_direct"] > now_jst:
+        label, post = queue_affiliate(
+            state,
+            channel_id,
+            "review",
+            due_at=due_slots["review_direct"],
+            first_reply=False,
+        )
         slots["review_direct"] = {
             "buffer_post_id": post.get("id"),
             "due_at": post.get("dueAt"),
         }
         persist_state(state)
         queued.append((label, post))
-    else:
+    elif slots.get("review_direct"):
         print("Skip review_direct: already queued for this JST date")
+    else:
+        print("Skip review_direct: fixed 23:30 JST slot already passed")
 
     state.pop("next_index", None)
     persist_state(state)
