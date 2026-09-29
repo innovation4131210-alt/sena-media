@@ -1,0 +1,57 @@
+name: Probe Buffer analytics schema
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ai-command-buffer-schema-probe.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+    steps:
+      - name: Introspect analytics fields
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, urllib.request
+          API="https://api.buffer.com"
+          key=os.environ["BUFFER_API_KEY"]
+
+          def gql(query):
+              req=urllib.request.Request(
+                  API,
+                  data=json.dumps({"query":query}).encode(),
+                  headers={"Content-Type":"application/json","Authorization":f"Bearer {key}"},
+                  method="POST",
+              )
+              with urllib.request.urlopen(req,timeout=30) as r:
+                  return json.loads(r.read().decode())
+
+          query=r"""
+          query SchemaProbe {
+            postType: __type(name:"Post") {
+              fields { name type { kind name ofType { kind name } } args { name type { kind name ofType { kind name } } } }
+            }
+            metricType: __type(name:"PostMetric") {
+              fields { name type { kind name ofType { kind name } } }
+            }
+            metricEnum: __type(name:"PostMetricType") {
+              enumValues { name }
+            }
+            queryType: __schema {
+              queryType { fields { name args { name type { kind name ofType { kind name } } } } }
+            }
+          }
+          """
+          data=gql(query)
+          print(json.dumps(data,ensure_ascii=False,indent=2))
+          PY
