@@ -164,6 +164,8 @@ def main():
         rows.append({
             "contentId": source.get("id"),
             "contentType": source.get("type"),
+            "experimentId": source.get("experimentId"),
+            "hookVariant": source.get("hookVariant"),
             "bufferPostId": post.get("id"),
             "sentAt": sent_dt.isoformat(timespec="seconds") if sent_dt else None,
             "externalLink": post.get("externalLink"),
@@ -235,7 +237,7 @@ def main():
     DAILY_PATH.write_text(json.dumps(daily_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     fields = [
-        "contentId","contentType","bufferPostId","sentAt","externalLink","hasNoteLink",
+        "contentId","contentType","experimentId","hookVariant","bufferPostId","sentAt","externalLink","hasNoteLink",
         "impressions","likes","comments","reposts","quotes","clicks","saves",
         "bufferEngagementRate","interactionRatePct","clickRatePct","metricsUpdatedAt","text"
     ]
