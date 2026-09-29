@@ -1,0 +1,56 @@
+name: AI Command X healthcheck
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "25 15 * * *" # 00:25 JST
+  push:
+    branches: [main]
+    paths:
+      - "automation/ai-command-x/healthcheck.py"
+      - ".github/workflows/ai-command-x-healthcheck.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-command-x-healthcheck
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run healthcheck
+        id: health
+        continue-on-error: true
+        env:
+          BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+          BUFFER_CHANNEL_HINT: ai_command_jp
+          MIN_QUEUE: "9"
+          MIN_UNUSED: "9"
+        run: python3 automation/ai-command-x/healthcheck.py
+
+      - name: Persist health status
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/ai-command-x/health/status.json
+          if git diff --cached --quiet; then
+            echo "Health status did not change."
+            exit 0
+          fi
+          git commit -m "Update AI Command X health status"
+          git pull --rebase origin main
+          git push
+
+      - name: Fail if healthcheck failed
+        if: steps.health.outcome == 'failure'
+        run: exit 1
