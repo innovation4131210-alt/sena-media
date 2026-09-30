@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-29T20:56:14.142Z",
+  "checkedAt": "2026-09-30T02:56:41.378Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -14,10 +14,45 @@
   "inventory": {
     "complete": true,
     "counts": {
+      "scheduled": 3,
       "sent": 54
     },
-    "scheduledCount": 0,
-    "scheduled": []
+    "scheduledCount": 3,
+    "scheduled": [
+      {
+        "id": "6abc2761a1ba5ce146dc49bf",
+        "dueAt": "2026-09-30T03:30:00.000Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null
+      },
+      {
+        "id": "6abc27633b1eb12e6e373037",
+        "dueAt": "2026-09-30T12:30:00.000Z",
+        "kind": "affiliate",
+        "format": "discovery",
+        "linkMode": "direct",
+        "contentId": "snos00313",
+        "sort": "rank",
+        "discountPct": 0,
+        "campaignActive": false
+      },
+      {
+        "id": "6abc27665df9296bd8d31ea7",
+        "dueAt": "2026-09-30T13:03:00.000Z",
+        "kind": "affiliate",
+        "format": "decision",
+        "linkMode": "direct",
+        "contentId": "sqte00647",
+        "sort": "review",
+        "discountPct": 30,
+        "campaignActive": true
+      }
+    ]
   },
   "metrics": {
     "samplePosts": 40,
@@ -804,9 +839,9 @@
     "note": "Buffer platform metrics only. DMM conversions/revenue require official DMM report data and are not inferred here."
   },
   "sourceState": {
-    "batchDate": "2026-09-29",
+    "batchDate": "2026-09-30",
     "contentStrategyVersion": "real-selection-v7-campaign-demand-first",
-    "lastBufferPostId": "6abafa5c85cca6b129738f1c",
-    "lastDueAt": "2026-09-29T14:30:00.000Z"
+    "lastBufferPostId": "6abc27665df9296bd8d31ea7",
+    "lastDueAt": "2026-09-30T13:03:00.000Z"
   }
 }
