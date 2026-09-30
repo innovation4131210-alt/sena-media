@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-29T13:46:48.332Z",
+  "checkedAt": "2026-09-30T13:45:21.814Z",
   "readOnly": true,
   "connections": [
     {
@@ -17,9 +17,17 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 12
+            "sent": 13
           },
           "posts": [
+            {
+              "id": "6abcf7cf7065a219b2f69bb4",
+              "status": "sent",
+              "dueAt": "2026-09-30T11:30:00.000Z",
+              "sentAt": "2026-09-30T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7689008788103335186?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "c29efb58d975966fc8e815a7a31aada5f19fad0a9b830b49a74353444e803ffa"
+            },
             {
               "id": "6abba4d963952ae57c1d63c3",
               "status": "sent",
@@ -344,16 +352,39 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 1,
-            "sent": 53
+            "sent": 57
           },
           "posts": [
             {
+              "id": "6abc27665df9296bd8d31ea7",
+              "status": "sent",
+              "dueAt": "2026-09-30T13:03:00.000Z",
+              "sentAt": "2026-09-30T13:04:07.490Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2105282542781771957",
+              "textHash": "8cf5f1f7b0b33df7de6fdfd41d0ad15d526bdf11e6b9fd1f8d36cf8b5ce384c8"
+            },
+            {
+              "id": "6abc27633b1eb12e6e373037",
+              "status": "sent",
+              "dueAt": "2026-09-30T12:30:00.000Z",
+              "sentAt": "2026-09-30T12:30:19.790Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2105274038759084080",
+              "textHash": "76f3bbac8ba0e0278dda43d43821683c9ef1bd0042a829aa7ad4f94d8a9e38be"
+            },
+            {
+              "id": "6abc2761a1ba5ce146dc49bf",
+              "status": "sent",
+              "dueAt": "2026-09-30T03:30:00.000Z",
+              "sentAt": "2026-09-30T03:30:08.428Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2105138095809089926",
+              "textHash": "5f2719f987ec377bcf5a4bd81c9b533d27b2ca93d1822f921fca4d4362371316"
+            },
+            {
               "id": "6abafa5c85cca6b129738f1c",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-09-29T14:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-09-29T14:30:21.818Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2104941858279309730",
               "textHash": "2b41bc499e5e8f66d7040af490f4e9d37c13a902656b48cfa6a3df8a99db3c8d"
             },
             {
@@ -887,8 +918,8 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 6,
-            "scheduled": 7
+            "sent": 7,
+            "scheduled": 6
           },
           "posts": [
             {
@@ -981,10 +1012,10 @@
             },
             {
               "id": "6ab3f74d165f41b888bdd37b",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-09-30T10:00:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-09-30T10:01:59.687Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd6EqtUIHKo",
               "textHash": "31ced7a5f14d431b4cf39f6974ff769fb53dd5c765649ef16e889d49485b3ee8"
             },
             {
@@ -1008,9 +1039,17 @@
           "knownMioXPostPresent": false,
           "counts": {
             "scheduled": 8,
-            "sent": 18
+            "sent": 19
           },
           "posts": [
+            {
+              "id": "6abbc73b86767996fcb6ba44",
+              "status": "scheduled",
+              "dueAt": "2026-10-08T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "0d806f0294f55649fb989dd7a2c3248915e3d28b43593446216745ec88937077"
+            },
             {
               "id": "6aba75db3f092d970340f383",
               "status": "scheduled",
@@ -1077,10 +1116,10 @@
             },
             {
               "id": "6ab3ddf8c81095d33c9a1f4a",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-09-30T11:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-09-30T11:31:03.886Z",
+              "externalLink": "https://www.instagram.com/p/Dd6O3M_oEF5/",
               "textHash": "fc80d926fa89b25881a68e7102a7157e84132e2535eb817d62f3fd6411eac184"
             },
             {
