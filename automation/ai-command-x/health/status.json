@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-29T21:34:57+00:00",
+  "checkedAt": "2026-09-30T15:42:13+00:00",
   "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -8,30 +8,12 @@
     "isLocked": false,
     "isQueuePaused": false
   },
-  "scheduledCount": 10,
+  "scheduledCount": 9,
   "queueIntegrity": {
     "allMappedToSourceOfTruth": true,
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6abbafb02305e87051012bb8",
-        "contentId": "D01-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-09-30T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6abbafb16de47e3caa020590",
-        "contentId": "D01-NOON",
-        "contentType": "実行ログ",
-        "dueAtJst": "2026-09-30T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6abbafb235689b9f490e2472",
-        "contentId": "D01-PM",
-        "contentType": "作戦報告",
-        "dueAtJst": "2026-09-30T20:30+09:00"
-      },
       {
         "bufferPostId": "6abbafb36de47e3caa020591",
         "contentId": "D02-AM",
@@ -73,11 +55,23 @@
         "contentId": "D04-AM",
         "contentType": "今日の指令",
         "dueAtJst": "2026-10-03T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6abd2973cc837d292dc880a2",
+        "contentId": "D04-NOON",
+        "contentType": "思想",
+        "dueAtJst": "2026-10-03T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6abd29734061d89b6f34a633",
+        "contentId": "D04-PM",
+        "contentType": "実行ログ",
+        "dueAtJst": "2026-10-03T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 80,
-  "analyticsAgeMinutes": 0.7,
+  "unusedPreparedCount": 78,
+  "analyticsAgeMinutes": 108.0,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
