@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T12:41:21.516Z",
+  "updatedAt": "2026-09-30T12:44:26.578Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -179,7 +179,10 @@
       "dueAt": "2026-10-10T04:05:00Z",
       "text": "メニューを閉じたあとがいちばん長い。今日は何が来るでしょう。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-10_D13.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "bufferPostId": "6abd042a3aacd29063247906",
+      "bufferDueAt": "2026-10-10T04:05:00.000Z",
+      "processedAt": "2026-09-30T12:44:26.443Z"
     },
     {
       "key": "sena-d14",
@@ -340,6 +343,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-09-29T12:41:21.516Z"
+    "verifiedAt": "2026-09-30T12:44:26.578Z"
   }
 }
