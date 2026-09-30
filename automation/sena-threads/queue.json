@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T13:34:14.433Z",
+  "updatedAt": "2026-09-30T18:18:35.992Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -153,6 +153,38 @@
       "holdReason": "Meta says affiliate-link content should use the Paid partnership label and branded-content eligibility must be met; current Instagram account status shows Established Presence monetization issue.",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-11_D14.jpeg",
       "visualFirst": true
+    },
+    {
+      "key": "sena-threads-organic-2026-10-07",
+      "dueAt": "2026-10-07T11:10:00.000Z",
+      "text": "仕事を切り上げる時、PCを閉じてからも少しだけ席に残ってしまう。\n\n仕事終わり、すぐ帰る派？少し寄り道する派？",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-07_D10.jpeg",
+      "visualFirst": true,
+      "status": "pending"
+    },
+    {
+      "key": "sena-threads-organic-2026-10-13",
+      "dueAt": "2026-10-13T11:10:00.000Z",
+      "text": "帰ってヒールを脱いだ瞬間が、いちばん「今日終わった」って感じる。\n\n帰宅したら最初にすること、何？",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-13_D16.jpeg",
+      "visualFirst": true,
+      "status": "pending"
+    },
+    {
+      "key": "sena-threads-organic-2026-10-15",
+      "dueAt": "2026-10-15T11:10:00.000Z",
+      "text": "まだ外に出ない朝。コーヒーが冷めるまで、今日の予定を考える。\n\n朝は予定を決めてから動く？その日の気分で決める？",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-15_D18.jpeg",
+      "visualFirst": true,
+      "status": "pending"
+    },
+    {
+      "key": "sena-threads-organic-2026-10-17",
+      "dueAt": "2026-10-17T11:10:00.000Z",
+      "text": "雨上がりの夜は、少し遠回りしたくなる。\n\n帰り道に寄るなら、カフェ？本屋？そのまま散歩？",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-17_D20.jpeg",
+      "visualFirst": true,
+      "status": "pending"
     }
   ],
   "activation": {
@@ -167,5 +199,6 @@
     "channelName": "sena.virtual.studio",
     "scheduledCount": 5,
     "verifiedAt": "2026-09-29T13:34:14.433Z"
-  }
+  },
+  "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
