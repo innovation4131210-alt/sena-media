@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6abc27665df9296bd8d31ea7",
-  "last_due_at": "2026-09-30T13:03:00.000Z",
+  "last_buffer_post_id": "6abd78e7af8c06e95950cb28",
+  "last_due_at": "2026-10-01T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -36,9 +36,11 @@
     "sone00150",
     "sqte00589",
     "snos00313",
-    "sqte00647"
+    "sqte00647",
+    "midv00305",
+    "sqte00584"
   ],
-  "last_content_id": "sqte00647",
+  "last_content_id": "sqte00584",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -558,34 +560,86 @@
       "source_position": 3,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abd78e35feb60d6345bd0e4",
+      "due_at": "2026-10-01T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 0
+    },
+    {
+      "buffer_post_id": "6abd78e45feb60d6345bd158",
+      "due_at": "2026-10-01T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 2,
+      "content_id": "midv00305",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "discount_pct": 50,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "こだわりのフェラ50％OFF",
+      "campaign_end": "2026-10-02 09:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "石川澪",
+      "actress_popularity_score": 633.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 7,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abd78e7af8c06e95950cb28",
+      "due_at": "2026-10-01T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 2,
+      "content_id": "sqte00584",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "宮西ひかる",
+      "actress_popularity_score": 531.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 8,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 8,
-  "batch_date": "2026-09-30",
+  "engagement_index": 1,
+  "batch_date": "2026-10-01",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6abc2761a1ba5ce146dc49bf",
-      "due_at": "2026-09-30T03:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6abd78e35feb60d6345bd0e4",
+      "due_at": "2026-10-01T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6abc27633b1eb12e6e373037",
-      "due_at": "2026-09-30T12:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6abd78e45feb60d6345bd158",
+      "due_at": "2026-10-01T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6abc27665df9296bd8d31ea7",
-      "due_at": "2026-09-30T13:03:00.000Z"
+      "buffer_post_id": "6abd78e7af8c06e95950cb28",
+      "due_at": "2026-10-01T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 2,
+  "discovery_template_index": 3,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 2,
+  "decision_template_index": 3,
   "last_run": {
     "status": "success",
-    "at": "2026-09-29T21:56:08.511318+00:00",
-    "batch_date": "2026-09-30",
-    "recovered_count": 2,
-    "created_count": 0
+    "at": "2026-09-30T21:02:31.373934+00:00",
+    "batch_date": "2026-10-01",
+    "recovered_count": 0,
+    "created_count": 3
   }
 }
