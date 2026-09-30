@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-09-30",
+  "reviewedAt": "2026-09-30T01:04:37.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "5a8fca92eec7d2a06eb2942f892d16ffbae0cf53",
+      "lastRunAt": "2026-09-29T14:12:10.338Z",
+      "lastVerifiedAt": "2026-09-29T14:12:11.756Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "772ae560ed1c5489b8ee3a123b01c9e13360cdbd"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "1ff28d1adf6136139981d97ed23bab49c00fa803",
+      "capturedAt": "2026-09-29T13:46:47.506Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "bcbcf96021828a8e08e1c970292a3e328c1e6e0c",
+      "checkedAt": "2026-09-29T13:46:48.332Z"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-27",
+    "manifestItems": 30,
+    "phase": "live_day_3",
+    "manifestChanged": false
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "connection": "healthy",
+    "inventoryComplete": true,
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "countDerivation": {
+      "completeSnapshotAfterD02PublishBeforeNightlyRefill": 8,
+      "createdAndReadBackByLatestRunner": 1
+    },
+    "scheduled30DayManifestCount": 9,
+    "remainingChannelCapacity": 0,
+    "createdInLatestRun": {
+      "manifestId": "D11",
+      "postId": "6abbc73b86767996fcb6ba44",
+      "dueAt": "2026-10-08T11:30:00.000Z",
+      "tokyoTime": "2026-10-08T20:30:00+09:00",
+      "status": "scheduled",
+      "verifiedAt": "2026-09-29T14:12:11.754Z"
+    },
+    "scheduledManifestPosts": [
+      {
+        "manifestId": "D03",
+        "postId": "6ab3ddf8c81095d33c9a1f4a",
+        "tokyoDate": "2026-09-30",
+        "dueAt": "2026-09-30T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D04",
+        "postId": "6ab52f7cd0d12c23fa5b8e7d",
+        "tokyoDate": "2026-10-01",
+        "dueAt": "2026-10-01T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D05",
+        "postId": "6ab52f7d3e8c1aa3fcccf9e1",
+        "tokyoDate": "2026-10-02",
+        "dueAt": "2026-10-02T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D06",
+        "postId": "6ab52f7ef2918b28ff7437c0",
+        "tokyoDate": "2026-10-03",
+        "dueAt": "2026-10-03T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D07",
+        "postId": "6ab681004be5473030b59a9d",
+        "tokyoDate": "2026-10-04",
+        "dueAt": "2026-10-04T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D08",
+        "postId": "6ab7d22bccccb9429c2f6164",
+        "tokyoDate": "2026-10-05",
+        "dueAt": "2026-10-05T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D09",
+        "postId": "6ab923a8612c9e6ac926f9fa",
+        "tokyoDate": "2026-10-06",
+        "dueAt": "2026-10-06T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D10",
+        "postId": "6aba75db3f092d970340f383",
+        "tokyoDate": "2026-10-07",
+        "dueAt": "2026-10-07T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D11",
+        "postId": "6abbc73b86767996fcb6ba44",
+        "tokyoDate": "2026-10-08",
+        "dueAt": "2026-10-08T11:30:00.000Z",
+        "status": "scheduled"
+      }
+    ],
+    "validation": {
+      "allDatesMatchManifest": true,
+      "allCaptionsMatchManifest": true,
+      "allMediaHashesMatchManifest": true,
+      "allCurrentPostsReadBackAsScheduled": true
+    },
+    "pendingCreates": [],
+    "blocked": [],
+    "duplicateDetected": false,
+    "failedPostDetected": false,
+    "action": "No additional creation. The channel is at the safety limit; the existing 23:00 JST workflow will refill after D03 publishes."
+  },
+  "publishing": {
+    "thirtyDayPostsPublished": 2,
+    "latestCampaignPublication": {
+      "manifestId": "D02",
+      "postId": "6ab3ddf7a75742f2cd11395c",
+      "sentAt": "2026-09-29T11:31:12.161Z",
+      "tokyoSentAt": "2026-09-29T20:31:12.161+09:00",
+      "publicUrl": "https://www.instagram.com/p/Dd3qFGzEXFG/",
+      "status": "sent"
+    },
+    "priorCampaignPublication": {
+      "manifestId": "D01",
+      "postId": "6ab38b29c5fe69b4e884239f",
+      "sentAt": "2026-09-28T11:31:06.372Z",
+      "publicUrl": "https://www.instagram.com/p/Dd1FR6VFoP2/",
+      "status": "sent"
+    },
+    "campaignPostDueToday": {
+      "manifestId": "D03",
+      "postId": "6ab3ddf8c81095d33c9a1f4a",
+      "dueAt": "2026-09-30T11:30:00.000Z",
+      "tokyoTime": "2026-09-30T20:30:00+09:00",
+      "status": "scheduled"
+    }
+  },
+  "performance": {
+    "scope": "SENA 30-day manifest posts",
+    "dataCapturedAt": "2026-09-29T13:46:47.506Z",
+    "D01": {
+      "metricsUpdatedAt": "2026-09-29T06:59:13.291Z",
+      "ageAtMetricUpdateMinutes": 1168,
+      "views": 0,
+      "reach": 0,
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "under_24h",
+      "interpretation": "Explicit Buffer zeros, but captured about 19h28m after publication; retained as an observation and not used for a winner/loser decision."
+    },
+    "D02": {
+      "reach": null,
+      "profileVisits": null,
+      "follows": null,
+      "profileVisitToFollowConversion": null,
+      "shares": null,
+      "saves": null,
+      "comments": null,
+      "maturity": "under_24h",
+      "interpretation": "Metrics unavailable in the complete snapshot captured about 2h16m after publication."
+    },
+    "decision": "hold",
+    "note": "No campaign change from immature or missing data. Missing fields remain null."
+  },
+  "userActionRequired": false,
+  "additionalCost": false
+}
