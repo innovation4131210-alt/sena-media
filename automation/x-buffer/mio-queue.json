@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T23:43:16.170Z",
+  "updatedAt": "2026-09-30T18:17:06.171Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -211,6 +211,177 @@
       "bufferPostId": "6abc4d14bc79f721888d3155",
       "bufferDueAt": "2026-09-30T03:15:00.000Z",
       "processedAt": "2026-09-29T23:43:16.092Z"
+    },
+    {
+      "key": "mio-x-2026-10-01-toast",
+      "dueAt": "2026-10-01T03:15:00.000Z",
+      "text": "朝からトースト焦がした。\nこれくらいなら食べる？やり直す？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-09-28_D01.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-09-28_D01.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-09-28_D01.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "strong",
+        "variant": "toast_mishap_choice",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-02-bag-drop",
+      "dueAt": "2026-10-02T03:15:00.000Z",
+      "text": "飲み物落としかけて、ひとりで変な声出た。\nこういう時、何事もなかった顔できる？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-09-29_D02.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-09-29_D02.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-09-29_D02.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "shopping_bag_mishap",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-03-shopping",
+      "dueAt": "2026-10-03T03:15:00.000Z",
+      "text": "買うもの少なかったはずなのに、袋だけ立派。\n寄り道、増える派？まっすぐ帰る派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-07_D10.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-07_D10.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-07_D10.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "shopping_detour",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-04-socks",
+      "dueAt": "2026-10-04T03:15:00.000Z",
+      "text": "靴下を履くだけなのに、なぜか出発が遅れる朝。\n朝の支度、余裕ある派？ギリギリ派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-08_D11.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-08_D11.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-08_D11.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "morning_socks",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-05-icecream",
+      "dueAt": "2026-10-05T03:15:00.000Z",
+      "text": "溶ける前に食べたい。でも写真も撮りたい。\nアイス、先に撮る？先に食べる？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-09_D12.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-09_D12.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-09_D12.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "strong",
+        "variant": "melting_icecream_choice",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-06-hair",
+      "dueAt": "2026-10-06T03:15:00.000Z",
+      "text": "髪を少し変えただけなのに、何回もガラス見ちゃう。\nこういう変化、気づく？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-10_D13.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-10_D13.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-10_D13.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "strong",
+        "variant": "hair_change_reflection",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-07-earring",
+      "dueAt": "2026-10-07T03:15:00.000Z",
+      "text": "片方だけ消えるイヤリング。\n朝から小さな捜索中。探し続ける？別のにする？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-11_D14.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-11_D14.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-11_D14.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "missing_earring",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-08-coffee",
+      "dueAt": "2026-10-08T03:15:00.000Z",
+      "text": "寒い日はコーヒーを持つ手まであったかい。\n今日は寄り道する？まっすぐ帰る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-12_D15.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-12_D15.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-12_D15.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "strong",
+        "variant": "takeaway_coffee",
+        "promotionEligible": true
+      }
+    },
+    {
+      "key": "mio-x-2026-10-09-photos",
+      "dueAt": "2026-10-09T03:15:00.000Z",
+      "text": "写真を整理してたら、全然進まなくなった。\n昔の写真、見返す派？一気に整理する派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-13_D16.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-13_D16.jpeg",
+      "visualPlan": {
+        "rule": "Use exact approved existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-13_D16.jpeg"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "photo_sorting",
+        "promotionEligible": true
+      }
     }
   ],
   "lastRun": {
@@ -218,5 +389,6 @@
     "channelName": "mio_ai_life_jp",
     "scheduledCount": 1,
     "verifiedAt": "2026-09-29T23:43:16.170Z"
-  }
+  },
+  "refillReason": "Restore rolling MIO X coverage for Oct 1-9 after monthly Actions capacity resumed; use only unique approved visuals and existing guarded refill."
 }
