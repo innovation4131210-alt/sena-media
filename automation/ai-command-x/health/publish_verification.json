@@ -1,14 +1,14 @@
 {
   "latest": {
-    "checkedAt": "2026-09-30T04:00:53+00:00",
-    "slot": "2026-09-30T12:20+09:00",
+    "checkedAt": "2026-09-30T12:26:55+00:00",
+    "slot": "2026-09-30T20:30+09:00",
     "ok": true,
-    "contentId": "D01-NOON",
-    "contentType": "実行ログ",
-    "bufferPostId": "6abbafb16de47e3caa020590",
+    "contentId": "D01-PM",
+    "contentType": "作戦報告",
+    "bufferPostId": "6abbafb235689b9f490e2472",
     "bufferStatus": "sent",
-    "sentAt": "2026-09-30T03:20:01.345Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2105135549602234497",
+    "sentAt": "2026-09-30T11:30:21.941Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2105258948374745104",
     "warnings": [],
     "errors": []
   },
@@ -36,6 +36,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-09-30T03:20:01.345Z",
       "externalLink": "https://x.com/2104714619688554496/status/2105135549602234497",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-09-30T12:26:55+00:00",
+      "slot": "2026-09-30T20:30+09:00",
+      "ok": true,
+      "contentId": "D01-PM",
+      "contentType": "作戦報告",
+      "bufferPostId": "6abbafb235689b9f490e2472",
+      "bufferStatus": "sent",
+      "sentAt": "2026-09-30T11:30:21.941Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2105258948374745104",
       "warnings": [],
       "errors": []
     }
