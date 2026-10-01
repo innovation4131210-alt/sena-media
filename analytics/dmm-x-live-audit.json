@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-01T08:55:55.916Z",
+  "checkedAt": "2026-10-01T14:54:07.603Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -14,58 +14,34 @@
   "inventory": {
     "complete": true,
     "counts": {
-      "scheduled": 2,
-      "sent": 58
+      "sent": 60
     },
-    "scheduledCount": 2,
-    "scheduled": [
-      {
-        "id": "6abd78e45feb60d6345bd158",
-        "dueAt": "2026-10-01T12:30:00.000Z",
-        "kind": "affiliate",
-        "format": "discovery",
-        "linkMode": "direct",
-        "contentId": "midv00305",
-        "sort": "rank",
-        "discountPct": 50,
-        "campaignActive": true
-      },
-      {
-        "id": "6abd78e7af8c06e95950cb28",
-        "dueAt": "2026-10-01T14:30:00.000Z",
-        "kind": "affiliate",
-        "format": "decision",
-        "linkMode": "direct",
-        "contentId": "sqte00584",
-        "sort": "review",
-        "discountPct": 0,
-        "campaignActive": false
-      }
-    ]
+    "scheduledCount": 0,
+    "scheduled": []
   },
   "metrics": {
     "samplePosts": 40,
     "overall": {
       "posts": 40,
-      "impressions": 1205,
+      "impressions": 1136,
       "clicks": 7,
       "reactions": 2,
       "comments": 7,
       "reposts": 0,
-      "ctrPct": 0.58
+      "ctrPct": 0.62
     },
     "affiliate": {
       "posts": 26,
-      "impressions": 933,
+      "impressions": 864,
       "clicks": 6,
       "reactions": 1,
       "comments": 7,
       "reposts": 0,
-      "ctrPct": 0.64
+      "ctrPct": 0.69
     },
     "byFormat": {
       "discovery": {
-        "posts": 8,
+        "posts": 9,
         "impressions": 226,
         "clicks": 0,
         "reactions": 0,
@@ -74,7 +50,7 @@
         "ctrPct": 0
       },
       "decision": {
-        "posts": 8,
+        "posts": 9,
         "impressions": 291,
         "clicks": 4,
         "reactions": 0,
@@ -94,7 +70,7 @@
         "ctrPct": 0
       },
       "direct": {
-        "posts": 11,
+        "posts": 13,
         "impressions": 390,
         "clicks": 4,
         "reactions": 0,
@@ -104,6 +80,42 @@
       }
     },
     "posts": [
+      {
+        "id": "6abd78e7af8c06e95950cb28",
+        "sentAt": "2026-10-01T14:30:47.730Z",
+        "externalLink": "https://x.com/1647584462233010176/status/2105666742768873941",
+        "metricsUpdatedAt": "2026-10-01T14:30:56.699Z",
+        "kind": "affiliate",
+        "format": "decision",
+        "linkMode": "direct",
+        "contentId": "sqte00584",
+        "sort": "review",
+        "discountPct": 0,
+        "campaignActive": false,
+        "impressions": 0,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
+      },
+      {
+        "id": "6abd78e45feb60d6345bd158",
+        "sentAt": "2026-10-01T12:30:27.427Z",
+        "externalLink": "https://x.com/1647584462233010176/status/2105636458505601167",
+        "metricsUpdatedAt": "2026-10-01T12:30:36.558Z",
+        "kind": "affiliate",
+        "format": "discovery",
+        "linkMode": "direct",
+        "contentId": "midv00305",
+        "sort": "rank",
+        "discountPct": 50,
+        "campaignActive": true,
+        "impressions": 0,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
+      },
       {
         "id": "6abd78e35feb60d6345bd0e4",
         "sentAt": "2026-10-01T03:30:04.804Z",
@@ -783,42 +795,6 @@
         "discountPct": null,
         "campaignActive": null,
         "impressions": 31,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
-      },
-      {
-        "id": "6aaba104b6213d08e069a7be",
-        "sentAt": "2026-09-17T14:30:11.696Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2100593161219330496",
-        "metricsUpdatedAt": "2026-10-01T03:08:31.082Z",
-        "kind": "affiliate",
-        "format": null,
-        "linkMode": null,
-        "contentId": "savr00968",
-        "sort": "review",
-        "discountPct": null,
-        "campaignActive": null,
-        "impressions": 33,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
-      },
-      {
-        "id": "6aab4d02fe9fec6c601e46ad",
-        "sentAt": "2026-09-17T12:30:29.345Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2100563036486488182",
-        "metricsUpdatedAt": "2026-10-01T03:08:31.082Z",
-        "kind": "affiliate",
-        "format": null,
-        "linkMode": null,
-        "contentId": "ebwh00267",
-        "sort": "rank",
-        "discountPct": null,
-        "campaignActive": null,
-        "impressions": 36,
         "clicks": 0,
         "reactions": 0,
         "comments": 0,
