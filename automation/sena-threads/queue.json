@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T18:18:54.430Z",
+  "updatedAt": "2026-10-01T12:48:54.104Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -71,10 +71,13 @@
       "text": "黒を着る日は、アクセサリーを足すか引くかで毎回迷う。\n\nシンプル派？ ひとつだけ存在感を出す派？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_07_black_dress_vanity.jpeg",
       "visualFirst": true,
-      "status": "scheduled",
+      "status": "sent",
       "bufferPostId": "6ab755d080521ded5522668c",
       "bufferDueAt": "2026-10-01T11:10:00.000Z",
-      "processedAt": "2026-09-26T05:19:12.747Z"
+      "processedAt": "2026-09-26T05:19:12.747Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/Dd8xQ7DG31g",
+      "sentAt": "2026-10-01T11:10:10.876Z",
+      "statusSyncedAt": "2026-10-01T12:48:54.104Z"
     },
     {
       "key": "sena-threads-05",
@@ -209,8 +212,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 9,
-    "verifiedAt": "2026-09-30T18:18:54.430Z"
+    "scheduledCount": 8,
+    "verifiedAt": "2026-10-01T12:48:54.104Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
