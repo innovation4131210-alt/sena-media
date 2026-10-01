@@ -90,7 +90,7 @@
   },
   {
     "id": "D06-PM",
-    "type": "ブランド",
+    "type": "note導線",
     "text": "AIからの「完了しました」を、何で確かめるか。\n\n文章は本文、ファイルは実物、設定は反映後の値、自動化は実行結果。\n\n4つの確認方法を、コピペできる指示付きで無料記事にまとめた。\nhttps://note.com/ai_command/n/n29d46a1b4341",
     "experimentId": "NOTE_AB_7DAY_V1",
     "funnelRole": "free_A"
@@ -132,7 +132,7 @@
   },
   {
     "id": "D08-PM",
-    "type": "ブランド",
+    "type": "note導線",
     "text": "「できません」が返ったときは、依頼を丸ごと引き取る前に切り分ける。\n\n権限がないのか。\n情報が足りないのか。\n試した方法が失敗したのか。\n\nそれぞれで次の一手は違う。最初に返す指示はこちら。\nhttps://note.com/ai_command/n/n465168c06f64",
     "experimentId": "NOTE_AB_7DAY_V1",
     "funnelRole": "free_B"
@@ -153,7 +153,7 @@
   },
   {
     "id": "D09-PM",
-    "type": "参加型",
+    "type": "note導線",
     "text": "AIへ設定変更を頼んだ後、何を見れば「反映した」と分かるか。\n\n変更後の値を読み直し、指定と照合する。ファイルなら実物、自動化なら実行結果を見る。\n\n作業ごとの確認指示を無料記事に置いた。\nhttps://note.com/ai_command/n/n29d46a1b4341",
     "experimentId": "NOTE_AB_7DAY_V1",
     "funnelRole": "free_A"
@@ -174,7 +174,7 @@
   },
   {
     "id": "D10-PM",
-    "type": "note導線",
+    "type": "実務ノウハウ",
     "text": "AIへの依頼を7場面で整理すると、どこで止まったかを説明しやすい。\n\n最初の依頼 / 調査 / 制作 / 修正 / 納品確認 / 引き継ぎ / 自動化\n\n僕なら、全部の指示を書き直す前に、今詰まっている場面だけを選ぶ。",
     "experimentId": "NOTE_AB_7DAY_V1",
     "funnelRole": "standalone"
@@ -216,7 +216,7 @@
   },
   {
     "id": "D12-PM",
-    "type": "作戦報告",
+    "type": "note導線",
     "text": "「できません」の理由が分からないまま、別の依頼を書き直していませんか。\n\n権限不足、情報不足、方法の失敗を分けると、次に用意するものが決まる。\n\n丸ごとやり直す前に返す1文を、無料記事にまとめた。\nhttps://note.com/ai_command/n/n465168c06f64",
     "experimentId": "NOTE_AB_7DAY_V1",
     "funnelRole": "free_B"
