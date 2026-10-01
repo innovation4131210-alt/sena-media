@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6abd78e7af8c06e95950cb28",
-  "last_due_at": "2026-10-01T14:30:00.000Z",
+  "last_buffer_post_id": "6abeca9db435ee011900a002",
+  "last_due_at": "2026-10-02T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -38,9 +38,11 @@
     "snos00313",
     "sqte00647",
     "midv00305",
-    "sqte00584"
+    "sqte00584",
+    "1start00568",
+    "sqte00614"
   ],
-  "last_content_id": "sqte00584",
+  "last_content_id": "sqte00614",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -614,31 +616,85 @@
       "source_position": 8,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abeca9863de9e09a27c82fb",
+      "due_at": "2026-10-02T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 1
+    },
+    {
+      "buffer_post_id": "6abeca9b45400a0e30fa926c",
+      "due_at": "2026-10-02T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "1start00568",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "SODグループ30％OFF第2弾",
+      "campaign_end": "2026-10-06 23:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "青空ひかり",
+      "actress_popularity_score": 537.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 12,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6abeca9db435ee011900a002",
+      "due_at": "2026-10-02T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "sqte00614",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "天馬ゆい",
+      "actress_popularity_score": 542.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 1,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 1,
-  "batch_date": "2026-10-01",
+  "engagement_index": 2,
+  "batch_date": "2026-10-02",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6abd78e35feb60d6345bd0e4",
-      "due_at": "2026-10-01T03:30:00.000Z"
+      "buffer_post_id": "6abeca9863de9e09a27c82fb",
+      "due_at": "2026-10-02T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6abd78e45feb60d6345bd158",
-      "due_at": "2026-10-01T12:30:00.000Z"
+      "buffer_post_id": "6abeca9b45400a0e30fa926c",
+      "due_at": "2026-10-02T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6abd78e7af8c06e95950cb28",
-      "due_at": "2026-10-01T14:30:00.000Z"
+      "buffer_post_id": "6abeca9db435ee011900a002",
+      "due_at": "2026-10-02T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 3,
+  "discovery_template_index": 1,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 3,
+  "decision_template_index": 1,
   "last_run": {
     "status": "success",
-    "at": "2026-09-30T21:02:31.373934+00:00",
-    "batch_date": "2026-10-01",
+    "at": "2026-10-01T21:03:25.684178+00:00",
+    "batch_date": "2026-10-02",
     "recovered_count": 0,
     "created_count": 3
   }
