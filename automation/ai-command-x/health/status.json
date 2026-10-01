@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-01T15:40:50+00:00",
+  "checkedAt": "2026-10-01T17:12:56+00:00",
   "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -71,7 +71,7 @@
     ]
   },
   "unusedPreparedCount": 75,
-  "analyticsAgeMinutes": 106.1,
+  "analyticsAgeMinutes": 13.5,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -90,6 +90,16 @@
     },
     "paid_product": {
       "url": "https://note.com/ai_command/n/n7b74f56a03dc",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "free_A": {
+      "url": "https://note.com/ai_command/n/n29d46a1b4341",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "free_B": {
+      "url": "https://note.com/ai_command/n/n465168c06f64",
       "httpStatus": 200,
       "ok": true
     }
