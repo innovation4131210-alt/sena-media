@@ -32,6 +32,7 @@ jobs:
       - name: Save posting history
         if: always()
         run: |
+          set -e
           if git diff --quiet -- automation/dmm-x/state.json; then
             exit 0
           fi
@@ -39,4 +40,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation/dmm-x/state.json
           git commit -m "chore: remember queued DMM public-runner batch"
-          git push
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git fetch origin main
+            git rebase origin/main
+          done
+          exit 1
