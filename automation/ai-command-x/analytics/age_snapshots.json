@@ -3,7 +3,7 @@
   "posts": {
     "6abbafb558fe17a50e004e57": {
       "24": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       },
       "72": {
@@ -67,7 +67,7 @@
         "snapshot": null
       },
       "72": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       }
     },
@@ -100,7 +100,17 @@
         "status": "pending",
         "snapshot": null
       }
+    },
+    "6abbb8661c9809a958f65016": {
+      "24": {
+        "status": "pending",
+        "snapshot": null
+      },
+      "72": {
+        "status": "pending",
+        "snapshot": null
+      }
     }
   },
-  "generatedAt": "2026-10-02T12:05:37+00:00"
+  "generatedAt": "2026-10-02T23:49:27+00:00"
 }
