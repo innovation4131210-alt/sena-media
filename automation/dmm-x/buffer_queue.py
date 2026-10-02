@@ -247,11 +247,82 @@ def x_weighted_length(text):
 def ensure_x_length(text, affiliate_url=None):
     if x_weighted_length(text) <= 280:
         return text
-    if affiliate_url and affiliate_url in text:
-        compact = "【PR】作品情報はこちら。18歳未満閲覧禁止。\n" + affiliate_url
-        if x_weighted_length(compact) <= 280:
-            return compact
+    # Never silently discard conversion-critical facts. Builders must provide a
+    # compact variant that still contains the performer/value/campaign proof.
     raise RuntimeError("Generated post exceeds X weighted length 280")
+
+
+def compact_campaign_line(meta):
+    meta = meta or {}
+    if not meta.get("campaign_active"):
+        return ""
+    title = str(meta.get("campaign_title") or "").strip()
+    if len(title) > 18:
+        title = title[:17].rstrip() + "…"
+    end = str(meta.get("campaign_end") or "").strip()
+    end_label = ""
+    if end:
+        try:
+            parsed = parse_dmm_datetime(end)
+            if parsed is not None:
+                end_label = f"{parsed.month}/{parsed.day}まで"
+        except Exception:
+            end_label = end[:10]
+    if title and end_label:
+        return f"FANZA公式：{title}（{end_label}）"
+    if title:
+        return f"FANZA公式：{title}"
+    if end_label:
+        return f"FANZA公式キャンペーン対象（{end_label}）"
+    return "FANZA公式キャンペーン対象"
+
+
+def compact_value_line(meta):
+    meta = meta or {}
+    parts = []
+    actress = str(meta.get("actress_name") or "").strip()
+    if actress:
+        parts.append(f"出演：{actress}")
+
+    try:
+        average = float(meta.get("review_average") or 0)
+        count = int(meta.get("review_count") or 0)
+    except (TypeError, ValueError):
+        average, count = 0, 0
+    if average > 0 and count > 0:
+        parts.append(f"★{average:.1f}（{count}件）")
+
+    discount = int(meta.get("discount_pct") or 0)
+    price = meta.get("price")
+    if discount >= 10:
+        parts.append(f"約{discount}%OFF")
+    elif price:
+        try:
+            parts.append(f"{int(price):,}円")
+        except (TypeError, ValueError):
+            pass
+    return " / ".join(parts[:3])
+
+
+def build_compact_affiliate_text(title, affiliate_url, meta, *, format_name):
+    value = compact_value_line(meta)
+    campaign = compact_campaign_line(meta)
+    lead = "【PR】今夜の候補。" if format_name == "discovery" else "【PR】レビュー重視の候補。"
+
+    for title_limit in (22, 16, 10, 0):
+        rows = [lead]
+        if title_limit:
+            rows.append(f"『{compact_title(title, limit=title_limit)}』")
+        if value:
+            rows.append(value)
+        if campaign:
+            rows.append(campaign)
+        rows.append("18歳未満閲覧禁止。")
+        rows.append(affiliate_url)
+        text = "\n".join(rows)
+        if x_weighted_length(text) <= 280:
+            return text
+    raise RuntimeError("Compact affiliate post still exceeds X weighted length 280")
 
 
 def is_generic_fallback_text(text):
@@ -261,11 +332,16 @@ def is_generic_fallback_text(text):
     ))
 
 
-def build_discovery_text(template_index, title, sort_order, affiliate_url, facts=""):
+def build_discovery_text(template_index, title, sort_order, affiliate_url, facts="", meta=None):
     short_title = compact_title(title, limit=48)
     template = DISCOVERY_TEMPLATES[template_index % len(DISCOVERY_TEMPLATES)]
     body = template.format(title=short_title, facts_line=facts_line(facts))
-    return ensure_x_length(body + "\n" + affiliate_url, affiliate_url)
+    text = body + "\n" + affiliate_url
+    if x_weighted_length(text) <= 280:
+        return text
+    return build_compact_affiliate_text(
+        title, affiliate_url, meta or {}, format_name="discovery"
+    )
 
 
 def build_decision_text(template_index, title, sort_order, affiliate_url, facts="", meta=None):
@@ -307,7 +383,12 @@ def build_decision_text(template_index, title, sort_order, affiliate_url, facts=
         template = DECISION_TEMPLATES[template_index % len(DECISION_TEMPLATES)]
         body = template.format(title=short_title, facts_line=facts_line(facts))
 
-    return ensure_x_length(body + "\n" + affiliate_url, affiliate_url)
+    text = body + "\n" + affiliate_url
+    if x_weighted_length(text) <= 280:
+        return text
+    return build_compact_affiliate_text(
+        title, affiliate_url, meta, format_name="decision"
+    )
 
 
 def channel_inventory(organization_id, channel_id):
@@ -814,8 +895,13 @@ def rebuild_existing_affiliate_text(history_row, due_at):
 
     due_jst = due_at.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
     campaign_info = active_campaign_info(item, required_at=due_jst)
+    review_average, review_count = review_values(item)
     meta = {
+        "price": price_value(item),
         "discount_pct": discount_percent(item),
+        "review_average": review_average,
+        "review_count": review_count,
+        "actress_name": actress_name,
         "campaign_active": bool(campaign_info.get("active")),
         "campaign_title": campaign_info.get("title") or "",
         "campaign_end": campaign_info.get("date_end") or "",
@@ -834,7 +920,13 @@ def rebuild_existing_affiliate_text(history_row, due_at):
                 if end_label else "\nFANZA公式キャンペーン対象"
             )
         rebuilt = build_discovery_text(
-            template_index, title, located_sort, affiliate_url, facts + campaign_note
+            template_index, title, located_sort, affiliate_url, facts + campaign_note, {
+                **meta,
+                "price": price_value(item),
+                "review_average": review_values(item)[0],
+                "review_count": review_values(item)[1],
+                "actress_name": actress_name,
+            }
         )
     elif format_name == "decision":
         rebuilt = build_decision_text(
@@ -990,7 +1082,7 @@ def queue_affiliate(
             else:
                 campaign_note = "\nFANZA公式キャンペーン対象"
         lead_text = build_discovery_text(
-            index, title, actual_sort, affiliate_url, facts + campaign_note
+            index, title, actual_sort, affiliate_url, facts + campaign_note, meta
         )
         post = create_post(
             lead_text,
@@ -1024,6 +1116,9 @@ def queue_affiliate(
     )
     state["post_history"][-1]["link_mode"] = link_mode
     state["post_history"][-1]["format"] = format_name
+    state["post_history"][-1]["price"] = meta.get("price")
+    state["post_history"][-1]["review_average"] = meta.get("review_average")
+    state["post_history"][-1]["review_count"] = meta.get("review_count")
     state["post_history"][-1]["discount_pct"] = int(meta.get("discount_pct") or 0)
     state["post_history"][-1]["has_image_url"] = bool(meta.get("image_url"))
     state["post_history"][-1]["campaign_active"] = bool(meta.get("campaign_active"))
