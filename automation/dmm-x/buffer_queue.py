@@ -222,7 +222,7 @@ def x_weighted_length(text):
     """
     total = 0
     cursor = 0
-    for match in re.finditer(r"https?://\\S+", str(text or "")):
+    for match in re.finditer(r"https?://\S+", str(text or "")):
         for char in text[cursor:match.start()]:
             codepoint = ord(char)
             total += 1 if (
