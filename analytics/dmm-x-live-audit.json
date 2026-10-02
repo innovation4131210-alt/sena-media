@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-02T08:55:52.626Z",
+  "checkedAt": "2026-10-02T10:10:18.361Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -28,7 +28,20 @@
         "contentId": "1start00568",
         "sort": "rank",
         "discountPct": 30,
-        "campaignActive": true
+        "campaignActive": true,
+        "readback": {
+          "text": "【PR】作品情報はこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3D1start00568&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 66,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": true,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "青空ひかり",
+          "actressNamePresent": false,
+          "campaignExpected": true,
+          "campaignMentionPresent": false,
+          "campaignTitle": "SODグループ30％OFF第2弾",
+          "campaignEnd": "2026-10-06 23:59:59"
+        }
       },
       {
         "id": "6abeca9db435ee011900a002",
@@ -39,68 +52,81 @@
         "contentId": "sqte00614",
         "sort": "review",
         "discountPct": 0,
-        "campaignActive": false
+        "campaignActive": false,
+        "readback": {
+          "text": "【PR】作品情報はこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dsqte00614&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 66,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": true,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "天馬ゆい",
+          "actressNamePresent": false,
+          "campaignExpected": false,
+          "campaignMentionPresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null
+        }
       }
     ]
   },
   "metrics": {
-    "samplePosts": 36,
+    "samplePosts": 40,
     "overall": {
-      "posts": 36,
-      "impressions": 1047,
+      "posts": 40,
+      "impressions": 1193,
       "clicks": 7,
       "reactions": 2,
-      "comments": 6,
+      "comments": 7,
       "reposts": 0,
-      "ctrPct": 0.67
+      "ctrPct": 0.59
     },
     "affiliate": {
-      "posts": 24,
-      "impressions": 828,
+      "posts": 26,
+      "impressions": 926,
       "clicks": 6,
       "reactions": 1,
-      "comments": 6,
+      "comments": 7,
       "reposts": 0,
-      "ctrPct": 0.72
+      "ctrPct": 0.65
     },
     "byFormat": {
       "discovery": {
-        "posts": 8,
-        "impressions": 213,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 5,
-        "reposts": 0,
-        "ctrPct": 0
-      },
-      "decision": {
-        "posts": 8,
-        "impressions": 268,
-        "clicks": 4,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0,
-        "ctrPct": 1.49
-      }
-    },
-    "byLinkMode": {
-      "first_reply": {
-        "posts": 6,
-        "impressions": 187,
+        "posts": 9,
+        "impressions": 260,
         "clicks": 0,
         "reactions": 0,
         "comments": 6,
         "reposts": 0,
         "ctrPct": 0
       },
-      "direct": {
-        "posts": 12,
-        "impressions": 398,
+      "decision": {
+        "posts": 9,
+        "impressions": 319,
         "clicks": 4,
         "reactions": 0,
         "comments": 0,
         "reposts": 0,
-        "ctrPct": 1.01
+        "ctrPct": 1.25
+      }
+    },
+    "byLinkMode": {
+      "first_reply": {
+        "posts": 7,
+        "impressions": 234,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 7,
+        "reposts": 0,
+        "ctrPct": 0
+      },
+      "direct": {
+        "posts": 13,
+        "impressions": 449,
+        "clicks": 4,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0,
+        "ctrPct": 0.89
       }
     },
     "posts": [
@@ -485,22 +511,74 @@
       {
         "id": "6ab43e63981b51098bd9f6c2",
         "sentAt": "2026-09-24T03:30:05.416Z",
-        "metricsError": "Buffer query failed after retries: 429"
+        "externalLink": "https://x.com/1647584462233010176/status/2102963756028280914",
+        "metricsUpdatedAt": "2026-10-02T02:08:41.114Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "impressions": 24,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
       },
       {
         "id": "6ab2ecc998ae6feaa619b1b7",
         "sentAt": "2026-09-23T13:04:48.300Z",
-        "metricsError": "Buffer query failed after retries: 429"
+        "externalLink": "https://x.com/1647584462233010176/status/2102745999022211229",
+        "metricsUpdatedAt": "2026-10-02T02:08:41.114Z",
+        "kind": "affiliate",
+        "format": "decision",
+        "linkMode": "direct",
+        "contentId": "vrkm01393",
+        "sort": "review",
+        "discountPct": 30,
+        "campaignActive": true,
+        "impressions": 51,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
       },
       {
         "id": "6ab2ecc7340f92dcbe153aba",
         "sentAt": "2026-09-23T12:30:20.144Z",
-        "metricsError": "Buffer query failed after retries: 429"
+        "externalLink": "https://x.com/1647584462233010176/status/2102737323364381057",
+        "metricsUpdatedAt": "2026-10-02T02:08:41.114Z",
+        "kind": "affiliate",
+        "format": "discovery",
+        "linkMode": "first_reply",
+        "contentId": "atkd00351",
+        "sort": "rank",
+        "discountPct": 50,
+        "campaignActive": true,
+        "impressions": 47,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 1,
+        "reposts": 0
       },
       {
         "id": "6ab2ecc52aa0e20bb467e023",
         "sentAt": "2026-09-23T03:30:04.950Z",
-        "metricsError": "Buffer query failed after retries: 429"
+        "externalLink": "https://x.com/1647584462233010176/status/2102601366099079633",
+        "metricsUpdatedAt": "2026-10-02T02:08:41.115Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "impressions": 24,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
       },
       {
         "id": "6ab19b4a1177eabccaee8f29",
