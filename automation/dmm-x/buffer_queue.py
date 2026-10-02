@@ -254,6 +254,13 @@ def ensure_x_length(text, affiliate_url=None):
     raise RuntimeError("Generated post exceeds X weighted length 280")
 
 
+def is_generic_fallback_text(text):
+    return bool(re.fullmatch(
+        r"【PR】作品情報はこちら。18歳未満閲覧禁止。\s+https?://\S+",
+        str(text or "").strip(),
+    ))
+
+
 def build_discovery_text(template_index, title, sort_order, affiliate_url, facts=""):
     short_title = compact_title(title, limit=48)
     template = DISCOVERY_TEMPLATES[template_index % len(DISCOVERY_TEMPLATES)]
@@ -752,6 +759,140 @@ def choose_product(used_ids, preferred_sort, *, campaign_focus=False, required_a
     raise RuntimeError("No eligible unpublished DMM product was found")
 
 
+def edit_post_text(post_id, text):
+    mutation = """mutation {
+      editPost(input: {
+        id: %s,
+        text: %s
+      }) {
+        ... on PostActionSuccess { post { id text dueAt status } }
+        ... on MutationError { message }
+      }
+    }""" % (esc(post_id), esc(text))
+    result = gql(mutation)["editPost"]
+    if result.get("message"):
+        raise RuntimeError(result["message"])
+    post = result["post"]
+    if post.get("id") != post_id or post.get("text") != text:
+        raise RuntimeError("Buffer editPost readback mismatch")
+    return post
+
+
+def find_item_by_content_id(content_id, preferred_sort):
+    orders = []
+    for sort_order in (preferred_sort, "rank", "review", "date"):
+        if sort_order and sort_order not in orders:
+            orders.append(sort_order)
+    for sort_order in orders:
+        for item in dmm_items(sort_order):
+            item_id = str(item.get("content_id") or item.get("product_id") or "").strip()
+            if item_id == content_id:
+                return item, sort_order
+    return None, None
+
+
+def rebuild_existing_affiliate_text(history_row, due_at):
+    content_id = str(history_row.get("content_id") or "").strip()
+    if not content_id:
+        raise RuntimeError("Scheduled affiliate post is missing content_id")
+
+    item, located_sort = find_item_by_content_id(
+        content_id,
+        history_row.get("source_sort") or history_row.get("sort"),
+    )
+    if not item:
+        raise RuntimeError(f"Could not reload DMM item {content_id} for P0 text repair")
+
+    title = str(item.get("title") or "").strip()
+    affiliate_url = str(item.get("affiliateURL") or "").strip()
+    if not title or not affiliate_url:
+        raise RuntimeError(f"DMM item {content_id} is missing title or affiliate URL")
+
+    actress_name = str(history_row.get("actress_name") or "").strip()
+    if not actress_name:
+        actress_name = actress_signal(item)[0]
+
+    due_jst = due_at.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    campaign_info = active_campaign_info(item, required_at=due_jst)
+    meta = {
+        "discount_pct": discount_percent(item),
+        "campaign_active": bool(campaign_info.get("active")),
+        "campaign_title": campaign_info.get("title") or "",
+        "campaign_end": campaign_info.get("date_end") or "",
+        "recent_release": recent_release(item),
+    }
+    facts = product_facts(item, actress_name)
+    template_index = int(history_row.get("template_index") or 0)
+    format_name = history_row.get("format")
+
+    if format_name == "discovery":
+        campaign_note = ""
+        if meta["campaign_active"]:
+            end_label = str(meta["campaign_end"] or "").strip()[:10]
+            campaign_note = (
+                f"\nFANZA公式キャンペーン対象（{end_label}まで）"
+                if end_label else "\nFANZA公式キャンペーン対象"
+            )
+        rebuilt = build_discovery_text(
+            template_index, title, located_sort, affiliate_url, facts + campaign_note
+        )
+    elif format_name == "decision":
+        rebuilt = build_decision_text(
+            template_index, title, located_sort, affiliate_url, facts, meta
+        )
+    else:
+        raise RuntimeError(f"Unknown affiliate format for P0 repair: {format_name}")
+
+    if is_generic_fallback_text(rebuilt):
+        raise RuntimeError(f"P0 repair for {content_id} still produced generic fallback")
+    if x_weighted_length(rebuilt) > 280:
+        raise RuntimeError(f"P0 repair for {content_id} exceeds X weighted length")
+    return rebuilt
+
+
+def repair_scheduled_generic_fallbacks(state, live_posts):
+    history_by_id = {
+        row.get("buffer_post_id"): row
+        for row in state.get("post_history", [])
+        if row.get("buffer_post_id")
+    }
+    now_utc = datetime.now(timezone.utc)
+    repaired = []
+
+    for post in live_posts:
+        if post.get("status") != "scheduled":
+            continue
+        due_at = parse_dmm_datetime(post.get("dueAt"))
+        if due_at is None:
+            continue
+        if due_at.tzinfo is None:
+            due_at = due_at.replace(tzinfo=timezone.utc)
+        if due_at.astimezone(timezone.utc) <= now_utc:
+            continue
+
+        row = history_by_id.get(post.get("id")) or {}
+        if row.get("kind") != "affiliate":
+            continue
+        if not is_generic_fallback_text(post.get("text")):
+            continue
+
+        rebuilt = rebuild_existing_affiliate_text(row, due_at)
+        edited = edit_post_text(post["id"], rebuilt)
+
+        row["p0_original_generic_fallback"] = True
+        row["p0_text_repaired_at"] = datetime.now(timezone.utc).isoformat()
+        row["p0_repaired_weighted_length"] = x_weighted_length(rebuilt)
+        repaired.append({
+            "id": edited.get("id"),
+            "due_at": edited.get("dueAt"),
+            "content_id": row.get("content_id"),
+            "format": row.get("format"),
+            "weighted_length": x_weighted_length(rebuilt),
+        })
+
+    return repaired
+
+
 def create_post(text, channel_id, *, due_at, first_reply=None, image_url=None):
     image_url = str(image_url or "").strip() if ENABLE_DMM_MEDIA else ""
     top_assets = ""
@@ -923,7 +1064,13 @@ def main():
         state["batch_slots"] = {}
 
     recovered = recover_existing_batch(state, live_posts, batch_date)
+    repaired = repair_scheduled_generic_fallbacks(state, live_posts)
     persist_state(state)
+    for item in repaired:
+        print(
+            f"Repaired generic fallback {item['format']} post {item['id']} "
+            f"({item['content_id']}, weighted={item['weighted_length']})"
+        )
     for item in recovered:
         print(
             f"Recovered existing {item['slot']} post "
@@ -995,6 +1142,7 @@ def main():
         "at": datetime.now(timezone.utc).isoformat(),
         "batch_date": batch_date,
         "recovered_count": len(recovered),
+        "repaired_count": len(repaired),
         "created_count": len(queued),
     }
     persist_state(state)
