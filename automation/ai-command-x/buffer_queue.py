@@ -57,24 +57,28 @@ def get_channels(org_id: str):
 
 
 def select_twitter_channel():
-    candidates = []
+    # Fail closed: this scheduler may only post to the verified AI Command account.
+    expected_id = "6abb9a71ea19ca0bde216771"
+    expected_name = "ai_command_jp"
+    if CHANNEL_HINT != expected_name:
+        raise RuntimeError("AI Command channel hint does not match the locked account")
+
+    matches = []
     for org in get_organizations():
         for ch in get_channels(org["id"]):
-            if ch["service"] != "twitter":
-                continue
-            candidates.append((org, ch))
-            hay = (ch.get("name") or "").lower().replace("@", "")
-            if CHANNEL_HINT in hay:
-                return org, ch
+            name = (ch.get("name") or "").strip().lower().removeprefix("@")
+            if (
+                ch.get("service") == "twitter"
+                and ch.get("id") == expected_id
+                and name == expected_name
+            ):
+                matches.append((org, ch))
 
-    if len(candidates) == 1:
-        return candidates[0]
-
-    names = [f'{o["name"]}: {c["name"]} ({c["id"]})' for o, c in candidates]
-    raise RuntimeError(
-        "Target X channel was not uniquely resolved. "
-        + ("Candidates: " + ", ".join(names) if names else "No Twitter channel found.")
-    )
+    if len(matches) != 1:
+        raise RuntimeError(
+            "Expected exactly one verified AI Command X channel; refusing to schedule"
+        )
+    return matches[0]
 
 
 def get_existing_posts(org_id: str, channel_id: str):
