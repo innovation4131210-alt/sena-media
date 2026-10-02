@@ -1,4 +1,4 @@
-import {mkdir, readFile, writeFile} from 'node:fs/promises';
+import {mkdir, readFile, writeFile, rename} from 'node:fs/promises';
 
 const API_URL = 'https://api.buffer.com';
 const KEY = process.env.DMM_BUFFER_API_KEY || '';
@@ -6,24 +6,39 @@ const TARGET = 'ero_mimimimi';
 const STATE_PATH = 'automation/dmm-x/state.json';
 const OUT_PATH = 'analytics/dmm-x-live-audit.json';
 
+let cooldown = null;
+let readDeadline = Infinity;
+
+function rateLimitError(retryAfter) {
+  const seconds = Number(retryAfter);
+  const until = retryAfter && !Number.isFinite(seconds) ? Date.parse(retryAfter) : NaN;
+  const waitMs = Number.isFinite(seconds) && seconds > 0
+    ? seconds * 1000 : (Number.isFinite(until) && until > Date.now() ? until - Date.now() : 60000);
+  cooldown = {status: 429, retryAt: new Date(Date.now() + waitMs).toISOString()};
+  return Object.assign(new Error('Buffer rate limited; collection stopped'), {cooldown});
+}
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function gql(query, variables = {}) {
+  if (cooldown) throw Object.assign(new Error('Buffer cooldown active'), {cooldown});
   if (!KEY) throw new Error('DMM_BUFFER_API_KEY is not configured');
   if (!/^\s*query\b/.test(query) || /\bmutation\b/.test(query)) throw new Error('Read-only query required');
 
   const fallbackDelays = [2000, 5000, 10000];
   let lastStatus = null;
   for (let attempt = 0; attempt < 4; attempt++) {
+    if (Date.now() >= readDeadline) throw Object.assign(new Error('Audit time budget exhausted'), {timeBudget: true});
     const res = await fetch(API_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', Authorization: `Bearer ${KEY}`},
       body: JSON.stringify({query, variables}),
-      signal: AbortSignal.timeout(30000),
+      signal: AbortSignal.timeout(Math.max(1, Math.min(30000, readDeadline - Date.now()))),
     });
     lastStatus = res.status;
+    if (res.status === 429) throw rateLimitError(res.headers.get('retry-after'));
 
     let json = {};
     try {
@@ -36,25 +51,20 @@ async function gql(query, variables = {}) {
       return json.data;
     }
 
-    if (![429, 500, 502, 503, 504].includes(res.status)) {
+    if (![500, 502, 503, 504].includes(res.status)) {
       throw new Error(`Buffer query failed: ${res.status}`);
     }
     if (attempt >= 3) break;
 
-    let waitMs = fallbackDelays[attempt];
-    if (res.status === 429) {
-      const raw = Number(res.headers.get('retry-after'));
-      if (Number.isFinite(raw) && raw > 0) {
-        waitMs = Math.min(90000, Math.max(1000, Math.round(raw * 1000)));
-      }
-    }
-    await sleep(waitMs);
+    const waitMs = fallbackDelays[attempt];
+    await sleep(Math.max(0, Math.min(waitMs, readDeadline - Date.now())));
   }
   throw new Error(`Buffer query failed after retries: ${lastStatus}`);
 }
 
 function metricMap(metrics = []) {
-  return Object.fromEntries(metrics.map(m => [m.type, Number(m.value ?? 0)]));
+  return Object.fromEntries(metrics.map(m => [m.type, (typeof m.value !== 'number' && typeof m.value !== 'string') || String(m.value).trim() === ''
+    ? null : (Number.isFinite(Number(m.value)) ? Number(m.value) : null)]));
 }
 
 function ctr(clicks, impressions) {
@@ -138,11 +148,26 @@ function summarizeGroup(items) {
     a.reposts += p.reposts ?? 0;
     return a;
   }, {posts: 0, impressions: 0, clicks: 0, reactions: 0, comments: 0, reposts: 0});
+  totals.metricCoverage = {};
+  for (const key of ['impressions', 'clicks', 'reactions', 'comments', 'reposts']) {
+    totals.metricCoverage[key] = items.filter(p => Number.isFinite(p[key])).length;
+    if (!totals.metricCoverage[key]) totals[key] = null;
+  }
   totals.ctrPct = ctr(totals.clicks, totals.impressions);
   return totals;
 }
 
 async function main() {
+  // Leave time for the workflow to persist the result within its eight-minute budget.
+  readDeadline = Date.now() + 240000;
+  let previous = null;
+  try {
+    previous = JSON.parse(await readFile(OUT_PATH, 'utf8'));
+  } catch (error) {
+    if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) throw error;
+  }
+  const previousById = new Map(previous?.account === TARGET
+    ? (previous.metrics?.posts || []).map(post => [post.id, post]) : []);
   const state = JSON.parse(await readFile(STATE_PATH, 'utf8'));
   const historyById = new Map((state.post_history || []).map(x => [x.buffer_post_id, x]));
 
@@ -199,8 +224,24 @@ async function main() {
     .sort((a,b) => new Date(b.sentAt || b.dueAt) - new Date(a.sentAt || a.dueAt))
     .slice(0, 40);
 
-  const sentMetrics = [];
-  for (const p of sentCandidates) {
+  const inventoryCheckedAt = new Date().toISOString();
+  const sentMetrics = sentCandidates.map(p => ({
+    ...(previousById.get(p.id) || {}),
+    id: p.id,
+    sentAt: p.sentAt ?? null,
+    externalLink: p.externalLink ?? null,
+    collectionStatus: previousById.has(p.id) ? 'cached' : 'not_collected',
+  }));
+  let attempted = 0;
+  let collectionStatus = 'in_progress';
+  const deadline = readDeadline;
+  await persistReport(); // Inventory survives later metric failures or interruption locally.
+  for (const [index, p] of sentCandidates.entries()) {
+    if (Date.now() >= deadline) {
+      collectionStatus = 'time_budget_exhausted';
+      break;
+    }
+    attempted += 1;
     try {
       const data = await gql(
         'query($id: PostId!) { post(input:{id:$id}) { id status dueAt sentAt externalLink metricsUpdatedAt metrics { type name value unit } } }',
@@ -209,7 +250,10 @@ async function main() {
       const post = data.post;
       const m = metricMap(post?.metrics || []);
       const h = historyById.get(p.id) || {};
-      sentMetrics.push({
+      if (!post || post.id !== p.id) throw new Error('Buffer post readback missing or mismatched');
+      sentMetrics[index] = {
+        collectionStatus: 'fresh',
+        fetchedAt: new Date().toISOString(),
         id: p.id,
         sentAt: post?.sentAt ?? p.sentAt ?? null,
         externalLink: post?.externalLink ?? p.externalLink ?? null,
@@ -226,76 +270,105 @@ async function main() {
         reactions: m.reactions ?? m.likes ?? null,
         comments: m.comments ?? null,
         reposts: m.reposts ?? m.shares ?? null,
-      });
+      };
     } catch (e) {
-      sentMetrics.push({id: p.id, sentAt: p.sentAt ?? null, metricsError: e.message});
+      sentMetrics[index] = {...sentMetrics[index], metricsError: e.message};
+      if (e.cooldown || e.timeBudget || Date.now() >= deadline) {
+        collectionStatus = e.cooldown ? 'rate_limited' : 'time_budget_exhausted';
+        break;
+      }
     }
+    await persistReport();
   }
+  if (collectionStatus === 'in_progress') {
+    collectionStatus = sentMetrics.every(p => p.collectionStatus === 'fresh') ? 'complete' : 'partial';
+  }
+  await persistReport();
 
-  const comparable = sentMetrics.filter(p => Number.isFinite(p.impressions) && Number.isFinite(p.clicks));
-  const affiliate = comparable.filter(p => p.kind === 'affiliate');
-  const byFormat = {};
-  for (const name of ['discovery','decision']) {
-    byFormat[name] = summarizeGroup(affiliate.filter(p => p.format === name));
-  }
-  const byLinkMode = {};
-  for (const name of ['first_reply','direct']) {
-    byLinkMode[name] = summarizeGroup(affiliate.filter(p => p.linkMode === name));
-  }
-
-  const report = {
-    version: 1,
-    checkedAt: new Date().toISOString(),
-    readOnly: true,
-    account: TARGET,
-    connection: {
-      channelId: match.channel.id,
-      service: match.channel.service,
-      isDisconnected: match.channel.isDisconnected,
-      isLocked: match.channel.isLocked,
-      isQueuePaused: match.channel.isQueuePaused,
-      healthy: !match.channel.isDisconnected && !match.channel.isLocked && !match.channel.isQueuePaused,
-    },
-    inventory: {
-      complete: true,
-      counts,
-      scheduledCount: scheduled.length,
-      scheduled,
-    },
-    metrics: {
-      samplePosts: comparable.length,
-      overall: summarizeGroup(comparable),
-      affiliate: summarizeGroup(affiliate),
-      byFormat,
-      byLinkMode,
-      posts: sentMetrics,
-      note: 'Buffer platform metrics only. DMM conversions/revenue require official DMM report data and are not inferred here.',
-    },
-    sourceState: {
-      batchDate: state.batch_date ?? null,
-      contentStrategyVersion: state.content_strategy_version ?? null,
-      lastBufferPostId: state.last_buffer_post_id ?? null,
-      lastDueAt: state.last_due_at ?? null,
+  async function persistReport() {
+    const comparable = sentMetrics.filter(p => p.collectionStatus === 'fresh').filter(p => Number.isFinite(p.impressions) && Number.isFinite(p.clicks));
+    const affiliate = comparable.filter(p => p.kind === 'affiliate');
+    const byFormat = {};
+    for (const name of ['discovery','decision']) {
+      byFormat[name] = summarizeGroup(affiliate.filter(p => p.format === name));
     }
-  };
-
-  await mkdir('analytics', {recursive: true});
-  await writeFile(OUT_PATH, JSON.stringify(report, null, 2) + '\n');
-  console.log(JSON.stringify({
-    checkedAt: report.checkedAt,
-    healthy: report.connection.healthy,
-    scheduledCount: report.inventory.scheduledCount,
-    nextScheduled: report.inventory.scheduled.slice(0, 5),
-    metrics: {
-      samplePosts: report.metrics.samplePosts,
-      overall: report.metrics.overall,
-      byFormat: report.metrics.byFormat,
-      byLinkMode: report.metrics.byLinkMode,
+    const byLinkMode = {};
+    for (const name of ['first_reply','direct']) {
+      byLinkMode[name] = summarizeGroup(affiliate.filter(p => p.linkMode === name));
     }
-  }, null, 2));
+
+    const report = {
+      version: 2,
+      checkedAt: inventoryCheckedAt,
+      updatedAt: new Date().toISOString(),
+      readOnly: true,
+      account: TARGET,
+      connection: {
+        channelId: match.channel.id,
+        service: match.channel.service,
+        isDisconnected: match.channel.isDisconnected,
+        isLocked: match.channel.isLocked,
+        isQueuePaused: match.channel.isQueuePaused,
+        healthy: !match.channel.isDisconnected && !match.channel.isLocked && !match.channel.isQueuePaused,
+      },
+      inventory: {
+        complete: true,
+        counts,
+        scheduledCount: scheduled.length,
+        scheduled,
+      },
+      metrics: {
+        samplePosts: comparable.length,
+        coverage: {
+          totalSent: counts.sent || 0,
+          selected: sentCandidates.length,
+          attempted,
+          fetched: sentMetrics.filter(p => p.collectionStatus === 'fresh').length,
+          comparable: comparable.length,
+          cached: sentMetrics.filter(p => p.collectionStatus === 'cached').length,
+          missing: sentMetrics.filter(p => p.collectionStatus === 'not_collected').length,
+          status: collectionStatus,
+          cooldown,
+        },
+        freshness: {
+          oldestMetricsUpdatedAt: comparable.map(p => p.metricsUpdatedAt).filter(Boolean).sort()[0] ?? null,
+          newestMetricsUpdatedAt: comparable.map(p => p.metricsUpdatedAt).filter(Boolean).sort().at(-1) ?? null,
+        },
+        overall: summarizeGroup(comparable),
+        affiliate: summarizeGroup(affiliate),
+        byFormat,
+        byLinkMode,
+        posts: sentMetrics,
+        note: 'Buffer platform metrics only. Aggregates use this pass only; cached per-post values retain their original timestamps and are excluded. DMM conversions/revenue require official DMM report data and are not inferred here.',
+      },
+      sourceState: {
+        batchDate: state.batch_date ?? null,
+        contentStrategyVersion: state.content_strategy_version ?? null,
+        lastBufferPostId: state.last_buffer_post_id ?? null,
+        lastDueAt: state.last_due_at ?? null,
+      }
+    };
+
+    await mkdir('analytics', {recursive: true});
+    await writeFile(`${OUT_PATH}.tmp`, JSON.stringify(report, null, 2) + '\n');
+    await rename(`${OUT_PATH}.tmp`, OUT_PATH);
+    if (collectionStatus !== 'in_progress') console.log(JSON.stringify({
+      checkedAt: report.checkedAt,
+      healthy: report.connection.healthy,
+      scheduledCount: report.inventory.scheduledCount,
+      nextScheduled: report.inventory.scheduled.slice(0, 5),
+      metrics: {
+        samplePosts: report.metrics.samplePosts,
+        overall: report.metrics.overall,
+        byFormat: report.metrics.byFormat,
+        byLinkMode: report.metrics.byLinkMode,
+      }
+    }, null, 2));
+  }
 }
 
 main().catch(err => {
   console.error(err.stack || err.message);
   process.exit(1);
 });
+
