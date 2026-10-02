@@ -38,12 +38,10 @@ jobs:
           node --check scripts/dmm-x-live-audit.mjs
           python3 -m py_compile automation/dmm-x/buffer_queue.py
       - name: Read DMM X Buffer state and metrics
-        if: github.event_name != 'push'
         env:
           DMM_BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
         run: node scripts/dmm-x-live-audit.mjs
       - name: Persist credential-free audit
-        if: github.event_name != 'push'
         run: |
           set -e
           test -f analytics/dmm-x-live-audit.json
