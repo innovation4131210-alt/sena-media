@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T12:44:26.578Z",
+  "updatedAt": "2026-10-02T11:53:28.539Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -189,7 +189,7 @@
       "dueAt": "2026-10-11T04:05:00Z",
       "text": "【PR】男性のシルバーアクセ、細め派？\nGARCIA「thin snake necklace」\nhttps://r.8to.jp/SiCNUReShCPJ\n\n※アフィリエイト広告。画像のネックレスは紹介商品ではありません。\n※SENAは架空のAIキャラクター。画像はAI制作。",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-11_D14.jpeg",
-      "status": "pending",
+      "status": "scheduled",
       "monetization": {
         "network": "A8.net",
         "program": "細くても、存在感があるアクセサリーGARCIA",
@@ -199,14 +199,20 @@
         "sku": "thin snake necklace (silver) #n52",
         "firstCommercialTestForProgram": true,
         "truthfulnessGuardrail": "image necklace is not the promoted product"
-      }
+      },
+      "bufferPostId": "6abf9b37b41a266eabf83da7",
+      "bufferDueAt": "2026-10-11T04:05:00.000Z",
+      "processedAt": "2026-10-02T11:53:27.548Z"
     },
     {
       "key": "sena-d15",
       "dueAt": "2026-10-12T04:05:00Z",
       "text": "白と黒だけで歩く日。シンプルな方が、街では落ち着く。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-12_D15.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "bufferPostId": "6abf9b381b2a6a8e155cf56e",
+      "bufferDueAt": "2026-10-12T04:05:00.000Z",
+      "processedAt": "2026-10-02T11:53:28.386Z"
     },
     {
       "key": "sena-d16",
@@ -342,7 +348,7 @@
     "channelId": "6ab4f318ea19ca0bded37a49",
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
-    "created": 1,
-    "verifiedAt": "2026-09-30T12:44:26.578Z"
+    "created": 2,
+    "verifiedAt": "2026-10-02T11:53:28.539Z"
   }
 }
