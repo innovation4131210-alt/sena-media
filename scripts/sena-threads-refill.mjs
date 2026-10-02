@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 
+const EXPECTED_CHANNEL_ID = "6ab75347ea19ca0bdef0d04a";
 const API_URL = "https://api.buffer.com";
 const QUEUE_FILE = new URL("../automation/sena-threads/queue.json", import.meta.url);
 
@@ -47,6 +48,7 @@ async function resolveChannel() {
   }
   if (matches.length !== 1) throw new Error(`Expected exactly one @sena.virtual.studio Threads channel; found ${matches.length}`);
   const channel = matches[0];
+  if (channel.id !== EXPECTED_CHANNEL_ID) throw new Error("Buffer channel identity mismatch");
   if (channel.isDisconnected || channel.isLocked || channel.isQueuePaused) throw new Error("@sena.virtual.studio Threads channel unavailable");
   return channel;
 }
@@ -65,8 +67,16 @@ async function inventory(channel) {
     }`,
     {organizationId:channel.organizationId,channelId:channel.id}
   );
-  if (data.posts?.pageInfo?.hasNextPage) throw new Error("Incomplete Buffer inventory; refusing mutation");
-  return (data.posts?.edges ?? []).map(({node})=>node);
+  const connection = data.posts;
+  if (!Array.isArray(connection?.edges) || connection.pageInfo?.hasNextPage !== false) {
+    throw new Error("Incomplete Buffer inventory; refusing mutation");
+  }
+  const rows = connection.edges.map(edge => edge?.node);
+  if (rows.some(row => !row?.id || row.channelId !== channel.id || typeof row.status !== "string" || typeof row.text !== "string")) {
+    throw new Error("Buffer inventory channel or shape mismatch");
+  }
+  if (new Set(rows.map(row => row.id)).size !== rows.length) throw new Error("Duplicate Buffer inventory IDs");
+  return rows;
 }
 
 function sameTarget(post,target) {
@@ -167,9 +177,16 @@ async function main() {
     }
   }
 
-  for (const target of queue.posts.filter(p=>p.status==="pending")) {
-    const found=existing.find(p=>sameTarget(p,target));
-    if (!found) continue;
+  for (const target of queue.posts.filter(p => ["pending", "creating", "created_unverified"].includes(p.status))) {
+    const matches = existing.filter(p => sameTarget(p, target));
+    if (matches.length > 1) throw new Error(`Duplicate Buffer target: ${target.key}`);
+    const found = matches[0];
+    if (!found) {
+      if (target.status !== "pending") throw new Error(`Unresolved Buffer create; manual reconciliation required: ${target.key}`);
+      continue;
+    }
+    if (!["sent", "scheduled"].includes(found.status)) throw new Error(`Unexpected Buffer recovery status: ${target.key}: ${found.status}`);
+    if (target.bufferPostId && target.bufferPostId !== found.id) throw new Error(`Buffer recovery ID mismatch: ${target.key}`);
     target.status=found.status==="sent"?"sent":"scheduled";
     target.bufferPostId=found.id;
     target.bufferDueAt=found.dueAt ?? target.dueAt;
@@ -198,22 +215,32 @@ async function main() {
       changed=true;
       continue;
     }
-    const made=await createPost(target,channel);
-    target.status="scheduled";
+    if (existing.some(p => {
+      const time = Date.parse(p.dueAt ?? p.sentAt ?? "");
+      return Number.isFinite(time) && Math.abs(time - due) <= 60000;
+    })) throw new Error(`Buffer dueAt already occupied: ${target.key}`);
+    target.status = "creating";
+    target.attemptedAt = new Date().toISOString();
+    await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
+    const made = await createPost(target, channel);
+    target.status = "created_unverified";
     target.bufferPostId=made.id;
     target.bufferDueAt=made.dueAt ?? target.dueAt;
     target.processedAt=new Date().toISOString();
     changed=true;
     scheduledCount+=1;
 
+    await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
     existing=await inventory(channel);
     const readback=existing.find(p=>p.id===made.id);
-    if (!readback || readback.status!=="scheduled" || readback.text!==target.text) {
+    if (!readback || readback.status!=="scheduled" || readback.text!==target.text || Date.parse(readback.dueAt)!==Date.parse(target.dueAt)) {
       throw new Error(`Buffer readback failed: ${target.key}`);
     }
     if (queue.policy?.visualRequired===true && !(readback.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/") || String(a.mimeType??"").startsWith("video/"))) {
       throw new Error(`Threads media readback failed: ${target.key}`);
     }
+    target.status = "scheduled";
+    await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
   }
 
   queue.updatedAt=new Date().toISOString();
@@ -223,3 +250,4 @@ async function main() {
 }
 
 main().catch(error=>{console.error(error.stack ?? error.message);process.exit(1);});
+

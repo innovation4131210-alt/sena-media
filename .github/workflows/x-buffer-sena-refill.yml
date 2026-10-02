@@ -27,15 +27,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Test refill safety with mocked services
+        run: node scripts/test-buffer-refill-hardening.mjs
       - name: Validate scheduler syntax
         run: node --check scripts/x-buffer-sena-refill.mjs
       - name: Refill SENA X queue
         run: node scripts/x-buffer-sena-refill.mjs
-      - name: Persist verified queue state
+      - name: Persist queue state and unresolved intents
+        if: always()
         shell: bash
         run: |
           if git diff --quiet -- automation/x-buffer/sena-queue.json; then
@@ -48,3 +52,4 @@ jobs:
           git commit -m "Refill SENA X Buffer queue"
           git pull --rebase origin main
           git push
+
