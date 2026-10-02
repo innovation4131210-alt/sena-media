@@ -55,6 +55,54 @@ function ctr(clicks, impressions) {
   return impressions > 0 ? Number((clicks * 100 / impressions).toFixed(2)) : null;
 }
 
+function xWeightedLength(text = '') {
+  const urlRe = /https?:\/\/\S+/g;
+  let total = 0;
+  let cursor = 0;
+  for (const match of String(text).matchAll(urlRe)) {
+    for (const char of String(text).slice(cursor, match.index)) {
+      const cp = char.codePointAt(0);
+      total += (
+        (cp >= 0x0000 && cp <= 0x10FF) ||
+        (cp >= 0x2000 && cp <= 0x200D) ||
+        (cp >= 0x2010 && cp <= 0x201F) ||
+        (cp >= 0x2032 && cp <= 0x2037)
+      ) ? 1 : 2;
+    }
+    total += 23;
+    cursor = match.index + match[0].length;
+  }
+  for (const char of String(text).slice(cursor)) {
+    const cp = char.codePointAt(0);
+    total += (
+      (cp >= 0x0000 && cp <= 0x10FF) ||
+      (cp >= 0x2000 && cp <= 0x200D) ||
+      (cp >= 0x2010 && cp <= 0x201F) ||
+      (cp >= 0x2032 && cp <= 0x2037)
+    ) ? 1 : 2;
+  }
+  return total;
+}
+
+function scheduledReadback(post, history = {}) {
+  const text = String(post.text || '');
+  const expectedActressName = String(history.actress_name || '').trim() || null;
+  const campaignExpected = history.campaign_active ?? null;
+  return {
+    text,
+    xWeightedLength: xWeightedLength(text),
+    withinXLimit: xWeightedLength(text) <= 280,
+    isGenericFallbackOnly: /^【PR】作品情報はこちら。18歳未満閲覧禁止。\s+https?:\/\/\S+$/.test(text.trim()),
+    hasAffiliateUrl: /https?:\/\/\S+/.test(text),
+    expectedActressName,
+    actressNamePresent: expectedActressName ? text.includes(expectedActressName) : null,
+    campaignExpected,
+    campaignMentionPresent: campaignExpected === true ? /キャンペーン/.test(text) : null,
+    campaignTitle: history.campaign_title || null,
+    campaignEnd: history.campaign_end || null,
+  };
+}
+
 function summarizeGroup(items) {
   const totals = items.reduce((a, p) => {
     a.posts += 1;
@@ -91,7 +139,7 @@ async function main() {
   if (!match) throw new Error('DMM X channel ero_mimimimi was not found');
 
   const inventory = await gql(
-    'query($organizationId: OrganizationId!, $channelId: ChannelId!) { posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}) { edges { node { id status dueAt sentAt externalLink } } pageInfo { hasNextPage } } }',
+    'query($organizationId: OrganizationId!, $channelId: ChannelId!) { posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}) { edges { node { id text status dueAt sentAt externalLink } } pageInfo { hasNextPage } } }',
     {organizationId: match.orgId, channelId: match.channel.id}
   );
   if (inventory.posts?.pageInfo?.hasNextPage) throw new Error('DMM inventory exceeds first 100 posts; audit is incomplete');
@@ -116,6 +164,7 @@ async function main() {
           sort: h.sort ?? null,
           discountPct: h.discount_pct ?? null,
           campaignActive: h.campaign_active ?? null,
+          readback: scheduledReadback(p, h),
         };
       })(),
     }));
