@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-02T02:56:44.983Z",
+  "checkedAt": "2026-10-02T08:55:52.626Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -14,22 +14,11 @@
   "inventory": {
     "complete": true,
     "counts": {
-      "scheduled": 3,
-      "sent": 60
+      "scheduled": 2,
+      "sent": 61
     },
-    "scheduledCount": 3,
+    "scheduledCount": 2,
     "scheduled": [
-      {
-        "id": "6abeca9863de9e09a27c82fb",
-        "dueAt": "2026-10-02T03:30:00.000Z",
-        "kind": "engagement",
-        "format": null,
-        "linkMode": null,
-        "contentId": null,
-        "sort": null,
-        "discountPct": null,
-        "campaignActive": null
-      },
       {
         "id": "6abeca9b45400a0e30fa926c",
         "dueAt": "2026-10-02T12:30:00.000Z",
@@ -55,66 +44,84 @@
     ]
   },
   "metrics": {
-    "samplePosts": 40,
+    "samplePosts": 36,
     "overall": {
-      "posts": 40,
-      "impressions": 1224,
+      "posts": 36,
+      "impressions": 1047,
       "clicks": 7,
       "reactions": 2,
-      "comments": 7,
+      "comments": 6,
       "reposts": 0,
-      "ctrPct": 0.57
+      "ctrPct": 0.67
     },
     "affiliate": {
-      "posts": 26,
-      "impressions": 926,
+      "posts": 24,
+      "impressions": 828,
       "clicks": 6,
       "reactions": 1,
-      "comments": 7,
+      "comments": 6,
       "reposts": 0,
-      "ctrPct": 0.65
+      "ctrPct": 0.72
     },
     "byFormat": {
       "discovery": {
-        "posts": 9,
-        "impressions": 260,
+        "posts": 8,
+        "impressions": 213,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 5,
+        "reposts": 0,
+        "ctrPct": 0
+      },
+      "decision": {
+        "posts": 8,
+        "impressions": 268,
+        "clicks": 4,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0,
+        "ctrPct": 1.49
+      }
+    },
+    "byLinkMode": {
+      "first_reply": {
+        "posts": 6,
+        "impressions": 187,
         "clicks": 0,
         "reactions": 0,
         "comments": 6,
         "reposts": 0,
         "ctrPct": 0
       },
-      "decision": {
-        "posts": 9,
-        "impressions": 319,
-        "clicks": 4,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0,
-        "ctrPct": 1.25
-      }
-    },
-    "byLinkMode": {
-      "first_reply": {
-        "posts": 7,
-        "impressions": 234,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 7,
-        "reposts": 0,
-        "ctrPct": 0
-      },
       "direct": {
-        "posts": 13,
-        "impressions": 449,
+        "posts": 12,
+        "impressions": 398,
         "clicks": 4,
         "reactions": 0,
         "comments": 0,
         "reposts": 0,
-        "ctrPct": 0.89
+        "ctrPct": 1.01
       }
     },
     "posts": [
+      {
+        "id": "6abeca9863de9e09a27c82fb",
+        "sentAt": "2026-10-02T03:30:06.486Z",
+        "externalLink": "https://x.com/1647584462233010176/status/2105862863508169122",
+        "metricsUpdatedAt": "2026-10-02T03:30:15.833Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "impressions": 0,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
+      },
       {
         "id": "6abd78e7af8c06e95950cb28",
         "sentAt": "2026-10-01T14:30:47.730Z",
@@ -478,74 +485,22 @@
       {
         "id": "6ab43e63981b51098bd9f6c2",
         "sentAt": "2026-09-24T03:30:05.416Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2102963756028280914",
-        "metricsUpdatedAt": "2026-10-02T02:08:41.114Z",
-        "kind": "engagement",
-        "format": null,
-        "linkMode": null,
-        "contentId": null,
-        "sort": null,
-        "discountPct": null,
-        "campaignActive": null,
-        "impressions": 24,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
+        "metricsError": "Buffer query failed after retries: 429"
       },
       {
         "id": "6ab2ecc998ae6feaa619b1b7",
         "sentAt": "2026-09-23T13:04:48.300Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2102745999022211229",
-        "metricsUpdatedAt": "2026-10-02T02:08:41.114Z",
-        "kind": "affiliate",
-        "format": "decision",
-        "linkMode": "direct",
-        "contentId": "vrkm01393",
-        "sort": "review",
-        "discountPct": 30,
-        "campaignActive": true,
-        "impressions": 51,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
+        "metricsError": "Buffer query failed after retries: 429"
       },
       {
         "id": "6ab2ecc7340f92dcbe153aba",
         "sentAt": "2026-09-23T12:30:20.144Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2102737323364381057",
-        "metricsUpdatedAt": "2026-10-02T02:08:41.114Z",
-        "kind": "affiliate",
-        "format": "discovery",
-        "linkMode": "first_reply",
-        "contentId": "atkd00351",
-        "sort": "rank",
-        "discountPct": 50,
-        "campaignActive": true,
-        "impressions": 47,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 1,
-        "reposts": 0
+        "metricsError": "Buffer query failed after retries: 429"
       },
       {
         "id": "6ab2ecc52aa0e20bb467e023",
         "sentAt": "2026-09-23T03:30:04.950Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2102601366099079633",
-        "metricsUpdatedAt": "2026-10-02T02:08:41.115Z",
-        "kind": "engagement",
-        "format": null,
-        "linkMode": null,
-        "contentId": null,
-        "sort": null,
-        "discountPct": null,
-        "campaignActive": null,
-        "impressions": 24,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
+        "metricsError": "Buffer query failed after retries: 429"
       },
       {
         "id": "6ab19b4a1177eabccaee8f29",
@@ -812,24 +767,6 @@
         "discountPct": null,
         "campaignActive": null,
         "impressions": 41,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
-      },
-      {
-        "id": "6aac551d6d6662c4b4408d7b",
-        "sentAt": "2026-09-18T03:30:04.683Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2100789425693212844",
-        "metricsUpdatedAt": "2026-10-02T02:08:41.115Z",
-        "kind": "engagement",
-        "format": null,
-        "linkMode": null,
-        "contentId": null,
-        "sort": null,
-        "discountPct": null,
-        "campaignActive": null,
-        "impressions": 31,
         "clicks": 0,
         "reactions": 0,
         "comments": 0,
