@@ -677,15 +677,18 @@
   "batch_slots": {
     "engagement": {
       "buffer_post_id": "6abeca9863de9e09a27c82fb",
-      "due_at": "2026-10-02T03:30:00.000Z"
+      "due_at": "2026-10-02T03:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "rank_first_reply": {
       "buffer_post_id": "6abeca9b45400a0e30fa926c",
-      "due_at": "2026-10-02T12:30:00.000Z"
+      "due_at": "2026-10-02T12:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "review_direct": {
       "buffer_post_id": "6abeca9db435ee011900a002",
-      "due_at": "2026-10-02T14:30:00.000Z"
+      "due_at": "2026-10-02T14:30:00.000Z",
+      "recovered_from_buffer": true
     }
   },
   "discovery_template_index": 1,
@@ -693,9 +696,9 @@
   "decision_template_index": 1,
   "last_run": {
     "status": "success",
-    "at": "2026-10-01T21:03:25.684178+00:00",
+    "at": "2026-10-02T09:54:52.598193+00:00",
     "batch_date": "2026-10-02",
-    "recovered_count": 0,
-    "created_count": 3
+    "recovered_count": 3,
+    "created_count": 0
   }
 }
