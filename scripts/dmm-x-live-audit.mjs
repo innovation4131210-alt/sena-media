@@ -166,6 +166,18 @@ async function main() {
   } catch (error) {
     if (error.code !== 'ENOENT' && !(error instanceof SyntaxError)) throw error;
   }
+  const previousRetryAt = previous?.account === TARGET
+    ? previous.metrics?.coverage?.cooldown?.retryAt : null;
+  const previousRetryTime = typeof previousRetryAt === 'string' ? Date.parse(previousRetryAt) : NaN;
+  if (Number.isFinite(previousRetryTime) && previousRetryTime > Date.now()) {
+    console.log(JSON.stringify({
+      status: 'cooldown_active',
+      retryAt: previousRetryAt,
+      preservedCheckedAt: previous.checkedAt ?? null,
+      note: 'No Buffer requests made; previous inventory and metric timestamps retained unchanged.',
+    }));
+    return;
+  }
   const previousById = new Map(previous?.account === TARGET
     ? (previous.metrics?.posts || []).map(post => [post.id, post]) : []);
   const state = JSON.parse(await readFile(STATE_PATH, 'utf8'));
