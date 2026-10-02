@@ -13,7 +13,7 @@
     },
     "6abbafb4083556d5fa088ec5": {
       "24": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       },
       "72": {
@@ -90,7 +90,17 @@
         "status": "pending",
         "snapshot": null
       }
+    },
+    "6abbafb83cff9362c50f2498": {
+      "24": {
+        "status": "pending",
+        "snapshot": null
+      },
+      "72": {
+        "status": "pending",
+        "snapshot": null
+      }
     }
   },
-  "generatedAt": "2026-10-02T03:59:18+00:00"
+  "generatedAt": "2026-10-02T12:05:37+00:00"
 }
