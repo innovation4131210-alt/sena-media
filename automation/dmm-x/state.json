@@ -695,10 +695,8 @@
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
   "decision_template_index": 1,
   "last_run": {
-    "status": "success",
-    "at": "2026-10-02T09:54:52.598193+00:00",
-    "batch_date": "2026-10-02",
-    "recovered_count": 3,
-    "created_count": 0
+    "status": "failed",
+    "at": "2026-10-02T10:13:06.545332+00:00",
+    "error": "P0 repair for 1start00568 still produced generic fallback"
   }
 }
