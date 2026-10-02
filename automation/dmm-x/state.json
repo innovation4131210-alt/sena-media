@@ -478,7 +478,7 @@
       "campaign_focus": true,
       "recent_release": false,
       "actress_name": "川越にこ",
-      "actress_popularity_score": 834.0,
+      "actress_popularity_score": 834,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 5,
@@ -502,7 +502,7 @@
       "campaign_focus": false,
       "recent_release": false,
       "actress_name": "天月あず",
-      "actress_popularity_score": 699.0,
+      "actress_popularity_score": 699,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 2,
@@ -532,7 +532,7 @@
       "campaign_focus": true,
       "recent_release": false,
       "actress_name": "瀬戸環奈",
-      "actress_popularity_score": 1107.0,
+      "actress_popularity_score": 1107,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 1,
@@ -586,7 +586,7 @@
       "campaign_focus": true,
       "recent_release": false,
       "actress_name": "石川澪",
-      "actress_popularity_score": 633.0,
+      "actress_popularity_score": 633,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 7,
@@ -610,7 +610,7 @@
       "campaign_focus": false,
       "recent_release": false,
       "actress_name": "宮西ひかる",
-      "actress_popularity_score": 531.0,
+      "actress_popularity_score": 531,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 8,
@@ -640,7 +640,7 @@
       "campaign_focus": true,
       "recent_release": false,
       "actress_name": "青空ひかり",
-      "actress_popularity_score": 537.0,
+      "actress_popularity_score": 537,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 12,
@@ -664,7 +664,7 @@
       "campaign_focus": false,
       "recent_release": false,
       "actress_name": "天馬ゆい",
-      "actress_popularity_score": 542.0,
+      "actress_popularity_score": 542,
       "known_actress_pool_used": true,
       "demand_gate_passed": true,
       "source_position": 1,
@@ -698,5 +698,22 @@
     "status": "failed",
     "at": "2026-10-02T10:20:39.199917+00:00",
     "error": "Buffer API rate limited after 4 attempts"
+  },
+  "p0_status": {
+    "url_weighted_length_fix_commit": "1131c165eef6086bb8f3ae81444d5ab79e38605e",
+    "compact_value_preserving_fix_commit": "9e9f7d7964e2f6113263315e9f115f8fa1e9ae72",
+    "current_scheduled_readback_verified_at": "2026-10-02T10:32:03.329Z",
+    "current_scheduled_posts_pass": true,
+    "current_scheduled_buffer_post_ids": [
+      "6abeca9b45400a0e30fa926c",
+      "6abeca9db435ee011900a002"
+    ],
+    "current_scheduled_due_at": [
+      "2026-10-02T12:30:00.000Z",
+      "2026-10-02T14:30:00.000Z"
+    ],
+    "strict_completion": "pending_first_newly_generated_affiliate_after_fix",
+    "next_automatic_readback": "06:20 JST after daily 06:00 JST runner",
+    "posting_variables_frozen_until_strict_completion": true
   }
 }
