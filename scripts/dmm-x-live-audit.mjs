@@ -14,11 +14,9 @@ async function gql(query, variables = {}) {
   if (!KEY) throw new Error('DMM_BUFFER_API_KEY is not configured');
   if (!/^\s*query\b/.test(query) || /\bmutation\b/.test(query)) throw new Error('Read-only query required');
 
-  const delays = [0, 2000, 5000, 10000];
+  const fallbackDelays = [2000, 5000, 10000];
   let lastStatus = null;
-  for (let attempt = 0; attempt < delays.length; attempt++) {
-    if (delays[attempt]) await sleep(delays[attempt]);
-
+  for (let attempt = 0; attempt < 4; attempt++) {
     const res = await fetch(API_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', Authorization: `Bearer ${KEY}`},
@@ -38,11 +36,19 @@ async function gql(query, variables = {}) {
       return json.data;
     }
 
-    // Buffer occasionally rate-limits bursts from GitHub Actions. Retry only
-    // transient statuses; fail immediately for auth/schema/configuration errors.
     if (![429, 500, 502, 503, 504].includes(res.status)) {
       throw new Error(`Buffer query failed: ${res.status}`);
     }
+    if (attempt >= 3) break;
+
+    let waitMs = fallbackDelays[attempt];
+    if (res.status === 429) {
+      const raw = Number(res.headers.get('retry-after'));
+      if (Number.isFinite(raw) && raw > 0) {
+        waitMs = Math.min(90000, Math.max(1000, Math.round(raw * 1000)));
+      }
+    }
+    await sleep(waitMs);
   }
   throw new Error(`Buffer query failed after retries: ${lastStatus}`);
 }
