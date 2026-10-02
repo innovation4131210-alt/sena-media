@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-02T10:30:49.650Z",
+  "checkedAt": "2026-10-02T10:32:03.329Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -37,10 +37,12 @@
           "hasAffiliateUrl": true,
           "expectedActressName": "青空ひかり",
           "actressNamePresent": true,
+          "valueProofPresent": true,
           "campaignExpected": true,
-          "campaignMentionPresent": false,
+          "campaignEvidencePresent": true,
           "campaignTitle": "SODグループ30％OFF第2弾",
-          "campaignEnd": "2026-10-06 23:59:59"
+          "campaignEnd": "2026-10-06 23:59:59",
+          "p0ChecksPass": true
         }
       },
       {
@@ -61,10 +63,12 @@
           "hasAffiliateUrl": true,
           "expectedActressName": "天馬ゆい",
           "actressNamePresent": true,
+          "valueProofPresent": true,
           "campaignExpected": false,
-          "campaignMentionPresent": null,
+          "campaignEvidencePresent": null,
           "campaignTitle": null,
-          "campaignEnd": null
+          "campaignEnd": null,
+          "p0ChecksPass": true
         }
       }
     ]
