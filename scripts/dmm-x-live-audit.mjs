@@ -94,18 +94,37 @@ function scheduledReadback(post, history = {}) {
   const text = String(post.text || '');
   const expectedActressName = String(history.actress_name || '').trim() || null;
   const campaignExpected = history.campaign_active ?? null;
+  const campaignTitle = String(history.campaign_title || '').trim() || null;
+  const weightedLength = xWeightedLength(text);
+  const isGenericFallbackOnly = /^【PR】作品情報はこちら。18歳未満閲覧禁止。\s+https?:\/\/\S+$/.test(text.trim());
+  const hasAffiliateUrl = /https?:\/\/\S+/.test(text);
+  const actressNamePresent = expectedActressName ? text.includes(expectedActressName) : null;
+  const valueProofPresent = /★\s*\d|\d+件|\d+%OFF|\d[\d,]*円|人気|ランキング|レビュー/.test(text);
+  const campaignEvidencePresent = campaignExpected === true
+    ? Boolean((campaignTitle && text.includes(campaignTitle)) || /FANZA公式|キャンペーン/.test(text))
+    : null;
+
   return {
     text,
-    xWeightedLength: xWeightedLength(text),
-    withinXLimit: xWeightedLength(text) <= 280,
-    isGenericFallbackOnly: /^【PR】作品情報はこちら。18歳未満閲覧禁止。\s+https?:\/\/\S+$/.test(text.trim()),
-    hasAffiliateUrl: /https?:\/\/\S+/.test(text),
+    xWeightedLength: weightedLength,
+    withinXLimit: weightedLength <= 280,
+    isGenericFallbackOnly,
+    hasAffiliateUrl,
     expectedActressName,
-    actressNamePresent: expectedActressName ? text.includes(expectedActressName) : null,
+    actressNamePresent,
+    valueProofPresent,
     campaignExpected,
-    campaignMentionPresent: campaignExpected === true ? /キャンペーン/.test(text) : null,
-    campaignTitle: history.campaign_title || null,
+    campaignEvidencePresent,
+    campaignTitle,
     campaignEnd: history.campaign_end || null,
+    p0ChecksPass: (
+      !isGenericFallbackOnly &&
+      hasAffiliateUrl &&
+      weightedLength <= 280 &&
+      actressNamePresent !== false &&
+      valueProofPresent &&
+      campaignEvidencePresent !== false
+    ),
   };
 }
 
