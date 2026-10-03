@@ -37,7 +37,7 @@
         "snapshot": null
       },
       "72": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       }
     },
@@ -47,7 +47,7 @@
         "snapshot": null
       },
       "72": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       }
     },
@@ -83,7 +83,7 @@
     },
     "6abbafb7749a5baab60960c9": {
       "24": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       },
       "72": {
@@ -93,7 +93,7 @@
     },
     "6abbafb83cff9362c50f2498": {
       "24": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       },
       "72": {
@@ -120,7 +120,17 @@
         "status": "pending",
         "snapshot": null
       }
+    },
+    "6abd29734061d89b6f34a633": {
+      "24": {
+        "status": "pending",
+        "snapshot": null
+      },
+      "72": {
+        "status": "pending",
+        "snapshot": null
+      }
     }
   },
-  "generatedAt": "2026-10-03T04:06:15+00:00"
+  "generatedAt": "2026-10-03T14:52:07+00:00"
 }
