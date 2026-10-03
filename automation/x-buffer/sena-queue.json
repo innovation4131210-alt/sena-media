@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-02T11:53:28.539Z",
+  "updatedAt": "2026-10-03T16:10:24.503Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -219,7 +219,11 @@
       "dueAt": "2026-10-13T04:05:00Z",
       "text": "帰ったら最初にヒールを脱ぐ。それだけで一日が終わった気がする。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-13_D16.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-03T16:10:23.264Z",
+      "bufferPostId": "6ac128f0aa79e514b9f514f9",
+      "bufferDueAt": "2026-10-13T04:05:00.000Z",
+      "processedAt": "2026-10-03T16:10:24.349Z"
     },
     {
       "key": "sena-d17",
@@ -348,7 +352,7 @@
     "channelId": "6ab4f318ea19ca0bded37a49",
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
-    "created": 2,
-    "verifiedAt": "2026-10-02T11:53:28.539Z"
+    "created": 1,
+    "verifiedAt": "2026-10-03T16:10:24.503Z"
   }
 }
