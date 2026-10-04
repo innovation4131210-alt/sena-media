@@ -43,8 +43,15 @@ def general_metadata(payload, api_id):
     if not isinstance(payload, dict) or not isinstance(payload.get("result"), dict):
         raise InvalidMetadata()
     result = payload["result"]
-    if str(result.get("status")) != "200":
-        return {"status": "API_ERROR"}
+    # FloorList may omit status; unlike ItemList, success is the site hierarchy.
+    # Never conflate an omitted status with a server rejection.
+    api_status = result.get("status")
+    if "status" in result and str(api_status) != "200":
+        if re.fullmatch(r"[1-5][0-9]{2}", str(api_status)):
+            return {"status": "API_REPORTED_ERROR", "api_status": int(api_status)}
+        return {"status": "INVALID_API_STATUS"}
+    if result.get("errors"):
+        return {"status": "API_ERROR_FIELD_PRESENT"}
     sites = result.get("site")
     if not isinstance(sites, list):
         raise InvalidMetadata()
