@@ -99,14 +99,19 @@ def utc_key(dt: datetime):
 
 
 def target_slot(now: datetime):
+    if now.tzinfo is None or now.utcoffset() is None:
+        raise ValueError("now must be timezone-aware")
+
+    # A delayed evening workflow can start after midnight. Anchor the search to
+    # the grace-adjusted JST date, including its previous day, not today's date.
+    cutoff = now.astimezone(JST) - timedelta(minutes=GRACE_MINUTES)
     eligible = []
-    for hour, minute in SLOTS:
-        dt = datetime(now.year, now.month, now.day, hour, minute, tzinfo=JST)
-        if now >= dt + timedelta(minutes=GRACE_MINUTES):
-            eligible.append(dt)
-    if not eligible:
-        return None
-    return max(eligible)
+    for day in (cutoff.date(), cutoff.date() - timedelta(days=1)):
+        for hour, minute in SLOTS:
+            dt = datetime(day.year, day.month, day.day, hour, minute, tzinfo=JST)
+            if dt <= cutoff:
+                eligible.append(dt)
+    return max(eligible, default=None)
 
 
 def load_history():
