@@ -1,8 +1,89 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-26T08:31:32.421Z",
+  "checkedAt": "2026-10-04T00:23:59.939Z",
   "readOnly": true,
   "channels": [
+    {
+      "organizationId": "6ab4f1a87f95ad34ed98178a",
+      "organizationName": "My organization",
+      "id": "6abb9a71ea19ca0bde216771",
+      "name": "ai_command_jp",
+      "displayName": "ai_command_jp",
+      "service": "twitter",
+      "isQueuePaused": false,
+      "isDisconnected": false,
+      "isLocked": false,
+      "counts": {
+        "sent": 14,
+        "scheduled": 8
+      },
+      "recent": [
+        {
+          "id": "6abe7aa629f0388308d06651",
+          "status": "scheduled",
+          "dueAt": "2026-10-04T03:20:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "自動化で一番怖いのは、失敗そのものより『成功したように見える失敗』。\n\n保存したつもり\n投稿したつもり\n設定したつもり\n\nだから僕は、確認方法までセットで設計する。"
+        },
+        {
+          "id": "6abe7aa643eb8c1bae51159a",
+          "status": "scheduled",
+          "dueAt": "2026-10-04T11:30:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "売上実績がまだ弱い段階で、僕は『稼げました』を作らない。\n\n出すのは、\n・何を試したか\n・どこで失敗したか\n・何を変えたか\n・本当に動いたか\n\nAI司令室は、実績を盛らずに検証を積む。"
+        },
+        {
+          "id": "6abf9b2581e421bfcd79efa4",
+          "status": "scheduled",
+          "dueAt": "2026-10-04T23:10:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "表に「合計を入れました」と返ってきたら、数字だけで判断しない。\n\n元データに行を足して、合計も変わるか確認する。\n\n僕ならこう頼む。\n「数式と参照範囲を確認し、テスト用の1行を追加した結果も示してください。」\n\nこれは表計算の依頼例。使える"
+        },
+        {
+          "id": "6abf9b2581e421bfcd79efcd",
+          "status": "scheduled",
+          "dueAt": "2026-10-05T03:20:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "設定変更は「変更前 → 変更後 → 確認方法」で報告してもらう。\n\n例：通知を週1回へ変えたら、保存後の頻度を読み直す。\n\n変更処理にエラーがなかっただけでは、反映されたとは限らない。\n「保存後の値を再取得し、指定と一致するか確認してくださ"
+        },
+        {
+          "id": "6abf9b25d2e71b2f33a3363a",
+          "status": "scheduled",
+          "dueAt": "2026-10-05T11:30:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "AIからの「完了しました」を、何で確かめるか。\n\n文章は本文、ファイルは実物、設定は反映後の値、自動化は実行結果。\n\n4つの確認方法を、コピペできる指示付きで無料記事にまとめた。\nhttps://note.com/ai_command/n/"
+        },
+        {
+          "id": "6ac15060fec5913394830815",
+          "status": "scheduled",
+          "dueAt": "2026-10-05T23:10:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "【今日の指令】\nAIに修正を頼むとき、僕は「もっと良くして」では済ませない。\n\n残すもの\n直すもの\n目指す状態\n\nこの3つを渡す。\n良かった部分まで壊さず、差分だけ直す。"
+        },
+        {
+          "id": "6ac15060aa79e514b9faddd9",
+          "status": "scheduled",
+          "dueAt": "2026-10-06T03:20:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "【1週間の作戦整理】\nAIに任せるとき、僕が見るのは4つ。\n\n①完成物があるか\n②事実を勝手に作っていないか\n③実行結果を確認したか\n④次の人間操作が1つに絞れているか\n\n「回答がある」だけでは、まだ完了じゃない。"
+        },
+        {
+          "id": "6ac15061fec591339483083e",
+          "status": "scheduled",
+          "dueAt": "2026-10-06T11:30:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "AIへの依頼を、まず1枚にまとめる型を作った。\n\n目的 / 完成物 / 使ってよい材料 / 変えない条件 / 完了条件\n\n僕が使っている「AI司令書」はこちら。\nhttps://note.com/ai_command/n/nbb052c3c"
+        }
+      ]
+    },
     {
       "organizationId": "6ab4f1a87f95ad34ed98178a",
       "organizationName": "My organization",
@@ -14,56 +95,73 @@
       "isDisconnected": false,
       "isLocked": false,
       "counts": {
+        "sent": 10,
         "scheduled": 6
       },
       "recent": [
         {
-          "id": "6ab7564384e8fc26af220c8f",
-          "status": "scheduled",
-          "dueAt": "2026-09-26T11:30:00.000Z",
-          "sentAt": null,
-          "externalLink": null,
-          "text": "髪まとめる？このまま下ろす？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+          "id": "6abd52327aad006ba5cd381c",
+          "status": "sent",
+          "dueAt": "2026-10-02T03:15:00.000Z",
+          "sentAt": "2026-10-02T03:15:04.309Z",
+          "externalLink": "https://x.com/1450766167/status/2105859078719258902",
+          "text": "飲み物落としかけて、ひとりで変な声出た。\nこういう時、何事もなかった顔できる？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
         },
         {
-          "id": "6ab752eeb097c5b401ae2341",
-          "status": "scheduled",
-          "dueAt": "2026-09-27T03:15:00.000Z",
-          "sentAt": null,
-          "externalLink": null,
-          "text": "またボタン違う気がする。\nこれ、気づく？気づかない？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+          "id": "6abd52337f0602bda64b0a25",
+          "status": "sent",
+          "dueAt": "2026-10-03T03:15:00.000Z",
+          "sentAt": "2026-10-03T03:15:03.931Z",
+          "externalLink": "https://x.com/1450766167/status/2106221465058021590",
+          "text": "買うもの少なかったはずなのに、袋だけ立派。\n寄り道、増える派？まっすぐ帰る派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
         },
         {
-          "id": "6ab75644dffba3cec6efc396",
+          "id": "6abd523408cc1d765ae476e7",
           "status": "scheduled",
-          "dueAt": "2026-09-27T11:30:00.000Z",
+          "dueAt": "2026-10-04T03:15:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "今日はもう外出ない。\n映画見る？早く寝る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+          "text": "靴下を履くだけなのに、なぜか出発が遅れる朝。\n朝の支度、余裕ある派？ギリギリ派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
         },
         {
-          "id": "6ab752ef84e8fc26af21c7b2",
+          "id": "6abd523571c35f5d6933bcaf",
           "status": "scheduled",
-          "dueAt": "2026-09-28T03:15:00.000Z",
+          "dueAt": "2026-10-05T03:15:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "4つ並ぶと決められない。\n最初に選ぶなら、いちご？チョコ？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+          "text": "溶ける前に食べたい。でも写真も撮りたい。\nアイス、先に撮る？先に食べる？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
         },
         {
-          "id": "6ab75645b097c5b401ae69cb",
+          "id": "6abd523671c35f5d6933bced",
           "status": "scheduled",
-          "dueAt": "2026-09-28T11:30:00.000Z",
+          "dueAt": "2026-10-06T03:15:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "本屋に来ると予定より長くなる。\n目的買い？偶然見つける派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+          "text": "髪を少し変えただけなのに、何回もガラス見ちゃう。\nこういう変化、気づく？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
         },
         {
-          "id": "6ab752f0dffba3cec6ef7619",
+          "id": "6abd523708cc1d765ae47769",
           "status": "scheduled",
-          "dueAt": "2026-09-29T03:15:00.000Z",
+          "dueAt": "2026-10-07T03:15:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "雨の日の前髪、もう無理かも。\n直す？そのまま行く？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+          "text": "片方だけ消えるイヤリング。\n朝から小さな捜索中。探し続ける？別のにする？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+        },
+        {
+          "id": "6abd52387f0602bda64b0aaf",
+          "status": "scheduled",
+          "dueAt": "2026-10-08T03:15:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "寒い日はコーヒーを持つ手まであったかい。\n今日は寄り道する？まっすぐ帰る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
+        },
+        {
+          "id": "6abd52393c9c97d78afbdab9",
+          "status": "scheduled",
+          "dueAt": "2026-10-09T03:15:00.000Z",
+          "sentAt": null,
+          "externalLink": null,
+          "text": "写真を整理してたら、全然進まなくなった。\n昔の写真、見返す派？一気に整理する派？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO"
         }
       ]
     },
@@ -78,73 +176,73 @@
       "isDisconnected": false,
       "isLocked": false,
       "counts": {
-        "sent": 3,
-        "scheduled": 9
+        "sent": 10,
+        "scheduled": 10
       },
       "recent": [
         {
-          "id": "6ab4fed4e444ea162676e501",
+          "id": "6ab7bc369f89edbefe7185d7",
           "status": "scheduled",
-          "dueAt": "2026-09-28T04:05:00.000Z",
+          "dueAt": "2026-10-06T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "最後にイヤリングだけ。黒の日は、アクセサリーを足す？それとも引く？\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #ブラックコーデ #イヤリング"
+          "text": "雨の夜は、街の光が少しきれいに見える。タクシー待ちも悪くない。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         },
         {
-          "id": "6ab4fed58c1ce9654ae41688",
+          "id": "6ab90ddc36a0dcfcb3d47a01",
           "status": "scheduled",
-          "dueAt": "2026-09-29T04:05:00.000Z",
+          "dueAt": "2026-10-07T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "コーヒーを買ったら出発。行き先は着いてから少しずつ残します。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #旅の始まり #駅"
+          "text": "作業する日は、服まで頑張りすぎない。静かな朝に少しだけ集中。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         },
         {
-          "id": "6ab4fed5c05579df0d09c3c3",
+          "id": "6aba606bd4e35da84982b05b",
           "status": "scheduled",
-          "dueAt": "2026-09-30T04:05:00.000Z",
+          "dueAt": "2026-10-08T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "帰る直前に呼ばれて振り返っただけ。こういう一枚の方が、あとで残る。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #ホテルラウンジ #夜のお出かけ"
+          "text": "高い階の朝は、街がまだ遠く感じる。今日は急がず始めます。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         },
         {
-          "id": "6ab4fed6e444ea162676e537",
+          "id": "6abbb1f1b781ea15063a57c3",
           "status": "scheduled",
-          "dueAt": "2026-10-01T04:05:00.000Z",
+          "dueAt": "2026-10-09T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "夜のホテルは、少しだけ時間がゆっくり流れる。黒を選ぶ日は、静かな場所がいい。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
+          "text": "本屋では時間を決めないことにしてる。気になる一冊が見つかるまで。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         },
         {
-          "id": "6ab4fed7e5142fde45ea2c1d",
+          "id": "6abd042a3aacd29063247906",
           "status": "scheduled",
-          "dueAt": "2026-10-02T04:05:00.000Z",
+          "dueAt": "2026-10-10T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "朝の光だけで十分な日。シャツを羽織って、コーヒーが冷める前に。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
+          "text": "メニューを閉じたあとがいちばん長い。今日は何が来るでしょう。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         },
         {
-          "id": "6ab4fed8c05579df0d09c405",
+          "id": "6abf9b37b41a266eabf83da7",
           "status": "scheduled",
-          "dueAt": "2026-10-03T04:05:00.000Z",
+          "dueAt": "2026-10-11T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "作品を見る時間は、話さなくていいのが好き。今日は少しだけ長居。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
+          "text": "【PR】男性のシルバーアクセ、細め派？\nGARCIA「thin snake necklace」\nhttps://r.8to.jp/SiCNUReShCPJ\n\n※アフィリエイト広告。画像のネックレスは紹介商品ではありません。\n※SENAは架空"
         },
         {
-          "id": "6ab66b46db73444101edb95b",
+          "id": "6abf9b381b2a6a8e155cf56e",
           "status": "scheduled",
-          "dueAt": "2026-10-04T04:05:00.000Z",
+          "dueAt": "2026-10-12T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "【PR】\n黒コーデの日、最後に足すならどっち？\n揺れるピアスか、小さめの一粒か。\n\nBLOOM公式ストアでジュエリーを見る↓\nhttps://r.8to.jp/Zv7PTYBUicQd\n\n※アフィリエイトリンクを含みます。\n※SENAは架空"
+          "text": "白と黒だけで歩く日。シンプルな方が、街では落ち着く。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         },
         {
-          "id": "6ab66b478c95968bb0395fb5",
+          "id": "6ac128f0aa79e514b9f514f9",
           "status": "scheduled",
-          "dueAt": "2026-10-05T04:05:00.000Z",
+          "dueAt": "2026-10-13T04:05:00.000Z",
           "sentAt": null,
           "externalLink": null,
-          "text": "移動の日。コーヒーと小さなスーツケースがあれば、だいたい大丈夫。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
+          "text": "帰ったら最初にヒールを脱ぐ。それだけで一日が終わった気がする。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル"
         }
       ]
     }
