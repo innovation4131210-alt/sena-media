@@ -1,0 +1,29 @@
+name: Probe DMM general AI books
+
+# Manual only. Isolated read-only ItemList test. No production or posting calls.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dmm-general-books-probe
+  cancel-in-progress: false
+
+jobs:
+  books:
+    if: github.event_name == 'workflow_dispatch' && github.run_attempt == 1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Checkout only the isolated general-book probe
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: scripts/dmm-general-books-probe.py
+      - name: Read at most five general AI books per query
+        env:
+          DMM_API_ID: ${{ secrets.DMM_API_ID }}
+        run: python3 -I -B scripts/dmm-general-books-probe.py
