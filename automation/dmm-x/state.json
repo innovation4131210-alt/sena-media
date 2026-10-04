@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ac18a707ff895d757bf4771",
-  "last_due_at": "2026-10-04T14:30:00.000Z",
+  "last_buffer_post_id": "6ac2c5b663761da98b5da19b",
+  "last_due_at": "2026-10-05T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -42,9 +42,11 @@
     "1start00568",
     "sqte00614",
     "sone00223",
-    "sqte00657"
+    "sqte00657",
+    "1start00545",
+    "sqte00632"
   ],
-  "last_content_id": "sqte00657",
+  "last_content_id": "sqte00632",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -732,37 +734,94 @@
       "source_position": 9,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ac2c5b263761da98b5da13d",
+      "due_at": "2026-10-05T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 3
+    },
+    {
+      "buffer_post_id": "6ac2c5b4d467abe8cfc869ff",
+      "due_at": "2026-10-05T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 2,
+      "content_id": "1start00545",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 350,
+      "review_average": 4.38,
+      "review_count": 13,
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "SODグループ30％OFF第2弾",
+      "campaign_end": "2026-10-06 23:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "小笠原菜乃",
+      "actress_popularity_score": 483.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 18,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ac2c5b663761da98b5da19b",
+      "due_at": "2026-10-05T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 2,
+      "content_id": "sqte00632",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 580,
+      "review_average": 5.0,
+      "review_count": 37,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "逢沢みゆ",
+      "actress_popularity_score": 869.5,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 10,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 3,
-  "batch_date": "2026-10-04",
+  "engagement_index": 4,
+  "batch_date": "2026-10-05",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ac18a6baa79e514b9031236",
-      "due_at": "2026-10-04T03:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6ac2c5b263761da98b5da13d",
+      "due_at": "2026-10-05T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ac18a6d814d657011d9ffbd",
-      "due_at": "2026-10-04T12:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6ac2c5b4d467abe8cfc869ff",
+      "due_at": "2026-10-05T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ac18a707ff895d757bf4771",
-      "due_at": "2026-10-04T14:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6ac2c5b663761da98b5da19b",
+      "due_at": "2026-10-05T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 2,
+  "discovery_template_index": 3,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 2,
+  "decision_template_index": 3,
   "last_run": {
     "status": "success",
-    "at": "2026-10-04T02:45:32.369660+00:00",
-    "batch_date": "2026-10-04",
-    "recovered_count": 3,
+    "at": "2026-10-04T21:31:35.062453+00:00",
+    "batch_date": "2026-10-05",
+    "recovered_count": 0,
     "repaired_count": 0,
-    "created_count": 0
+    "created_count": 3
   },
   "p0_status": {
     "url_weighted_length_fix_commit": "1131c165eef6086bb8f3ae81444d5ab79e38605e",
