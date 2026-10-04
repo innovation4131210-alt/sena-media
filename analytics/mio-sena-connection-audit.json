@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-03T18:26:26.111Z",
+  "checkedAt": "2026-10-04T18:22:53.505Z",
   "readOnly": true,
   "connections": [
     {
@@ -152,10 +152,34 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 23,
+            "sent": 26,
             "scheduled": 6
           },
           "posts": [
+            {
+              "id": "6ac201bcac8ef52594465930",
+              "status": "sent",
+              "dueAt": "2026-10-03T12:46:14.000Z",
+              "sentAt": "2026-10-03T12:46:14.000Z",
+              "externalLink": "https://www.instagram.com/reel/DeCFthEEblo/",
+              "textHash": "601b704bf597e2e85fe213ed5c75efdb959c615dc419e057e1b4f333a68c8250"
+            },
+            {
+              "id": "6ac201bcac8ef52594465919",
+              "status": "sent",
+              "dueAt": "2026-10-04T01:02:13.000Z",
+              "sentAt": "2026-10-04T01:02:13.000Z",
+              "externalLink": "https://www.instagram.com/p/DeDaAqQiikR/",
+              "textHash": "8297f98416b8ae64627f7e8ebcf03f915531b92672d48694cb091d3fa284014b"
+            },
+            {
+              "id": "6ac201bcac8ef52594465917",
+              "status": "sent",
+              "dueAt": "2026-10-03T09:31:09.000Z",
+              "sentAt": "2026-10-03T09:31:09.000Z",
+              "externalLink": "https://www.instagram.com/p/DeBveIqjUGV/",
+              "textHash": "1cfdbe2e44fbf52ec738505731850d014a0c2147b77151a27ae4f9140c5e93f6"
+            },
             {
               "id": "6abf7a8b0cdcd2d5debb9fd0",
               "status": "sent",
@@ -400,9 +424,33 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 63
+            "sent": 66
           },
           "posts": [
+            {
+              "id": "6ac18a707ff895d757bf4771",
+              "status": "sent",
+              "dueAt": "2026-10-04T14:30:00.000Z",
+              "sentAt": "2026-10-04T14:30:06.542Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2106753733635854359",
+              "textHash": "ae194123e240b9211c2ba2434abe50c0aeb83551dbb7d602b48adf5c32c303c1"
+            },
+            {
+              "id": "6ac18a6d814d657011d9ffbd",
+              "status": "sent",
+              "dueAt": "2026-10-04T12:30:00.000Z",
+              "sentAt": "2026-10-04T12:30:06.762Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2106723535234150669",
+              "textHash": "2a93c5ed8599aa6b3a7572ce30a3b55230c016f189161114eea26296c8a7f37c"
+            },
+            {
+              "id": "6ac18a6baa79e514b9031236",
+              "status": "sent",
+              "dueAt": "2026-10-04T03:30:00.000Z",
+              "sentAt": "2026-10-04T03:30:04.168Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2106587629391126751",
+              "textHash": "fc8ce4c87cf46b6b9f88ac803af22ee772386a55801d313ceced354fcf185ba9"
+            },
             {
               "id": "6abeca9db435ee011900a002",
               "status": "sent",
@@ -1054,8 +1102,8 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 11,
-            "scheduled": 5
+            "sent": 12,
+            "scheduled": 4
           },
           "posts": [
             {
@@ -1156,10 +1204,10 @@
             },
             {
               "id": "6ab3f7547775eb2d5e268b32",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-10-04T10:00:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-10-04T10:02:06.841Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DeEX3DPlUjc",
               "textHash": "31deef49282bf4eea4b3ea8aa4948febe6e30259672c16fcc393d6f463920634"
             },
             {
@@ -1199,9 +1247,17 @@
           "knownMioXPostPresent": false,
           "counts": {
             "scheduled": 8,
-            "sent": 22
+            "sent": 23
           },
           "posts": [
+            {
+              "id": "6ac14964ad7fd83bc5fe59a0",
+              "status": "scheduled",
+              "dueAt": "2026-10-12T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "c8402382cdd1968ad7e5c3f9f26362785304a5faf49ffad55fec2a735a6a03c0"
+            },
             {
               "id": "6abfbbd03ac90aaf27ccd2e7",
               "status": "scheduled",
@@ -1260,10 +1316,10 @@
             },
             {
               "id": "6ab681004be5473030b59a9d",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-10-04T11:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-10-04T11:30:39.029Z",
+              "externalLink": "https://www.instagram.com/p/DeEh_cileCB/",
               "textHash": "af3bad8f06269a0b369b206c2d2a63aa28d8f8974f0775a9c0b7b8813673e2e0"
             },
             {
