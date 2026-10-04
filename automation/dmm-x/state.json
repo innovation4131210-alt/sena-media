@@ -739,15 +739,18 @@
   "batch_slots": {
     "engagement": {
       "buffer_post_id": "6ac18a6baa79e514b9031236",
-      "due_at": "2026-10-04T03:30:00.000Z"
+      "due_at": "2026-10-04T03:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "rank_first_reply": {
       "buffer_post_id": "6ac18a6d814d657011d9ffbd",
-      "due_at": "2026-10-04T12:30:00.000Z"
+      "due_at": "2026-10-04T12:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "review_direct": {
       "buffer_post_id": "6ac18a707ff895d757bf4771",
-      "due_at": "2026-10-04T14:30:00.000Z"
+      "due_at": "2026-10-04T14:30:00.000Z",
+      "recovered_from_buffer": true
     }
   },
   "discovery_template_index": 2,
@@ -755,11 +758,11 @@
   "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-10-03T23:06:24.494406+00:00",
+    "at": "2026-10-04T02:45:32.369660+00:00",
     "batch_date": "2026-10-04",
-    "recovered_count": 0,
+    "recovered_count": 3,
     "repaired_count": 0,
-    "created_count": 3
+    "created_count": 0
   },
   "p0_status": {
     "url_weighted_length_fix_commit": "1131c165eef6086bb8f3ae81444d5ab79e38605e",
