@@ -87,7 +87,7 @@
         "snapshot": null
       },
       "72": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       }
     },
@@ -143,7 +143,7 @@
     },
     "6abe7aa629f0388308d06651": {
       "24": {
-        "status": "pending",
+        "status": "not_collected_or_delayed",
         "snapshot": null
       },
       "72": {
@@ -180,7 +180,17 @@
         "status": "pending",
         "snapshot": null
       }
+    },
+    "6abf9b25d2e71b2f33a3363a": {
+      "24": {
+        "status": "pending",
+        "snapshot": null
+      },
+      "72": {
+        "status": "pending",
+        "snapshot": null
+      }
     }
   },
-  "generatedAt": "2026-10-05T04:04:16+00:00"
+  "generatedAt": "2026-10-05T12:06:31+00:00"
 }
