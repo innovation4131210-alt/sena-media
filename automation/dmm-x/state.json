@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ac2c5b663761da98b5da19b",
-  "last_due_at": "2026-10-05T14:30:00.000Z",
+  "last_buffer_post_id": "6ac42e1cacc08dcd5e97b581",
+  "last_due_at": "2026-10-06T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -44,9 +44,11 @@
     "sone00223",
     "sqte00657",
     "1start00545",
-    "sqte00632"
+    "sqte00632",
+    "mizd00401",
+    "sqte00665"
   ],
-  "last_content_id": "sqte00632",
+  "last_content_id": "sqte00665",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -794,31 +796,91 @@
       "source_position": 10,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ac42e1759057dd2e0c8de49",
+      "due_at": "2026-10-06T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 4
+    },
+    {
+      "buffer_post_id": "6ac42e1959057dd2e0c8deee",
+      "due_at": "2026-10-06T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "mizd00401",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 150,
+      "review_average": 5.0,
+      "review_count": 12,
+      "discount_pct": 50,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "こだわりのフェラ50％OFF",
+      "campaign_end": "2026-10-07 09:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "小野六花",
+      "actress_popularity_score": 672.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 17,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ac42e1cacc08dcd5e97b581",
+      "due_at": "2026-10-06T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "sqte00665",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 580,
+      "review_average": 5.0,
+      "review_count": 36,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "美咲音",
+      "actress_popularity_score": 505.5,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 11,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 4,
-  "batch_date": "2026-10-05",
+  "engagement_index": 5,
+  "batch_date": "2026-10-06",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ac2c5b263761da98b5da13d",
-      "due_at": "2026-10-05T03:30:00.000Z"
+      "buffer_post_id": "6ac42e1759057dd2e0c8de49",
+      "due_at": "2026-10-06T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ac2c5b4d467abe8cfc869ff",
-      "due_at": "2026-10-05T12:30:00.000Z"
+      "buffer_post_id": "6ac42e1959057dd2e0c8deee",
+      "due_at": "2026-10-06T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ac2c5b663761da98b5da19b",
-      "due_at": "2026-10-05T14:30:00.000Z"
+      "buffer_post_id": "6ac42e1cacc08dcd5e97b581",
+      "due_at": "2026-10-06T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 3,
+  "discovery_template_index": 1,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 3,
+  "decision_template_index": 1,
   "last_run": {
     "status": "success",
-    "at": "2026-10-04T21:31:35.062453+00:00",
-    "batch_date": "2026-10-05",
+    "at": "2026-10-05T23:09:16.294889+00:00",
+    "batch_date": "2026-10-06",
     "recovered_count": 0,
     "repaired_count": 0,
     "created_count": 3
