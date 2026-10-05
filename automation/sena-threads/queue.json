@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-03T16:29:11.884Z",
+  "updatedAt": "2026-10-05T12:50:20.430Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -99,10 +99,13 @@
       "text": "コーヒーを持って駅に着くと、少しだけ旅が始まった感じがする。\n\n移動の日、最初に買うものって何？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-initial-9/SENA_08_station_travel.jpeg",
       "visualFirst": true,
-      "status": "scheduled",
+      "status": "sent",
       "bufferPostId": "6ab755d2f59168c975366bc7",
       "bufferDueAt": "2026-10-05T11:10:00.000Z",
-      "processedAt": "2026-09-26T05:19:14.425Z"
+      "processedAt": "2026-09-26T05:19:14.425Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeHEctMEW6U",
+      "sentAt": "2026-10-05T11:10:16.776Z",
+      "statusSyncedAt": "2026-10-05T12:50:20.429Z"
     },
     {
       "key": "sena-threads-07",
@@ -215,8 +218,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 7,
-    "verifiedAt": "2026-10-03T16:29:11.884Z"
+    "scheduledCount": 6,
+    "verifiedAt": "2026-10-05T12:50:20.430Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
