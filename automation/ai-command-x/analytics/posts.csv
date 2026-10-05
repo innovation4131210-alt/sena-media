@@ -1,4 +1,10 @@
 contentId,contentType,experimentId,hookVariant,bufferPostId,sentAt,externalLink,hasNoteLink,noteDestination,impressions,likes,comments,reposts,quotes,clicks,saves,bufferEngagementRate,interactionRatePct,clickRatePct,metricsUpdatedAt,text
+D06-NOON,運用改善,NOTE_AB_7DAY_V1,,6abf9b2581e421bfcd79efcd,2026-10-05T12:20:00+09:00,https://x.com/2104714619688554496/status/2106947486753439893,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-10-05T03:20:10.012Z,"設定変更は「変更前 → 変更後 → 確認方法」で報告してもらう。
+
+例：通知を週1回へ変えたら、保存後の頻度を読み直す。
+
+変更処理にエラーがなかっただけでは、反映されたとは限らない。
+「保存後の値を再取得し、指定と一致するか確認してください。」"
 D06-AM,今日の指令,NOTE_AB_7DAY_V1,,6abf9b2581e421bfcd79efa4,2026-10-05T08:10:01+09:00,https://x.com/2104714619688554496/status/2106884573581685161,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-10-04T23:10:10.897Z,"表に「合計を入れました」と返ってきたら、数字だけで判断しない。
 
 元データに行を足して、合計も変わるか確認する。
