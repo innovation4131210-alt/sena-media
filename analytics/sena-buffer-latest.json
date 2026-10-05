@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-04T18:22:52.862Z",
+  "capturedAt": "2026-10-05T13:49:02.277Z",
   "tokyoDate": "2026-10-05",
   "readOnly": true,
   "inventoryComplete": true,
@@ -14,14 +14,73 @@
   "channelAvailable": true,
   "sent": [
     {
+      "id": "6ab7d22bccccb9429c2f6164",
+      "text": "コーヒーを買ったら出発。行き先は、着いてから少しずつ。",
+      "status": "sent",
+      "dueAt": "2026-10-05T11:30:00.000Z",
+      "sentAt": "2026-10-05T11:31:07.265Z",
+      "externalLink": "https://www.instagram.com/p/DeHG1tRkS7f/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-09-26T14:09:47.761Z"
+    },
+    {
       "id": "6ab681004be5473030b59a9d",
       "text": "黒を着る夜は、最後のアクセサリーで迷う。足す？引く？",
       "status": "sent",
       "dueAt": "2026-10-04T11:30:00.000Z",
       "sentAt": "2026-10-04T11:30:39.029Z",
       "externalLink": "https://www.instagram.com/p/DeEh_cileCB/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-09-25T14:11:12.796Z"
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 100,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 1,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-05T01:03:04.365Z"
     },
     {
       "id": "6ab52f7ef2918b28ff7437c0",
@@ -80,7 +139,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.830Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.362Z"
     },
     {
       "id": "6ab52f7d3e8c1aa3fcccf9e1",
@@ -139,7 +198,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.810Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.371Z"
     },
     {
       "id": "6ab52f7cd0d12c23fa5b8e7d",
@@ -164,7 +223,66 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-05T01:03:04.344Z"
+    },
+    {
+      "id": "6ab3ddf8c81095d33c9a1f4a",
+      "text": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？",
+      "status": "sent",
+      "dueAt": "2026-09-30T11:30:00.000Z",
+      "sentAt": "2026-09-30T11:31:03.886Z",
+      "externalLink": "https://www.instagram.com/p/Dd6O3M_oEF5/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
           "unit": "percentage"
         },
         {
@@ -194,70 +312,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.801Z"
-    },
-    {
-      "id": "6ab3ddf8c81095d33c9a1f4a",
-      "text": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？",
-      "status": "sent",
-      "dueAt": "2026-09-30T11:30:00.000Z",
-      "sentAt": "2026-09-30T11:31:03.886Z",
-      "externalLink": "https://www.instagram.com/p/Dd6O3M_oEF5/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 100,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 1,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.794Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.369Z"
     },
     {
       "id": "6ab3ddf7a75742f2cd11395c",
@@ -282,13 +341,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         },
         {
@@ -312,11 +371,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.796Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.388Z"
     },
     {
       "id": "6ab38b29c5fe69b4e884239f",
@@ -341,13 +400,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         },
         {
@@ -371,11 +430,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.798Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.382Z"
     },
     {
       "id": "6ab357d9b777b65977f0a8d2",
@@ -400,13 +459,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         },
         {
@@ -430,11 +489,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.805Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.377Z"
     },
     {
       "id": "6ab357d87f829c66807a5ea5",
@@ -459,13 +518,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 33.33,
+          "value": 25,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 3,
+          "value": 4,
           "unit": "count"
         },
         {
@@ -489,11 +548,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 3,
+          "value": 4,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.806Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.402Z"
     },
     {
       "id": "6ab357d87f829c66807a5e75",
@@ -518,13 +577,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         },
         {
@@ -548,11 +607,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.808Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.397Z"
     },
     {
       "id": "6ab5c2c57eb36f6708a279c1",
@@ -618,13 +677,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         },
         {
@@ -648,11 +707,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.812Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.342Z"
     },
     {
       "id": "6ab357d778330b3657e58b39",
@@ -661,183 +720,6 @@
       "dueAt": "2026-09-24T06:00:00.000Z",
       "sentAt": "2026-09-24T06:00:40.856Z",
       "externalLink": "https://www.instagram.com/p/DdqMSL0FScP/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 100,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 1,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.814Z"
-    },
-    {
-      "id": "6ab357d62aa0e20bb472d3c6",
-      "text": "外に出ない日は、髪も服も少しだけ適当。こういう日も残しておく。",
-      "status": "sent",
-      "dueAt": "2026-09-24T02:00:00.000Z",
-      "sentAt": "2026-09-24T02:00:36.152Z",
-      "externalLink": "https://www.instagram.com/p/Ddpwz38FKTR/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 100,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 1,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.799Z"
-    },
-    {
-      "id": "6ab357d67f829c66807a5e22",
-      "text": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？一度帰って考える？",
-      "status": "sent",
-      "dueAt": "2026-09-23T13:00:00.000Z",
-      "sentAt": "2026-09-23T13:01:45.994Z",
-      "externalLink": "https://www.instagram.com/p/DdoXp5llZCD/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 100,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 1,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.815Z"
-    },
-    {
-      "id": "6ab357d5b777b65977f0a865",
-      "text": "予定の合間に少しだけ。こういう何も決めない時間がいちばん好きかもしれない。",
-      "status": "sent",
-      "dueAt": "2026-09-23T10:30:00.000Z",
-      "sentAt": "2026-09-23T10:30:20.289Z",
-      "externalLink": "https://www.instagram.com/p/DdoGWYnFYNj/",
       "metrics": [
         {
           "type": "reactions",
@@ -888,15 +770,133 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.817Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.400Z"
     },
     {
-      "id": "6ab357d57f829c66807a5dfb",
-      "text": "出る前の最終確認。白とチャコールだけで今日は十分。あなたならここに黒を足す？",
+      "id": "6ab357d62aa0e20bb472d3c6",
+      "text": "外に出ない日は、髪も服も少しだけ適当。こういう日も残しておく。",
       "status": "sent",
-      "dueAt": "2026-09-23T07:30:00.000Z",
-      "sentAt": "2026-09-23T07:30:16.021Z",
-      "externalLink": "https://www.instagram.com/p/Ddnxvamm65C/",
+      "dueAt": "2026-09-24T02:00:00.000Z",
+      "sentAt": "2026-09-24T02:00:36.152Z",
+      "externalLink": "https://www.instagram.com/p/Ddpwz38FKTR/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-05T01:03:04.405Z"
+    },
+    {
+      "id": "6ab357d67f829c66807a5e22",
+      "text": "見るだけのつもりだった日ほど、袋が増える。買い物は即決する？一度帰って考える？",
+      "status": "sent",
+      "dueAt": "2026-09-23T13:00:00.000Z",
+      "sentAt": "2026-09-23T13:01:45.994Z",
+      "externalLink": "https://www.instagram.com/p/DdoXp5llZCD/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-05T01:03:04.390Z"
+    },
+    {
+      "id": "6ab357d5b777b65977f0a865",
+      "text": "予定の合間に少しだけ。こういう何も決めない時間がいちばん好きかもしれない。",
+      "status": "sent",
+      "dueAt": "2026-09-23T10:30:00.000Z",
+      "sentAt": "2026-09-23T10:30:20.289Z",
+      "externalLink": "https://www.instagram.com/p/DdoGWYnFYNj/",
       "metrics": [
         {
           "type": "reactions",
@@ -947,7 +947,66 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-04T02:02:54.828Z"
+      "metricsUpdatedAt": "2026-10-05T01:03:04.339Z"
+    },
+    {
+      "id": "6ab357d57f829c66807a5dfb",
+      "text": "出る前の最終確認。白とチャコールだけで今日は十分。あなたならここに黒を足す？",
+      "status": "sent",
+      "dueAt": "2026-09-23T07:30:00.000Z",
+      "sentAt": "2026-09-23T07:30:16.021Z",
+      "externalLink": "https://www.instagram.com/p/Ddnxvamm65C/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 25,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 4,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 4,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-05T01:03:04.374Z"
     },
     {
       "id": "6aaff74813d908add21e414b",
@@ -1307,12 +1366,6 @@
   "failed": [],
   "scheduled": [
     {
-      "id": "6ab7d22bccccb9429c2f6164",
-      "text": "コーヒーを買ったら出発。行き先は、着いてから少しずつ。",
-      "status": "scheduled",
-      "dueAt": "2026-10-05T11:30:00.000Z"
-    },
-    {
       "id": "6ab923a8612c9e6ac926f9fa",
       "text": "雨の夜は街の光がきれいに見える。タクシーを待つ時間も悪くない。",
       "status": "scheduled",
@@ -1353,7 +1406,13 @@
       "text": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
       "status": "scheduled",
       "dueAt": "2026-10-12T11:30:00.000Z"
+    },
+    {
+      "id": "6ac2a497fe1389e4133ddb51",
+      "text": "ヒールを脱いだ瞬間、やっと今日が終わった気がした。",
+      "status": "scheduled",
+      "dueAt": "2026-10-13T11:30:00.000Z"
     }
   ],
-  "workflowRunId": "37224211165"
+  "workflowRunId": "37319719446"
 }
