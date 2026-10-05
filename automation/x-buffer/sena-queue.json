@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04T18:18:34.231Z",
+  "updatedAt": "2026-10-05T12:44:03.295Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -241,7 +241,11 @@
       "dueAt": "2026-10-15T04:05:00Z",
       "text": "まだ外に出ない朝。窓辺で少しだけ、今日の予定を考える。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-15_D18.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-05T12:44:02.062Z",
+      "bufferPostId": "6ac39b9232f9ebfdb1d1d46a",
+      "bufferDueAt": "2026-10-15T04:05:00.000Z",
+      "processedAt": "2026-10-05T12:44:03.120Z"
     },
     {
       "key": "sena-d19",
@@ -357,6 +361,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-04T18:18:34.231Z"
+    "verifiedAt": "2026-10-05T12:44:03.295Z"
   }
 }
