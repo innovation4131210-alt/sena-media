@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-10-05",
+  "reviewedAt": "2026-10-05T00:56:06.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "5819efb00f44ed6f4ddbb155cb05385a58ffa60c",
+      "lastRunAt": "2026-10-04T19:10:15.159Z",
+      "lastVerifiedAt": "2026-10-04T19:10:16.334Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "772ae560ed1c5489b8ee3a123b01c9e13360cdbd"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "e10a938d1ad05d2650c4cf79d58fb983308c7807",
+      "capturedAt": "2026-10-04T18:22:52.862Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "3932cf2b122dbaed2ea510e0f5d6777b1766196c",
+      "checkedAt": "2026-10-04T18:22:53.505Z"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-27",
+    "manifestItems": 30,
+    "phase": "live_day_8",
+    "manifestChanged": false
+  },
+  "runner": {
+    "status": "operational",
+    "latestSuccessfulCreate": {
+      "manifestId": "D16",
+      "postId": "6ac2a497fe1389e4133ddb51",
+      "createdAt": "2026-10-04T19:10:15.159Z",
+      "verifiedAt": "2026-10-04T19:10:16.332Z"
+    },
+    "monthlyQuotaBlockObserved": false,
+    "interpretation": "The existing public GitHub runner created D16 and read it back as scheduled. No billing action is required."
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "connection": "healthy",
+    "inventoryComplete": true,
+    "connectionEvidence": {
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "scopedAuditHealthy": true,
+      "overallAuditComplete": true
+    },
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "countDerivation": {
+      "completeSnapshotAfterD07PublishBeforeNightlyRefill": 8,
+      "createdAndReadBackByLatestRunner": 1
+    },
+    "scheduled30DayManifestCount": 9,
+    "remainingChannelCapacity": 0,
+    "createdInLatestRun": {
+      "manifestId": "D16",
+      "postId": "6ac2a497fe1389e4133ddb51",
+      "dueAt": "2026-10-13T11:30:00.000Z",
+      "tokyoTime": "2026-10-13T20:30:00+09:00",
+      "status": "scheduled",
+      "verifiedAt": "2026-10-04T19:10:16.332Z"
+    },
+    "scheduledManifestPosts": [
+      {
+        "manifestId": "D08",
+        "postId": "6ab7d22bccccb9429c2f6164",
+        "tokyoDate": "2026-10-05",
+        "dueAt": "2026-10-05T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D09",
+        "postId": "6ab923a8612c9e6ac926f9fa",
+        "tokyoDate": "2026-10-06",
+        "dueAt": "2026-10-06T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D10",
+        "postId": "6aba75db3f092d970340f383",
+        "tokyoDate": "2026-10-07",
+        "dueAt": "2026-10-07T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D11",
+        "postId": "6abbc73b86767996fcb6ba44",
+        "tokyoDate": "2026-10-08",
+        "dueAt": "2026-10-08T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D12",
+        "postId": "6abd193cda5180c12bfebdec",
+        "tokyoDate": "2026-10-09",
+        "dueAt": "2026-10-09T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D13",
+        "postId": "6abe6a8c0c33e408f7aba7b2",
+        "tokyoDate": "2026-10-10",
+        "dueAt": "2026-10-10T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D14",
+        "postId": "6abfbbd03ac90aaf27ccd2e7",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D15",
+        "postId": "6ac14964ad7fd83bc5fe59a0",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:30:00.000Z",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D16",
+        "postId": "6ac2a497fe1389e4133ddb51",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:30:00.000Z",
+        "status": "scheduled"
+      }
+    ],
+    "validation": {
+      "allDatesMatchManifest": true,
+      "allCaptionsMatchManifest": true,
+      "allMediaHashesMatchManifest": true,
+      "allDueTimesMatchManifest": true,
+      "allCurrentPostsReadBackAsScheduled": true
+    },
+    "pendingCreates": [],
+    "blocked": [],
+    "duplicateDetected": false,
+    "failedPostDetected": false,
+    "action": "No additional creation. D08-D16 occupy the nine safe channel slots; the existing 23:00 JST workflow will refill after D08 publishes."
+  },
+  "publishing": {
+    "thirtyDayPostsPublished": 7,
+    "latestCampaignPublication": {
+      "manifestId": "D07",
+      "postId": "6ab681004be5473030b59a9d",
+      "sentAt": "2026-10-04T11:30:39.029Z",
+      "tokyoSentAt": "2026-10-04T20:30:39.029+09:00",
+      "publicUrl": "https://www.instagram.com/p/DeEh_cileCB/",
+      "status": "sent"
+    },
+    "campaignPostDueToday": {
+      "manifestId": "D08",
+      "postId": "6ab7d22bccccb9429c2f6164",
+      "dueAt": "2026-10-05T11:30:00.000Z",
+      "tokyoTime": "2026-10-05T20:30:00+09:00",
+      "status": "scheduled"
+    }
+  },
+  "performance": {
+    "scope": "SENA 30-day manifest posts",
+    "dataCapturedAt": "2026-10-04T18:22:52.862Z",
+    "D01": {
+      "metricsUpdatedAt": "2026-10-04T02:02:54.798Z",
+      "ageAtMetricUpdateMinutes": 8071,
+      "views": 1,
+      "reach": 1,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "One reaction on one reached account. Sample size is too small for a strategy decision."
+    },
+    "D02": {
+      "metricsUpdatedAt": "2026-10-04T02:02:54.796Z",
+      "ageAtMetricUpdateMinutes": 6631,
+      "views": 1,
+      "reach": 1,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "One reaction on one reached account. Sample size is too small for a strategy decision."
+    },
+    "D03": {
+      "metricsUpdatedAt": "2026-10-04T02:02:54.794Z",
+      "ageAtMetricUpdateMinutes": 5191,
+      "views": 1,
+      "reach": 1,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "One reaction on one reached account. Sample size is too small for a strategy decision."
+    },
+    "D04": {
+      "metricsUpdatedAt": "2026-10-04T02:02:54.801Z",
+      "ageAtMetricUpdateMinutes": 3751,
+      "views": 2,
+      "reach": 1,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Two views, one reached account and one reaction. Sample size is too small for a strategy decision."
+    },
+    "D05": {
+      "metricsUpdatedAt": "2026-10-04T02:02:54.810Z",
+      "ageAtMetricUpdateMinutes": 2311,
+      "views": 1,
+      "reach": 1,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "One reaction on one reached account. Sample size is too small for a strategy decision."
+    },
+    "D06": {
+      "metricsUpdatedAt": "2026-10-04T02:02:54.830Z",
+      "ageAtMetricUpdateMinutes": 872,
+      "views": 3,
+      "reach": 1,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "under_24h",
+      "interpretation": "Three views, one reached account and one reaction, but metrics were updated about 14h32m after publication and are not used for comparison."
+    },
+    "D07": {
+      "metricsUpdatedAt": null,
+      "ageAtMetricUpdateMinutes": null,
+      "views": null,
+      "reach": null,
+      "reactions": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "under_24h",
+      "interpretation": "Metrics unavailable in the complete snapshot captured about 6h52m after publication."
+    },
+    "decision": "hold",
+    "note": "D01-D05 passed 24 hours but each reached one account; D06 was under 24 hours at metric update and D07 metrics were unavailable. No schedule or strategy change is justified. Missing fields remain null."
+  },
+  "userActionRequired": false,
+  "additionalCost": false
+}
