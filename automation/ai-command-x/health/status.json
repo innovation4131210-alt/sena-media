@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-04T20:44:11+00:00",
-  "ok": true,
+  "checkedAt": "2026-10-05T15:42:59+00:00",
+  "ok": false,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
     "name": "ai_command_jp",
@@ -14,24 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6abf9b2581e421bfcd79efa4",
-        "contentId": "D06-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-10-05T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6abf9b2581e421bfcd79efcd",
-        "contentId": "D06-NOON",
-        "contentType": "運用改善",
-        "dueAtJst": "2026-10-05T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6abf9b25d2e71b2f33a3363a",
-        "contentId": "D06-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-10-05T20:30+09:00"
-      },
       {
         "bufferPostId": "6ac15060fec5913394830815",
         "contentId": "D07-AM",
@@ -67,11 +49,29 @@
         "contentId": "D08-PM",
         "contentType": "note導線",
         "dueAtJst": "2026-10-07T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ac3c0d456703b4c1e84b66b",
+        "contentId": "D09-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-08T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ac3c0d4e40422bf13b5ecc5",
+        "contentId": "D09-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-10-08T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ac3c0d5e40422bf13b5ecee",
+        "contentId": "D09-PM",
+        "contentType": "note導線",
+        "dueAtJst": "2026-10-08T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 66,
-  "analyticsAgeMinutes": 154.0,
+  "unusedPreparedCount": 63,
+  "analyticsAgeMinutes": 216.5,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -90,8 +90,8 @@
     },
     "paid_product": {
       "url": "https://note.com/ai_command/n/n7b74f56a03dc",
-      "httpStatus": 200,
-      "ok": true
+      "ok": false,
+      "error": "The read operation timed out"
     },
     "free_A": {
       "url": "https://note.com/ai_command/n/n29d46a1b4341",
@@ -104,5 +104,7 @@
       "ok": true
     }
   },
-  "errors": []
+  "errors": [
+    "note public page unavailable: paid_product"
+  ]
 }
