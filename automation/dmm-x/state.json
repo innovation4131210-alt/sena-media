@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ac42e1cacc08dcd5e97b581",
-  "last_due_at": "2026-10-06T14:30:00.000Z",
+  "last_buffer_post_id": "6ac561d510de5e15cbddffa8",
+  "last_due_at": "2026-10-07T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -46,9 +46,11 @@
     "1start00545",
     "sqte00632",
     "mizd00401",
-    "sqte00665"
+    "sqte00665",
+    "mida00497",
+    "sqde00018"
   ],
-  "last_content_id": "sqte00665",
+  "last_content_id": "sqde00018",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -856,31 +858,91 @@
       "source_position": 11,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ac561d164465b0b2a4094e6",
+      "due_at": "2026-10-07T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 5
+    },
+    {
+      "buffer_post_id": "6ac561d3dfc4ec5d41024487",
+      "due_at": "2026-10-07T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "mida00497",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 350,
+      "review_average": 4.71,
+      "review_count": 24,
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "石川澪",
+      "actress_popularity_score": 804.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 1,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ac561d510de5e15cbddffa8",
+      "due_at": "2026-10-07T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "sqde00018",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 300,
+      "review_average": 5.0,
+      "review_count": 40,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "依本しおり",
+      "actress_popularity_score": 294.5,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 6,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 5,
-  "batch_date": "2026-10-06",
+  "engagement_index": 6,
+  "batch_date": "2026-10-07",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ac42e1759057dd2e0c8de49",
-      "due_at": "2026-10-06T03:30:00.000Z"
+      "buffer_post_id": "6ac561d164465b0b2a4094e6",
+      "due_at": "2026-10-07T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ac42e1959057dd2e0c8deee",
-      "due_at": "2026-10-06T12:30:00.000Z"
+      "buffer_post_id": "6ac561d3dfc4ec5d41024487",
+      "due_at": "2026-10-07T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ac42e1cacc08dcd5e97b581",
-      "due_at": "2026-10-06T14:30:00.000Z"
+      "buffer_post_id": "6ac561d510de5e15cbddffa8",
+      "due_at": "2026-10-07T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 1,
+  "discovery_template_index": 2,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 1,
+  "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-10-05T23:09:16.294889+00:00",
-    "batch_date": "2026-10-06",
+    "at": "2026-10-06T21:02:13.840190+00:00",
+    "batch_date": "2026-10-07",
     "recovered_count": 0,
     "repaired_count": 0,
     "created_count": 3
