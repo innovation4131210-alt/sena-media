@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T23:19:00.000Z",
+  "updatedAt": "2026-10-07T23:16:13.943Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -414,7 +414,7 @@
       "key": "mio-x-ops-bridge-2026-10-10-bakery",
       "dueAt": "2026-10-10T03:15:00.000Z",
       "text": "最後のひとつを前にすると、急に決められない。\nこれ、取る？見送る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-14_D17.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-14_D17.jpeg",
       "visualPlan": {
@@ -437,13 +437,17 @@
         "variant": "bakery_last_one_choice",
         "promotionEligible": false,
         "note": "Operational continuity bridge; not an experiment promotion."
-      }
+      },
+      "attemptedAt": "2026-10-07T23:16:10.567Z",
+      "bufferPostId": "6ac6d2bb365feab0d732dd16",
+      "bufferDueAt": "2026-10-10T03:15:00.000Z",
+      "processedAt": "2026-10-07T23:16:11.209Z"
     },
     {
       "key": "mio-x-ops-bridge-2026-10-11-platform",
       "dueAt": "2026-10-11T03:15:00.000Z",
       "text": "ホーム合ってるか3回確認した。\nもう一回見る？自分を信じる？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-15_D18.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-15_D18.jpeg",
       "visualPlan": {
@@ -466,13 +470,17 @@
         "variant": "platform_double_check",
         "promotionEligible": false,
         "note": "Operational continuity bridge; not an experiment promotion."
-      }
+      },
+      "attemptedAt": "2026-10-07T23:16:11.368Z",
+      "bufferPostId": "6ac6d2bc5632f7b74bd0d455",
+      "bufferDueAt": "2026-10-11T03:15:00.000Z",
+      "processedAt": "2026-10-07T23:16:12.568Z"
     },
     {
       "key": "mio-x-ops-bridge-2026-10-12-coat",
       "dueAt": "2026-10-12T03:15:00.000Z",
       "text": "コート着る途中で、また服を変えたくなった。\nこのまま行く？着替える？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-16_D19.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-16_D19.jpeg",
       "visualPlan": {
@@ -495,14 +503,18 @@
         "variant": "coat_change_mind",
         "promotionEligible": false,
         "note": "Operational continuity bridge; not an experiment promotion."
-      }
+      },
+      "attemptedAt": "2026-10-07T23:16:12.688Z",
+      "bufferPostId": "6ac6d2bd95b0fb1c5cc10f6c",
+      "bufferDueAt": "2026-10-12T03:15:00.000Z",
+      "processedAt": "2026-10-07T23:16:13.814Z"
     }
   ],
   "lastRun": {
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
-    "scheduledCount": 9,
-    "verifiedAt": "2026-09-30T18:17:30.189Z"
+    "scheduledCount": 5,
+    "verifiedAt": "2026-10-07T23:16:13.943Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
