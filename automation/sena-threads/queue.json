@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-05T12:50:20.430Z",
+  "updatedAt": "2026-10-07T12:51:14.928Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -169,10 +169,13 @@
       "text": "仕事を切り上げる時、PCを閉じてからも少しだけ席に残ってしまう。\n\n仕事終わり、すぐ帰る派？少し寄り道する派？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-07_D10.jpeg",
       "visualFirst": true,
-      "status": "scheduled",
+      "status": "sent",
       "bufferPostId": "6abd528c7aad006ba5cd40af",
       "bufferDueAt": "2026-10-07T11:10:00.000Z",
-      "processedAt": "2026-09-30T18:18:52.217Z"
+      "processedAt": "2026-09-30T18:18:52.217Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeMOCKtlDJI",
+      "sentAt": "2026-10-07T11:10:10.542Z",
+      "statusSyncedAt": "2026-10-07T12:51:14.928Z"
     },
     {
       "key": "sena-threads-organic-2026-10-13",
@@ -219,7 +222,7 @@
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
     "scheduledCount": 6,
-    "verifiedAt": "2026-10-05T12:50:20.430Z"
+    "verifiedAt": "2026-10-07T12:51:14.928Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
