@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T12:41:34.684Z",
+  "updatedAt": "2026-10-07T12:44:30.570Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -263,7 +263,11 @@
       "dueAt": "2026-10-17T04:05:00Z",
       "text": "夜はジャケットを肩にかけるくらいがちょうどいい。少し遠回りして帰る。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-17_D20.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-07T12:44:29.225Z",
+      "bufferPostId": "6ac63eae484cdc812143634a",
+      "bufferDueAt": "2026-10-17T04:05:00.000Z",
+      "processedAt": "2026-10-07T12:44:30.431Z"
     },
     {
       "key": "sena-d21",
@@ -365,6 +369,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-06T12:41:34.684Z"
+    "verifiedAt": "2026-10-07T12:44:30.570Z"
   }
 }
