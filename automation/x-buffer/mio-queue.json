@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T18:17:30.189Z",
+  "updatedAt": "2026-10-07T23:19:00.000Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -409,6 +409,93 @@
       "bufferPostId": "6abd52393c9c97d78afbdab9",
       "bufferDueAt": "2026-10-09T03:15:00.000Z",
       "processedAt": "2026-09-30T18:17:29.989Z"
+    },
+    {
+      "key": "mio-x-ops-bridge-2026-10-10-bakery",
+      "dueAt": "2026-10-10T03:15:00.000Z",
+      "text": "最後のひとつを前にすると、急に決められない。\nこれ、取る？見送る？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-14_D17.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-14_D17.jpeg",
+      "visualPlan": {
+        "rule": "Use exact QC-accepted existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-14_D17.jpeg",
+        "manifestDay": 17,
+        "qcStatus": "accepted"
+      },
+      "intervention": {
+        "owner": "all-business-daily-audit",
+        "reason": "Latest MIO X owner refill run succeeded but found only two live scheduled posts through 2026-10-09 and no pending approved intents. Existing queue, dueAt slots, media reuse, external IDs, and processing states were checked before this three-post continuity bridge.",
+        "changeId": "MIO-X-OPS-BRIDGE-2026-10-10-12",
+        "sourceOwner": "MIO photo-production owner",
+        "recordedAt": "2026-10-07T23:19:00.000Z"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "bakery_last_one_choice",
+        "promotionEligible": false,
+        "note": "Operational continuity bridge; not an experiment promotion."
+      }
+    },
+    {
+      "key": "mio-x-ops-bridge-2026-10-11-platform",
+      "dueAt": "2026-10-11T03:15:00.000Z",
+      "text": "ホーム合ってるか3回確認した。\nもう一回見る？自分を信じる？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-15_D18.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-15_D18.jpeg",
+      "visualPlan": {
+        "rule": "Use exact QC-accepted existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-15_D18.jpeg",
+        "manifestDay": 18,
+        "qcStatus": "accepted"
+      },
+      "intervention": {
+        "owner": "all-business-daily-audit",
+        "reason": "Latest MIO X owner refill run succeeded but found only two live scheduled posts through 2026-10-09 and no pending approved intents. Existing queue, dueAt slots, media reuse, external IDs, and processing states were checked before this three-post continuity bridge.",
+        "changeId": "MIO-X-OPS-BRIDGE-2026-10-10-12",
+        "sourceOwner": "MIO photo-production owner",
+        "recordedAt": "2026-10-07T23:19:00.000Z"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "platform_double_check",
+        "promotionEligible": false,
+        "note": "Operational continuity bridge; not an experiment promotion."
+      }
+    },
+    {
+      "key": "mio-x-ops-bridge-2026-10-12-coat",
+      "dueAt": "2026-10-12T03:15:00.000Z",
+      "text": "コート着る途中で、また服を変えたくなった。\nこのまま行く？着替える？\n\n※MIOは架空のAIキャラクターです。画像はAI制作しています。\n\n#MIO",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-16_D19.jpeg",
+      "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-16_D19.jpeg",
+      "visualPlan": {
+        "rule": "Use exact QC-accepted existing 30-day asset; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-16_D19.jpeg",
+        "manifestDay": 19,
+        "qcStatus": "accepted"
+      },
+      "intervention": {
+        "owner": "all-business-daily-audit",
+        "reason": "Latest MIO X owner refill run succeeded but found only two live scheduled posts through 2026-10-09 and no pending approved intents. Existing queue, dueAt slots, media reuse, external IDs, and processing states were checked before this three-post continuity bridge.",
+        "changeId": "MIO-X-OPS-BRIDGE-2026-10-10-12",
+        "sourceOwner": "MIO photo-production owner",
+        "recordedAt": "2026-10-07T23:19:00.000Z"
+      },
+      "experiment": {
+        "type": "x_visual_hook",
+        "strength": "normal",
+        "variant": "coat_change_mind",
+        "promotionEligible": false,
+        "note": "Operational continuity bridge; not an experiment promotion."
+      }
     }
   ],
   "lastRun": {
@@ -417,5 +504,5 @@
     "scheduledCount": 9,
     "verifiedAt": "2026-09-30T18:17:30.189Z"
   },
-  "refillReason": "Restore rolling MIO X coverage for Oct 1-9 after monthly Actions capacity resumed; use only unique approved visuals and existing guarded refill."
+  "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
