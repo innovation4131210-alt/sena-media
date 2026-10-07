@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-06T15:40:24+00:00",
-  "ok": true,
+  "checkedAt": "2026-10-07T15:47:22+00:00",
+  "ok": false,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
     "name": "ai_command_jp",
@@ -14,24 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6ac2b9dad467abe8cfc6b835",
-        "contentId": "D08-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-10-07T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6ac2b9da5de5ee424c165eaa",
-        "contentId": "D08-NOON",
-        "contentType": "司令室メモ",
-        "dueAtJst": "2026-10-07T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6ac2b9db5de5ee424c165ed4",
-        "contentId": "D08-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-10-07T20:30+09:00"
-      },
       {
         "bufferPostId": "6ac3c0d456703b4c1e84b66b",
         "contentId": "D09-AM",
@@ -67,11 +49,29 @@
         "contentId": "D10-PM",
         "contentType": "実務ノウハウ",
         "dueAtJst": "2026-10-09T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ac665f3e94c2c45e0073184",
+        "contentId": "D11-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-10T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ac665f334c83ad4924db71c",
+        "contentId": "D11-NOON",
+        "contentType": "実行ログ",
+        "dueAtJst": "2026-10-10T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ac665f3afc53d16cec0c76c",
+        "contentId": "D11-PM",
+        "contentType": "ブランド",
+        "dueAtJst": "2026-10-10T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 60,
-  "analyticsAgeMinutes": 214.0,
+  "unusedPreparedCount": 57,
+  "analyticsAgeMinutes": 219.9,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -80,8 +80,8 @@
     },
     "free_entry": {
       "url": "https://note.com/ai_command/n/ne79f153b4665",
-      "httpStatus": 200,
-      "ok": true
+      "ok": false,
+      "error": "HTTP Error 503: Service Unavailable"
     },
     "front_product": {
       "url": "https://note.com/ai_command/n/nbb052c3cb0ad",
@@ -104,5 +104,7 @@
       "ok": true
     }
   },
-  "errors": []
+  "errors": [
+    "note public page unavailable: free_entry"
+  ]
 }
