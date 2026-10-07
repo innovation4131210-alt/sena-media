@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "checkedAt": "2026-10-07T20:58:33.010Z",
-  "updatedAt": "2026-10-07T20:58:37.191Z",
+  "checkedAt": "2026-10-07T21:35:16.663Z",
+  "updatedAt": "2026-10-07T21:35:18.228Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -15,101 +15,166 @@
   "inventory": {
     "complete": true,
     "counts": {
+      "scheduled": 3,
       "sent": 75
     },
-    "scheduledCount": 0,
-    "scheduled": []
+    "scheduledCount": 3,
+    "scheduled": [
+      {
+        "id": "6ac6b3bab20a10e4de2d00cc",
+        "dueAt": "2026-10-08T03:30:00.000Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "readback": {
+          "text": "レビューは星の高さと件数、どっちを重視する？\n①星 ②件数",
+          "xWeightedLength": 56,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": false,
+          "expectedActressName": null,
+          "actressNamePresent": null,
+          "valueProofPresent": true,
+          "campaignExpected": null,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": false
+        }
+      },
+      {
+        "id": "6ac6b3bbc16f98d294cbcb12",
+        "dueAt": "2026-10-08T12:30:00.000Z",
+        "kind": "affiliate",
+        "format": "discovery",
+        "linkMode": "direct",
+        "contentId": "1start00588",
+        "sort": "rank",
+        "discountPct": 30,
+        "campaignActive": true,
+        "readback": {
+          "text": "【PR】今夜の候補。\n『スワッピング趣味の変態夫婦にNTR性癖を植…』\n出演：青空ひかり / ★4.5（8件） / 約30%OFF\nFANZA公式：SODグループ30％OFF第1弾（10/13まで）\n18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3D1start00588&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 198,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "青空ひかり",
+          "actressNamePresent": true,
+          "valueProofPresent": true,
+          "campaignExpected": true,
+          "campaignEvidencePresent": true,
+          "campaignTitle": "SODグループ30％OFF第1弾",
+          "campaignEnd": "2026-10-13 23:59:59",
+          "p0ChecksPass": true
+        }
+      },
+      {
+        "id": "6ac6b3bb31a577b8bd2dfbb6",
+        "dueAt": "2026-10-08T14:30:00.000Z",
+        "kind": "affiliate",
+        "format": "decision",
+        "linkMode": "direct",
+        "contentId": "sqte00636",
+        "sort": "review",
+        "discountPct": 0,
+        "campaignActive": false,
+        "readback": {
+          "text": "【PR】今夜はレビュー重視。上位候補の中で条件を見て残ったのがこれ。\n『いつでも使えるオナホ後輩 天月あず』\n出演：天月あず / 580円\n作品情報はこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dsqte00636&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 188,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "天月あず",
+          "actressNamePresent": true,
+          "valueProofPresent": true,
+          "campaignExpected": false,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": true
+        }
+      }
+    ]
   },
   "metrics": {
-    "samplePosts": 40,
+    "samplePosts": 15,
     "coverage": {
       "totalSent": 75,
       "selected": 40,
-      "attempted": 40,
-      "fetched": 40,
-      "comparable": 40,
-      "cached": 0,
+      "attempted": 16,
+      "fetched": 15,
+      "comparable": 15,
+      "cached": 25,
       "missing": 0,
-      "status": "complete",
-      "cooldown": null
+      "status": "rate_limited",
+      "cooldown": {
+        "status": 429,
+        "retryAt": "2026-10-12T23:07:45.228Z"
+      }
     },
     "freshness": {
       "oldestMetricsUpdatedAt": "2026-10-07T20:09:41.085Z",
-      "newestMetricsUpdatedAt": "2026-10-07T20:09:41.086Z"
+      "newestMetricsUpdatedAt": "2026-10-07T20:09:41.085Z"
     },
     "overall": {
-      "posts": 40,
-      "impressions": 1142,
-      "clicks": 6,
+      "posts": 15,
+      "impressions": 344,
+      "clicks": 2,
       "reactions": 0,
-      "comments": 5,
+      "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 40,
-        "clicks": 40,
-        "reactions": 40,
-        "comments": 40,
-        "reposts": 40
+        "impressions": 15,
+        "clicks": 15,
+        "reactions": 15,
+        "comments": 15,
+        "reposts": 15
       },
-      "ctrPct": 0.53
+      "ctrPct": 0.58
     },
     "affiliate": {
-      "posts": 27,
-      "impressions": 894,
-      "clicks": 6,
+      "posts": 10,
+      "impressions": 282,
+      "clicks": 2,
       "reactions": 0,
-      "comments": 5,
+      "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 27,
-        "clicks": 27,
-        "reactions": 27,
-        "comments": 27,
-        "reposts": 27
+        "impressions": 10,
+        "clicks": 10,
+        "reactions": 10,
+        "comments": 10,
+        "reposts": 10
       },
-      "ctrPct": 0.67
+      "ctrPct": 0.71
     },
     "byFormat": {
       "discovery": {
-        "posts": 13,
-        "impressions": 390,
+        "posts": 5,
+        "impressions": 136,
         "clicks": 2,
-        "reactions": 0,
-        "comments": 5,
-        "reposts": 0,
-        "metricCoverage": {
-          "impressions": 13,
-          "clicks": 13,
-          "reactions": 13,
-          "comments": 13,
-          "reposts": 13
-        },
-        "ctrPct": 0.51
-      },
-      "decision": {
-        "posts": 14,
-        "impressions": 504,
-        "clicks": 4,
         "reactions": 0,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 14,
-          "clicks": 14,
-          "reactions": 14,
-          "comments": 14,
-          "reposts": 14
+          "impressions": 5,
+          "clicks": 5,
+          "reactions": 5,
+          "comments": 5,
+          "reposts": 5
         },
-        "ctrPct": 0.79
-      }
-    },
-    "byLinkMode": {
-      "first_reply": {
+        "ctrPct": 1.47
+      },
+      "decision": {
         "posts": 5,
-        "impressions": 177,
+        "impressions": 146,
         "clicks": 0,
         "reactions": 0,
-        "comments": 5,
+        "comments": 0,
         "reposts": 0,
         "metricCoverage": {
           "impressions": 5,
@@ -119,28 +184,46 @@
           "reposts": 5
         },
         "ctrPct": 0
+      }
+    },
+    "byLinkMode": {
+      "first_reply": {
+        "posts": 0,
+        "impressions": null,
+        "clicks": null,
+        "reactions": null,
+        "comments": null,
+        "reposts": null,
+        "metricCoverage": {
+          "impressions": 0,
+          "clicks": 0,
+          "reactions": 0,
+          "comments": 0,
+          "reposts": 0
+        },
+        "ctrPct": null
       },
       "direct": {
-        "posts": 22,
-        "impressions": 717,
-        "clicks": 6,
+        "posts": 10,
+        "impressions": 282,
+        "clicks": 2,
         "reactions": 0,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 22,
-          "clicks": 22,
-          "reactions": 22,
-          "comments": 22,
-          "reposts": 22
+          "impressions": 10,
+          "clicks": 10,
+          "reactions": 10,
+          "comments": 10,
+          "reposts": 10
         },
-        "ctrPct": 0.84
+        "ctrPct": 0.71
       }
     },
     "posts": [
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.152Z",
+        "fetchedAt": "2026-10-07T21:35:16.760Z",
         "id": "6ac561d510de5e15cbddffa8",
         "sentAt": "2026-10-07T14:30:22.008Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107840961770352900",
@@ -160,7 +243,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.253Z",
+        "fetchedAt": "2026-10-07T21:35:16.859Z",
         "id": "6ac561d3dfc4ec5d41024487",
         "sentAt": "2026-10-07T12:30:20.291Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107810755739291885",
@@ -180,7 +263,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.373Z",
+        "fetchedAt": "2026-10-07T21:35:16.963Z",
         "id": "6ac561d164465b0b2a4094e6",
         "sentAt": "2026-10-07T03:30:05.110Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107674796381048934",
@@ -200,7 +283,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.465Z",
+        "fetchedAt": "2026-10-07T21:35:17.079Z",
         "id": "6ac42e1cacc08dcd5e97b581",
         "sentAt": "2026-10-06T14:30:19.240Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107478562752082005",
@@ -220,7 +303,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.557Z",
+        "fetchedAt": "2026-10-07T21:35:17.169Z",
         "id": "6ac42e1959057dd2e0c8deee",
         "sentAt": "2026-10-06T12:30:20.033Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107448367030649273",
@@ -240,7 +323,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.684Z",
+        "fetchedAt": "2026-10-07T21:35:17.271Z",
         "id": "6ac42e1759057dd2e0c8de49",
         "sentAt": "2026-10-06T03:30:04.839Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107312407575953697",
@@ -260,7 +343,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.772Z",
+        "fetchedAt": "2026-10-07T21:35:17.374Z",
         "id": "6ac2c5b663761da98b5da19b",
         "sentAt": "2026-10-05T14:30:30.894Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107116223464956307",
@@ -280,7 +363,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.869Z",
+        "fetchedAt": "2026-10-07T21:35:17.498Z",
         "id": "6ac2c5b4d467abe8cfc869ff",
         "sentAt": "2026-10-05T12:30:20.069Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107085979072782503",
@@ -300,7 +383,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:33.992Z",
+        "fetchedAt": "2026-10-07T21:35:17.585Z",
         "id": "6ac2c5b263761da98b5da13d",
         "sentAt": "2026-10-05T03:30:04.975Z",
         "externalLink": "https://x.com/1647584462233010176/status/2106950020549279808",
@@ -320,7 +403,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:34.088Z",
+        "fetchedAt": "2026-10-07T21:35:17.675Z",
         "id": "6ac18a707ff895d757bf4771",
         "sentAt": "2026-10-04T14:30:06.542Z",
         "externalLink": "https://x.com/1647584462233010176/status/2106753733635854359",
@@ -340,7 +423,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:34.337Z",
+        "fetchedAt": "2026-10-07T21:35:17.769Z",
         "id": "6ac18a6d814d657011d9ffbd",
         "sentAt": "2026-10-04T12:30:06.762Z",
         "externalLink": "https://x.com/1647584462233010176/status/2106723535234150669",
@@ -360,7 +443,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:34.441Z",
+        "fetchedAt": "2026-10-07T21:35:17.864Z",
         "id": "6ac18a6baa79e514b9031236",
         "sentAt": "2026-10-04T03:30:04.168Z",
         "externalLink": "https://x.com/1647584462233010176/status/2106587629391126751",
@@ -380,7 +463,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:34.533Z",
+        "fetchedAt": "2026-10-07T21:35:17.957Z",
         "id": "6abeca9db435ee011900a002",
         "sentAt": "2026-10-02T14:30:51.023Z",
         "externalLink": "https://x.com/1647584462233010176/status/2106029144194621785",
@@ -400,7 +483,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:34.627Z",
+        "fetchedAt": "2026-10-07T21:35:18.056Z",
         "id": "6abeca9b45400a0e30fa926c",
         "sentAt": "2026-10-02T12:30:34.871Z",
         "externalLink": "https://x.com/1647584462233010176/status/2105998877841105123",
@@ -420,7 +503,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-07T20:58:34.726Z",
+        "fetchedAt": "2026-10-07T21:35:18.157Z",
         "id": "6abeca9863de9e09a27c82fb",
         "sentAt": "2026-10-02T03:30:06.486Z",
         "externalLink": "https://x.com/1647584462233010176/status/2105862863508169122",
@@ -439,7 +522,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:34.810Z",
         "id": "6abd78e7af8c06e95950cb28",
         "sentAt": "2026-10-01T14:30:47.730Z",
@@ -456,10 +539,11 @@
         "clicks": 0,
         "reactions": 0,
         "comments": 0,
-        "reposts": 0
+        "reposts": 0,
+        "metricsError": "Buffer rate limited; collection stopped"
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:34.896Z",
         "id": "6abd78e45feb60d6345bd158",
         "sentAt": "2026-10-01T12:30:27.427Z",
@@ -479,7 +563,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:34.999Z",
         "id": "6abd78e35feb60d6345bd0e4",
         "sentAt": "2026-10-01T03:30:04.804Z",
@@ -499,7 +583,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.120Z",
         "id": "6abc27665df9296bd8d31ea7",
         "sentAt": "2026-09-30T13:04:07.490Z",
@@ -519,7 +603,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.224Z",
         "id": "6abc27633b1eb12e6e373037",
         "sentAt": "2026-09-30T12:30:19.790Z",
@@ -539,7 +623,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.332Z",
         "id": "6abc2761a1ba5ce146dc49bf",
         "sentAt": "2026-09-30T03:30:08.428Z",
@@ -559,7 +643,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.430Z",
         "id": "6abafa5c85cca6b129738f1c",
         "sentAt": "2026-09-29T14:30:21.818Z",
@@ -579,7 +663,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.533Z",
         "id": "6abafa5c85cca6b129738ef6",
         "sentAt": "2026-09-29T12:30:20.029Z",
@@ -599,7 +683,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.623Z",
         "id": "6abad608c5484f9414a01cc1",
         "sentAt": "2026-09-29T03:30:04.851Z",
@@ -619,7 +703,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.722Z",
         "id": "6ab832c93d66d464e5bd1e17",
         "sentAt": "2026-09-27T14:30:07.744Z",
@@ -639,7 +723,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.817Z",
         "id": "6ab832c50f79a37c5d3b0095",
         "sentAt": "2026-09-27T12:30:14.773Z",
@@ -659,7 +743,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:35.922Z",
         "id": "6ab832c39f89edbefe7e8944",
         "sentAt": "2026-09-27T03:30:05.122Z",
@@ -679,7 +763,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.009Z",
         "id": "6ab6e152f28173fa3f4e7e29",
         "sentAt": "2026-09-26T14:30:07.531Z",
@@ -699,7 +783,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.107Z",
         "id": "6ab6e14bb097c5b401a27a16",
         "sentAt": "2026-09-26T12:30:07.500Z",
@@ -719,7 +803,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.208Z",
         "id": "6ab6e148dffba3cec6e49eeb",
         "sentAt": "2026-09-26T03:30:06.918Z",
@@ -739,7 +823,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.297Z",
         "id": "6ab58fec7794ad38356610c2",
         "sentAt": "2026-09-25T14:30:48.334Z",
@@ -759,7 +843,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.383Z",
         "id": "6ab58fe8858bdb85a736f71f",
         "sentAt": "2026-09-25T12:30:44.743Z",
@@ -779,7 +863,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.473Z",
         "id": "6ab58fe6858bdb85a736f6eb",
         "sentAt": "2026-09-25T03:30:06.915Z",
@@ -799,7 +883,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.614Z",
         "id": "6ab43e680316fca1a94e1d6a",
         "sentAt": "2026-09-24T14:30:32.474Z",
@@ -819,7 +903,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.712Z",
         "id": "6ab43e6677db9b2961b9cb3e",
         "sentAt": "2026-09-24T12:30:22.570Z",
@@ -839,7 +923,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.832Z",
         "id": "6ab43e63981b51098bd9f6c2",
         "sentAt": "2026-09-24T03:30:05.416Z",
@@ -859,7 +943,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:36.920Z",
         "id": "6ab2ecc998ae6feaa619b1b7",
         "sentAt": "2026-09-23T13:04:48.300Z",
@@ -879,7 +963,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:37.013Z",
         "id": "6ab2ecc7340f92dcbe153aba",
         "sentAt": "2026-09-23T12:30:20.144Z",
@@ -899,7 +983,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:37.102Z",
         "id": "6ab2ecc52aa0e20bb467e023",
         "sentAt": "2026-09-23T03:30:04.950Z",
@@ -919,7 +1003,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-07T20:58:37.190Z",
         "id": "6ab19b4a1177eabccaee8f29",
         "sentAt": "2026-09-22T14:30:21.188Z",
@@ -942,9 +1026,9 @@
     "note": "Buffer platform metrics only. Aggregates use this pass only; cached per-post values retain their original timestamps and are excluded. DMM conversions/revenue require official DMM report data and are not inferred here."
   },
   "sourceState": {
-    "batchDate": "2026-10-07",
+    "batchDate": "2026-10-08",
     "contentStrategyVersion": "real-selection-v7-campaign-demand-first",
-    "lastBufferPostId": "6ac561d510de5e15cbddffa8",
-    "lastDueAt": "2026-10-07T14:30:00.000Z"
+    "lastBufferPostId": "6ac6b3bb31a577b8bd2dfbb6",
+    "lastDueAt": "2026-10-08T14:30:00.000Z"
   }
 }
