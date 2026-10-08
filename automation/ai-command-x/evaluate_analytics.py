@@ -51,7 +51,7 @@ def main():
         clicks = known(p.get('clicks') for p in items)
         lines.append(f'| {group} | {len(items)} | {len(impressions)} | {fmt(sum(impressions) if impressions else None)} | {len(clicks)} | {fmt(total(p.get("clicks") for p in items))} |')
     for hours in (24, 72):
-        snapshots = [entry[str(hours)]['snapshot'] for entry in ages.get('posts', {}).values() if entry.get(str(hours), {}).get('status') == 'captured' and entry[str(hours)].get('snapshot')]
+        snapshots = [entry[str(hours)]['snapshot'] for entry in ages.get('posts', {}).values() if entry.get(str(hours), {}).get('status') in {'captured', 'captured_delayed'} and entry[str(hours)].get('snapshot')]
         role_groups = defaultdict(list)
         for post in snapshots:
             if post.get('hasNoteLink') is None:
@@ -59,7 +59,7 @@ def main():
             role = 'note_link' if post.get('hasNoteLink') else post.get('contentType') or 'unmapped'
             role_groups[role].append(post)
         lines += ['', f'## {hours}時間後（許容窓+2時間）', '',
-                  '- 集計対象は収集時刻と指標更新時刻の両方が許容窓に入った保存値。遅延・未取得は比較から除外。', '',
+                  '- 集計対象は実際の指標更新時刻が許容窓内の保存値。取得が遅れた値は遅延取得として明示。窓外の現在値で過去を補完しない。', '',
                   '| 役割 | 本数 | 表示中央値 | 表示取得済み | CTR中央値 % | CTR取得済み |',
                   '|---|---:|---:|---:|---:|---:|']
         for role, items in sorted(role_groups.items()):
@@ -69,6 +69,10 @@ def main():
         if not role_groups:
             lines.append('| 未取得 | 0 | 未取得 | 0 | 未取得 | 0 |')
         lines.append('- 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。')
+        statuses = defaultdict(int)
+        for entry in ages.get('posts', {}).values():
+            statuses[entry.get(str(hours), {}).get('status', 'unknown')] += 1
+        lines.append('- 取得状態: ' + ' / '.join(f'{key}={value}' for key, value in sorted(statuses.items())))
         variants = defaultdict(list)
         for post in snapshots:
             if post.get('experimentId') == 'AM_HOOK_V1' and post.get('hookVariant'):
@@ -90,3 +94,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

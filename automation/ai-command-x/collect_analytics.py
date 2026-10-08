@@ -219,6 +219,52 @@ def summarize(items):
     return result
 
 
+def age_snapshot_entry(row, hours, previous=None):
+    """Use the actual metric timestamp, never relabel a current value as historical."""
+    if previous and previous.get('snapshot') is not None:
+        return previous  # First captured evidence is immutable on repeated reads.
+    if not all(row.get(key) for key in ('sentAt', 'collectedAt', 'metricsUpdatedAt')):
+        return {'status': 'timestamp_missing', 'snapshot': None}
+    elapsed = metric_age = None
+    try:
+        for key in ('sentAt', 'collectedAt', 'metricsUpdatedAt'):
+            if not isinstance(row[key], str):
+                raise TypeError('timestamp_must_be_string')
+            value = datetime.fromisoformat(row[key].replace('Z', '+00:00'))
+            if value.tzinfo is None:
+                raise ValueError('timezone_required')
+        sent = iso_to_jst(row.get('sentAt'))
+        collected = iso_to_jst(row.get('collectedAt'))
+        updated = iso_to_jst(row.get('metricsUpdatedAt'))
+        if sent and collected:
+            elapsed = (collected - sent).total_seconds() / 3600
+        if sent and updated:
+            metric_age = (updated - sent).total_seconds() / 3600
+    except (ValueError, TypeError):
+        return {'status': 'invalid_timestamp', 'snapshot': None}
+    lag = elapsed - metric_age if elapsed is not None and metric_age is not None else None
+    entry = {'snapshot': None, 'observedAt': row.get('collectedAt'),
+             'metricUpdatedAt': row.get('metricsUpdatedAt'),
+             'collectionElapsedHours': elapsed, 'metricElapsedHours': metric_age,
+             'freshnessLagHours': lag}
+    if elapsed is None or metric_age is None:
+        entry['status'] = 'timestamp_missing'
+    elif elapsed < 0 or metric_age < 0 or lag < 0:
+        entry['status'] = 'invalid_timestamp'
+    elif elapsed < hours:
+        entry['status'] = 'pending'
+    elif metric_age < hours:
+        entry['status'] = 'provider_stale'
+    elif metric_age > hours + 2:
+        entry['status'] = 'missed_metric_window'
+    elif safe_float(row.get('impressions')) is None:
+        entry['status'] = 'metric_missing'
+    else:
+        entry['status'] = 'captured' if elapsed <= hours + 2 else 'captured_delayed'
+        entry['snapshot'] = row.copy()
+    return entry
+
+
 def main():
     prepared = json.loads(POSTS_PATH.read_text(encoding="utf-8"))
     by_text = {p["text"].strip(): p for p in prepared}
@@ -305,21 +351,15 @@ def main():
         "postCount": len(rows),
         "posts": rows,
     }
-    age_data = json.loads(AGE_PATH.read_text()) if AGE_PATH.exists() else {'schemaVersion': 2, 'posts': {}}
+    age_data = json.loads(AGE_PATH.read_text()) if AGE_PATH.exists() else {'schemaVersion': 3, 'posts': {}}
+    age_data['schemaVersion'] = 3
     current_ids = {row['bufferPostId'] for row in rows}
     age_data['posts'] = {key: value for key, value in age_data['posts'].items() if key in current_ids}
     for row in rows:
         entry = age_data['posts'].setdefault(row['bufferPostId'], {})
         for hours in (24, 72):
             key = str(hours)
-            entry.setdefault(key, {'status': 'pending', 'snapshot': None})
-            elapsed = row.get('elapsedHours')
-            metric_age = row.get('metricElapsedHours')
-            if elapsed is not None and hours <= elapsed <= hours + 2 and metric_age is not None and hours <= metric_age <= hours + 2:
-                if entry[key]['snapshot'] is None and row['impressions'] is not None:
-                    entry[key] = {'status': 'captured', 'snapshot': row.copy()}
-            elif elapsed is not None and elapsed > hours + 2 and entry[key]['snapshot'] is None:
-                entry[key]['status'] = 'not_collected_or_delayed'
+            entry[key] = age_snapshot_entry(row, hours, entry.get(key))
     age_data['generatedAt'] = collected_at
     AGE_PATH.write_text(json.dumps(age_data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     POST_ANALYTICS_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -350,4 +390,5 @@ if __name__ == "__main__":
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         sys.exit(1)
+
 
