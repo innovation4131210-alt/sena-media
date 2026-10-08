@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-08T15:30:36.001Z",
+  "updatedAt": "2026-10-08T23:33:38Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -10,7 +10,10 @@
     "textOnlyOriginalsAllowed": false,
     "textOnlyRepliesAllowed": true,
     "inlineAiCharacterDisclosure": false,
-    "disclosurePlacement": "Keep AI-character disclosure in the profile/fixed context and use platform-native AI labeling where applicable; do not append AI/fiction disclaimers to normal Threads post text."
+    "disclosurePlacement": "Keep AI-character disclosure in the profile/fixed context and use platform-native AI labeling where applicable; do not append AI/fiction disclaimers to normal Threads post text.",
+    "cadence": "daily",
+    "postingTimeJst": "20:10",
+    "cadenceEffectiveDate": "2026-10-09"
   },
   "account": {
     "handle": "sena.virtual.studio",
@@ -136,13 +139,13 @@
     },
     {
       "key": "sena-threads-09",
-      "dueAt": "2026-10-11T11:10:00.000Z",
+      "dueAt": "2026-10-10T11:10:00.000Z",
       "text": "予定のない夜に、少しだけ遠回りして帰るのが好き。\n\n何もない日に寄り道するなら、カフェ？ 本屋？ 夜景？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-17_D20.jpeg",
       "visualFirst": true,
       "status": "scheduled",
       "bufferPostId": "6ab755d480521ded552266e7",
-      "bufferDueAt": "2026-10-11T11:10:00.000Z",
+      "bufferDueAt": "2026-10-10T11:10:00.000Z",
       "processedAt": "2026-09-26T05:19:16.809Z"
     },
     {
@@ -179,35 +182,35 @@
     },
     {
       "key": "sena-threads-organic-2026-10-13",
-      "dueAt": "2026-10-13T11:10:00.000Z",
+      "dueAt": "2026-10-11T11:10:00.000Z",
       "text": "帰ってヒールを脱いだ瞬間が、いちばん「今日終わった」って感じる。\n\n帰宅したら最初にすること、何？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-13_D16.jpeg",
       "visualFirst": true,
       "status": "scheduled",
       "bufferPostId": "6abd528c08cc1d765ae47f42",
-      "bufferDueAt": "2026-10-13T11:10:00.000Z",
+      "bufferDueAt": "2026-10-11T11:10:00.000Z",
       "processedAt": "2026-09-30T18:18:52.728Z"
     },
     {
       "key": "sena-threads-organic-2026-10-15",
-      "dueAt": "2026-10-15T11:10:00.000Z",
+      "dueAt": "2026-10-12T11:10:00.000Z",
       "text": "まだ外に出ない朝。コーヒーが冷めるまで、今日の予定を考える。\n\n朝は予定を決めてから動く？その日の気分で決める？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-15_D18.jpeg",
       "visualFirst": true,
       "status": "scheduled",
       "bufferPostId": "6abd528d2f3e6ae2be6740cf",
-      "bufferDueAt": "2026-10-15T11:10:00.000Z",
+      "bufferDueAt": "2026-10-12T11:10:00.000Z",
       "processedAt": "2026-09-30T18:18:53.789Z"
     },
     {
       "key": "sena-threads-organic-2026-10-17",
-      "dueAt": "2026-10-17T11:10:00.000Z",
+      "dueAt": "2026-10-13T11:10:00.000Z",
       "text": "コーヒーと一冊、静かな席。\n気づいたら、もう少しだけ長居したくなる。",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-20_D23.jpeg",
       "visualFirst": true,
       "status": "scheduled",
       "bufferPostId": "6abd528e71c35f5d6933c7a6",
-      "bufferDueAt": "2026-10-17T11:10:00.000Z",
+      "bufferDueAt": "2026-10-13T11:10:00.000Z",
       "processedAt": "2026-09-30T18:18:54.344Z",
       "textReconciledAt": "2026-10-08T15:30:36.001Z"
     }
