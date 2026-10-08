@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-07T15:47:22+00:00",
-  "ok": false,
+  "checkedAt": "2026-10-08T15:43:50+00:00",
+  "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
     "name": "ai_command_jp",
@@ -14,24 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6ac3c0d456703b4c1e84b66b",
-        "contentId": "D09-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-10-08T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6ac3c0d4e40422bf13b5ecc5",
-        "contentId": "D09-NOON",
-        "contentType": "実務ノウハウ",
-        "dueAtJst": "2026-10-08T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6ac3c0d5e40422bf13b5ecee",
-        "contentId": "D09-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-10-08T20:30+09:00"
-      },
       {
         "bufferPostId": "6ac511e3a7c6bca6eb9d65c6",
         "contentId": "D10-AM",
@@ -67,11 +49,29 @@
         "contentId": "D11-PM",
         "contentType": "ブランド",
         "dueAtJst": "2026-10-10T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ac7b528444a36d3be282fea",
+        "contentId": "D12-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-11T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ac7b52882db5af660cb7e4d",
+        "contentId": "D12-NOON",
+        "contentType": "司令室メモ",
+        "dueAtJst": "2026-10-11T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ac7b52882db5af660cb7e76",
+        "contentId": "D12-PM",
+        "contentType": "note導線",
+        "dueAtJst": "2026-10-11T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 57,
-  "analyticsAgeMinutes": 219.9,
+  "unusedPreparedCount": 54,
+  "analyticsAgeMinutes": 216.3,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -80,8 +80,8 @@
     },
     "free_entry": {
       "url": "https://note.com/ai_command/n/ne79f153b4665",
-      "ok": false,
-      "error": "HTTP Error 503: Service Unavailable"
+      "httpStatus": 200,
+      "ok": true
     },
     "front_product": {
       "url": "https://note.com/ai_command/n/nbb052c3cb0ad",
@@ -104,7 +104,5 @@
       "ok": true
     }
   },
-  "errors": [
-    "note public page unavailable: free_entry"
-  ]
+  "errors": []
 }
