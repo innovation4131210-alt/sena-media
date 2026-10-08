@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T12:44:30.570Z",
+  "updatedAt": "2026-10-08T12:45:03.010Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -274,7 +274,11 @@
       "dueAt": "2026-10-18T04:05:00Z",
       "text": "香水は、その日の最後に決める。今日は少しだけ静かな香り。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-18_D21.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-08T12:45:01.994Z",
+      "bufferPostId": "6ac7904ed1ababbf88aeefb8",
+      "bufferDueAt": "2026-10-18T04:05:00.000Z",
+      "processedAt": "2026-10-08T12:45:02.632Z"
     },
     {
       "key": "sena-d22",
@@ -369,6 +373,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-07T12:44:30.570Z"
+    "verifiedAt": "2026-10-08T12:45:03.010Z"
   }
 }
