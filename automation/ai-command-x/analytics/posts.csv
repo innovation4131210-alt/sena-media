@@ -1,4 +1,12 @@
 contentId,contentType,experimentId,hookVariant,bufferPostId,sentAt,externalLink,hasNoteLink,noteDestination,impressions,likes,comments,reposts,quotes,clicks,saves,bufferEngagementRate,interactionRatePct,clickRatePct,metricsUpdatedAt,text
+D10-AM,今日の指令,NOTE_AB_7DAY_V1,,6ac511e3a7c6bca6eb9d65c6,2026-10-09T08:10:01+09:00,https://x.com/2104714619688554496/status/2108334126986146157,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-10-08T23:10:10.640Z,"【今日の指令】
+自動化する前に、僕は成功条件より先に「失敗時の動き」を決める。
+
+失敗したら止める
+再試行する
+人間へ渡す
+
+ここが曖昧な自動化は事故りやすい。"
 D09-PM,note導線,NOTE_AB_7DAY_V1,,6ac3c0d5e40422bf13b5ecee,2026-10-08T20:30:27+09:00,https://x.com/2104714619688554496/status/2108158074389225829,True,free_A,0.0,,0.0,0.0,,0.0,,0,,,2026-10-08T11:30:37.841Z,"AIへ設定変更を頼んだ後、何を見れば「反映した」と分かるか。
 
 変更後の値を読み直し、指定と照合する。ファイルなら実物、自動化なら実行結果を見る。
