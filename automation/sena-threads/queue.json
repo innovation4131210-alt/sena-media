@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T12:51:14.928Z",
+  "updatedAt": "2026-10-08T15:30:36.001Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -208,7 +208,8 @@
       "status": "scheduled",
       "bufferPostId": "6abd528e71c35f5d6933c7a6",
       "bufferDueAt": "2026-10-17T11:10:00.000Z",
-      "processedAt": "2026-09-30T18:18:54.344Z"
+      "processedAt": "2026-09-30T18:18:54.344Z",
+      "textReconciledAt": "2026-10-08T15:30:36.001Z"
     }
   ],
   "activation": {
@@ -221,8 +222,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 6,
-    "verifiedAt": "2026-10-07T12:51:14.928Z"
+    "scheduledCount": 9,
+    "verifiedAt": "2026-10-08T15:30:36.001Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
