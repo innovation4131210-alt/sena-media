@@ -40,11 +40,16 @@
     {
       "key": "mio-threads-pilot-D14",
       "text": "イヤリングが片方ない朝。\n探し始めると、普段見ない場所まで気になってくる。",
-      "dueAt": "2026-10-11T10:00:00.000Z"
+      "dueAt": "2026-10-10T10:00:00.000Z"
     }
   ],
   "policy": {
     "inlineAiCharacterDisclosure": false,
-    "disclosurePlacement": "Keep AI-character disclosure in the profile/fixed context and use platform-native AI labeling where applicable; do not append AI/fiction disclaimers to normal Threads post text."
+    "disclosurePlacement": "Keep AI-character disclosure in the profile/fixed context and use platform-native AI labeling where applicable; do not append AI/fiction disclaimers to normal Threads post text.",
+    "cadence": "daily",
+    "postingTimeJst": "19:00",
+    "cadenceEffectiveDate": "2026-10-09",
+    "visualRequired": true,
+    "textOnlyOriginalsAllowed": false
   }
 }
