@@ -7,6 +7,7 @@ import {runBatchQueue,validateBatches,verifyPost} from './sena-three-post-queue.
 const id='6aa72524ea19ca0bde39313c',handle='sena.virtual.studio';
 const items=Array.from({length:3},(_,i)=>({day:13+i,date:'2026-10-10',publishAt:new Date(Date.parse('2026-10-10T11:30:00Z')+i*60000).toISOString(),account:handle,caption:'caption-'+i,qcStatus:'accepted',aiDisclosure:true,batchId:'test'}));
 validateBatches(items);
+validateBatches([...items,...items.map((x,i)=>({...x,day:x.day+3,publishAt:new Date(Date.parse(x.publishAt)+86400000).toISOString()}))],1);
 assert.throws(()=>validateBatches(items.slice(0,2)),/Complete/);
 assert.throws(()=>validateBatches(items.map((x,i)=>({...x,publishAt:items[0].publishAt}))),/Invalid/);
 const original=items.map((x,i)=>({id:'existing-'+i,channelId:id,text:x.caption,dueAt:`2026-10-${10+i}T11:30:00.000Z`,status:'scheduled',assets:[{id:'asset-'+i,mimeType:'image/jpeg',source:'https://example.com/'+i,image:{altText:'original alt',userTags:[]}}],metadata:{type:'post',shouldShareToFeed:true,isAiGenerated:true,firstComment:null,link:null,geolocation:null,stickerFields:null}}));
@@ -36,7 +37,7 @@ async function transport(url,options) {
 }
 try {
  process.chdir(root);await mkdir('automation/30day',{recursive:true});
- const policy={channelId:id,handle,batchSize:3,cadenceDays:3,startDay:13,existing:original.map((x,i)=>({day:13+i,id:x.id,originalDueAt:x.dueAt}))};
+ const policy={channelId:id,handle,batchSize:3,cadenceDays:1,startDay:13,existing:original.map((x,i)=>({day:13+i,id:x.id,originalDueAt:x.dueAt}))};
  await writeFile('automation/30day/sena-grid-policy.json',JSON.stringify(policy));await writeFile('automation/30day/publishing-manifest.json',JSON.stringify({sena:items}));await writeFile('automation/30day/sena-state.json',JSON.stringify({scheduled:[]}));
  const run=()=>runBatchQueue({transport,env:{BUFFER_API_KEY:'mock'},clock:()=>Date.parse('2026-10-09T23:00:00Z')});
  failAt=2;await assert.rejects(run(),/simulated/);assert.equal(mutations,2);
@@ -45,7 +46,7 @@ try {
  await run();assert.equal(mutations,3);assert.deepEqual(posts.map(x=>x.id),original.map(x=>x.id));assert.deepEqual(posts.map(x=>x.assets),original.map(x=>x.assets));
  posts.push({...original[0],id:'unmanaged'});await assert.rejects(run(),/Unmanaged/);assert.equal(mutations,3);
  posts.pop();
- const future=items.map((x,i)=>{const filename=`SENA_2026-10-13_D${16+i}.jpeg`;return {...x,day:16+i,caption:'next-'+i,date:'2026-10-13',publishAt:new Date(Date.parse(x.publishAt)+3*86400000).toISOString(),filename,mediaPath:'media/sena-30day-2026-09-28/'+filename,sha256:createHash('sha256').update(mediaBytes).digest('hex')};});
+ const future=items.map((x,i)=>{const filename=`SENA_2026-10-11_D${16+i}.jpeg`;return {...x,day:16+i,caption:'next-'+i,date:'2026-10-11',publishAt:new Date(Date.parse(x.publishAt)+86400000).toISOString(),filename,mediaPath:'media/sena-30day-2026-09-28/'+filename,sha256:createHash('sha256').update(mediaBytes).digest('hex')};});
  await writeFile('automation/30day/publishing-manifest.json',JSON.stringify({sena:[...items,...future]}));
  await assert.rejects(run(),e=>e.code==='ENOENT');assert.equal(creates,0);
  await mkdir('media/sena-30day-2026-09-28',{recursive:true});for(const x of future)await writeFile(x.mediaPath,mediaBytes);

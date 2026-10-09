@@ -3,7 +3,7 @@
   "channelId": "6aa72524ea19ca0bde39313c",
   "handle": "sena.virtual.studio",
   "batchSize": 3,
-  "cadenceDays": 3,
+  "cadenceDays": 1,
   "startDay": 13,
   "anchor": "2026-10-10T20:30:00+09:00",
   "existing": [
@@ -15,12 +15,12 @@
     {
       "day": 14,
       "id": "6abfbbd03ac90aaf27ccd2e7",
-      "originalDueAt": "2026-10-11T11:30:00.000Z"
+      "originalDueAt": "2026-10-10T11:31:00.000Z"
     },
     {
       "day": 15,
       "id": "6ac14964ad7fd83bc5fe59a0",
-      "originalDueAt": "2026-10-12T11:30:00.000Z"
+      "originalDueAt": "2026-10-10T11:32:00.000Z"
     },
     {
       "day": 16,
@@ -30,12 +30,7 @@
     {
       "day": 17,
       "id": "6ac3b0e1c5a0c4018753e3b4",
-      "originalDueAt": "2026-10-14T11:30:00.000Z"
-    },
-    {
-      "day": 18,
-      "id": "6ac490df918cd0aeeae3c1b7",
-      "originalDueAt": "2026-10-15T11:30:00.000Z"
+      "originalDueAt": "2026-10-13T11:31:00.000Z"
     },
     {
       "day": 19,
@@ -45,12 +40,17 @@
     {
       "day": 20,
       "id": "6ac7a523444a36d3be24ff5e",
-      "originalDueAt": "2026-10-17T11:30:00.000Z"
+      "originalDueAt": "2026-10-16T11:31:00.000Z"
     },
     {
       "day": 21,
       "id": "6ac8f688443de896597f2ddf",
-      "originalDueAt": "2026-10-18T11:30:00.000Z"
+      "originalDueAt": "2026-10-16T11:32:00.000Z"
+    },
+    {
+      "day": 18,
+      "id": "6ac490df918cd0aeeae3c1b7",
+      "originalDueAt": "2026-10-13T11:32:00.000Z"
     }
   ],
   "overrides": [
@@ -71,5 +71,5 @@
     "DeSndRLIMV1",
     "DeSnR2XoPoJ"
   ],
-  "note": "Three individual posts per batch, never a three-image carousel. Publication is sequential, not atomic; brief misalignment and service failures remain possible."
+  "note": "Three individual feed posts daily at 20:30, 20:31 and 20:32 JST. Sequential, not atomic; temporary misalignment remains possible."
 }

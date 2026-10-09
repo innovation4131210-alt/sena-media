@@ -5,7 +5,7 @@ const CHANNEL='6aa72524ea19ca0bde39313c', HANDLE='sena.virtual.studio';
 const STATE='automation/30day/sena-state.json';
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const time=s=>Date.parse(s);
-export function validateBatches(items) {
+export function validateBatches(items, cadenceDays=3) {
   if (!items.length || items.length%3) throw Error('Complete three-post batches required');
   const ids=new Set(), slots=new Set();
   for(let n=0;n<items.length;n+=3) {
@@ -15,7 +15,7 @@ export function validateBatches(items) {
       if(ids.has(x.day)||slots.has(time(x.publishAt))||time(x.publishAt)!==base+j*60000||x.account!==HANDLE||x.qcStatus!=='accepted'||x.aiDisclosure!==true) throw Error('Invalid batch identity, timing or QC');
       ids.add(x.day); slots.add(time(x.publishAt));
     }
-    if(n && base!==time(items[n-3].publishAt)+3*86400000) throw Error('Three-day cadence required');
+    if(n && base!==time(items[n-3].publishAt)+cadenceDays*86400000) throw Error('Configured cadence required');
   }
 }
 export function verifyPost(before, after, dueAt) {
@@ -24,10 +24,10 @@ export function verifyPost(before, after, dueAt) {
 export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.now}={}) {
   if(!env.BUFFER_API_KEY) throw Error('SENA credential missing');
   const policy=JSON.parse(await readFile('automation/30day/sena-grid-policy.json','utf8'));
-  if(policy.channelId!==CHANNEL||policy.handle!==HANDLE||policy.batchSize!==3||policy.cadenceDays!==3) throw Error('Invalid SENA policy');
+  if(policy.channelId!==CHANNEL||policy.handle!==HANDLE||policy.batchSize!==3||![1,3].includes(policy.cadenceDays)) throw Error('Invalid SENA policy');
   const manifest=JSON.parse(await readFile('automation/30day/publishing-manifest.json','utf8'));
   const items=manifest.sena.filter(x=>x.day>=policy.startDay).map(x=>({...x,...(policy.overrides?.find(y=>y.day===x.day)||{})}));
-  validateBatches(items);
+  validateBatches(items,policy.cadenceDays);
   const state=JSON.parse(await readFile(STATE,'utf8'));
   state.batchMigration??={edits:[],pendingCreates:[]};
   const stamp=()=>new Date(clock()).toISOString();
@@ -127,8 +127,8 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
     if(members.length && members.length!==3) throw Error('Incomplete batch after readback');
     for(let j=0;j<members.length;j++) if(members[j].status==='scheduled'&&time(members[j].dueAt)!==time(group[j].publishAt)) throw Error('Final timing mismatch');
   }
-  Object.assign(state,{lastRunAt:stamp(),lastVerifiedAt:stamp(),channel:{id:CHANNEL,name:HANDLE},observedChannelScheduledCount:scheduled.length,capacityScope:'channel',safeQueueLimit:9,remainingChannelCapacity:9-scheduled.length,publishingPolicy:'three_posts_every_three_days',blocked:[]});
+  Object.assign(state,{lastRunAt:stamp(),lastVerifiedAt:stamp(),channel:{id:CHANNEL,name:HANDLE},observedChannelScheduledCount:scheduled.length,capacityScope:'channel',safeQueueLimit:9,remainingChannelCapacity:9-scheduled.length,publishingPolicy:policy.cadenceDays===1?'three_posts_daily':'three_posts_every_three_days',blocked:[]});
   state.batchMigration.status='verified';state.batchMigration.verifiedAt=stamp();await save();
-  const result={ok:true,channelId:CHANNEL,handle:HANDLE,policy:'three_posts_every_three_days',verifiedAt:stamp(),scheduled:scheduled.map(x=>({id:x.id,dueAt:x.dueAt,assetIds:x.assets.map(y=>y.id)})),editsVerified:state.batchMigration.edits.length};
+  const result={ok:true,channelId:CHANNEL,handle:HANDLE,policy:policy.cadenceDays===1?'three_posts_daily':'three_posts_every_three_days',verifiedAt:stamp(),scheduled:scheduled.map(x=>({id:x.id,dueAt:x.dueAt,assetIds:x.assets.map(y=>y.id)})),editsVerified:state.batchMigration.edits.length};
   console.log(JSON.stringify(result));return result;
 }

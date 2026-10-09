@@ -38,8 +38,8 @@ export function evaluateContinuity(channel, posts, now=new Date(), inventoryComp
   note:'A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart.'};
 }
 function evaluateSenaBatches(common,posts,now) {
- const anchor=Date.parse('2026-10-10T20:30:00+09:00'),step=3*86400000;
- const base=anchor+Math.max(0,Math.floor((now.getTime()-anchor)/step))*step;
+ const anchor=Date.parse('2026-10-10T20:30:00+09:00'),step=86400000;
+ const base=anchor+Math.max(0,Math.floor((Date.parse(`${day(now)}T20:30:00+09:00`)-anchor)/step))*step;
  const isBatchDay=day(base)===day(now), due=isBatchDay&&now.getTime()>=base+62*60000;
  const matches=(status,start)=>[0,1,2].map(j=>posts.filter(p=>p.id&&p.status===status&&Date.parse(p.dueAt)===start+j*60000&&(status!=='sent'||Date.parse(p.sentAt)<=now.getTime())));
  const sent=isBatchDay?matches('sent',base):[[],[],[]];
@@ -53,7 +53,7 @@ function evaluateSenaBatches(common,posts,now) {
  if(due&&!sent.every(x=>x.length===1))errors.push('three_post_publication_unverified');
  if(!future.includes(day(next)))errors.push('next_batch_reservation_unverified');
  return {...common,status:errors.length?'action_required':'observed_batch_coverage',ok:errors.length===0,
-  cadence:'three_posts_every_three_days',batchSize:3,expectedPublicationDueAt:isBatchDay?new Date(base).toISOString():null,
+  cadence:'three_posts_daily',batchSize:3,expectedPublicationDueAt:isBatchDay?new Date(base).toISOString():null,
   todayPublicationStatus:isBatchDay?(sent.every(x=>x.length===1)?'three_sent_verified':due?'unverified_after_grace':'not_due_for_verification'):'no_feed_batch_planned',
   publishedIds:sent.flat().map(x=>x.id),publishedUrls:sent.flat().map(x=>x.externalLink).filter(Boolean),
   futureDates:future,nextBatchDate:day(next),errors,warnings:future.length<3?['future_stock_below_three_batches']:[],
