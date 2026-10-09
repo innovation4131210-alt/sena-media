@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "scripts/sena-buffer-daily-snapshot.mjs"
+      - "scripts/lib/posting-continuity.mjs"
       - "scripts/test-sena-buffer-daily-snapshot.mjs"
       - ".github/workflows/sena-buffer-daily-snapshot.yml"
 

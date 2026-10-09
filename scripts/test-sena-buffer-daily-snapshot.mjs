@@ -41,3 +41,11 @@ check(()=>{const c=buildSnapshot(channel,{...good,sent:connection([{...goodSent,
 check(()=>{const c=buildSnapshot({...channel,isQueuePaused:true},good,NOW).continuity;assert.equal(c.status,'channel_unavailable');assert.equal(c.mutationAllowed,false);});
 for(const override of [{dueAt:'invalid'},{dueAt:'2026-10-10T10:30:00Z'},{draft:true},{autoPublish:false}]) check(()=>{const c=buildSnapshot(channel,{...good,scheduled:connection([{...goodScheduled[0],...override}])},NOW).continuity;assert.equal(c.ok,false);});
 console.log(`SENA delivery+stock tests: ${passed} total passed; no external calls.`);
+
+const batchScheduled=[10,13,16].flatMap(d=>[0,1,2].map(j=>({id:'batch'+d+'-'+j,status:'scheduled',dueAt:new Date(Date.parse('2026-10-'+d+'T11:30:00Z')+j*60000).toISOString()})));
+const batchData={sent:connection([]),failed:connection([]),scheduled:connection(batchScheduled)};
+check(()=>{const c=buildSnapshot(channel,batchData,new Date('2026-10-10T00:00:00Z')).continuity;assert.equal(c.ok,true);assert.equal(c.batchSize,3);});
+check(()=>{const c=buildSnapshot(channel,batchData,new Date('2026-10-11T13:00:00Z')).continuity;assert.equal(c.ok,true);assert.equal(c.todayPublicationStatus,'no_feed_batch_planned');});
+check(()=>{const c=buildSnapshot(channel,{...batchData,sent:connection([{...goodSent,dueAt:'2026-10-10T11:30:00Z',sentAt:'2026-10-10T11:30:30Z'}])},new Date('2026-10-10T13:00:00Z')).continuity;assert.equal(c.ok,false);assert.ok(c.errors.includes('three_post_publication_unverified'));});
+check(()=>{const c=buildSnapshot(channel,{...batchData,scheduled:connection(batchScheduled.filter(x=>x.id!=='batch13-2'))},new Date('2026-10-11T13:00:00Z')).continuity;assert.equal(c.ok,false);});
+console.log('PASS three-post read-only continuity before publication, off-days, partial publication and partial reservations.');
