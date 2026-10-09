@@ -85,7 +85,7 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
       if(!original||time(p.dueAt)!==time(original.originalDueAt)) throw Error('Unexpected schedule drift');
       state.batchMigration.pendingEdit={id:p.id,day:x.day,from:p.dueAt,to:x.publishAt,attemptedAt:stamp()};await save();
       const d=await gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id}} ... on MutationError{message}}}',{input:{id:p.id,mode:'customScheduled',dueAt:new Date(x.publishAt).toISOString(),aiAssisted:true}});
-      if(d.editPost?.post?.id!==p.id) throw Error('Edit did not return existing ID');
+      if(d.editPost?.post?.id!==p.id) throw Error(`Edit rejected: ${d.editPost?.__typename || 'unknown'}: ${String(d.editPost?.message || 'no post ID').slice(0,400)}`);
       rows=await inventory(); const after=rows.find(y=>y.id===p.id);verifyPost(p,after,x.publishAt);
       state.batchMigration.edits.push({...state.batchMigration.pendingEdit,verifiedAt:stamp()});delete state.batchMigration.pendingEdit;
       record(x,after);await save();
