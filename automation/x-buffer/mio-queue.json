@@ -508,6 +508,20 @@
       "bufferPostId": "6ac6d2bd95b0fb1c5cc10f6c",
       "bufferDueAt": "2026-10-12T03:15:00.000Z",
       "processedAt": "2026-10-07T23:16:13.814Z"
+    },
+    {
+      "key": "mio-x-fanvue-free-reading-2026-10-13",
+      "dueAt": "2026-10-13T03:15:00.000Z",
+      "text": "本を開いたのに、マグを持ったままひと休み☕\n朝食と読書の写真5枚を、Fanvueの無料フォロワー向けに公開しました。\nhttps://www.fanvue.com/mio_ai_life_jp\n\n18+｜MIOは架空の成人AIキャラクター。画像はAI制作です。",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-fanvue-referral-2026-10-09/MIO_free_reading.jpeg",
+      "sourceImage": "media/mio-fanvue-referral-2026-10-09/MIO_free_reading.jpeg",
+      "visualPlan": {
+        "rule": "Use the approved free Fanvue reading photo, never paid member photos; no text-only fallback.",
+        "noTextOnlyFallback": true,
+        "sourceImage": "media/mio-fanvue-referral-2026-10-09/MIO_free_reading.jpeg"
+      },
+      "sourceSha256": "703d21035cb007f6d238f9f8db00cbfee54ad963461d975bc42baecaaeeb9dec"
     }
   ],
   "lastRun": {
