@@ -1,3 +1,4 @@
+import {evaluateContinuity} from './lib/posting-continuity.mjs';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 
@@ -43,6 +44,7 @@ export function buildSnapshot(channel, data, now = new Date()) {
       isDisconnected:channel.isDisconnected,isLocked:channel.isLocked,isQueuePaused:channel.isQueuePaused},
     channelAvailable:!channel.isDisconnected && !channel.isLocked && !channel.isQueuePaused,
     ...lists,
+    continuity:evaluateContinuity(channel,[...lists.sent,...lists.failed,...lists.scheduled],now,true),
   };
 }
 
@@ -83,7 +85,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const body = JSON.stringify(snapshot,null,2)+'\n';
   await writeFile('analytics/sena-buffer-latest.json',body);
   await writeFile(`analytics/sena-buffer-history/${snapshot.tokyoDate}.json`,body);
-  console.log(JSON.stringify({ok:snapshot.channelAvailable && snapshot.failed.length===0,capturedAt:snapshot.capturedAt,
+  console.log(JSON.stringify({ok:snapshot.channelAvailable && snapshot.failed.length===0 && snapshot.continuity.ok!==false,capturedAt:snapshot.capturedAt,
     inventoryComplete:snapshot.inventoryComplete,sent:snapshot.sent.length,failed:snapshot.failed.length,scheduled:snapshot.scheduled.length}));
-  if (!snapshot.channelAvailable || snapshot.failed.length) process.exitCode=2;
+  if (!snapshot.channelAvailable || snapshot.failed.length || snapshot.continuity.ok===false) process.exitCode=2;
 }
+

@@ -25,3 +25,19 @@ check(()=>{assert.equal(calls,3);assert.equal(snapshot.sent.length,2);assert.equ
 console.log(`SENA read-only snapshot tests: ${passed} passed; external services mocked.`);
 
 // snapshot refresh trigger 2026-09-26T12:18+09:00
+
+
+const NOW=new Date('2026-10-09T13:30:00Z');
+const goodSent={id:'today',status:'sent',dueAt:'2026-10-09T11:30:00Z',sentAt:'2026-10-09T11:31:00Z',externalLink:'https://www.instagram.com/p/test/'};
+const goodScheduled=[10,11,12].map(d=>({id:'future'+d,status:'scheduled',dueAt:`2026-10-${d}T11:30:00Z`}));
+const good={sent:connection([goodSent]),failed:connection([]),scheduled:connection(goodScheduled)};
+check(()=>{const c=buildSnapshot(channel,good,NOW).continuity;assert.equal(c.ok,true);assert.equal(c.todayPublicationStatus,'sent_verified');assert.equal(c.consecutiveFutureDays,3);assert.equal(c.firstUnverifiedDate,'2026-10-13');});
+check(()=>{const c=buildSnapshot(channel,{...good,sent:connection([])},NOW).continuity;assert.equal(c.ok,false);assert.ok(c.errors.includes('expected_publication_unverified'));});
+check(()=>{const c=buildSnapshot(channel,{...good,scheduled:connection([])},NOW).continuity;assert.equal(c.ok,false);assert.ok(c.errors.includes('next_day_reservation_unverified'));});
+check(()=>{const c=buildSnapshot(channel,{...good,scheduled:connection(goodScheduled.slice(1))},NOW).continuity;assert.equal(c.firstUnverifiedDate,'2026-10-10');assert.equal(c.ok,false);});
+check(()=>{const c=buildSnapshot(channel,{...good,sent:connection([{...goodSent,dueAt:'2026-10-08T11:30:00Z',sentAt:'2026-10-08T11:30:00Z'}])},NOW).continuity;assert.equal(c.ok,false);});
+check(()=>{const c=buildSnapshot(channel,{...good,sent:connection([])},new Date('2026-10-09T12:00:00Z')).continuity;assert.equal(c.todayPublicationStatus,'not_due_for_verification');assert.equal(c.ok,true);});
+check(()=>{const c=buildSnapshot(channel,{...good,sent:connection([{...goodSent,sentAt:'2026-10-10T11:30:00Z'}])},NOW).continuity;assert.equal(c.ok,false);});
+check(()=>{const c=buildSnapshot({...channel,isQueuePaused:true},good,NOW).continuity;assert.equal(c.status,'channel_unavailable');assert.equal(c.mutationAllowed,false);});
+for(const override of [{dueAt:'invalid'},{dueAt:'2026-10-10T10:30:00Z'},{draft:true},{autoPublish:false}]) check(()=>{const c=buildSnapshot(channel,{...good,scheduled:connection([{...goodScheduled[0],...override}])},NOW).continuity;assert.equal(c.ok,false);});
+console.log(`SENA delivery+stock tests: ${passed} total passed; no external calls.`);
