@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-09T13:48:07.873Z",
+  "checkedAt": "2026-10-09T22:25:20.164Z",
   "readOnly": true,
   "connections": [
     {
@@ -27,10 +27,26 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 8,
+            "scheduled": 10,
             "sent": 11
           },
           "posts": [
+            {
+              "id": "6ac90b652ecba23b44ab12c6",
+              "status": "scheduled",
+              "dueAt": "2026-10-19T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "b748deb19a111720aceebc374b7eec0b63d2251dd9bc9bc9b4c02f046cc992cc"
+            },
+            {
+              "id": "6ac90b2753f452e869eccbd5",
+              "status": "scheduled",
+              "dueAt": "2026-10-18T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "cbdd8a7f00951275d61fa83ef9a420eef4cbb60a29f09d0c0efebbfec330d8c2"
+            },
             {
               "id": "6ac7ac367982d6d13bf36027",
               "status": "scheduled",
@@ -195,10 +211,26 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 8,
+            "scheduled": 10,
             "sent": 15
           },
           "posts": [
+            {
+              "id": "6ac90bf793a324c9f64344ee",
+              "status": "scheduled",
+              "dueAt": "2026-10-19T10:00:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "57bcc3c3998ad86b25b8323e6808e00d3bc462e14cbf018e5bc5149583b6e3b3"
+            },
+            {
+              "id": "6ac90bb963e8e737bc3012d3",
+              "status": "scheduled",
+              "dueAt": "2026-10-18T10:00:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "be26e126a405ce691a07af347b21a6e22da050e67db2133aae4573b706924594"
+            },
             {
               "id": "6ac7aaed5dbbc6e1dc3b9b03",
               "status": "scheduled",
@@ -395,10 +427,18 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 8,
+            "scheduled": 9,
             "sent": 28
           },
           "posts": [
+            {
+              "id": "6ac8f688443de896597f2ddf",
+              "status": "scheduled",
+              "dueAt": "2026-10-18T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "7de4405dcb5c5e3a915cb33320461fb70fcdb5e0e43dbd87a5297e236ccd4ca1"
+            },
             {
               "id": "6ac7a523444a36d3be24ff5e",
               "status": "scheduled",
@@ -694,5 +734,97 @@
     }
   ],
   "mioXMatches": [],
-  "complete": false
+  "complete": false,
+  "lanes": {
+    "sena_instagram": {
+      "lane": "sena_instagram",
+      "expectedTimeJst": "20:30",
+      "evaluatedAt": "2026-10-09T22:25:20.164Z",
+      "mutationAllowed": false,
+      "status": "observed_delivery_and_coverage",
+      "ok": true,
+      "expectedPublicationDueAt": "2026-10-10T11:30:00.000Z",
+      "publicationGraceMinutes": 60,
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
+      "futureDates": [
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18"
+      ],
+      "consecutiveFutureDays": 8,
+      "firstUnverifiedDate": "2026-10-19",
+      "errors": [],
+      "warnings": [],
+      "note": "A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart."
+    },
+    "mio_threads": {
+      "lane": "mio_threads",
+      "expectedTimeJst": "19:00",
+      "evaluatedAt": "2026-10-09T22:25:20.164Z",
+      "mutationAllowed": false,
+      "status": "observed_delivery_and_coverage",
+      "ok": true,
+      "expectedPublicationDueAt": "2026-10-10T10:00:00.000Z",
+      "publicationGraceMinutes": 60,
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
+      "futureDates": [
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19"
+      ],
+      "consecutiveFutureDays": 9,
+      "firstUnverifiedDate": "2026-10-20",
+      "errors": [],
+      "warnings": [],
+      "note": "A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart."
+    },
+    "sena_threads": {
+      "lane": "sena_threads",
+      "expectedTimeJst": "20:10",
+      "evaluatedAt": "2026-10-09T22:25:20.164Z",
+      "mutationAllowed": false,
+      "status": "observed_delivery_and_coverage",
+      "ok": true,
+      "expectedPublicationDueAt": "2026-10-10T11:10:00.000Z",
+      "publicationGraceMinutes": 60,
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
+      "futureDates": [
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19"
+      ],
+      "consecutiveFutureDays": 9,
+      "firstUnverifiedDate": "2026-10-20",
+      "errors": [],
+      "warnings": [],
+      "note": "A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart."
+    }
+  },
+  "continuityOk": true
 }
