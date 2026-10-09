@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T23:16:13.943Z",
+  "updatedAt": "2026-10-09T13:45:15.637Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -513,7 +513,7 @@
       "key": "mio-x-fanvue-free-reading-2026-10-13",
       "dueAt": "2026-10-13T03:15:00.000Z",
       "text": "本を開いたのに、マグを持ったままひと休み☕\n朝食と読書の写真5枚を、Fanvueの無料フォロワー向けに公開しました。\nhttps://www.fanvue.com/mio_ai_life_jp\n\n18+｜MIOは架空の成人AIキャラクター。画像はAI制作です。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-fanvue-referral-2026-10-09/MIO_free_reading.jpeg",
       "sourceImage": "media/mio-fanvue-referral-2026-10-09/MIO_free_reading.jpeg",
       "visualPlan": {
@@ -521,14 +521,18 @@
         "noTextOnlyFallback": true,
         "sourceImage": "media/mio-fanvue-referral-2026-10-09/MIO_free_reading.jpeg"
       },
-      "sourceSha256": "703d21035cb007f6d238f9f8db00cbfee54ad963461d975bc42baecaaeeb9dec"
+      "sourceSha256": "703d21035cb007f6d238f9f8db00cbfee54ad963461d975bc42baecaaeeb9dec",
+      "attemptedAt": "2026-10-09T13:45:15.042Z",
+      "bufferPostId": "6ac8efeba5e49fef9bb4062a",
+      "bufferDueAt": "2026-10-13T03:15:00.000Z",
+      "processedAt": "2026-10-09T13:45:15.499Z"
     }
   ],
   "lastRun": {
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
-    "scheduledCount": 5,
-    "verifiedAt": "2026-10-07T23:16:13.943Z"
+    "scheduledCount": 4,
+    "verifiedAt": "2026-10-09T13:45:15.637Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
