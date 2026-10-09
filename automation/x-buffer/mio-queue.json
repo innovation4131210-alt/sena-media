@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T13:45:15.637Z",
+  "updatedAt": "2026-10-09T15:29:31.938Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -531,7 +531,7 @@
       "key": "mio-x-daily-2026-10-14-mio-d21",
       "dueAt": "2026-10-14T03:15:00.000Z",
       "text": "リップ直してるところ見つかった。こういう瞬間ってちょっと恥ずかしい。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-18_D21.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-18_D21.jpeg",
       "sourceSha256": "83de88f168d025c70331af495a6ab7fb94a81b8940d4da7bad9a8bd2317129ac",
@@ -541,13 +541,17 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-18_D21.jpeg",
         "manifestDay": 21,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-09T15:29:29.005Z",
+      "bufferPostId": "6ac90859443de8965982860a",
+      "bufferDueAt": "2026-10-14T03:15:00.000Z",
+      "processedAt": "2026-10-09T15:29:29.508Z"
     },
     {
       "key": "mio-x-daily-2026-10-15-mio-d22",
       "dueAt": "2026-10-15T03:15:00.000Z",
       "text": "片方の靴下、またいない。洗濯機って絶対どこかに隠してると思う。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-19_D22.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-19_D22.jpeg",
       "sourceSha256": "54c0dcd4b73291f0384de51bf41f11718bb068b1a5d0846cf3be9390b9632b48",
@@ -557,13 +561,17 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-19_D22.jpeg",
         "manifestDay": 22,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-09T15:29:29.636Z",
+      "bufferPostId": "6ac9085a443de89659828654",
+      "bufferDueAt": "2026-10-15T03:15:00.000Z",
+      "processedAt": "2026-10-09T15:29:30.138Z"
     },
     {
       "key": "mio-x-daily-2026-10-16-mio-d23",
       "dueAt": "2026-10-16T03:15:00.000Z",
       "text": "風が強すぎて髪は諦めた。でも夕方の空はきれいだった。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-20_D23.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-20_D23.jpeg",
       "sourceSha256": "3387dc8606ab94b4deb8cae2d5e3c89f600a5d2a3648dc01e842247e5ce8040b",
@@ -573,13 +581,17 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-20_D23.jpeg",
         "manifestDay": 23,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-09T15:29:30.260Z",
+      "bufferPostId": "6ac9085aea458ceb9a50c869",
+      "bufferDueAt": "2026-10-16T03:15:00.000Z",
+      "processedAt": "2026-10-09T15:29:30.659Z"
     },
     {
       "key": "mio-x-daily-2026-10-17-mio-d24",
       "dueAt": "2026-10-17T03:15:00.000Z",
       "text": "朝のコーヒーだけは丁寧に。服はまだ決まってないけど。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-21_D24.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-21_D24.jpeg",
       "sourceSha256": "7d862dd8c523ef13f94fed1441b168f9da28b49207f9df20d52b2cffaf82b966",
@@ -589,13 +601,17 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-21_D24.jpeg",
         "manifestDay": 24,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-09T15:29:30.789Z",
+      "bufferPostId": "6ac9085b57c4b87d9cf8689f",
+      "bufferDueAt": "2026-10-17T03:15:00.000Z",
+      "processedAt": "2026-10-09T15:29:31.351Z"
     },
     {
       "key": "mio-x-daily-2026-10-18-mio-d25",
       "dueAt": "2026-10-18T03:15:00.000Z",
       "text": "待ち合わせより少し早く着いた。ガラスに映る自分を見てるのは内緒。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-22_D25.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-22_D25.jpeg",
       "sourceSha256": "11c9d6111dbd7dc86e3d74afcb69c1db892d4d6b54e5e53c698b902e0fb96552",
@@ -605,7 +621,11 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-22_D25.jpeg",
         "manifestDay": 25,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-09T15:29:31.460Z",
+      "bufferPostId": "6ac9085ba5e49fef9bb8e72f",
+      "bufferDueAt": "2026-10-18T03:15:00.000Z",
+      "processedAt": "2026-10-09T15:29:31.820Z"
     },
     {
       "key": "mio-x-daily-2026-10-19-mio-d26",
@@ -643,8 +663,8 @@
   "lastRun": {
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
-    "scheduledCount": 4,
-    "verifiedAt": "2026-10-09T13:45:15.637Z"
+    "scheduledCount": 9,
+    "verifiedAt": "2026-10-09T15:29:31.938Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
