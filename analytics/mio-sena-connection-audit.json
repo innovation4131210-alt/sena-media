@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-09T22:28:07.255Z",
+  "checkedAt": "2026-10-09T23:12:45.982Z",
   "readOnly": true,
   "connections": [
     {
@@ -434,7 +434,7 @@
             {
               "id": "6ac8f688443de896597f2ddf",
               "status": "scheduled",
-              "dueAt": "2026-10-18T11:30:00.000Z",
+              "dueAt": "2026-10-16T11:32:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "7de4405dcb5c5e3a915cb33320461fb70fcdb5e0e43dbd87a5297e236ccd4ca1"
@@ -442,7 +442,7 @@
             {
               "id": "6ac7a523444a36d3be24ff5e",
               "status": "scheduled",
-              "dueAt": "2026-10-17T11:30:00.000Z",
+              "dueAt": "2026-10-16T11:31:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "74db7d52241c5b29ec4a64e20d4f454b6c7f9292deb28df42d25753418b2951c"
@@ -458,7 +458,7 @@
             {
               "id": "6ac490df918cd0aeeae3c1b7",
               "status": "scheduled",
-              "dueAt": "2026-10-15T11:30:00.000Z",
+              "dueAt": "2026-10-13T11:32:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "ecd3fe70f794626f2df557d5158d593be06ae2572b041596e672fd70fa7b235f"
@@ -466,7 +466,7 @@
             {
               "id": "6ac3b0e1c5a0c4018753e3b4",
               "status": "scheduled",
-              "dueAt": "2026-10-14T11:30:00.000Z",
+              "dueAt": "2026-10-13T11:31:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "30751448d92cdf636c0ebe5bad6954030b2d77934561239afb1f39e4c3966072"
@@ -482,7 +482,7 @@
             {
               "id": "6ac14964ad7fd83bc5fe59a0",
               "status": "scheduled",
-              "dueAt": "2026-10-12T11:30:00.000Z",
+              "dueAt": "2026-10-10T11:32:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "c8402382cdd1968ad7e5c3f9f26362785304a5faf49ffad55fec2a735a6a03c0"
@@ -490,7 +490,7 @@
             {
               "id": "6abfbbd03ac90aaf27ccd2e7",
               "status": "scheduled",
-              "dueAt": "2026-10-11T11:30:00.000Z",
+              "dueAt": "2026-10-10T11:31:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "8603f2e6b12181f8ccb9e926caa3d666800b01e94a000d69fcc3b17fc64c2a70"
@@ -739,36 +739,30 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-09T22:28:07.255Z",
+      "evaluatedAt": "2026-10-09T23:12:45.982Z",
       "mutationAllowed": false,
-      "status": "observed_delivery_and_coverage",
+      "status": "observed_batch_coverage",
       "ok": true,
+      "cadence": "three_posts_every_three_days",
+      "batchSize": 3,
       "expectedPublicationDueAt": "2026-10-10T11:30:00.000Z",
-      "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [
         "2026-10-10",
-        "2026-10-11",
-        "2026-10-12",
         "2026-10-13",
-        "2026-10-14",
-        "2026-10-15",
-        "2026-10-16",
-        "2026-10-17",
-        "2026-10-18"
+        "2026-10-16"
       ],
-      "consecutiveFutureDays": 8,
-      "firstUnverifiedDate": "2026-10-19",
+      "nextBatchDate": "2026-10-10",
       "errors": [],
       "warnings": [],
-      "note": "A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart."
+      "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
     },
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-09T22:28:07.255Z",
+      "evaluatedAt": "2026-10-09T23:12:45.982Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
@@ -798,7 +792,7 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-09T22:28:07.255Z",
+      "evaluatedAt": "2026-10-09T23:12:45.982Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,

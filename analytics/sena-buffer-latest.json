@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-09T22:28:06.149Z",
+  "capturedAt": "2026-10-09T23:12:45.102Z",
   "tokyoDate": "2026-10-10",
   "readOnly": true,
   "inventoryComplete": true,
@@ -1660,13 +1660,13 @@
       "id": "6abfbbd03ac90aaf27ccd2e7",
       "text": "髪を整えて、肩を出す。夜は少しだけ昼と違う自分で。",
       "status": "scheduled",
-      "dueAt": "2026-10-11T11:30:00.000Z"
+      "dueAt": "2026-10-10T11:31:00.000Z"
     },
     {
       "id": "6ac14964ad7fd83bc5fe59a0",
       "text": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
       "status": "scheduled",
-      "dueAt": "2026-10-12T11:30:00.000Z"
+      "dueAt": "2026-10-10T11:32:00.000Z"
     },
     {
       "id": "6ac2a497fe1389e4133ddb51",
@@ -1678,13 +1678,13 @@
       "id": "6ac3b0e1c5a0c4018753e3b4",
       "text": "静かな場所で読む冊子は、内容まで少し特別に見える。",
       "status": "scheduled",
-      "dueAt": "2026-10-14T11:30:00.000Z"
+      "dueAt": "2026-10-13T11:31:00.000Z"
     },
     {
       "id": "6ac490df918cd0aeeae3c1b7",
       "text": "やわらかい色で、ひと息。\n鏡の前の、何でもない一枚。",
       "status": "scheduled",
-      "dueAt": "2026-10-15T11:30:00.000Z"
+      "dueAt": "2026-10-13T11:32:00.000Z"
     },
     {
       "id": "6ac653370f4d385dd633f433",
@@ -1696,43 +1696,37 @@
       "id": "6ac7a523444a36d3be24ff5e",
       "text": "呼ばれて振り返ったら、雨上がりの街が光っていた。もう少しだけ歩こう。",
       "status": "scheduled",
-      "dueAt": "2026-10-17T11:30:00.000Z"
+      "dueAt": "2026-10-16T11:31:00.000Z"
     },
     {
       "id": "6ac8f688443de896597f2ddf",
       "text": "ホテルのロビーで少し待ち時間。急がない時間の方が贅沢かもしれない。",
       "status": "scheduled",
-      "dueAt": "2026-10-18T11:30:00.000Z"
+      "dueAt": "2026-10-16T11:32:00.000Z"
     }
   ],
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-10-09T22:28:06.149Z",
+    "evaluatedAt": "2026-10-09T23:12:45.102Z",
     "mutationAllowed": false,
-    "status": "observed_delivery_and_coverage",
+    "status": "observed_batch_coverage",
     "ok": true,
+    "cadence": "three_posts_every_three_days",
+    "batchSize": 3,
     "expectedPublicationDueAt": "2026-10-10T11:30:00.000Z",
-    "publicationGraceMinutes": 60,
     "todayPublicationStatus": "not_due_for_verification",
     "publishedIds": [],
     "publishedUrls": [],
     "futureDates": [
       "2026-10-10",
-      "2026-10-11",
-      "2026-10-12",
       "2026-10-13",
-      "2026-10-14",
-      "2026-10-15",
-      "2026-10-16",
-      "2026-10-17",
-      "2026-10-18"
+      "2026-10-16"
     ],
-    "consecutiveFutureDays": 8,
-    "firstUnverifiedDate": "2026-10-19",
+    "nextBatchDate": "2026-10-10",
     "errors": [],
     "warnings": [],
-    "note": "A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart."
+    "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
-  "workflowRunId": "37999341856"
+  "workflowRunId": "38003261346"
 }
