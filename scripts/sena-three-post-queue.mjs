@@ -19,7 +19,7 @@ export function validateBatches(items) {
   }
 }
 export function verifyPost(before, after, dueAt) {
-  if(!after||after.id!==before.id||after.channelId!==CHANNEL||after.status!=='scheduled'||after.text!==before.text||time(after.dueAt)!==time(dueAt)||JSON.stringify(after.assets)!==JSON.stringify(before.assets)) throw Error('Post ID/content/assets/time readback failed');
+  if(!after||after.id!==before.id||after.channelId!==CHANNEL||after.status!=='scheduled'||after.text!==before.text||time(after.dueAt)!==time(dueAt)||JSON.stringify(after.assets.map(({id,...asset})=>asset))!==JSON.stringify(before.assets.map(({id,...asset})=>asset))||JSON.stringify(after.metadata)!==JSON.stringify(before.metadata)) throw Error('Post ID/content/assets/time readback failed');
 }
 export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.now}={}) {
   if(!env.BUFFER_API_KEY) throw Error('SENA credential missing');
@@ -47,7 +47,7 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
   async function inventory() {
     const rows=[];
     for(const status of ['scheduled','sent','error']) {
-      const d=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{status:[${status}],channelIds:[$channelId]}}){edges{node{id channelId text dueAt status assets{id mimeType}}}pageInfo{hasNextPage}}}`,{organizationId:c.organizationId,channelId:c.id});
+      const d=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{status:[${status}],channelIds:[$channelId]}}){edges{node{id channelId text dueAt status assets{id mimeType source ... on ImageAsset{image{altText userTags{__typename}}}} metadata{... on InstagramPostMetadata{type shouldShareToFeed isAiGenerated firstComment link geolocation{__typename} stickerFields{__typename}}}}}pageInfo{hasNextPage}}}`,{organizationId:c.organizationId,channelId:c.id});
       if(!Array.isArray(d.posts?.edges)||d.posts.pageInfo?.hasNextPage!==false) throw Error('Incomplete channel inventory');
       for(const {node:x} of d.posts.edges) {
         if(!x.id||x.channelId!==CHANNEL||x.status!==status||!Array.isArray(x.assets)||rows.some(y=>y.id===x.id)) throw Error('Invalid channel inventory'); rows.push(x);
@@ -75,7 +75,7 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
     if(x.existingOnly) e.existingOnly=true;
     state.batchMigration.pendingCreates=state.batchMigration.pendingCreates.filter(y=>y.day!==x.day);
   }
-  // Reschedule existing IDs only. Never delete, recreate or touch assets/text/metadata.
+  // Reschedule existing IDs; explicitly resend unchanged content because Buffer validates edits as complete posts.
   for(const x of items) {
     const p=lookup(x); if(!p) continue;
     if(p.status==='sent') {record(x,p);continue;}
@@ -83,8 +83,11 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
       if(Math.min(time(p.dueAt),time(x.publishAt))<=clock()+15*60000) throw Error('Imminent post cannot be migrated safely');
       const original=policy.existing.find(y=>y.day===x.day);
       if(!original||time(p.dueAt)!==time(original.originalDueAt)) throw Error('Unexpected schedule drift');
+      if(!p.metadata||p.metadata.type!=='post'||p.metadata.geolocation||p.metadata.stickerFields||p.assets.some(a=>!a.mimeType.startsWith('image/')||!a.source||!a.image||a.image.userTags?.length)) throw Error('Unsupported existing metadata; refuse content changes');
+      const {geolocation,stickerFields,...instagram}=p.metadata;
+      const assets=p.assets.map(a=>({image:{url:a.source,metadata:{altText:a.image.altText}}}));
       state.batchMigration.pendingEdit={id:p.id,day:x.day,from:p.dueAt,to:x.publishAt,attemptedAt:stamp()};await save();
-      const d=await gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id}} ... on MutationError{message}}}',{input:{id:p.id,mode:'customScheduled',dueAt:new Date(x.publishAt).toISOString(),aiAssisted:true}});
+      const d=await gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id}} ... on MutationError{message}}}',{input:{id:p.id,mode:'customScheduled',dueAt:new Date(x.publishAt).toISOString(),aiAssisted:true,text:p.text,assets,metadata:{instagram}}});
       if(d.editPost?.post?.id!==p.id) throw Error(`Edit rejected: ${d.editPost?.__typename || 'unknown'}: ${String(d.editPost?.message || 'no post ID').slice(0,400)}`);
       rows=await inventory(); const after=rows.find(y=>y.id===p.id);verifyPost(p,after,x.publishAt);
       state.batchMigration.edits.push({...state.batchMigration.pendingEdit,verifiedAt:stamp()});delete state.batchMigration.pendingEdit;

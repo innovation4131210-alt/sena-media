@@ -8,7 +8,7 @@ const items=Array.from({length:3},(_,i)=>({day:13+i,date:'2026-10-10',publishAt:
 validateBatches(items);
 assert.throws(()=>validateBatches(items.slice(0,2)),/Complete/);
 assert.throws(()=>validateBatches(items.map((x,i)=>({...x,publishAt:items[0].publishAt}))),/Invalid/);
-const original=items.map((x,i)=>({id:'existing-'+i,channelId:id,text:x.caption,dueAt:`2026-10-${10+i}T11:30:00.000Z`,status:'scheduled',assets:[{id:'asset-'+i,mimeType:'image/jpeg'}]}));
+const original=items.map((x,i)=>({id:'existing-'+i,channelId:id,text:x.caption,dueAt:`2026-10-${10+i}T11:30:00.000Z`,status:'scheduled',assets:[{id:'asset-'+i,mimeType:'image/jpeg',source:'https://example.com/'+i,image:{altText:'original alt',userTags:[]}}],metadata:{type:'post',shouldShareToFeed:true,isAiGenerated:true,firstComment:null,link:null,geolocation:null,stickerFields:null}}));
 verifyPost(original[0],original[0],items[0].publishAt);
 assert.throws(()=>verifyPost(original[0],{...original[0],assets:[]},items[0].publishAt),/readback/);
 const root=await mkdtemp(join(tmpdir(),'sena-batch-test-')),prev=process.cwd();
@@ -19,7 +19,8 @@ async function transport(url,options) {
  if(query.includes('account {'))data={account:{organizations:[{id:'org'}]}};
  else if(query.includes('channels(input'))data={channels:[{id,name:handle,displayName:handle,service:'instagram',isQueuePaused:false,isDisconnected:false,isLocked:false}]};
  else if(query.startsWith('mutation')) {
-   mutations++;assert.ok(query.includes('editPost'));assert.deepEqual(Object.keys(variables.input).sort(),['aiAssisted','dueAt','id','mode']);
+   mutations++;assert.ok(query.includes('editPost'));assert.deepEqual(Object.keys(variables.input).sort(),['aiAssisted','assets','dueAt','id','metadata','mode','text']);
+   const originalPost=posts.find(x=>x.id===variables.input.id);assert.equal(variables.input.text,originalPost.text);assert.equal(variables.input.assets[0].image.url,originalPost.assets[0].source);assert.equal(variables.input.metadata.instagram.isAiGenerated,true);
    if(mutations===failAt)throw Error('simulated edit failure');
    const p=posts.find(x=>x.id===variables.input.id);p.dueAt=variables.input.dueAt;data={editPost:{post:{id:p.id}}};
  } else {assert.equal(variables.channelId,id);const status=query.match(/status:\[(\w+)\]/)[1];data={posts:{edges:posts.filter(p=>p.status===status).map(node=>({node:structuredClone(node)})),pageInfo:{hasNextPage:false}}};}
