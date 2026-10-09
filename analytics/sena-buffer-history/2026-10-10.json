@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-09T23:12:45.102Z",
+  "capturedAt": "2026-10-09T23:23:59.270Z",
   "tokyoDate": "2026-10-10",
   "readOnly": true,
   "inventoryComplete": true,
@@ -1708,25 +1708,25 @@
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-10-09T23:12:45.102Z",
+    "evaluatedAt": "2026-10-09T23:23:59.270Z",
     "mutationAllowed": false,
     "status": "observed_batch_coverage",
     "ok": true,
-    "cadence": "three_posts_every_three_days",
+    "cadence": "three_posts_daily",
     "batchSize": 3,
     "expectedPublicationDueAt": "2026-10-10T11:30:00.000Z",
     "todayPublicationStatus": "not_due_for_verification",
     "publishedIds": [],
     "publishedUrls": [],
     "futureDates": [
-      "2026-10-10",
-      "2026-10-13",
-      "2026-10-16"
+      "2026-10-10"
     ],
     "nextBatchDate": "2026-10-10",
     "errors": [],
-    "warnings": [],
+    "warnings": [
+      "future_stock_below_three_batches"
+    ],
     "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
-  "workflowRunId": "38003261346"
+  "workflowRunId": "38004211078"
 }
