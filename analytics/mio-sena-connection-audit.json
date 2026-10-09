@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-09T23:24:00.103Z",
+  "checkedAt": "2026-10-09T23:25:36.796Z",
   "readOnly": true,
   "connections": [
     {
@@ -434,7 +434,7 @@
             {
               "id": "6ac8f688443de896597f2ddf",
               "status": "scheduled",
-              "dueAt": "2026-10-16T11:32:00.000Z",
+              "dueAt": "2026-10-12T11:32:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "7de4405dcb5c5e3a915cb33320461fb70fcdb5e0e43dbd87a5297e236ccd4ca1"
@@ -442,7 +442,7 @@
             {
               "id": "6ac7a523444a36d3be24ff5e",
               "status": "scheduled",
-              "dueAt": "2026-10-16T11:31:00.000Z",
+              "dueAt": "2026-10-12T11:31:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "74db7d52241c5b29ec4a64e20d4f454b6c7f9292deb28df42d25753418b2951c"
@@ -450,7 +450,7 @@
             {
               "id": "6ac653370f4d385dd633f433",
               "status": "scheduled",
-              "dueAt": "2026-10-16T11:30:00.000Z",
+              "dueAt": "2026-10-12T11:30:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "e0125e2518b7c2d51513833de9ca34ccc452844e47a1379352468e5f09cac970"
@@ -458,7 +458,7 @@
             {
               "id": "6ac490df918cd0aeeae3c1b7",
               "status": "scheduled",
-              "dueAt": "2026-10-13T11:32:00.000Z",
+              "dueAt": "2026-10-11T11:32:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "ecd3fe70f794626f2df557d5158d593be06ae2572b041596e672fd70fa7b235f"
@@ -466,7 +466,7 @@
             {
               "id": "6ac3b0e1c5a0c4018753e3b4",
               "status": "scheduled",
-              "dueAt": "2026-10-13T11:31:00.000Z",
+              "dueAt": "2026-10-11T11:31:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "30751448d92cdf636c0ebe5bad6954030b2d77934561239afb1f39e4c3966072"
@@ -474,7 +474,7 @@
             {
               "id": "6ac2a497fe1389e4133ddb51",
               "status": "scheduled",
-              "dueAt": "2026-10-13T11:30:00.000Z",
+              "dueAt": "2026-10-11T11:30:00.000Z",
               "sentAt": null,
               "externalLink": null,
               "textHash": "5f413183621368649b46ab872718427ddd133dcf23d820345766ebbf23647b73"
@@ -739,7 +739,7 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-09T23:24:00.103Z",
+      "evaluatedAt": "2026-10-09T23:25:36.796Z",
       "mutationAllowed": false,
       "status": "observed_batch_coverage",
       "ok": true,
@@ -750,19 +750,19 @@
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [
-        "2026-10-10"
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12"
       ],
       "nextBatchDate": "2026-10-10",
       "errors": [],
-      "warnings": [
-        "future_stock_below_three_batches"
-      ],
+      "warnings": [],
       "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
     },
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-09T23:24:00.103Z",
+      "evaluatedAt": "2026-10-09T23:25:36.796Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
@@ -792,7 +792,7 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-09T23:24:00.103Z",
+      "evaluatedAt": "2026-10-09T23:25:36.796Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,

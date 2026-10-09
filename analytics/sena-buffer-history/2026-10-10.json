@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-09T23:23:59.270Z",
+  "capturedAt": "2026-10-09T23:25:36.289Z",
   "tokyoDate": "2026-10-10",
   "readOnly": true,
   "inventoryComplete": true,
@@ -1672,43 +1672,43 @@
       "id": "6ac2a497fe1389e4133ddb51",
       "text": "ヒールを脱いだ瞬間、やっと今日が終わった気がした。",
       "status": "scheduled",
-      "dueAt": "2026-10-13T11:30:00.000Z"
+      "dueAt": "2026-10-11T11:30:00.000Z"
     },
     {
       "id": "6ac3b0e1c5a0c4018753e3b4",
       "text": "静かな場所で読む冊子は、内容まで少し特別に見える。",
       "status": "scheduled",
-      "dueAt": "2026-10-13T11:31:00.000Z"
+      "dueAt": "2026-10-11T11:31:00.000Z"
     },
     {
       "id": "6ac490df918cd0aeeae3c1b7",
       "text": "やわらかい色で、ひと息。\n鏡の前の、何でもない一枚。",
       "status": "scheduled",
-      "dueAt": "2026-10-13T11:32:00.000Z"
+      "dueAt": "2026-10-11T11:32:00.000Z"
     },
     {
       "id": "6ac653370f4d385dd633f433",
       "text": "通り過ぎるつもりだったのに、足が止まった。長く使いたいものほど、すぐには決められない。",
       "status": "scheduled",
-      "dueAt": "2026-10-16T11:30:00.000Z"
+      "dueAt": "2026-10-12T11:30:00.000Z"
     },
     {
       "id": "6ac7a523444a36d3be24ff5e",
       "text": "呼ばれて振り返ったら、雨上がりの街が光っていた。もう少しだけ歩こう。",
       "status": "scheduled",
-      "dueAt": "2026-10-16T11:31:00.000Z"
+      "dueAt": "2026-10-12T11:31:00.000Z"
     },
     {
       "id": "6ac8f688443de896597f2ddf",
       "text": "ホテルのロビーで少し待ち時間。急がない時間の方が贅沢かもしれない。",
       "status": "scheduled",
-      "dueAt": "2026-10-16T11:32:00.000Z"
+      "dueAt": "2026-10-12T11:32:00.000Z"
     }
   ],
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-10-09T23:23:59.270Z",
+    "evaluatedAt": "2026-10-09T23:25:36.289Z",
     "mutationAllowed": false,
     "status": "observed_batch_coverage",
     "ok": true,
@@ -1719,13 +1719,13 @@
     "publishedIds": [],
     "publishedUrls": [],
     "futureDates": [
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12"
     ],
     "nextBatchDate": "2026-10-10",
     "errors": [],
-    "warnings": [
-      "future_stock_below_three_batches"
-    ],
+    "warnings": [],
     "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
   "workflowRunId": "38004211078"
