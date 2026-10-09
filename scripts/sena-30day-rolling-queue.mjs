@@ -37,6 +37,14 @@ export function verifyReservation(rows, id, item, channelId = CHANNEL_ID) {
   return matches[0];
 }
 export async function runRollingQueue({transport = fetch, env = process.env, clock = Date.now} = {}) {
+  let gridPolicy;
+  try { gridPolicy = JSON.parse(await readFile('automation/30day/sena-grid-policy.json', 'utf8')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  if (gridPolicy) {
+    if (gridPolicy.batchSize !== 3) throw Error('Invalid grid policy; refusing legacy scheduling');
+    const {runBatchQueue} = await import('./sena-three-post-queue.mjs');
+    return await runBatchQueue({transport, env, clock});
+  }
   const key = env.BUFFER_API_KEY;
   if (!key) throw Error('SENA_BUFFER_API_KEY is not configured');
   const manifest = JSON.parse(await readFile('automation/30day/publishing-manifest.json', 'utf8'));
@@ -160,3 +168,4 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const result = await runRollingQueue();
   if (!result.ok) process.exitCode = 2;
 }
+

@@ -16,6 +16,7 @@ export function evaluateContinuity(channel, posts, now=new Date(), inventoryComp
  if(['isDisconnected','isLocked','isQueuePaused'].some(k=>typeof channel[k]!=='boolean')) return {...common,status:'availability_unverified',ok:false};
  if(channel.isDisconnected||channel.isLocked||channel.isQueuePaused) return {...common,status:'channel_unavailable',ok:false};
  const today=day(now);
+ if(rule.lane==='sena_instagram' && today>='2026-10-10') return evaluateSenaBatches(common,posts,now);
  if(today<'2026-10-09') return {...common,status:'before_daily_cadence_effective_date',ok:null};
  const at=date=>Date.parse(`${date}T${rule.time}:00+09:00`);
  const matching=(post,date)=>Boolean(post.id)&&Number.isFinite(Date.parse(post.dueAt))&&Math.abs(Date.parse(post.dueAt)-at(date))<=60000;
@@ -36,6 +37,28 @@ export function evaluateContinuity(channel, posts, now=new Date(), inventoryComp
   futureDates:dates,consecutiveFutureDays:days,firstUnverifiedDate:gap,errors,warnings,
   note:'A missing observation is not proof of failed publication and never authorizes catch-up, replacement or restart.'};
 }
+function evaluateSenaBatches(common,posts,now) {
+ const anchor=Date.parse('2026-10-10T20:30:00+09:00'),step=3*86400000;
+ const base=anchor+Math.max(0,Math.floor((now.getTime()-anchor)/step))*step;
+ const isBatchDay=day(base)===day(now), due=isBatchDay&&now.getTime()>=base+62*60000;
+ const matches=(status,start)=>[0,1,2].map(j=>posts.filter(p=>p.id&&p.status===status&&Date.parse(p.dueAt)===start+j*60000&&(status!=='sent'||Date.parse(p.sentAt)<=now.getTime())));
+ const sent=isBatchDay?matches('sent',base):[[],[],[]];
+ const next=base>now.getTime()?base:base+step;
+ const future=[];const errors=[];
+ for(let start=next;start<=next+2*step;start+=step) {
+  const group=matches('scheduled',start), count=group.reduce((s,x)=>s+x.length,0);
+  if(count===3&&group.every(x=>x.length===1))future.push(day(start));
+  else if(count)errors.push('incomplete_or_duplicate_future_batch');
+ }
+ if(due&&!sent.every(x=>x.length===1))errors.push('three_post_publication_unverified');
+ if(!future.includes(day(next)))errors.push('next_batch_reservation_unverified');
+ return {...common,status:errors.length?'action_required':'observed_batch_coverage',ok:errors.length===0,
+  cadence:'three_posts_every_three_days',batchSize:3,expectedPublicationDueAt:isBatchDay?new Date(base).toISOString():null,
+  todayPublicationStatus:isBatchDay?(sent.every(x=>x.length===1)?'three_sent_verified':due?'unverified_after_grace':'not_due_for_verification'):'no_feed_batch_planned',
+  publishedIds:sent.flat().map(x=>x.id),publishedUrls:sent.flat().map(x=>x.externalLink).filter(Boolean),
+  futureDates:future,nextBatchDate:day(next),errors,warnings:future.length<3?['future_stock_below_three_batches']:[],
+  note:'Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations.'};
+}
 export function summarizeContinuity(connections, now=new Date()) {
  const channels=connections.flatMap(c=>c.channels??[]);
  return Object.fromEntries(Object.entries(EXPECTED_LANES).map(([id,rule])=>{
@@ -48,3 +71,4 @@ export function summarizeContinuity(connections, now=new Date()) {
   return [rule.lane,channel?evaluateContinuity(channel,channel.posts??[],now,channel.inventoryComplete):{lane:rule.lane,status:'provider_observation_unavailable',ok:false,mutationAllowed:false}];
  }));
 }
+
