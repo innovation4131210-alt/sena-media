@@ -141,8 +141,8 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/8435a27245b27ca1201660e3404f0717b5bc2d44/media/sena-30day-2026-09-28/SENA_2026-10-10_D13.jpeg",
       "mediaSha256": "a7088a10819369ab3ab700c760f398d213ba4774f332e6d6e568c0739f2b3798",
       "caption": "注文は決めた。あとは待つだけ。この時間、意外と嫌いじゃない。",
-      "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:01.229Z",
+      "lastObservedStatus": "sent",
+      "verifiedAt": "2026-10-10T14:09:40.746Z",
       "batchId": "SENA-IG-2026-10-10"
     },
     {
@@ -153,8 +153,8 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/7a736cf1a2b22bcb84810f67b6cad021bee835de/media/sena-30day-2026-09-28/SENA_2026-10-11_D14.jpeg",
       "mediaSha256": "00889046c359c58f0863998a777db15aed84d4adbd01b5cd73de534465a69385",
       "caption": "髪を整えて、肩を出す。夜は少しだけ昼と違う自分で。",
-      "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:01.230Z",
+      "lastObservedStatus": "sent",
+      "verifiedAt": "2026-10-10T14:09:40.747Z",
       "batchId": "SENA-IG-2026-10-10"
     },
     {
@@ -165,8 +165,8 @@
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/31c48eb990f709b34bc8781b9cf712b1cf223e8f/media/sena-30day-2026-09-28/SENA_2026-10-12_D15.jpeg",
       "mediaSha256": "bb9c2f66ca904c1df6a0e747959b885124b58ff1a6f4c4914225d327fd85029a",
       "caption": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
-      "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:01.230Z",
+      "lastObservedStatus": "sent",
+      "verifiedAt": "2026-10-10T14:09:40.747Z",
       "batchId": "SENA-IG-2026-10-10"
     },
     {
@@ -178,7 +178,7 @@
       "mediaSha256": "5b9c432672cf94e745dbc14a208029899c329876fccf0ea45463a483f28cff3c",
       "caption": "ヒールを脱いだ瞬間、やっと今日が終わった気がした。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:01.900Z",
+      "verifiedAt": "2026-10-10T14:09:40.747Z",
       "batchId": "SENA-IG-2026-10-11"
     },
     {
@@ -190,7 +190,7 @@
       "mediaSha256": "a0970fe773981c9962f0886db0deb3b21f6b6c9b7f691d51fd24c7b5327d419e",
       "caption": "静かな場所で読む冊子は、内容まで少し特別に見える。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:02.636Z",
+      "verifiedAt": "2026-10-10T14:09:40.748Z",
       "batchId": "SENA-IG-2026-10-11"
     },
     {
@@ -202,7 +202,7 @@
       "mediaSha256": "123a8b61c1d3eeba5b8d44deaed10f0bf36941ec058d151e168758e30d7bb665",
       "caption": "通り過ぎるつもりだったのに、足が止まった。長く使いたいものほど、すぐには決められない。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:04.053Z",
+      "verifiedAt": "2026-10-10T14:09:40.749Z",
       "batchId": "SENA-IG-2026-10-12"
     },
     {
@@ -214,7 +214,7 @@
       "mediaSha256": "b65653fd553fa00cb79383213f35d51bffcc2e2c91bca3f1d8616c63d109ca11",
       "caption": "呼ばれて振り返ったら、雨上がりの街が光っていた。もう少しだけ歩こう。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:04.717Z",
+      "verifiedAt": "2026-10-10T14:09:40.749Z",
       "batchId": "SENA-IG-2026-10-12"
     },
     {
@@ -226,7 +226,7 @@
       "mediaSha256": "e0b4c1e8a9ba0c4f1df830c30fb4ffa87a9c79e2d252d5bd96ef58f8491ef1c2",
       "caption": "ホテルのロビーで少し待ち時間。急がない時間の方が贅沢かもしれない。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:05.420Z",
+      "verifiedAt": "2026-10-10T14:09:40.750Z",
       "batchId": "SENA-IG-2026-10-12"
     },
     {
@@ -236,12 +236,42 @@
       "dueAt": "2026-10-11T11:32:00.000Z",
       "caption": "やわらかい色で、ひと息。\n鏡の前の、何でもない一枚。",
       "lastObservedStatus": "scheduled",
-      "verifiedAt": "2026-10-09T23:24:03.367Z",
+      "verifiedAt": "2026-10-10T14:09:40.748Z",
       "batchId": "SENA-IG-2026-10-11",
       "existingOnly": true
+    },
+    {
+      "day": 22,
+      "bufferPostId": "6aca4725b07d37ac9775ad7a",
+      "lastObservedStatus": "scheduled",
+      "date": "2026-10-13",
+      "dueAt": "2026-10-13T11:30:00.000Z",
+      "caption": "服を選ぶ時は、見せるより残す方を考える。今日はこのバランス。",
+      "verifiedAt": "2026-10-10T14:09:42.078Z",
+      "batchId": "SENA-IG-2026-10-13"
+    },
+    {
+      "day": 23,
+      "bufferPostId": "6aca4726b07d37ac9775adf3",
+      "lastObservedStatus": "scheduled",
+      "date": "2026-10-13",
+      "dueAt": "2026-10-13T11:31:00.000Z",
+      "caption": "カフェでは人より空間を見てしまう。静かな席を見つけると長居する。",
+      "verifiedAt": "2026-10-10T14:09:42.943Z",
+      "batchId": "SENA-IG-2026-10-13"
+    },
+    {
+      "day": 24,
+      "bufferPostId": "6aca4727ed92ed8fa5cf4361",
+      "lastObservedStatus": "scheduled",
+      "date": "2026-10-13",
+      "dueAt": "2026-10-13T11:32:00.000Z",
+      "caption": "夕暮れの街は、振り返りたくなる光がある。もう少しここにいたい。",
+      "verifiedAt": "2026-10-10T14:09:43.820Z",
+      "batchId": "SENA-IG-2026-10-13"
     }
   ],
-  "lastRunAt": "2026-10-09T23:24:05.887Z",
+  "lastRunAt": "2026-10-10T14:09:44.327Z",
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio"
@@ -256,7 +286,7 @@
   ],
   "blocked": [],
   "pendingCreates": [],
-  "lastVerifiedAt": "2026-10-09T23:24:05.887Z",
+  "lastVerifiedAt": "2026-10-10T14:09:44.327Z",
   "legacyOrganizationCountObservation": {
     "count": 17,
     "note": "Historical organization-wide count; never use for per-channel capacity."
@@ -366,7 +396,7 @@
     ],
     "pendingCreates": [],
     "status": "verified",
-    "verifiedAt": "2026-10-09T23:24:05.887Z"
+    "verifiedAt": "2026-10-10T14:09:44.327Z"
   },
   "publishingPolicy": "three_posts_daily"
 }
