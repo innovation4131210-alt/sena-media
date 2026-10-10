@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-10-10",
+  "reviewedAt": "2026-10-10T00:56:21.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "5f0826aa66f88d989b7491b5c716c071af59a44b",
+      "lastRunAt": "2026-10-09T23:24:05.887Z",
+      "lastVerifiedAt": "2026-10-09T23:24:05.887Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "74697541e3ed9247e7cca6632a01c61080624de6"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "138e78a86fb5db7cafcd38299cb5754860204f09",
+      "capturedAt": "2026-10-09T23:25:36.289Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "88bdb676333e15e617acb87804f7cec8f6b0a868",
+      "checkedAt": "2026-10-09T23:25:36.796Z"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-27",
+    "manifestItems": 30,
+    "phase": "live_day_13",
+    "manifestChanged": true,
+    "publishingPolicy": {
+      "mode": "three_posts_daily",
+      "batchSize": 3,
+      "firstBatchDate": "2026-10-10",
+      "intervalMinutes": 1
+    },
+    "interpretation": "The authoritative manifest now compresses D13-D30 into three posts per day at one-minute intervals beginning 2026-10-10."
+  },
+  "runner": {
+    "status": "operational_with_legacy_adopted_slot",
+    "latestRunAt": "2026-10-09T23:24:05.887Z",
+    "createdThisRun": [
+      {
+        "day": 21,
+        "id": "6ac8f688443de896597f2ddf",
+        "dueAt": "2026-10-18T11:30:00.000Z",
+        "verifiedAt": "2026-10-09T14:13:29.148Z"
+      }
+    ],
+    "blocked": [],
+    "pendingCreates": [],
+    "monthlyQuotaBlockObserved": false,
+    "interpretation": "The runner read back nine scheduled posts for the SENA channel. D21 is present after creation; the revised manifest moved it to 2026-10-12 20:32 JST. No duplicate creation was attempted."
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "connection": "healthy",
+    "inventoryComplete": true,
+    "connectionEvidence": {
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "scopedAuditHealthy": true,
+      "overallAuditComplete": false
+    },
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "scheduled30DayManifestSlots": 9,
+    "remainingChannelCapacity": 0,
+    "scheduledManifestPosts": [
+      {
+        "manifestId": "D13",
+        "postId": "6abe6a8c0c33e408f7aba7b2",
+        "tokyoDate": "2026-10-10",
+        "dueAt": "2026-10-10T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D14",
+        "postId": "6abfbbd03ac90aaf27ccd2e7",
+        "tokyoDate": "2026-10-10",
+        "dueAt": "2026-10-10T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D15",
+        "postId": "6ac14964ad7fd83bc5fe59a0",
+        "tokyoDate": "2026-10-10",
+        "dueAt": "2026-10-10T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D16",
+        "postId": "6ac2a497fe1389e4133ddb51",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D17",
+        "postId": "6ac3b0e1c5a0c4018753e3b4",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D18",
+        "postId": "6ac490df918cd0aeeae3c1b7",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": false,
+        "mediaHashMatchesManifest": null,
+        "existingOnly": true
+      },
+      {
+        "manifestId": "D19",
+        "postId": "6ac653370f4d385dd633f433",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D20",
+        "postId": "6ac7a523444a36d3be24ff5e",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      },
+      {
+        "manifestId": "D21",
+        "postId": "6ac8f688443de896597f2ddf",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true
+      }
+    ],
+    "legacyAdoptedSlot": {
+      "manifestId": "D18",
+      "tokyoDate": "2026-10-11",
+      "dueAt": "2026-10-11T11:32:00.000Z",
+      "existingPostId": "6ac490df918cd0aeeae3c1b7",
+      "existingText": "やわらかい色で、ひと息。\n鏡の前の、何でもない一枚。",
+      "manifestCaption": "朝の光が入るまで、予定は少しだけ待ってもらう。静かに始める日。",
+      "manifestMediaSha256": "dacdfdcca61672e634c0e191301556d69a5ab51a0fc82555fb934690e852a931",
+      "observedMediaSha256": null,
+      "actionTaken": "The existing external reservation was preserved and adopted as the third slot for the revised date. It is not asserted to be an exact D18 content match."
+    },
+    "validation": {
+      "allDatesMatchRevisedManifest": true,
+      "allDueTimesMatchRevisedManifest": true,
+      "allCaptionsMatchRevisedManifest": false,
+      "allMediaHashesMatchRevisedManifest": false,
+      "exactManifestMatches": [
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D19",
+        "D20",
+        "D21"
+      ],
+      "nonExactAdoptedSlot": "D18",
+      "allCurrentPostsReadBackAsScheduled": true
+    },
+    "pendingCreates": [],
+    "blocked": [],
+    "duplicateDetected": false,
+    "failedPostDetected": false,
+    "policyConsistencyWarning": "rules.onePrimaryFeedImagePerDayPerCharacter remains true while senaPublishingPolicy.mode is three_posts_daily. The newer explicit SENA publishing policy and revised per-post dates are treated as operative; no additional reservation was created in this review.",
+    "action": "No mutation was made. The channel is at the nine-post safety limit."
+  },
+  "publishing": {
+    "thirtyDayPostsPublished": 12,
+    "latestCampaignPublication": {
+      "manifestId": "D12",
+      "postId": "6abd193cda5180c12bfebdec",
+      "sentAt": "2026-10-09T11:31:09.205Z",
+      "tokyoSentAt": "2026-10-09T20:31:09.205+09:00",
+      "publicUrl": "https://www.instagram.com/p/DeRaB3Lln3P/",
+      "status": "sent"
+    },
+    "campaignPostsDueToday": [
+      {
+        "manifestId": "D13",
+        "postId": "6abe6a8c0c33e408f7aba7b2",
+        "dueAt": "2026-10-10T11:30:00.000Z",
+        "tokyoTime": "2026-10-10T11:30:00.000+00:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D14",
+        "postId": "6abfbbd03ac90aaf27ccd2e7",
+        "dueAt": "2026-10-10T11:31:00.000Z",
+        "tokyoTime": "2026-10-10T11:31:00.000+00:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D15",
+        "postId": "6ac14964ad7fd83bc5fe59a0",
+        "dueAt": "2026-10-10T11:32:00.000Z",
+        "tokyoTime": "2026-10-10T11:32:00.000+00:00",
+        "status": "scheduled"
+      }
+    ]
+  },
+  "performance": {
+    "D01": {
+      "postId": "6ab38b29c5fe69b4e884239f",
+      "publicUrl": "https://www.instagram.com/p/Dd1FR6VFoP2/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.042Z",
+      "ageAtMetricUpdateMinutes": 16473,
+      "views": 9,
+      "reach": 7,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 7, views 9, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D02": {
+      "postId": "6ab3ddf7a75742f2cd11395c",
+      "publicUrl": "https://www.instagram.com/p/Dd3qFGzEXFG/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.020Z",
+      "ageAtMetricUpdateMinutes": 15033,
+      "views": 9,
+      "reach": 6,
+      "reactions": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 9, reactions 3, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D03": {
+      "postId": "6ab3ddf8c81095d33c9a1f4a",
+      "publicUrl": "https://www.instagram.com/p/Dd6O3M_oEF5/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.052Z",
+      "ageAtMetricUpdateMinutes": 13593,
+      "views": 9,
+      "reach": 6,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 9, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D04": {
+      "postId": "6ab52f7cd0d12c23fa5b8e7d",
+      "publicUrl": "https://www.instagram.com/p/Dd8zq0WG_fc/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.018Z",
+      "ageAtMetricUpdateMinutes": 12153,
+      "views": 11,
+      "reach": 6,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 11, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D05": {
+      "postId": "6ab52f7d3e8c1aa3fcccf9e1",
+      "publicUrl": "https://www.instagram.com/p/Dd_YeA0FpSG/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.067Z",
+      "ageAtMetricUpdateMinutes": 10713,
+      "views": 9,
+      "reach": 5,
+      "reactions": 2,
+      "comments": 2,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 5, views 9, reactions 2, comments 2. Sample size is too small for a strategy decision."
+    },
+    "D06": {
+      "postId": "6ab52f7ef2918b28ff7437c0",
+      "publicUrl": "https://www.instagram.com/p/DeB9NZulNvX/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.025Z",
+      "ageAtMetricUpdateMinutes": 9273,
+      "views": 14,
+      "reach": 6,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 14, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D07": {
+      "postId": "6ab681004be5473030b59a9d",
+      "publicUrl": "https://www.instagram.com/p/DeEh_cileCB/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.048Z",
+      "ageAtMetricUpdateMinutes": 7833,
+      "views": 9,
+      "reach": 5,
+      "reactions": 2,
+      "comments": 2,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 5, views 9, reactions 2, comments 2. Sample size is too small for a strategy decision."
+    },
+    "D08": {
+      "postId": "6ab7d22bccccb9429c2f6164",
+      "publicUrl": "https://www.instagram.com/p/DeHG1tRkS7f/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.063Z",
+      "ageAtMetricUpdateMinutes": 6393,
+      "views": 10,
+      "reach": 5,
+      "reactions": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 5, views 10, reactions 3, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D09": {
+      "postId": "6ab923a8612c9e6ac926f9fa",
+      "publicUrl": "https://www.instagram.com/p/DeJrp1CG09k/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.072Z",
+      "ageAtMetricUpdateMinutes": 4953,
+      "views": 29,
+      "reach": 8,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 8, views 29, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D10": {
+      "postId": "6aba75db3f092d970340f383",
+      "publicUrl": "https://www.instagram.com/p/DeMQbNDFnik/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.046Z",
+      "ageAtMetricUpdateMinutes": 3513,
+      "views": 15,
+      "reach": 8,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 8, views 15, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D11": {
+      "postId": "6abbc73b86767996fcb6ba44",
+      "publicUrl": "https://www.instagram.com/p/DeO1QbYFHKf/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.038Z",
+      "ageAtMetricUpdateMinutes": 2073,
+      "views": 17,
+      "reach": 6,
+      "reactions": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 17, reactions 3, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D12": {
+      "postId": "6abd193cda5180c12bfebdec",
+      "publicUrl": "https://www.instagram.com/p/DeRaB3Lln3P/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.044Z",
+      "ageAtMetricUpdateMinutes": 633,
+      "views": 7,
+      "reach": 3,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "under_24h",
+      "interpretation": "Metrics were updated 633 minutes after publication and are not used for comparison."
+    },
+    "decision": "hold",
+    "note": "D01-D12 remain very low-volume observations. D09 has the highest observed views (29) with reach 8; D10 and D11 observed reach 8 and 6. D12 is under 24 hours old at the metric timestamp. No winner or strategy change is declared; missing profile visits remain null."
+  },
+  "userActionRequired": false,
+  "requiredUserAction": null,
+  "additionalCost": false
+}
