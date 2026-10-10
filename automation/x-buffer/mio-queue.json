@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T15:29:31.938Z",
+  "updatedAt": "2026-10-10T12:41:15.763Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -631,7 +631,7 @@
       "key": "mio-x-daily-2026-10-19-mio-d26",
       "dueAt": "2026-10-19T03:15:00.000Z",
       "text": "旅先の朝って、カーテンを開ける瞬間がいちばん好きかもしれない。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-23_D26.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-23_D26.jpeg",
       "sourceSha256": "d3e7bf5e312a3f62429b66ea6eea6bfbef652ec6e12a77734f23b1d4485bcd7f",
@@ -641,7 +641,11 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-23_D26.jpeg",
         "manifestDay": 26,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-10T12:41:15.257Z",
+      "bufferPostId": "6aca326bc4de2d2b1228d8d2",
+      "bufferDueAt": "2026-10-19T03:15:00.000Z",
+      "processedAt": "2026-10-10T12:41:15.680Z"
     },
     {
       "key": "mio-x-daily-2026-10-20-mio-d27",
@@ -664,7 +668,7 @@
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
     "scheduledCount": 9,
-    "verifiedAt": "2026-10-09T15:29:31.938Z"
+    "verifiedAt": "2026-10-10T12:41:15.763Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
