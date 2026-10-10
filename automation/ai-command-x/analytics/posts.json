@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T23:52:15+00:00",
+  "generatedAt": "2026-10-10T04:00:10+00:00",
   "schemaVersion": 2,
   "notePurchases": null,
   "noteRevenueJpy": null,
@@ -11,8 +11,52 @@
     "channelName": "ai_command_jp"
   },
   "lookbackDays": 30,
-  "postCount": 32,
+  "postCount": 33,
   "posts": [
+    {
+      "contentId": "D11-NOON",
+      "contentType": "実行ログ",
+      "experimentId": "NOTE_AB_7DAY_V1",
+      "hookVariant": null,
+      "bufferPostId": "6ac665f334c83ad4924db71c",
+      "sentAt": "2026-10-10T12:20:01+09:00",
+      "externalLink": "https://x.com/2104714619688554496/status/2108759428853887028",
+      "text": "【実行ログ】\n「コードを書いた」と「自動化できた」は別。\n\nコード作成\n→ 実行\n→ ログ確認\n→ エラー修正\n→ 再実行\n→ 成功確認\n\n僕は最後まで通ってから運用に入れる。",
+      "hasNoteLink": false,
+      "noteDestination": null,
+      "linkEvidence": [],
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 0.669,
+      "metricElapsedHours": 0.003,
+      "metricStatus": {
+        "impressions": "reported",
+        "likes": "missing",
+        "comments": "reported",
+        "reposts": "reported",
+        "quotes": "missing",
+        "clicks": "reported",
+        "saves": "missing"
+      },
+      "metricsUpdatedAt": "2026-10-10T03:20:10.599Z",
+      "impressions": 0.0,
+      "likes": null,
+      "comments": 0.0,
+      "reposts": 0.0,
+      "quotes": null,
+      "clicks": 0.0,
+      "saves": null,
+      "bufferEngagementRate": 0,
+      "interactionRatePct": null,
+      "clickRatePct": null,
+      "rawMetrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "reposts": 0,
+        "impressions": 0,
+        "clicks": 0
+      }
+    },
     {
       "contentId": "D11-AM",
       "contentType": "今日の指令",
@@ -25,9 +69,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 0.704,
-      "metricElapsedHours": 0.003,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 4.836,
+      "metricElapsedHours": 0.881,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -37,7 +81,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T23:10:10.057Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -69,9 +113,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 12.365,
-      "metricElapsedHours": 0.003,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 16.497,
+      "metricElapsedHours": 12.541,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -81,7 +125,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T11:30:31.016Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -113,9 +157,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 20.537,
-      "metricElapsedHours": 0.002,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 24.669,
+      "metricElapsedHours": 20.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -125,7 +169,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T03:20:10.542Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -157,9 +201,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 24.704,
-      "metricElapsedHours": 1.878,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 28.836,
+      "metricElapsedHours": 24.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -169,7 +213,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -206,12 +250,12 @@
           "finalUrl": "https://note.com/ai_command/n/n29d46a1b4341",
           "status": "direct",
           "destination": "free_A",
-          "checkedAt": "2026-10-09T23:52:15+00:00"
+          "checkedAt": "2026-10-10T04:00:10+00:00"
         }
       ],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 36.363,
-      "metricElapsedHours": 13.537,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 40.495,
+      "metricElapsedHours": 36.54,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -221,7 +265,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -253,9 +297,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 44.537,
-      "metricElapsedHours": 21.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 48.669,
+      "metricElapsedHours": 44.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -265,7 +309,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -297,9 +341,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 48.704,
-      "metricElapsedHours": 25.878,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 52.836,
+      "metricElapsedHours": 48.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -309,7 +353,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -346,12 +390,12 @@
           "finalUrl": "https://note.com/ai_command/n/n465168c06f64",
           "status": "direct",
           "destination": "free_B",
-          "checkedAt": "2026-10-09T23:52:15+00:00"
+          "checkedAt": "2026-10-10T04:00:10+00:00"
         }
       ],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 60.365,
-      "metricElapsedHours": 37.539,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 64.497,
+      "metricElapsedHours": 60.542,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -361,7 +405,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -393,9 +437,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 68.537,
-      "metricElapsedHours": 45.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 72.669,
+      "metricElapsedHours": 68.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -405,7 +449,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -437,9 +481,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 72.704,
-      "metricElapsedHours": 49.878,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 76.836,
+      "metricElapsedHours": 72.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -449,7 +493,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -486,12 +530,12 @@
           "finalUrl": "https://note.com/ai_command/n/nbb052c3cb0ad",
           "status": "direct",
           "destination": "front_product",
-          "checkedAt": "2026-10-09T23:52:15+00:00"
+          "checkedAt": "2026-10-10T04:00:10+00:00"
         }
       ],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 84.363,
-      "metricElapsedHours": 61.537,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 88.496,
+      "metricElapsedHours": 84.54,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -501,7 +545,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -533,9 +577,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 92.537,
-      "metricElapsedHours": 69.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 96.669,
+      "metricElapsedHours": 92.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -545,7 +589,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -577,9 +621,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 96.704,
-      "metricElapsedHours": 73.877,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 100.836,
+      "metricElapsedHours": 96.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -589,7 +633,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -626,12 +670,12 @@
           "finalUrl": "https://note.com/ai_command/n/n29d46a1b4341",
           "status": "direct",
           "destination": "free_A",
-          "checkedAt": "2026-10-09T23:52:15+00:00"
+          "checkedAt": "2026-10-10T04:00:10+00:00"
         }
       ],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 108.36,
-      "metricElapsedHours": 85.534,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 112.492,
+      "metricElapsedHours": 108.537,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -641,7 +685,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -673,9 +717,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 116.537,
-      "metricElapsedHours": 93.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 120.669,
+      "metricElapsedHours": 116.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -685,7 +729,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -717,9 +761,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 120.704,
-      "metricElapsedHours": 97.878,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 124.836,
+      "metricElapsedHours": 120.881,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -729,7 +773,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -761,9 +805,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 132.366,
-      "metricElapsedHours": 109.54,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 136.498,
+      "metricElapsedHours": 132.543,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -773,7 +817,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -805,9 +849,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 140.537,
-      "metricElapsedHours": 117.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 144.669,
+      "metricElapsedHours": 140.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -817,7 +861,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.064Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -849,9 +893,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 144.704,
-      "metricElapsedHours": 121.877,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 148.836,
+      "metricElapsedHours": 144.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -861,7 +905,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -893,9 +937,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 156.364,
-      "metricElapsedHours": 133.538,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 160.496,
+      "metricElapsedHours": 156.541,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -905,7 +949,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.895Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 0.0,
       "likes": null,
       "comments": 0.0,
@@ -937,9 +981,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 164.537,
-      "metricElapsedHours": 141.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 168.669,
+      "metricElapsedHours": 164.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -949,7 +993,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -981,9 +1025,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 168.704,
-      "metricElapsedHours": 145.877,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 172.836,
+      "metricElapsedHours": 168.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -993,7 +1037,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -1025,9 +1069,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 180.358,
-      "metricElapsedHours": 157.532,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 184.49,
+      "metricElapsedHours": 180.535,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1037,7 +1081,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -1069,9 +1113,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 188.537,
-      "metricElapsedHours": 165.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 192.669,
+      "metricElapsedHours": 188.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1081,7 +1125,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -1113,9 +1157,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 192.704,
-      "metricElapsedHours": 169.878,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 196.836,
+      "metricElapsedHours": 192.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1125,7 +1169,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 1.0,
       "likes": null,
       "comments": 0.0,
@@ -1162,12 +1206,12 @@
           "finalUrl": "https://note.com/ai_command/n/n7b74f56a03dc",
           "status": "direct",
           "destination": "core_product",
-          "checkedAt": "2026-10-09T23:52:15+00:00"
+          "checkedAt": "2026-10-10T04:00:10+00:00"
         }
       ],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 204.365,
-      "metricElapsedHours": 181.539,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 208.497,
+      "metricElapsedHours": 204.542,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1177,7 +1221,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 6.0,
       "likes": null,
       "comments": 0.0,
@@ -1209,9 +1253,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 212.537,
-      "metricElapsedHours": 189.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 216.669,
+      "metricElapsedHours": 212.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1221,7 +1265,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -1253,9 +1297,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 216.703,
-      "metricElapsedHours": 193.877,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 220.835,
+      "metricElapsedHours": 216.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1265,7 +1309,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -1297,9 +1341,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 228.365,
-      "metricElapsedHours": 205.539,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 232.497,
+      "metricElapsedHours": 228.541,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1309,7 +1353,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -1341,9 +1385,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 236.537,
-      "metricElapsedHours": 213.711,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 240.669,
+      "metricElapsedHours": 236.714,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1353,7 +1397,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -1385,9 +1429,9 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 240.704,
-      "metricElapsedHours": 217.877,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 244.836,
+      "metricElapsedHours": 240.88,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1397,7 +1441,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 2.0,
       "likes": null,
       "comments": 0.0,
@@ -1434,12 +1478,12 @@
           "finalUrl": "https://note.com/ai_command/n/nbb052c3cb0ad",
           "status": "resolved",
           "destination": "front_product",
-          "checkedAt": "2026-10-09T23:52:15+00:00"
+          "checkedAt": "2026-10-10T04:00:10+00:00"
         }
       ],
-      "collectedAt": "2026-10-09T23:52:15+00:00",
-      "elapsedHours": 249.063,
-      "metricElapsedHours": 226.237,
+      "collectedAt": "2026-10-10T04:00:10+00:00",
+      "elapsedHours": 253.195,
+      "metricElapsedHours": 249.24,
       "metricStatus": {
         "impressions": "reported",
         "likes": "missing",
@@ -1449,7 +1493,7 @@
         "clicks": "reported",
         "saves": "missing"
       },
-      "metricsUpdatedAt": "2026-10-09T01:02:40.896Z",
+      "metricsUpdatedAt": "2026-10-10T00:02:51.065Z",
       "impressions": 6.0,
       "likes": null,
       "comments": 0.0,
