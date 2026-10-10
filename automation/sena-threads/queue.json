@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T12:49:42.169Z",
+  "updatedAt": "2026-10-10T12:48:08.703Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -146,10 +146,13 @@
       "text": "予定のない夜に、少しだけ遠回りして帰るのが好き。\n\n何もない日に寄り道するなら、カフェ？ 本屋？ 夜景？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-17_D20.jpeg",
       "visualFirst": true,
-      "status": "scheduled",
+      "status": "sent",
       "bufferPostId": "6ab755d480521ded552266e7",
       "bufferDueAt": "2026-10-10T11:10:00.000Z",
-      "processedAt": "2026-09-26T05:19:16.809Z"
+      "processedAt": "2026-09-26T05:19:16.809Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeT8a1PEYr9",
+      "sentAt": "2026-10-10T11:10:12.184Z",
+      "statusSyncedAt": "2026-10-10T12:48:08.703Z"
     },
     {
       "key": "sena-threads-garcia-01",
@@ -228,8 +231,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 8,
-    "verifiedAt": "2026-10-09T12:49:42.169Z"
+    "scheduledCount": 9,
+    "verifiedAt": "2026-10-10T12:48:08.703Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
