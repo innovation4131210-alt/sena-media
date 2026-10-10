@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-09T23:25:36.289Z",
+  "capturedAt": "2026-10-10T13:44:32.570Z",
   "tokyoDate": "2026-10-10",
   "readOnly": true,
   "inventoryComplete": true,
@@ -13,6 +13,36 @@
   },
   "channelAvailable": true,
   "sent": [
+    {
+      "id": "6ac14964ad7fd83bc5fe59a0",
+      "text": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
+      "status": "sent",
+      "dueAt": "2026-10-10T11:32:00.000Z",
+      "sentAt": "2026-10-10T11:32:08.431Z",
+      "externalLink": "https://www.instagram.com/p/DeT-79pnPaV/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-03T18:28:52.049Z"
+    },
+    {
+      "id": "6abfbbd03ac90aaf27ccd2e7",
+      "text": "髪を整えて、肩を出す。夜は少しだけ昼と違う自分で。",
+      "status": "sent",
+      "dueAt": "2026-10-10T11:31:00.000Z",
+      "sentAt": "2026-10-10T11:31:17.378Z",
+      "externalLink": "https://www.instagram.com/p/DeT-1mtFla1/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-02T14:12:32.359Z"
+    },
+    {
+      "id": "6abe6a8c0c33e408f7aba7b2",
+      "text": "注文は決めた。あとは待つだけ。この時間、意外と嫌いじゃない。",
+      "status": "sent",
+      "dueAt": "2026-10-10T11:30:00.000Z",
+      "sentAt": "2026-10-10T11:31:13.418Z",
+      "externalLink": "https://www.instagram.com/p/DeT-0VhlSiJ/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-01T14:13:32.179Z"
+    },
     {
       "id": "6abd193cda5180c12bfebdec",
       "text": "本屋では黒を着たくなる。理由はないけど、たぶん空気に合う。",
@@ -1651,24 +1681,6 @@
   "failed": [],
   "scheduled": [
     {
-      "id": "6abe6a8c0c33e408f7aba7b2",
-      "text": "注文は決めた。あとは待つだけ。この時間、意外と嫌いじゃない。",
-      "status": "scheduled",
-      "dueAt": "2026-10-10T11:30:00.000Z"
-    },
-    {
-      "id": "6abfbbd03ac90aaf27ccd2e7",
-      "text": "髪を整えて、肩を出す。夜は少しだけ昼と違う自分で。",
-      "status": "scheduled",
-      "dueAt": "2026-10-10T11:31:00.000Z"
-    },
-    {
-      "id": "6ac14964ad7fd83bc5fe59a0",
-      "text": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
-      "status": "scheduled",
-      "dueAt": "2026-10-10T11:32:00.000Z"
-    },
-    {
       "id": "6ac2a497fe1389e4133ddb51",
       "text": "ヒールを脱いだ瞬間、やっと今日が終わった気がした。",
       "status": "scheduled",
@@ -1708,25 +1720,34 @@
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-10-09T23:25:36.289Z",
+    "evaluatedAt": "2026-10-10T13:44:32.570Z",
     "mutationAllowed": false,
     "status": "observed_batch_coverage",
     "ok": true,
     "cadence": "three_posts_daily",
     "batchSize": 3,
     "expectedPublicationDueAt": "2026-10-10T11:30:00.000Z",
-    "todayPublicationStatus": "not_due_for_verification",
-    "publishedIds": [],
-    "publishedUrls": [],
+    "todayPublicationStatus": "three_sent_verified",
+    "publishedIds": [
+      "6abe6a8c0c33e408f7aba7b2",
+      "6abfbbd03ac90aaf27ccd2e7",
+      "6ac14964ad7fd83bc5fe59a0"
+    ],
+    "publishedUrls": [
+      "https://www.instagram.com/p/DeT-0VhlSiJ/",
+      "https://www.instagram.com/p/DeT-1mtFla1/",
+      "https://www.instagram.com/p/DeT-79pnPaV/"
+    ],
     "futureDates": [
-      "2026-10-10",
       "2026-10-11",
       "2026-10-12"
     ],
-    "nextBatchDate": "2026-10-10",
+    "nextBatchDate": "2026-10-11",
     "errors": [],
-    "warnings": [],
+    "warnings": [
+      "future_stock_below_three_batches"
+    ],
     "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
-  "workflowRunId": "38004211078"
+  "workflowRunId": "38056881233"
 }
