@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-10T13:44:33.222Z",
+  "checkedAt": "2026-10-10T22:54:37.560Z",
   "readOnly": true,
   "connections": [
     {
@@ -427,11 +427,107 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "draft": 6,
-            "scheduled": 6,
-            "sent": 31
+            "sent": 40,
+            "scheduled": 9,
+            "draft": 6
           },
           "posts": [
+            {
+              "id": "6acab655d51a51e732433645",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:54:58.000Z",
+              "sentAt": "2026-10-09T22:54:58.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoS5MIIfI/",
+              "textHash": "9b3e1e53731e1085dc5107b251113d3c37aba2d352a99302529b7ec3fe5472b7"
+            },
+            {
+              "id": "6acab654d51a51e73243363d",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:56:25.000Z",
+              "sentAt": "2026-10-09T22:56:25.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSodddIMQm/",
+              "textHash": "cf38423726a6af42045744045fb3454fb32f492d41e3368570ace5e4af305ae7"
+            },
+            {
+              "id": "6acab654d51a51e73243363b",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:53:24.000Z",
+              "sentAt": "2026-10-09T22:53:24.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoHd8oNGB/",
+              "textHash": "4cc49c7608d750866005e3c12a63961a3b937bdb198a964db4a51bae95950ee1"
+            },
+            {
+              "id": "6acab654d51a51e732433637",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:55:44.000Z",
+              "sentAt": "2026-10-09T22:55:44.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoYhiINgg/",
+              "textHash": "4b6adc545d8b382bd348c0cd76a5002536c5639929083c558fd422808d184ab4"
+            },
+            {
+              "id": "6acab654d51a51e732433635",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:57:33.000Z",
+              "sentAt": "2026-10-09T22:57:33.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSol1oIPPd/",
+              "textHash": "09781fa89496ecef8fb48ed511735d94cd838dea39c4aa0b0b33eb3275eacfaa"
+            },
+            {
+              "id": "6acab654d51a51e732433632",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:46:05.000Z",
+              "sentAt": "2026-10-09T22:46:05.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSnR2XoPoJ/",
+              "textHash": "17acba533b3a3b59bf202a5b35ee44a11841e2961e92892a25fcd250eb97656a"
+            },
+            {
+              "id": "6acab654d51a51e73243362e",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:47:39.000Z",
+              "sentAt": "2026-10-09T22:47:39.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSndRLIMV1/",
+              "textHash": "9450f86b3ed46e4e58e4c8bf71015a056563ce5cfad3bd94cbbd586ec72c4afe"
+            },
+            {
+              "id": "6acab654d51a51e73243362c",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:54:03.000Z",
+              "sentAt": "2026-10-09T22:54:03.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoMQPIE2_/",
+              "textHash": "4ecb988b8e6a0b6203203745a71d9262c2bcf35f18f15d4c3a2080f70bc32dde"
+            },
+            {
+              "id": "6acab654d51a51e732433623",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:52:37.000Z",
+              "sentAt": "2026-10-09T22:52:37.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoBxSIBfC/",
+              "textHash": "845822c0f44f3f40c3224b0c92379b4f4ccbdbeb2c6babea9dc1d9dac35bf01b"
+            },
+            {
+              "id": "6aca4727ed92ed8fa5cf4361",
+              "status": "scheduled",
+              "dueAt": "2026-10-13T11:32:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "e659b2028d901e1dcca64497f11ea72a0e4632377ef7d9c43c469891ebd71821"
+            },
+            {
+              "id": "6aca4726b07d37ac9775adf3",
+              "status": "scheduled",
+              "dueAt": "2026-10-13T11:31:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "0f7f161a2a31795a912df6eadd914094444516f2876acaa19a1fff2e6df109da"
+            },
+            {
+              "id": "6aca4725b07d37ac9775ad7a",
+              "status": "scheduled",
+              "dueAt": "2026-10-13T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "84ca547ab62853c79d0e54f7d55bd5ce3cfbe0b9048e69de4c342373469a5c39"
+            },
             {
               "id": "6aca2e24431429fbffe598ef",
               "status": "draft",
@@ -788,51 +884,38 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-10T13:44:33.222Z",
+      "evaluatedAt": "2026-10-10T22:54:37.560Z",
       "mutationAllowed": false,
       "status": "observed_batch_coverage",
       "ok": true,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-10-10T11:30:00.000Z",
-      "todayPublicationStatus": "three_sent_verified",
-      "publishedIds": [
-        "6abe6a8c0c33e408f7aba7b2",
-        "6abfbbd03ac90aaf27ccd2e7",
-        "6ac14964ad7fd83bc5fe59a0"
-      ],
-      "publishedUrls": [
-        "https://www.instagram.com/p/DeT-0VhlSiJ/",
-        "https://www.instagram.com/p/DeT-1mtFla1/",
-        "https://www.instagram.com/p/DeT-79pnPaV/"
-      ],
+      "expectedPublicationDueAt": "2026-10-11T11:30:00.000Z",
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
       "futureDates": [
         "2026-10-11",
-        "2026-10-12"
+        "2026-10-12",
+        "2026-10-13"
       ],
       "nextBatchDate": "2026-10-11",
       "errors": [],
-      "warnings": [
-        "future_stock_below_three_batches"
-      ],
+      "warnings": [],
       "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
     },
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-10T13:44:33.222Z",
+      "evaluatedAt": "2026-10-10T22:54:37.560Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
-      "expectedPublicationDueAt": "2026-10-10T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-10-11T10:00:00.000Z",
       "publicationGraceMinutes": 60,
-      "todayPublicationStatus": "sent_verified",
-      "publishedIds": [
-        "6ab3f7634b03091dc1e7540f"
-      ],
-      "publishedUrls": [
-        "https://www.threads.com/@mio.ai_life/post/DeT0tBcIMYP"
-      ],
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
       "futureDates": [
         "2026-10-11",
         "2026-10-12",
@@ -844,7 +927,7 @@
         "2026-10-18",
         "2026-10-19"
       ],
-      "consecutiveFutureDays": 9,
+      "consecutiveFutureDays": 8,
       "firstUnverifiedDate": "2026-10-20",
       "errors": [],
       "warnings": [],
@@ -853,19 +936,15 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-10T13:44:33.222Z",
+      "evaluatedAt": "2026-10-10T22:54:37.560Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
-      "expectedPublicationDueAt": "2026-10-10T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-10-11T11:10:00.000Z",
       "publicationGraceMinutes": 60,
-      "todayPublicationStatus": "sent_verified",
-      "publishedIds": [
-        "6ab755d480521ded552266e7"
-      ],
-      "publishedUrls": [
-        "https://www.threads.com/@sena.virtual.studio/post/DeT8a1PEYr9"
-      ],
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
       "futureDates": [
         "2026-10-11",
         "2026-10-12",
@@ -877,7 +956,7 @@
         "2026-10-18",
         "2026-10-19"
       ],
-      "consecutiveFutureDays": 9,
+      "consecutiveFutureDays": 8,
       "firstUnverifiedDate": "2026-10-20",
       "errors": [],
       "warnings": [],
