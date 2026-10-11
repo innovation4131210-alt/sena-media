@@ -1,0 +1,577 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-10-11",
+  "reviewedAt": "2026-10-11T00:55:29.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "d22007621bb574c569cdf462ac1723c3baa189ea",
+      "lastRunAt": "2026-10-10T14:09:44.327Z",
+      "lastVerifiedAt": "2026-10-10T14:09:44.327Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "5e20ec467091b27d162765db13e8cf4d1b07a410"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "b3759f5083145dcffe53935f3658ede238ebf705",
+      "capturedAt": "2026-10-10T13:44:32.570Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "7fec9c6fae6e4d61a3bfbb1a96aa8729ac3b5ebf",
+      "checkedAt": "2026-10-10T22:54:37.560Z"
+    },
+    "runnerStateCommit": {
+      "sha": "fa91672c1a4c752c6b0b622bd60a49e6cab7796f",
+      "message": "Update SENA rolling queue state"
+    },
+    "qcStrategy": {
+      "repository": "innovation4131210-alt/sena-auto-post",
+      "path": "strategy/mio-sena-30day-publishing-manifest-2026-09-28.json",
+      "sha": "054c88f0d83563085af38bc1e8f56807b2240fb2"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-27",
+    "manifestItems": 30,
+    "phase": "live_day_16",
+    "publishingPolicy": {
+      "mode": "three_posts_daily",
+      "batchSize": 3,
+      "firstBatchDate": "2026-10-10",
+      "intervalMinutes": 1
+    },
+    "manifestChanged": false
+  },
+  "runner": {
+    "status": "operational_with_partial_media_evidence",
+    "latestRunAt": "2026-10-10T14:09:44.327Z",
+    "stateDeltaCreated": [
+      {
+        "day": 22,
+        "id": "6aca4725b07d37ac9775ad7a",
+        "dueAt": "2026-10-13T11:30:00.000Z",
+        "verifiedAt": "2026-10-10T14:09:42.078Z"
+      },
+      {
+        "day": 23,
+        "id": "6aca4726b07d37ac9775adf3",
+        "dueAt": "2026-10-13T11:31:00.000Z",
+        "verifiedAt": "2026-10-10T14:09:42.943Z"
+      },
+      {
+        "day": 24,
+        "id": "6aca4727ed92ed8fa5cf4361",
+        "dueAt": "2026-10-13T11:32:00.000Z",
+        "verifiedAt": "2026-10-10T14:09:43.820Z"
+      }
+    ],
+    "blocked": [],
+    "pendingCreates": [],
+    "note": "The complete snapshot showed six scheduled posts after D13-D15 publication. The subsequent runner state commit added D22-D24 and read back each external ID, caption, due time and scheduled status. Media hashes were not persisted for these three entries."
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "connection": "healthy",
+    "inventoryCompleteAtSnapshot": true,
+    "connectionEvidence": {
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "scopedAuditHealthy": true,
+      "auditContinuityOk": true
+    },
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "countDerivation": {
+      "completeSnapshotBeforeNightlyRefill": 6,
+      "createdAndReadBackByRunner": 3
+    },
+    "remainingChannelCapacity": 0,
+    "scheduledPosts": [
+      {
+        "manifestId": "D16",
+        "postId": "6ac2a497fe1389e4133ddb51",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true,
+        "verificationEvidence": "runner_state_readback"
+      },
+      {
+        "manifestId": "D17",
+        "postId": "6ac3b0e1c5a0c4018753e3b4",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true,
+        "verificationEvidence": "runner_state_readback"
+      },
+      {
+        "manifestId": "D18",
+        "postId": "6ac490df918cd0aeeae3c1b7",
+        "tokyoDate": "2026-10-11",
+        "dueAt": "2026-10-11T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": false,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "existing_external_reservation"
+      },
+      {
+        "manifestId": "D19",
+        "postId": "6ac653370f4d385dd633f433",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true,
+        "verificationEvidence": "runner_state_readback"
+      },
+      {
+        "manifestId": "D20",
+        "postId": "6ac7a523444a36d3be24ff5e",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true,
+        "verificationEvidence": "runner_state_readback"
+      },
+      {
+        "manifestId": "D21",
+        "postId": "6ac8f688443de896597f2ddf",
+        "tokyoDate": "2026-10-12",
+        "dueAt": "2026-10-12T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": true,
+        "verificationEvidence": "runner_state_readback"
+      },
+      {
+        "manifestId": "D22",
+        "postId": "6aca4725b07d37ac9775ad7a",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D23",
+        "postId": "6aca4726b07d37ac9775adf3",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D24",
+        "postId": "6aca4727ed92ed8fa5cf4361",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      }
+    ],
+    "nonExactSlots": [
+      {
+        "manifestId": "D18",
+        "postId": "6ac490df918cd0aeeae3c1b7",
+        "issue": "Existing reservation matches the revised date and time but its caption differs from the manifest and its media hash is unavailable.",
+        "existingCaption": "やわらかい色で、ひと息。\n鏡の前の、何でもない一枚。",
+        "manifestCaption": "朝の光が入るまで、予定は少しだけ待ってもらう。静かに始める日。",
+        "manifestMediaSha256": "dacdfdcca61672e634c0e191301556d69a5ab51a0fc82555fb934690e852a931",
+        "action": "Preserved; no duplicate or destructive change."
+      },
+      {
+        "manifestIds": [
+          "D22",
+          "D23",
+          "D24"
+        ],
+        "issue": "External IDs, captions, dates, due times and scheduled status were read back, but media hashes were not persisted in state.",
+        "action": "Reserved posts preserved; media-hash equality is not asserted."
+      }
+    ],
+    "validation": {
+      "allDatesMatchManifest": true,
+      "allDueTimesMatchManifest": true,
+      "allExternalIdsPresent": true,
+      "allCurrentPostsReadBackAsScheduled": true,
+      "allCaptionsMatchManifest": false,
+      "allMediaHashesMatchManifest": false,
+      "exactManifestMatches": [
+        "D16",
+        "D17",
+        "D19",
+        "D20",
+        "D21"
+      ],
+      "captionAndTimeMatchesWithoutMediaHash": [
+        "D22",
+        "D23",
+        "D24"
+      ],
+      "legacyNonExactSlot": "D18"
+    },
+    "duplicateDetected": false,
+    "failedPostDetected": false,
+    "action": "No mutation was made during this review. The channel is at its nine-post safety limit."
+  },
+  "publishing": {
+    "thirtyDayPostsPublished": 15,
+    "latestCampaignPublications": [
+      {
+        "manifestId": "D13",
+        "postId": "6abe6a8c0c33e408f7aba7b2",
+        "sentAt": "2026-10-10T11:31:13.418Z",
+        "tokyoSentAt": "2026-10-10T20:31:13.418+09:00",
+        "publicUrl": "https://www.instagram.com/p/DeT-0VhlSiJ/",
+        "status": "sent"
+      },
+      {
+        "manifestId": "D14",
+        "postId": "6abfbbd03ac90aaf27ccd2e7",
+        "sentAt": "2026-10-10T11:31:17.378Z",
+        "tokyoSentAt": "2026-10-10T20:31:17.378+09:00",
+        "publicUrl": "https://www.instagram.com/p/DeT-1mtFla1/",
+        "status": "sent"
+      },
+      {
+        "manifestId": "D15",
+        "postId": "6ac14964ad7fd83bc5fe59a0",
+        "sentAt": "2026-10-10T11:32:08.431Z",
+        "tokyoSentAt": "2026-10-10T20:32:08.431+09:00",
+        "publicUrl": "https://www.instagram.com/p/DeT-79pnPaV/",
+        "status": "sent"
+      }
+    ],
+    "campaignPostsDueToday": [
+      {
+        "manifestId": "D16",
+        "postId": "6ac2a497fe1389e4133ddb51",
+        "dueAt": "2026-10-11T11:30:00.000Z",
+        "tokyoTime": "2026-10-11T20:30:00+09:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D17",
+        "postId": "6ac3b0e1c5a0c4018753e3b4",
+        "dueAt": "2026-10-11T11:31:00.000Z",
+        "tokyoTime": "2026-10-11T20:31:00+09:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D18",
+        "postId": "6ac490df918cd0aeeae3c1b7",
+        "dueAt": "2026-10-11T11:32:00.000Z",
+        "tokyoTime": "2026-10-11T20:32:00+09:00",
+        "status": "scheduled"
+      }
+    ]
+  },
+  "performance": {
+    "D01": {
+      "postId": "6ab38b29c5fe69b4e884239f",
+      "publicUrl": "https://www.instagram.com/p/Dd1FR6VFoP2/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.042Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.042Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 16473,
+      "views": 9,
+      "reach": 7,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 7, views 9, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D02": {
+      "postId": "6ab3ddf7a75742f2cd11395c",
+      "publicUrl": "https://www.instagram.com/p/Dd3qFGzEXFG/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.020Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.020Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 15033,
+      "views": 9,
+      "reach": 6,
+      "reactions": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 9, reactions 3, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D03": {
+      "postId": "6ab3ddf8c81095d33c9a1f4a",
+      "publicUrl": "https://www.instagram.com/p/Dd6O3M_oEF5/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.052Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.052Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 13593,
+      "views": 9,
+      "reach": 6,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 9, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D04": {
+      "postId": "6ab52f7cd0d12c23fa5b8e7d",
+      "publicUrl": "https://www.instagram.com/p/Dd8zq0WG_fc/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.018Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.018Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 12153,
+      "views": 11,
+      "reach": 6,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 11, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D05": {
+      "postId": "6ab52f7d3e8c1aa3fcccf9e1",
+      "publicUrl": "https://www.instagram.com/p/Dd_YeA0FpSG/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.067Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.067Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 10713,
+      "views": 9,
+      "reach": 5,
+      "reactions": 2,
+      "comments": 2,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 5, views 9, reactions 2, comments 2. Sample size is too small for a strategy decision."
+    },
+    "D06": {
+      "postId": "6ab52f7ef2918b28ff7437c0",
+      "publicUrl": "https://www.instagram.com/p/DeB9NZulNvX/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.025Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.025Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 9273,
+      "views": 14,
+      "reach": 6,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 14, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D07": {
+      "postId": "6ab681004be5473030b59a9d",
+      "publicUrl": "https://www.instagram.com/p/DeEh_cileCB/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.048Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.048Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 7833,
+      "views": 9,
+      "reach": 5,
+      "reactions": 2,
+      "comments": 2,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 5, views 9, reactions 2, comments 2. Sample size is too small for a strategy decision."
+    },
+    "D08": {
+      "postId": "6ab7d22bccccb9429c2f6164",
+      "publicUrl": "https://www.instagram.com/p/DeHG1tRkS7f/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.063Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.063Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 6393,
+      "views": 10,
+      "reach": 5,
+      "reactions": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 5, views 10, reactions 3, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D09": {
+      "postId": "6ab923a8612c9e6ac926f9fa",
+      "publicUrl": "https://www.instagram.com/p/DeJrp1CG09k/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.072Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.072Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 4953,
+      "views": 29,
+      "reach": 8,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 8, views 29, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D10": {
+      "postId": "6aba75db3f092d970340f383",
+      "publicUrl": "https://www.instagram.com/p/DeMQbNDFnik/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.046Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.046Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 3513,
+      "views": 15,
+      "reach": 8,
+      "reactions": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 8, views 15, reactions 2, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D11": {
+      "postId": "6abbc73b86767996fcb6ba44",
+      "publicUrl": "https://www.instagram.com/p/DeO1QbYFHKf/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.038Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.038Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 2073,
+      "views": 17,
+      "reach": 6,
+      "reactions": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "over_24h",
+      "interpretation": "Observed reach 6, views 17, reactions 3, comments 0. Sample size is too small for a strategy decision."
+    },
+    "D12": {
+      "postId": "6abd193cda5180c12bfebdec",
+      "publicUrl": "https://www.instagram.com/p/DeRaB3Lln3P/",
+      "metricsUpdatedAt": "2026-10-09T22:03:54.044Z",
+      "rawMetricsUpdatedAt": "2026-10-09T22:03:54.044Z",
+      "dataQuality": "valid",
+      "ageAtMetricUpdateMinutes": 633,
+      "views": 7,
+      "reach": 3,
+      "reactions": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "under_24h",
+      "interpretation": "Metrics were updated 633 minutes after publication and are not used for comparison."
+    },
+    "D13": {
+      "postId": "6abe6a8c0c33e408f7aba7b2",
+      "publicUrl": "https://www.instagram.com/p/DeT-0VhlSiJ/",
+      "metricsUpdatedAt": null,
+      "rawMetricsUpdatedAt": "2026-10-01T14:13:32.179Z",
+      "dataQuality": "invalid_prepublication_metrics_timestamp",
+      "ageAtMetricUpdateMinutes": null,
+      "views": null,
+      "reach": null,
+      "reactions": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "unavailable",
+      "interpretation": "Metrics are unavailable or carry an invalid pre-publication timestamp; all unavailable KPI fields remain null."
+    },
+    "D14": {
+      "postId": "6abfbbd03ac90aaf27ccd2e7",
+      "publicUrl": "https://www.instagram.com/p/DeT-1mtFla1/",
+      "metricsUpdatedAt": null,
+      "rawMetricsUpdatedAt": "2026-10-02T14:12:32.359Z",
+      "dataQuality": "invalid_prepublication_metrics_timestamp",
+      "ageAtMetricUpdateMinutes": null,
+      "views": null,
+      "reach": null,
+      "reactions": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "unavailable",
+      "interpretation": "Metrics are unavailable or carry an invalid pre-publication timestamp; all unavailable KPI fields remain null."
+    },
+    "D15": {
+      "postId": "6ac14964ad7fd83bc5fe59a0",
+      "publicUrl": "https://www.instagram.com/p/DeT-79pnPaV/",
+      "metricsUpdatedAt": null,
+      "rawMetricsUpdatedAt": "2026-10-03T18:28:52.049Z",
+      "dataQuality": "invalid_prepublication_metrics_timestamp",
+      "ageAtMetricUpdateMinutes": null,
+      "views": null,
+      "reach": null,
+      "reactions": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null,
+      "profileVisits": null,
+      "profileVisitToFollowConversion": null,
+      "maturity": "unavailable",
+      "interpretation": "Metrics are unavailable or carry an invalid pre-publication timestamp; all unavailable KPI fields remain null."
+    },
+    "decision": "hold",
+    "note": "D09 remains the highest valid observation at 29 views and reach 8, but all valid campaign samples are small. D13-D15 published successfully, while their snapshot metric timestamps predate publication and their metric arrays are empty; these KPIs are recorded as null and excluded from comparison."
+  },
+  "userActionRequired": false,
+  "requiredUserAction": null,
+  "additionalCost": false
+}
