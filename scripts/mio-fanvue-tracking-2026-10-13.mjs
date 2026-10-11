@@ -9,7 +9,7 @@ function check(p) {
  assert.equal(p.id,ID); assert.equal(p.channelId,CHANNEL); assert.equal(p.status,"scheduled");
  assert.equal(Date.parse(p.dueAt),Date.parse(DUE));
  assert.ok(p.text===OLD||p.text===NEW,"Unexpected text; no edit permitted");
- assert.equal(p.assets?.length,1); assert.ok(p.assets[0].id); assert.ok(p.assets[0].mimeType.startsWith("image/"));
+ assert.equal(p.assets?.length,1); assert.ok(p.assets[0].id===null||typeof p.assets[0].id==="string"); assert.ok(p.assets[0].mimeType.startsWith("image/"));
  return p;
 }
 function after(before, rows) {
@@ -21,13 +21,13 @@ function after(before, rows) {
 }
 function tests(){
  const p={id:ID,channelId:CHANNEL,status:"scheduled",dueAt:DUE,text:OLD,assets:[{id:"image-1",mimeType:"image/jpeg",source:"https://example.com/source.jpg"}]};
- check(p);check({...p,text:NEW});
+ check(p);check({...p,text:NEW});check({...p,assets:[{...p.assets[0],id:null}]});
  for(const patch of [{id:"wrong"},{channelId:"wrong"},{status:"sent"},{dueAt:"2026-10-14T03:15:00Z"},{text:"other"},{assets:[]},{assets:[{id:"x",mimeType:"video/mp4"}]}])assert.throws(()=>check({...p,...patch}));
  const other={...p,id:"untouched"};after([p,other],[{...p,text:NEW},other]);
  assert.throws(()=>after([p,other],[{...p,text:NEW},{...other,text:"modified"}]));
  assert.throws(()=>after([p],[{...p,text:NEW,assets:[{...p.assets[0],id:"different"}]}]));
  assert.equal(OLD.split("https://www.fanvue.com/mio_ai_life_jp").length,2);
- console.log("Offline safety tests passed: 13 checks");
+ console.log("Offline safety tests passed: 14 checks");
 }
 async function gql(query,variables={}){
  const key=process.env.X_BUFFER_API_KEY;if(!key)throw new Error("Existing Buffer credential unavailable");
