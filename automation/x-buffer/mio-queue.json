@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:41:15.763Z",
+  "updatedAt": "2026-10-11T12:42:35.979Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -651,7 +651,7 @@
       "key": "mio-x-daily-2026-10-20-mio-d27",
       "dueAt": "2026-10-20T03:15:00.000Z",
       "text": "熱いって分かってるのにすぐ食べた。たい焼きは待てない。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-24_D27.jpeg",
       "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-24_D27.jpeg",
       "sourceSha256": "a765760ca4c43d2441b8cdda9ae0dd83186ddd5f72c73ce9ff33a2a58aa3cea2",
@@ -661,14 +661,18 @@
         "sourceImage": "media/mio-30day-2026-09-28/MIO_2026-10-24_D27.jpeg",
         "manifestDay": 27,
         "qcStatus": "accepted"
-      }
+      },
+      "attemptedAt": "2026-10-11T12:42:35.267Z",
+      "bufferPostId": "6acb843bd9cab260a7f966bb",
+      "bufferDueAt": "2026-10-20T03:15:00.000Z",
+      "processedAt": "2026-10-11T12:42:35.813Z"
     }
   ],
   "lastRun": {
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
     "scheduledCount": 9,
-    "verifiedAt": "2026-10-10T12:41:15.763Z"
+    "verifiedAt": "2026-10-11T12:42:35.979Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
