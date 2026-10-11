@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:40:48.771Z",
+  "updatedAt": "2026-10-11T12:41:57.101Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -307,7 +307,11 @@
       "dueAt": "2026-10-21T04:05:00Z",
       "text": "夕暮れの街を、もう少しだけ。\n帰る前に眺めていたくなる光。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-21_D24.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-11T12:41:56.578Z",
+      "bufferPostId": "6acb8414bba9419ccb36947a",
+      "bufferDueAt": "2026-10-21T04:05:00.000Z",
+      "processedAt": "2026-10-11T12:41:56.980Z"
     },
     {
       "key": "sena-d25",
@@ -381,6 +385,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-10T12:40:48.771Z"
+    "verifiedAt": "2026-10-11T12:41:57.101Z"
   }
 }
