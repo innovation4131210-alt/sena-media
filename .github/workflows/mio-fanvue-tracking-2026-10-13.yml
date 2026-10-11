@@ -1,0 +1,27 @@
+name: Update one MIO Fanvue tracking URL
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: x-buffer-mio-refill
+  cancel-in-progress: false
+jobs:
+  update-one:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate fixed-target safety offline
+        run: |
+          node --check scripts/mio-fanvue-tracking-2026-10-13.mjs
+          node scripts/mio-fanvue-tracking-2026-10-13.mjs --offline
+      - name: Replace URL on the one approved existing reservation
+        env:
+          X_BUFFER_API_KEY: ${{ secrets.X_BUFFER_API_KEY }}
+        run: node scripts/mio-fanvue-tracking-2026-10-13.mjs
