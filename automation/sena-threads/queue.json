@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:48:08.703Z",
+  "updatedAt": "2026-10-11T12:48:43.565Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -192,10 +192,13 @@
       "text": "帰ってヒールを脱いだ瞬間が、いちばん「今日終わった」って感じる。\n\n帰宅したら最初にすること、何？",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-13_D16.jpeg",
       "visualFirst": true,
-      "status": "scheduled",
+      "status": "sent",
       "bufferPostId": "6abd528c08cc1d765ae47f42",
       "bufferDueAt": "2026-10-11T11:10:00.000Z",
-      "processedAt": "2026-09-30T18:18:52.728Z"
+      "processedAt": "2026-09-30T18:18:52.728Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeWhNyWlb8F",
+      "sentAt": "2026-10-11T11:10:11.444Z",
+      "statusSyncedAt": "2026-10-11T12:48:43.564Z"
     },
     {
       "key": "sena-threads-organic-2026-10-15",
@@ -231,8 +234,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 9,
-    "verifiedAt": "2026-10-10T12:48:08.703Z"
+    "scheduledCount": 8,
+    "verifiedAt": "2026-10-11T12:48:43.565Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
