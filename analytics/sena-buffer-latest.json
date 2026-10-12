@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-10-11T13:45:01.094Z",
-  "tokyoDate": "2026-10-11",
+  "capturedAt": "2026-10-12T14:00:17.155Z",
+  "tokyoDate": "2026-10-12",
   "readOnly": true,
   "inventoryComplete": true,
   "channel": {
@@ -14,14 +14,93 @@
   "channelAvailable": true,
   "sent": [
     {
+      "id": "6ac8f688443de896597f2ddf",
+      "text": "ホテルのロビーで少し待ち時間。急がない時間の方が贅沢かもしれない。",
+      "status": "sent",
+      "dueAt": "2026-10-12T11:32:00.000Z",
+      "sentAt": "2026-10-12T11:32:07.602Z",
+      "externalLink": "https://www.instagram.com/p/DeZIhkrljBf/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-09T14:13:28.832Z"
+    },
+    {
+      "id": "6ac7a523444a36d3be24ff5e",
+      "text": "呼ばれて振り返ったら、雨上がりの街が光っていた。もう少しだけ歩こう。",
+      "status": "sent",
+      "dueAt": "2026-10-12T11:31:00.000Z",
+      "sentAt": "2026-10-12T11:31:28.595Z",
+      "externalLink": "https://www.instagram.com/p/DeZIcrhIMWj/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-08T14:13:55.792Z"
+    },
+    {
+      "id": "6ac653370f4d385dd633f433",
+      "text": "通り過ぎるつもりだったのに、足が止まった。長く使いたいものほど、すぐには決められない。",
+      "status": "sent",
+      "dueAt": "2026-10-12T11:30:00.000Z",
+      "sentAt": "2026-10-12T11:30:51.091Z",
+      "externalLink": "https://www.instagram.com/p/DeZIYTQFBTo/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-07T14:12:07.540Z"
+    },
+    {
       "id": "6ac490df918cd0aeeae3c1b7",
       "text": "やわらかい色で、ひと息。\n鏡の前の、何でもない一枚。",
       "status": "sent",
       "dueAt": "2026-10-11T11:32:00.000Z",
       "sentAt": "2026-10-11T11:32:17.561Z",
       "externalLink": "https://www.instagram.com/p/DeWjvuvkZ6y/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-10-06T06:10:39.448Z"
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:15.994Z"
     },
     {
       "id": "6ac3b0e1c5a0c4018753e3b4",
@@ -30,26 +109,6 @@
       "dueAt": "2026-10-11T11:31:00.000Z",
       "sentAt": "2026-10-11T11:31:15.081Z",
       "externalLink": "https://www.instagram.com/p/DeWjoFAEQc1/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-10-05T14:14:57.147Z"
-    },
-    {
-      "id": "6ac2a497fe1389e4133ddb51",
-      "text": "ヒールを脱いだ瞬間、やっと今日が終わった気がした。",
-      "status": "sent",
-      "dueAt": "2026-10-11T11:30:00.000Z",
-      "sentAt": "2026-10-11T11:30:58.141Z",
-      "externalLink": "https://www.instagram.com/p/DeWjmCXkf8Z/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-10-04T19:10:15.924Z"
-    },
-    {
-      "id": "6ac14964ad7fd83bc5fe59a0",
-      "text": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
-      "status": "sent",
-      "dueAt": "2026-10-10T11:32:00.000Z",
-      "sentAt": "2026-10-10T11:32:08.431Z",
-      "externalLink": "https://www.instagram.com/p/DeT-79pnPaV/",
       "metrics": [
         {
           "type": "reactions",
@@ -72,7 +131,7 @@
         {
           "type": "views",
           "name": "Views",
-          "value": 8,
+          "value": 4,
           "unit": "count"
         },
         {
@@ -100,7 +159,125 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.027Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.954Z"
+    },
+    {
+      "id": "6ac2a497fe1389e4133ddb51",
+      "text": "ヒールを脱いだ瞬間、やっと今日が終わった気がした。",
+      "status": "sent",
+      "dueAt": "2026-10-11T11:30:00.000Z",
+      "sentAt": "2026-10-11T11:30:58.141Z",
+      "externalLink": "https://www.instagram.com/p/DeWjmCXkf8Z/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 100,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:16.006Z"
+    },
+    {
+      "id": "6ac14964ad7fd83bc5fe59a0",
+      "text": "白シャツの日は、余計なものを足さない。街を歩くにはそれくらいがいい。",
+      "status": "sent",
+      "dueAt": "2026-10-10T11:32:00.000Z",
+      "sentAt": "2026-10-10T11:32:08.431Z",
+      "externalLink": "https://www.instagram.com/p/DeT-79pnPaV/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 60,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 5,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:15.955Z"
     },
     {
       "id": "6abfbbd03ac90aaf27ccd2e7",
@@ -125,13 +302,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 4,
           "unit": "count"
         },
         {
@@ -143,7 +320,7 @@
         {
           "type": "saves",
           "name": "Saves",
-          "value": 0,
+          "value": 1,
           "unit": "count"
         },
         {
@@ -155,11 +332,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 4,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.070Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.957Z"
     },
     {
       "id": "6abe6a8c0c33e408f7aba7b2",
@@ -172,7 +349,7 @@
         {
           "type": "reactions",
           "name": "Reactions",
-          "value": 1,
+          "value": 3,
           "unit": "count"
         },
         {
@@ -184,13 +361,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 75,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 1,
+          "value": 10,
           "unit": "count"
         },
         {
@@ -214,11 +391,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 4,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.079Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.996Z"
     },
     {
       "id": "6acab654d51a51e732433635",
@@ -232,183 +409,6 @@
           "type": "reactions",
           "name": "Reactions",
           "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 66.67,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 6,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 3,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.022Z"
-    },
-    {
-      "id": "6acab654d51a51e73243363d",
-      "text": "風が少し冷たくなって、ニットの出番。秋にいちばん着たくなる服は？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
-      "status": "sent",
-      "dueAt": "2026-10-09T22:56:25.000Z",
-      "sentAt": "2026-10-09T22:56:25.000Z",
-      "externalLink": "https://www.instagram.com/p/DeSodddIMQm/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 25,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 4,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 4,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.096Z"
-    },
-    {
-      "id": "6acab654d51a51e732433637",
-      "text": "この光が好きで、もう少しここに。写真を撮るなら、朝と夕方のどちらが好き？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
-      "status": "sent",
-      "dueAt": "2026-10-09T22:55:44.000Z",
-      "sentAt": "2026-10-09T22:55:44.000Z",
-      "externalLink": "https://www.instagram.com/p/DeSoYhiINgg/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 66.67,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 14,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 3,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.020Z"
-    },
-    {
-      "id": "6acab655d51a51e732433645",
-      "text": "急がない午後を、少しだけ。ひと休みするときはコーヒー派？紅茶派？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
-      "status": "sent",
-      "dueAt": "2026-10-09T22:54:58.000Z",
-      "sentAt": "2026-10-09T22:54:58.000Z",
-      "externalLink": "https://www.instagram.com/p/DeSoS5MIIfI/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
           "unit": "count"
         },
         {
@@ -450,11 +450,188 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 2,
+          "value": 4,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.119Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:16.002Z"
+    },
+    {
+      "id": "6acab654d51a51e73243363d",
+      "text": "風が少し冷たくなって、ニットの出番。秋にいちばん着たくなる服は？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
+      "status": "sent",
+      "dueAt": "2026-10-09T22:56:25.000Z",
+      "sentAt": "2026-10-09T22:56:25.000Z",
+      "externalLink": "https://www.instagram.com/p/DeSodddIMQm/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 40,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 6,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 5,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:15.922Z"
+    },
+    {
+      "id": "6acab654d51a51e732433637",
+      "text": "この光が好きで、もう少しここに。写真を撮るなら、朝と夕方のどちらが好き？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
+      "status": "sent",
+      "dueAt": "2026-10-09T22:55:44.000Z",
+      "sentAt": "2026-10-09T22:55:44.000Z",
+      "externalLink": "https://www.instagram.com/p/DeSoYhiINgg/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 16,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 4,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:15.999Z"
+    },
+    {
+      "id": "6acab655d51a51e732433645",
+      "text": "急がない午後を、少しだけ。ひと休みするときはコーヒー派？紅茶派？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
+      "status": "sent",
+      "dueAt": "2026-10-09T22:54:58.000Z",
+      "sentAt": "2026-10-09T22:54:58.000Z",
+      "externalLink": "https://www.instagram.com/p/DeSoS5MIIfI/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 33.33,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 9,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 3,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:15.945Z"
     },
     {
       "id": "6acab654d51a51e73243362c",
@@ -479,13 +656,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 50,
+          "value": 33.33,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 2,
+          "value": 3,
           "unit": "count"
         },
         {
@@ -509,11 +686,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 2,
+          "value": 3,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.034Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.971Z"
     },
     {
       "id": "6acab654d51a51e73243363b",
@@ -538,13 +715,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 66.67,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 6,
+          "value": 7,
           "unit": "count"
         },
         {
@@ -568,11 +745,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 2,
+          "value": 3,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.024Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.959Z"
     },
     {
       "id": "6acab654d51a51e732433623",
@@ -603,65 +780,6 @@
         {
           "type": "views",
           "name": "Views",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 2,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.026Z"
-    },
-    {
-      "id": "6acab654d51a51e73243362e",
-      "text": "今日は少し遠回り。秋の散歩は、目的地を決めてから出る？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
-      "status": "sent",
-      "dueAt": "2026-10-09T22:47:39.000Z",
-      "sentAt": "2026-10-09T22:47:39.000Z",
-      "externalLink": "https://www.instagram.com/p/DeSndRLIMV1/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 50,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
           "value": 3,
           "unit": "count"
         },
@@ -686,11 +804,70 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 2,
+          "value": 3,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.035Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.952Z"
+    },
+    {
+      "id": "6acab654d51a51e73243362e",
+      "text": "今日は少し遠回り。秋の散歩は、目的地を決めてから出る？\n\n※SENAは架空のAIモデルです。画像はAIで制作しています。\n#SENA",
+      "status": "sent",
+      "dueAt": "2026-10-09T22:47:39.000Z",
+      "sentAt": "2026-10-09T22:47:39.000Z",
+      "externalLink": "https://www.instagram.com/p/DeSndRLIMV1/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 33.33,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 4,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 3,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:15.968Z"
     },
     {
       "id": "6acab654d51a51e732433632",
@@ -721,7 +898,7 @@
         {
           "type": "views",
           "name": "Views",
-          "value": 2,
+          "value": 4,
           "unit": "count"
         },
         {
@@ -745,11 +922,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 3,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.085Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.936Z"
     },
     {
       "id": "6abd193cda5180c12bfebdec",
@@ -774,13 +951,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 42.86,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 12,
+          "value": 13,
           "unit": "count"
         },
         {
@@ -792,7 +969,7 @@
         {
           "type": "saves",
           "name": "Saves",
-          "value": 0,
+          "value": 1,
           "unit": "count"
         },
         {
@@ -804,11 +981,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 7,
+          "value": 8,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.090Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.950Z"
     },
     {
       "id": "6abbc73b86767996fcb6ba44",
@@ -833,13 +1010,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 33.33,
+          "value": 40,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 20,
+          "value": 22,
           "unit": "count"
         },
         {
@@ -851,7 +1028,7 @@
         {
           "type": "saves",
           "name": "Saves",
-          "value": 0,
+          "value": 1,
           "unit": "count"
         },
         {
@@ -863,11 +1040,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 9,
+          "value": 10,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.052Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.973Z"
     },
     {
       "id": "6aba75db3f092d970340f383",
@@ -892,13 +1069,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 22.22,
+          "value": 30,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 16,
+          "value": 19,
           "unit": "count"
         },
         {
@@ -910,7 +1087,7 @@
         {
           "type": "saves",
           "name": "Saves",
-          "value": 0,
+          "value": 1,
           "unit": "count"
         },
         {
@@ -922,11 +1099,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 9,
+          "value": 10,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.064Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.964Z"
     },
     {
       "id": "6ab923a8612c9e6ac926f9fa",
@@ -951,13 +1128,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 22.22,
+          "value": 20,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 30,
+          "value": 32,
           "unit": "count"
         },
         {
@@ -981,11 +1158,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 9,
+          "value": 10,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.009Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:16.013Z"
     },
     {
       "id": "6ab7d22bccccb9429c2f6164",
@@ -1010,7 +1187,66 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 60,
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 6,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-11T22:04:16.009Z"
+    },
+    {
+      "id": "6ab681004be5473030b59a9d",
+      "text": "黒を着る夜は、最後のアクセサリーで迷う。足す？引く？",
+      "status": "sent",
+      "dueAt": "2026-10-04T11:30:00.000Z",
+      "sentAt": "2026-10-04T11:30:39.029Z",
+      "externalLink": "https://www.instagram.com/p/DeEh_cileCB/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 66.67,
           "unit": "percentage"
         },
         {
@@ -1040,70 +1276,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 5,
+          "value": 6,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.165Z"
-    },
-    {
-      "id": "6ab681004be5473030b59a9d",
-      "text": "黒を着る夜は、最後のアクセサリーで迷う。足す？引く？",
-      "status": "sent",
-      "dueAt": "2026-10-04T11:30:00.000Z",
-      "sentAt": "2026-10-04T11:30:39.029Z",
-      "externalLink": "https://www.instagram.com/p/DeEh_cileCB/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 80,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 9,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 5,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.132Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:16.004Z"
     },
     {
       "id": "6ab52f7ef2918b28ff7437c0",
@@ -1128,13 +1305,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 33.33,
+          "value": 28.57,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 14,
+          "value": 15,
           "unit": "count"
         },
         {
@@ -1158,11 +1335,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 6,
+          "value": 7,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.050Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.975Z"
     },
     {
       "id": "6ab52f7d3e8c1aa3fcccf9e1",
@@ -1221,7 +1398,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.154Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.932Z"
     },
     {
       "id": "6ab52f7cd0d12c23fa5b8e7d",
@@ -1280,7 +1457,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.054Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.944Z"
     },
     {
       "id": "6ab3ddf8c81095d33c9a1f4a",
@@ -1339,7 +1516,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.074Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.948Z"
     },
     {
       "id": "6ab3ddf7a75742f2cd11395c",
@@ -1398,7 +1575,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.072Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.969Z"
     },
     {
       "id": "6ab38b29c5fe69b4e884239f",
@@ -1457,7 +1634,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.062Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.926Z"
     },
     {
       "id": "6ab357d9b777b65977f0a8d2",
@@ -1516,7 +1693,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.067Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.928Z"
     },
     {
       "id": "6ab357d87f829c66807a5ea5",
@@ -1575,7 +1752,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.032Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.966Z"
     },
     {
       "id": "6ab357d87f829c66807a5e75",
@@ -1634,7 +1811,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.047Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.941Z"
     },
     {
       "id": "6ab5c2c57eb36f6708a279c1",
@@ -1734,7 +1911,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.018Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.939Z"
     },
     {
       "id": "6ab357d778330b3657e58b39",
@@ -1793,7 +1970,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.058Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.934Z"
     },
     {
       "id": "6ab357d62aa0e20bb472d3c6",
@@ -1852,7 +2029,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.006Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.963Z"
     },
     {
       "id": "6ab357d67f829c66807a5e22",
@@ -1911,7 +2088,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.012Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:16.058Z"
     },
     {
       "id": "6ab357d5b777b65977f0a865",
@@ -1970,7 +2147,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.093Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.924Z"
     },
     {
       "id": "6ab357d57f829c66807a5dfb",
@@ -1995,13 +2172,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 25,
+          "value": 22.22,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 9,
+          "value": 10,
           "unit": "count"
         },
         {
@@ -2025,11 +2202,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 8,
+          "value": 9,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-10T22:04:05.037Z"
+      "metricsUpdatedAt": "2026-10-11T22:04:15.930Z"
     },
     {
       "id": "6aaff74813d908add21e414b",
@@ -2389,24 +2566,6 @@
   "failed": [],
   "scheduled": [
     {
-      "id": "6ac653370f4d385dd633f433",
-      "text": "通り過ぎるつもりだったのに、足が止まった。長く使いたいものほど、すぐには決められない。",
-      "status": "scheduled",
-      "dueAt": "2026-10-12T11:30:00.000Z"
-    },
-    {
-      "id": "6ac7a523444a36d3be24ff5e",
-      "text": "呼ばれて振り返ったら、雨上がりの街が光っていた。もう少しだけ歩こう。",
-      "status": "scheduled",
-      "dueAt": "2026-10-12T11:31:00.000Z"
-    },
-    {
-      "id": "6ac8f688443de896597f2ddf",
-      "text": "ホテルのロビーで少し待ち時間。急がない時間の方が贅沢かもしれない。",
-      "status": "scheduled",
-      "dueAt": "2026-10-12T11:32:00.000Z"
-    },
-    {
       "id": "6aca4725b07d37ac9775ad7a",
       "text": "服を選ぶ時は、見せるより残す方を考える。今日はこのバランス。",
       "status": "scheduled",
@@ -2423,39 +2582,57 @@
       "text": "夕暮れの街は、振り返りたくなる光がある。もう少しここにいたい。",
       "status": "scheduled",
       "dueAt": "2026-10-13T11:32:00.000Z"
+    },
+    {
+      "id": "6acb98cebba9419ccb3a919a",
+      "text": "鏡の前で最後にネックレスだけ。黒には、これくらいがちょうどいい。",
+      "status": "scheduled",
+      "dueAt": "2026-10-14T11:30:00.000Z"
+    },
+    {
+      "id": "6acb98cfed92ed8fa505d39e",
+      "text": "夜の車窓は、目的地より途中の景色を見てしまう。",
+      "status": "scheduled",
+      "dueAt": "2026-10-14T11:31:00.000Z"
+    },
+    {
+      "id": "6acb98d0ed92ed8fa505d3d6",
+      "text": "花を飾る日は、部屋の空気まで少し整う気がする。",
+      "status": "scheduled",
+      "dueAt": "2026-10-14T11:32:00.000Z"
     }
   ],
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-10-11T13:45:01.094Z",
+    "evaluatedAt": "2026-10-12T14:00:17.155Z",
     "mutationAllowed": false,
     "status": "observed_batch_coverage",
     "ok": true,
     "cadence": "three_posts_daily",
     "batchSize": 3,
-    "expectedPublicationDueAt": "2026-10-11T11:30:00.000Z",
+    "expectedPublicationDueAt": "2026-10-12T11:30:00.000Z",
     "todayPublicationStatus": "three_sent_verified",
     "publishedIds": [
-      "6ac2a497fe1389e4133ddb51",
-      "6ac3b0e1c5a0c4018753e3b4",
-      "6ac490df918cd0aeeae3c1b7"
+      "6ac653370f4d385dd633f433",
+      "6ac7a523444a36d3be24ff5e",
+      "6ac8f688443de896597f2ddf"
     ],
     "publishedUrls": [
-      "https://www.instagram.com/p/DeWjmCXkf8Z/",
-      "https://www.instagram.com/p/DeWjoFAEQc1/",
-      "https://www.instagram.com/p/DeWjvuvkZ6y/"
+      "https://www.instagram.com/p/DeZIYTQFBTo/",
+      "https://www.instagram.com/p/DeZIcrhIMWj/",
+      "https://www.instagram.com/p/DeZIhkrljBf/"
     ],
     "futureDates": [
-      "2026-10-12",
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-14"
     ],
-    "nextBatchDate": "2026-10-12",
+    "nextBatchDate": "2026-10-13",
     "errors": [],
     "warnings": [
       "future_stock_below_three_batches"
     ],
     "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
-  "workflowRunId": "38144407114"
+  "workflowRunId": "38259702783"
 }
