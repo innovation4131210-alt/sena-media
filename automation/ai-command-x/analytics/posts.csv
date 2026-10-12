@@ -1,4 +1,14 @@
 contentId,contentType,experimentId,hookVariant,bufferPostId,sentAt,externalLink,hasNoteLink,noteDestination,impressions,likes,comments,reposts,quotes,clicks,saves,bufferEngagementRate,interactionRatePct,clickRatePct,metricsUpdatedAt,text
+D13-NOON,実務ノウハウ,,,6ac90650cb5a8140da1e2f8c,2026-10-12T12:20:01+09:00,https://x.com/2104714619688554496/status/2109484203200950413,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-10-12T03:20:10.178Z,"AIにエラー対応を任せるなら、順番を固定する。
+
+ログ確認
+→ 原因候補
+→ 最小修正
+→ 再実行
+→ 成功確認
+
+原因不明のまま何度も再試行させない。
+まず原因を切り分ける。"
 D13-AM,今日の指令,,,6ac9064f57c4b87d9cf82412,2026-10-12T08:10:01+09:00,https://x.com/2104714619688554496/status/2109421289685356891,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-10-11T23:10:10.549Z,"【今日の指令】
 自動化の完了条件は「設定した」ではない。
 
