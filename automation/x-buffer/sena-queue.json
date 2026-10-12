@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11T12:41:57.101Z",
+  "updatedAt": "2026-10-12T13:03:45.851Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -318,7 +318,11 @@
       "dueAt": "2026-10-22T04:05:00Z",
       "text": "鏡の前で、最後に首元を整える。\n黒を着る日は、これくらいシンプルに。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-22_D25.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-12T13:03:44.954Z",
+      "bufferPostId": "6accdab18130a0adb8edcde4",
+      "bufferDueAt": "2026-10-22T04:05:00.000Z",
+      "processedAt": "2026-10-12T13:03:45.657Z"
     },
     {
       "key": "sena-d26",
@@ -385,6 +389,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-11T12:41:57.101Z"
+    "verifiedAt": "2026-10-12T13:03:45.851Z"
   }
 }
