@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12T13:10:08.317Z",
+  "updatedAt": "2026-10-13T19:26:26.948Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -220,11 +220,14 @@
       "text": "コーヒーと一冊、静かな席。\n気づいたら、もう少しだけ長居したくなる。",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-20_D23.jpeg",
       "visualFirst": true,
-      "status": "scheduled",
+      "status": "sent",
       "bufferPostId": "6abd528e71c35f5d6933c7a6",
       "bufferDueAt": "2026-10-13T11:10:00.000Z",
       "processedAt": "2026-09-30T18:18:54.344Z",
-      "textReconciledAt": "2026-10-08T15:30:36.001Z"
+      "textReconciledAt": "2026-10-08T15:30:36.001Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/Debq0bnlV9G",
+      "sentAt": "2026-10-13T11:10:19.267Z",
+      "statusSyncedAt": "2026-10-13T19:26:26.948Z"
     }
   ],
   "activation": {
@@ -237,8 +240,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 7,
-    "verifiedAt": "2026-10-12T13:10:08.317Z"
+    "scheduledCount": 6,
+    "verifiedAt": "2026-10-13T19:26:26.948Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
