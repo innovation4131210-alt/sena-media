@@ -329,6 +329,54 @@
       "caption": "夜景の前では言葉が少なくなる。今月の最後は、静かな一枚で。",
       "verifiedAt": "2026-10-12T14:18:25.568Z",
       "batchId": "SENA-IG-2026-10-15"
+    },
+    {
+      "day": 31,
+      "date": "2026-10-16",
+      "bufferPostId": "6aca2c4d431429fbffe5140e",
+      "dueAt": "2026-10-16T11:30:00.000Z",
+      "caption": "アイボリーとチェック。\n秋の街になじむ色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-10-13T14:03:02Z",
+      "batchId": "SENA-IG-2026-10-16",
+      "existingOnly": true,
+      "sourceBufferAssetId": "6aca2c0f828e244e6500ab79",
+      "nativeAiGenerated": true,
+      "verificationSource": "Native Buffer queue and edit-form readback; original ID, image, time and AI flag preserved.",
+      "apiCaptionVerified": true,
+      "apiCaptionVerificationAt": "2026-10-13T13:54:09.674Z"
+    },
+    {
+      "day": 32,
+      "date": "2026-10-16",
+      "bufferPostId": "6aca2cbc5454fba9985f902b",
+      "dueAt": "2026-10-16T11:31:00.000Z",
+      "caption": "本と、ゆったりした服。\n静かな時間の組み合わせ。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-10-13T14:03:02Z",
+      "batchId": "SENA-IG-2026-10-16",
+      "existingOnly": true,
+      "sourceBufferAssetId": "6aca2c76225131f39aae9eed",
+      "nativeAiGenerated": true,
+      "verificationSource": "Native Buffer queue and edit-form readback; original ID, image, time and AI flag preserved.",
+      "apiCaptionVerified": false,
+      "apiCaptionVerificationAt": null
+    },
+    {
+      "day": 33,
+      "date": "2026-10-16",
+      "bufferPostId": "6aca2d6fc3f750a538fc48c8",
+      "dueAt": "2026-10-16T11:32:00.000Z",
+      "caption": "ふわふわが、もうひとつ。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-10-13T14:03:02Z",
+      "batchId": "SENA-IG-2026-10-16",
+      "existingOnly": true,
+      "sourceBufferAssetId": "6aca2cd87f470034a1b38471",
+      "nativeAiGenerated": true,
+      "verificationSource": "Native Buffer queue and edit-form readback; original ID, image, time and AI flag preserved.",
+      "apiCaptionVerified": false,
+      "apiCaptionVerificationAt": null
     }
   ],
   "lastRunAt": "2026-10-12T14:18:25.911Z",
@@ -462,8 +510,8 @@
   "nativeDraftPromotionCheckpoint": {
     "batchId": "SENA-IG-2026-10-16",
     "channelId": "6aa72524ea19ca0bde39313c",
-    "status": "partial_native_schedule_api_caption_readback_pending",
-    "nativeReportReceivedAt": "2026-10-13T13:45:45Z",
+    "status": "all_three_native_scheduled_manifest_reconciliation_pending",
+    "nativeReportReceivedAt": "2026-10-13T14:03:02Z",
     "scheduled": [
       {
         "bufferPostId": "6aca2c4d431429fbffe5140e",
@@ -472,28 +520,73 @@
         "sourceBufferAssetId": "6aca2c0f828e244e6500ab79",
         "nativeAiGenerated": true,
         "publishingMethod": "automatic",
-        "priorDraftTextSha256": "006051716df6b83027cdb9ed390a2c9ee3cbc89d555d7da6ae3093b922e8c87a",
         "nativeCardText": "アイボリーとチェック。\n秋の街になじむ色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-        "apiCaptionReadbackVerified": false,
-        "observation": "Same existing post ID, date, image and AI setting retained. Native scheduled card omits the prior draft's trailing ASCII space. No manual caption edit; display trimming versus provider text normalization is not established."
-      }
-    ],
-    "remainingDrafts": [
+        "apiCaptionReadbackVerified": true
+      },
       {
         "bufferPostId": "6aca2cbc5454fba9985f902b",
         "dueAt": "2026-10-16T11:31:00.000Z",
-        "status": "draft",
-        "sourceBufferAssetId": "6aca2c76225131f39aae9eed"
+        "status": "scheduled",
+        "sourceBufferAssetId": "6aca2c76225131f39aae9eed",
+        "nativeAiGenerated": true,
+        "publishingMethod": "automatic",
+        "nativeCardText": "本と、ゆったりした服。\n静かな時間の組み合わせ。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+        "apiCaptionReadbackVerified": false
       },
       {
         "bufferPostId": "6aca2d6fc3f750a538fc48c8",
         "dueAt": "2026-10-16T11:32:00.000Z",
-        "status": "draft",
-        "sourceBufferAssetId": "6aca2cd87f470034a1b38471"
+        "status": "scheduled",
+        "sourceBufferAssetId": "6aca2cd87f470034a1b38471",
+        "nativeAiGenerated": true,
+        "publishingMethod": "automatic",
+        "nativeCardText": "ふわふわが、もうひとつ。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+        "apiCaptionReadbackVerified": false
       }
     ],
-    "observedChannelScheduledCount": 7,
-    "continuation": "Hold remaining two promotions until stored API caption is verified. Do not recreate any target or duplicate reservations. Active manifest is unchanged; existing runner may stop safely on the unmanaged scheduled ID.",
+    "remainingDrafts": [],
+    "observedChannelScheduledCount": 9,
+    "remainingChannelCapacity": 0,
+    "observation": "All three existing draft IDs promoted without manual text edits or media replacement. Native card text omits the former trailing ASCII space. The first post's stored API text independently confirms this normalization; remaining two await the existing normal runner's exact-content verification.",
     "noOriginalImageUpload": true
-  }
+  },
+  "nativeDraftPromotionHistory": [
+    {
+      "batchId": "SENA-IG-2026-10-16",
+      "channelId": "6aa72524ea19ca0bde39313c",
+      "status": "partial_native_schedule_api_caption_readback_pending",
+      "nativeReportReceivedAt": "2026-10-13T13:45:45Z",
+      "scheduled": [
+        {
+          "bufferPostId": "6aca2c4d431429fbffe5140e",
+          "dueAt": "2026-10-16T11:30:00.000Z",
+          "status": "scheduled",
+          "sourceBufferAssetId": "6aca2c0f828e244e6500ab79",
+          "nativeAiGenerated": true,
+          "publishingMethod": "automatic",
+          "priorDraftTextSha256": "006051716df6b83027cdb9ed390a2c9ee3cbc89d555d7da6ae3093b922e8c87a",
+          "nativeCardText": "アイボリーとチェック。\n秋の街になじむ色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+          "apiCaptionReadbackVerified": false,
+          "observation": "Same existing post ID, date, image and AI setting retained. Native scheduled card omits the prior draft's trailing ASCII space. No manual caption edit; display trimming versus provider text normalization is not established."
+        }
+      ],
+      "remainingDrafts": [
+        {
+          "bufferPostId": "6aca2cbc5454fba9985f902b",
+          "dueAt": "2026-10-16T11:31:00.000Z",
+          "status": "draft",
+          "sourceBufferAssetId": "6aca2c76225131f39aae9eed"
+        },
+        {
+          "bufferPostId": "6aca2d6fc3f750a538fc48c8",
+          "dueAt": "2026-10-16T11:32:00.000Z",
+          "status": "draft",
+          "sourceBufferAssetId": "6aca2cd87f470034a1b38471"
+        }
+      ],
+      "observedChannelScheduledCount": 7,
+      "continuation": "Hold remaining two promotions until stored API caption is verified. Do not recreate any target or duplicate reservations. Active manifest is unchanged; existing runner may stop safely on the unmanaged scheduled ID.",
+      "noOriginalImageUpload": true
+    }
+  ]
 }
