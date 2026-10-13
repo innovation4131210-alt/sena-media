@@ -31,7 +31,7 @@ async function transport(url,options) {
    mutations++;assert.ok(query.includes('editPost'));assert.deepEqual(Object.keys(variables.input).sort(),['aiAssisted','assets','dueAt','id','metadata','mode','text']);
    const originalPost=posts.find(x=>x.id===variables.input.id);assert.equal(variables.input.text,originalPost.text);assert.equal(variables.input.assets[0].image.url,originalPost.assets[0].source);assert.equal(variables.input.metadata.instagram.isAiGenerated,true);
    if(mutations===failAt)throw Error('simulated edit failure');
-   const p=posts.find(x=>x.id===variables.input.id);p.dueAt=variables.input.dueAt;data={editPost:{post:{id:p.id}}};
+   const p=posts.find(x=>x.id===variables.input.id);p.dueAt=variables.input.dueAt;p.status='scheduled';data={editPost:{post:{id:p.id}}};
  } else {assert.equal(variables.channelId,id);const status=query.match(/status:\[(\w+)\]/)[1];data={posts:{edges:posts.filter(p=>p.status===status).map(node=>({node:structuredClone(node)})),pageInfo:{hasNextPage:false}}};}
  return {ok:true,json:async()=>({data})};
 }
@@ -46,6 +46,15 @@ try {
  await run();assert.equal(mutations,3);assert.deepEqual(posts.map(x=>x.id),original.map(x=>x.id));assert.deepEqual(posts.map(x=>x.assets),original.map(x=>x.assets));
  posts.push({...original[0],id:'unmanaged'});await assert.rejects(run(),/Unmanaged/);assert.equal(mutations,3);
  posts.pop();
+ const drafts=items.map((x,i)=>({...original[i],id:'draft-'+i,status:'draft',dueAt:new Date(Date.parse(x.publishAt)+86400000).toISOString(),text:'draft-caption-'+i}));
+ posts.push(...drafts);
+ saved=JSON.parse(await readFile('automation/30day/sena-state.json','utf8'));
+ saved.scheduled.push(...drafts.map((p,i)=>({day:16+i,date:'2026-10-11',bufferPostId:p.id,dueAt:p.dueAt,caption:p.text,lastObservedStatus:'draft',batchId:'external-test',existingOnly:true,nativeAiGenerated:true,verificationSource:'mock external ID and asset readback'})));
+ await writeFile('automation/30day/sena-state.json',JSON.stringify(saved));
+ const draftResult=await run();assert.equal(draftResult.scheduled.length,6);assert.ok(drafts.every(p=>p.status==='scheduled'));
+ await run();assert.equal(mutations,6);
+ posts=posts.filter(p=>!p.id.startsWith('draft-'));
+ saved=JSON.parse(await readFile('automation/30day/sena-state.json','utf8'));saved.scheduled=saved.scheduled.filter(x=>x.day<16);await writeFile('automation/30day/sena-state.json',JSON.stringify(saved));
  const future=items.map((x,i)=>{const filename=`SENA_2026-10-11_D${16+i}.jpeg`;return {...x,day:16+i,caption:'next-'+i,date:'2026-10-11',publishAt:new Date(Date.parse(x.publishAt)+86400000).toISOString(),filename,mediaPath:'media/sena-30day-2026-09-28/'+filename,sha256:createHash('sha256').update(mediaBytes).digest('hex')};});
  await writeFile('automation/30day/publishing-manifest.json',JSON.stringify({sena:[...items,...future]}));
  await assert.rejects(run(),e=>e.code==='ENOENT');assert.equal(creates,0);
