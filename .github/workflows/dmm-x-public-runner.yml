@@ -38,12 +38,13 @@ jobs:
           retry_at = None
           try:
               report = json.loads(report_path.read_text(encoding="utf-8"))
-              retry_at = (
+              cooldown = (
                   report.get("metrics", {})
                   .get("coverage", {})
-                  .get("cooldown", {})
-                  .get("retryAt")
+                  .get("cooldown")
+                  or {}
               )
+              retry_at = cooldown.get("retryAt")
               if retry_at:
                   retry_time = datetime.fromisoformat(retry_at.replace("Z", "+00:00"))
                   skip = datetime.now(timezone.utc) < retry_time
