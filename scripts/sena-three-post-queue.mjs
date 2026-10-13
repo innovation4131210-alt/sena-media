@@ -26,9 +26,14 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
   const policy=JSON.parse(await readFile('automation/30day/sena-grid-policy.json','utf8'));
   if(policy.channelId!==CHANNEL||policy.handle!==HANDLE||policy.batchSize!==3||![1,3].includes(policy.cadenceDays)) throw Error('Invalid SENA policy');
   const manifest=JSON.parse(await readFile('automation/30day/publishing-manifest.json','utf8'));
-  const items=manifest.sena.filter(x=>x.day>=policy.startDay).map(x=>({...x,...(policy.overrides?.find(y=>y.day===x.day)||{})}));
-  validateBatches(items,policy.cadenceDays);
   const state=JSON.parse(await readFile(STATE,'utf8'));
+  const manifestItems=manifest.sena.filter(x=>x.day>=policy.startDay).map(x=>({...x,...(policy.overrides?.find(y=>y.day===x.day)||{})}));
+  const externalItems=(state.scheduled??[]).filter(x=>x.existingOnly&&!manifestItems.some(y=>y.day===x.day)).map(x=>{
+    if(!x.bufferPostId||!x.caption||!x.dueAt||!x.date||!x.batchId||x.nativeAiGenerated!==true||!x.verificationSource) throw Error('Incomplete external reservation evidence');
+    return {day:x.day,date:x.date,publishAt:x.dueAt,account:HANDLE,caption:x.caption,qcStatus:'accepted',aiDisclosure:true,batchId:x.batchId,existingOnly:true};
+  });
+  const items=[...manifestItems,...externalItems].sort((a,b)=>time(a.publishAt)-time(b.publishAt));
+  validateBatches(items,policy.cadenceDays);
   state.batchMigration??={edits:[],pendingCreates:[]};
   const stamp=()=>new Date(clock()).toISOString();
   const save=async()=>{await mkdir('automation/30day',{recursive:true});await writeFile(STATE,JSON.stringify(state,null,2)+'\n');};
@@ -46,7 +51,7 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
   const c=found[0];
   async function inventory() {
     const rows=[];
-    for(const status of ['scheduled','sent','error']) {
+    for(const status of ['scheduled','draft','sent','error']) {
       const d=await gql(`query($organizationId:OrganizationId!,$channelId:ChannelId!){posts(first:100,input:{organizationId:$organizationId,filter:{status:[${status}],channelIds:[$channelId]}}){edges{node{id channelId text dueAt status assets{id mimeType source ... on ImageAsset{image{altText userTags{__typename}}}} metadata{... on InstagramPostMetadata{type shouldShareToFeed isAiGenerated firstComment link geolocation{__typename} stickerFields{__typename}}}}}pageInfo{hasNextPage}}}`,{organizationId:c.organizationId,channelId:c.id});
       if(!Array.isArray(d.posts?.edges)||d.posts.pageInfo?.hasNextPage!==false) throw Error('Incomplete channel inventory');
       for(const {node:x} of d.posts.edges) {
@@ -79,10 +84,12 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
   for(const x of items) {
     const p=lookup(x); if(!p) continue;
     if(p.status==='sent') {record(x,p);continue;}
-    if(time(p.dueAt)!==time(x.publishAt)) {
-      if(Math.min(time(p.dueAt),time(x.publishAt))<=clock()+15*60000) throw Error('Imminent post cannot be migrated safely');
-      const original=policy.existing.find(y=>y.day===x.day);
-      if(!original||time(p.dueAt)!==time(original.originalDueAt)) throw Error('Unexpected schedule drift');
+    if(p.status==='draft'||time(p.dueAt)!==time(x.publishAt)) {
+      if(time(x.publishAt)<=clock()+15*60000) throw Error('Imminent post cannot be migrated safely');
+      if(p.status!=='draft') {
+        const original=policy.existing.find(y=>y.day===x.day);
+        if(!original||time(p.dueAt)!==time(original.originalDueAt)) throw Error('Unexpected schedule drift');
+      }
       if(!p.metadata||p.metadata.type!=='post'||p.metadata.geolocation||p.metadata.stickerFields||p.assets.some(a=>!a.mimeType.startsWith('image/')||!a.source||!a.image||a.image.userTags?.length)) throw Error('Unsupported existing metadata; refuse content changes');
       const {geolocation,stickerFields,...instagram}=p.metadata;
       const assets=p.assets.map(a=>({image:{url:a.source,metadata:{altText:a.image.altText}}}));
