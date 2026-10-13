@@ -458,5 +458,42 @@
     "status": "verified",
     "verifiedAt": "2026-10-12T14:18:25.911Z"
   },
-  "publishingPolicy": "three_posts_daily"
+  "publishingPolicy": "three_posts_daily",
+  "nativeDraftPromotionCheckpoint": {
+    "batchId": "SENA-IG-2026-10-16",
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "status": "partial_native_schedule_api_caption_readback_pending",
+    "nativeReportReceivedAt": "2026-10-13T13:45:45Z",
+    "scheduled": [
+      {
+        "bufferPostId": "6aca2c4d431429fbffe5140e",
+        "dueAt": "2026-10-16T11:30:00.000Z",
+        "status": "scheduled",
+        "sourceBufferAssetId": "6aca2c0f828e244e6500ab79",
+        "nativeAiGenerated": true,
+        "publishingMethod": "automatic",
+        "priorDraftTextSha256": "006051716df6b83027cdb9ed390a2c9ee3cbc89d555d7da6ae3093b922e8c87a",
+        "nativeCardText": "アイボリーとチェック。\n秋の街になじむ色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+        "apiCaptionReadbackVerified": false,
+        "observation": "Same existing post ID, date, image and AI setting retained. Native scheduled card omits the prior draft's trailing ASCII space. No manual caption edit; display trimming versus provider text normalization is not established."
+      }
+    ],
+    "remainingDrafts": [
+      {
+        "bufferPostId": "6aca2cbc5454fba9985f902b",
+        "dueAt": "2026-10-16T11:31:00.000Z",
+        "status": "draft",
+        "sourceBufferAssetId": "6aca2c76225131f39aae9eed"
+      },
+      {
+        "bufferPostId": "6aca2d6fc3f750a538fc48c8",
+        "dueAt": "2026-10-16T11:32:00.000Z",
+        "status": "draft",
+        "sourceBufferAssetId": "6aca2cd87f470034a1b38471"
+      }
+    ],
+    "observedChannelScheduledCount": 7,
+    "continuation": "Hold remaining two promotions until stored API caption is verified. Do not recreate any target or duplicate reservations. Active manifest is unchanged; existing runner may stop safely on the unmanaged scheduled ID.",
+    "noOriginalImageUpload": true
+  }
 }
