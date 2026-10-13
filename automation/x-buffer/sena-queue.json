@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12T13:03:45.851Z",
+  "updatedAt": "2026-10-13T19:21:03.494Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -329,7 +329,11 @@
       "dueAt": "2026-10-23T04:05:00Z",
       "text": "夜の車窓は、つい眺めてしまう。\n流れる街の灯りと、静かな帰り道。\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-23_D26.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-13T19:21:02.446Z",
+      "bufferPostId": "6ace849f212d876603728348",
+      "bufferDueAt": "2026-10-23T04:05:00.000Z",
+      "processedAt": "2026-10-13T19:21:03.267Z"
     },
     {
       "key": "sena-d27",
@@ -389,6 +393,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-12T13:03:45.851Z"
+    "verifiedAt": "2026-10-13T19:21:03.494Z"
   }
 }
