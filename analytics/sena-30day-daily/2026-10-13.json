@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-10-13",
+  "reviewedAt": "2026-10-13T01:00:15.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "51df278b7274f943e58843b133e8afcd9290e3e3",
+      "lastRunAt": "2026-10-12T14:18:25.911Z",
+      "lastVerifiedAt": "2026-10-12T14:18:25.911Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "5e20ec467091b27d162765db13e8cf4d1b07a410"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "d39c7f06adda0466e37b624d8214920e6664cc8b",
+      "capturedAt": "2026-10-12T14:00:17.155Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "3a710f36231a26ef25f29308c65a14f5bce7fabc",
+      "checkedAt": "2026-10-12T14:00:18.623Z"
+    },
+    "runnerStateCommit": {
+      "sha": "1bdd30e1117f6322c3ee4d78e31a47969112413c",
+      "message": "Update SENA rolling queue state",
+      "committedAt": "2026-10-12T14:18:26Z"
+    },
+    "qcStrategy": {
+      "repository": "innovation4131210-alt/sena-auto-post",
+      "path": "strategy/mio-sena-30day-publishing-manifest-2026-09-28.json",
+      "sha": "054c88f0d83563085af38bc1e8f56807b2240fb2"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-27",
+    "manifestItems": 30,
+    "externalIdsPresent": 30,
+    "publishedCount": 21,
+    "scheduledCount": 9,
+    "phase": "live_day_22",
+    "publishingPolicy": {
+      "mode": "three_posts_daily",
+      "batchSize": 3,
+      "intervalMinutes": 1,
+      "timesJst": [
+        "20:30",
+        "20:31",
+        "20:32"
+      ]
+    },
+    "manifestChanged": false,
+    "publicationComplete": false
+  },
+  "runner": {
+    "status": "operational_with_partial_media_evidence",
+    "latestRunAt": "2026-10-12T14:18:25.911Z",
+    "stateDeltaCreated": [
+      {
+        "day": 28,
+        "id": "6accec2f16ed22750bc9290f",
+        "dueAt": "2026-10-15T11:30:00.000Z",
+        "verifiedAt": "2026-10-12T14:18:24.032Z"
+      },
+      {
+        "day": 29,
+        "id": "6accec3052725e494b485191",
+        "dueAt": "2026-10-15T11:31:00.000Z",
+        "verifiedAt": "2026-10-12T14:18:24.836Z"
+      },
+      {
+        "day": 30,
+        "id": "6accec3124301f62468a500c",
+        "dueAt": "2026-10-15T11:32:00.000Z",
+        "verifiedAt": "2026-10-12T14:18:25.568Z"
+      }
+    ],
+    "blocked": [],
+    "pendingCreates": [],
+    "note": "The complete Buffer snapshot contained six scheduled campaign posts D22-D27. The subsequent runner commit added D28-D30 and persisted each external ID, caption, due time and scheduled status. Media hashes were not persisted for D22-D30."
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "channelName": "sena.virtual.studio",
+    "connection": "healthy",
+    "inventoryCompleteAtSnapshot": true,
+    "connectionEvidence": {
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "scopedAuditHealthy": true,
+      "auditContinuityOk": true
+    },
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "countDerivation": {
+      "completeSnapshotBeforeNightlyRefill": 6,
+      "createdAndReadBackByRunner": 3
+    },
+    "remainingChannelCapacity": 0,
+    "scheduledPosts": [
+      {
+        "manifestId": "D22",
+        "postId": "6aca4725b07d37ac9775ad7a",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D23",
+        "postId": "6aca4726b07d37ac9775adf3",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D24",
+        "postId": "6aca4727ed92ed8fa5cf4361",
+        "tokyoDate": "2026-10-13",
+        "dueAt": "2026-10-13T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D25",
+        "postId": "6acb98cebba9419ccb3a919a",
+        "tokyoDate": "2026-10-14",
+        "dueAt": "2026-10-14T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D26",
+        "postId": "6acb98cfed92ed8fa505d39e",
+        "tokyoDate": "2026-10-14",
+        "dueAt": "2026-10-14T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D27",
+        "postId": "6acb98d0ed92ed8fa505d3d6",
+        "tokyoDate": "2026-10-14",
+        "dueAt": "2026-10-14T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D28",
+        "postId": "6accec2f16ed22750bc9290f",
+        "tokyoDate": "2026-10-15",
+        "dueAt": "2026-10-15T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D29",
+        "postId": "6accec3052725e494b485191",
+        "tokyoDate": "2026-10-15",
+        "dueAt": "2026-10-15T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      },
+      {
+        "manifestId": "D30",
+        "postId": "6accec3124301f62468a500c",
+        "tokyoDate": "2026-10-15",
+        "dueAt": "2026-10-15T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null,
+        "verificationEvidence": "runner_state_readback_without_media_hash"
+      }
+    ],
+    "evidenceLimitations": [
+      {
+        "manifestIds": [
+          "D22",
+          "D23",
+          "D24",
+          "D25",
+          "D26",
+          "D27",
+          "D28",
+          "D29",
+          "D30"
+        ],
+        "issue": "External IDs, captions, dates, due times and scheduled status were read back, but media hashes are absent from state.",
+        "action": "Reservations preserved; media-hash equality is not asserted."
+      }
+    ],
+    "validation": {
+      "allDatesMatchManifest": true,
+      "allDueTimesMatchManifest": true,
+      "allExternalIdsPresent": true,
+      "allCurrentPostsReadBackAsScheduled": true,
+      "allCaptionsMatchManifest": true,
+      "allMediaHashesMatchManifest": false,
+      "captionAndTimeMatchesWithoutMediaHash": [
+        "D22",
+        "D23",
+        "D24",
+        "D25",
+        "D26",
+        "D27",
+        "D28",
+        "D29",
+        "D30"
+      ]
+    },
+    "duplicateDetected": false,
+    "failedPostDetected": false,
+    "action": "No mutation was made during this review. The channel is at its nine-post safety limit."
+  },
+  "publishing": {
+    "thirtyDayPostsPublished": 21,
+    "latestCampaignPublications": [
+      {
+        "manifestId": "D19",
+        "postId": "6ac653370f4d385dd633f433",
+        "sentAt": "2026-10-12T11:30:00.000Z",
+        "publicUrl": "https://www.instagram.com/p/DeZIYTQFBTo/",
+        "status": "sent",
+        "exactManifestContent": true
+      },
+      {
+        "manifestId": "D20",
+        "postId": "6ac7a523444a36d3be24ff5e",
+        "sentAt": "2026-10-12T11:31:00.000Z",
+        "publicUrl": "https://www.instagram.com/p/DeZIcrhIMWj/",
+        "status": "sent",
+        "exactManifestContent": true
+      },
+      {
+        "manifestId": "D21",
+        "postId": "6ac8f688443de896597f2ddf",
+        "sentAt": "2026-10-12T11:32:00.000Z",
+        "publicUrl": "https://www.instagram.com/p/DeZIhkrljBf/",
+        "status": "sent",
+        "exactManifestContent": true
+      }
+    ],
+    "campaignPostsDueToday": [
+      {
+        "manifestId": "D22",
+        "postId": "6aca4725b07d37ac9775ad7a",
+        "dueAt": "2026-10-13T11:30:00.000Z",
+        "tokyoTime": "2026-10-13T20:30:00+09:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D23",
+        "postId": "6aca4726b07d37ac9775adf3",
+        "dueAt": "2026-10-13T11:31:00.000Z",
+        "tokyoTime": "2026-10-13T20:31:00+09:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D24",
+        "postId": "6aca4727ed92ed8fa5cf4361",
+        "dueAt": "2026-10-13T11:32:00.000Z",
+        "tokyoTime": "2026-10-13T20:32:00+09:00",
+        "status": "scheduled"
+      }
+    ],
+    "historicalNonExactPublication": {
+      "manifestId": "D18",
+      "postId": "6ac490df918cd0aeeae3c1b7",
+      "publicUrl": "https://www.instagram.com/p/DeWjvuvkZ6y/",
+      "issue": "Published slot used the preserved existing reservation; its caption differs from the D18 manifest and its media hash is unavailable."
+    }
+  },
+  "performance": {
+    "metricsSourceCapturedAt": "2026-10-12T14:00:17.155Z",
+    "notableValidObservations": [
+      {
+        "manifestId": "D09",
+        "views": 32,
+        "reach": 10,
+        "reactions": 2,
+        "saves": 0
+      },
+      {
+        "manifestId": "D10",
+        "views": 19,
+        "reach": 10,
+        "reactions": 2,
+        "saves": 1
+      },
+      {
+        "manifestId": "D11",
+        "views": 22,
+        "reach": 10,
+        "reactions": 3,
+        "saves": 1
+      },
+      {
+        "manifestId": "D12",
+        "views": 13,
+        "reach": 8,
+        "reactions": 3,
+        "saves": 1
+      },
+      {
+        "manifestId": "D13",
+        "views": 10,
+        "reach": 4,
+        "reactions": 3,
+        "saves": 0
+      },
+      {
+        "manifestId": "D14",
+        "views": 4,
+        "reach": 4,
+        "reactions": 1,
+        "saves": 1
+      },
+      {
+        "manifestId": "D15",
+        "views": 11,
+        "reach": 5,
+        "reactions": 3,
+        "saves": 0
+      },
+      {
+        "manifestId": "D16",
+        "views": 3,
+        "reach": 2,
+        "reactions": 1,
+        "saves": 1,
+        "maturity": "under_24h"
+      },
+      {
+        "manifestId": "D17",
+        "views": 4,
+        "reach": 3,
+        "reactions": 2,
+        "saves": 0,
+        "maturity": "under_24h"
+      },
+      {
+        "manifestId": "D18",
+        "views": 2,
+        "reach": 2,
+        "reactions": 1,
+        "saves": 0,
+        "maturity": "under_24h",
+        "contentComparability": "nonexact_legacy_slot"
+      }
+    ],
+    "unavailable": [
+      {
+        "manifestId": "D19",
+        "reason": "metrics timestamp predates publication",
+        "views": null,
+        "reach": null,
+        "comments": null,
+        "shares": null,
+        "saves": null,
+        "follows": null,
+        "profileVisits": null
+      },
+      {
+        "manifestId": "D20",
+        "reason": "metrics timestamp predates publication",
+        "views": null,
+        "reach": null,
+        "comments": null,
+        "shares": null,
+        "saves": null,
+        "follows": null,
+        "profileVisits": null
+      },
+      {
+        "manifestId": "D21",
+        "reason": "metrics timestamp predates publication",
+        "views": null,
+        "reach": null,
+        "comments": null,
+        "shares": null,
+        "saves": null,
+        "follows": null,
+        "profileVisits": null
+      }
+    ],
+    "profileVisitsAvailability": "unavailable",
+    "decision": "hold",
+    "note": "D09 is the highest valid observation at 32 views and reach 10. D10 and D11 also reached 10 accounts and each recorded one save. Counts remain very small; D16-D18 were under 24 hours old at capture, D18 is not exact-manifest content, and D19-D21 carry invalid pre-publication metric timestamps. No strategy change is made."
+  },
+  "userActionRequired": false,
+  "requiredUserAction": null,
+  "additionalCost": false
+}
