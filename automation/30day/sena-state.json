@@ -377,6 +377,72 @@
       "verificationSource": "Native Buffer queue and edit-form readback; original ID, image, time and AI flag preserved.",
       "apiCaptionVerified": false,
       "apiCaptionVerificationAt": null
+    },
+    {
+      "day": 34,
+      "date": "2026-10-17",
+      "bufferPostId": "6aca2db14644e267f86eff36",
+      "dueAt": "2026-10-17T11:30:00.000Z",
+      "caption": "灯りがともる頃。\n淡い花柄がやわらかく見える。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-10-14T13:46:50.000Z",
+      "batchId": "SENA-IG-2026-10-17",
+      "existingOnly": true,
+      "sourceBufferAssetId": "6aca2d80225131f39aaea237",
+      "nativeAiGenerated": true,
+      "publishingMethod": "automatic",
+      "verificationSource": "Native Buffer draft and scheduled card readback by existing post ID; same image asset, scheduled time, and AI-generated setting verified. Draft text matched saved audit hash before scheduling.",
+      "apiCaptionVerified": false,
+      "originalDraftCaption": "灯りがともる頃。\n淡い花柄がやわらかく見える。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。 ",
+      "captionNormalization": {
+        "observedDifference": "Scheduled native card omits exactly one trailing ASCII space present in the original draft. No manual text edit; all other characters match.",
+        "verificationScope": "native_ui_readback",
+        "apiReadbackPending": true
+      }
+    },
+    {
+      "day": 35,
+      "date": "2026-10-17",
+      "bufferPostId": "6aca2de6e60d470a008b278e",
+      "dueAt": "2026-10-17T11:31:00.000Z",
+      "caption": "海の青に、細いボーダー。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-10-14T13:46:50.000Z",
+      "batchId": "SENA-IG-2026-10-17",
+      "existingOnly": true,
+      "sourceBufferAssetId": "6aca2dc38d24318a42c161ca",
+      "nativeAiGenerated": true,
+      "publishingMethod": "automatic",
+      "verificationSource": "Native Buffer draft and scheduled card readback by existing post ID; same image asset, scheduled time, and AI-generated setting verified. Draft text matched saved audit hash before scheduling.",
+      "apiCaptionVerified": false,
+      "originalDraftCaption": "海の青に、細いボーダー。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。 ",
+      "captionNormalization": {
+        "observedDifference": "Scheduled native card omits exactly one trailing ASCII space present in the original draft. No manual text edit; all other characters match.",
+        "verificationScope": "native_ui_readback",
+        "apiReadbackPending": true
+      }
+    },
+    {
+      "day": 36,
+      "date": "2026-10-17",
+      "bufferPostId": "6aca2e24431429fbffe598ef",
+      "dueAt": "2026-10-17T11:32:00.000Z",
+      "caption": "窓の向こうまで、青。\nこんな席では、少しゆっくり。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "lastObservedStatus": "scheduled",
+      "verifiedAt": "2026-10-14T13:46:50.000Z",
+      "batchId": "SENA-IG-2026-10-17",
+      "existingOnly": true,
+      "sourceBufferAssetId": "6aca2dfa76628b9f708f4f59",
+      "nativeAiGenerated": true,
+      "publishingMethod": "automatic",
+      "verificationSource": "Native Buffer draft and scheduled card readback by existing post ID; same image asset, scheduled time, and AI-generated setting verified. Draft text matched saved audit hash before scheduling.",
+      "apiCaptionVerified": false,
+      "originalDraftCaption": "窓の向こうまで、青。\nこんな席では、少しゆっくり。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。 ",
+      "captionNormalization": {
+        "observedDifference": "Scheduled native card omits exactly one trailing ASCII space present in the original draft. No manual text edit; all other characters match.",
+        "verificationScope": "native_ui_readback",
+        "apiReadbackPending": true
+      }
     }
   ],
   "lastRunAt": "2026-10-13T23:33:02.316Z",
@@ -588,5 +654,23 @@
       "continuation": "Hold remaining two promotions until stored API caption is verified. Do not recreate any target or duplicate reservations. Active manifest is unchanged; existing runner may stop safely on the unmanaged scheduled ID.",
       "noOriginalImageUpload": true
     }
-  ]
+  ],
+  "nativeDraftPromotionOct17": {
+    "batchId": "SENA-IG-2026-10-17",
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "status": "all_three_native_scheduled_existing_ids_reconciled",
+    "verifiedAt": "2026-10-14T13:46:50.000Z",
+    "scheduledIds": [
+      "6aca2db14644e267f86eff36",
+      "6aca2de6e60d470a008b278e",
+      "6aca2e24431429fbffe598ef"
+    ],
+    "remainingDrafts": [],
+    "observedChannelScheduledCount": 9,
+    "observedDraftCount": 0,
+    "observedSentCount": 52,
+    "priorSixReservationsPreserved": true,
+    "noOriginalImageUpload": true,
+    "noPostingWorkflowTriggered": true
+  }
 }
