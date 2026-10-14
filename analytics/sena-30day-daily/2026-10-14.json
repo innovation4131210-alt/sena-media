@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 2,
+  "tokyoDate": "2026-10-14",
+  "reviewedAt": "2026-10-14T00:59:55.000Z",
+  "sources": {
+    "repository": "innovation4131210-alt/sena-media",
+    "senaState": {
+      "path": "automation/30day/sena-state.json",
+      "sha": "4312a6609098614caa7f28b4673a716934026cc1",
+      "lastRunAt": "2026-10-13T23:33:02.316Z",
+      "lastVerifiedAt": "2026-10-13T23:33:02.316Z"
+    },
+    "publishingManifest": {
+      "path": "automation/30day/publishing-manifest.json",
+      "sha": "5e20ec467091b27d162765db13e8cf4d1b07a410"
+    },
+    "bufferSnapshot": {
+      "path": "analytics/sena-buffer-latest.json",
+      "sha": "3ecc5e1470a295dd5704d98f3cdf5d1f5427077f",
+      "capturedAt": "2026-10-13T13:54:09.674Z"
+    },
+    "connectionAudit": {
+      "path": "analytics/mio-sena-connection-audit.json",
+      "sha": "c31facee60a9c3f3e09bd5ddeab44dd988417bf2",
+      "checkedAt": "2026-10-13T13:54:10.826Z"
+    },
+    "runnerStateCommit": {
+      "sha": "41c8a07a6bc2f8e2e1adb1740d96f34547b70f1c",
+      "message": "Update SENA rolling queue state",
+      "committedAt": "2026-10-13T23:33:02Z"
+    },
+    "existingDraftReconciliationCode": {
+      "sha": "384cbc252353312fed436295fe68d84995978831",
+      "message": "fix: reconcile approved SENA drafts by existing ID",
+      "committedAt": "2026-10-13T23:32:35Z"
+    },
+    "qcStrategy": {
+      "repository": "innovation4131210-alt/sena-auto-post",
+      "path": "strategy/mio-sena-30day-publishing-manifest-2026-09-28.json",
+      "sha": "054c88f0d83563085af38bc1e8f56807b2240fb2"
+    }
+  },
+  "plan": {
+    "startDate": "2026-09-28",
+    "manifestItems": 30,
+    "manifestExternalIdsPresent": 30,
+    "manifestPublishedCount": 24,
+    "manifestScheduledCount": 6,
+    "phase": "live_day_25",
+    "publishingPolicy": {
+      "mode": "three_posts_daily",
+      "batchSize": 3,
+      "intervalMinutes": 1,
+      "timesJst": [
+        "20:30",
+        "20:31",
+        "20:32"
+      ]
+    },
+    "manifestChanged": false,
+    "publicationComplete": false
+  },
+  "runner": {
+    "status": "operational_with_external_existing_batch",
+    "latestRunAt": "2026-10-13T23:33:02.316Z",
+    "blocked": [],
+    "pendingCreates": [],
+    "observedChannelScheduledCount": 9,
+    "safeQueueLimit": 9,
+    "remainingChannelCapacity": 0,
+    "note": "The normal runner observed D22-D24 as sent, preserved D25-D30, and reconciled three already-approved existing Buffer drafts for 2026-10-16 by their existing IDs. It did not create replacement IDs."
+  },
+  "buffer": {
+    "channelId": "6aa72524ea19ca0bde39313c",
+    "channelName": "sena.virtual.studio",
+    "connection": "healthy",
+    "connectionEvidence": {
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false
+    },
+    "capacityScope": "channel",
+    "safeQueueLimit": 9,
+    "channelScheduledCount": 9,
+    "remainingChannelCapacity": 0,
+    "manifestScheduledPosts": [
+      {
+        "manifestId": "D25",
+        "postId": "6acb98cebba9419ccb3a919a",
+        "tokyoDate": "2026-10-14",
+        "dueAt": "2026-10-14T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null
+      },
+      {
+        "manifestId": "D26",
+        "postId": "6acb98cfed92ed8fa505d39e",
+        "tokyoDate": "2026-10-14",
+        "dueAt": "2026-10-14T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null
+      },
+      {
+        "manifestId": "D27",
+        "postId": "6acb98d0ed92ed8fa505d3d6",
+        "tokyoDate": "2026-10-14",
+        "dueAt": "2026-10-14T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null
+      },
+      {
+        "manifestId": "D28",
+        "postId": "6accec2f16ed22750bc9290f",
+        "tokyoDate": "2026-10-15",
+        "dueAt": "2026-10-15T11:30:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null
+      },
+      {
+        "manifestId": "D29",
+        "postId": "6accec3052725e494b485191",
+        "tokyoDate": "2026-10-15",
+        "dueAt": "2026-10-15T11:31:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null
+      },
+      {
+        "manifestId": "D30",
+        "postId": "6accec3124301f62468a500c",
+        "tokyoDate": "2026-10-15",
+        "dueAt": "2026-10-15T11:32:00.000Z",
+        "status": "scheduled",
+        "captionMatchesManifest": true,
+        "mediaHashMatchesManifest": null
+      }
+    ],
+    "externalExistingApprovedBatch": {
+      "includedInThirtyDayManifest": false,
+      "tokyoDate": "2026-10-16",
+      "source": "existing Buffer drafts promoted without changing IDs, images, times or AI flags",
+      "status": "scheduled_manifest_reconciliation_pending",
+      "posts": [
+        {
+          "internalDay": 31,
+          "postId": "6aca2c4d431429fbffe5140e",
+          "dueAt": "2026-10-16T11:30:00.000Z",
+          "status": "scheduled",
+          "nativeAiGenerated": true,
+          "apiCaptionReadbackVerified": true,
+          "mediaHash": null
+        },
+        {
+          "internalDay": 32,
+          "postId": "6aca2cbc5454fba9985f902b",
+          "dueAt": "2026-10-16T11:31:00.000Z",
+          "status": "scheduled",
+          "nativeAiGenerated": true,
+          "apiCaptionReadbackVerified": false,
+          "mediaHash": null
+        },
+        {
+          "internalDay": 33,
+          "postId": "6aca2d6fc3f750a538fc48c8",
+          "dueAt": "2026-10-16T11:32:00.000Z",
+          "status": "scheduled",
+          "nativeAiGenerated": true,
+          "apiCaptionReadbackVerified": false,
+          "mediaHash": null
+        }
+      ],
+      "action": "Preserved as a separate existing approved batch. It is not counted as part of the 30-day manifest, and no additional post was created."
+    },
+    "validation": {
+      "manifestDatesAndDueTimesMatch": true,
+      "manifestExternalIdsPresent": true,
+      "manifestCurrentPostsReadBackAsScheduled": true,
+      "manifestCaptionsMatch": true,
+      "manifestMediaHashesMatch": false,
+      "externalBatchApiCaptionReadbackComplete": false,
+      "duplicateDetected": false,
+      "failedPostDetected": false
+    },
+    "evidenceLimitations": [
+      {
+        "manifestIds": [
+          "D25",
+          "D26",
+          "D27",
+          "D28",
+          "D29",
+          "D30"
+        ],
+        "issue": "Media hashes are absent from state.",
+        "action": "Reservations preserved; media-hash equality is not asserted."
+      },
+      {
+        "postIds": [
+          "6aca2cbc5454fba9985f902b",
+          "6aca2d6fc3f750a538fc48c8"
+        ],
+        "issue": "Scheduled status and existing IDs were read back, but API caption verification remains false and media hashes are absent.",
+        "action": "Kept separate from the 30-day manifest and not treated as exact verified content."
+      }
+    ],
+    "action": "No Buffer mutation was made during this review. The channel is at its nine-post safety limit."
+  },
+  "publishing": {
+    "manifestPostsPublished": 24,
+    "latestCampaignPublications": [
+      {
+        "manifestId": "D22",
+        "postId": "6aca4725b07d37ac9775ad7a",
+        "sentAt": "2026-10-13T11:30:45.094Z",
+        "tokyoSentAt": "2026-10-13T20:30:45.094+09:00",
+        "publicUrl": "https://www.instagram.com/p/DebtKRcFTbJ/",
+        "status": "sent"
+      },
+      {
+        "manifestId": "D23",
+        "postId": "6aca4726b07d37ac9775adf3",
+        "sentAt": "2026-10-13T11:31:27.476Z",
+        "tokyoSentAt": "2026-10-13T20:31:27.476+09:00",
+        "publicUrl": "https://www.instagram.com/p/DebtPielcVJ/",
+        "status": "sent"
+      },
+      {
+        "manifestId": "D24",
+        "postId": "6aca4727ed92ed8fa5cf4361",
+        "sentAt": "2026-10-13T11:37:19.990Z",
+        "tokyoSentAt": "2026-10-13T20:37:19.990+09:00",
+        "publicUrl": "https://www.instagram.com/p/Debt6ToIEK0/",
+        "status": "sent"
+      }
+    ],
+    "campaignPostsDueToday": [
+      {
+        "manifestId": "D25",
+        "postId": "6acb98cebba9419ccb3a919a",
+        "tokyoTime": "2026-10-14T20:30:00+09:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D26",
+        "postId": "6acb98cfed92ed8fa505d39e",
+        "tokyoTime": "2026-10-14T20:31:00+09:00",
+        "status": "scheduled"
+      },
+      {
+        "manifestId": "D27",
+        "postId": "6acb98d0ed92ed8fa505d3d6",
+        "tokyoTime": "2026-10-14T20:32:00+09:00",
+        "status": "scheduled"
+      }
+    ],
+    "historicalNonExactPublication": {
+      "manifestId": "D18",
+      "postId": "6ac490df918cd0aeeae3c1b7",
+      "publicUrl": "https://www.instagram.com/p/DeWjvuvkZ6y/",
+      "issue": "Published slot used a preserved existing reservation; its caption differs from the D18 manifest and its media hash is unavailable."
+    }
+  },
+  "performance": {
+    "metricsSourceCapturedAt": "2026-10-13T13:54:09.674Z",
+    "comparableMatureHighlights": [
+      {
+        "manifestId": "D09",
+        "views": 32,
+        "reach": 10,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0
+      },
+      {
+        "manifestId": "D10",
+        "views": 19,
+        "reach": 11,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "follows": 0
+      },
+      {
+        "manifestId": "D11",
+        "views": 22,
+        "reach": 10,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "follows": 0
+      },
+      {
+        "manifestId": "D12",
+        "views": 13,
+        "reach": 8,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "follows": 0
+      },
+      {
+        "manifestId": "D16",
+        "views": 6,
+        "reach": 4,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "follows": 0
+      },
+      {
+        "manifestId": "D17",
+        "views": 7,
+        "reach": 5,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0
+      }
+    ],
+    "excludedFromComparison": [
+      {
+        "manifestId": "D18",
+        "reason": "published content is not an exact manifest match",
+        "views": 6,
+        "reach": 5,
+        "reactions": 3,
+        "saves": 0
+      },
+      {
+        "manifestId": "D19",
+        "reason": "metrics captured about 10.6 hours after publication",
+        "views": 11,
+        "reach": 3,
+        "reactions": 3,
+        "saves": 0
+      },
+      {
+        "manifestId": "D20",
+        "reason": "metrics captured about 10.6 hours after publication",
+        "views": 12,
+        "reach": 3,
+        "reactions": 3,
+        "saves": 0
+      },
+      {
+        "manifestId": "D21",
+        "reason": "metrics captured about 10.5 hours after publication",
+        "views": 8,
+        "reach": 3,
+        "reactions": 3,
+        "saves": 0
+      },
+      {
+        "manifestId": "D22",
+        "reason": "metrics timestamp predates publication",
+        "views": null,
+        "reach": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null,
+        "saves": null,
+        "follows": null
+      },
+      {
+        "manifestId": "D23",
+        "reason": "metrics timestamp predates publication",
+        "views": null,
+        "reach": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null,
+        "saves": null,
+        "follows": null
+      },
+      {
+        "manifestId": "D24",
+        "reason": "metrics timestamp predates publication",
+        "views": null,
+        "reach": null,
+        "reactions": null,
+        "comments": null,
+        "shares": null,
+        "saves": null,
+        "follows": null
+      }
+    ],
+    "profileVisits": null,
+    "profileVisitToFollowConversion": null,
+    "decision": "hold",
+    "note": "D09 has the highest valid view count at 32; D10 has the highest valid reach at 11. Samples remain too small for a strategy decision. No strategy change is made."
+  },
+  "userActionRequired": false,
+  "requiredUserAction": null,
+  "additionalCost": false
+}
