@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-14T18:08:12.390Z",
+  "checkedAt": "2026-10-14T23:08:42.464Z",
   "readOnly": true,
   "connections": [
     {
@@ -17,9 +17,58 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
+            "scheduled": 6,
             "sent": 20
           },
           "posts": [
+            {
+              "id": "6ad00b42d9430f324aeb4fb0",
+              "status": "scheduled",
+              "dueAt": "2026-10-20T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "bc3aa504d73e5ce0e86b4e719743ecb6e197116a6fe1da142bee9d637ad63ef4"
+            },
+            {
+              "id": "6ad00b40b4f6f7dae68d579b",
+              "status": "scheduled",
+              "dueAt": "2026-10-19T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "31dd3285d181684559b8bf7f70988e599a43f0afac500e1378e92ed3122e04dc"
+            },
+            {
+              "id": "6ad00b3e117064a577d18bf4",
+              "status": "scheduled",
+              "dueAt": "2026-10-18T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "10027ead5ec707ed9a67a2ce52ff1e008249fd6030d07eabac9235719d45a6e1"
+            },
+            {
+              "id": "6ad00b3cb4f6f7dae68d569b",
+              "status": "scheduled",
+              "dueAt": "2026-10-17T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "de30ae0b4b998a86ead34bcbad7b7a22f535d8b9f668b66450af30d4488ff263"
+            },
+            {
+              "id": "6ad00b3ad9430f324aeb4e79",
+              "status": "scheduled",
+              "dueAt": "2026-10-16T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "1fb881cfb9705e1cdccbc8c9b68e34d270c7d7eef1706f7a905372ca61591f4e"
+            },
+            {
+              "id": "6ad00b37117064a577d1893a",
+              "status": "scheduled",
+              "dueAt": "2026-10-15T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "5b4d14a40ef0349633e26c1236a08a4fccf092c2317b8e9c83bec578f041ab73"
+            },
             {
               "id": "6ace1dcbd639e1c05a1121ce",
               "status": "sent",
@@ -576,9 +625,34 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
+            "scheduled": 3,
             "sent": 84
           },
           "posts": [
+            {
+              "id": "6ad00975cf4828067a352442",
+              "status": "scheduled",
+              "dueAt": "2026-10-15T14:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "6b6be97ebda5330c520ec9fb353b6bd82b4d97fd3a7bf5f5b8ee18c793858ddd"
+            },
+            {
+              "id": "6ad00973cf4828067a351f32",
+              "status": "scheduled",
+              "dueAt": "2026-10-15T12:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "2a337751813b741eaed8c73bb799dc941f9817fe14f05c7a3742cb8c05c1d746"
+            },
+            {
+              "id": "6ad00970392879e023534003",
+              "status": "scheduled",
+              "dueAt": "2026-10-15T03:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "072ac63fca87580ab2292f314c3df93f1564af4cba4b131ee99918ddc8a6c7eb"
+            },
             {
               "id": "6acebee633507eb5b0e37432",
               "status": "sent",
@@ -2174,7 +2248,7 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-14T18:08:12.390Z",
+      "evaluatedAt": "2026-10-14T23:08:42.464Z",
       "mutationAllowed": false,
       "status": "observed_batch_coverage",
       "ok": true,
@@ -2197,7 +2271,7 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-14T18:08:12.390Z",
+      "evaluatedAt": "2026-10-14T23:08:42.464Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
@@ -2222,7 +2296,7 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-14T18:08:12.390Z",
+      "evaluatedAt": "2026-10-14T23:08:42.464Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
