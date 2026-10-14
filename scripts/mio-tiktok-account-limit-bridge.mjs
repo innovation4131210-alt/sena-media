@@ -52,7 +52,7 @@ async function inventory(){
  return d.posts.edges.map(e=>e.node);
 }
 async function createPost(p){
- const d=await gql("mutation($input: CreatePostInput!){ createPost(input:$input){ __typename ... on PostActionSuccess{post{id text status dueAt channelId}} ... on MutationError{message} } }",{input:{text:p.text,channelId:channel.id,schedulingType:"automatic",mode:"customScheduled",dueAt:p.dueAt,aiAssisted:true,assets:[{image:{url:p.mediaUrl,metadata:{altText:"MIO AI-generated lifestyle image"}}}],metadata:{tiktok:{isAiGenerated:true}},needsApproval:false,saveToDraft:false}});
+ const d=await gql("mutation($input: CreatePostInput!){ createPost(input:$input){ __typename ... on PostActionSuccess{post{id text status dueAt channelId}} ... on MutationError{message} } }",{input:{text:p.text,channelId:channel.id,schedulingType:"automatic",mode:"customScheduled",dueAt:p.dueAt,aiAssisted:true,assets:[{image:{url:p.mediaUrl,metadata:{altText:"MIO AI-generated lifestyle image"}}}],needsApproval:false,saveToDraft:false}});
  if(!d.createPost?.post?.id) throw Error(d.createPost?.message??"Buffer create returned no post ID");
  return d.createPost.post;
 }
