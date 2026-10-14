@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "id": "mio-tiktok-metricool-limit-bridge-2026-10-15",
+  "createdAt": "2026-10-14T23:06:00Z",
+  "expiresAfter": "2026-10-20T12:00:00Z",
+  "account": "mio.ai_life",
+  "destination": {
+    "provider": "buffer",
+    "channelId": "6aa6312aea19ca0bde329a87",
+    "service": "tiktok"
+  },
+  "reason": "Metricool returned 'You have reached your Metricool account limit.' for the 2026-10-14 MIO TikTok post. The six future TikTok reservations were moved to Metricool drafts before this bridge, and the current Buffer audit shows the exact MIO TikTok channel healthy with zero scheduled posts.",
+  "policy": {
+    "freeOnly": true,
+    "exactTextMediaAndDueAt": true,
+    "dedupeByTextAndDueAt": true,
+    "completeInventoryRequired": true,
+    "aiDisclosureRequired": true,
+    "noCatchup": true,
+    "noNewScheduleTrigger": true,
+    "noAutomatedEngagement": true
+  },
+  "source": {
+    "metricoolBrandId": "6940494",
+    "liveFailure": {
+      "postId": 392162812,
+      "date": "2026-10-14",
+      "status": "ERROR",
+      "detail": "You have reached your Metricool account limit."
+    },
+    "bufferAudit": {
+      "repository": "innovation4131210-alt/sena-media",
+      "path": "analytics/mio-sena-connection-audit.json",
+      "checkedAt": "2026-10-14T18:08:12.390Z",
+      "scheduledCount": 0
+    }
+  },
+  "posts": [
+    {
+      "date": "2026-10-15",
+      "dueAt": "2026-10-15T11:30:00.000Z",
+      "text": "ホーム合ってるか3回確認した。たぶん今日は大丈夫。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "mediaUrl": "https://static.metricool.com/common/202610/6940494-mtr_8294464770060249383.jpg",
+      "metricool": {
+        "oldId": 392163317,
+        "draftId": 396351722,
+        "uuid": "-8127705399809323463",
+        "draft": true
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "dueAt": "2026-10-16T11:30:00.000Z",
+      "text": "コートを着る途中で鏡を見て、また服を変えたくなる。出発できない。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "mediaUrl": "https://static.metricool.com/common/202610/6940494-mtr_4672690208250402989.jpg",
+      "metricool": {
+        "oldId": 392163388,
+        "draftId": 396351774,
+        "uuid": "-6308366785054290359",
+        "draft": true
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "dueAt": "2026-10-17T11:30:00.000Z",
+      "text": "リップ直してるところ見つかった。こういう瞬間ってちょっと恥ずかしい。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "mediaUrl": "https://static.metricool.com/common/202610/6940494-mtr_13264610057112732549.jpg",
+      "metricool": {
+        "oldId": 392163535,
+        "draftId": 396351789,
+        "uuid": "2169947673162633064",
+        "draft": true
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "dueAt": "2026-10-18T11:30:00.000Z",
+      "text": "片方の靴下、またいない。洗濯機って絶対どこかに隠してると思う。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "mediaUrl": "https://static.metricool.com/common/202610/6940494-mtr_12000345113371496853.jpg",
+      "metricool": {
+        "oldId": 392163591,
+        "draftId": 396351804,
+        "uuid": "-2165437474049341165",
+        "draft": true
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "dueAt": "2026-10-19T11:30:00.000Z",
+      "text": "風が強すぎて髪は諦めた。でも夕方の空はきれいだった。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "mediaUrl": "https://static.metricool.com/common/202610/6940494-mtr_724191122469603952.jpg",
+      "metricool": {
+        "oldId": 392163641,
+        "draftId": 396351841,
+        "uuid": "3593577108791642473",
+        "draft": true
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "dueAt": "2026-10-20T11:30:00.000Z",
+      "text": "朝のコーヒーだけは丁寧に。服はまだ決まってないけど。\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "mediaUrl": "https://static.metricool.com/common/202610/6940494-mtr_2040732073615467736.jpg",
+      "metricool": {
+        "oldId": 392163705,
+        "draftId": 396351830,
+        "uuid": "-849906991314812624",
+        "draft": true
+      }
+    }
+  ]
+}
