@@ -19,6 +19,7 @@ jobs:
       - name: Verify restoration guards before external actions
         run: |
           node --check scripts/mio-instagram-overflow.mjs
+          node --check scripts/mio-tiktok-account-limit-bridge.mjs
           node --check scripts/mio-instagram-transfer-guard.mjs
           node scripts/test-mio-instagram-transfer-guard.mjs
       - name: Restore exact six authorized Buffer-only dates and read back
@@ -26,3 +27,8 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
         run: node scripts/mio-instagram-overflow.mjs
+      - name: Bridge exact MIO TikTok dates after Metricool account-limit hold
+        env:
+          BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/mio-tiktok-account-limit-bridge.mjs
