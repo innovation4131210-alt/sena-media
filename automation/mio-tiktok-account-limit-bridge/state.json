@@ -4,14 +4,17 @@
   "posts": [
     {
       "date": "2026-10-15",
-      "status": "not_created_past_or_imminent",
+      "status": "sent",
       "bufferPostId": "6ad00b37117064a577d1893a",
       "dueAt": "2026-10-15T11:30:00.000Z",
       "metricoolDraftId": 396351722,
       "metricoolUuid": "-8127705399809323463",
-      "action": "created",
-      "verifiedAt": "2026-10-14T23:07:36.234Z",
-      "checkedAt": "2026-10-15T23:48:34.454Z"
+      "action": "recovered_existing",
+      "verifiedAt": "2026-10-15T23:52:19.975Z",
+      "checkedAt": "2026-10-15T23:48:34.454Z",
+      "providerStatus": "sent",
+      "sentAt": "2026-10-15T11:32:00.100Z",
+      "externalLink": "https://tiktok.com/@mio.ai_life/video/7696855474192370965"
     },
     {
       "date": "2026-10-16",
@@ -64,5 +67,5 @@
       "verifiedAt": "2026-10-15T23:48:45.738Z"
     }
   ],
-  "updatedAt": "2026-10-15T23:48:45.905Z"
+  "updatedAt": "2026-10-15T23:52:20.181Z"
 }
