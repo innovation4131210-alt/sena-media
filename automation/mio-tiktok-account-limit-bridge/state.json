@@ -32,12 +32,15 @@
     {
       "date": "2026-10-17",
       "status": "scheduled",
-      "bufferPostId": "6ad16657fb64fffcf1a67371",
+      "bufferPostId": "6ad00b3cb4f6f7dae68d569b",
       "dueAt": "2026-10-17T11:30:00.000Z",
       "metricoolDraftId": 396351789,
       "metricoolUuid": "2169947673162633064",
-      "action": "created",
-      "verifiedAt": "2026-10-15T23:48:39.528Z"
+      "action": "recovered_existing",
+      "verifiedAt": "2026-10-15T23:52:23.067Z",
+      "providerStatus": "draft",
+      "sentAt": null,
+      "externalLink": null
     },
     {
       "date": "2026-10-18",
@@ -70,5 +73,5 @@
       "verifiedAt": "2026-10-15T23:48:45.738Z"
     }
   ],
-  "updatedAt": "2026-10-15T23:52:21.773Z"
+  "updatedAt": "2026-10-15T23:52:23.275Z"
 }
