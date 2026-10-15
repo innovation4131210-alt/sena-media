@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "id": "mio-tiktok-duplicate-cleanup-2026-10-16",
+  "authorizedAt": "2026-10-15T23:51:00.000Z",
+  "authorizedBy": "all-business-daily-audit",
+  "reason": "A maintenance rerun misclassified the proven original Buffer TikTok posts with status draft as absent and created five later duplicate IDs. Preserve the original cohort because its Oct 15 member already auto-published successfully; remove only the five later IDs before their due times.",
+  "account": "mio.ai_life",
+  "channelId": "6aa6312aea19ca0bde329a87",
+  "service": "tiktok",
+  "pairs": [
+    {
+      "date": "2026-10-16",
+      "dueAt": "2026-10-16T11:30:00.000Z",
+      "preserveId": "6ad00b3ad9430f324aeb4e79",
+      "removeId": "6ad166554ed7d375a437d16f"
+    },
+    {
+      "date": "2026-10-17",
+      "dueAt": "2026-10-17T11:30:00.000Z",
+      "preserveId": "6ad00b3cb4f6f7dae68d569b",
+      "removeId": "6ad16657fb64fffcf1a67371"
+    },
+    {
+      "date": "2026-10-18",
+      "dueAt": "2026-10-18T11:30:00.000Z",
+      "preserveId": "6ad00b3e117064a577d18bf4",
+      "removeId": "6ad166594ed7d375a437d1d8"
+    },
+    {
+      "date": "2026-10-19",
+      "dueAt": "2026-10-19T11:30:00.000Z",
+      "preserveId": "6ad00b40b4f6f7dae68d579b",
+      "removeId": "6ad1665be991a49db3bbd633"
+    },
+    {
+      "date": "2026-10-20",
+      "dueAt": "2026-10-20T11:30:00.000Z",
+      "preserveId": "6ad00b42d9430f324aeb4fb0",
+      "removeId": "6ad1665da82f34dbe1390141"
+    }
+  ]
+}
