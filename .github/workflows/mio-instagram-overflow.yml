@@ -20,6 +20,7 @@ jobs:
         run: |
           node --check scripts/mio-instagram-overflow.mjs
           node --check scripts/mio-tiktok-account-limit-bridge.mjs
+          node --check scripts/mio-tiktok-duplicate-cleanup.mjs
           node --check scripts/mio-instagram-account-limit-bridge.mjs
           node --check scripts/mio-instagram-transfer-guard.mjs
           node scripts/test-mio-instagram-transfer-guard.mjs
@@ -33,10 +34,15 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
         run: node scripts/mio-instagram-account-limit-bridge.mjs
+      - name: Remove exact later MIO TikTok duplicate IDs and preserve proven originals
+        env:
+          BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/mio-tiktok-duplicate-cleanup.mjs
       - name: Bridge exact MIO TikTok dates after Metricool account-limit hold
         env:
           BUFFER_API_KEY: ${{ secrets.MIO_BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
         run: node scripts/mio-tiktok-account-limit-bridge.mjs
 
-# one-time MIO Instagram Oct 19 bridge after live capacity readback 2026-10-16
+# one-time TikTok duplicate cleanup and draft-status reconciliation 2026-10-16
