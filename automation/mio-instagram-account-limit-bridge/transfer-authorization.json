@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "mio-instagram-metricool-limit-bridge-2026-10-19",
+  "authorizedAt": "2026-10-15T23:47:00.000Z",
+  "authorizedBy": "all-business-daily-audit",
+  "reason": "Metricool public publish is blocked by the confirmed account limit; the 2026-10-15 Buffer post was externally read back as sent, leaving one free MIO Instagram queue slot. Transfer only the nearest affected date after preserving the Metricool UUID as a draft and verifying no live Buffer duplicate.",
+  "account": "mio.ai_life",
+  "source": {
+    "provider": "metricool",
+    "brandId": "6940494",
+    "failure": "You have reached your Metricool account limit."
+  },
+  "destination": {
+    "provider": "buffer",
+    "service": "instagram",
+    "channelId": "6aa630b7ea19ca0bde329146",
+    "maxScheduled": 10
+  },
+  "posts": [
+    {
+      "date": "2026-10-19",
+      "dueAt": "2026-10-19T09:30:00.000Z",
+      "text": "片方の靴下、またいない。洗濯機って絶対どこかに隠してると思う。",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/mio-30day-2026-09-28/MIO_2026-10-19_D22.jpeg",
+      "mediaSha256": "54c0dcd4b73291f0384de51bf41f11718bb068b1a5d0846cf3be9390b9632b48",
+      "altText": "MIOのAI生成画像。洗濯物の中から片方の靴下を探す。",
+      "aiDisclosure": true,
+      "qcStatus": "accepted",
+      "metricool": {
+        "draft": true,
+        "draftId": 397299586,
+        "previousScheduledId": 380555044,
+        "uuid": "1783177037967412459"
+      }
+    }
+  ]
+}
