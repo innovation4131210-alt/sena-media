@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T05:02:32.926Z",
+  "updatedAt": "2026-10-15T04:50:56.288Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -351,7 +351,11 @@
       "dueAt": "2026-10-25T04:05:00Z",
       "text": "ヒールのストラップを留めたら、出かける準備はおしまい。\n窓の向こうの夜景に、少しだけ目移り。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-25_D28.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-15T04:50:54.980Z",
+      "bufferPostId": "6ad05bafc183410f7421af29",
+      "bufferDueAt": "2026-10-25T04:05:00.000Z",
+      "processedAt": "2026-10-15T04:50:56.105Z"
     },
     {
       "key": "sena-d29",
@@ -397,6 +401,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-14T05:02:32.926Z"
+    "verifiedAt": "2026-10-15T04:50:56.288Z"
   }
 }
