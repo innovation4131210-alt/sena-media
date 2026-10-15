@@ -4,13 +4,14 @@
   "posts": [
     {
       "date": "2026-10-15",
-      "status": "scheduled",
+      "status": "not_created_past_or_imminent",
       "bufferPostId": "6ad00b37117064a577d1893a",
       "dueAt": "2026-10-15T11:30:00.000Z",
       "metricoolDraftId": 396351722,
       "metricoolUuid": "-8127705399809323463",
       "action": "created",
-      "verifiedAt": "2026-10-14T23:07:36.234Z"
+      "verifiedAt": "2026-10-14T23:07:36.234Z",
+      "checkedAt": "2026-10-15T23:48:34.454Z"
     },
     {
       "date": "2026-10-16",
@@ -63,5 +64,5 @@
       "verifiedAt": "2026-10-14T23:07:46.491Z"
     }
   ],
-  "updatedAt": "2026-10-14T23:07:46.638Z"
+  "updatedAt": "2026-10-15T23:48:34.946Z"
 }
