@@ -59,16 +59,17 @@ async function createPost(p){
 
 let current=await inventory();
 for(const p of auth.posts){
- if(Date.parse(p.dueAt)<=Date.now()+10*60*1000){
-  await persist({date:p.date,status:"not_created_past_or_imminent",dueAt:p.dueAt,checkedAt:new Date().toISOString()});
-  continue;
- }
- const exact=current.filter(x=>x.text===p.text&&new Date(x.dueAt).getTime()===Date.parse(p.dueAt)&&["scheduled","sent"].includes(x.status));
+ const allowedStatuses=["draft","scheduled","sent"];
+ const exact=current.filter(x=>x.text===p.text&&new Date(x.dueAt).getTime()===Date.parse(p.dueAt)&&allowedStatuses.includes(x.status));
  if(exact.length>1) throw Error("Duplicate exact MIO TikTok posts on "+p.date);
- const slot=current.filter(x=>new Date(x.dueAt).getTime()===Date.parse(p.dueAt)&&["scheduled","sent"].includes(x.status));
+ const slot=current.filter(x=>new Date(x.dueAt).getTime()===Date.parse(p.dueAt)&&allowedStatuses.includes(x.status));
  if(slot.length>1||(slot.length===1&&exact.length===0)) throw Error("Occupied TikTok slot on "+p.date);
  let target=exact[0], action="recovered_existing";
  if(!target){
+  if(Date.parse(p.dueAt)<=Date.now()+10*60*1000){
+   await persist({date:p.date,status:"not_created_past_or_imminent",dueAt:p.dueAt,checkedAt:new Date().toISOString()});
+   continue;
+  }
   const media=await fetch(p.mediaUrl,{method:"HEAD",signal:AbortSignal.timeout(30000)});
   if(!media.ok||!String(media.headers.get("content-type")||"").startsWith("image/")) throw Error("Authorized media unavailable for "+p.date);
   target=await createPost(p);
@@ -76,7 +77,7 @@ for(const p of auth.posts){
  }
  current=await inventory();
  const verified=current.find(x=>x.id===target.id);
- if(!verified||verified.channelId!==channel.id||verified.text!==p.text||new Date(verified.dueAt).getTime()!==Date.parse(p.dueAt)||verified.status!=="scheduled"||!verified.assets?.some(a=>String(a.mimeType||"").startsWith("image/"))) throw Error("Buffer readback failed for "+p.date);
- await persist({date:p.date,status:"scheduled",bufferPostId:verified.id,dueAt:verified.dueAt,metricoolDraftId:p.metricool.draftId,metricoolUuid:p.metricool.uuid,action,verifiedAt:new Date().toISOString()});
+ if(!verified||verified.channelId!==channel.id||verified.text!==p.text||new Date(verified.dueAt).getTime()!==Date.parse(p.dueAt)||!allowedStatuses.includes(verified.status)||!verified.assets?.some(a=>String(a.mimeType||"").startsWith("image/"))) throw Error("Buffer readback failed for "+p.date);
+ await persist({date:p.date,status:verified.status==="sent"?"sent":"scheduled",bufferPostId:verified.id,dueAt:verified.dueAt,metricoolDraftId:p.metricool.draftId,metricoolUuid:p.metricool.uuid,action,providerStatus:verified.status,sentAt:verified.sentAt??null,externalLink:verified.externalLink??null,verifiedAt:new Date().toISOString()});
  console.log(JSON.stringify({date:p.date,action,id:verified.id,dueAt:verified.dueAt,status:verified.status}));
 }
