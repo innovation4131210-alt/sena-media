@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-15T04:50:56.288Z",
+  "updatedAt": "2026-10-16T04:41:25.704Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -362,7 +362,11 @@
       "dueAt": "2026-10-26T04:05:00Z",
       "text": "白いコートで、秋の街を歩く。\n風が冷たくなったぶん、寄り道したくなる。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-26_D29.jpeg",
-      "status": "pending"
+      "status": "scheduled",
+      "attemptedAt": "2026-10-16T04:41:24.926Z",
+      "bufferPostId": "6ad1aaf5a82f34dbe14743aa",
+      "bufferDueAt": "2026-10-26T04:05:00.000Z",
+      "processedAt": "2026-10-16T04:41:25.514Z"
     },
     {
       "key": "sena-d30",
@@ -401,6 +405,6 @@
     "channelName": "sena_ai_studio",
     "scheduledCount": 10,
     "created": 1,
-    "verifiedAt": "2026-10-15T04:50:56.288Z"
+    "verifiedAt": "2026-10-16T04:41:25.704Z"
   }
 }
