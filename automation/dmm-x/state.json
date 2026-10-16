@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ad1604aa82f34dbe137cea5",
-  "last_due_at": "2026-10-16T14:30:00.000Z",
+  "last_buffer_post_id": "6ad2ada5c34368e4b099b9cd",
+  "last_due_at": "2026-10-17T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -58,9 +58,11 @@
     "adn00762",
     "sqte00655",
     "1namh00051",
-    "sqte00689"
+    "sqte00689",
+    "snos00152",
+    "sqte00577"
   ],
-  "last_content_id": "sqte00689",
+  "last_content_id": "sqte00577",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -1228,31 +1230,91 @@
       "source_position": 28,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ad2ada01c7e49ea4c2a277d",
+      "due_at": "2026-10-17T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 3
+    },
+    {
+      "buffer_post_id": "6ad2ada21694d771d50e4ab0",
+      "due_at": "2026-10-17T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "snos00152",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 350,
+      "review_average": 4.73,
+      "review_count": 51,
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "こだわりのドラマ30％OFF",
+      "campaign_end": "2026-10-19 09:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "安達夕莉",
+      "actress_popularity_score": 417.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 6,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ad2ada5c34368e4b099b9cd",
+      "due_at": "2026-10-17T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "sqte00577",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 580,
+      "review_average": 5.0,
+      "review_count": 30,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "天月あず",
+      "actress_popularity_score": 571.5,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 33,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 3,
-  "batch_date": "2026-10-16",
+  "engagement_index": 4,
+  "batch_date": "2026-10-17",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ad160464ed7d375a4369666",
-      "due_at": "2026-10-16T03:30:00.000Z"
+      "buffer_post_id": "6ad2ada01c7e49ea4c2a277d",
+      "due_at": "2026-10-17T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ad16048e991a49db3ba7ff3",
-      "due_at": "2026-10-16T12:30:00.000Z"
+      "buffer_post_id": "6ad2ada21694d771d50e4ab0",
+      "due_at": "2026-10-17T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ad1604aa82f34dbe137cea5",
-      "due_at": "2026-10-16T14:30:00.000Z"
+      "buffer_post_id": "6ad2ada5c34368e4b099b9cd",
+      "due_at": "2026-10-17T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 1,
+  "discovery_template_index": 2,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 1,
+  "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-10-15T23:22:50.251587+00:00",
-    "batch_date": "2026-10-16",
+    "at": "2026-10-16T23:05:09.226108+00:00",
+    "batch_date": "2026-10-17",
     "recovered_count": 0,
     "repaired_count": 0,
     "created_count": 3
