@@ -1,14 +1,14 @@
 {
   "latest": {
-    "checkedAt": "2026-10-15T16:47:43+00:00",
-    "slot": "2026-10-15T20:30+09:00",
+    "checkedAt": "2026-10-16T01:38:10+00:00",
+    "slot": "2026-10-16T08:10+09:00",
     "ok": true,
-    "contentId": "D16-PM",
-    "contentType": "note導線",
-    "bufferPostId": "6accfb543b24c3eb109fddc2",
+    "contentId": "D17-AM",
+    "contentType": "今日の指令",
+    "bufferPostId": "6ace4ceddca660e4919b1194",
     "bufferStatus": "sent",
-    "sentAt": "2026-10-15T11:30:38.793Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2110694837016006689",
+    "sentAt": "2026-10-15T23:10:04.255Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2110870852925276222",
     "warnings": [],
     "errors": []
   },
@@ -621,6 +621,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-10-15T11:30:38.793Z",
       "externalLink": "https://x.com/2104714619688554496/status/2110694837016006689",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-10-16T01:38:10+00:00",
+      "slot": "2026-10-16T08:10+09:00",
+      "ok": true,
+      "contentId": "D17-AM",
+      "contentType": "今日の指令",
+      "bufferPostId": "6ace4ceddca660e4919b1194",
+      "bufferStatus": "sent",
+      "sentAt": "2026-10-15T23:10:04.255Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2110870852925276222",
       "warnings": [],
       "errors": []
     }
