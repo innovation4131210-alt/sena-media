@@ -1114,7 +1114,10 @@
   },
   "automationDecision": {
     "disable": true,
-    "reason": "All 30 publication slots are sent and the final D28-D30 observations are valid at >=24 hours. The original 30-day monitor has fulfilled its conditional scope; no new approved inventory is introduced."
+    "confirmed": true,
+    "automationId": "6aa788f0d66481918b774f1f623d5c3f",
+    "confirmedAt": "2026-10-17T01:07:24.266665Z",
+    "reason": "All 30 publication slots are sent and the final D28-D30 observations are valid at >=24 hours. The original 30-day monitor fulfilled its conditional scope and was disabled; no new approved inventory was introduced."
   },
   "userActionRequired": false,
   "requiredUserAction": null,
