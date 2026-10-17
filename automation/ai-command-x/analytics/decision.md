@@ -1,7 +1,7 @@
 # AI Command X Data Decision
 
-- 取得日時: 2026-10-17T08:04:06+00:00
-- 配信記録: 55本。欠損値は0に置き換えない。
+- 取得日時: 2026-10-17T14:38:48+00:00
+- 配信記録: 57本。欠損値は0に置き換えない。
 - 購入数・売上・流入元別の購入帰属: 未取得。Xクリックとは別集計。
 - 同じ役割・同じ経過時間で最低3本を比較。現在値の合計だけで勝者を決めない。
 
@@ -12,9 +12,9 @@
 | core_product | 2 | 2 | 8 | 2 | 0 |
 | free_A | 2 | 2 | 2 | 2 | 0 |
 | free_B | 2 | 2 | 0 | 2 | 0 |
-| free_entry | 1 | 1 | 0 | 1 | 0 |
+| free_entry | 2 | 2 | 0 | 2 | 0 |
 | front_product | 3 | 3 | 8 | 3 | 0 |
-| unmapped | 1 | 1 | 2 | 1 | 0 |
+| unmapped | 2 | 2 | 2 | 2 | 0 |
 | ブランド | 2 | 2 | 1 | 2 | 0 |
 | 今日の指令 | 18 | 18 | 9 | 18 | 0 |
 | 作戦報告 | 1 | 1 | 2 | 1 | 0 |
@@ -34,7 +34,7 @@
 |---|---:|---:|---:|---:|---:|
 | 今日の指令 | 2 | 0 | 2 | 未取得 | 0 |
 - 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。
-- 取得状態: captured_delayed=2 / missed_metric_window=48 / pending=3 / provider_stale=2
+- 取得状態: captured_delayed=2 / missed_metric_window=48 / pending=4 / provider_stale=3
 
 ## 72時間後（許容窓+2時間）
 
@@ -44,7 +44,7 @@
 |---|---:|---:|---:|---:|---:|
 | 今日の指令 | 2 | 1 | 2 | 0 | 2 |
 - 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。
-- 取得状態: captured_delayed=2 / missed_metric_window=41 / pending=10 / provider_stale=2
+- 取得状態: captured_delayed=2 / missed_metric_window=41 / pending=11 / provider_stale=3
 
 ## 次の判断
 
