@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T17:53:27+00:00",
+  "checkedAt": "2026-10-18T18:13:43+00:00",
   "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -14,24 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6ad1234c02e4efb731a7ab10",
-        "contentId": "D19-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-10-18T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6ad1234cdb33291ce6e0ff28",
-        "contentId": "D19-NOON",
-        "contentType": "司令室メモ",
-        "dueAtJst": "2026-10-18T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6ad1234cb7ec3ccd5186583b",
-        "contentId": "D19-PM",
-        "contentType": "ブランド",
-        "dueAtJst": "2026-10-18T20:30+09:00"
-      },
       {
         "bufferPostId": "6ad27099d8cc58ddf168fca8",
         "contentId": "D20-AM",
@@ -67,11 +49,29 @@
         "contentId": "D21-PM",
         "contentType": "作戦報告",
         "dueAtJst": "2026-10-20T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ad50917a48c8f8371ab33b6",
+        "contentId": "D22-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-21T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ad50918938409f1d0dfa876",
+        "contentId": "D22-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-10-21T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ad509180a208cb3237716e7",
+        "contentId": "D22-PM",
+        "contentType": "作戦報告",
+        "dueAtJst": "2026-10-21T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 27,
-  "analyticsAgeMinutes": 194.7,
+  "unusedPreparedCount": 24,
+  "analyticsAgeMinutes": 188.3,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
