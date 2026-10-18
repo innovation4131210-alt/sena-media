@@ -1,14 +1,14 @@
 {
   "latest": {
-    "checkedAt": "2026-10-18T01:30:29+00:00",
-    "slot": "2026-10-18T08:10+09:00",
+    "checkedAt": "2026-10-18T08:21:13+00:00",
+    "slot": "2026-10-18T12:20+09:00",
     "ok": true,
-    "contentId": "D19-AM",
-    "contentType": "今日の指令",
-    "bufferPostId": "6ad1234c02e4efb731a7ab10",
+    "contentId": "D19-NOON",
+    "contentType": "司令室メモ",
+    "bufferPostId": "6ad1234cdb33291ce6e0ff28",
     "bufferStatus": "sent",
-    "sentAt": "2026-10-17T23:10:01.589Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2111595617579377021",
+    "sentAt": "2026-10-18T03:20:02.214Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2111658534685266144",
     "warnings": [],
     "errors": []
   },
@@ -712,6 +712,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-10-17T23:10:01.589Z",
       "externalLink": "https://x.com/2104714619688554496/status/2111595617579377021",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-10-18T08:21:13+00:00",
+      "slot": "2026-10-18T12:20+09:00",
+      "ok": true,
+      "contentId": "D19-NOON",
+      "contentType": "司令室メモ",
+      "bufferPostId": "6ad1234cdb33291ce6e0ff28",
+      "bufferStatus": "sent",
+      "sentAt": "2026-10-18T03:20:02.214Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2111658534685266144",
       "warnings": [],
       "errors": []
     }
