@@ -71,5 +71,18 @@
     "DeSndRLIMV1",
     "DeSnR2XoPoJ"
   ],
-  "note": "Three individual feed posts daily at 20:30, 20:31 and 20:32 JST. Sequential, not atomic; temporary misalignment remains possible."
+  "note": "Historical batches through 2026-10-17 retain 20:30, 20:31 and 20:32 JST. The explicitly admitted continuation uses 20:30, 20:31 and 22:45 JST, with the last slot reserved for QC-approved pajama/sleep content. Three individual feed posts are sequential, not atomic; temporary misalignment remains possible.",
+  "continuation": {
+    "afterDay": 36,
+    "startDay": 37,
+    "previousBatchLastAt": "2026-10-17T11:32:00.000Z",
+    "publishAt": "2026-10-20T11:30:00.000Z",
+    "offsetsMinutes": [
+      0,
+      1,
+      135
+    ],
+    "activationReady": true,
+    "reason": "Explicit first ready day: D37-D39 on 2026-10-20 at 20:30, 20:31 and 22:45 JST. History unchanged. Later days are not active. Live account, history, exact media and native AI checks are required before each creation."
+  }
 }

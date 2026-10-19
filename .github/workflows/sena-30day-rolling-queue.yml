@@ -12,6 +12,7 @@ on:
       - "scripts/sena-30day-rolling-queue.mjs"
       - "scripts/sena-three-post-queue.mjs"
       - "scripts/test-sena-three-post-queue.mjs"
+      - "scripts/test-sena-continuation-queue.mjs"
       - "automation/30day/sena-grid-policy.json"
       - "scripts/test-sena-30day-rolling-queue.mjs"
       - ".github/workflows/sena-30day-rolling-queue.yml"
@@ -40,6 +41,7 @@ jobs:
           node scripts/test-sena-30day-rolling-queue.mjs
           node --check scripts/sena-three-post-queue.mjs
           node scripts/test-sena-three-post-queue.mjs
+          node scripts/test-sena-continuation-queue.mjs
       - name: Fill SENA Buffer queue safely
         env:
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}

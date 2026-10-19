@@ -44,7 +44,7 @@ try {
  let saved=JSON.parse(await readFile('automation/30day/sena-state.json','utf8'));assert.equal(saved.batchMigration.edits.length,1);assert.equal(saved.batchMigration.pendingEdit.id,'existing-2');
  failAt=0;let result=await run();assert.equal(result.ok,true);assert.equal(mutations,3);assert.equal(result.scheduled.length,3);
  await run();assert.equal(mutations,3);assert.deepEqual(posts.map(x=>x.id),original.map(x=>x.id));assert.deepEqual(posts.map(x=>x.assets),original.map(x=>x.assets));
- posts.push({...original[0],id:'unmanaged'});await assert.rejects(run(),/Unmanaged/);assert.equal(mutations,3);
+ posts.push({...original[0],id:'unmanaged',text:'unmanaged-caption'});await assert.rejects(run(),/Unmanaged/);assert.equal(mutations,3);
  posts.pop();
  const drafts=items.map((x,i)=>({...original[i],id:'draft-'+i,status:'draft',dueAt:new Date(Date.parse(x.publishAt)+86400000).toISOString(),text:'draft-caption-'+i}));
  posts.push(...drafts);
