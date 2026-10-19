@@ -101,6 +101,28 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
     return rows;
   }
   let rows=await inventory();
+  if(env.SENA_HISTORY_DIAGNOSTIC==='1') {
+    const observations=[];
+    for(const old of (state.scheduled??[]).filter(x=>x.day<=policy.continuation.afterDay&&x.sourceBufferAssetId)) {
+      const matches=rows.filter(x=>x.id===old.bufferPostId), post=matches[0];
+      const entry={day:old.day,postId:old.bufferPostId,expectedAssetId:old.sourceBufferAssetId,matches:matches.length,channelMatches:post?.channelId===CHANNEL,status:post?.status,captionMatches:post?.text===old.caption,dueAtMatches:time(post?.dueAt)===time(old.dueAt),assets:[]};
+      for(const asset of post?.assets??[]) {
+        const a={id:asset.id,mimeType:asset.mimeType};
+        try {
+          const u=new URL(asset.source);
+          if(u.protocol!=='https:'||u.username||u.password) throw Error('Unsafe source');
+          a.sourceHost=u.hostname;a.sourceUrlSha256=hash(u.href);
+          const response=await transport(u.href,{signal:AbortSignal.timeout(45000),redirect:'error'});
+          a.httpStatus=response.status;
+          if(response.ok) a.sha256=hash(Buffer.from(await response.arrayBuffer()));
+        } catch(error) { a.readError=error.name; }
+        entry.assets.push(a);
+      }
+      observations.push(entry);
+    }
+    console.log(JSON.stringify({diagnostic:'historical_asset_identity',readOnly:true,scheduledCount:rows.filter(x=>x.status==='scheduled').length,observations}));
+    throw Error('Read-only history diagnostic complete; provider writes prohibited in this run');
+  }
   verifyContinuationHistory(state,rows,policy);
   const lookup=x=>{
     const id=policy.existing.find(y=>y.day===x.day)?.id||state.scheduled.find(y=>y.day===x.day)?.bufferPostId;
