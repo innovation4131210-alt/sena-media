@@ -1050,7 +1050,12 @@ def remember(state, post, *, kind, template_index, content_id=None, sort_order=N
 
 def queue_engagement(state, channel_id, due_at):
     index = int(state.get("engagement_index", 0)) % len(ENGAGEMENT_POSTS)
-    post = create_post(ENGAGEMENT_POSTS[index], channel_id, due_at=due_at)
+    due_jst = due_at.astimezone(timezone(timedelta(hours=9)))
+    dated_text = (
+        f"{ENGAGEMENT_POSTS[index]}\n\n"
+        f"今日の投票（{due_jst.month}/{due_jst.day}）"
+    )
+    post = create_post(dated_text, channel_id, due_at=due_at)
     state["engagement_index"] = index + 1
     remember(state, post, kind="engagement", template_index=index)
     return "engagement", post
