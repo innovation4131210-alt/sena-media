@@ -42,7 +42,9 @@ export function verifyContinuationHistory(state, rows, policy) {
     if(records.length!==1||!records[0].bufferPostId||!records[0].caption||!records[0].dueAt) throw Error('Incomplete historical checkpoint');
     const old=records[0], matches=rows.filter(x=>x.id===old.bufferPostId), post=matches[0];
     if(matches.length!==1||post.channelId!==CHANNEL||post.status!=='sent'||post.text!==old.caption||time(post.dueAt)!==time(old.dueAt)||!post.assets?.length) throw Error('Continuation requires every historical ID live-sent and unchanged');
-    if(old.sourceBufferAssetId&&!post.assets.some(a=>a.id===old.sourceBufferAssetId)) throw Error('Historical asset ID drift');
+    // ImageAsset.id is nullable in Buffer's public schema. Null is unavailable,
+    // never proof that the saved native asset ID is equal or has changed.
+    if(old.sourceBufferAssetId&&(post.assets.length!==1||(post.assets[0].id!==null&&post.assets[0].id!==old.sourceBufferAssetId))) throw Error('Historical asset ID drift');
   }
 }
 export async function verifyCreatedMedia(item, post, transport) {
@@ -50,7 +52,7 @@ export async function verifyCreatedMedia(item, post, transport) {
   if(post.metadata?.type!=='post'||post.metadata.shouldShareToFeed!==true||post.metadata.isAiGenerated!==true) throw Error('Native Instagram AI/feed metadata readback failed');
   const asset=post.assets[0];
   const expectedMime=item.filename?.toLowerCase().endsWith('.png')?'image/png':'image/jpeg';
-  if(!asset.id||asset.mimeType!==expectedMime||!asset.source||!asset.image||asset.image.altText!=='SENA AI-generated lifestyle image'||asset.image.userTags?.length) throw Error('Created image metadata readback failed');
+  if((asset.id!==null&&(typeof asset.id!=='string'||!asset.id))||asset.mimeType!==expectedMime||!asset.source||!asset.image||asset.image.altText!=='SENA AI-generated lifestyle image'||asset.image.userTags?.length) throw Error('Created image metadata readback failed');
   let source;try {source=new URL(asset.source);}catch {throw Error('Invalid provider image source');}
   if(source.protocol!=='https:'||source.username||source.password) throw Error('Unsafe provider image source');
   // Buffer may replace the source URL with its CDN URL. Verify returned bytes,
@@ -101,29 +103,8 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
     return rows;
   }
   let rows=await inventory();
-  if(env.SENA_HISTORY_DIAGNOSTIC==='1') {
-    const observations=[];
-    for(const old of (state.scheduled??[]).filter(x=>x.day<=policy.continuation.afterDay&&x.sourceBufferAssetId)) {
-      const matches=rows.filter(x=>x.id===old.bufferPostId), post=matches[0];
-      const entry={day:old.day,postId:old.bufferPostId,expectedAssetId:old.sourceBufferAssetId,matches:matches.length,channelMatches:post?.channelId===CHANNEL,status:post?.status,captionMatches:post?.text===old.caption,dueAtMatches:time(post?.dueAt)===time(old.dueAt),assets:[]};
-      for(const asset of post?.assets??[]) {
-        const a={id:asset.id,mimeType:asset.mimeType};
-        try {
-          const u=new URL(asset.source);
-          if(u.protocol!=='https:'||u.username||u.password) throw Error('Unsafe source');
-          a.sourceHost=u.hostname;a.sourceUrlSha256=hash(u.href);
-          const response=await transport(u.href,{signal:AbortSignal.timeout(45000),redirect:'error'});
-          a.httpStatus=response.status;
-          if(response.ok) a.sha256=hash(Buffer.from(await response.arrayBuffer()));
-        } catch(error) { a.readError=error.name; }
-        entry.assets.push(a);
-      }
-      observations.push(entry);
-    }
-    console.log(JSON.stringify({diagnostic:'historical_asset_identity',readOnly:true,scheduledCount:rows.filter(x=>x.status==='scheduled').length,observations}));
-    throw Error('Read-only history diagnostic complete; provider writes prohibited in this run');
-  }
   verifyContinuationHistory(state,rows,policy);
+  const historicalAssetsAtStart=new Map((state.scheduled??[]).filter(x=>x.day<=policy.continuation?.afterDay).map(x=>[x.bufferPostId,JSON.stringify(rows.find(p=>p.id===x.bufferPostId).assets)]));
   const lookup=x=>{
     const id=policy.existing.find(y=>y.day===x.day)?.id||state.scheduled.find(y=>y.day===x.day)?.bufferPostId;
     const captionMatches=rows.filter(y=>y.text===x.caption);
@@ -207,6 +188,8 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
   }
   if(policy.continuation) {
     verifyContinuationHistory(state,rows,policy);
+    for(const [id,assets] of historicalAssetsAtStart) if(JSON.stringify(rows.find(p=>p.id===id)?.assets)!==assets) throw Error('Historical asset data changed during run');
+    state.continuationHistoryReadback={verifiedAt:stamp(),checkpointFields:['postId','channelId','caption','dueAt','sent'],legacyOriginalByteIdentity:'Not independently proven: the legacy checkpoint did not retain original image hashes. Null API asset IDs are unavailable, not equal to saved native IDs.',nullableAssetIds:(state.scheduled??[]).filter(x=>x.day<=policy.continuation.afterDay&&x.sourceBufferAssetId&&rows.find(p=>p.id===x.bufferPostId)?.assets[0]?.id===null).map(x=>{const asset=rows.find(p=>p.id===x.bufferPostId).assets[0];let sourcePathContainsSavedAssetId=false;try{sourcePathContainsSavedAssetId=new URL(asset.source).pathname.includes(x.sourceBufferAssetId);}catch{}return {day:x.day,postId:x.bufferPostId,savedNativeAssetId:x.sourceBufferAssetId,apiAssetId:null,sourcePathContainsSavedAssetId};})};
     for(const x of items.filter(x=>x.day>=policy.continuation.startDay)) {const post=lookup(x);if(post) await verifyCreatedMedia(x,post,transport);}
   }
   Object.assign(state,{lastRunAt:stamp(),lastVerifiedAt:stamp(),channel:{id:CHANNEL,name:HANDLE},observedChannelScheduledCount:scheduled.length,capacityScope:'channel',safeQueueLimit:9,remainingChannelCapacity:9-scheduled.length,publishingPolicy:policy.cadenceDays===1?'three_posts_daily':'three_posts_every_three_days',blocked:[]});

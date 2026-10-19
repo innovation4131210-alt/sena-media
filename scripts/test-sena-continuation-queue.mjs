@@ -33,6 +33,7 @@ async function scenario(name,test) {
    if(query.includes('editPost')){ctx.edits++;throw Error('Test forbids editing historical posts');}
    assert.ok(query.includes('createPost'));ctx.creates++;const x=variables.input,day=Number(x.text.match(/new-caption-(\d+)/)?.[1]);assert.ok(day>=37);assert.equal(x.channelId,CHANNEL);assert.equal(x.metadata.instagram.isAiGenerated,true);assert.ok(x.assets[0].image.url.endsWith(`new-D${day}.png`));
    const p={id:'new-'+day,channelId:CHANNEL,text:x.text,dueAt:x.dueAt,status:'scheduled',assets:[{id:'asset-'+day,mimeType:'image/png',source:`https://cdn.buffer.test/assets/D${day}.png`,image:{altText:x.assets[0].image.metadata.altText,userTags:[]}}],metadata:{...x.metadata.instagram}};
+   if(ctx.modes.nullAssetId)p.assets[0].id=null;
    if(ctx.modes.falseAi)p.metadata.isAiGenerated=false;if(ctx.modes.falseFeed)p.metadata.shouldShareToFeed=false;if(ctx.modes.wrongMime)p.assets[0].mimeType='image/jpeg';if(ctx.modes.extraAsset)p.assets.push({...p.assets[0],id:'unexpected-second'});
    ctx.posts.push(p);if(ctx.modes.duplicateOnCreate)ctx.posts.push({...structuredClone(p),id:p.id+'-duplicate'});
    if(ctx.modes.ambiguousCreate){ctx.modes.ambiguousCreate=false;throw Error('Simulated response lost after provider accepted');}
@@ -80,6 +81,14 @@ await scenario('unresolved create without a provider post is never resent',async
 await scenario('uncertain accepted create is reconciled by caption and exact media without resend',async c=>{c.modes.ambiguousCreate=true;await assert.rejects(c.run(),/response lost/);assert.equal(c.creates,1);assert.equal((await c.saved()).batchMigration.pendingCreates.length,1);await c.run();assert.equal(c.creates,9);assert.equal(c.posts.filter(x=>x.id==='new-37').length,1);assert.equal((await c.saved()).batchMigration.pendingCreates.length,0);});
 await scenario('duplicate after uncertain create blocks retry and preserves intent',async c=>{c.modes.ambiguousCreate=true;c.modes.duplicateOnCreate=true;await assert.rejects(c.run(),/response lost/);await assert.rejects(c.run(),/Duplicate exact/);assert.equal(c.creates,1);assert.equal((await c.saved()).batchMigration.pendingCreates.length,1);});
 await scenario('duplicate caption also blocked after recorded post ID',async c=>{await c.run();const p=c.posts.find(x=>x.id==='new-37');c.posts.push({...structuredClone(p),id:'shadow-new-37'});await assert.rejects(c.run(),/Duplicate exact/);assert.equal(c.creates,9);});
+await scenario('nullable legacy and new asset IDs keep full checkpoint and exact-byte verification',async c=>{
+ c.manifest.sena=c.manifest.sena.filter(x=>x.day<40);c.modes.nullAssetId=true;for(const p of c.posts.filter(x=>Number(x.id.split('-')[1])>=31))p.assets[0].id=null;await c.save();const before=JSON.stringify(c.state.scheduled);await c.run();assert.equal(c.creates,3);let saved=await c.saved();assert.equal(JSON.stringify(saved.scheduled.filter(x=>x.day<=36)),before);assert.equal(saved.continuationHistoryReadback.nullableAssetIds.length,6);assert.ok(saved.scheduled.filter(x=>x.day>=37).every(x=>x.sourceBufferAssetId===null&&x.nativeAiGenerated===true&&x.mediaSha256));await c.run();assert.equal(c.creates,3);
+});
+for(const mode of ['caption-drift','time-drift','not-sent'])await scenario('null historical asset ID does not permit '+mode,async c=>{
+ const p=c.posts.find(x=>x.id==='history-31');p.assets[0].id=null;if(mode==='caption-drift')p.text+=' changed';if(mode==='time-drift')p.dueAt='2026-10-16T11:35:00Z';if(mode==='not-sent')p.status='draft';await assert.rejects(c.run(),/historical/);assert.equal(c.creates,0);
+});
+await scenario('null new asset ID never permits wrong provider image bytes',async c=>{c.modes.nullAssetId=true;c.modes.providerMismatch=true;await assert.rejects(c.run(),/Provider image bytes/);assert.equal(c.creates,1);assert.equal((await c.saved()).batchMigration.pendingCreates.length,1);await assert.rejects(c.run(),/Provider image bytes/);assert.equal(c.creates,1);});
+await scenario('null new asset ID never permits missing native AI label',async c=>{c.modes.nullAssetId=true;c.modes.falseAi=true;await assert.rejects(c.run(),/Native Instagram AI/);assert.equal(c.creates,1);assert.equal((await c.saved()).batchMigration.pendingCreates.length,1);});
 assert.equal(process.cwd(),ROOT);
 console.log(`PASS ${tests.length} continuation/adversarial scenarios; every transport is mocked; no live API/network calls.`);
 console.log(tests.map(x=>' - '+x).join('\n'));

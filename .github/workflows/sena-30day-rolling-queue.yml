@@ -45,7 +45,6 @@ jobs:
       - name: Fill SENA Buffer queue safely
         env:
           BUFFER_API_KEY: ${{ secrets.SENA_BUFFER_API_KEY }}
-          SENA_HISTORY_DIAGNOSTIC: "1"
         run: node scripts/sena-30day-rolling-queue.mjs
       - name: Persist rolling queue state
         if: always()
