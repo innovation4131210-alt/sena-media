@@ -204,9 +204,26 @@ async function main() {
     'query($organizationId: OrganizationId!, $channelId: ChannelId!) { posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}) { edges { node { id text status dueAt sentAt externalLink } } pageInfo { hasNextPage } } }',
     {organizationId: match.orgId, channelId: match.channel.id}
   );
-  if (inventory.posts?.pageInfo?.hasNextPage) throw new Error('DMM inventory exceeds first 100 posts; audit is incomplete');
-
+  const inventoryComplete = !inventory.posts?.pageInfo?.hasNextPage;
   const all = (inventory.posts?.edges || []).map(e => e.node);
+
+  // Once the channel exceeds Buffer's first 100 results, keep the audit
+  // conservative but still read back the exact current-batch IDs saved by
+  // the idempotent queue. This verifies external creation without pretending
+  // that the full historical inventory was enumerated.
+  if (!inventoryComplete) {
+    const currentBatchIds = Object.values(state.batch_slots || {})
+      .map(slot => slot?.buffer_post_id)
+      .filter(Boolean);
+    for (const id of currentBatchIds) {
+      if (all.some(post => post.id === id)) continue;
+      const data = await gql(
+        'query($id: PostId!) { post(input:{id:$id}) { id text status dueAt sentAt externalLink } }',
+        {id}
+      );
+      if (data.post?.id === id) all.push(data.post);
+    }
+  }
   const counts = {};
   for (const p of all) counts[p.status] = (counts[p.status] || 0) + 1;
 
@@ -324,7 +341,10 @@ async function main() {
         healthy: !match.channel.isDisconnected && !match.channel.isLocked && !match.channel.isQueuePaused,
       },
       inventory: {
-        complete: true,
+        complete: inventoryComplete,
+        coverageNote: inventoryComplete
+          ? 'Full Buffer inventory enumerated.'
+          : 'Historical inventory exceeds 100 posts; current batch IDs were read back individually.',
         counts,
         scheduledCount: scheduled.length,
         scheduled,
