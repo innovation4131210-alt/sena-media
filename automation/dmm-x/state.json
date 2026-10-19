@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ad5522aa48c8f8371b9be18",
-  "last_due_at": "2026-10-19T14:30:00.000Z",
+  "last_buffer_post_id": "6ad6a6b69d034d7aedcb0949",
+  "last_due_at": "2026-10-20T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -64,9 +64,11 @@
     "ssis00308",
     "sqte00641",
     "idbd00894",
-    "sqte00688"
+    "sqte00688",
+    "sone00269",
+    "pred00861"
   ],
-  "last_content_id": "sqte00688",
+  "last_content_id": "pred00861",
   "affiliate_template_index": 6,
   "post_history": [
     {
@@ -1414,31 +1416,91 @@
       "source_position": 34,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ad6a6b5e9c669def5ddf9db",
+      "due_at": "2026-10-20T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 6
+    },
+    {
+      "buffer_post_id": "6ad6a6b52d48e20f64bab937",
+      "due_at": "2026-10-20T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "sone00269",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 150,
+      "review_average": 4.58,
+      "review_count": 43,
+      "discount_pct": 50,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "働くお姉さん50％OFF",
+      "campaign_end": "2026-10-21 09:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "安達夕莉",
+      "actress_popularity_score": 711.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 4,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ad6a6b69d034d7aedcb0949",
+      "due_at": "2026-10-20T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "pred00861",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 2180,
+      "review_average": 5.0,
+      "review_count": 42,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "響蓮",
+      "actress_popularity_score": 0,
+      "known_actress_pool_used": false,
+      "demand_gate_passed": true,
+      "source_position": 4,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 6,
-  "batch_date": "2026-10-19",
+  "engagement_index": 7,
+  "batch_date": "2026-10-20",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ad552250b0d72757a4180c5",
-      "due_at": "2026-10-19T03:30:00.000Z"
+      "buffer_post_id": "6ad6a6b5e9c669def5ddf9db",
+      "due_at": "2026-10-20T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ad55227ae173d6e00204583",
-      "due_at": "2026-10-19T12:30:00.000Z"
+      "buffer_post_id": "6ad6a6b52d48e20f64bab937",
+      "due_at": "2026-10-20T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ad5522aa48c8f8371b9be18",
-      "due_at": "2026-10-19T14:30:00.000Z"
+      "buffer_post_id": "6ad6a6b69d034d7aedcb0949",
+      "due_at": "2026-10-20T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 1,
+  "discovery_template_index": 2,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 1,
+  "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-10-18T23:11:38.594655+00:00",
-    "batch_date": "2026-10-19",
+    "at": "2026-10-19T23:24:38.253077+00:00",
+    "batch_date": "2026-10-20",
     "recovered_count": 0,
     "repaired_count": 0,
     "created_count": 3
