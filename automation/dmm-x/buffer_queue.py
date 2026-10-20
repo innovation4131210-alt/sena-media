@@ -392,18 +392,47 @@ def build_decision_text(template_index, title, sort_order, affiliate_url, facts=
 
 
 def channel_inventory(organization_id, channel_id):
-    query = (
-        "query { posts(first: 100, input: { organizationId: "
-        + esc(organization_id)
-        + ", filter: { channelIds: ["
-        + esc(channel_id)
-        + "] } }) { edges { node { id text status dueAt sentAt externalLink } } "
-        + "pageInfo { hasNextPage } } }"
-    )
-    result = gql(query)["posts"]
-    if result["pageInfo"]["hasNextPage"]:
-        raise RuntimeError("Incomplete DMM X Buffer inventory; stop before mutation")
-    return [edge["node"] for edge in result["edges"]]
+    # Return only after every page has been validated. Never expose partial
+    # inventory to the recovery, repair, or creation paths.
+    posts = []
+    seen_ids = set()
+    seen_cursors = set()
+    after = None
+    for _ in range(100):
+        cursor_arg = '' if after is None else ', after: ' + esc(after)
+        query = (
+            'query { posts(first: 100' + cursor_arg + ', input: { organizationId: '
+            + esc(organization_id)
+            + ', filter: { channelIds: ['
+            + esc(channel_id)
+            + '] } }) { edges { node { id text status dueAt sentAt externalLink } } '
+            + 'pageInfo { hasNextPage endCursor } } }'
+        )
+        response = gql(query)
+        result = response.get('posts') if isinstance(response, dict) else None
+        if not isinstance(result, dict):
+            raise RuntimeError('Invalid DMM X Buffer inventory page; stop before mutation')
+        edges = result.get('edges')
+        page_info = result.get('pageInfo')
+        if (not isinstance(edges, list) or not isinstance(page_info, dict)
+                or type(page_info.get('hasNextPage')) is not bool):
+            raise RuntimeError('Invalid DMM X Buffer pagination metadata; stop before mutation')
+        for edge in edges:
+            node = edge.get('node') if isinstance(edge, dict) else None
+            post_id = node.get('id') if isinstance(node, dict) else None
+            if not isinstance(post_id, str) or not post_id.strip() or post_id in seen_ids:
+                raise RuntimeError('Invalid or repeated DMM X Buffer post ID; stop before mutation')
+            seen_ids.add(post_id)
+            posts.append(node)
+        if page_info['hasNextPage'] is False:
+            return posts
+        cursor = page_info.get('endCursor')
+        if (not edges or not isinstance(cursor, str) or not cursor.strip()
+                or cursor in seen_cursors):
+            raise RuntimeError('Incomplete DMM X Buffer inventory; pagination stalled; stop before mutation')
+        seen_cursors.add(cursor)
+        after = cursor
+    raise RuntimeError('Incomplete DMM X Buffer inventory; page limit reached; stop before mutation')
 
 
 def find_x_channel():
