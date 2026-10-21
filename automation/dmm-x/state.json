@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ad7f9bb5a0b7fe6fa7c2689",
-  "last_due_at": "2026-10-21T14:30:00.000Z",
+  "last_buffer_post_id": "6ad949ec7d56fe463dad169b",
+  "last_due_at": "2026-10-22T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -68,19 +68,13 @@
     "sone00269",
     "pred00861",
     "sone00425",
-    "sqte00631"
+    "sqte00631",
+    "snos00093",
+    "sqde00017"
   ],
-  "last_content_id": "sqte00631",
+  "last_content_id": "sqde00017",
   "affiliate_template_index": 6,
   "post_history": [
-    {
-      "buffer_post_id": "6aa606eff7b1958d5cdb3f93",
-      "due_at": "2026-09-13T12:30:00.000Z",
-      "kind": "affiliate",
-      "template_index": 0,
-      "content_id": "pred00899",
-      "sort": "rank"
-    },
     {
       "buffer_post_id": "6aa65ad77da3ee968d101e70",
       "due_at": "2026-09-13T14:30:00.000Z",
@@ -1538,31 +1532,91 @@
       "source_position": 14,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ad949e7b5ae3ccc5eb85b6f",
+      "due_at": "2026-10-22T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 0
+    },
+    {
+      "buffer_post_id": "6ad949ead0598dd30cfb66a5",
+      "due_at": "2026-10-22T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "snos00093",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 350,
+      "review_average": 4.17,
+      "review_count": 30,
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "こだわりのドラマ30％OFF",
+      "campaign_end": "2026-10-23 09:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "瀬戸環奈",
+      "actress_popularity_score": 1488.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 3,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ad949ec7d56fe463dad169b",
+      "due_at": "2026-10-22T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "sqde00017",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 300,
+      "review_average": 5.0,
+      "review_count": 30,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "宮城りえ",
+      "actress_popularity_score": 830.5,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 32,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 8,
-  "batch_date": "2026-10-21",
+  "engagement_index": 1,
+  "batch_date": "2026-10-22",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ad7f9ba79ac5466f5c752f1",
-      "due_at": "2026-10-21T03:30:00.000Z"
+      "buffer_post_id": "6ad949e7b5ae3ccc5eb85b6f",
+      "due_at": "2026-10-22T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ad7f9bac8c16a2bbdb5f7ed",
-      "due_at": "2026-10-21T12:30:00.000Z"
+      "buffer_post_id": "6ad949ead0598dd30cfb66a5",
+      "due_at": "2026-10-22T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ad7f9bb5a0b7fe6fa7c2689",
-      "due_at": "2026-10-21T14:30:00.000Z"
+      "buffer_post_id": "6ad949ec7d56fe463dad169b",
+      "due_at": "2026-10-22T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 3,
+  "discovery_template_index": 1,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 3,
+  "decision_template_index": 1,
   "last_run": {
     "status": "success",
-    "at": "2026-10-20T23:31:07.451139+00:00",
-    "batch_date": "2026-10-21",
+    "at": "2026-10-21T23:25:32.679874+00:00",
+    "batch_date": "2026-10-22",
     "recovered_count": 0,
     "repaired_count": 0,
     "created_count": 3
