@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6ad949ec7d56fe463dad169b",
-  "last_due_at": "2026-10-22T14:30:00.000Z",
+  "last_buffer_post_id": "6ada9fba8d2197cb2a0751cc",
+  "last_due_at": "2026-10-23T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -70,33 +70,13 @@
     "sone00425",
     "sqte00631",
     "snos00093",
-    "sqde00017"
+    "sqde00017",
+    "savr01132",
+    "sqte00635"
   ],
-  "last_content_id": "sqde00017",
+  "last_content_id": "sqte00635",
   "affiliate_template_index": 6,
   "post_history": [
-    {
-      "buffer_post_id": "6aa65ad77da3ee968d101e70",
-      "due_at": "2026-09-13T14:30:00.000Z",
-      "kind": "affiliate",
-      "template_index": 1,
-      "content_id": "mfyd00129",
-      "sort": "review"
-    },
-    {
-      "buffer_post_id": "6aa70f1ceba7bc5677a19c3f",
-      "due_at": "2026-09-14T03:30:00.000Z",
-      "kind": "engagement",
-      "template_index": 0
-    },
-    {
-      "buffer_post_id": "6aa7588bea4032c0149c7805",
-      "due_at": "2026-09-14T12:30:00.000Z",
-      "kind": "affiliate",
-      "template_index": 2,
-      "content_id": "1start00373",
-      "sort": "rank"
-    },
     {
       "buffer_post_id": "6aa7ac895a4fa0b0669a437a",
       "due_at": "2026-09-14T14:30:00.000Z",
@@ -1592,37 +1572,94 @@
       "source_position": 32,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ada9fb58d2197cb2a07514f",
+      "due_at": "2026-10-23T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 1
+    },
+    {
+      "buffer_post_id": "6ada9fb89ef33e7811aa7ccd",
+      "due_at": "2026-10-23T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "savr01132",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 698,
+      "review_average": 5.0,
+      "review_count": 4,
+      "discount_pct": 30,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "ブランドストア30％OFF",
+      "campaign_end": "2026-10-27 23:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "宍戸里帆",
+      "actress_popularity_score": 642.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 31,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6ada9fba8d2197cb2a0751cc",
+      "due_at": "2026-10-23T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 1,
+      "content_id": "sqte00635",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 580,
+      "review_average": 5.0,
+      "review_count": 31,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "宍戸里帆",
+      "actress_popularity_score": 642.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 25,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 1,
-  "batch_date": "2026-10-22",
+  "engagement_index": 2,
+  "batch_date": "2026-10-23",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6ad949e7b5ae3ccc5eb85b6f",
-      "due_at": "2026-10-22T03:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6ada9fb58d2197cb2a07514f",
+      "due_at": "2026-10-23T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6ad949ead0598dd30cfb66a5",
-      "due_at": "2026-10-22T12:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6ada9fb89ef33e7811aa7ccd",
+      "due_at": "2026-10-23T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6ad949ec7d56fe463dad169b",
-      "due_at": "2026-10-22T14:30:00.000Z",
-      "recovered_from_buffer": true
+      "buffer_post_id": "6ada9fba8d2197cb2a0751cc",
+      "due_at": "2026-10-23T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 1,
+  "discovery_template_index": 2,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 1,
+  "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-10-21T23:46:01.134429+00:00",
-    "batch_date": "2026-10-22",
-    "recovered_count": 3,
+    "at": "2026-10-22T23:43:54.717307+00:00",
+    "batch_date": "2026-10-23",
+    "recovered_count": 0,
     "repaired_count": 0,
-    "created_count": 0
+    "created_count": 3
   },
   "p0_status": {
     "url_weighted_length_fix_commit": "1131c165eef6086bb8f3ae81444d5ab79e38605e",
