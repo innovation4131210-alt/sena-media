@@ -1,14 +1,14 @@
 {
   "latest": {
-    "checkedAt": "2026-10-21T17:02:18+00:00",
-    "slot": "2026-10-21T20:30+09:00",
+    "checkedAt": "2026-10-22T01:49:21+00:00",
+    "slot": "2026-10-22T08:10+09:00",
     "ok": true,
-    "contentId": "D22-PM",
-    "contentType": "作戦報告",
-    "bufferPostId": "6ad509180a208cb3237716e7",
+    "contentId": "D23-AM",
+    "contentType": "今日の指令",
+    "bufferPostId": "6ad67e32614166e4ec33cad5",
     "bufferStatus": "sent",
-    "sentAt": "2026-10-21T11:30:26.070Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2112869110887399611",
+    "sentAt": "2026-10-21T23:10:00.956Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2113045166223142928",
     "warnings": [],
     "errors": []
   },
@@ -855,6 +855,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-10-21T11:30:26.070Z",
       "externalLink": "https://x.com/2104714619688554496/status/2112869110887399611",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-10-22T01:49:21+00:00",
+      "slot": "2026-10-22T08:10+09:00",
+      "ok": true,
+      "contentId": "D23-AM",
+      "contentType": "今日の指令",
+      "bufferPostId": "6ad67e32614166e4ec33cad5",
+      "bufferStatus": "sent",
+      "sentAt": "2026-10-21T23:10:00.956Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2113045166223142928",
       "warnings": [],
       "errors": []
     }
