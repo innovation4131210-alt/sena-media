@@ -7,7 +7,7 @@ for(const [file,handle,id,service] of lanes){
  const raw=await readFile(new URL('./'+file,import.meta.url),'utf8');
  const code=raw.replace(/^import .*;\n/gm,'').replace(/new URL\([^;]+;/,'"mock-queue";').replace(/main\(\)\.catch\([\s\S]*$/,'globalThis.run = main;');
  const target={key:'approved-1',status:'pending',dueAt:'2030-10-03T03:15:00.000Z',text:'approved original',mediaUrl:'https://mock.invalid/image.jpeg'};
- const row=(extra={})=>({id:'post-1',channelId:id,status:'scheduled',text:target.text,dueAt:target.dueAt,assets:[{mimeType:'image/jpeg'}],...extra});
+ const row=(extra={})=>({id:'post-1',channelId:id,status:'scheduled',text:target.text,dueAt:target.dueAt,assets:[{id:'asset-image-1',mimeType:'image/jpeg'}],...extra});
  async function harness(opts={}){
   let queue=structuredClone(opts.queue??{policy:{enabled:true,visualRequired:true},posts:[target]});
   let rows=structuredClone(opts.rows??[]),mutations=0,inventories=0;
@@ -23,7 +23,7 @@ for(const [file,handle,id,service] of lanes){
     mutations++;
     assert.equal(queue.posts[0].status,'creating','intent saved before any create');
     assert.equal(variables.input.channelId,id);
-    rows.push(row(opts.drift?{dueAt:'2030-10-03T04:15:00.000Z'}:{}));
+    rows.push(row({...opts.drift?{dueAt:'2030-10-03T04:15:00.000Z'}:{},...opts.assetMissingAfterCreate?{assets:[]}:{}}));
     if(opts.throwCreate)throw Error('mock lost response');
     data={createPost:{post:rows.at(-1)}};
    }else throw Error('Unexpected mock operation');
@@ -48,5 +48,11 @@ for(const [file,handle,id,service] of lanes){
  await check('uncertain create recovered from live inventory',async()=>{const r=await harness({throwCreate:true});const retry=await harness({queue:r.queue,rows:r.rows});assert.ifError(retry.error);assert.equal(retry.mutations,0);assert.equal(retry.queue.posts[0].status,'scheduled')});
  await check('readback failure retains ID and recovers later',async()=>{const r=await harness({hideReadback:true});assert.ok(r.error);assert.equal(r.queue.posts[0].status,'created_unverified');const retry=await harness({queue:r.queue,rows:r.rows});assert.ifError(retry.error);assert.equal(retry.mutations,0)});
  await check('recovery mismatched saved ID fails closed',async()=>{const r=await harness({queue:{policy:{enabled:true},posts:[{...target,status:'created_unverified',bufferPostId:'other'}]},rows:[row()]});assert.match(r.error.message,/ID mismatch/);assert.equal(r.mutations,0)});
+ if(file==='x-buffer-sena-refill.mjs'){
+  await check('existing scheduled text-only item fails closed',async()=>{const r=await harness({rows:[row({assets:[]})]});assert.match(r.error.message,/Visual-first policy violation/);assert.equal(r.mutations,0)});
+  await check('missing mediaUrl goes to visual hold without creating',async()=>{const r=await harness({queue:{policy:{enabled:true,visualRequired:true},posts:[{...target,mediaUrl:null}]}});assert.ifError(r.error);assert.equal(r.mutations,0);assert.equal(r.queue.posts[0].status,'held_visual_required')});
+  await check('new Buffer post with no media stays unresolved',async()=>{const r=await harness({assetMissingAfterCreate:true});assert.match(r.error.message,/Visual asset readback failed/);assert.equal(r.queue.posts[0].status,'created_unverified');assert.equal(r.mutations,1)});
+ }
+
 }
 console.log(`${passed} tests passed; all filesystem, network, and credentials are mocked.`);
