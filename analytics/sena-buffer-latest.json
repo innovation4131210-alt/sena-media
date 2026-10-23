@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-10-22T18:07:15.831Z",
-  "tokyoDate": "2026-10-23",
+  "capturedAt": "2026-10-23T17:56:14.788Z",
+  "tokyoDate": "2026-10-24",
   "readOnly": true,
   "inventoryComplete": true,
   "channel": {
@@ -14,14 +14,93 @@
   "channelAvailable": true,
   "sent": [
     {
+      "id": "6ad89f1bfe0d0b602283b406",
+      "text": "焼きたての香りに負けた帰り道。袋があたたかいうちに帰ろう。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-23T11:32:00.000Z",
+      "sentAt": "2026-10-23T11:32:11.733Z",
+      "externalLink": "https://www.instagram.com/p/De1dRkrETdq/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-21T11:16:43.947Z"
+    },
+    {
+      "id": "6ad89f1b3021c1ef52b1f687",
+      "text": "少し早く着いたから、木陰でひと息。秋の待ち合わせは、これくらいがいい。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-23T11:31:00.000Z",
+      "sentAt": "2026-10-23T11:31:59.827Z",
+      "externalLink": "https://www.instagram.com/p/De1dQIoEW3S/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-21T11:16:43.154Z"
+    },
+    {
+      "id": "6ad89f1a3021c1ef52b1f642",
+      "text": "一枚だけのつもりで、また棚を見てしまう。今日はジャケットの色から選んでみた。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-23T11:30:00.000Z",
+      "sentAt": "2026-10-23T11:30:41.811Z",
+      "externalLink": "https://www.instagram.com/p/De1dGbCIJ7y/",
+      "metrics": null,
+      "metricsUpdatedAt": "2026-10-21T11:16:42.413Z"
+    },
+    {
       "id": "6ad8024ac11f7f6be2737834",
       "text": "土の色と、シャツの色。今日は落ち着いた組み合わせ。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
       "status": "sent",
       "dueAt": "2026-10-22T11:32:00.000Z",
       "sentAt": "2026-10-22T11:32:13.930Z",
       "externalLink": "https://www.instagram.com/p/Dey4e9yFaTN/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-10-21T00:07:38.710Z"
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 100,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 11,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad802491dbc8c88b1f37c8e",
@@ -30,8 +109,57 @@
       "dueAt": "2026-10-22T11:31:00.000Z",
       "sentAt": "2026-10-22T11:32:06.839Z",
       "externalLink": "https://www.instagram.com/p/Dey4ePrlgDC/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-10-21T00:07:37.708Z"
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 100,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 9,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad802485af80146fcbf7df1",
@@ -40,8 +168,57 @@
       "dueAt": "2026-10-22T11:30:00.000Z",
       "sentAt": "2026-10-22T11:30:47.499Z",
       "externalLink": "https://www.instagram.com/p/Dey4UjCFUri/",
-      "metrics": null,
-      "metricsUpdatedAt": "2026-10-21T00:07:36.568Z"
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 60,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 14,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 5,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad7dbf7ac49cb934a847c27",
@@ -100,7 +277,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.550Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad7dbf5141c814ae4939eb7",
@@ -159,7 +336,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.550Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad7dbf4a52f1cb2568562c2",
@@ -218,7 +395,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.550Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad62b70e21b24048f50bb8a",
@@ -277,7 +454,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.550Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad62b70e21b24048f50bb40",
@@ -336,7 +513,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.550Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ad62b6fa9028f90356903ad",
@@ -395,7 +572,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.550Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca2e24431429fbffe598ef",
@@ -454,7 +631,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca2de6e60d470a008b278e",
@@ -513,7 +690,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca2db14644e267f86eff36",
@@ -572,7 +749,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca2d6fc3f750a538fc48c8",
@@ -631,7 +808,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca2cbc5454fba9985f902b",
@@ -690,7 +867,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca2c4d431429fbffe5140e",
@@ -749,7 +926,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6accec3124301f62468a500c",
@@ -808,7 +985,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6accec3052725e494b485191",
@@ -867,7 +1044,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6accec2f16ed22750bc9290f",
@@ -926,7 +1103,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6acb98d0ed92ed8fa505d3d6",
@@ -985,7 +1162,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6acb98cfed92ed8fa505d39e",
@@ -1044,7 +1221,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6acb98cebba9419ccb3a919a",
@@ -1103,7 +1280,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca4727ed92ed8fa5cf4361",
@@ -1162,7 +1339,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca4726b07d37ac9775adf3",
@@ -1221,7 +1398,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6aca4725b07d37ac9775ad7a",
@@ -1280,7 +1457,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ac8f688443de896597f2ddf",
@@ -1339,7 +1516,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ac7a523444a36d3be24ff5e",
@@ -1398,7 +1575,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.177Z"
     },
     {
       "id": "6ac653370f4d385dd633f433",
@@ -1457,7 +1634,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ac490df918cd0aeeae3c1b7",
@@ -1516,7 +1693,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ac3b0e1c5a0c4018753e3b4",
@@ -1575,7 +1752,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ac2a497fe1389e4133ddb51",
@@ -1634,7 +1811,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ac14964ad7fd83bc5fe59a0",
@@ -1693,7 +1870,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6abfbbd03ac90aaf27ccd2e7",
@@ -1752,7 +1929,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6abe6a8c0c33e408f7aba7b2",
@@ -1811,7 +1988,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e732433635",
@@ -1870,7 +2047,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e73243363d",
@@ -1929,7 +2106,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e732433637",
@@ -1988,7 +2165,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab655d51a51e732433645",
@@ -2047,7 +2224,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e73243362c",
@@ -2072,13 +2249,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 33.33,
+          "value": 28.57,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 10,
+          "value": 11,
           "unit": "count"
         },
         {
@@ -2102,11 +2279,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 6,
+          "value": 7,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e73243363b",
@@ -2165,7 +2342,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e732433623",
@@ -2224,7 +2401,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e73243362e",
@@ -2283,7 +2460,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6acab654d51a51e732433632",
@@ -2342,7 +2519,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6abd193cda5180c12bfebdec",
@@ -2401,7 +2578,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6abbc73b86767996fcb6ba44",
@@ -2460,7 +2637,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6aba75db3f092d970340f383",
@@ -2519,7 +2696,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab923a8612c9e6ac926f9fa",
@@ -2578,7 +2755,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab7d22bccccb9429c2f6164",
@@ -2637,7 +2814,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab681004be5473030b59a9d",
@@ -2696,7 +2873,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab52f7ef2918b28ff7437c0",
@@ -2755,7 +2932,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab52f7d3e8c1aa3fcccf9e1",
@@ -2814,7 +2991,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab52f7cd0d12c23fa5b8e7d",
@@ -2873,7 +3050,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab3ddf8c81095d33c9a1f4a",
@@ -2932,7 +3109,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab3ddf7a75742f2cd11395c",
@@ -2991,7 +3168,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.551Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab38b29c5fe69b4e884239f",
@@ -3050,7 +3227,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d9b777b65977f0a8d2",
@@ -3109,7 +3286,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d87f829c66807a5ea5",
@@ -3174,7 +3351,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d87f829c66807a5e75",
@@ -3233,7 +3410,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab5c2c57eb36f6708a279c1",
@@ -3333,7 +3510,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d778330b3657e58b39",
@@ -3392,7 +3569,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d62aa0e20bb472d3c6",
@@ -3451,7 +3628,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d67f829c66807a5e22",
@@ -3510,7 +3687,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d5b777b65977f0a865",
@@ -3569,7 +3746,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6ab357d57f829c66807a5dfb",
@@ -3628,7 +3805,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-10-22T06:42:13.552Z"
+      "metricsUpdatedAt": "2026-10-23T05:42:23.178Z"
     },
     {
       "id": "6aaff74813d908add21e414b",
@@ -4000,24 +4177,6 @@
   "failed": [],
   "scheduled": [
     {
-      "id": "6ad89f1a3021c1ef52b1f642",
-      "text": "一枚だけのつもりで、また棚を見てしまう。今日はジャケットの色から選んでみた。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "scheduled",
-      "dueAt": "2026-10-23T11:30:00.000Z"
-    },
-    {
-      "id": "6ad89f1b3021c1ef52b1f687",
-      "text": "少し早く着いたから、木陰でひと息。秋の待ち合わせは、これくらいがいい。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "scheduled",
-      "dueAt": "2026-10-23T11:31:00.000Z"
-    },
-    {
-      "id": "6ad89f1bfe0d0b602283b406",
-      "text": "焼きたての香りに負けた帰り道。袋があたたかいうちに帰ろう。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "scheduled",
-      "dueAt": "2026-10-23T11:32:00.000Z"
-    },
-    {
       "id": "6ad93be124f3eb98a4dc27c2",
       "text": "静かな展示室では、歩く速さも少しゆっくり。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
       "status": "scheduled",
@@ -4034,31 +4193,49 @@
       "text": "部屋の緑にも、秋の色を少し。今日はこのニットにした。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
       "status": "scheduled",
       "dueAt": "2026-10-24T11:32:00.000Z"
+    },
+    {
+      "id": "6ada7ea79daa164787693676",
+      "text": "新しいノートを一冊。何を描こうか、選ぶ時間も楽しい。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "scheduled",
+      "dueAt": "2026-10-25T11:30:00.000Z"
+    },
+    {
+      "id": "6ada7ea965d602339aedd0e5",
+      "text": "色づいた庭を、ゆっくりひと回り。今日は歩きやすい靴で。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "scheduled",
+      "dueAt": "2026-10-25T11:31:00.000Z"
+    },
+    {
+      "id": "6ada7eaaaa18e1c19384b482",
+      "text": "窓辺の光がやわらかくて、もう少しここにいたくなる。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "scheduled",
+      "dueAt": "2026-10-25T11:32:00.000Z"
     }
   ],
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-10-22T18:07:15.831Z",
+    "evaluatedAt": "2026-10-23T17:56:14.788Z",
     "mutationAllowed": false,
     "status": "observed_batch_coverage",
     "ok": true,
     "cadence": "three_posts_daily",
     "batchSize": 3,
-    "expectedPublicationDueAt": "2026-10-23T11:30:00.000Z",
+    "expectedPublicationDueAt": "2026-10-24T11:30:00.000Z",
     "todayPublicationStatus": "not_due_for_verification",
     "publishedIds": [],
     "publishedUrls": [],
     "futureDates": [
-      "2026-10-23",
-      "2026-10-24"
+      "2026-10-24",
+      "2026-10-25"
     ],
-    "nextBatchDate": "2026-10-23",
+    "nextBatchDate": "2026-10-24",
     "errors": [],
     "warnings": [
       "future_stock_below_three_batches"
     ],
     "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
-  "workflowRunId": "39828559287"
+  "workflowRunId": "39999144979"
 }
