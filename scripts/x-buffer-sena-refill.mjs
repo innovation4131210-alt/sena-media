@@ -66,7 +66,7 @@ async function inventory(channel) {
         filter: { channelIds: [$channelId] }
         sort: [{ field: dueAt, direction: asc }]
       }) {
-        edges { node { id text status dueAt sentAt externalLink channelId } }
+        edges { node { id text status dueAt sentAt externalLink channelId assets { id mimeType } } }
         pageInfo { hasNextPage }
       }
     }`,
@@ -81,8 +81,17 @@ async function inventory(channel) {
     throw new Error("Buffer inventory channel or shape mismatch");
   }
   if (new Set(rows.map(row => row.id)).size !== rows.length) throw new Error("Duplicate Buffer inventory IDs");
+  if (rows.some(row => !Array.isArray(row.assets))) throw new Error("Incomplete Buffer asset inventory; refusing mutation");
   return rows;
 }
+
+function hasVisualAsset(post) {
+  return Array.isArray(post?.assets) && post.assets.some(asset =>
+    typeof asset?.id === "string" && asset.id.length > 0 &&
+    /^(image|video)\//i.test(String(asset.mimeType ?? ""))
+  );
+}
+
 
 function sameTarget(post, target) {
   const when = Date.parse(post.dueAt ?? post.sentAt ?? "");
@@ -92,6 +101,7 @@ function sameTarget(post, target) {
 }
 
 async function verifyMedia(url) {
+  if (!url || !/^https:\/\//.test(url)) throw new Error("Visual post missing HTTPS approved media URL");
   const response = await fetch(url, {
     method: "GET",
     headers: { Range: "bytes=0-64" },
@@ -100,11 +110,15 @@ async function verifyMedia(url) {
   });
   if (!response.ok && response.status !== 206) throw new Error(`Media unavailable (${response.status}): ${url}`);
   const type = response.headers.get("content-type") ?? "";
-  if (!type.startsWith("image/")) throw new Error(`Media is not an image (${type}): ${url}`);
+  if (!type.startsWith("image/") && !type.startsWith("video/")) throw new Error(`Media is not image/video (${type}): ${url}`);
+  return type;
 }
 
 async function createPost(target, channel) {
-  await verifyMedia(target.mediaUrl);
+  const mimeType = await verifyMedia(target.mediaUrl);
+  const asset = mimeType.startsWith("video/")
+    ? { video: { url: target.mediaUrl } }
+    : { image: { url: target.mediaUrl } };
   const data = await gql(
     `mutation($input: CreatePostInput!) {
       createPost(input: $input) {
@@ -123,7 +137,7 @@ async function createPost(target, channel) {
         schedulingType: "automatic",
         mode: "customScheduled",
         aiAssisted: true,
-        assets: [{ image: { url: target.mediaUrl } }],
+        assets: [asset],
         needsApproval: false,
         saveToDraft: false,
       },
@@ -149,6 +163,10 @@ async function main() {
 
   const channel = await resolveSenaChannel();
   let existing = await inventory(channel);
+  if (queue.policy?.visualRequired === true) {
+    const bad = existing.filter(p => p.status === "scheduled" && !hasVisualAsset(p));
+    if (bad.length) throw new Error(`Visual-first policy violation: ${bad.length} future scheduled Buffer posts without image/video assets (${bad.map(x => x.id).join(",")})`);
+  }
   let changed = false;
 
   for (const target of queue.posts.filter(p => ["pending", "creating", "created_unverified"].includes(p.status))) {
@@ -161,6 +179,7 @@ async function main() {
     }
     if (!["sent", "scheduled"].includes(found.status)) throw new Error(`Unexpected Buffer recovery status: ${target.key}: ${found.status}`);
     if (target.bufferPostId && target.bufferPostId !== found.id) throw new Error(`Buffer recovery ID mismatch: ${target.key}`);
+    if (!hasVisualAsset(found)) throw new Error(`Visual asset readback failed for recovery: ${target.key}`);
     target.status = found.status === "sent" ? "sent" : "scheduled";
     target.bufferPostId = found.id;
     target.bufferDueAt = found.dueAt ?? target.dueAt;
@@ -192,6 +211,12 @@ async function main() {
       const time = Date.parse(p.dueAt ?? p.sentAt ?? "");
       return Number.isFinite(time) && Math.abs(time - due) <= 60000;
     })) throw new Error(`Buffer dueAt already occupied: ${target.key}`);
+    if (!target.mediaUrl) {
+      target.status = "held_visual_required";
+      target.holdReason = "Every original X post requires an exact approved photo/video; no text fallback.";
+      changed = true;
+      continue;
+    }
     target.status = "creating";
     target.attemptedAt = new Date().toISOString();
     await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
@@ -210,6 +235,7 @@ async function main() {
     if (!readback || readback.status !== "scheduled" || readback.text !== target.text || Date.parse(readback.dueAt) !== Date.parse(target.dueAt)) {
       throw new Error(`Buffer readback failed: ${target.key}`);
     }
+    if (!hasVisualAsset(readback)) throw new Error(`Visual asset readback failed: ${target.key}`);
     target.status = "scheduled";
     await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
   }
