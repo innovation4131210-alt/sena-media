@@ -119,9 +119,15 @@ async function confirmed(ch,target,requireVisual=true) {
     const rows=await inventory(ch);
     const row=rows.find(r=>r.id===target.bufferPostId);
     if(row) {
-      if(!rowMatches(row,target)) throw Error("Post identity, schedule or copy drift");
-      if(requireVisual && row.status==="scheduled" && isVisual(row)) return row;
-      if(!requireVisual && row.status!=="scheduled") return row;
+      if(row.id!==target.bufferPostId || row.channelId!==ch.id || row.text!==target.text) {
+        throw Error("Post identity or copy drift");
+      }
+      if(requireVisual) {
+        if(!rowMatches(row,target)) throw Error("Post schedule drift");
+        if(row.status==="scheduled" && isVisual(row)) return row;
+      } else if(row.status==="draft") {
+        return row;
+      }
     }
     if(attempt<3) await new Promise(resolve=>setTimeout(resolve,2000));
   }
