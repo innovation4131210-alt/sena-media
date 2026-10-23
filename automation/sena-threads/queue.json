@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T00:03:21.710Z",
+  "updatedAt": "2026-10-23T00:04:44.692Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -233,7 +233,7 @@
       "key": "sena-threads-autumn-stock-16-2026-10-23",
       "dueAt": "2026-10-23T11:10:00.000Z",
       "text": "新しいノートを一冊。何を描こうか、選ぶ時間も楽しい。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e3e4a89d86a77e445667940c71b515f2eb0ea2c8/media/sena-30day-2026-09-28/SENA_16_original.png",
       "visualFirst": true,
       "sourceSha256": "f2711e60e7792fd2d50411d5f23d787b73a2b0dba4805186d3e016165ae7b353",
@@ -254,13 +254,17 @@
         "latestPublicPost": "https://www.threads.com/@sena.virtual.studio/post/DerHlx6le4w",
         "noDuplicateVisibleScene": true
       },
-      "aiDisclosurePlacement": "existing AI-character profile plus runner aiAssisted=true; preserve current Threads disclosure policy"
+      "aiDisclosurePlacement": "existing AI-character profile plus runner aiAssisted=true; preserve current Threads disclosure policy",
+      "attemptedAt": "2026-10-23T00:04:43.219Z",
+      "bufferPostId": "6adaa49bcc1b7cdc08c0b53b",
+      "bufferDueAt": "2026-10-23T11:10:00.000Z",
+      "processedAt": "2026-10-23T00:04:43.622Z"
     },
     {
       "key": "sena-threads-autumn-stock-17-2026-10-24",
       "dueAt": "2026-10-24T11:10:00.000Z",
       "text": "色づいた庭を、ゆっくりひと回り。今日は歩きやすい靴で。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e3e4a89d86a77e445667940c71b515f2eb0ea2c8/media/sena-30day-2026-09-28/SENA_autumnstock_17_garden_walk_original.png",
       "visualFirst": true,
       "sourceSha256": "bc234caf9aaa6bd788be71072c9ed5b0371ea620ee5cbfd2bdcd56107bec9b21",
@@ -281,13 +285,17 @@
         "latestPublicPost": "https://www.threads.com/@sena.virtual.studio/post/DerHlx6le4w",
         "noDuplicateVisibleScene": true
       },
-      "aiDisclosurePlacement": "existing AI-character profile plus runner aiAssisted=true; preserve current Threads disclosure policy"
+      "aiDisclosurePlacement": "existing AI-character profile plus runner aiAssisted=true; preserve current Threads disclosure policy",
+      "attemptedAt": "2026-10-23T00:04:43.724Z",
+      "bufferPostId": "6adaa49c8d2197cb2a0870ac",
+      "bufferDueAt": "2026-10-24T11:10:00.000Z",
+      "processedAt": "2026-10-23T00:04:44.135Z"
     },
     {
       "key": "sena-threads-autumn-stock-18-2026-10-25",
       "dueAt": "2026-10-25T11:10:00.000Z",
       "text": "窓辺の光がやわらかくて、もう少しここにいたくなる。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e3e4a89d86a77e445667940c71b515f2eb0ea2c8/media/sena-30day-2026-09-28/SENA_autumnstock_18_windowseat_original.png",
       "visualFirst": true,
       "sourceSha256": "755a016266385f1c06c8b50d25aace93c77eb4adf5ff93cbfd7bf141afe9f5fd",
@@ -308,7 +316,11 @@
         "latestPublicPost": "https://www.threads.com/@sena.virtual.studio/post/DerHlx6le4w",
         "noDuplicateVisibleScene": true
       },
-      "aiDisclosurePlacement": "existing AI-character profile plus runner aiAssisted=true; preserve current Threads disclosure policy"
+      "aiDisclosurePlacement": "existing AI-character profile plus runner aiAssisted=true; preserve current Threads disclosure policy",
+      "attemptedAt": "2026-10-23T00:04:44.234Z",
+      "bufferPostId": "6adaa49ccc1b7cdc08c0b5df",
+      "bufferDueAt": "2026-10-25T11:10:00.000Z",
+      "processedAt": "2026-10-23T00:04:44.592Z"
     }
   ],
   "activation": {
@@ -321,8 +333,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 6,
-    "verifiedAt": "2026-10-13T19:26:26.948Z"
+    "scheduledCount": 3,
+    "verifiedAt": "2026-10-23T00:04:44.692Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
