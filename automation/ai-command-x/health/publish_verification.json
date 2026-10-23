@@ -1,14 +1,14 @@
 {
   "latest": {
-    "checkedAt": "2026-10-23T08:51:47+00:00",
-    "slot": "2026-10-23T12:20+09:00",
+    "checkedAt": "2026-10-23T16:54:14+00:00",
+    "slot": "2026-10-23T20:30+09:00",
     "ok": true,
-    "contentId": "D24-NOON",
-    "contentType": "実行ログ",
-    "bufferPostId": "6ad7bc40bdfe25c556eea917",
+    "contentId": "D24-PM",
+    "contentType": "参加型",
+    "bufferPostId": "6ad7bc41a2b5cb9c49fcdfba",
     "bufferStatus": "sent",
-    "sentAt": "2026-10-23T03:20:00.980Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2113470468875313292",
+    "sentAt": "2026-10-23T11:30:25.687Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2113593884877992144",
     "warnings": [],
     "errors": []
   },
@@ -920,6 +920,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-10-23T03:20:00.980Z",
       "externalLink": "https://x.com/2104714619688554496/status/2113470468875313292",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-10-23T16:54:14+00:00",
+      "slot": "2026-10-23T20:30+09:00",
+      "ok": true,
+      "contentId": "D24-PM",
+      "contentType": "参加型",
+      "bufferPostId": "6ad7bc41a2b5cb9c49fcdfba",
+      "bufferStatus": "sent",
+      "sentAt": "2026-10-23T11:30:25.687Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2113593884877992144",
       "warnings": [],
       "errors": []
     }
