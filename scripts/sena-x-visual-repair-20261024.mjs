@@ -166,7 +166,7 @@ async function main() {
     }
     try {
       const bytes=await verifyApprovedImage(t.mediaUrl,expected.sha);
-      await edit(t.bufferPostId,{assets:[{image:{url:t.mediaUrl}}]});
+      await edit(t.bufferPostId,{text:t.text,assets:[{image:{url:t.mediaUrl}}]});
       const good=await confirmed(ch,t,true);
       const visual=good.assets.find(a=>a.id && /^(image|video)\//.test(a.mimeType??""));
       Object.assign(t,{
@@ -193,7 +193,7 @@ async function main() {
       }
       if(fresh?.status==="scheduled") {
         try {
-          await edit(t.bufferPostId,{saveToDraft:true});
+          await edit(t.bufferPostId,{text:t.text,saveToDraft:true});
           await confirmed(ch,t,false);
           Object.assign(t,{
             status:"held_visual_required",
