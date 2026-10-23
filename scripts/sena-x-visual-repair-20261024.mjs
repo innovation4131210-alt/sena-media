@@ -151,7 +151,62 @@ async function main() {
     if(!row) throw Error("Known scheduled SENA post absent from inventory "+key);
     if(!rowMatches(row,t)) throw Error("SENA scheduled post mismatch "+key);
     if(row.status==="sent") {console.log(JSON.stringify({key,status:"sent_no_change"}));continue;}
-    if(row.status==="draft") {console.log(JSON.stringify({key,status:"already_draft"}));continue;}
+    if(row.status==="draft") {
+      if(Date.parse(t.dueAt)<=Date.now()+10*60*1000) {
+        console.log(JSON.stringify({key,status:"held_as_draft_past_safe_schedule_window"}));
+        continue;
+      }
+      try {
+        const bytes=await verifyApprovedImage(t.mediaUrl,expected.sha);
+        await edit(t.bufferPostId,{
+          text:t.text,assets:[{image:{url:t.mediaUrl}}],saveToDraft:true
+        });
+        let draft;
+        for(let attempt=0;attempt<4;attempt++) {
+          const current=(await inventory(ch)).find(r=>r.id===t.bufferPostId);
+          if(current?.status==="draft" && current.text===t.text && isVisual(current)) {
+            draft=current;break;
+          }
+          if(attempt<3) await new Promise(done=>setTimeout(done,2000));
+        }
+        if(!draft) {
+          console.log(JSON.stringify({key,status:"draft_media_not_verified_refusing_to_schedule"}));
+          continue;
+        }
+        const current=await inventory(ch);
+        const unsafe=current.some(r=>r.id!==t.bufferPostId &&
+          r.status==="scheduled" && Number.isFinite(Date.parse(r.dueAt)) &&
+          Math.abs(Date.parse(r.dueAt)-Date.parse(t.dueAt))<6*60*60*1000);
+        if(unsafe) throw Error("No safe SENA six-hour open slot");
+        await edit(t.bufferPostId,{
+          text:t.text,assets:[{image:{url:t.mediaUrl}}],
+          saveToDraft:false,mode:"customScheduled",
+          dueAt:t.dueAt,schedulingType:"automatic",
+        });
+        const good=await confirmed(ch,t,true);
+        const visual=good.assets.find(a=>a.id && /^(image|video)\\//.test(a.mimeType??""));
+        Object.assign(t,{
+          status:"scheduled",bufferVisualVerifiedAt:new Date().toISOString(),
+          bufferVisualMimeType:visual?.mimeType,bufferVisualAssetId:visual?.id,
+          exactSourceGitBlob:expected.sha,
+          visualRepair:"draft_asset_verified_then_rescheduled"
+        });
+        delete t.holdReason;
+        edited++;verified++;
+        await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\\n");
+        console.log(JSON.stringify({key,status:"draft_restored_as_verified_visual",bytes,id:good.id}));
+      } catch(draftRepairError) {
+        console.error(JSON.stringify({key,status:"draft_revival_unverified",error:draftRepairError.message}));
+        const current=(await inventory(ch)).find(r=>r.id===t.bufferPostId);
+        if(current?.status==="scheduled" && !isVisual(current)) {
+          await edit(t.bufferPostId,{text:t.text,saveToDraft:true});
+          await confirmed(ch,t,false);
+          console.log(JSON.stringify({key,status:"unsafe_revival_rolled_back_to_draft"}));
+        }
+      }
+      rows=await inventory(ch);
+      continue;
+    }
     if(row.status!=="scheduled") throw Error("Unexpected SENA post state "+key+" "+row.status);
     if(isVisual(row)) {
       t.bufferVisualVerifiedAt=new Date().toISOString();
