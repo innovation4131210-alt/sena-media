@@ -182,7 +182,7 @@ def compact_title(value, limit=54):
     return title[: limit - 1].rstrip() + "…"
 
 
-def product_facts(item, actress_name=""):
+def product_facts(item, actress_name="", *, campaign_active=False):
     facts = []
     if actress_name:
         facts.append(f"出演：{actress_name}")
@@ -192,7 +192,7 @@ def product_facts(item, actress_name=""):
     discount = discount_percent(item)
 
     if price is not None:
-        if discount >= 10 and list_price:
+        if campaign_active and discount >= 10 and list_price:
             facts.append(f"{price:,}円（参考{list_price:,}円・約{discount}%OFF）")
         else:
             facts.append(f"{price:,}円")
@@ -294,7 +294,7 @@ def compact_value_line(meta):
 
     discount = int(meta.get("discount_pct") or 0)
     price = meta.get("price")
-    if discount >= 10:
+    if meta.get("campaign_active") and discount >= 10:
         parts.append(f"約{discount}%OFF")
     elif price:
         try:
@@ -357,13 +357,6 @@ def build_decision_text(template_index, title, sort_order, affiliate_url, facts=
             f"『{short_title}』"
             + facts_line(facts)
             + "\n今見る理由がはっきりしている候補です。18歳未満閲覧禁止。"
-        )
-    elif discount >= 10:
-        body = (
-            f"【PR】今夜は買い時が分かりやすい1本。約{discount}%OFF。\n"
-            f"『{short_title}』"
-            + facts_line(facts)
-            + "\n価格条件を確認するならこちら。18歳未満閲覧禁止。"
         )
     elif campaign:
         body = (
@@ -619,7 +612,11 @@ def active_campaign_info(item, required_at=None):
     campaigns = item.get("campaign") or []
     if isinstance(campaigns, dict):
         campaigns = [campaigns]
-    now = datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    jst = timezone(timedelta(hours=9))
+    now = datetime.now(jst).replace(tzinfo=None)
+    post_time = required_at if required_at is not None else now
+    if post_time.tzinfo is not None:
+        post_time = post_time.astimezone(jst).replace(tzinfo=None)
     for campaign in campaigns:
         if not isinstance(campaign, dict):
             continue
@@ -629,9 +626,10 @@ def active_campaign_info(item, required_at=None):
             begin = begin.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
         if end is not None and end.tzinfo is not None:
             end = end.astimezone(timezone(timedelta(hours=9))).replace(tzinfo=None)
-        active_now = (begin is None or begin <= now) and (end is None or now <= end)
-        covers_post = required_at is None or end is None or required_at <= end
-        if active_now and covers_post:
+        # Require a product-level interval covering the actual scheduled
+        # JST dueAt. Missing start/end is not evidence of campaign validity.
+        covers_post = begin is not None and end is not None and begin <= post_time <= end
+        if covers_post:
             return {
                 "active": True,
                 "title": str(campaign.get("title") or "").strip(),
@@ -845,7 +843,10 @@ def choose_product(used_ids, preferred_sort, *, campaign_focus=False, required_a
                 chosen["title"],
                 chosen["affiliate_url"],
                 sort_order,
-                product_facts(item, chosen.get("actress_name") or ""),
+                product_facts(
+                    item, chosen.get("actress_name") or "",
+                    campaign_active=bool(chosen.get("campaign_active")),
+                ),
                 {
                     "price": chosen["price"],
                     "list_price": chosen["list_price"],
@@ -936,7 +937,7 @@ def rebuild_existing_affiliate_text(history_row, due_at):
         "campaign_end": campaign_info.get("date_end") or "",
         "recent_release": recent_release(item),
     }
-    facts = product_facts(item, actress_name)
+    facts = product_facts(item, actress_name, campaign_active=meta["campaign_active"])
     template_index = int(history_row.get("template_index") or 0)
     format_name = history_row.get("format")
 
