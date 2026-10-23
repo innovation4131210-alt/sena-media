@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/sena-x-visual-repair-20261024.yml"
+      - "scripts/sena-x-visual-repair-20261024.mjs"
 
 permissions:
   contents: write
