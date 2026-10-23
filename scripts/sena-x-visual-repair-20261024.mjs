@@ -184,7 +184,7 @@ async function main() {
           dueAt:t.dueAt,schedulingType:"automatic",
         });
         const good=await confirmed(ch,t,true);
-        const visual=good.assets.find(a=>a.id && /^(image|video)\\//.test(a.mimeType??""));
+        const visual=good.assets.find(a=>a.id && ["image/","video/"].some(prefix=>String(a.mimeType??"").startsWith(prefix)));
         Object.assign(t,{
           status:"scheduled",bufferVisualVerifiedAt:new Date().toISOString(),
           bufferVisualMimeType:visual?.mimeType,bufferVisualAssetId:visual?.id,
@@ -193,7 +193,7 @@ async function main() {
         });
         delete t.holdReason;
         edited++;verified++;
-        await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\\n");
+        await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\n");
         console.log(JSON.stringify({key,status:"draft_restored_as_verified_visual",bytes,id:good.id}));
       } catch(draftRepairError) {
         console.error(JSON.stringify({key,status:"draft_revival_unverified",error:draftRepairError.message}));
