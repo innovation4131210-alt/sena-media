@@ -5,7 +5,14 @@
     "enabled": true,
     "maxScheduled": 10,
     "noCatchup": true,
-    "dedupeByTextAndDueAt": true
+    "dedupeByTextAndDueAt": true,
+    "visualRequired": true,
+    "textOnlyOriginalsAllowed": false,
+    "textOnlyRepliesAllowed": true,
+    "visualStrengthMix": {
+      "normalDailyPercent": 60,
+      "strongVisualPercent": 40
+    }
   },
   "account": {
     "handle": "sena_ai_studio",
