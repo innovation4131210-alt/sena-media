@@ -1,0 +1,26 @@
+name: Test DMM X campaign copy guard
+
+on:
+  pull_request:
+    paths:
+      - "automation/dmm-x/buffer_queue.py"
+      - "automation/dmm-x/tests/test_campaign_discount.py"
+      - ".github/workflows/dmm-x-campaign-guard-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discount-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate production module
+        run: python -m py_compile automation/dmm-x/buffer_queue.py
+      - name: Run regression tests (offline)
+        run: python -m unittest discover -v -s automation/dmm-x/tests -p 'test_*.py'
