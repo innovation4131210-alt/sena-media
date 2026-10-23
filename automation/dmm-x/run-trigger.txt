@@ -13,3 +13,4 @@ reason: daily audit found no saved Sep 28 IDs; recover live Buffer slots before 
 2026-10-14T22:58:00Z recover-oct15-after-missing-scheduled-run-with-live-dedupe
 manual-recovery: 2026-10-19T23:24:17.238Z
 manual-recovery: 2026-10-21T23:25:00Z reason=oct22-missing-after-0600-jst-live-dedupe-clear
+manual-recovery: 2026-10-24T06:43:30+09:00 reason=oct24-future-slots-absent-from-latest-audit-and-no-0600-run; live-Buffer-dedupe-required; do-not-backfill
