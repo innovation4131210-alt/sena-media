@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T00:04:44.692Z",
+  "updatedAt": "2026-10-23T17:21:21.945Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -233,7 +233,7 @@
       "key": "sena-threads-autumn-stock-16-2026-10-23",
       "dueAt": "2026-10-23T11:10:00.000Z",
       "text": "新しいノートを一冊。何を描こうか、選ぶ時間も楽しい。",
-      "status": "scheduled",
+      "status": "sent",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e3e4a89d86a77e445667940c71b515f2eb0ea2c8/media/sena-30day-2026-09-28/SENA_16_original.png",
       "visualFirst": true,
       "sourceSha256": "f2711e60e7792fd2d50411d5f23d787b73a2b0dba4805186d3e016165ae7b353",
@@ -258,7 +258,10 @@
       "attemptedAt": "2026-10-23T00:04:43.219Z",
       "bufferPostId": "6adaa49bcc1b7cdc08c0b53b",
       "bufferDueAt": "2026-10-23T11:10:00.000Z",
-      "processedAt": "2026-10-23T00:04:43.622Z"
+      "processedAt": "2026-10-23T00:04:43.622Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De1awiXkQDw",
+      "sentAt": "2026-10-23T11:10:16.483Z",
+      "statusSyncedAt": "2026-10-23T17:21:21.945Z"
     },
     {
       "key": "sena-threads-autumn-stock-17-2026-10-24",
@@ -333,8 +336,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 3,
-    "verifiedAt": "2026-10-23T00:04:44.692Z"
+    "scheduledCount": 2,
+    "verifiedAt": "2026-10-23T17:21:21.945Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
