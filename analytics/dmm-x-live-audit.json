@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "checkedAt": "2026-10-24T17:35:06.324Z",
-  "updatedAt": "2026-10-24T17:35:11.319Z",
+  "checkedAt": "2026-10-24T22:44:45.620Z",
+  "updatedAt": "2026-10-24T22:44:48.055Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -16,15 +16,95 @@
     "complete": false,
     "coverageNote": "Historical inventory exceeds 100 posts; current batch IDs were read back individually.",
     "counts": {
-      "sent": 100
+      "scheduled": 3,
+      "sent": 97
     },
-    "scheduledCount": 0,
-    "scheduled": []
+    "scheduledCount": 3,
+    "scheduled": [
+      {
+        "id": "6add270d3d5b27036ba3e5b1",
+        "dueAt": "2026-10-25T03:30:00.000Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "readback": {
+          "text": "候補が多いとき、どう絞る？\n①安い順 ②評価順 ③新着順 ④人気順\n\n今日の投票（10/25）",
+          "xWeightedLength": 83,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": false,
+          "expectedActressName": null,
+          "actressNamePresent": null,
+          "valueProofPresent": true,
+          "campaignExpected": null,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": false
+        }
+      },
+      {
+        "id": "6add270f8b3d437ddcdc35c4",
+        "dueAt": "2026-10-25T12:30:00.000Z",
+        "kind": "affiliate",
+        "format": "discovery",
+        "linkMode": "direct",
+        "contentId": "ofje00416",
+        "sort": "rank",
+        "discountPct": 50,
+        "campaignActive": true,
+        "readback": {
+          "text": "【PR】今夜の人気女優から、条件で絞ると今日はこれ。\n『河北彩花 完全限定生産 全50SEX 16時間スペシャル』\n出演：河北彩花（河北彩伽） / 250円（参考500円・約50%OFF）\nFANZA公式キャンペーン対象（2026-10-26まで）\n詳細はこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dofje00416&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 260,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "河北彩花（河北彩伽）",
+          "actressNamePresent": true,
+          "valueProofPresent": true,
+          "campaignExpected": true,
+          "campaignEvidencePresent": true,
+          "campaignTitle": "働くお姉さん50％OFF",
+          "campaignEnd": "2026-10-26 09:59:59",
+          "p0ChecksPass": true
+        }
+      },
+      {
+        "id": "6add27123d5b27036ba3e649",
+        "dueAt": "2026-10-25T14:30:00.000Z",
+        "kind": "affiliate",
+        "format": "decision",
+        "linkMode": "direct",
+        "contentId": "sqde00022",
+        "sort": "review",
+        "discountPct": 0,
+        "campaignActive": false,
+        "readback": {
+          "text": "【PR】寝る前にレビュー条件で1本だけ比較するなら、今日はこれ。\n『休日に彼女と。エロがり彼女と温泉中出しSEX 柏木こなつ』\n出演：柏木こなつ / 300円\n作品詳細はこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dsqde00022&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 204,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "柏木こなつ",
+          "actressNamePresent": true,
+          "valueProofPresent": true,
+          "campaignExpected": false,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": true
+        }
+      }
+    ]
   },
   "metrics": {
     "samplePosts": 40,
     "coverage": {
-      "totalSent": 100,
+      "totalSent": 97,
       "selected": 40,
       "attempted": 40,
       "fetched": 40,
@@ -141,7 +221,7 @@
     "posts": [
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:06.437Z",
+        "fetchedAt": "2026-10-24T22:44:45.683Z",
         "id": "6adbd51b8b3d437ddc89543e",
         "sentAt": "2026-10-24T14:30:19.841Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114001546790760930",
@@ -161,7 +241,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:06.570Z",
+        "fetchedAt": "2026-10-24T22:44:45.742Z",
         "id": "6adbd5180b5343d07050495f",
         "sentAt": "2026-10-24T12:30:13.435Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113971320803172528",
@@ -181,7 +261,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:06.761Z",
+        "fetchedAt": "2026-10-24T22:44:45.812Z",
         "id": "6adbd515bd33ce99c3f03fa4",
         "sentAt": "2026-10-24T03:30:20.268Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113835452876607834",
@@ -201,7 +281,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:06.914Z",
+        "fetchedAt": "2026-10-24T22:44:45.864Z",
         "id": "6ada9fba8d2197cb2a0751cc",
         "sentAt": "2026-10-23T14:30:36.404Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113639228391236023",
@@ -221,7 +301,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.064Z",
+        "fetchedAt": "2026-10-24T22:44:45.921Z",
         "id": "6ada9fb89ef33e7811aa7ccd",
         "sentAt": "2026-10-23T12:30:32.873Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113609014500008337",
@@ -241,7 +321,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.202Z",
+        "fetchedAt": "2026-10-24T22:44:45.977Z",
         "id": "6ada9fb58d2197cb2a07514f",
         "sentAt": "2026-10-23T03:30:06.996Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113473010669691360",
@@ -261,7 +341,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.340Z",
+        "fetchedAt": "2026-10-24T22:44:46.044Z",
         "id": "6ad949ec7d56fe463dad169b",
         "sentAt": "2026-10-22T14:30:36.688Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113276841444229377",
@@ -281,7 +361,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.452Z",
+        "fetchedAt": "2026-10-24T22:44:46.108Z",
         "id": "6ad949ead0598dd30cfb66a5",
         "sentAt": "2026-10-22T12:30:34.723Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113246634419081397",
@@ -301,7 +381,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.558Z",
+        "fetchedAt": "2026-10-24T22:44:46.164Z",
         "id": "6ad949e7b5ae3ccc5eb85b6f",
         "sentAt": "2026-10-22T03:30:20.273Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113110678261125129",
@@ -321,7 +401,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.671Z",
+        "fetchedAt": "2026-10-24T22:44:46.224Z",
         "id": "6ad7f9bb5a0b7fe6fa7c2689",
         "sentAt": "2026-10-21T14:30:28.924Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112914421139853445",
@@ -341,7 +421,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.807Z",
+        "fetchedAt": "2026-10-24T22:44:46.272Z",
         "id": "6ad7f9bac8c16a2bbdb5f7ed",
         "sentAt": "2026-10-21T12:30:36.722Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112884254493347851",
@@ -361,7 +441,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:07.935Z",
+        "fetchedAt": "2026-10-24T22:44:46.360Z",
         "id": "6ad7f9ba79ac5466f5c752f1",
         "sentAt": "2026-10-21T03:30:12.159Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112748256706912264",
@@ -381,7 +461,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.087Z",
+        "fetchedAt": "2026-10-24T22:44:46.436Z",
         "id": "6ad6a6b69d034d7aedcb0949",
         "sentAt": "2026-10-20T14:30:35.142Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112552059174068610",
@@ -401,7 +481,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.254Z",
+        "fetchedAt": "2026-10-24T22:44:46.485Z",
         "id": "6ad6a6b52d48e20f64bab937",
         "sentAt": "2026-10-20T12:30:36.674Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112521866740973655",
@@ -421,7 +501,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.375Z",
+        "fetchedAt": "2026-10-24T22:44:46.559Z",
         "id": "6ad6a6b5e9c669def5ddf9db",
         "sentAt": "2026-10-20T03:30:05.874Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112385841943212090",
@@ -441,7 +521,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.502Z",
+        "fetchedAt": "2026-10-24T22:44:46.625Z",
         "id": "6ad5522aa48c8f8371b9be18",
         "sentAt": "2026-10-19T14:30:26.999Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112189637271724505",
@@ -461,7 +541,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.619Z",
+        "fetchedAt": "2026-10-24T22:44:46.711Z",
         "id": "6ad55227ae173d6e00204583",
         "sentAt": "2026-10-19T12:30:31.849Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112159457798934561",
@@ -481,7 +561,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.733Z",
+        "fetchedAt": "2026-10-24T22:44:46.760Z",
         "id": "6ad552250b0d72757a4180c5",
         "sentAt": "2026-10-19T03:30:22.896Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112023526001475663",
@@ -501,7 +581,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.877Z",
+        "fetchedAt": "2026-10-24T22:44:46.821Z",
         "id": "6ad400ae0b0d72757af9ee61",
         "sentAt": "2026-10-18T14:30:06.812Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111827164756586865",
@@ -521,7 +601,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:08.981Z",
+        "fetchedAt": "2026-10-24T22:44:46.883Z",
         "id": "6ad400ac0b0d72757af9ee11",
         "sentAt": "2026-10-18T12:30:19.678Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111797019433947301",
@@ -541,7 +621,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.089Z",
+        "fetchedAt": "2026-10-24T22:44:46.938Z",
         "id": "6ad400aaae173d6e00d8d998",
         "sentAt": "2026-10-18T03:30:04.727Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111661061870854533",
@@ -561,7 +641,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.196Z",
+        "fetchedAt": "2026-10-24T22:44:46.991Z",
         "id": "6ad2ada5c34368e4b099b9cd",
         "sentAt": "2026-10-17T14:30:08.666Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111464784675639527",
@@ -581,7 +661,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.305Z",
+        "fetchedAt": "2026-10-24T22:44:47.049Z",
         "id": "6ad2ada21694d771d50e4ab0",
         "sentAt": "2026-10-17T12:30:07.951Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111434582469845444",
@@ -601,7 +681,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.422Z",
+        "fetchedAt": "2026-10-24T22:44:47.100Z",
         "id": "6ad2ada01c7e49ea4c2a277d",
         "sentAt": "2026-10-17T03:30:08.087Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111298688064586062",
@@ -621,7 +701,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.528Z",
+        "fetchedAt": "2026-10-24T22:44:47.156Z",
         "id": "6ad1604aa82f34dbe137cea5",
         "sentAt": "2026-10-16T14:30:42.703Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111102539793920243",
@@ -641,7 +721,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.644Z",
+        "fetchedAt": "2026-10-24T22:44:47.218Z",
         "id": "6ad16048e991a49db3ba7ff3",
         "sentAt": "2026-10-16T12:30:24.758Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111072265445974341",
@@ -661,7 +741,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.751Z",
+        "fetchedAt": "2026-10-24T22:44:47.298Z",
         "id": "6ad160464ed7d375a4369666",
         "sentAt": "2026-10-16T03:30:08.997Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110936304020054452",
@@ -681,7 +761,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:09.901Z",
+        "fetchedAt": "2026-10-24T22:44:47.371Z",
         "id": "6ad00975cf4828067a352442",
         "sentAt": "2026-10-15T14:30:21.706Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110740062858096705",
@@ -701,7 +781,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.030Z",
+        "fetchedAt": "2026-10-24T22:44:47.430Z",
         "id": "6ad00973cf4828067a351f32",
         "sentAt": "2026-10-15T12:30:42.256Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110709949609173394",
@@ -721,7 +801,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.139Z",
+        "fetchedAt": "2026-10-24T22:44:47.490Z",
         "id": "6ad00970392879e023534003",
         "sentAt": "2026-10-15T03:30:06.579Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110573905060548722",
@@ -741,7 +821,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.252Z",
+        "fetchedAt": "2026-10-24T22:44:47.539Z",
         "id": "6acebee633507eb5b0e37432",
         "sentAt": "2026-10-14T14:30:50.190Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110377795373129833",
@@ -761,7 +841,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.360Z",
+        "fetchedAt": "2026-10-24T22:44:47.593Z",
         "id": "6acebee40d20fd15277099c9",
         "sentAt": "2026-10-14T12:30:44.428Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110347572040634650",
@@ -781,7 +861,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.481Z",
+        "fetchedAt": "2026-10-24T22:44:47.645Z",
         "id": "6acebee1848c31c809506d5b",
         "sentAt": "2026-10-14T03:30:10.458Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110211534399865016",
@@ -801,7 +881,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.596Z",
+        "fetchedAt": "2026-10-24T22:44:47.717Z",
         "id": "6acd70093d6121df4034a0ff",
         "sentAt": "2026-10-13T14:30:35.610Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110015345910059048",
@@ -821,7 +901,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.707Z",
+        "fetchedAt": "2026-10-24T22:44:47.773Z",
         "id": "6acd70073d6121df4034a0bb",
         "sentAt": "2026-10-13T12:30:36.786Z",
         "externalLink": "https://x.com/1647584462233010176/status/2109985152344416661",
@@ -841,7 +921,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.825Z",
+        "fetchedAt": "2026-10-24T22:44:47.825Z",
         "id": "6acd70053d6121df4034a07c",
         "sentAt": "2026-10-13T03:30:08.112Z",
         "externalLink": "https://x.com/1647584462233010176/status/2109849136035983720",
@@ -861,7 +941,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:10.933Z",
+        "fetchedAt": "2026-10-24T22:44:47.885Z",
         "id": "6ac6b3bb31a577b8bd2dfbb6",
         "sentAt": "2026-10-08T14:30:20.255Z",
         "externalLink": "https://x.com/1647584462233010176/status/2108203342715351075",
@@ -881,7 +961,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:11.094Z",
+        "fetchedAt": "2026-10-24T22:44:47.944Z",
         "id": "6ac6b3bbc16f98d294cbcb12",
         "sentAt": "2026-10-08T12:30:20.424Z",
         "externalLink": "https://x.com/1647584462233010176/status/2108173144036880887",
@@ -901,7 +981,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:11.208Z",
+        "fetchedAt": "2026-10-24T22:44:48.002Z",
         "id": "6ac6b3bab20a10e4de2d00cc",
         "sentAt": "2026-10-08T03:30:04.538Z",
         "externalLink": "https://x.com/1647584462233010176/status/2108037182246019330",
@@ -921,7 +1001,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T17:35:11.317Z",
+        "fetchedAt": "2026-10-24T22:44:48.053Z",
         "id": "6ac561d510de5e15cbddffa8",
         "sentAt": "2026-10-07T14:30:22.008Z",
         "externalLink": "https://x.com/1647584462233010176/status/2107840961770352900",
@@ -943,9 +1023,9 @@
     "note": "Buffer platform metrics only. Aggregates use this pass only; cached per-post values retain their original timestamps and are excluded. DMM conversions/revenue require official DMM report data and are not inferred here."
   },
   "sourceState": {
-    "batchDate": "2026-10-24",
+    "batchDate": "2026-10-25",
     "contentStrategyVersion": "real-selection-v7-campaign-demand-first",
-    "lastBufferPostId": "6adbd51b8b3d437ddc89543e",
-    "lastDueAt": "2026-10-24T14:30:00.000Z"
+    "lastBufferPostId": "6add27123d5b27036ba3e649",
+    "lastDueAt": "2026-10-25T14:30:00.000Z"
   }
 }
