@@ -240,16 +240,20 @@ async function main() {
     await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
   }
 
-  queue.updatedAt = new Date().toISOString();
+  const checkedAt = new Date().toISOString();
+  queue.updatedAt = checkedAt;
   queue.lastRun = {
     channelId: channel.id,
     channelName: channel.name,
     scheduledCount,
+    verifiedVisualCount: existing.filter(p => p.status === "scheduled" && hasVisualAsset(p)).length,
+    heldVisualRequiredCount: queue.posts.filter(p => p.status === "held_visual_required" && Date.parse(p.dueAt) > Date.now()).length,
     created,
-    verifiedAt: new Date().toISOString(),
+    verifiedAt: checkedAt,
   };
 
-  if (changed) await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
+  // Persist the live Buffer audit even when all future posts remain on visual hold.
+  await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
   console.log(JSON.stringify({ ok: true, changed, ...queue.lastRun }, null, 2));
 }
 
