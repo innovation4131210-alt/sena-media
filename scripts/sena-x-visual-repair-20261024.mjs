@@ -61,7 +61,10 @@ async function inventory(ch) {
       filter:{channelIds:[$channelId]},
       sort:[{field:dueAt,direction:asc}]
     }) {
-      edges { node {id text status dueAt channelId assets {id mimeType}} }
+      edges { node {id text status dueAt channelId assets {
+        id mimeType __typename source
+        ... on ImageAsset { image { width height } }
+      }} }
       pageInfo {hasNextPage}
     }
   }`,{organizationId:ch.organizationId,channelId:ch.id});
@@ -207,7 +210,12 @@ async function main() {
               postId:t.visualProbeDraftId,
               isDraft:probe?.status==="draft",
               hasActualImage:isVisual(probe),
-              mediaCount:probe?.assets?.length??null
+              mediaCount:probe?.assets?.length??null,
+              assetTypes:probe?.assets?.map(a=>({
+                type:a.__typename,mimeType:a.mimeType,
+                hasId:Boolean(a.id),sourceHost:String(a.source??"").slice(0,55),
+                width:a.image?.width??null,height:a.image?.height??null
+              }))??[]
             }));
           }
           continue;
