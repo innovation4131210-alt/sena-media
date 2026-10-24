@@ -84,7 +84,8 @@ function rowMatches(row,target) {
 }
 
 async function verifyApprovedImage(url,expectedGitBlobSha) {
-  if(!url.startsWith("https://raw.githubusercontent.com/innovation4131210-alt/sena-media/")) {
+  if(!url.startsWith("https://raw.githubusercontent.com/innovation4131210-alt/sena-media/") &&
+     !url.startsWith("https://cdn.jsdelivr.net/gh/innovation4131210-alt/sena-media@")) {
     throw Error("SENA media URL not from approved repository");
   }
   const res=await fetch(url,{signal:AbortSignal.timeout(30000)});
@@ -157,9 +158,16 @@ async function main() {
         continue;
       }
       try {
-        const bytes=await verifyApprovedImage(t.mediaUrl,expected.sha);
+        // Use a commit-pinned public CDN for the identical Git-approved bytes.
+        // Raw GitHub was retried and Buffer persisted no image; never relax readback.
+        const rawPrefix="https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/";
+        if(!t.mediaUrl.startsWith(rawPrefix)) throw Error("Unexpected SENA approved media source");
+        const pinnedCommit=process.env.GITHUB_SHA;
+        if(!/^[a-f0-9]{40}$/.test(pinnedCommit??"")) throw Error("Cannot pin CDN asset to immutable commit");
+        const hostedUrl="https://cdn.jsdelivr.net/gh/innovation4131210-alt/sena-media@"+pinnedCommit+"/"+t.mediaUrl.slice(rawPrefix.length);
+        const bytes=await verifyApprovedImage(hostedUrl,expected.sha);
         await edit(t.bufferPostId,{
-          text:t.text,assets:[{image:{url:t.mediaUrl}}],saveToDraft:true
+          text:t.text,assets:[{image:{url:hostedUrl}}],saveToDraft:true
         });
         let draft;
         for(let attempt=0;attempt<4;attempt++) {
@@ -179,7 +187,7 @@ async function main() {
           Math.abs(Date.parse(r.dueAt)-Date.parse(t.dueAt))<6*60*60*1000);
         if(unsafe) throw Error("No safe SENA six-hour open slot");
         await edit(t.bufferPostId,{
-          text:t.text,assets:[{image:{url:t.mediaUrl}}],
+          text:t.text,assets:[{image:{url:hostedUrl}}],
           saveToDraft:false,mode:"customScheduled",
           dueAt:t.dueAt,schedulingType:"automatic",
         });
@@ -189,6 +197,7 @@ async function main() {
           status:"scheduled",bufferVisualVerifiedAt:new Date().toISOString(),
           bufferVisualMimeType:visual?.mimeType,bufferVisualAssetId:visual?.id,
           exactSourceGitBlob:expected.sha,
+          bufferMediaUrl:hostedUrl,
           visualRepair:"draft_asset_verified_then_rescheduled"
         });
         delete t.holdReason;
