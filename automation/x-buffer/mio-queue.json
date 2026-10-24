@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T00:04:36.189Z",
+  "updatedAt": "2026-10-24T00:09:00.000Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -726,6 +726,24 @@
       "bufferPostId": "6ad55e0a0a208cb3238819c4",
       "bufferDueAt": "2026-10-23T03:15:00.000Z",
       "processedAt": "2026-10-19T00:02:19.080Z"
+    },
+    {
+      "key": "mio-x-reserve-R01-2026-10-24",
+      "status": "held_visual_required",
+      "dueAt": "2026-10-24T03:15:00.000Z",
+      "text": "出かける前、靴だけまだ迷ってる。\nブーツ？スニーカー？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "visualPlan": {
+        "reserveAssetId": "MIO-R01",
+        "approvedSourceLibraryPath": "/MIO-SENA/X-Reserve/2026-09-24/MIO/MIO_X_reserve_boots_room_01.jpeg",
+        "sourceSha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca",
+        "theme": "boots_room",
+        "visualStrength": "strong",
+        "noTextOnlyFallback": true,
+        "readbackRequired": true,
+        "status": "exact_original_ready_public_host_missing"
+      },
+      "holdReason": "Exact approved MIO-R01 image remains Library-only; stable public HTTPS image URL and Buffer visual-asset readback not yet available. Do not schedule text-only or mark reserve used.",
+      "selectedAt": "2026-10-24T00:09:00.000Z"
     }
   ],
   "lastRun": {
