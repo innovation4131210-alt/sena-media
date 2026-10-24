@@ -79,6 +79,13 @@ async function inventory(channel) {
   return rows;
 }
 
+function hasVisualAsset(post) {
+  return Array.isArray(post?.assets) && post.assets.some(asset =>
+    typeof asset?.id === "string" && asset.id.length > 0 &&
+    /^(image|video)\//i.test(String(asset.mimeType ?? ""))
+  );
+}
+
 function sameTarget(post,target) {
   const when=Date.parse(post.dueAt ?? post.sentAt ?? "");
   return post.text===target.text && Number.isFinite(when) && Math.abs(when-Date.parse(target.dueAt))<=60000;
@@ -145,6 +152,13 @@ async function main() {
 
   const channel=await resolveChannel();
   let existing=await inventory(channel);
+  if (queue.policy?.visualRequired === true) {
+    const withoutVisual = existing.filter(p => p.status === "scheduled" && !hasVisualAsset(p));
+    if (withoutVisual.length) throw new Error(
+      "MIO X visual-first violation: live scheduled posts without image/video assets (" +
+      withoutVisual.map(p => p.id).join(",") + ")"
+    );
+  }
   let changed=false;
 
   for (const target of queue.posts.filter(p => ["pending", "creating", "created_unverified"].includes(p.status))) {
@@ -157,6 +171,7 @@ async function main() {
     }
     if (!["sent", "scheduled"].includes(found.status)) throw new Error(`Unexpected Buffer recovery status: ${target.key}: ${found.status}`);
     if (target.bufferPostId && target.bufferPostId !== found.id) throw new Error(`Buffer recovery ID mismatch: ${target.key}`);
+    if (found.status === "scheduled" && !hasVisualAsset(found)) throw new Error(`MIO X recovery missing visual: ${target.key}`);
     target.status=found.status==="sent"?"sent":"scheduled";
     target.bufferPostId=found.id;
     target.bufferDueAt=found.dueAt ?? target.dueAt;
@@ -206,16 +221,24 @@ async function main() {
     if (!readback || readback.status!=="scheduled" || readback.text!==target.text || Date.parse(readback.dueAt)!==Date.parse(target.dueAt)) {
       throw new Error(`Buffer readback failed: ${target.key}`);
     }
-    if (queue.policy?.visualRequired===true && !(readback.assets??[]).some(a=>String(a.mimeType??"").startsWith("image/") || String(a.mimeType??"").startsWith("video/"))) {
+    if (queue.policy?.visualRequired===true && !hasVisualAsset(readback)) {
       throw new Error(`Visual asset readback failed: ${target.key}`);
     }
     target.status = "scheduled";
     await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
   }
 
-  queue.updatedAt=new Date().toISOString();
-  queue.lastRun={channelId:channel.id,channelName:channel.name,scheduledCount,verifiedAt:new Date().toISOString()};
-  if (changed) await writeFile(QUEUE_FILE,JSON.stringify(queue,null,2)+"\n");
+  const checkedAt=new Date().toISOString();
+  queue.updatedAt=checkedAt;
+  queue.lastRun={
+    channelId:channel.id,
+    channelName:channel.name,
+    scheduledCount,
+    verifiedVisualCount:existing.filter(p=>p.status==="scheduled" && hasVisualAsset(p)).length,
+    verifiedAt:checkedAt
+  };
+  // Persist the read-only live audit even when no posts were created.
+  await writeFile(QUEUE_FILE,JSON.stringify(queue,null,2)+"\n");
   console.log(JSON.stringify({ok:true,changed,...queue.lastRun},null,2));
 }
 
