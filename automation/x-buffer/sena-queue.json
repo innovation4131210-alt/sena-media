@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-17T04:38:24.381Z",
+  "updatedAt": "2026-10-24T00:07:08.178Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -424,8 +424,10 @@
   "lastRun": {
     "channelId": "6ab4f318ea19ca0bded37a49",
     "channelName": "sena_ai_studio",
-    "scheduledCount": 10,
-    "created": 1,
-    "verifiedAt": "2026-10-17T04:38:24.381Z"
+    "scheduledCount": 0,
+    "verifiedVisualCount": 0,
+    "heldVisualRequiredCount": 4,
+    "created": 0,
+    "verifiedAt": "2026-10-24T00:07:08.178Z"
   }
 }
