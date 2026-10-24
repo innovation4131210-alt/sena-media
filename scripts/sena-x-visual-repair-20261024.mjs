@@ -179,6 +179,37 @@ async function main() {
         }
         if(!draft) {
           console.log(JSON.stringify({key,status:"draft_media_not_verified_refusing_to_schedule"}));
+          // Safe diagnostic: one exact-approved-image createPost draft. NEVER publish this probe.
+          // If Buffer strips assets even on creation, retain it as an unscheduled draft.
+          if (key==="sena-d27") {
+            if (!t.visualProbeDraftId) {
+              const response=await gql(`mutation($input:CreatePostInput!) {
+                createPost(input:$input) {
+                  __typename
+                  ... on PostActionSuccess {post {id text status channelId assets {id mimeType}}}
+                  ... on MutationError {message}
+                }
+              }`,{input:{
+                text:t.text,channelId:ch.id,schedulingType:"automatic",mode:"addToQueue",
+                saveToDraft:true,aiAssisted:true,assets:[{image:{url:hostedUrl}}]
+              }});
+              const created=response.createPost?.post;
+              if(!created?.id || created.channelId!==ch.id || created.status!=="draft") {
+                throw Error("Approved image-only draft probe rejected: "+String(response.createPost?.message??"unexpected response"));
+              }
+              t.visualProbeDraftId=created.id;
+              t.visualProbeSourceGitBlob=expected.sha;
+              await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\n");
+            }
+            const probe=(await inventory(ch)).find(r=>r.id===t.visualProbeDraftId);
+            console.log(JSON.stringify({
+              key,status:"new_draft_asset_probe",
+              postId:t.visualProbeDraftId,
+              isDraft:probe?.status==="draft",
+              hasActualImage:isVisual(probe),
+              mediaCount:probe?.assets?.length??null
+            }));
+          }
           continue;
         }
         const current=await inventory(ch);
