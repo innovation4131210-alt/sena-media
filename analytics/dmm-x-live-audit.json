@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "checkedAt": "2026-10-24T22:44:45.620Z",
-  "updatedAt": "2026-10-24T22:44:48.055Z",
+  "checkedAt": "2026-10-24T23:20:23.779Z",
+  "updatedAt": "2026-10-24T23:20:25.771Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -102,86 +102,89 @@
     ]
   },
   "metrics": {
-    "samplePosts": 40,
+    "samplePosts": 16,
     "coverage": {
       "totalSent": 97,
       "selected": 40,
-      "attempted": 40,
-      "fetched": 40,
-      "comparable": 40,
-      "cached": 0,
+      "attempted": 17,
+      "fetched": 16,
+      "comparable": 16,
+      "cached": 24,
       "missing": 0,
-      "status": "complete",
-      "cooldown": null
+      "status": "rate_limited",
+      "cooldown": {
+        "status": 429,
+        "retryAt": "2026-10-24T23:52:28.771Z"
+      }
     },
     "freshness": {
       "oldestMetricsUpdatedAt": "2026-10-24T03:12:31.002Z",
       "newestMetricsUpdatedAt": "2026-10-24T14:30:28.934Z"
     },
     "overall": {
-      "posts": 40,
-      "impressions": 960,
-      "clicks": 6,
+      "posts": 16,
+      "impressions": 328,
+      "clicks": 4,
       "reactions": 1,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 40,
-        "clicks": 40,
-        "reactions": 40,
-        "comments": 40,
-        "reposts": 40
+        "impressions": 16,
+        "clicks": 16,
+        "reactions": 16,
+        "comments": 16,
+        "reposts": 16
       },
-      "ctrPct": 0.63
+      "ctrPct": 1.22
     },
     "affiliate": {
-      "posts": 27,
-      "impressions": 742,
-      "clicks": 6,
+      "posts": 11,
+      "impressions": 254,
+      "clicks": 4,
       "reactions": 1,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 27,
-        "clicks": 27,
-        "reactions": 27,
-        "comments": 27,
-        "reposts": 27
+        "impressions": 11,
+        "clicks": 11,
+        "reactions": 11,
+        "comments": 11,
+        "reposts": 11
       },
-      "ctrPct": 0.81
+      "ctrPct": 1.57
     },
     "byFormat": {
       "discovery": {
-        "posts": 13,
-        "impressions": 355,
-        "clicks": 2,
+        "posts": 5,
+        "impressions": 97,
+        "clicks": 0,
         "reactions": 1,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 13,
-          "clicks": 13,
-          "reactions": 13,
-          "comments": 13,
-          "reposts": 13
+          "impressions": 5,
+          "clicks": 5,
+          "reactions": 5,
+          "comments": 5,
+          "reposts": 5
         },
-        "ctrPct": 0.56
+        "ctrPct": 0
       },
       "decision": {
-        "posts": 14,
-        "impressions": 387,
+        "posts": 6,
+        "impressions": 157,
         "clicks": 4,
         "reactions": 0,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 14,
-          "clicks": 14,
-          "reactions": 14,
-          "comments": 14,
-          "reposts": 14
+          "impressions": 6,
+          "clicks": 6,
+          "reactions": 6,
+          "comments": 6,
+          "reposts": 6
         },
-        "ctrPct": 1.03
+        "ctrPct": 2.55
       }
     },
     "byLinkMode": {
@@ -202,26 +205,26 @@
         "ctrPct": null
       },
       "direct": {
-        "posts": 27,
-        "impressions": 742,
-        "clicks": 6,
+        "posts": 11,
+        "impressions": 254,
+        "clicks": 4,
         "reactions": 1,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 27,
-          "clicks": 27,
-          "reactions": 27,
-          "comments": 27,
-          "reposts": 27
+          "impressions": 11,
+          "clicks": 11,
+          "reactions": 11,
+          "comments": 11,
+          "reposts": 11
         },
-        "ctrPct": 0.81
+        "ctrPct": 1.57
       }
     },
     "posts": [
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:45.683Z",
+        "fetchedAt": "2026-10-24T23:20:23.945Z",
         "id": "6adbd51b8b3d437ddc89543e",
         "sentAt": "2026-10-24T14:30:19.841Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114001546790760930",
@@ -241,7 +244,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:45.742Z",
+        "fetchedAt": "2026-10-24T23:20:24.050Z",
         "id": "6adbd5180b5343d07050495f",
         "sentAt": "2026-10-24T12:30:13.435Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113971320803172528",
@@ -261,7 +264,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:45.812Z",
+        "fetchedAt": "2026-10-24T23:20:24.153Z",
         "id": "6adbd515bd33ce99c3f03fa4",
         "sentAt": "2026-10-24T03:30:20.268Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113835452876607834",
@@ -281,7 +284,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:45.864Z",
+        "fetchedAt": "2026-10-24T23:20:24.270Z",
         "id": "6ada9fba8d2197cb2a0751cc",
         "sentAt": "2026-10-23T14:30:36.404Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113639228391236023",
@@ -301,7 +304,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:45.921Z",
+        "fetchedAt": "2026-10-24T23:20:24.382Z",
         "id": "6ada9fb89ef33e7811aa7ccd",
         "sentAt": "2026-10-23T12:30:32.873Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113609014500008337",
@@ -321,7 +324,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:45.977Z",
+        "fetchedAt": "2026-10-24T23:20:24.521Z",
         "id": "6ada9fb58d2197cb2a07514f",
         "sentAt": "2026-10-23T03:30:06.996Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113473010669691360",
@@ -341,7 +344,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.044Z",
+        "fetchedAt": "2026-10-24T23:20:24.625Z",
         "id": "6ad949ec7d56fe463dad169b",
         "sentAt": "2026-10-22T14:30:36.688Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113276841444229377",
@@ -361,7 +364,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.108Z",
+        "fetchedAt": "2026-10-24T23:20:24.720Z",
         "id": "6ad949ead0598dd30cfb66a5",
         "sentAt": "2026-10-22T12:30:34.723Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113246634419081397",
@@ -381,7 +384,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.164Z",
+        "fetchedAt": "2026-10-24T23:20:24.893Z",
         "id": "6ad949e7b5ae3ccc5eb85b6f",
         "sentAt": "2026-10-22T03:30:20.273Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113110678261125129",
@@ -401,7 +404,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.224Z",
+        "fetchedAt": "2026-10-24T23:20:25.006Z",
         "id": "6ad7f9bb5a0b7fe6fa7c2689",
         "sentAt": "2026-10-21T14:30:28.924Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112914421139853445",
@@ -421,7 +424,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.272Z",
+        "fetchedAt": "2026-10-24T23:20:25.109Z",
         "id": "6ad7f9bac8c16a2bbdb5f7ed",
         "sentAt": "2026-10-21T12:30:36.722Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112884254493347851",
@@ -441,7 +444,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.360Z",
+        "fetchedAt": "2026-10-24T23:20:25.209Z",
         "id": "6ad7f9ba79ac5466f5c752f1",
         "sentAt": "2026-10-21T03:30:12.159Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112748256706912264",
@@ -461,7 +464,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.436Z",
+        "fetchedAt": "2026-10-24T23:20:25.311Z",
         "id": "6ad6a6b69d034d7aedcb0949",
         "sentAt": "2026-10-20T14:30:35.142Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112552059174068610",
@@ -481,7 +484,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.485Z",
+        "fetchedAt": "2026-10-24T23:20:25.467Z",
         "id": "6ad6a6b52d48e20f64bab937",
         "sentAt": "2026-10-20T12:30:36.674Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112521866740973655",
@@ -501,7 +504,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.559Z",
+        "fetchedAt": "2026-10-24T23:20:25.560Z",
         "id": "6ad6a6b5e9c669def5ddf9db",
         "sentAt": "2026-10-20T03:30:05.874Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112385841943212090",
@@ -521,7 +524,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-24T22:44:46.625Z",
+        "fetchedAt": "2026-10-24T23:20:25.704Z",
         "id": "6ad5522aa48c8f8371b9be18",
         "sentAt": "2026-10-19T14:30:26.999Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112189637271724505",
@@ -540,7 +543,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:46.711Z",
         "id": "6ad55227ae173d6e00204583",
         "sentAt": "2026-10-19T12:30:31.849Z",
@@ -557,10 +560,11 @@
         "clicks": 0,
         "reactions": 0,
         "comments": 0,
-        "reposts": 0
+        "reposts": 0,
+        "metricsError": "Buffer rate limited; collection stopped"
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:46.760Z",
         "id": "6ad552250b0d72757a4180c5",
         "sentAt": "2026-10-19T03:30:22.896Z",
@@ -580,7 +584,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:46.821Z",
         "id": "6ad400ae0b0d72757af9ee61",
         "sentAt": "2026-10-18T14:30:06.812Z",
@@ -600,7 +604,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:46.883Z",
         "id": "6ad400ac0b0d72757af9ee11",
         "sentAt": "2026-10-18T12:30:19.678Z",
@@ -620,7 +624,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:46.938Z",
         "id": "6ad400aaae173d6e00d8d998",
         "sentAt": "2026-10-18T03:30:04.727Z",
@@ -640,7 +644,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:46.991Z",
         "id": "6ad2ada5c34368e4b099b9cd",
         "sentAt": "2026-10-17T14:30:08.666Z",
@@ -660,7 +664,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.049Z",
         "id": "6ad2ada21694d771d50e4ab0",
         "sentAt": "2026-10-17T12:30:07.951Z",
@@ -680,7 +684,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.100Z",
         "id": "6ad2ada01c7e49ea4c2a277d",
         "sentAt": "2026-10-17T03:30:08.087Z",
@@ -700,7 +704,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.156Z",
         "id": "6ad1604aa82f34dbe137cea5",
         "sentAt": "2026-10-16T14:30:42.703Z",
@@ -720,7 +724,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.218Z",
         "id": "6ad16048e991a49db3ba7ff3",
         "sentAt": "2026-10-16T12:30:24.758Z",
@@ -740,7 +744,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.298Z",
         "id": "6ad160464ed7d375a4369666",
         "sentAt": "2026-10-16T03:30:08.997Z",
@@ -760,7 +764,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.371Z",
         "id": "6ad00975cf4828067a352442",
         "sentAt": "2026-10-15T14:30:21.706Z",
@@ -780,7 +784,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.430Z",
         "id": "6ad00973cf4828067a351f32",
         "sentAt": "2026-10-15T12:30:42.256Z",
@@ -800,7 +804,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.490Z",
         "id": "6ad00970392879e023534003",
         "sentAt": "2026-10-15T03:30:06.579Z",
@@ -820,7 +824,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.539Z",
         "id": "6acebee633507eb5b0e37432",
         "sentAt": "2026-10-14T14:30:50.190Z",
@@ -840,7 +844,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.593Z",
         "id": "6acebee40d20fd15277099c9",
         "sentAt": "2026-10-14T12:30:44.428Z",
@@ -860,7 +864,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.645Z",
         "id": "6acebee1848c31c809506d5b",
         "sentAt": "2026-10-14T03:30:10.458Z",
@@ -880,7 +884,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.717Z",
         "id": "6acd70093d6121df4034a0ff",
         "sentAt": "2026-10-13T14:30:35.610Z",
@@ -900,7 +904,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.773Z",
         "id": "6acd70073d6121df4034a0bb",
         "sentAt": "2026-10-13T12:30:36.786Z",
@@ -920,7 +924,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.825Z",
         "id": "6acd70053d6121df4034a07c",
         "sentAt": "2026-10-13T03:30:08.112Z",
@@ -940,7 +944,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.885Z",
         "id": "6ac6b3bb31a577b8bd2dfbb6",
         "sentAt": "2026-10-08T14:30:20.255Z",
@@ -960,7 +964,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:47.944Z",
         "id": "6ac6b3bbc16f98d294cbcb12",
         "sentAt": "2026-10-08T12:30:20.424Z",
@@ -980,7 +984,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:48.002Z",
         "id": "6ac6b3bab20a10e4de2d00cc",
         "sentAt": "2026-10-08T03:30:04.538Z",
@@ -1000,7 +1004,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-24T22:44:48.053Z",
         "id": "6ac561d510de5e15cbddffa8",
         "sentAt": "2026-10-07T14:30:22.008Z",
