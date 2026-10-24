@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T17:21:21.945Z",
+  "updatedAt": "2026-10-24T00:07:46.887Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -329,7 +329,7 @@
       "key": "sena-threads-autumn-stock-19-2026-10-26",
       "dueAt": "2026-10-26T11:10:00.000Z",
       "text": "秋の色が並ぶマーケット。落ち着いた色の服で、ゆっくり眺めたい。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e1daeda14152585db12c2f1b613c30b58f80a05a/media/sena-30day-2026-09-28/SENA_autumn_19_farmers_market.png",
       "visualFirst": true,
       "sourceSha256": "8f85cf8aa117d393bcc3a67af789cbf15fb17aed3889d7093d1c23dc6757faab",
@@ -347,13 +347,17 @@
         "coverage": "Generated Oct19 originals; all post-generation known IG/Threads operations and 65 image references checked, including Muse desk. No matching original/crop. Provider inventory is rechecked by runner before mutation.",
         "noDuplicateVisibleScene": true
       },
-      "aiDisclosurePlacement": "Existing AI-character profile plus runner aiAssisted=true; preserve provenance and current still-image Threads disclosure policy"
+      "aiDisclosurePlacement": "Existing AI-character profile plus runner aiAssisted=true; preserve provenance and current still-image Threads disclosure policy",
+      "attemptedAt": "2026-10-24T00:07:44.807Z",
+      "bufferPostId": "6adbf6d1bd33ce99c3f81fb7",
+      "bufferDueAt": "2026-10-26T11:10:00.000Z",
+      "processedAt": "2026-10-24T00:07:45.320Z"
     },
     {
       "key": "sena-threads-autumn-stock-20-2026-10-27",
       "dueAt": "2026-10-27T11:10:00.000Z",
       "text": "窓辺の机と、一冊のノート。静かな時間に似合う、深い色のニット。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e1daeda14152585db12c2f1b613c30b58f80a05a/media/sena-30day-2026-09-28/SENA_20_home_writing_desk.png",
       "visualFirst": true,
       "sourceSha256": "948cafab3a0ce0ab35dd325dbaa0ca8188e2e29dcecb051af206ec7598429ea4",
@@ -371,13 +375,17 @@
         "coverage": "Generated Oct19 originals; all post-generation known IG/Threads operations and 65 image references checked, including Muse desk. No matching original/crop. Provider inventory is rechecked by runner before mutation.",
         "noDuplicateVisibleScene": true
       },
-      "aiDisclosurePlacement": "Existing AI-character profile plus runner aiAssisted=true; preserve provenance and current still-image Threads disclosure policy"
+      "aiDisclosurePlacement": "Existing AI-character profile plus runner aiAssisted=true; preserve provenance and current still-image Threads disclosure policy",
+      "attemptedAt": "2026-10-24T00:07:45.508Z",
+      "bufferPostId": "6adbf6d13d5b27036b5a593b",
+      "bufferDueAt": "2026-10-27T11:10:00.000Z",
+      "processedAt": "2026-10-24T00:07:45.998Z"
     },
     {
       "key": "sena-threads-autumn-stock-21-2026-10-28",
       "dueAt": "2026-10-28T11:10:00.000Z",
       "text": "秋の小道に、淡いブルーの羽織り。足元はスニーカーで軽やかに。",
-      "status": "pending",
+      "status": "scheduled",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e1daeda14152585db12c2f1b613c30b58f80a05a/media/sena-30day-2026-09-28/SENA_21_original.png",
       "visualFirst": true,
       "sourceSha256": "0f534fe056eddcaa4a0117d1e6742f5bd2a4aa5b8f5e9d3c2a10d1a6a1a3be5c",
@@ -395,7 +403,11 @@
         "coverage": "Generated Oct19 originals; all post-generation known IG/Threads operations and 65 image references checked, including Muse desk. No matching original/crop. Provider inventory is rechecked by runner before mutation.",
         "noDuplicateVisibleScene": true
       },
-      "aiDisclosurePlacement": "Existing AI-character profile plus runner aiAssisted=true; preserve provenance and current still-image Threads disclosure policy"
+      "aiDisclosurePlacement": "Existing AI-character profile plus runner aiAssisted=true; preserve provenance and current still-image Threads disclosure policy",
+      "attemptedAt": "2026-10-24T00:07:46.168Z",
+      "bufferPostId": "6adbf6d20b5343d07057e052",
+      "bufferDueAt": "2026-10-28T11:10:00.000Z",
+      "processedAt": "2026-10-24T00:07:46.716Z"
     }
   ],
   "activation": {
@@ -408,8 +420,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 2,
-    "verifiedAt": "2026-10-23T17:21:21.945Z"
+    "scheduledCount": 5,
+    "verifiedAt": "2026-10-24T00:07:46.887Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
