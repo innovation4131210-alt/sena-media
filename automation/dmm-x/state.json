@@ -1,6 +1,6 @@
 {
-  "last_buffer_post_id": "6adbd51b8b3d437ddc89543e",
-  "last_due_at": "2026-10-24T14:30:00.000Z",
+  "last_buffer_post_id": "6add27123d5b27036ba3e649",
+  "last_due_at": "2026-10-25T14:30:00.000Z",
   "used_content_ids": [
     "savr01180",
     "pred00899",
@@ -74,33 +74,13 @@
     "savr01132",
     "sqte00635",
     "mikr00039",
-    "sqte00690"
+    "sqte00690",
+    "ofje00416",
+    "sqde00022"
   ],
-  "last_content_id": "sqte00690",
+  "last_content_id": "sqde00022",
   "affiliate_template_index": 6,
   "post_history": [
-    {
-      "buffer_post_id": "6aa8ffdbbc24766c89664464",
-      "due_at": "2026-09-15T14:30:00.000Z",
-      "kind": "affiliate",
-      "template_index": 5,
-      "content_id": "sqte00654",
-      "sort": "review"
-    },
-    {
-      "buffer_post_id": "6aa9b2242df46a9af0cab134",
-      "due_at": "2026-09-16T03:30:00.000Z",
-      "kind": "engagement",
-      "template_index": 2
-    },
-    {
-      "buffer_post_id": "6aa9fb85bcef7237b5a9bdb6",
-      "due_at": "2026-09-16T12:30:00.000Z",
-      "kind": "affiliate",
-      "template_index": 0,
-      "content_id": "juvr00309",
-      "sort": "rank"
-    },
     {
       "buffer_post_id": "6aaa4f65f1e94c50adc84b4a",
       "due_at": "2026-09-16T13:03:00.000Z",
@@ -1672,31 +1652,91 @@
       "source_position": 22,
       "source_sort": "review",
       "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6add270d3d5b27036ba3e5b1",
+      "due_at": "2026-10-25T03:30:00.000Z",
+      "kind": "engagement",
+      "template_index": 3
+    },
+    {
+      "buffer_post_id": "6add270f8b3d437ddcdc35c4",
+      "due_at": "2026-10-25T12:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "ofje00416",
+      "sort": "rank",
+      "link_mode": "direct",
+      "format": "discovery",
+      "price": 250,
+      "review_average": 3.79,
+      "review_count": 29,
+      "discount_pct": 50,
+      "has_image_url": true,
+      "campaign_active": true,
+      "campaign_title": "働くお姉さん50％OFF",
+      "campaign_end": "2026-10-26 09:59:59",
+      "campaign_focus": true,
+      "recent_release": false,
+      "actress_name": "河北彩花（河北彩伽）",
+      "actress_popularity_score": 693.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 10,
+      "source_sort": "rank",
+      "media_enabled": false
+    },
+    {
+      "buffer_post_id": "6add27123d5b27036ba3e649",
+      "due_at": "2026-10-25T14:30:00.000Z",
+      "kind": "affiliate",
+      "template_index": 0,
+      "content_id": "sqde00022",
+      "sort": "review",
+      "link_mode": "direct",
+      "format": "decision",
+      "price": 300,
+      "review_average": 5.0,
+      "review_count": 33,
+      "discount_pct": 0,
+      "has_image_url": true,
+      "campaign_active": false,
+      "campaign_title": "",
+      "campaign_end": "",
+      "campaign_focus": false,
+      "recent_release": false,
+      "actress_name": "柏木こなつ",
+      "actress_popularity_score": 354.0,
+      "known_actress_pool_used": true,
+      "demand_gate_passed": true,
+      "source_position": 17,
+      "source_sort": "review",
+      "media_enabled": false
     }
   ],
-  "engagement_index": 3,
-  "batch_date": "2026-10-24",
+  "engagement_index": 4,
+  "batch_date": "2026-10-25",
   "batch_slots": {
     "engagement": {
-      "buffer_post_id": "6adbd515bd33ce99c3f03fa4",
-      "due_at": "2026-10-24T03:30:00.000Z"
+      "buffer_post_id": "6add270d3d5b27036ba3e5b1",
+      "due_at": "2026-10-25T03:30:00.000Z"
     },
     "rank_first_reply": {
-      "buffer_post_id": "6adbd5180b5343d07050495f",
-      "due_at": "2026-10-24T12:30:00.000Z"
+      "buffer_post_id": "6add270f8b3d437ddcdc35c4",
+      "due_at": "2026-10-25T12:30:00.000Z"
     },
     "review_direct": {
-      "buffer_post_id": "6adbd51b8b3d437ddc89543e",
-      "due_at": "2026-10-24T14:30:00.000Z"
+      "buffer_post_id": "6add27123d5b27036ba3e649",
+      "due_at": "2026-10-25T14:30:00.000Z"
     }
   },
-  "discovery_template_index": 3,
+  "discovery_template_index": 1,
   "content_strategy_version": "real-selection-v7-campaign-demand-first",
-  "decision_template_index": 3,
+  "decision_template_index": 1,
   "last_run": {
     "status": "success",
-    "at": "2026-10-23T21:43:55.334923+00:00",
-    "batch_date": "2026-10-24",
+    "at": "2026-10-24T21:45:54.496079+00:00",
+    "batch_date": "2026-10-25",
     "recovered_count": 0,
     "repaired_count": 0,
     "created_count": 3
