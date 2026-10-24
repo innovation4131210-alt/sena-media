@@ -13,8 +13,18 @@ const MEDIA = {
 };
 
 function isVisual(row) {
+  // Buffer public-URL ImageAsset objects may legitimately have no internal id.
+  // Require the actual GraphQL ImageAsset union, JPEG MIME, source and dimensions.
   return Array.isArray(row?.assets) && row.assets.some(a =>
-    a?.id && /^(image|video)\//i.test(String(a.mimeType ?? ""))
+    a?.__typename==="ImageAsset" && /^image\//i.test(String(a.mimeType??"")) &&
+    typeof a.source==="string" && Number(a.image?.width)>0 && Number(a.image?.height)>0
+  );
+}
+function hasExactImage(row,url) {
+  return isVisual(row) && row.assets.some(a =>
+    a?.__typename==="ImageAsset" && a.source===url &&
+    /^image\//i.test(String(a.mimeType??"")) &&
+    Number(a.image?.width)>0 && Number(a.image?.height)>0
   );
 }
 
@@ -118,7 +128,7 @@ async function edit(id,fields) {
   return data.editPost.post;
 }
 
-async function confirmed(ch,target,requireVisual=true) {
+async function confirmed(ch,target,requireVisual=true,expectedImageUrl=null) {
   for(let attempt=0;attempt<4;attempt++) {
     const rows=await inventory(ch);
     const row=rows.find(r=>r.id===target.bufferPostId);
@@ -128,7 +138,7 @@ async function confirmed(ch,target,requireVisual=true) {
       }
       if(requireVisual) {
         if(!rowMatches(row,target)) throw Error("Post schedule drift");
-        if(row.status==="scheduled" && isVisual(row)) return row;
+        if(row.status==="scheduled" && isVisual(row) && (!expectedImageUrl || hasExactImage(row,expectedImageUrl))) return row;
       } else if(row.status==="draft") {
         return row;
       }
@@ -175,7 +185,7 @@ async function main() {
         let draft;
         for(let attempt=0;attempt<4;attempt++) {
           const current=(await inventory(ch)).find(r=>r.id===t.bufferPostId);
-          if(current?.status==="draft" && current.text===t.text && isVisual(current)) {
+          if(current?.status==="draft" && current.text===t.text && hasExactImage(current,hostedUrl)) {
             draft=current;break;
           }
           if(attempt<3) await new Promise(done=>setTimeout(done,2000));
@@ -230,14 +240,17 @@ async function main() {
           saveToDraft:false,mode:"customScheduled",
           dueAt:t.dueAt,schedulingType:"automatic",
         });
-        const good=await confirmed(ch,t,true);
-        const visual=good.assets.find(a=>a.id && ["image/","video/"].some(prefix=>String(a.mimeType??"").startsWith(prefix)));
+        const good=await confirmed(ch,t,true,hostedUrl);
+        const visual=good.assets.find(a=>a.__typename==="ImageAsset" && a.source===hostedUrl);
         Object.assign(t,{
           status:"scheduled",bufferVisualVerifiedAt:new Date().toISOString(),
           bufferVisualMimeType:visual?.mimeType,bufferVisualAssetId:visual?.id,
           exactSourceGitBlob:expected.sha,
           bufferMediaUrl:hostedUrl,
-          visualRepair:"draft_asset_verified_then_rescheduled"
+          bufferImageAssetType:visual?.__typename,
+          bufferImageWidth:visual?.image?.width,
+          bufferImageHeight:visual?.image?.height,
+          visualRepair:"draft_verified_ImageAsset_source_and_dimensions_then_rescheduled"
         });
         delete t.holdReason;
         edited++;verified++;
