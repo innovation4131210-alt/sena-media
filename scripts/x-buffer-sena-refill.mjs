@@ -66,7 +66,10 @@ async function inventory(channel) {
         filter: { channelIds: [$channelId] }
         sort: [{ field: dueAt, direction: asc }]
       }) {
-        edges { node { id text status dueAt sentAt externalLink channelId assets { id mimeType } } }
+        edges { node { id text status dueAt sentAt externalLink channelId assets {
+          id mimeType __typename source
+          ... on ImageAsset { image { width height } }
+        } } }
         pageInfo { hasNextPage }
       }
     }`,
@@ -87,8 +90,12 @@ async function inventory(channel) {
 
 function hasVisualAsset(post) {
   return Array.isArray(post?.assets) && post.assets.some(asset =>
-    typeof asset?.id === "string" && asset.id.length > 0 &&
-    /^(image|video)\//i.test(String(asset.mimeType ?? ""))
+    /^(image|video)\//i.test(String(asset?.mimeType ?? "")) &&
+    (Boolean(asset?.id) || (
+      asset?.__typename === "ImageAsset" &&
+      /^https:\/\//.test(String(asset.source ?? "")) &&
+      Number(asset.image?.width) > 0 && Number(asset.image?.height) > 0
+    ))
   );
 }
 
