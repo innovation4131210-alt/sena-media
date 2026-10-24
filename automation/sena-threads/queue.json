@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T00:07:46.887Z",
+  "updatedAt": "2026-10-24T16:09:27.124Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -267,7 +267,7 @@
       "key": "sena-threads-autumn-stock-17-2026-10-24",
       "dueAt": "2026-10-24T11:10:00.000Z",
       "text": "色づいた庭を、ゆっくりひと回り。今日は歩きやすい靴で。",
-      "status": "scheduled",
+      "status": "sent",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e3e4a89d86a77e445667940c71b515f2eb0ea2c8/media/sena-30day-2026-09-28/SENA_autumnstock_17_garden_walk_original.png",
       "visualFirst": true,
       "sourceSha256": "bc234caf9aaa6bd788be71072c9ed5b0371ea620ee5cbfd2bdcd56107bec9b21",
@@ -292,7 +292,10 @@
       "attemptedAt": "2026-10-23T00:04:43.724Z",
       "bufferPostId": "6adaa49c8d2197cb2a0870ac",
       "bufferDueAt": "2026-10-24T11:10:00.000Z",
-      "processedAt": "2026-10-23T00:04:44.135Z"
+      "processedAt": "2026-10-23T00:04:44.135Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De3_jOPEf1u",
+      "sentAt": "2026-10-24T11:10:13.724Z",
+      "statusSyncedAt": "2026-10-24T16:09:27.124Z"
     },
     {
       "key": "sena-threads-autumn-stock-18-2026-10-25",
@@ -421,7 +424,7 @@
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
     "scheduledCount": 5,
-    "verifiedAt": "2026-10-24T00:07:46.887Z"
+    "verifiedAt": "2026-10-24T16:09:27.124Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
