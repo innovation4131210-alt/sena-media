@@ -47,12 +47,31 @@ export function verifyContinuationHistory(state, rows, policy) {
     if(old.sourceBufferAssetId&&(post.assets.length!==1||(post.assets[0].id!==null&&post.assets[0].id!==old.sourceBufferAssetId))) throw Error('Historical asset ID drift');
   }
 }
+// Individually read back from existing native posts on 2026-10-25. These
+// sources contain the exact approved PNG bytes despite a JPEG API MIME label.
+const confirmedPngMimeAnomalies=[
+  [58,'6add4873ba0b93d831ee761a','6add48491b7443e5a20b7643','37fb7712418d473b76094fa4092402dee37cb5ae674926397e9bcf759156adc3'],
+  [59,'6add48b0b9e8ba611cf514f3','6add488b9d1aaab2b1967e93','ea686693d7023bca37fe4301e0f88cd4be876e3fbeef022af86c5a01197989d1'],
+  [60,'6add48fa98a2969fb6c6b8ba','6add48d1c58b15582e657e4c','9ecaa341bb1816e2c4f5ae525c0077b4d41d4a46fec6766fe27cb10e3fdb6c35']
+];
+function confirmedPngMimeAnomaly(item,post) {
+  const asset=post?.assets?.[0];
+  if(asset?.mimeType!=='image/jpeg'||!item.filename?.toLowerCase().endsWith('.png')) return null;
+  const entry=confirmedPngMimeAnomalies.find(([day,id,,sha])=>item.day===day&&post.id===id&&item.bufferPostId===id&&item.sha256===sha);
+  if(!entry||(asset.id!==null&&asset.id!==entry[2])) return null;
+  let source;try {source=new URL(asset.source);}catch {return null;}
+  const expected='https://buffer-media-uploads.s3.amazonaws.com/6aa723c8818d2fe928ccb222/'+entry[2];
+  if(source.protocol!=='https:'||source.username||source.password||source.search||source.hash||source.href!==expected) return null;
+  return {providerDeclaredMime:'image/jpeg',originalMime:'image/png',sourceBufferAssetId:entry[2],originalSha256:entry[3],evidence:'Exact approved native source; PNG signature and original SHA256 verified, not a JPEG derivative.'};
+}
 export async function verifyCreatedMedia(item, post, transport) {
   if(!post||post.channelId!==CHANNEL||!['scheduled','sent'].includes(post.status)||post.text!==item.caption||time(post.dueAt)!==time(item.publishAt)||post.assets?.length!==1) throw Error('Created post identity/content/time/asset count readback failed');
   if(post.metadata?.type!=='post'||post.metadata.shouldShareToFeed!==true||post.metadata.isAiGenerated!==true) throw Error('Native Instagram AI/feed metadata readback failed');
   const asset=post.assets[0];
   const expectedMime=item.filename?.toLowerCase().endsWith('.png')?'image/png':'image/jpeg';
-  if((asset.id!==null&&(typeof asset.id!=='string'||!asset.id))||asset.mimeType!==expectedMime||!asset.source||!asset.image||asset.image.altText!=='SENA AI-generated lifestyle image'||asset.image.userTags?.length) {
+  const mimeAnomaly=confirmedPngMimeAnomaly(item,post);
+  if(asset.mimeType==='image/jpeg'&&confirmedPngMimeAnomalies.some(([,id])=>id===post.id)&&!mimeAnomaly) throw Error('Confirmed native PNG anomaly identity/source mismatch');
+  if((asset.id!==null&&(typeof asset.id!=='string'||!asset.id))||(asset.mimeType!==expectedMime&&!mimeAnomaly)||!asset.source||!asset.image||asset.image.altText!=='SENA AI-generated lifestyle image'||asset.image.userTags?.length) {
     // Safe scalar diagnostics only: no provider URL, credential, or free-form metadata.
     const diagnostic={
       day:Number.isInteger(item.day)?item.day:null,
@@ -72,7 +91,10 @@ export async function verifyCreatedMedia(item, post, transport) {
   // Buffer may replace the source URL with its CDN URL. Verify returned bytes,
   // not URL equality; transformed/unavailable bytes remain unverified and stop.
   const response=await transport(source.href,{signal:AbortSignal.timeout(45000),redirect:'error'});
-  if(!response.ok||hash(Buffer.from(await response.arrayBuffer()))!==item.sha256) throw Error('Provider image bytes differ or are unavailable; preserve intent');
+  if(!response.ok) throw Error('Provider image bytes differ or are unavailable; preserve intent');
+  const bytes=Buffer.from(await response.arrayBuffer());
+  if(hash(bytes)!==item.sha256) throw Error('Provider image bytes differ or are unavailable; preserve intent');
+  if(mimeAnomaly&&!bytes.subarray(0,8).equals(Buffer.from('89504e470d0a1a0a','hex'))) throw Error('Confirmed native PNG source has invalid PNG signature');
 }
 export function verifyPost(before, after, dueAt) {
   if(!after||after.id!==before.id||after.channelId!==CHANNEL||after.status!=='scheduled'||after.text!==before.text||time(after.dueAt)!==time(dueAt)||JSON.stringify(after.assets.map(({id,...asset})=>asset))!==JSON.stringify(before.assets.map(({id,...asset})=>asset))||JSON.stringify(after.metadata)!==JSON.stringify(before.metadata)) throw Error('Post ID/content/assets/time readback failed');
@@ -139,6 +161,8 @@ export async function runBatchQueue({transport=fetch,env=process.env,clock=Date.
     Object.assign(e,{date:x.date,bufferPostId:p.id,dueAt:p.dueAt,caption:p.text,lastObservedStatus:p.status,verifiedAt:stamp(),batchId:x.batchId});
     if(x.existingOnly) e.existingOnly=true;
     if(policy.continuation&&x.day>=policy.continuation.startDay) Object.assign(e,{mediaSha256:x.sha256,sourceBufferAssetId:p.assets[0].id,nativeAiGenerated:true,mediaVerification:'SHA256 of provider-returned image bytes matched exact original; native Instagram AI/feed flags verified.'});
+    const mimeAnomaly=confirmedPngMimeAnomaly(x,p);
+    if(mimeAnomaly) e.providerMimeAnomaly={...mimeAnomaly,verifiedAt:e.verifiedAt};
     state.batchMigration.pendingCreates=state.batchMigration.pendingCreates.filter(y=>y.day!==x.day);
   }
   // Reschedule existing IDs; explicitly resend unchanged content because Buffer validates edits as complete posts.
