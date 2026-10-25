@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T16:09:27.124Z",
+  "updatedAt": "2026-10-25T16:41:13.581Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -301,7 +301,7 @@
       "key": "sena-threads-autumn-stock-18-2026-10-25",
       "dueAt": "2026-10-25T11:10:00.000Z",
       "text": "窓辺の光がやわらかくて、もう少しここにいたくなる。",
-      "status": "scheduled",
+      "status": "sent",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e3e4a89d86a77e445667940c71b515f2eb0ea2c8/media/sena-30day-2026-09-28/SENA_autumnstock_18_windowseat_original.png",
       "visualFirst": true,
       "sourceSha256": "755a016266385f1c06c8b50d25aace93c77eb4adf5ff93cbfd7bf141afe9f5fd",
@@ -326,7 +326,10 @@
       "attemptedAt": "2026-10-23T00:04:44.234Z",
       "bufferPostId": "6adaa49ccc1b7cdc08c0b5df",
       "bufferDueAt": "2026-10-25T11:10:00.000Z",
-      "processedAt": "2026-10-23T00:04:44.592Z"
+      "processedAt": "2026-10-23T00:04:44.592Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De6kWBaEapc",
+      "sentAt": "2026-10-25T11:10:12.616Z",
+      "statusSyncedAt": "2026-10-25T16:41:13.581Z"
     },
     {
       "key": "sena-threads-autumn-stock-19-2026-10-26",
@@ -423,8 +426,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 5,
-    "verifiedAt": "2026-10-24T16:09:27.124Z"
+    "scheduledCount": 3,
+    "verifiedAt": "2026-10-25T16:41:13.581Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
