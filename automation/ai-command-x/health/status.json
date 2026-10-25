@@ -1,7 +1,110 @@
 {
-  "checkedAt": "2026-10-24T18:16:13+00:00",
+  "checkedAt": "2026-10-25T18:30:35+00:00",
   "ok": false,
+  "channel": {
+    "id": "6abb9a71ea19ca0bde216771",
+    "name": "ai_command_jp",
+    "isDisconnected": false,
+    "isLocked": false,
+    "isQueuePaused": false
+  },
+  "scheduledCount": 9,
+  "queueIntegrity": {
+    "allMappedToSourceOfTruth": true,
+    "noDuplicateContentIds": true,
+    "inSourceOrder": true,
+    "items": [
+      {
+        "bufferPostId": "6adbafc29acae620d813d8d0",
+        "contentId": "D27-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-26T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6adbafc23d5b27036b4a5986",
+        "contentId": "D27-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-10-26T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6adbafc28b3d437ddc80dba7",
+        "contentId": "D27-PM",
+        "contentType": "作戦報告",
+        "dueAtJst": "2026-10-26T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6adcf2c16887a2efc1cc85a0",
+        "contentId": "D28-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-27T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6adcf2c16887a2efc1cc85c9",
+        "contentId": "D28-NOON",
+        "contentType": "運用改善",
+        "dueAtJst": "2026-10-27T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6adcf2c10b5343d0709790fa",
+        "contentId": "D28-PM",
+        "contentType": "参加型",
+        "dueAtJst": "2026-10-27T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ade487de4be8a4d86be4144",
+        "contentId": "D29-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-10-28T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ade487e0b5343d070e6722b",
+        "contentId": "D29-NOON",
+        "contentType": "実行ログ",
+        "dueAtJst": "2026-10-28T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ade487e6887a2efc11b5a22",
+        "contentId": "D29-PM",
+        "contentType": "無料note導線",
+        "dueAtJst": "2026-10-28T20:30+09:00"
+      }
+    ]
+  },
+  "unusedPreparedCount": 3,
+  "analyticsAgeMinutes": 195.2,
+  "notePublicPages": {
+    "home": {
+      "url": "https://note.com/ai_command",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "free_entry": {
+      "url": "https://note.com/ai_command/n/ne79f153b4665",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "front_product": {
+      "url": "https://note.com/ai_command/n/nbb052c3cb0ad",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "paid_product": {
+      "url": "https://note.com/ai_command/n/n7b74f56a03dc",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "free_A": {
+      "url": "https://note.com/ai_command/n/n29d46a1b4341",
+      "httpStatus": 200,
+      "ok": true
+    },
+    "free_B": {
+      "url": "https://note.com/ai_command/n/n465168c06f64",
+      "httpStatus": 200,
+      "ok": true
+    }
+  },
   "errors": [
-    "healthcheck exception: HTTP Error 429: Too Many Requests"
+    "Prepared backlog too low: 3 unused < 9"
   ]
 }
