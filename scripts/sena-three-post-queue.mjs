@@ -52,7 +52,21 @@ export async function verifyCreatedMedia(item, post, transport) {
   if(post.metadata?.type!=='post'||post.metadata.shouldShareToFeed!==true||post.metadata.isAiGenerated!==true) throw Error('Native Instagram AI/feed metadata readback failed');
   const asset=post.assets[0];
   const expectedMime=item.filename?.toLowerCase().endsWith('.png')?'image/png':'image/jpeg';
-  if((asset.id!==null&&(typeof asset.id!=='string'||!asset.id))||asset.mimeType!==expectedMime||!asset.source||!asset.image||asset.image.altText!=='SENA AI-generated lifestyle image'||asset.image.userTags?.length) throw Error('Created image metadata readback failed');
+  if((asset.id!==null&&(typeof asset.id!=='string'||!asset.id))||asset.mimeType!==expectedMime||!asset.source||!asset.image||asset.image.altText!=='SENA AI-generated lifestyle image'||asset.image.userTags?.length) {
+    // Safe scalar diagnostics only: no provider URL, credential, or free-form metadata.
+    const diagnostic={
+      day:Number.isInteger(item.day)?item.day:null,
+      postId:/^[a-f0-9]{24}$/.test(post.id??'')?post.id:'unavailable',
+      assetIdShape:asset.id===null?'null':typeof asset.id==='string'?(asset.id?'nonempty-string':'empty-string'):typeof asset.id,
+      expectedMime,
+      actualMime:['image/png','image/jpeg'].includes(asset.mimeType)?asset.mimeType:'other-or-missing',
+      sourcePresent:!!asset.source,
+      imagePresent:!!asset.image,
+      altMatches:asset.image?.altText==='SENA AI-generated lifestyle image',
+      userTagCount:Number.isSafeInteger(asset.image?.userTags?.length)?asset.image.userTags.length:null
+    };
+    throw Error('Created image metadata readback failed: '+JSON.stringify(diagnostic));
+  }
   let source;try {source=new URL(asset.source);}catch {throw Error('Invalid provider image source');}
   if(source.protocol!=='https:'||source.username||source.password) throw Error('Unsafe provider image source');
   // Buffer may replace the source URL with its CDN URL. Verify returned bytes,
