@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
+      - name: Test DMM price and campaign safety
+        run: python3 -m unittest discover -s automation/dmm-x/tests -p "test_*.py"
       - name: Honor Buffer API cooldown
         id: buffer_cooldown
         shell: bash
