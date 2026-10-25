@@ -2,6 +2,7 @@
 """Regression tests for DMM X verified-campaign copy; no external API calls."""
 import importlib.util
 import unittest
+from unittest.mock import patch
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -70,6 +71,62 @@ class CampaignCopyTests(unittest.TestCase):
         self.assertIn("架空の女優", result)
         self.assertIn(AFFILIATE_URL, result)
         self.assertLessEqual(queue.x_weighted_length(result), 280)
+
+    def test_expired_promotion_price_is_not_promised_at_future_due_at(self):
+        item = item_with_campaign(None, None)
+        facts = queue.product_facts(item, "架空の女優", campaign_active=False)
+        self.assertIn("出演：架空の女優", facts)
+        self.assertIn("★4.8（25件）", facts)
+        self.assertNotIn("500円", facts)
+        meta = {
+            "actress_name": "架空の女優",
+            "price": 500,
+            "discount_pct": 50,
+            "campaign_active": False,
+            "review_average": 4.8,
+            "review_count": 25,
+        }
+        self.assertNotIn("500円", queue.compact_value_line(meta))
+        self.assertIn("★4.8（25件）", queue.compact_value_line(meta))
+        self.assertIn("500円", queue.product_facts(
+            item_with_campaign(None, None), "架空の女優",
+            campaign_active=True
+        ))
+
+    def test_repairs_only_future_scheduled_price_claim(self):
+        due = (datetime.now(timezone.utc) + timedelta(hours=6)).isoformat(
+            timespec="milliseconds"
+        ).replace("+00:00", "Z")
+        old = "【PR】候補メモ。\\n出演：架空の女優 / 10円\\n" + AFFILIATE_URL
+        expected = "【PR】候補メモ。\\n出演：架空の女優 / ★4.4（128件）\\n" + AFFILIATE_URL
+        row = {
+            "buffer_post_id": "scheduled-1", "kind": "affiliate",
+            "campaign_active": False, "discount_pct": 99, "price": 10,
+            "actress_name": "架空の女優",
+            "review_average": 4.43, "review_count": 128,
+            "content_id": "demo001", "format": "discovery",
+        }
+        post = {
+            "id": "scheduled-1", "text": old, "dueAt": due,
+            "status": "scheduled",
+        }
+        with patch.object(queue, "edit_post_text", return_value={
+            "id": "scheduled-1", "text": expected,
+            "dueAt": due, "status": "scheduled",
+        }) as edit:
+            repaired = queue.repair_scheduled_unverified_price_claims(
+                {"post_history": [row]}, [post]
+            )
+            self.assertEqual(len(repaired), 1)
+            edit.assert_called_once_with("scheduled-1", expected)
+            self.assertIn("price_claim_repaired_at", row)
+        with patch.object(queue, "edit_post_text") as edit:
+            queue.repair_scheduled_unverified_price_claims(
+                {"post_history": [row]}, [{
+                    **post, "text": expected
+                }]
+            )
+            edit.assert_not_called()
 
     def test_active_campaign_can_emit_discount_copy(self):
         item = item_with_campaign(None, None)
