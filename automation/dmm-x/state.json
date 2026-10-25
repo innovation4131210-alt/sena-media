@@ -1724,7 +1724,8 @@
       "demand_gate_passed": true,
       "source_position": 7,
       "source_sort": "rank",
-      "media_enabled": false
+      "media_enabled": false,
+      "price_claim_repaired_at": "2026-10-25T21:54:04.980627+00:00"
     },
     {
       "buffer_post_id": "6ade78d93d5b27036bf3408a",
@@ -1759,15 +1760,18 @@
   "batch_slots": {
     "engagement": {
       "buffer_post_id": "6ade78d4e4be8a4d86ca97dd",
-      "due_at": "2026-10-26T03:30:00.000Z"
+      "due_at": "2026-10-26T03:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "rank_first_reply": {
       "buffer_post_id": "6ade78d78b3d437ddc2bfe8b",
-      "due_at": "2026-10-26T12:30:00.000Z"
+      "due_at": "2026-10-26T12:30:00.000Z",
+      "recovered_from_buffer": true
     },
     "review_direct": {
       "buffer_post_id": "6ade78d93d5b27036bf3408a",
-      "due_at": "2026-10-26T14:30:00.000Z"
+      "due_at": "2026-10-26T14:30:00.000Z",
+      "recovered_from_buffer": true
     }
   },
   "discovery_template_index": 2,
@@ -1775,11 +1779,11 @@
   "decision_template_index": 2,
   "last_run": {
     "status": "success",
-    "at": "2026-10-25T21:47:05.905976+00:00",
+    "at": "2026-10-25T21:54:04.983451+00:00",
     "batch_date": "2026-10-26",
-    "recovered_count": 0,
-    "repaired_count": 0,
-    "created_count": 3
+    "recovered_count": 3,
+    "repaired_count": 1,
+    "created_count": 0
   },
   "p0_status": {
     "url_weighted_length_fix_commit": "1131c165eef6086bb8f3ae81444d5ab79e38605e",
