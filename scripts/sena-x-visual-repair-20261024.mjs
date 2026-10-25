@@ -270,11 +270,31 @@ async function main() {
     }
     if(row.status!=="scheduled") throw Error("Unexpected SENA post state "+key+" "+row.status);
     if(isVisual(row)) {
+      // Reconcile the queue only after verifying both live Buffer image metadata
+      // and the exact, approved Git blob bytes at the image source.
+      const visual=row.assets.find(a=>
+        a?.__typename==="ImageAsset" &&
+        /^image\\//i.test(String(a.mimeType??"")) &&
+        typeof a.source==="string" &&
+        Number(a.image?.width)>0 && Number(a.image?.height)>0
+      );
+      if(!visual) throw Error("Scheduled SENA post lacks a complete ImageAsset: "+key);
+      const bytes=await verifyApprovedImage(visual.source,expected.sha);
+      t.status="scheduled";
       t.bufferVisualVerifiedAt=new Date().toISOString();
-      t.bufferVisualMimeType=row.assets.find(a=>/^(image|video)\//.test(a.mimeType??""))?.mimeType;
+      t.bufferVisualMimeType=visual.mimeType;
+      t.bufferVisualAssetId=visual.id??null;
+      t.bufferMediaUrl=visual.source;
+      t.bufferImageAssetType=visual.__typename;
+      t.bufferImageWidth=visual.image.width;
+      t.bufferImageHeight=visual.image.height;
+      t.exactSourceGitBlob=expected.sha;
+      t.visualRepair="scheduled_exact_visual_reverified";
+      delete t.holdReason;
+      delete t.heldAt;
       verified++;
-      console.log(JSON.stringify({key,status:"already_visual_verified",id:row.id}));
-      await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\n");
+      console.log(JSON.stringify({key,status:"scheduled_exact_visual_reverified",id:row.id,bytes}));
+      await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\\n");
       continue;
     }
     if(Date.parse(t.dueAt)<=Date.now()+180000) {
