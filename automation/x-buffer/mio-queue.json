@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T16:03:56.389Z",
+  "updatedAt": "2026-10-25T00:16:39.667Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -729,7 +729,7 @@
     },
     {
       "key": "mio-x-reserve-R01-2026-10-24",
-      "status": "held_visual_required",
+      "status": "expired_no_catchup",
       "dueAt": "2026-10-24T03:15:00.000Z",
       "text": "出かける前、靴だけまだ迷ってる。\nブーツ？スニーカー？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
       "visualPlan": {
@@ -742,8 +742,27 @@
         "readbackRequired": true,
         "status": "exact_original_ready_public_host_missing"
       },
-      "holdReason": "Exact approved MIO-R01 image remains Library-only; stable public HTTPS image URL and Buffer visual-asset readback not yet available. Do not schedule text-only or mark reserve used.",
-      "selectedAt": "2026-10-24T00:09:00.000Z"
+      "holdReason": "Exact approved MIO-R01 image remains Library-only; stable public HTTPS image URL and Buffer visual-asset readback not yet available. Do not schedule text-only or mark reserve used. Past due; superseded by future held mio-x-reserve-R01-2026-10-26; original asset still unused.",
+      "selectedAt": "2026-10-24T00:09:00.000Z",
+      "expiredAt": "2026-10-25T00:16:39.667Z"
+    },
+    {
+      "key": "mio-x-reserve-R01-2026-10-26",
+      "dueAt": "2026-10-26T03:15:00.000Z",
+      "text": "出かける前、靴だけまだ迷ってる。\nブーツ？スニーカー？\n\n※MIOは架空のAIキャラクターです。画像はAIで制作しています。",
+      "status": "held_visual_required",
+      "holdReason": "Exact QC-approved Library image selected, but no verified public HTTPS media URL or Buffer asset readback. Never transition to pending/scheduled without exact approved hosted media and live slot/identity recheck.",
+      "visualPlan": {
+        "reserveAssetId": "MIO-R01",
+        "approvedSourceLibraryPath": "/MIO-SENA/X-Reserve/2026-09-24/MIO/MIO_X_reserve_boots_room_01.jpeg",
+        "canonicalName": "MIO_X_reserve_boots_room_01.jpeg",
+        "sourceSha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca",
+        "theme": "boots_room",
+        "visualStrength": "strong",
+        "noTextOnlyFallback": true,
+        "readbackRequired": true,
+        "status": "original_checked_public_host_missing"
+      }
     }
   ],
   "lastRun": {
@@ -751,7 +770,9 @@
     "channelName": "mio_ai_life_jp",
     "scheduledCount": 0,
     "verifiedVisualCount": 0,
-    "verifiedAt": "2026-10-24T16:03:56.389Z"
+    "verifiedAt": "2026-10-24T16:03:56.389Z",
+    "heldVisualRequiredCount": 1,
+    "visualHoldReconciliationAt": "2026-10-25T00:16:39.667Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
 }
