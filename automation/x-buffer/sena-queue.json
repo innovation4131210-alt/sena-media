@@ -375,8 +375,7 @@
       "bufferPostId": "6ad05bafc183410f7421af29",
       "bufferDueAt": "2026-10-25T04:05:00.000Z",
       "processedAt": "2026-10-15T04:50:56.105Z",
-      "heldAt": "2026-10-23T23:44:16.178Z",
-      "bufferVisualVerifiedAt": "2026-10-25T00:09:36.994Z",
+      "bufferVisualVerifiedAt": "2026-10-25T00:12:19.883Z",
       "bufferVisualMimeType": "image/jpeg",
       "bufferVisualAssetId": null,
       "exactSourceGitBlob": "ea89df57daed1e0105a6bd977e87feb10f84747f",
@@ -384,22 +383,27 @@
       "bufferImageAssetType": "ImageAsset",
       "bufferImageWidth": 1122,
       "bufferImageHeight": 1402,
-      "visualRepair": "draft_verified_ImageAsset_source_and_dimensions_then_rescheduled"
+      "visualRepair": "scheduled_exact_visual_reverified"
     },
     {
       "key": "sena-d29",
       "dueAt": "2026-10-26T04:05:00Z",
       "text": "白いコートで、秋の街を歩く。\n風が冷たくなったぶん、寄り道したくなる。\n\n#SENA #AIモデル",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/main/media/sena-30day-2026-09-28/SENA_2026-10-26_D29.jpeg",
-      "status": "held_visual_required",
+      "status": "scheduled",
       "attemptedAt": "2026-10-16T04:41:24.926Z",
       "bufferPostId": "6ad1aaf5a82f34dbe14743aa",
       "bufferDueAt": "2026-10-26T04:05:00.000Z",
       "processedAt": "2026-10-16T04:41:25.514Z",
-      "holdReason": "Buffer scheduled post had no image/video; moved to draft before original could publish",
-      "heldAt": "2026-10-23T23:44:23.139Z",
-      "bufferVisualVerifiedAt": "2026-10-25T00:09:36.996Z",
-      "bufferVisualMimeType": "image/jpeg"
+      "bufferVisualVerifiedAt": "2026-10-25T00:12:20.069Z",
+      "bufferVisualMimeType": "image/jpeg",
+      "bufferVisualAssetId": null,
+      "bufferMediaUrl": "https://cdn.jsdelivr.net/gh/innovation4131210-alt/sena-media@1996648fddfa4ececd3750e107f62cc4abc6f55d/media/sena-30day-2026-09-28/SENA_2026-10-26_D29.jpeg",
+      "bufferImageAssetType": "ImageAsset",
+      "bufferImageWidth": 1122,
+      "bufferImageHeight": 1402,
+      "exactSourceGitBlob": "7ee5d040502084a636ffcb4d4b103bf4ae06bbb5",
+      "visualRepair": "scheduled_exact_visual_reverified"
     },
     {
       "key": "sena-d30",
@@ -411,8 +415,7 @@
       "bufferPostId": "6ad2fbbf8ac6cfe5442dedd3",
       "bufferDueAt": "2026-10-27T04:05:00.000Z",
       "processedAt": "2026-10-17T04:38:24.204Z",
-      "heldAt": "2026-10-23T23:44:30.028Z",
-      "bufferVisualVerifiedAt": "2026-10-25T00:09:36.997Z",
+      "bufferVisualVerifiedAt": "2026-10-25T00:12:20.354Z",
       "bufferVisualMimeType": "image/jpeg",
       "bufferVisualAssetId": null,
       "exactSourceGitBlob": "84542d07667ba790eaea0502bdb4c6b997192f53",
@@ -420,7 +423,7 @@
       "bufferImageAssetType": "ImageAsset",
       "bufferImageWidth": 1122,
       "bufferImageHeight": 1402,
-      "visualRepair": "draft_verified_ImageAsset_source_and_dimensions_then_rescheduled"
+      "visualRepair": "scheduled_exact_visual_reverified"
     },
     {
       "key": "sena-x-strong-60-a01",
