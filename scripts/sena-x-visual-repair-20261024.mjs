@@ -274,7 +274,7 @@ async function main() {
       // and the exact, approved Git blob bytes at the image source.
       const visual=row.assets.find(a=>
         a?.__typename==="ImageAsset" &&
-        /^image\\//i.test(String(a.mimeType??"")) &&
+        String(a.mimeType??"").toLowerCase().startsWith("image/") &&
         typeof a.source==="string" &&
         Number(a.image?.width)>0 && Number(a.image?.height)>0
       );
@@ -294,7 +294,7 @@ async function main() {
       delete t.heldAt;
       verified++;
       console.log(JSON.stringify({key,status:"scheduled_exact_visual_reverified",id:row.id,bytes}));
-      await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\\n");
+      await writeFile(QUEUE_PATH,JSON.stringify(q,null,2)+"\n");
       continue;
     }
     if(Date.parse(t.dueAt)<=Date.now()+180000) {
