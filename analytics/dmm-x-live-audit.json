@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "checkedAt": "2026-10-25T17:50:43.784Z",
-  "updatedAt": "2026-10-25T17:50:48.154Z",
+  "checkedAt": "2026-10-25T22:49:42.828Z",
+  "updatedAt": "2026-10-25T22:49:43.129Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -16,92 +16,175 @@
     "complete": false,
     "coverageNote": "Historical inventory exceeds 100 posts; current batch IDs were read back individually.",
     "counts": {
-      "sent": 100
+      "scheduled": 3,
+      "sent": 97
     },
-    "scheduledCount": 0,
-    "scheduled": []
+    "scheduledCount": 3,
+    "scheduled": [
+      {
+        "id": "6ade78d4e4be8a4d86ca97dd",
+        "dueAt": "2026-10-26T03:30:00.000Z",
+        "kind": "engagement",
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "readback": {
+          "text": "夜に探すなら、短く1本だけ紹介される方がいい？\n①1本だけ ②3本比較\n\n今日の投票（10/26）",
+          "xWeightedLength": 86,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": false,
+          "expectedActressName": null,
+          "actressNamePresent": null,
+          "valueProofPresent": false,
+          "campaignExpected": null,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": false
+        }
+      },
+      {
+        "id": "6ade78d78b3d437ddc2bfe8b",
+        "dueAt": "2026-10-26T12:30:00.000Z",
+        "kind": "affiliate",
+        "format": "discovery",
+        "linkMode": "direct",
+        "contentId": "ebwh00092",
+        "sort": "rank",
+        "discountPct": 99,
+        "campaignActive": false,
+        "readback": {
+          "text": "【PR】人気作品を全部並べるより、知っている女優から1本だけ。\n『誰もが振り返る高嶺の花が貴方を夜通し王様並みにもてなす甘くてエロいご奉仕不倫性交 七瀬アリス』\n出演：七瀬アリス / ★4.4（128件）\n詳細はこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Debwh00092&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 246,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "七瀬アリス",
+          "actressNamePresent": true,
+          "valueProofPresent": true,
+          "campaignExpected": false,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": true
+        }
+      },
+      {
+        "id": "6ade78d93d5b27036bf3408a",
+        "dueAt": "2026-10-26T14:30:00.000Z",
+        "kind": "affiliate",
+        "format": "decision",
+        "linkMode": "direct",
+        "contentId": "pfes00113",
+        "sort": "review",
+        "discountPct": 0,
+        "campaignActive": false,
+        "readback": {
+          "text": "【PR】レビュー順から、価格も確認して候補を1本に絞りました。\n『偉そうにしやがって。小っちゃいリボンの付いたパンティ履いてるくせに。～女上司なんてもう怖くない…』\n出演：響乃うた / 500円\n確認するならこちら。18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dpfes00113&af_id=eromimimimi-990&ch=api",
+          "xWeightedLength": 246,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": "響乃うた",
+          "actressNamePresent": true,
+          "valueProofPresent": true,
+          "campaignExpected": false,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": true
+        }
+      }
+    ]
   },
   "metrics": {
-    "samplePosts": 40,
+    "samplePosts": 1,
     "coverage": {
-      "totalSent": 100,
+      "totalSent": 97,
       "selected": 40,
-      "attempted": 40,
-      "fetched": 40,
-      "comparable": 40,
-      "cached": 0,
+      "attempted": 2,
+      "fetched": 1,
+      "comparable": 1,
+      "cached": 39,
       "missing": 0,
-      "status": "complete",
-      "cooldown": null
+      "status": "rate_limited",
+      "cooldown": {
+        "status": 429,
+        "retryAt": "2026-11-11T23:40:53.129Z"
+      }
     },
     "freshness": {
-      "oldestMetricsUpdatedAt": "2026-10-25T02:12:40.886Z",
+      "oldestMetricsUpdatedAt": "2026-10-25T14:30:22.550Z",
       "newestMetricsUpdatedAt": "2026-10-25T14:30:22.550Z"
     },
     "overall": {
-      "posts": 40,
-      "impressions": 913,
-      "clicks": 6,
-      "reactions": 1,
+      "posts": 1,
+      "impressions": 0,
+      "clicks": 0,
+      "reactions": 0,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 40,
-        "clicks": 40,
-        "reactions": 40,
-        "comments": 40,
-        "reposts": 40
+        "impressions": 1,
+        "clicks": 1,
+        "reactions": 1,
+        "comments": 1,
+        "reposts": 1
       },
-      "ctrPct": 0.66
+      "ctrPct": null
     },
     "affiliate": {
-      "posts": 27,
-      "impressions": 712,
-      "clicks": 6,
-      "reactions": 1,
+      "posts": 1,
+      "impressions": 0,
+      "clicks": 0,
+      "reactions": 0,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 27,
-        "clicks": 27,
-        "reactions": 27,
-        "comments": 27,
-        "reposts": 27
+        "impressions": 1,
+        "clicks": 1,
+        "reactions": 1,
+        "comments": 1,
+        "reposts": 1
       },
-      "ctrPct": 0.84
+      "ctrPct": null
     },
     "byFormat": {
       "discovery": {
-        "posts": 13,
-        "impressions": 337,
-        "clicks": 2,
-        "reactions": 1,
-        "comments": 0,
-        "reposts": 0,
+        "posts": 0,
+        "impressions": null,
+        "clicks": null,
+        "reactions": null,
+        "comments": null,
+        "reposts": null,
         "metricCoverage": {
-          "impressions": 13,
-          "clicks": 13,
-          "reactions": 13,
-          "comments": 13,
-          "reposts": 13
+          "impressions": 0,
+          "clicks": 0,
+          "reactions": 0,
+          "comments": 0,
+          "reposts": 0
         },
-        "ctrPct": 0.59
+        "ctrPct": null
       },
       "decision": {
-        "posts": 14,
-        "impressions": 375,
-        "clicks": 4,
+        "posts": 1,
+        "impressions": 0,
+        "clicks": 0,
         "reactions": 0,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 14,
-          "clicks": 14,
-          "reactions": 14,
-          "comments": 14,
-          "reposts": 14
+          "impressions": 1,
+          "clicks": 1,
+          "reactions": 1,
+          "comments": 1,
+          "reposts": 1
         },
-        "ctrPct": 1.07
+        "ctrPct": null
       }
     },
     "byLinkMode": {
@@ -122,26 +205,26 @@
         "ctrPct": null
       },
       "direct": {
-        "posts": 27,
-        "impressions": 712,
-        "clicks": 6,
-        "reactions": 1,
+        "posts": 1,
+        "impressions": 0,
+        "clicks": 0,
+        "reactions": 0,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 27,
-          "clicks": 27,
-          "reactions": 27,
-          "comments": 27,
-          "reposts": 27
+          "impressions": 1,
+          "clicks": 1,
+          "reactions": 1,
+          "comments": 1,
+          "reposts": 1
         },
-        "ctrPct": 0.84
+        "ctrPct": null
       }
     },
     "posts": [
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-10-25T17:50:44.315Z",
+        "fetchedAt": "2026-10-25T22:49:42.997Z",
         "id": "6add27123d5b27036ba3e649",
         "sentAt": "2026-10-25T14:30:12.542Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114363903807303836",
@@ -160,7 +243,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:44.385Z",
         "id": "6add270f8b3d437ddcdc35c4",
         "sentAt": "2026-10-25T12:30:12.731Z",
@@ -177,10 +260,11 @@
         "clicks": 0,
         "reactions": 0,
         "comments": 0,
-        "reposts": 0
+        "reposts": 0,
+        "metricsError": "Buffer rate limited; collection stopped"
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:44.450Z",
         "id": "6add270d3d5b27036ba3e5b1",
         "sentAt": "2026-10-25T03:30:06.172Z",
@@ -200,7 +284,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:44.523Z",
         "id": "6adbd51b8b3d437ddc89543e",
         "sentAt": "2026-10-24T14:30:19.841Z",
@@ -220,7 +304,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:44.854Z",
         "id": "6adbd5180b5343d07050495f",
         "sentAt": "2026-10-24T12:30:13.435Z",
@@ -240,7 +324,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:44.966Z",
         "id": "6adbd515bd33ce99c3f03fa4",
         "sentAt": "2026-10-24T03:30:20.268Z",
@@ -260,7 +344,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.044Z",
         "id": "6ada9fba8d2197cb2a0751cc",
         "sentAt": "2026-10-23T14:30:36.404Z",
@@ -280,7 +364,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.198Z",
         "id": "6ada9fb89ef33e7811aa7ccd",
         "sentAt": "2026-10-23T12:30:32.873Z",
@@ -300,7 +384,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.303Z",
         "id": "6ada9fb58d2197cb2a07514f",
         "sentAt": "2026-10-23T03:30:06.996Z",
@@ -320,7 +404,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.374Z",
         "id": "6ad949ec7d56fe463dad169b",
         "sentAt": "2026-10-22T14:30:36.688Z",
@@ -340,7 +424,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.791Z",
         "id": "6ad949ead0598dd30cfb66a5",
         "sentAt": "2026-10-22T12:30:34.723Z",
@@ -360,7 +444,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.856Z",
         "id": "6ad949e7b5ae3ccc5eb85b6f",
         "sentAt": "2026-10-22T03:30:20.273Z",
@@ -380,7 +464,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.921Z",
         "id": "6ad7f9bb5a0b7fe6fa7c2689",
         "sentAt": "2026-10-21T14:30:28.924Z",
@@ -400,7 +484,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:45.992Z",
         "id": "6ad7f9bac8c16a2bbdb5f7ed",
         "sentAt": "2026-10-21T12:30:36.722Z",
@@ -420,7 +504,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.056Z",
         "id": "6ad7f9ba79ac5466f5c752f1",
         "sentAt": "2026-10-21T03:30:12.159Z",
@@ -440,7 +524,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.174Z",
         "id": "6ad6a6b69d034d7aedcb0949",
         "sentAt": "2026-10-20T14:30:35.142Z",
@@ -460,7 +544,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.238Z",
         "id": "6ad6a6b52d48e20f64bab937",
         "sentAt": "2026-10-20T12:30:36.674Z",
@@ -480,7 +564,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.353Z",
         "id": "6ad6a6b5e9c669def5ddf9db",
         "sentAt": "2026-10-20T03:30:05.874Z",
@@ -500,7 +584,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.422Z",
         "id": "6ad5522aa48c8f8371b9be18",
         "sentAt": "2026-10-19T14:30:26.999Z",
@@ -520,7 +604,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.487Z",
         "id": "6ad55227ae173d6e00204583",
         "sentAt": "2026-10-19T12:30:31.849Z",
@@ -540,7 +624,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.556Z",
         "id": "6ad552250b0d72757a4180c5",
         "sentAt": "2026-10-19T03:30:22.896Z",
@@ -560,7 +644,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.712Z",
         "id": "6ad400ae0b0d72757af9ee61",
         "sentAt": "2026-10-18T14:30:06.812Z",
@@ -580,7 +664,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.822Z",
         "id": "6ad400ac0b0d72757af9ee11",
         "sentAt": "2026-10-18T12:30:19.678Z",
@@ -600,7 +684,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.881Z",
         "id": "6ad400aaae173d6e00d8d998",
         "sentAt": "2026-10-18T03:30:04.727Z",
@@ -620,7 +704,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:46.941Z",
         "id": "6ad2ada5c34368e4b099b9cd",
         "sentAt": "2026-10-17T14:30:08.666Z",
@@ -640,7 +724,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.014Z",
         "id": "6ad2ada21694d771d50e4ab0",
         "sentAt": "2026-10-17T12:30:07.951Z",
@@ -660,7 +744,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.078Z",
         "id": "6ad2ada01c7e49ea4c2a277d",
         "sentAt": "2026-10-17T03:30:08.087Z",
@@ -680,7 +764,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.137Z",
         "id": "6ad1604aa82f34dbe137cea5",
         "sentAt": "2026-10-16T14:30:42.703Z",
@@ -700,7 +784,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.206Z",
         "id": "6ad16048e991a49db3ba7ff3",
         "sentAt": "2026-10-16T12:30:24.758Z",
@@ -720,7 +804,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.340Z",
         "id": "6ad160464ed7d375a4369666",
         "sentAt": "2026-10-16T03:30:08.997Z",
@@ -740,7 +824,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.407Z",
         "id": "6ad00975cf4828067a352442",
         "sentAt": "2026-10-15T14:30:21.706Z",
@@ -760,7 +844,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.484Z",
         "id": "6ad00973cf4828067a351f32",
         "sentAt": "2026-10-15T12:30:42.256Z",
@@ -780,7 +864,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.550Z",
         "id": "6ad00970392879e023534003",
         "sentAt": "2026-10-15T03:30:06.579Z",
@@ -800,7 +884,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.620Z",
         "id": "6acebee633507eb5b0e37432",
         "sentAt": "2026-10-14T14:30:50.190Z",
@@ -820,7 +904,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.706Z",
         "id": "6acebee40d20fd15277099c9",
         "sentAt": "2026-10-14T12:30:44.428Z",
@@ -840,7 +924,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.785Z",
         "id": "6acebee1848c31c809506d5b",
         "sentAt": "2026-10-14T03:30:10.458Z",
@@ -860,7 +944,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.865Z",
         "id": "6acd70093d6121df4034a0ff",
         "sentAt": "2026-10-13T14:30:35.610Z",
@@ -880,7 +964,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:47.954Z",
         "id": "6acd70073d6121df4034a0bb",
         "sentAt": "2026-10-13T12:30:36.786Z",
@@ -900,7 +984,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:48.073Z",
         "id": "6acd70053d6121df4034a07c",
         "sentAt": "2026-10-13T03:30:08.112Z",
@@ -920,7 +1004,7 @@
         "reposts": 0
       },
       {
-        "collectionStatus": "fresh",
+        "collectionStatus": "cached",
         "fetchedAt": "2026-10-25T17:50:48.151Z",
         "id": "6ac6b3bb31a577b8bd2dfbb6",
         "sentAt": "2026-10-08T14:30:20.255Z",
@@ -943,9 +1027,9 @@
     "note": "Buffer platform metrics only. Aggregates use this pass only; cached per-post values retain their original timestamps and are excluded. DMM conversions/revenue require official DMM report data and are not inferred here."
   },
   "sourceState": {
-    "batchDate": "2026-10-25",
+    "batchDate": "2026-10-26",
     "contentStrategyVersion": "real-selection-v7-campaign-demand-first",
-    "lastBufferPostId": "6add27123d5b27036ba3e649",
-    "lastDueAt": "2026-10-25T14:30:00.000Z"
+    "lastBufferPostId": "6ade78d93d5b27036bf3408a",
+    "lastDueAt": "2026-10-26T14:30:00.000Z"
   }
 }
