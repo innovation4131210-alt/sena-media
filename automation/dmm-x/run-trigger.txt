@@ -15,3 +15,4 @@ manual-recovery: 2026-10-19T23:24:17.238Z
 manual-recovery: 2026-10-21T23:25:00Z reason=oct22-missing-after-0600-jst-live-dedupe-clear
 manual-recovery: 2026-10-24T06:43:30+09:00 reason=oct24-future-slots-absent-from-latest-audit-and-no-0600-run; live-Buffer-dedupe-required; do-not-backfill
 manual-recovery: 2026-10-25T06:43:52+09:00 reason=oct25-three-future-slots-missing-from-state; 0600-JST-run-not-observed; persisted-cooldown-null; require-live-buffer-dedupe-and-no-past-backfill
+manual-recovery: 2026-10-26T06:43:00+09:00 reason=oct26-future-slots-absent-from-state; no-0600-run-observed; persisted-cooldown-null; require-live-buffer-dedupe; no-past-backfill
