@@ -191,10 +191,13 @@ def product_facts(item, actress_name="", *, campaign_active=False):
     list_price = list_price_value(item)
     discount = discount_percent(item)
 
+    # A discount observed when drafting is not proof that the displayed price
+    # will still apply at the scheduled time. Omit such price claims unless
+    # the product-level campaign explicitly covers dueAt.
     if price is not None:
         if campaign_active and discount >= 10 and list_price:
             facts.append(f"{price:,}円（参考{list_price:,}円・約{discount}%OFF）")
-        else:
+        elif discount < 10:
             facts.append(f"{price:,}円")
 
     if len(facts) < 2:
@@ -296,7 +299,7 @@ def compact_value_line(meta):
     price = meta.get("price")
     if meta.get("campaign_active") and discount >= 10:
         parts.append(f"約{discount}%OFF")
-    elif price:
+    elif price and discount < 10:
         try:
             parts.append(f"{int(price):,}円")
         except (TypeError, ValueError):
@@ -1015,6 +1018,73 @@ def repair_scheduled_generic_fallbacks(state, live_posts):
     return repaired
 
 
+def repair_scheduled_unverified_price_claims(state, live_posts):
+    """Remove provisional sale-price claims that lack dueAt-valid campaign proof.
+
+    Idempotent: only future scheduled affiliate posts whose text actually
+    contains the claim are touched; no reposts or queue insertions occur.
+    """
+    by_id = {
+        row.get("buffer_post_id"): row
+        for row in state.get("post_history", [])
+        if row.get("buffer_post_id")
+    }
+    now_utc = datetime.now(timezone.utc)
+    repaired = []
+    for post in live_posts:
+        if post.get("status") != "scheduled":
+            continue
+        row = by_id.get(post.get("id")) or {}
+        if row.get("kind") != "affiliate" or row.get("campaign_active") is not False:
+            continue
+        try:
+            discount = int(row.get("discount_pct") or 0)
+            price = row.get("price")
+            if discount < 10 or price is None:
+                continue
+            claim = f" / {int(price):,}円"
+            average = float(row.get("review_average") or 0)
+            count = int(row.get("review_count") or 0)
+        except (TypeError, ValueError):
+            continue
+        due = parse_dmm_datetime(post.get("dueAt"))
+        if due is None:
+            continue
+        if due.tzinfo is None:
+            due = due.replace(tzinfo=timezone.utc)
+        if due.astimezone(timezone.utc) <= now_utc:
+            continue
+        old_text = str(post.get("text") or "")
+        if claim not in old_text:
+            continue
+        replacement = (
+            f" / ★{average:.1f}（{count}件）"
+            if "★" not in old_text and average > 0 and count > 0
+            else ""
+        )
+        amended = old_text.replace(claim, replacement, 1)
+        actress = str(row.get("actress_name") or "").strip()
+        if (
+            amended == old_text
+            or (actress and actress not in amended)
+            or "https://" not in amended
+            or is_generic_fallback_text(amended)
+            or x_weighted_length(amended) > 280
+        ):
+            raise RuntimeError("Unsafe scheduled price-claim repair; refusing edit")
+        edited = edit_post_text(post["id"], amended)
+        if edited.get("status") != "scheduled" or edited.get("dueAt") != post.get("dueAt"):
+            raise RuntimeError("Buffer price-claim edit changed scheduling unexpectedly")
+        row["price_claim_repaired_at"] = datetime.now(timezone.utc).isoformat()
+        repaired.append({
+            "id": edited["id"],
+            "content_id": row.get("content_id"),
+            "format": row.get("format"),
+            "weighted_length": x_weighted_length(amended),
+        })
+    return repaired
+
+
 def create_post(text, channel_id, *, due_at, first_reply=None, image_url=None):
     image_url = str(image_url or "").strip() if ENABLE_DMM_MEDIA else ""
     top_assets = ""
@@ -1195,7 +1265,13 @@ def main():
 
     recovered = recover_existing_batch(state, live_posts, batch_date)
     repaired = repair_scheduled_generic_fallbacks(state, live_posts)
+    price_repaired = repair_scheduled_unverified_price_claims(state, live_posts)
     persist_state(state)
+    for item in price_repaired:
+        print(
+            f"Repaired unverified future price claim for {item['id']} "
+            f"({item['content_id']}, weighted={item['weighted_length']})"
+        )
     for item in repaired:
         print(
             f"Repaired generic fallback {item['format']} post {item['id']} "
@@ -1272,7 +1348,7 @@ def main():
         "at": datetime.now(timezone.utc).isoformat(),
         "batch_date": batch_date,
         "recovered_count": len(recovered),
-        "repaired_count": len(repaired),
+        "repaired_count": len(repaired) + len(price_repaired),
         "created_count": len(queued),
     }
     persist_state(state)
