@@ -737,6 +737,48 @@
       "sourceBufferAssetId": null,
       "nativeAiGenerated": true,
       "mediaVerification": "SHA256 of provider-returned image bytes matched exact original; native Instagram AI/feed flags verified."
+    },
+    {
+      "day": 58,
+      "bufferPostId": "6add4873ba0b93d831ee761a",
+      "lastObservedStatus": "scheduled",
+      "date": "2026-10-27",
+      "dueAt": "2026-10-27T11:30:00.000Z",
+      "caption": "茶色のブラウスに、オリーブのスカート。秋は落ち着いた色を重ねたくなる。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。 ",
+      "verifiedAt": "2026-10-25T00:12:10Z",
+      "batchId": "SENA-IG-2026-10-27",
+      "mediaSha256": "37fb7712418d473b76094fa4092402dee37cb5ae674926397e9bcf759156adc3",
+      "sourceBufferAssetId": "6add48491b7443e5a20b7643",
+      "nativeAiGenerated": true,
+      "mediaVerification": "Exact local original uploaded; saved card preview, caption, due time and native AI switch verified after reload. Provider full-size bytes not independently downloaded; existing normal runner verification pending."
+    },
+    {
+      "day": 59,
+      "bufferPostId": "6add48b0b9e8ba611cf514f3",
+      "lastObservedStatus": "scheduled",
+      "date": "2026-10-27",
+      "dueAt": "2026-10-27T11:31:00.000Z",
+      "caption": "静かな展示室で、少しひと休み。今日は深い緑のニットで。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。 ",
+      "verifiedAt": "2026-10-25T00:12:10Z",
+      "batchId": "SENA-IG-2026-10-27",
+      "mediaSha256": "ea686693d7023bca37fe4301e0f88cd4be876e3fbeef022af86c5a01197989d1",
+      "sourceBufferAssetId": "6add488b9d1aaab2b1967e93",
+      "nativeAiGenerated": true,
+      "mediaVerification": "Exact local original uploaded; saved card preview, caption, due time and native AI switch verified after reload. Provider full-size bytes not independently downloaded; existing normal runner verification pending."
+    },
+    {
+      "day": 60,
+      "bufferPostId": "6add48fa98a2969fb6c6b8ba",
+      "lastObservedStatus": "scheduled",
+      "date": "2026-10-27",
+      "dueAt": "2026-10-27T11:32:00.000Z",
+      "caption": "白いシャツに、赤いカーディガン。キッチンにも少し秋の色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。 ",
+      "verifiedAt": "2026-10-25T00:12:10Z",
+      "batchId": "SENA-IG-2026-10-27",
+      "mediaSha256": "9ecaa341bb1816e2c4f5ae525c0077b4d41d4a46fec6766fe27cb10e3fdb6c35",
+      "sourceBufferAssetId": "6add48d1c58b15582e657e4c",
+      "nativeAiGenerated": true,
+      "mediaVerification": "Exact local original uploaded; saved card preview, caption, due time and native AI switch verified after reload. Provider full-size bytes not independently downloaded; existing normal runner verification pending."
     }
   ],
   "lastRunAt": "2026-10-24T17:12:58.515Z",
@@ -759,10 +801,10 @@
     "count": 17,
     "note": "Historical organization-wide count; never use for per-channel capacity."
   },
-  "observedChannelScheduledCount": 6,
+  "observedChannelScheduledCount": 9,
   "capacityScope": "channel",
   "safeQueueLimit": 9,
-  "remainingChannelCapacity": 3,
+  "remainingChannelCapacity": 0,
   "batchMigration": {
     "edits": [
       {
@@ -1021,5 +1063,21 @@
         "sourcePathContainsSavedAssetId": true
       }
     ]
+  },
+  "nativeOct27Reconciliation": {
+    "verifiedAt": "2026-10-25T00:12:10Z",
+    "status": "native_scheduled_and_manifest_reconciled",
+    "scheduledIds": [
+      "6add4873ba0b93d831ee761a",
+      "6add48b0b9e8ba611cf514f3",
+      "6add48fa98a2969fb6c6b8ba"
+    ],
+    "observedChannelScheduledCount": 9,
+    "observedDraftCount": 0,
+    "observedSentCount": 76,
+    "priorSixPreserved": true,
+    "captionEvidence": "Exact native card paragraph text includes one trailing ASCII space, preserved in manifest/state.",
+    "providerApiReadback": "pending_next_existing_normal_runner",
+    "noWorkflowDispatch": true
   }
 }
