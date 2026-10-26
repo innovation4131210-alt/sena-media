@@ -44,20 +44,46 @@ jobs:
         run: node scripts/dmm-x-live-audit.mjs
       - name: Persist credential-free audit
         run: |
-          set -e
+          set -euo pipefail
           test -f analytics/dmm-x-live-audit.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Commit exactly once; a successful rebase must still be followed by a push.
+          git add analytics/dmm-x-live-audit.json
+          if git diff --cached --quiet; then
+            echo "No new audit payload (e.g. persisted Buffer cooldown); nothing to push."
+            exit 0
+          fi
+          expected_checked_at="$(python3 -c 'import json; print(json.load(open("analytics/dmm-x-live-audit.json", encoding="utf-8"))["checkedAt"])')"
+          expected_updated_at="$(python3 -c 'import json; print(json.load(open("analytics/dmm-x-live-audit.json", encoding="utf-8"))["updatedAt"])')"
+          git commit -m "Record DMM X live Buffer audit"
+
           for attempt in 1 2 3; do
-            git add analytics/dmm-x-live-audit.json
-            if git diff --cached --quiet; then
-              exit 0
-            fi
-            git commit -m "Record DMM X live Buffer audit" || true
             if git push origin HEAD:main; then
-              exit 0
+              # Job success requires confirmation that main contains THIS read.
+              git fetch origin main
+              if git show origin/main:analytics/dmm-x-live-audit.json | python3 -c 'import json,sys; d=json.load(sys.stdin); sys.exit(0 if d.get("checkedAt")==sys.argv[1] and d.get("updatedAt")==sys.argv[2] else 1)' "$expected_checked_at" "$expected_updated_at"; then
+                echo "Audit persistence verified: checkedAt=$expected_checked_at updatedAt=$expected_updated_at"
+                exit 0
+              fi
+              echo "::error::GitHub main does not contain this Buffer audit; read and persistence are separate." >&2
+              exit 1
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              break
             fi
             git fetch origin main
             git rebase origin/main
           done
+          echo "::error::Git push failed; preserve the read payload without re-querying Buffer." >&2
           exit 1
+
+      - name: Preserve audit payload if GitHub persistence fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dmm-x-audit-payload-${{ github.run_id }}
+          path: analytics/dmm-x-live-audit.json
+          retention-days: 14
+          if-no-files-found: warn
