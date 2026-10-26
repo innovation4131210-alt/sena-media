@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25T16:41:13.581Z",
+  "updatedAt": "2026-10-26T18:47:47.842Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -335,7 +335,7 @@
       "key": "sena-threads-autumn-stock-19-2026-10-26",
       "dueAt": "2026-10-26T11:10:00.000Z",
       "text": "秋の色が並ぶマーケット。落ち着いた色の服で、ゆっくり眺めたい。",
-      "status": "scheduled",
+      "status": "sent",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e1daeda14152585db12c2f1b613c30b58f80a05a/media/sena-30day-2026-09-28/SENA_autumn_19_farmers_market.png",
       "visualFirst": true,
       "sourceSha256": "8f85cf8aa117d393bcc3a67af789cbf15fb17aed3889d7093d1c23dc6757faab",
@@ -357,7 +357,10 @@
       "attemptedAt": "2026-10-24T00:07:44.807Z",
       "bufferPostId": "6adbf6d1bd33ce99c3f81fb7",
       "bufferDueAt": "2026-10-26T11:10:00.000Z",
-      "processedAt": "2026-10-24T00:07:45.320Z"
+      "processedAt": "2026-10-24T00:07:45.320Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De9JJHbEXPr",
+      "sentAt": "2026-10-26T11:10:13.740Z",
+      "statusSyncedAt": "2026-10-26T18:47:47.842Z"
     },
     {
       "key": "sena-threads-autumn-stock-20-2026-10-27",
@@ -426,8 +429,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 3,
-    "verifiedAt": "2026-10-25T16:41:13.581Z"
+    "scheduledCount": 2,
+    "verifiedAt": "2026-10-26T18:47:47.842Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
