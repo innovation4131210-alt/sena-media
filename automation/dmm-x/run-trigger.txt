@@ -17,3 +17,4 @@ manual-recovery: 2026-10-24T06:43:30+09:00 reason=oct24-future-slots-absent-from
 manual-recovery: 2026-10-25T06:43:52+09:00 reason=oct25-three-future-slots-missing-from-state; 0600-JST-run-not-observed; persisted-cooldown-null; require-live-buffer-dedupe-and-no-past-backfill
 manual-recovery: 2026-10-26T06:43:00+09:00 reason=oct26-future-slots-absent-from-state; no-0600-run-observed; persisted-cooldown-null; require-live-buffer-dedupe; no-past-backfill
 manual-repair: 2026-10-26 reason=remove-unverified-10-yen-future-price-claim-from-existing-oct26-buffer-post; run-regression-tests; existing-IDs-only; no-repost
+manual-recovery: 2026-10-27T08:44:16+09:00 reason=oct27-future-slots-absent-from-state-and-audit-after-0600-jst; concurrency-and-live-buffer-dedupe-required; no-past-backfill
