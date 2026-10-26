@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T21:18:58+00:00",
+  "generatedAt": "2026-10-26T01:41:26+00:00",
   "schemaVersion": 2,
   "notePurchases": null,
   "noteRevenueJpy": null,
@@ -11,8 +11,52 @@
     "channelName": "ai_command_jp"
   },
   "lookbackDays": 30,
-  "postCount": 81,
+  "postCount": 82,
   "posts": [
+    {
+      "contentId": "D27-AM",
+      "contentType": "今日の指令",
+      "experimentId": "AM_HOOK_V1",
+      "hookVariant": "C_failure",
+      "bufferPostId": "6adbafc29acae620d813d8d0",
+      "sentAt": "2026-10-26T08:10:02+09:00",
+      "externalLink": "https://x.com/2104714619688554496/status/2114494726195843251",
+      "text": "AIの「完了しました」で事故るなら。\n\n【今日の指令】\n「完了報告の前に、実物・反映・実行結果のどれで確認したかを書いてください。」\n\n僕は確認方法までセットで受け取る。",
+      "hasNoteLink": false,
+      "noteDestination": null,
+      "linkEvidence": [],
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 2.523,
+      "metricElapsedHours": 0.003,
+      "metricStatus": {
+        "impressions": "reported",
+        "likes": "missing",
+        "comments": "reported",
+        "reposts": "reported",
+        "quotes": "missing",
+        "clicks": "reported",
+        "saves": "missing"
+      },
+      "metricsUpdatedAt": "2026-10-25T23:10:11.981Z",
+      "impressions": 0.0,
+      "likes": null,
+      "comments": 0.0,
+      "reposts": 0.0,
+      "quotes": null,
+      "clicks": 0.0,
+      "saves": null,
+      "bufferEngagementRate": 0,
+      "interactionRatePct": null,
+      "clickRatePct": null,
+      "rawMetrics": {
+        "reactions": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "reposts": 0,
+        "impressions": 0,
+        "clicks": 0
+      }
+    },
     {
       "contentId": "D26-PM",
       "contentType": "note導線",
@@ -30,11 +74,11 @@
           "finalUrl": "https://note.com/ai_command/n/n7b74f56a03dc",
           "status": "direct",
           "destination": "core_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 9.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 14.183,
       "metricElapsedHours": 0.003,
       "metricStatus": {
         "impressions": "reported",
@@ -77,8 +121,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 17.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 22.357,
       "metricElapsedHours": 4.758,
       "metricStatus": {
         "impressions": "reported",
@@ -121,8 +165,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 22.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 26.523,
       "metricElapsedHours": 8.925,
       "metricStatus": {
         "impressions": "reported",
@@ -165,8 +209,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 33.808,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 38.183,
       "metricElapsedHours": 20.584,
       "metricStatus": {
         "impressions": "reported",
@@ -209,8 +253,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 41.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 46.357,
       "metricElapsedHours": 28.758,
       "metricStatus": {
         "impressions": "reported",
@@ -253,8 +297,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 46.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 50.524,
       "metricElapsedHours": 32.925,
       "metricStatus": {
         "impressions": "reported",
@@ -297,8 +341,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 57.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 62.184,
       "metricElapsedHours": 44.585,
       "metricStatus": {
         "impressions": "reported",
@@ -341,8 +385,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 65.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 70.357,
       "metricElapsedHours": 52.758,
       "metricStatus": {
         "impressions": "reported",
@@ -385,8 +429,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 70.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 74.524,
       "metricElapsedHours": 56.925,
       "metricStatus": {
         "impressions": "reported",
@@ -434,11 +478,11 @@
           "finalUrl": "https://note.com/ai_command/n/ne79f153b4665",
           "status": "direct",
           "destination": "free_entry",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 81.806,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 86.18,
       "metricElapsedHours": 68.582,
       "metricStatus": {
         "impressions": "reported",
@@ -481,8 +525,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 89.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 94.357,
       "metricElapsedHours": 76.758,
       "metricStatus": {
         "impressions": "reported",
@@ -525,8 +569,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 94.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 98.524,
       "metricElapsedHours": 80.925,
       "metricStatus": {
         "impressions": "reported",
@@ -569,8 +613,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 105.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 110.183,
       "metricElapsedHours": 92.585,
       "metricStatus": {
         "impressions": "reported",
@@ -613,8 +657,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 113.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 118.357,
       "metricElapsedHours": 100.758,
       "metricStatus": {
         "impressions": "reported",
@@ -657,8 +701,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 118.148,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 122.523,
       "metricElapsedHours": 104.924,
       "metricStatus": {
         "impressions": "reported",
@@ -701,8 +745,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 129.807,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 134.181,
       "metricElapsedHours": 116.582,
       "metricStatus": {
         "impressions": "reported",
@@ -745,8 +789,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 137.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 142.357,
       "metricElapsedHours": 124.758,
       "metricStatus": {
         "impressions": "reported",
@@ -789,8 +833,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 142.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 146.523,
       "metricElapsedHours": 128.925,
       "metricStatus": {
         "impressions": "reported",
@@ -838,11 +882,11 @@
           "finalUrl": "https://note.com/ai_command/n/n7b74f56a03dc",
           "status": "direct",
           "destination": "core_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 153.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 158.183,
       "metricElapsedHours": 140.585,
       "metricStatus": {
         "impressions": "reported",
@@ -885,8 +929,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 161.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 166.357,
       "metricElapsedHours": 148.758,
       "metricStatus": {
         "impressions": "reported",
@@ -929,8 +973,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 166.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 170.524,
       "metricElapsedHours": 152.925,
       "metricStatus": {
         "impressions": "reported",
@@ -973,8 +1017,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 177.811,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 182.185,
       "metricElapsedHours": 164.587,
       "metricStatus": {
         "impressions": "reported",
@@ -1017,8 +1061,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 185.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 190.357,
       "metricElapsedHours": 172.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1061,8 +1105,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 190.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 194.524,
       "metricElapsedHours": 176.925,
       "metricStatus": {
         "impressions": "reported",
@@ -1110,11 +1154,11 @@
           "finalUrl": "https://note.com/ai_command/n/ne79f153b4665",
           "status": "direct",
           "destination": "free_entry",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 201.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 206.184,
       "metricElapsedHours": 188.586,
       "metricStatus": {
         "impressions": "reported",
@@ -1157,8 +1201,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 204.813,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 209.188,
       "metricElapsedHours": 191.589,
       "metricStatus": {
         "impressions": "reported",
@@ -1201,8 +1245,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 209.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 214.357,
       "metricElapsedHours": 196.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1245,8 +1289,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 214.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 218.524,
       "metricElapsedHours": 200.925,
       "metricStatus": {
         "impressions": "reported",
@@ -1289,8 +1333,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 225.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 230.185,
       "metricElapsedHours": 212.586,
       "metricStatus": {
         "impressions": "reported",
@@ -1333,8 +1377,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 233.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 238.357,
       "metricElapsedHours": 220.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1377,8 +1421,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 238.148,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 242.523,
       "metricElapsedHours": 224.924,
       "metricStatus": {
         "impressions": "reported",
@@ -1421,8 +1465,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 249.739,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 254.113,
       "metricElapsedHours": 236.514,
       "metricStatus": {
         "impressions": "reported",
@@ -1470,11 +1514,11 @@
           "finalUrl": "https://note.com/ai_command/n/n7b74f56a03dc",
           "status": "direct",
           "destination": "core_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 249.805,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 254.18,
       "metricElapsedHours": 236.581,
       "metricStatus": {
         "impressions": "reported",
@@ -1517,8 +1561,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 257.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 262.357,
       "metricElapsedHours": 244.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1561,8 +1605,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 262.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 266.523,
       "metricElapsedHours": 248.924,
       "metricStatus": {
         "impressions": "reported",
@@ -1610,11 +1654,11 @@
           "finalUrl": "https://note.com/ai_command/n/ne79f153b4665",
           "status": "direct",
           "destination": "free_entry",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 273.807,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 278.182,
       "metricElapsedHours": 260.583,
       "metricStatus": {
         "impressions": "reported",
@@ -1657,8 +1701,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 281.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 286.357,
       "metricElapsedHours": 268.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1701,8 +1745,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 286.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 290.524,
       "metricElapsedHours": 272.925,
       "metricStatus": {
         "impressions": "reported",
@@ -1745,8 +1789,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 297.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 302.183,
       "metricElapsedHours": 284.585,
       "metricStatus": {
         "impressions": "reported",
@@ -1789,8 +1833,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 305.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 310.357,
       "metricElapsedHours": 292.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1833,8 +1877,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 310.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 314.523,
       "metricElapsedHours": 296.925,
       "metricStatus": {
         "impressions": "reported",
@@ -1882,11 +1926,11 @@
           "finalUrl": "https://note.com/ai_command/n/nbb052c3cb0ad",
           "status": "direct",
           "destination": "front_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 321.808,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 326.183,
       "metricElapsedHours": 308.584,
       "metricStatus": {
         "impressions": "reported",
@@ -1929,8 +1973,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 329.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 334.357,
       "metricElapsedHours": 316.758,
       "metricStatus": {
         "impressions": "reported",
@@ -1973,8 +2017,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 334.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 338.524,
       "metricElapsedHours": 320.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2022,11 +2066,11 @@
           "finalUrl": "https://note.com/ai_command/n/n465168c06f64",
           "status": "direct",
           "destination": "free_B",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 345.811,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 350.186,
       "metricElapsedHours": 332.587,
       "metricStatus": {
         "impressions": "reported",
@@ -2069,8 +2113,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 353.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 358.357,
       "metricElapsedHours": 340.758,
       "metricStatus": {
         "impressions": "reported",
@@ -2113,8 +2157,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 358.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 362.524,
       "metricElapsedHours": 344.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2157,8 +2201,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 369.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 374.183,
       "metricElapsedHours": 356.585,
       "metricStatus": {
         "impressions": "reported",
@@ -2201,8 +2245,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 377.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 382.357,
       "metricElapsedHours": 364.758,
       "metricStatus": {
         "impressions": "reported",
@@ -2245,8 +2289,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 382.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 386.524,
       "metricElapsedHours": 368.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2289,8 +2333,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 393.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 398.185,
       "metricElapsedHours": 380.586,
       "metricStatus": {
         "impressions": "reported",
@@ -2333,8 +2377,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 401.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 406.357,
       "metricElapsedHours": 388.758,
       "metricStatus": {
         "impressions": "reported",
@@ -2377,8 +2421,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 406.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 410.524,
       "metricElapsedHours": 392.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2426,11 +2470,11 @@
           "finalUrl": "https://note.com/ai_command/n/n29d46a1b4341",
           "status": "direct",
           "destination": "free_A",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 417.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 422.183,
       "metricElapsedHours": 404.584,
       "metricStatus": {
         "impressions": "reported",
@@ -2473,8 +2517,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 425.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 430.357,
       "metricElapsedHours": 412.758,
       "metricStatus": {
         "impressions": "reported",
@@ -2517,8 +2561,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 430.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 434.523,
       "metricElapsedHours": 416.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2566,11 +2610,11 @@
           "finalUrl": "https://note.com/ai_command/n/n465168c06f64",
           "status": "direct",
           "destination": "free_B",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 441.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 446.185,
       "metricElapsedHours": 428.586,
       "metricStatus": {
         "impressions": "reported",
@@ -2613,8 +2657,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 449.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 454.357,
       "metricElapsedHours": 436.758,
       "metricStatus": {
         "impressions": "reported",
@@ -2657,8 +2701,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 454.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 458.524,
       "metricElapsedHours": 440.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2706,11 +2750,11 @@
           "finalUrl": "https://note.com/ai_command/n/nbb052c3cb0ad",
           "status": "direct",
           "destination": "front_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 465.809,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 470.183,
       "metricElapsedHours": 452.585,
       "metricStatus": {
         "impressions": "reported",
@@ -2753,8 +2797,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 473.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 478.357,
       "metricElapsedHours": 460.758,
       "metricStatus": {
         "impressions": "reported",
@@ -2797,8 +2841,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 478.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 482.523,
       "metricElapsedHours": 464.925,
       "metricStatus": {
         "impressions": "reported",
@@ -2846,11 +2890,11 @@
           "finalUrl": "https://note.com/ai_command/n/n29d46a1b4341",
           "status": "direct",
           "destination": "free_A",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 489.806,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 494.18,
       "metricElapsedHours": 476.581,
       "metricStatus": {
         "impressions": "reported",
@@ -2893,8 +2937,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 497.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 502.357,
       "metricElapsedHours": 461.756,
       "metricStatus": {
         "impressions": "reported",
@@ -2937,8 +2981,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 502.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 506.524,
       "metricElapsedHours": 465.922,
       "metricStatus": {
         "impressions": "reported",
@@ -2981,8 +3025,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 513.811,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 518.186,
       "metricElapsedHours": 477.584,
       "metricStatus": {
         "impressions": "reported",
@@ -3025,8 +3069,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 521.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 526.357,
       "metricElapsedHours": 462.753,
       "metricStatus": {
         "impressions": "reported",
@@ -3069,8 +3113,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 526.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 530.523,
       "metricElapsedHours": 466.919,
       "metricStatus": {
         "impressions": "reported",
@@ -3113,8 +3157,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 537.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 542.184,
       "metricElapsedHours": 478.58,
       "metricStatus": {
         "impressions": "reported",
@@ -3157,8 +3201,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 545.982,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 550.357,
       "metricElapsedHours": 463.75,
       "metricStatus": {
         "impressions": "reported",
@@ -3201,8 +3245,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 550.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 554.523,
       "metricElapsedHours": 467.916,
       "metricStatus": {
         "impressions": "reported",
@@ -3245,8 +3289,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 561.803,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 566.178,
       "metricElapsedHours": 479.571,
       "metricStatus": {
         "impressions": "reported",
@@ -3289,8 +3333,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 569.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 574.357,
       "metricElapsedHours": 464.747,
       "metricStatus": {
         "impressions": "reported",
@@ -3333,8 +3377,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 574.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 578.524,
       "metricElapsedHours": 468.914,
       "metricStatus": {
         "impressions": "reported",
@@ -3382,11 +3426,11 @@
           "finalUrl": "https://note.com/ai_command/n/n7b74f56a03dc",
           "status": "direct",
           "destination": "core_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 585.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 590.185,
       "metricElapsedHours": 457.572,
       "metricStatus": {
         "impressions": "reported",
@@ -3429,8 +3473,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 593.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 598.357,
       "metricElapsedHours": 465.745,
       "metricStatus": {
         "impressions": "reported",
@@ -3473,8 +3517,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 598.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 602.523,
       "metricElapsedHours": 469.911,
       "metricStatus": {
         "impressions": "reported",
@@ -3517,8 +3561,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 609.81,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 614.185,
       "metricElapsedHours": 458.569,
       "metricStatus": {
         "impressions": "reported",
@@ -3561,8 +3605,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 617.983,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 622.357,
       "metricElapsedHours": 466.742,
       "metricStatus": {
         "impressions": "reported",
@@ -3605,8 +3649,8 @@
       "hasNoteLink": false,
       "noteDestination": null,
       "linkEvidence": [],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 622.149,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 626.523,
       "metricElapsedHours": 470.908,
       "metricStatus": {
         "impressions": "reported",
@@ -3654,11 +3698,11 @@
           "finalUrl": "https://note.com/ai_command/n/nbb052c3cb0ad",
           "status": "resolved",
           "destination": "front_product",
-          "checkedAt": "2026-10-25T21:18:58+00:00"
+          "checkedAt": "2026-10-26T01:41:26+00:00"
         }
       ],
-      "collectedAt": "2026-10-25T21:18:58+00:00",
-      "elapsedHours": 630.508,
+      "collectedAt": "2026-10-26T01:41:26+00:00",
+      "elapsedHours": 634.883,
       "metricElapsedHours": 479.268,
       "metricStatus": {
         "impressions": "reported",
