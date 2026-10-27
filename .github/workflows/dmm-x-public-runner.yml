@@ -1,90 +1,24 @@
-name: Queue DMM X daily batch (public runner)
+name: DMM X daily batch (PAUSED - paid partnership policy hold)
 
 on:
   workflow_dispatch:
-  schedule:
-    # 06:00 JST daily; queues Buffer slots for 12:30, 21:30 and 23:30 JST.
-    - cron: "0 21 * * *"
-  push:
-    branches: [main]
-    paths:
-      - "automation/dmm-x/run-trigger.txt"
 
+# Safety hold applied 2026-10-28 JST.
+# X's official Paid Partnerships Policy includes commission-generating
+# affiliate links and excludes adult/sexual products, services and
+# entertainment. This mixed batch runner must not create new affiliate
+# placements until policy applicability is resolved. Historical code and
+# external IDs remain recoverable from git/state; no existing post is deleted.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: dmm-x-public-runner
   cancel-in-progress: false
 
 jobs:
-  queue:
+  policy-hold:
+    if: ${{ false }}
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v5
-      - name: Test DMM price and campaign safety
-        run: python3 -m unittest discover -s automation/dmm-x/tests -p "test_*.py"
-      - name: Honor Buffer API cooldown
-        id: buffer_cooldown
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          import json
-          import os
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          report_path = Path("analytics/dmm-x-live-audit.json")
-          skip = False
-          retry_at = None
-          try:
-              report = json.loads(report_path.read_text(encoding="utf-8"))
-              cooldown = (
-                  report.get("metrics", {})
-                  .get("coverage", {})
-                  .get("cooldown")
-                  or {}
-              )
-              retry_at = cooldown.get("retryAt")
-              if retry_at:
-                  retry_time = datetime.fromisoformat(retry_at.replace("Z", "+00:00"))
-                  skip = datetime.now(timezone.utc) < retry_time
-          except (OSError, ValueError, TypeError) as exc:
-              # Fail closed: never call Buffer when cooldown evidence cannot be parsed.
-              skip = True
-              print(f"Unable to read Buffer cooldown state ({type(exc).__name__}); skipping API calls.")
-
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
-              output.write(f"skip={'true' if skip else 'false'}\n")
-              output.write(f"retry_at={retry_at or ''}\n")
-
-          if skip:
-              print(f"Buffer cooldown is active until {retry_at}; no API requests will be made.")
-          PY
-      - name: Queue today's DMM posts
-        if: steps.buffer_cooldown.outputs.skip != 'true'
-        env:
-          BUFFER_API_KEY: ${{ secrets.DMM_BUFFER_API_KEY }}
-          DMM_API_ID: ${{ secrets.DMM_API_ID }}
-          ENABLE_DMM_MEDIA: "false"
-        run: python3 automation/dmm-x/buffer_queue.py
-      - name: Save posting history
-        if: always()
-        run: |
-          set -e
-          if git diff --quiet -- automation/dmm-x/state.json; then
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/dmm-x/state.json
-          git commit -m "chore: remember queued DMM public-runner batch"
-          for attempt in 1 2 3; do
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            git fetch origin main
-            git rebase origin/main
-          done
-          exit 1
+      - run: echo "Paused: adult affiliate paid-partnership policy review required."
