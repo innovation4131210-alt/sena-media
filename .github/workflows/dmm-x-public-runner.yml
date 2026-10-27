@@ -50,8 +50,10 @@ jobs:
               if retry_at:
                   retry_time = datetime.fromisoformat(retry_at.replace("Z", "+00:00"))
                   skip = datetime.now(timezone.utc) < retry_time
-          except (OSError, ValueError, TypeError):
-              skip = False
+          except (OSError, ValueError, TypeError) as exc:
+              # Fail closed: never call Buffer when cooldown evidence cannot be parsed.
+              skip = True
+              print(f"Unable to read Buffer cooldown state ({type(exc).__name__}); skipping API calls.")
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
               output.write(f"skip={'true' if skip else 'false'}\n")
