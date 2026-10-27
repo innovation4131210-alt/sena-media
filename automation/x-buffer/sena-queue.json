@@ -452,8 +452,7 @@
       "key": "sena-x-reserve-R09-2026-10-28",
       "dueAt": "2026-10-28T04:05:00.000Z",
       "text": "今日は黒で出かけようかな。\nヒールは高め？低め？\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。",
-      "status": "held_visual_required",
-      "holdReason": "Exact QC-approved Library image selected, but no verified public HTTPS media URL or Buffer asset readback. Never transition to pending/scheduled without exact approved hosted media and live slot/identity recheck.",
+      "status": "pending",
       "visualPlan": {
         "reserveAssetId": "SENA-R09",
         "approvedSourceLibraryPath": "/MIO-SENA/X-Reserve/2026-09-24/SENA/SENA_X_priority_black_mirror_shoes_09.jpeg",
@@ -463,8 +462,13 @@
         "visualStrength": "strong",
         "noTextOnlyFallback": true,
         "readbackRequired": true,
-        "status": "original_checked_public_host_missing"
-      }
+        "status": "approved_original_hosted_sha256_verified",
+        "hostedVerifiedAt": "2026-10-27T05:41:13Z",
+        "width": 1122,
+        "height": 1402
+      },
+      "mediaUrl": "https://cdn.jsdelivr.net/gh/innovation4131210-alt/sena-media@d638b33a30dfa256b348b6d1dbccfd82235a48d7/media/sena-x-reserve-2026-09-24/SENA_X_priority_black_mirror_shoes_09.jpeg",
+      "exactSourceGitBlob": "851b3ddca65f9b7d992a5c9d455d8c59a5e87515"
     }
   ],
   "activationRequestedAt": "2026-09-24T10:43:18.218Z",
