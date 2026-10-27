@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T05:15:25.893Z",
+  "updatedAt": "2026-10-27T05:41:52.590Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -452,7 +452,7 @@
       "key": "sena-x-reserve-R09-2026-10-28",
       "dueAt": "2026-10-28T04:05:00.000Z",
       "text": "今日は黒で出かけようかな。\nヒールは高め？低め？\n\n※SENAは架空のAIキャラクターです。画像はAI制作しています。",
-      "status": "pending",
+      "status": "scheduled",
       "visualPlan": {
         "reserveAssetId": "SENA-R09",
         "approvedSourceLibraryPath": "/MIO-SENA/X-Reserve/2026-09-24/SENA/SENA_X_priority_black_mirror_shoes_09.jpeg",
@@ -468,17 +468,21 @@
         "height": 1402
       },
       "mediaUrl": "https://cdn.jsdelivr.net/gh/innovation4131210-alt/sena-media@d638b33a30dfa256b348b6d1dbccfd82235a48d7/media/sena-x-reserve-2026-09-24/SENA_X_priority_black_mirror_shoes_09.jpeg",
-      "exactSourceGitBlob": "851b3ddca65f9b7d992a5c9d455d8c59a5e87515"
+      "exactSourceGitBlob": "851b3ddca65f9b7d992a5c9d455d8c59a5e87515",
+      "attemptedAt": "2026-10-27T05:41:51.185Z",
+      "bufferPostId": "6ae039a0e322dad801265d9f",
+      "bufferDueAt": "2026-10-28T04:05:00.000Z",
+      "processedAt": "2026-10-27T05:41:52.374Z"
     }
   ],
   "activationRequestedAt": "2026-09-24T10:43:18.218Z",
   "lastRun": {
     "channelId": "6ab4f318ea19ca0bded37a49",
     "channelName": "sena_ai_studio",
-    "scheduledCount": 0,
-    "verifiedVisualCount": 0,
-    "heldVisualRequiredCount": 1,
-    "created": 0,
-    "verifiedAt": "2026-10-27T05:15:25.893Z"
+    "scheduledCount": 1,
+    "verifiedVisualCount": 1,
+    "heldVisualRequiredCount": 0,
+    "created": 1,
+    "verifiedAt": "2026-10-27T05:41:52.590Z"
   }
 }
