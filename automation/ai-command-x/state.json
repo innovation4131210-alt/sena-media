@@ -90,7 +90,9 @@
     "D30-AM",
     "D30-NOON",
     "D30-PM",
-    "D31-AM"
+    "D31-AM",
+    "D31-NOON",
+    "D31-PM"
   ],
   "scheduledHistory": [
     {
@@ -584,6 +586,18 @@
       "bufferPostId": "6adfe0405d20d74bbda136d5",
       "dueAt": "2026-10-29T23:10:00.000Z",
       "recordedAt": "2026-10-26T23:20:32+00:00"
+    },
+    {
+      "contentId": "D31-NOON",
+      "bufferPostId": "6ae102c0944977ae0253eaca",
+      "dueAt": "2026-10-30T03:20:00.000Z",
+      "recordedAt": "2026-10-27T20:00:00+00:00"
+    },
+    {
+      "contentId": "D31-PM",
+      "bufferPostId": "6ae102c0e8126ef614202f28",
+      "dueAt": "2026-10-30T11:30:00.000Z",
+      "recordedAt": "2026-10-27T20:00:01+00:00"
     }
   ]
 }
