@@ -71,7 +71,7 @@
     "DeSndRLIMV1",
     "DeSnR2XoPoJ"
   ],
-  "note": "Historical batches through 2026-10-17 retain their original checkpoints. Ordinary lifestyle continuation D37-D63 uses 20:30, 20:31 and 20:32 JST on 2026-10-20 through 2026-10-28. This IG continuation does not include the separate Threads nightly feature. The bounded refill uses individually QC-accepted existing ordinary originals under the standing posting-continuity operation. No days after 2026-10-28 are activated. Three individual feed posts are sequential, not atomic; temporary misalignment remains possible.",
+  "note": "Historical batches through 2026-10-17 retain their original checkpoints. Ordinary lifestyle continuation D37-D63 uses 20:30, 20:31 and 20:32 JST on 2026-10-20 through 2026-10-28. This IG continuation does not include the separate Threads nightly feature. The bounded refill uses individually QC-accepted existing ordinary originals under the standing posting-continuity operation. The prior authorization ended on 2026-10-28. Three individual feed posts are sequential, not atomic; temporary misalignment remains possible. Bounded owner approval 2026-10-28T10:12:11Z additionally adopts only D64-D66 on 2026-10-29 20:30/31/32 JST. No dates after Oct29 are activated.",
   "continuation": {
     "afterDay": 36,
     "startDay": 37,
@@ -83,6 +83,6 @@
       2
     ],
     "activationReady": true,
-    "reason": "The first ordinary QC originals 1, 2 and 3 retain their specific 2026-10-20 approval. Existing ordinary originals 4 through 27 extend the existing daily three-photo refill through 2026-10-28 only under the standing continuity/refill authorization, without new content class, account, cadence, cost or permission. Originals 25-27 were individually re-QC'd against the official master and r3 text on 2026-10-26. History unchanged. Later days remain unactivated. Live account, history, exact-media, native-AI and duplicate checks remain required before every creation."
+    "reason": "The first ordinary QC originals 1, 2 and 3 retain their specific 2026-10-20 approval. Existing ordinary originals 4 through 27 extend the existing daily three-photo refill through 2026-10-28 only under the standing continuity/refill authorization, without new content class, account, cadence, cost or permission. Originals 25-27 were individually re-QC'd against the official master and r3 text on 2026-10-26. History unchanged. Dates after 2026-10-29 remain unactivated. Live account, history, exact-media, native-AI and duplicate checks remain required before every creation. Owner approval Sentinel_6d9c1deee5ac8191bf7678776445173d now additionally authorizes the three individually QC-accepted Oct29 originals only. No later dates or other media are activated."
   }
 }
