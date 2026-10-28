@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T18:10:42.464Z",
+  "updatedAt": "2026-10-28T18:30:41.924Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -397,7 +397,7 @@
       "key": "sena-threads-autumn-stock-21-2026-10-28",
       "dueAt": "2026-10-28T11:10:00.000Z",
       "text": "秋の小道に、淡いブルーの羽織り。足元はスニーカーで軽やかに。",
-      "status": "scheduled",
+      "status": "sent",
       "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/e1daeda14152585db12c2f1b613c30b58f80a05a/media/sena-30day-2026-09-28/SENA_21_original.png",
       "visualFirst": true,
       "sourceSha256": "0f534fe056eddcaa4a0117d1e6742f5bd2a4aa5b8f5e9d3c2a10d1a6a1a3be5c",
@@ -419,7 +419,10 @@
       "attemptedAt": "2026-10-24T00:07:46.168Z",
       "bufferPostId": "6adbf6d20b5343d07057e052",
       "bufferDueAt": "2026-10-28T11:10:00.000Z",
-      "processedAt": "2026-10-24T00:07:46.716Z"
+      "processedAt": "2026-10-24T00:07:46.716Z",
+      "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfCSvg3FC3s",
+      "sentAt": "2026-10-28T11:10:19.082Z",
+      "statusSyncedAt": "2026-10-28T18:30:41.924Z"
     }
   ],
   "activation": {
@@ -432,8 +435,8 @@
   "lastRun": {
     "channelId": "6ab75347ea19ca0bdef0d04a",
     "channelName": "sena.virtual.studio",
-    "scheduledCount": 1,
-    "verifiedAt": "2026-10-27T18:10:42.464Z"
+    "scheduledCount": 0,
+    "verifiedAt": "2026-10-28T18:30:41.925Z"
   },
   "organicContinuityNote": "Held commercial tests do not occupy organic cadence; Oct 7 and Oct 13 use non-commercial replacements."
 }
