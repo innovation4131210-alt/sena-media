@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-28T20:26:36+00:00",
-  "ok": false,
+  "checkedAt": "2026-10-29T20:24:16+00:00",
+  "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
     "name": "ai_command_jp",
@@ -14,24 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6adfb7213ffda7dd058de92c",
-        "contentId": "D30-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-10-29T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6adfb721a72c078abdb628f7",
-        "contentId": "D30-NOON",
-        "contentType": "週次整理",
-        "dueAtJst": "2026-10-29T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6adfb7213c00530d93a5e75c",
-        "contentId": "D30-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-10-29T20:30+09:00"
-      },
       {
         "bufferPostId": "6adfe0405d20d74bbda136d5",
         "contentId": "D31-AM",
@@ -67,11 +49,29 @@
         "contentId": "D32-PM",
         "contentType": "参加型",
         "dueAtJst": "2026-10-31T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ae28db57a72c9efac086a0c",
+        "contentId": "D33-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-11-01T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ae3a85ff473cae772d8b6c4",
+        "contentId": "D33-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-11-01T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ae3a85ff1e846b65afb2918",
+        "contentId": "D33-PM",
+        "contentType": "note導線",
+        "dueAtJst": "2026-11-01T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 6,
-  "analyticsAgeMinutes": 168.6,
+  "unusedPreparedCount": 9,
+  "analyticsAgeMinutes": 157.4,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -104,7 +104,5 @@
       "ok": true
     }
   },
-  "errors": [
-    "Prepared backlog too low: 6 unused < 9"
-  ]
+  "errors": []
 }
