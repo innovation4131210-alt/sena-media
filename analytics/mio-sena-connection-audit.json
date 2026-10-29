@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-28T19:00:31.963Z",
+  "checkedAt": "2026-10-29T19:08:24.696Z",
   "readOnly": true,
   "connections": [
     {
@@ -561,32 +561,31 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 3,
-            "sent": 88
+            "sent": 91
           },
           "posts": [
             {
               "id": "6ae1e6ef768df719cebd3f4a",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-10-29T11:32:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-10-29T11:32:15.293Z",
+              "externalLink": "https://www.instagram.com/p/DfE6DHmlank/",
               "textHash": "2adf93500949a0e1c98798a1a3f9efd687f101bdfbd16006044dffc79c0d5e81"
             },
             {
               "id": "6ae1e6ee63bb1a485a2dac45",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-10-29T11:31:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-10-29T11:31:51.292Z",
+              "externalLink": "https://www.instagram.com/p/DfE6AhpFmTO/",
               "textHash": "6014e5a38d0c577f076fe6d7479d7d0d6571f3d90b89356dd703cecdeb5aec56"
             },
             {
               "id": "6ae1e6edf8d0c164b1647744",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-10-29T11:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
+              "sentAt": "2026-10-29T11:30:56.798Z",
+              "externalLink": "https://www.instagram.com/p/DfE55xrlCmc/",
               "textHash": "2243d78a2c3ed6e194344b55be9e332a5aebd7d09360572798b673e35d528e75"
             },
             {
@@ -1305,21 +1304,21 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-28T19:00:31.963Z",
+      "evaluatedAt": "2026-10-29T19:08:24.696Z",
       "mutationAllowed": false,
-      "status": "observed_batch_coverage",
-      "ok": true,
+      "status": "action_required",
+      "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-10-29T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-10-30T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
-      "futureDates": [
-        "2026-10-29"
+      "futureDates": [],
+      "nextBatchDate": "2026-10-30",
+      "errors": [
+        "next_batch_reservation_unverified"
       ],
-      "nextBatchDate": "2026-10-29",
-      "errors": [],
       "warnings": [
         "future_stock_below_three_batches"
       ],
@@ -1328,18 +1327,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-28T19:00:31.963Z",
+      "evaluatedAt": "2026-10-29T19:08:24.696Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-10-29T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-10-30T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-10-30",
+      "firstUnverifiedDate": "2026-10-31",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -1351,18 +1350,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-28T19:00:31.963Z",
+      "evaluatedAt": "2026-10-29T19:08:24.696Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-10-29T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-10-30T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-10-30",
+      "firstUnverifiedDate": "2026-10-31",
       "errors": [
         "next_day_reservation_unverified"
       ],
