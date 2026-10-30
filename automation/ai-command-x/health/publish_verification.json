@@ -1,14 +1,14 @@
 {
   "latest": {
-    "checkedAt": "2026-10-30T10:29:30+00:00",
-    "slot": "2026-10-30T12:20+09:00",
+    "checkedAt": "2026-10-30T17:56:30+00:00",
+    "slot": "2026-10-30T20:30+09:00",
     "ok": true,
-    "contentId": "D31-NOON",
-    "contentType": "司令室メモ",
-    "bufferPostId": "6ae102c0944977ae0253eaca",
+    "contentId": "D31-PM",
+    "contentType": "note導線",
+    "bufferPostId": "6ae102c0e8126ef614202f28",
     "bufferStatus": "sent",
-    "sentAt": "2026-10-30T03:20:00.849Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2116007183359815741",
+    "sentAt": "2026-10-30T11:30:33.982Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2116130634934448629",
     "warnings": [],
     "errors": []
   },
@@ -1193,6 +1193,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-10-30T03:20:00.849Z",
       "externalLink": "https://x.com/2104714619688554496/status/2116007183359815741",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-10-30T17:56:30+00:00",
+      "slot": "2026-10-30T20:30+09:00",
+      "ok": true,
+      "contentId": "D31-PM",
+      "contentType": "note導線",
+      "bufferPostId": "6ae102c0e8126ef614202f28",
+      "bufferStatus": "sent",
+      "sentAt": "2026-10-30T11:30:33.982Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2116130634934448629",
       "warnings": [],
       "errors": []
     }
