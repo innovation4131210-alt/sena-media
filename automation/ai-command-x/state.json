@@ -101,7 +101,8 @@
     "D33-PM",
     "D34-AM",
     "D34-NOON",
-    "D34-PM"
+    "D34-PM",
+    "D35-AM"
   ],
   "scheduledHistory": [
     {
@@ -661,6 +662,12 @@
       "bufferPostId": "6ae4f5f5eaa24d6f9a37174c",
       "dueAt": "2026-11-02T11:30:00.000Z",
       "recordedAt": "2026-10-30T19:54:29+00:00"
+    },
+    {
+      "contentId": "D35-AM",
+      "bufferPostId": "6ae52f67a114574349774a42",
+      "dueAt": "2026-11-02T23:10:00.000Z",
+      "recordedAt": "2026-10-30T23:59:35+00:00"
     }
   ]
 }
