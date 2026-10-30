@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-29T19:08:24.696Z",
+  "checkedAt": "2026-10-30T18:46:43.652Z",
   "readOnly": true,
   "connections": [
     {
@@ -1304,18 +1304,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-29T19:08:24.696Z",
+      "evaluatedAt": "2026-10-30T18:46:43.652Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-10-30T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-10-31T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-10-30",
+      "nextBatchDate": "2026-10-31",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -1327,18 +1327,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-29T19:08:24.696Z",
+      "evaluatedAt": "2026-10-30T18:46:43.652Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-10-30T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-10-31T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-10-31",
+      "firstUnverifiedDate": "2026-11-01",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -1350,18 +1350,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-29T19:08:24.696Z",
+      "evaluatedAt": "2026-10-30T18:46:43.652Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-10-30T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-10-31T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-10-31",
+      "firstUnverifiedDate": "2026-11-01",
       "errors": [
         "next_day_reservation_unverified"
       ],
