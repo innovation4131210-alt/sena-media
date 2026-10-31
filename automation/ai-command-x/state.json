@@ -102,7 +102,9 @@
     "D34-AM",
     "D34-NOON",
     "D34-PM",
-    "D35-AM"
+    "D35-AM",
+    "D35-NOON",
+    "D35-PM"
   ],
   "scheduledHistory": [
     {
@@ -668,6 +670,18 @@
       "bufferPostId": "6ae52f67a114574349774a42",
       "dueAt": "2026-11-02T23:10:00.000Z",
       "recordedAt": "2026-10-30T23:59:35+00:00"
+    },
+    {
+      "contentId": "D35-NOON",
+      "bufferPostId": "6ae63dd5cf3a3112f3bc2f97",
+      "dueAt": "2026-11-03T03:20:00.000Z",
+      "recordedAt": "2026-10-31T19:13:25+00:00"
+    },
+    {
+      "contentId": "D35-PM",
+      "bufferPostId": "6ae63dd6cf3a3112f3bc2fd6",
+      "dueAt": "2026-11-03T11:30:00.000Z",
+      "recordedAt": "2026-10-31T19:13:26+00:00"
     }
   ]
 }
