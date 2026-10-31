@@ -13,20 +13,24 @@ Required repository Actions secrets:
 
 Safety:
 - secrets must never be committed to files;
-- workflow schedule remains disabled until a successful controlled test;
+- workflow schedule remains disabled while the X adult-affiliate paid-partnership policy hold is in effect; a technical test alone does not authorize restart;
 - the old private DMM scheduled workflow remains paused;
 - public state contains only posting IDs/content IDs, never secret values.
 
-Test:
-Updating `automation/dmm-x/run-trigger.txt` triggers one controlled batch run.
-After a successful test, add the daily cron back to the public workflow.
+Test / restart prerequisites:
+- Do not dispatch a commercial batch or restore cron merely to test posting.
+- First resolve X paid-partnership policy applicability, then verify existing Buffer external IDs and the platform's live queue to prevent duplicates.
+- Recheck future 12:30 / 21:30 / 23:30 JST dueAt slots only; never backfill missed slots.
+- Use `customScheduled + dueAt`, not `addToQueue`. Campaign eligibility must cover the actual dueAt.
 
-## Compliance discrepancy observed (2026-10-28 JST; informational safety audit)
+## Posting hold status (verified 2026-11-01 JST)
 
-This public runner is **not covered by the paused private repository workflow**. The public workflow `.github/workflows/dmm-x-public-runner.yml` contains an active daily `0 21 * * *` schedule (06:00 JST), despite this README's earlier controlled-test wording.
+The earlier 2026-10-28 audit found a separately active public runner. That discrepancy has since been resolved **in workflow code**: `.github/workflows/dmm-x-public-runner.yml` now has `workflow_dispatch` only and its sole job has `if: ${{ false }}`, so commercial posting is paused. The private repository also records a posting hold. Do not infer from the presence of a manual trigger that the disabled job will post.
 
-Source-of-truth `automation/dmm-x/state.json` currently records the **2026-10-26** batch with three Buffer external IDs (one engagement and two affiliate items, including `rank_first_reply` and `review_direct`), recovered from Buffer. This proves that the public runner had a separately active commercial queue; it does **not** by itself prove public X delivery, or confirm any 2026-10-27/28 batch. Check Buffer live IDs and X public URLs separately.
+`automation/dmm-x/state.json` is the posting Source of Truth. Its latest batch is **2026-10-26**, with recovered external Buffer IDs for 12:30 (engagement), 21:30 (discovery affiliate) and 23:30 JST (decision affiliate). It does **not** demonstrate that later dates have no posts in Buffer; the live inventory is not fully verified. Neither missing newer IDs nor the elapsed dueAt authorizes backfilling or duplicate creation. Keep historical P0 completion and the two confirmed affiliate readbacks intact.
 
-Policy review: X's official paid partnerships policy expressly includes commission-generating affiliate links and excludes adult/sexual products, services, entertainment and content from paid-partnership promotions. The older private repository README's "do not add new adult affiliate promotion" hold cannot be treated as effective across this public runner. See https://help.x.com/ja/rules-and-policies/paid-partnerships-policy and the private `innovation4131210-alt/dmm-x-auto-post` README (2026-10-15).
+`dmm-x-live-audit.yml` is a separate **read-only** telemetry workflow, not the posting runner. Its saved Buffer API 429 cooldown currently ends **2026-11-12 08:40:53 JST**. Until that retryAt, inspect existing GitHub state and external IDs without re-querying Buffer. If a future audit read succeeds but git persistence fails, preserve the read payload as an artifact and do not repeat the Buffer read merely to repair a rebase/push conflict.
 
-**Recommended guard:** do not infer compliance from PR disclosure or sensitive-media labeling. Verify the exact outbound content/category and pause any new prohibited affiliate placements until platform-policy applicability is resolved. This note changes no workflow, Buffer queue, published post, or schedule. Preserve existing external IDs and avoid duplicate creation.
+The X Paid Partnerships Policy expressly includes commission-generating affiliate links and excludes adult/sexual products, services and entertainment. PR disclosures or sensitive-media labeling do not override that restriction. Do not restart adult affiliate placement until platform-policy applicability is resolved, and do not disguise or route around the restriction. Official reference: https://help.x.com/ja/rules-and-policies/paid-partnerships-policy
+
+Product-selection previews and popularity proxies are research data, not proof of live booking, an eligible sale at dueAt, or a DMM conversion. Never infer official sales or commissions from Buffer clicks.
