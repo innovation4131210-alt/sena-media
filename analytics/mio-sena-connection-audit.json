@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-30T18:46:43.652Z",
+  "checkedAt": "2026-10-31T17:52:14.592Z",
   "readOnly": true,
   "connections": [
     {
@@ -274,9 +274,26 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
+            "scheduled": 2,
             "sent": 34
           },
           "posts": [
+            {
+              "id": "6ae604f87d03407568292f83",
+              "status": "scheduled",
+              "dueAt": "2026-11-02T10:00:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "5d64c375350b6ac7224c20f7dd8f973716e0b5f38023c4304f2ff5a66451b766"
+            },
+            {
+              "id": "6ae604a17da63f30b8e63f61",
+              "status": "scheduled",
+              "dueAt": "2026-11-01T10:00:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "ea5fb8164d24549ecde0edba19f1c41c2e4f779c2df603452d96107453174ff3"
+            },
             {
               "id": "6ade3c6e3b189c3623b32be9",
               "status": "sent",
@@ -561,9 +578,34 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
+            "scheduled": 3,
             "sent": 91
           },
           "posts": [
+            {
+              "id": "6ae6053ef358b484b5843c75",
+              "status": "scheduled",
+              "dueAt": "2026-11-01T11:32:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "e2ff283274cc074d39310321d81c1a624cdb3d84cc34984f29a02975e6bd4486"
+            },
+            {
+              "id": "6ae60504be4ba0e3669b6036",
+              "status": "scheduled",
+              "dueAt": "2026-11-01T11:31:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "a78524c96faec9fe701757c49500a5713b21da62d66f0249895c95304e34c2a0"
+            },
+            {
+              "id": "6ae604b69aa2e4d9f47100d5",
+              "status": "scheduled",
+              "dueAt": "2026-11-01T11:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "bf71266b9cb36fc1174e444d230099e154f1f3e1b41cd92fca63487485bc5d6f"
+            },
             {
               "id": "6ae1e6ef768df719cebd3f4a",
               "status": "sent",
@@ -1304,21 +1346,21 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-10-30T18:46:43.652Z",
+      "evaluatedAt": "2026-10-31T17:52:14.592Z",
       "mutationAllowed": false,
-      "status": "action_required",
-      "ok": false,
+      "status": "observed_batch_coverage",
+      "ok": true,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-10-31T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-01T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
-      "futureDates": [],
-      "nextBatchDate": "2026-10-31",
-      "errors": [
-        "next_batch_reservation_unverified"
+      "futureDates": [
+        "2026-11-01"
       ],
+      "nextBatchDate": "2026-11-01",
+      "errors": [],
       "warnings": [
         "future_stock_below_three_batches"
       ],
@@ -1327,21 +1369,22 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-10-30T18:46:43.652Z",
+      "evaluatedAt": "2026-10-31T17:52:14.592Z",
       "mutationAllowed": false,
-      "status": "action_required",
-      "ok": false,
-      "expectedPublicationDueAt": "2026-10-31T10:00:00.000Z",
+      "status": "stock_warning",
+      "ok": true,
+      "expectedPublicationDueAt": "2026-11-01T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
-      "futureDates": [],
-      "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-01",
-      "errors": [
-        "next_day_reservation_unverified"
+      "futureDates": [
+        "2026-11-01",
+        "2026-11-02"
       ],
+      "consecutiveFutureDays": 1,
+      "firstUnverifiedDate": "2026-11-03",
+      "errors": [],
       "warnings": [
         "future_stock_below_three_days"
       ],
@@ -1350,18 +1393,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-10-30T18:46:43.652Z",
+      "evaluatedAt": "2026-10-31T17:52:14.592Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-10-31T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-01T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-01",
+      "firstUnverifiedDate": "2026-11-02",
       "errors": [
         "next_day_reservation_unverified"
       ],
