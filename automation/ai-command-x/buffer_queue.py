@@ -81,62 +81,67 @@ def select_twitter_channel():
     return matches[0]
 
 
+# REVIEW ONLY: after/endCursor verified in official public docs; live compatibility untested.
+# Offline candidate; no production API calls have been made.
 def get_existing_posts(org_id: str, channel_id: str):
-    query = f"""
-    query ExistingPosts {{
-      scheduled: posts(
-        first: 100
-        input: {{
-          organizationId: {qstr(org_id)}
-          filter: {{ status: [scheduled], channelIds: [{qstr(channel_id)}] }}
-          sort: {{ field: dueAt, direction: asc }}
-        }}
-      ) {{
-        edges {{ node {{ id text status dueAt channelId }} }}
-        pageInfo {{ hasNextPage }}
-      }}
-      sent: posts(
-        first: 100
-        input: {{
-          organizationId: {qstr(org_id)}
-          filter: {{ status: [sent], channelIds: [{qstr(channel_id)}] }}
-          sort: {{ field: dueAt, direction: desc }}
-        }}
-      ) {{
-        edges {{ node {{ id text status dueAt channelId }} }}
-        pageInfo {{ hasNextPage }}
-      }}
-    }}
-    """
-    data = gql(query)
-    def validate_connection(status):
-        connection = data.get(status)
-        if not isinstance(connection, dict):
-            raise RuntimeError(f"Missing {status} inventory; refusing to schedule")
-        edges = connection.get("edges")
-        page_info = connection.get("pageInfo")
-        if (not isinstance(edges, list) or not isinstance(page_info, dict)
-                or page_info.get("hasNextPage") is not False):
-            raise RuntimeError(f"Incomplete {status} inventory; refusing to schedule")
-        rows = []
-        for edge in edges:
-            row = edge.get("node") if isinstance(edge, dict) else None
-            if (not isinstance(row, dict) or not isinstance(row.get("id"), str)
-                    or not row["id"] or row.get("channelId") != channel_id
-                    or row.get("status") != status or not isinstance(row.get("text"), str)):
-                raise RuntimeError(f"Invalid {status} inventory identity or shape")
-            if status == "scheduled":
-                try:
-                    due = datetime.fromisoformat(row["dueAt"].replace("Z", "+00:00"))
-                    if due.tzinfo is None:
-                        raise ValueError("Missing timezone")
-                except (KeyError, TypeError, ValueError, AttributeError) as exc:
-                    raise RuntimeError("Invalid scheduled inventory dueAt") from exc
-            rows.append(row)
-        return rows
+    def fetch_all(status):
+        rows, seen_ids, seen_cursors = [], set(), set()
+        cursor = None
+        for page in range(100):
+            after = "" if cursor is None else f"after: {qstr(cursor)}"
+            direction = "asc" if status == "scheduled" else "desc"
+            query = f"""
+            query ExistingPosts {{
+              inventory: posts(first: 100 {after} input: {{
+                organizationId: {qstr(org_id)}
+                filter: {{ status: [{status}], channelIds: [{qstr(channel_id)}] }}
+                sort: {{ field: dueAt, direction: {direction} }}
+              }}) {{
+                edges {{ node {{ id text status dueAt channelId }} }}
+                pageInfo {{ hasNextPage endCursor }}
+              }}
+            }}
+            """
+            data = gql(query)
+            connection = data.get("inventory") if isinstance(data, dict) else None
+            if not isinstance(connection, dict):
+                raise RuntimeError(f"Missing {status} inventory; refusing to schedule")
+            edges, info = connection.get("edges"), connection.get("pageInfo")
+            if not isinstance(edges, list):
+                raise RuntimeError(f"Invalid {status} edges; refusing to schedule")
+            if not isinstance(info, dict) or type(info.get("hasNextPage")) is not bool:
+                raise RuntimeError(f"Invalid {status} pageInfo; refusing to schedule")
+            if len(edges) > 100:
+                raise RuntimeError(f"Oversized {status} page; refusing to schedule")
+            for edge in edges:
+                row = edge.get("node") if isinstance(edge, dict) else None
+                if (not isinstance(row, dict) or not isinstance(row.get("id"), str)
+                        or not row["id"] or row.get("channelId") != channel_id
+                        or row.get("status") != status or not isinstance(row.get("text"), str)):
+                    raise RuntimeError(f"Invalid {status} inventory identity or shape")
+                if row["id"] in seen_ids:
+                    raise RuntimeError("Duplicate Buffer inventory IDs; refusing to schedule")
+                if status == "scheduled":
+                    try:
+                        due = datetime.fromisoformat(row["dueAt"].replace("Z", "+00:00"))
+                        if due.tzinfo is None:
+                            raise ValueError("Missing timezone")
+                    except (KeyError, TypeError, ValueError, AttributeError) as exc:
+                        raise RuntimeError("Invalid scheduled inventory dueAt") from exc
+                seen_ids.add(row["id"])
+                rows.append(row)
+            if info["hasNextPage"] is False:
+                return rows
+            next_cursor = info.get("endCursor")
+            if (not edges or not isinstance(next_cursor, str) or not next_cursor
+                    or next_cursor in seen_cursors):
+                raise RuntimeError(f"Invalid {status} continuation; refusing to schedule")
+            seen_cursors.add(next_cursor)
+            cursor = next_cursor
+        raise RuntimeError(f"Incomplete {status} inventory: page limit; refusing to schedule")
 
-    scheduled = validate_connection("scheduled")
-    sent = validate_connection("sent")
+    scheduled = fetch_all("scheduled")
+    sent = fetch_all("sent")
     ids = [row["id"] for row in scheduled + sent]
     if len(ids) != len(set(ids)):
         raise RuntimeError("Duplicate Buffer inventory IDs; refusing to schedule")
@@ -286,4 +291,5 @@ if __name__ == "__main__":
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         sys.exit(1)
+
 
