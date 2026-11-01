@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-01T19:50:22+00:00",
+  "checkedAt": "2026-11-01T21:50:10+00:00",
   "ok": false,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -8,7 +8,7 @@
     "isLocked": false,
     "isQueuePaused": false
   },
-  "scheduledCount": 6,
+  "scheduledCount": 9,
   "queueIntegrity": {
     "allMappedToSourceOfTruth": true,
     "noDuplicateContentIds": true,
@@ -49,11 +49,29 @@
         "contentId": "D35-PM",
         "contentType": "note導線",
         "dueAtJst": "2026-11-03T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6ae7b3ac48ce42a6b42ac6b6",
+        "contentId": "D36-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-11-04T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6ae7b3ac01fa08ffbe6ba019",
+        "contentId": "D36-NOON",
+        "contentType": "司令室メモ",
+        "dueAtJst": "2026-11-04T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6ae7b3ad2da2578c1883b3d0",
+        "contentId": "D36-PM",
+        "contentType": "参加型",
+        "dueAtJst": "2026-11-04T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 9,
-  "analyticsAgeMinutes": 146.2,
+  "unusedPreparedCount": 6,
+  "analyticsAgeMinutes": 266.0,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -87,6 +105,6 @@
     }
   },
   "errors": [
-    "Scheduled queue below target: 6 < 9"
+    "Prepared backlog too low: 6 unused < 9"
   ]
 }
