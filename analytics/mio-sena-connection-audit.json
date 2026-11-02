@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-01T18:29:22.928Z",
+  "checkedAt": "2026-11-02T22:26:59.127Z",
   "readOnly": true,
   "connections": [
     {
@@ -27,9 +27,50 @@
           "inventoryComplete": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 29
+            "scheduled": 3,
+            "sent": 31
           },
           "posts": [
+            {
+              "id": "6ae7d77d18eb3027c75c76e1",
+              "status": "scheduled",
+              "dueAt": "2026-11-02T23:00:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "a9e162cff89f4789c7784e371f85bb07cc265f2d8ab1eebfa275a1c000f97484"
+            },
+            {
+              "id": "6ae7be2472a2905273e9fe83",
+              "status": "sent",
+              "dueAt": "2026-11-02T13:45:00.000Z",
+              "sentAt": "2026-11-02T13:46:47.232Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfPcn1iEebV",
+              "textHash": "9689a7410d076da72cae35e1848e92750254798bfd45c47198fcdce3fefae0f7"
+            },
+            {
+              "id": "6ae7b64b167036edac5701b6",
+              "status": "scheduled",
+              "dueAt": "2026-11-04T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "d376553ff62abe395049fd07e2b486d7b0ea53105b6a32775163be59e995a898"
+            },
+            {
+              "id": "6ae7b5f670c272fbbe6c3c22",
+              "status": "scheduled",
+              "dueAt": "2026-11-03T11:10:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "41be734b04a82b194766d7481f2e16cf282cdc699ade670b8890cd313443323e"
+            },
+            {
+              "id": "6ae7b5a977831ecad992e50b",
+              "status": "sent",
+              "dueAt": "2026-11-02T11:10:00.000Z",
+              "sentAt": "2026-11-02T11:10:12.486Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfPKtJpFfR7",
+              "textHash": "a4b6749f58c4206761decc8df5a64e3ca562359f1ba9ef7bda97c07dbd4309be"
+            },
             {
               "id": "6adccf887addc64d5186e829",
               "status": "sent",
@@ -275,16 +316,24 @@
           "knownMioXPostPresent": false,
           "counts": {
             "scheduled": 1,
-            "sent": 35
+            "sent": 36
           },
           "posts": [
             {
-              "id": "6ae604f87d03407568292f83",
+              "id": "6ae7d40667f87354ddf56011",
               "status": "scheduled",
-              "dueAt": "2026-11-02T10:00:00.000Z",
+              "dueAt": "2026-11-05T10:00:00.000Z",
               "sentAt": null,
               "externalLink": null,
-              "textHash": "5d64c375350b6ac7224c20f7dd8f973716e0b5f38023c4304f2ff5a66451b766"
+              "textHash": "7efe9abe3c84be66ca36aeab7f4e72d1c96ff825ce17edd93345ce6538745c53"
+            },
+            {
+              "id": "6ae604f87d03407568292f83",
+              "status": "sent",
+              "dueAt": "2026-11-02T10:00:00.000Z",
+              "sentAt": "2026-11-02T10:01:46.729Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DfPC4NCFog2",
+              "textHash": "c87b9c6a0582d1b758e2523b8a9d672592fd224f307d6a54fcc581c07aa64208"
             },
             {
               "id": "6ae604a17da63f30b8e63f61",
@@ -587,7 +636,7 @@
               "dueAt": "2026-11-01T11:32:00.000Z",
               "sentAt": "2026-11-01T11:32:08.320Z",
               "externalLink": "https://www.instagram.com/p/DfMobJ1kfgo/",
-              "textHash": "e2ff283274cc074d39310321d81c1a624cdb3d84cc34984f29a02975e6bd4486"
+              "textHash": "4a12ef5e7761fa54ea6ceba0b8a300bcd7e9b04209ea0bca29903ad28bdad1c8"
             },
             {
               "id": "6ae60504be4ba0e3669b6036",
@@ -595,7 +644,7 @@
               "dueAt": "2026-11-01T11:31:00.000Z",
               "sentAt": "2026-11-01T11:31:12.780Z",
               "externalLink": "https://www.instagram.com/p/DfMoUR-EchY/",
-              "textHash": "a78524c96faec9fe701757c49500a5713b21da62d66f0249895c95304e34c2a0"
+              "textHash": "be398b1c620696409acb92f4fbc7f9d36ff9dfbc91cb9f43aaf5e180140037d3"
             },
             {
               "id": "6ae604b69aa2e4d9f47100d5",
@@ -1345,18 +1394,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-01T18:29:22.928Z",
+      "evaluatedAt": "2026-11-02T22:26:59.127Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-02T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-03T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-02",
+      "nextBatchDate": "2026-11-03",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -1368,20 +1417,20 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-01T18:29:22.928Z",
+      "evaluatedAt": "2026-11-02T22:26:59.127Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-02T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-03T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [
-        "2026-11-02"
+        "2026-11-05"
       ],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-03",
+      "firstUnverifiedDate": "2026-11-04",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -1393,21 +1442,22 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-01T18:29:22.928Z",
+      "evaluatedAt": "2026-11-02T22:26:59.127Z",
       "mutationAllowed": false,
-      "status": "action_required",
-      "ok": false,
-      "expectedPublicationDueAt": "2026-11-02T11:10:00.000Z",
+      "status": "stock_warning",
+      "ok": true,
+      "expectedPublicationDueAt": "2026-11-03T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
-      "futureDates": [],
-      "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-03",
-      "errors": [
-        "next_day_reservation_unverified"
+      "futureDates": [
+        "2026-11-03",
+        "2026-11-04"
       ],
+      "consecutiveFutureDays": 1,
+      "firstUnverifiedDate": "2026-11-05",
+      "errors": [],
       "warnings": [
         "future_stock_below_three_days"
       ],
