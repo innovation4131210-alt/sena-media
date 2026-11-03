@@ -110,7 +110,8 @@
     "D36-PM",
     "D37-AM",
     "D37-NOON",
-    "D37-PM"
+    "D37-PM",
+    "D38-AM"
   ],
   "scheduledHistory": [
     {
@@ -724,6 +725,12 @@
       "bufferPostId": "6ae87cd46ee21de9577ae961",
       "dueAt": "2026-11-05T11:30:00.000Z",
       "recordedAt": "2026-11-02T12:06:44+00:00"
+    },
+    {
+      "contentId": "D38-AM",
+      "bufferPostId": "6ae924544e401f604e527e58",
+      "dueAt": "2026-11-05T23:10:00.000Z",
+      "recordedAt": "2026-11-03T00:01:24+00:00"
     }
   ]
 }
