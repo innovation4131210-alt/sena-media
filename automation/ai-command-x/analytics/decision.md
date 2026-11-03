@@ -1,6 +1,6 @@
 # AI Command X Data Decision
 
-- 取得日時: 2026-11-03T11:23:43+00:00
+- 取得日時: 2026-11-03T18:49:27+00:00
 - 配信記録: 92本。欠損値は0に置き換えない。
 - 購入数・売上・流入元別の購入帰属: 未取得。Xクリックとは別集計。
 - 同じ役割・同じ経過時間で最低3本を比較。現在値の合計だけで勝者を決めない。
@@ -13,9 +13,9 @@
 | free_A | 2 | 2 | 2 | 2 | 0 |
 | free_B | 2 | 2 | 0 | 2 | 0 |
 | free_entry | 4 | 4 | 1 | 4 | 0 |
-| front_product | 4 | 4 | 2 | 4 | 0 |
+| front_product | 5 | 5 | 2 | 5 | 0 |
 | unmapped | 2 | 2 | 2 | 2 | 0 |
-| ブランド | 4 | 4 | 1 | 4 | 0 |
+| ブランド | 3 | 3 | 1 | 3 | 0 |
 | 今日の指令 | 30 | 30 | 9 | 30 | 0 |
 | 作戦報告 | 3 | 3 | 1 | 3 | 0 |
 | 参加型 | 6 | 6 | 2 | 6 | 0 |
@@ -37,7 +37,7 @@
 | 実行ログ | 1 | 0 | 1 | 未取得 | 0 |
 | 運用改善 | 1 | 0 | 1 | 未取得 | 0 |
 - 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。
-- 取得状態: captured_delayed=8 / missed_metric_window=79 / pending=3 / provider_stale=2
+- 取得状態: captured_delayed=8 / missed_metric_window=78 / pending=3 / provider_stale=3
 
 ## 72時間後（許容窓+2時間）
 
@@ -51,7 +51,7 @@
 | 司令室メモ | 1 | 0 | 1 | 未取得 | 0 |
 | 実務ノウハウ | 1 | 0 | 1 | 未取得 | 0 |
 - 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。
-- 取得状態: captured_delayed=8 / missed_metric_window=73 / pending=9 / provider_stale=2
+- 取得状態: captured_delayed=8 / missed_metric_window=72 / pending=9 / provider_stale=3
 
 ### AM_HOOK_V1
 
