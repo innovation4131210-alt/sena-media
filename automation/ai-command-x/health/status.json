@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-05T00:26:30+00:00",
+  "checkedAt": "2026-11-05T21:30:17+00:00",
   "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -14,18 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6ae87cd33ac2985de1cc7a91",
-        "contentId": "D37-NOON",
-        "contentType": "実務ノウハウ",
-        "dueAtJst": "2026-11-05T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6ae87cd46ee21de9577ae961",
-        "contentId": "D37-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-11-05T20:30+09:00"
-      },
       {
         "bufferPostId": "6ae924544e401f604e527e58",
         "contentId": "D38-AM",
@@ -67,11 +55,23 @@
         "contentId": "D40-AM",
         "contentType": "今日の指令",
         "dueAtJst": "2026-11-08T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6aecf46f07115c73fd39c428",
+        "contentId": "D40-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-11-08T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6aecf46f07115c73fd39c44e",
+        "contentId": "D40-PM",
+        "contentType": "参加型",
+        "dueAtJst": "2026-11-08T20:30+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 11,
-  "analyticsAgeMinutes": 1.3,
+  "unusedPreparedCount": 9,
+  "analyticsAgeMinutes": 136.3,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
