@@ -1,8 +1,13 @@
 {
-  "capturedAt": "2026-11-05T20:46:12.854Z",
-  "tokyoDate": "2026-11-06",
+  "capturedAt": "2026-11-06T23:26:35.376Z",
+  "tokyoDate": "2026-11-07",
   "readOnly": true,
-  "inventoryComplete": true,
+  "inventoryComplete": false,
+  "operationalWindowComplete": true,
+  "sentHistoryTruncated": true,
+  "truncatedHistory": {
+    "sent": true
+  },
   "channel": {
     "id": "6aa72524ea19ca0bde39313c",
     "name": "sena.virtual.studio",
@@ -14,135 +19,17 @@
   "channelAvailable": true,
   "sent": [
     {
-      "id": "6aeac360b47a188a29442c86",
-      "text": "手のひらにおさまる器の、やさしいかたち。毎日の食卓を思い浮かべながら。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
+      "id": "6aeaf51ca51e652fc60f1f17",
+      "text": "お茶を前に、ひと息。窓辺の秋色を眺めながら、ゆっくり過ごす時間。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
       "status": "sent",
-      "dueAt": "2026-11-05T11:32:00.000Z",
-      "sentAt": "2026-11-05T11:32:33.697Z",
-      "externalLink": "https://www.instagram.com/p/DfW7puJESVz/",
+      "dueAt": "2026-11-06T11:32:00.000Z",
+      "sentAt": "2026-11-06T11:32:14.484Z",
+      "externalLink": "https://www.instagram.com/p/DfZgaT2Fk02/",
       "metrics": [
         {
           "type": "reactions",
           "name": "Reactions",
           "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 100,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 2,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
-    },
-    {
-      "id": "6aeac3410c0aaec24f8ce1cc",
-      "text": "水辺で見つけた、秋の色。小さな葉にも、ゆっくり目を向けて。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
-      "status": "sent",
-      "dueAt": "2026-11-05T11:31:00.000Z",
-      "sentAt": "2026-11-05T11:31:44.173Z",
-      "externalLink": "https://www.instagram.com/p/DfW7jqglrHr/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 100,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 1,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
-    },
-    {
-      "id": "6aeac31c2b55264570845bd0",
-      "text": "窓辺の机で、思いついたことを少しずつ。静かな時間をノートに残して。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
-      "status": "sent",
-      "dueAt": "2026-11-05T11:30:00.000Z",
-      "sentAt": "2026-11-05T11:31:02.775Z",
-      "externalLink": "https://www.instagram.com/p/DfW7ep_ICIi/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 1,
           "unit": "count"
         },
         {
@@ -184,11 +71,306 @@
         {
           "type": "reach",
           "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.585Z"
+    },
+    {
+      "id": "6aeaf4eba782735f7a0360df",
+      "text": "本を開いて、静かな時間へ。秋の午後に、少しだけ寄り道。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
+      "status": "sent",
+      "dueAt": "2026-11-06T11:31:00.000Z",
+      "sentAt": "2026-11-06T11:31:58.275Z",
+      "externalLink": "https://www.instagram.com/p/DfZgX9DIOc-/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 100,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
           "value": 1,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.585Z"
+    },
+    {
+      "id": "6aeaf4b5ef5a982328fc48fd",
+      "text": "葉の緑を眺めながら、水やりのひととき。小さな鉢が並ぶ、秋のベランダ。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
+      "status": "sent",
+      "dueAt": "2026-11-06T11:30:00.000Z",
+      "sentAt": "2026-11-06T11:31:29.801Z",
+      "externalLink": "https://www.instagram.com/p/DfZgUktEd-F/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 5,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6aeac360b47a188a29442c86",
+      "text": "手のひらにおさまる器の、やさしいかたち。毎日の食卓を思い浮かべながら。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。",
+      "status": "sent",
+      "dueAt": "2026-11-05T11:32:00.000Z",
+      "sentAt": "2026-11-05T11:32:33.697Z",
+      "externalLink": "https://www.instagram.com/p/DfW7puJESVz/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 66.67,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 3,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6aeac3410c0aaec24f8ce1cc",
+      "text": "水辺で見つけた、秋の色。小さな葉にも、ゆっくり目を向けて。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。",
+      "status": "sent",
+      "dueAt": "2026-11-05T11:31:00.000Z",
+      "sentAt": "2026-11-05T11:31:44.173Z",
+      "externalLink": "https://www.instagram.com/p/DfW7jqglrHr/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6aeac31c2b55264570845bd0",
+      "text": "窓辺の机で、思いついたことを少しずつ。静かな時間をノートに残して。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。",
+      "status": "sent",
+      "dueAt": "2026-11-05T11:30:00.000Z",
+      "sentAt": "2026-11-05T11:31:02.775Z",
+      "externalLink": "https://www.instagram.com/p/DfW7ep_ICIi/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 5,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6aeac21cd5527ec467e91627",
@@ -213,13 +395,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 100,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 3,
+          "value": 4,
           "unit": "count"
         },
         {
@@ -243,11 +425,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 1,
+          "value": 2,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6aeac1e301c5326be3d0e8ef",
@@ -272,13 +454,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 66.67,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 18,
+          "value": 19,
           "unit": "count"
         },
         {
@@ -302,11 +484,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 3,
+          "value": 4,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6aeac190524288c676b3d3f6",
@@ -331,13 +513,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 20,
+          "value": 16.67,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 23,
+          "value": 24,
           "unit": "count"
         },
         {
@@ -361,11 +543,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 5,
+          "value": 6,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ae6053ef358b484b5843c75",
@@ -390,13 +572,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 50,
+          "value": 40,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 7,
+          "value": 8,
           "unit": "count"
         },
         {
@@ -420,11 +602,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.241Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ae60504be4ba0e3669b6036",
@@ -449,13 +631,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 75,
+          "value": 60,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 11,
+          "value": 12,
           "unit": "count"
         },
         {
@@ -479,11 +661,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ae604b69aa2e4d9f47100d5",
@@ -508,13 +690,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 75,
+          "value": 60,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 5,
+          "value": 6,
           "unit": "count"
         },
         {
@@ -538,11 +720,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ae1e6ef768df719cebd3f4a",
@@ -567,13 +749,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 66.67,
+          "value": 50,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 11,
+          "value": 12,
           "unit": "count"
         },
         {
@@ -597,11 +779,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 3,
+          "value": 4,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ae1e6ee63bb1a485a2dac45",
@@ -626,13 +808,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 50,
+          "value": 40,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 12,
+          "value": 13,
           "unit": "count"
         },
         {
@@ -656,11 +838,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ae1e6edf8d0c164b1647744",
@@ -685,13 +867,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 75,
+          "value": 60,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 14,
+          "value": 15,
           "unit": "count"
         },
         {
@@ -715,11 +897,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6adf04dc4efc89efde65ad72",
@@ -744,7 +926,184 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 50,
+          "value": 40,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 7,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 5,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6adf04dbc826641420e228a2",
+      "text": "やわらかなニットと、窓辺の席。あたたかい飲み物をそばに、ひと休み。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-28T11:31:00.000Z",
+      "sentAt": "2026-10-28T11:31:39.650Z",
+      "externalLink": "https://www.instagram.com/p/DfCVMFIFBUs/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 3,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 60,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 15,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 5,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6adf04da4efc89efde65ad10",
+      "text": "淡い紫のニットで、秋の駅へ。待ち時間も、景色を眺めてゆっくり。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-28T11:30:00.000Z",
+      "sentAt": "2026-10-28T11:31:18.212Z",
+      "externalLink": "https://www.instagram.com/p/DfCVJanEVmD/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 1,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 20,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 13,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 5,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6add48fa98a2969fb6c6b8ba",
+      "text": "白いシャツに、赤いカーディガン。キッチンにも少し秋の色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-27T11:32:00.000Z",
+      "sentAt": "2026-10-27T11:32:13.100Z",
+      "externalLink": "https://www.instagram.com/p/De_wc_QG55S/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 40,
           "unit": "percentage"
         },
         {
@@ -774,19 +1133,19 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
-      "id": "6adf04dbc826641420e228a2",
-      "text": "やわらかなニットと、窓辺の席。あたたかい飲み物をそばに、ひと休み。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "id": "6add48b0b9e8ba611cf514f3",
+      "text": "静かな展示室で、少しひと休み。今日は深い緑のニットで。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
       "status": "sent",
-      "dueAt": "2026-10-28T11:31:00.000Z",
-      "sentAt": "2026-10-28T11:31:39.650Z",
-      "externalLink": "https://www.instagram.com/p/DfCVMFIFBUs/",
+      "dueAt": "2026-10-27T11:31:00.000Z",
+      "sentAt": "2026-10-27T11:32:04.466Z",
+      "externalLink": "https://www.instagram.com/p/De_wcSkkaQ4/",
       "metrics": [
         {
           "type": "reactions",
@@ -803,13 +1162,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 75,
+          "value": 60,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 14,
+          "value": 7,
           "unit": "count"
         },
         {
@@ -833,24 +1192,24 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
+          "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
-      "id": "6adf04da4efc89efde65ad10",
-      "text": "淡い紫のニットで、秋の駅へ。待ち時間も、景色を眺めてゆっくり。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "id": "6add4873ba0b93d831ee761a",
+      "text": "茶色のブラウスに、オリーブのスカート。秋は落ち着いた色を重ねたくなる。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
       "status": "sent",
-      "dueAt": "2026-10-28T11:30:00.000Z",
-      "sentAt": "2026-10-28T11:31:18.212Z",
-      "externalLink": "https://www.instagram.com/p/DfCVJanEVmD/",
+      "dueAt": "2026-10-27T11:30:00.000Z",
+      "sentAt": "2026-10-27T11:31:37.167Z",
+      "externalLink": "https://www.instagram.com/p/De_wY5ekRS4/",
       "metrics": [
         {
           "type": "reactions",
           "name": "Reactions",
-          "value": 1,
+          "value": 3,
           "unit": "count"
         },
         {
@@ -862,7 +1221,66 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 25,
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 10,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 6,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6adbf667bd33ce99c3f7fe31",
+      "text": "秋の小道に、淡いブルーの羽織り。足元はスニーカーで軽やかに。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-26T11:32:00.000Z",
+      "sentAt": "2026-10-26T11:32:08.957Z",
+      "externalLink": "https://www.instagram.com/p/De9Lp9HlQS-/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 40,
           "unit": "percentage"
         },
         {
@@ -892,247 +1310,11 @@
         {
           "type": "reach",
           "name": "Reach",
-          "value": 4,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
-    },
-    {
-      "id": "6add48fa98a2969fb6c6b8ba",
-      "text": "白いシャツに、赤いカーディガン。キッチンにも少し秋の色。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "sent",
-      "dueAt": "2026-10-27T11:32:00.000Z",
-      "sentAt": "2026-10-27T11:32:13.100Z",
-      "externalLink": "https://www.instagram.com/p/De_wc_QG55S/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 50,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 5,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 4,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
-    },
-    {
-      "id": "6add48b0b9e8ba611cf514f3",
-      "text": "静かな展示室で、少しひと休み。今日は深い緑のニットで。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "sent",
-      "dueAt": "2026-10-27T11:31:00.000Z",
-      "sentAt": "2026-10-27T11:32:04.466Z",
-      "externalLink": "https://www.instagram.com/p/De_wcSkkaQ4/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 3,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 75,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 6,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 4,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
-    },
-    {
-      "id": "6add4873ba0b93d831ee761a",
-      "text": "茶色のブラウスに、オリーブのスカート。秋は落ち着いた色を重ねたくなる。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "sent",
-      "dueAt": "2026-10-27T11:30:00.000Z",
-      "sentAt": "2026-10-27T11:31:37.167Z",
-      "externalLink": "https://www.instagram.com/p/De_wY5ekRS4/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 3,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 60,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 9,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
           "value": 5,
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
-    },
-    {
-      "id": "6adbf667bd33ce99c3f7fe31",
-      "text": "秋の小道に、淡いブルーの羽織り。足元はスニーカーで軽やかに。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "sent",
-      "dueAt": "2026-10-26T11:32:00.000Z",
-      "sentAt": "2026-10-26T11:32:08.957Z",
-      "externalLink": "https://www.instagram.com/p/De9Lp9HlQS-/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 50,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 11,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 4,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6adbf6678b3d437ddc90d502",
@@ -1157,131 +1339,13 @@
         {
           "type": "engagementRate",
           "name": "Eng. Rate",
-          "value": 75,
+          "value": 60,
           "unit": "percentage"
         },
         {
           "type": "views",
           "name": "Views",
-          "value": 7,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 4,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
-    },
-    {
-      "id": "6adbf666e4be8a4d863044dc",
-      "text": "秋の色が並ぶマーケット。落ち着いた色の服で、ゆっくり眺めたい。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "sent",
-      "dueAt": "2026-10-26T11:30:00.000Z",
-      "sentAt": "2026-10-26T11:31:08.779Z",
-      "externalLink": "https://www.instagram.com/p/De9LiljoDXc/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 66.67,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 7,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 3,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
-    },
-    {
-      "id": "6ada7eaaaa18e1c19384b482",
-      "text": "窓辺の光がやわらかくて、もう少しここにいたくなる。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
-      "status": "sent",
-      "dueAt": "2026-10-25T11:32:00.000Z",
-      "sentAt": "2026-10-25T11:32:10.685Z",
-      "externalLink": "https://www.instagram.com/p/De6m3IOEU1L/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 2,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 40,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 18,
+          "value": 8,
           "unit": "count"
         },
         {
@@ -1309,7 +1373,125 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6adbf666e4be8a4d863044dc",
+      "text": "秋の色が並ぶマーケット。落ち着いた色の服で、ゆっくり眺めたい。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-26T11:30:00.000Z",
+      "sentAt": "2026-10-26T11:31:08.779Z",
+      "externalLink": "https://www.instagram.com/p/De9LiljoDXc/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 50,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 8,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 4,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
+    },
+    {
+      "id": "6ada7eaaaa18e1c19384b482",
+      "text": "窓辺の光がやわらかくて、もう少しここにいたくなる。\n\nSENAは架空の成人AIキャラクターです。画像はAIで制作しています。",
+      "status": "sent",
+      "dueAt": "2026-10-25T11:32:00.000Z",
+      "sentAt": "2026-10-25T11:32:10.685Z",
+      "externalLink": "https://www.instagram.com/p/De6m3IOEU1L/",
+      "metrics": [
+        {
+          "type": "reactions",
+          "name": "Reactions",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "type": "comments",
+          "name": "Comments",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "engagementRate",
+          "name": "Eng. Rate",
+          "value": 33.33,
+          "unit": "percentage"
+        },
+        {
+          "type": "views",
+          "name": "Views",
+          "value": 19,
+          "unit": "count"
+        },
+        {
+          "type": "shares",
+          "name": "Shares",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "saves",
+          "name": "Saves",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "follows",
+          "name": "Follows",
+          "value": 0,
+          "unit": "count"
+        },
+        {
+          "type": "reach",
+          "name": "Reach",
+          "value": 6,
+          "unit": "count"
+        }
+      ],
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ada7ea965d602339aedd0e5",
@@ -1368,7 +1550,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ada7ea79daa164787693676",
@@ -1427,7 +1609,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad93be38039195b12f690af",
@@ -1486,7 +1668,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad93be2bf7db4fc622f1c3c",
@@ -1545,7 +1727,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad93be124f3eb98a4dc27c2",
@@ -1604,7 +1786,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad89f1bfe0d0b602283b406",
@@ -1663,7 +1845,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad89f1b3021c1ef52b1f687",
@@ -1722,7 +1904,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad89f1a3021c1ef52b1f642",
@@ -1781,7 +1963,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad8024ac11f7f6be2737834",
@@ -1840,7 +2022,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad802491dbc8c88b1f37c8e",
@@ -1899,7 +2081,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.586Z"
     },
     {
       "id": "6ad802485af80146fcbf7df1",
@@ -1958,7 +2140,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ad7dbf7ac49cb934a847c27",
@@ -2017,7 +2199,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ad7dbf5141c814ae4939eb7",
@@ -2076,7 +2258,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ad7dbf4a52f1cb2568562c2",
@@ -2135,7 +2317,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ad62b70e21b24048f50bb8a",
@@ -2194,7 +2376,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ad62b70e21b24048f50bb40",
@@ -2253,7 +2435,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ad62b6fa9028f90356903ad",
@@ -2312,7 +2494,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca2e24431429fbffe598ef",
@@ -2371,7 +2553,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca2de6e60d470a008b278e",
@@ -2430,7 +2612,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca2db14644e267f86eff36",
@@ -2489,7 +2671,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca2d6fc3f750a538fc48c8",
@@ -2548,7 +2730,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.242Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca2cbc5454fba9985f902b",
@@ -2607,7 +2789,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca2c4d431429fbffe5140e",
@@ -2666,7 +2848,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6accec3124301f62468a500c",
@@ -2725,7 +2907,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6accec3052725e494b485191",
@@ -2784,7 +2966,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6accec2f16ed22750bc9290f",
@@ -2843,7 +3025,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acb98d0ed92ed8fa505d3d6",
@@ -2902,7 +3084,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acb98cfed92ed8fa505d39e",
@@ -2961,7 +3143,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acb98cebba9419ccb3a919a",
@@ -3020,7 +3202,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca4727ed92ed8fa5cf4361",
@@ -3079,7 +3261,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca4726b07d37ac9775adf3",
@@ -3138,7 +3320,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6aca4725b07d37ac9775ad7a",
@@ -3197,7 +3379,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac8f688443de896597f2ddf",
@@ -3256,7 +3438,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac7a523444a36d3be24ff5e",
@@ -3315,7 +3497,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac653370f4d385dd633f433",
@@ -3374,7 +3556,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac490df918cd0aeeae3c1b7",
@@ -3433,7 +3615,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac3b0e1c5a0c4018753e3b4",
@@ -3492,7 +3674,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac2a497fe1389e4133ddb51",
@@ -3551,7 +3733,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6ac14964ad7fd83bc5fe59a0",
@@ -3610,7 +3792,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6abfbbd03ac90aaf27ccd2e7",
@@ -3669,7 +3851,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6abe6a8c0c33e408f7aba7b2",
@@ -3728,7 +3910,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acab654d51a51e732433635",
@@ -3787,7 +3969,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acab654d51a51e73243363d",
@@ -3846,7 +4028,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acab654d51a51e732433637",
@@ -3905,7 +4087,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acab655d51a51e732433645",
@@ -3964,7 +4146,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acab654d51a51e73243362c",
@@ -4023,7 +4205,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.587Z"
     },
     {
       "id": "6acab654d51a51e73243363b",
@@ -4082,7 +4264,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.588Z"
     },
     {
       "id": "6acab654d51a51e732433623",
@@ -4141,7 +4323,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.588Z"
     },
     {
       "id": "6acab654d51a51e73243362e",
@@ -4200,7 +4382,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.588Z"
     },
     {
       "id": "6acab654d51a51e732433632",
@@ -4259,7 +4441,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.588Z"
     },
     {
       "id": "6abd193cda5180c12bfebdec",
@@ -4318,7 +4500,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.588Z"
     },
     {
       "id": "6abbc73b86767996fcb6ba44",
@@ -4377,7 +4559,7 @@
           "unit": "count"
         }
       ],
-      "metricsUpdatedAt": "2026-11-05T15:44:46.243Z"
+      "metricsUpdatedAt": "2026-11-06T14:44:53.588Z"
     },
     {
       "id": "6aba75db3f092d970340f383",
@@ -5735,205 +5917,10 @@
         }
       ],
       "metricsUpdatedAt": "2026-09-22T13:46:43.358Z"
-    },
-    {
-      "id": "6aa9267bb7777bb76b451c4b",
-      "text": "朝ごはん、ちゃんと食べてる？🍓\n\n忙しい朝ほど、ヨーグルトとフルーツだけでも。\n美容はスキンケアだけじゃなくて、毎日の小さな習慣から整えていきたい。\n\nあなたは朝ごはんを「毎日食べる」「ときどき」「食べない」のどれ？\n\n※SENAは架空のAIモデルです\n※画像はAIで制作しています\n\n#AIモデル #バーチャルモデル #美容習慣",
-      "status": "sent",
-      "dueAt": "2026-09-16T11:30:00.000Z",
-      "sentAt": "2026-09-16T11:30:50.074Z",
-      "externalLink": "https://www.instagram.com/p/DdWLtYVHIsO/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 0,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 0,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-09-22T13:46:43.353Z"
-    },
-    {
-      "id": "6aa72fbd9656d658c3a437d2",
-      "text": "朝のスキンケアに美容液、使ってる？🌿\n\n「毎日使う」「ときどき使う」「まだ使わない」\nコメントで教えてね。\n\n少し丁寧に過ごした朝は、気持ちまで整う気がします。\n\n※SENAは架空のAIモデルです\n※画像はAIで制作しています\n\n#AIモデル #バーチャルモデル #スキンケア",
-      "status": "sent",
-      "dueAt": "2026-09-15T11:30:00.000Z",
-      "sentAt": "2026-09-15T11:31:17.909Z",
-      "externalLink": "https://www.instagram.com/p/DdTm5F1kRi6/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 0,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 0,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-09-22T13:46:43.364Z"
-    },
-    {
-      "id": "6aa72bfab0ce9e8e6758c356",
-      "text": "はじめまして、SENAです🌙\n\n大人の美容と、少し特別な日常をお届けします。\nこれから毎日20:30に会いにきてね。\n\n最初にひとつだけ質問。\n夜のリラックスタイムは、コーヒー派？紅茶派？☕️\n\n※SENAは架空のAIモデルです\n※画像はAIで制作しています\n\n#AIモデル #バーチャルモデル #大人美容",
-      "status": "sent",
-      "dueAt": "2026-09-14T11:30:00.000Z",
-      "sentAt": "2026-09-14T11:30:32.135Z",
-      "externalLink": "https://www.instagram.com/p/DdRCFHUld9d/",
-      "metrics": [
-        {
-          "type": "reactions",
-          "name": "Reactions",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "comments",
-          "name": "Comments",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "engagementRate",
-          "name": "Eng. Rate",
-          "value": 0,
-          "unit": "percentage"
-        },
-        {
-          "type": "views",
-          "name": "Views",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "shares",
-          "name": "Shares",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "saves",
-          "name": "Saves",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "follows",
-          "name": "Follows",
-          "value": 0,
-          "unit": "count"
-        },
-        {
-          "type": "reach",
-          "name": "Reach",
-          "value": 0,
-          "unit": "count"
-        }
-      ],
-      "metricsUpdatedAt": "2026-09-22T13:46:43.356Z"
     }
   ],
   "failed": [],
   "scheduled": [
-    {
-      "id": "6aeaf4b5ef5a982328fc48fd",
-      "text": "葉の緑を眺めながら、水やりのひととき。小さな鉢が並ぶ、秋のベランダ。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
-      "status": "scheduled",
-      "dueAt": "2026-11-06T11:30:00.000Z"
-    },
-    {
-      "id": "6aeaf4eba782735f7a0360df",
-      "text": "本を開いて、静かな時間へ。秋の午後に、少しだけ寄り道。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
-      "status": "scheduled",
-      "dueAt": "2026-11-06T11:31:00.000Z"
-    },
-    {
-      "id": "6aeaf51ca51e652fc60f1f17",
-      "text": "お茶を前に、ひと息。窓辺の秋色を眺めながら、ゆっくり過ごす時間。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
-      "status": "scheduled",
-      "dueAt": "2026-11-06T11:32:00.000Z"
-    },
     {
       "id": "6aeaf550ef5a982328fc7ec2",
       "text": "色づいた木々のそばを、ゆっくり。美術館の庭にも、秋が深まってきました。\n\n#秋コーデ #autumnfashion #AIart\n\nSENAは架空の成人AIキャラクターです。画像・場面はAIによる創作です。 ",
@@ -5944,27 +5931,26 @@
   "continuity": {
     "lane": "sena_instagram",
     "expectedTimeJst": "20:30",
-    "evaluatedAt": "2026-11-05T20:46:12.854Z",
+    "evaluatedAt": "2026-11-06T23:26:35.376Z",
     "mutationAllowed": false,
     "status": "action_required",
     "ok": false,
     "cadence": "three_posts_daily",
     "batchSize": 3,
-    "expectedPublicationDueAt": "2026-11-06T11:30:00.000Z",
+    "expectedPublicationDueAt": "2026-11-07T11:30:00.000Z",
     "todayPublicationStatus": "not_due_for_verification",
     "publishedIds": [],
     "publishedUrls": [],
-    "futureDates": [
-      "2026-11-06"
-    ],
-    "nextBatchDate": "2026-11-06",
+    "futureDates": [],
+    "nextBatchDate": "2026-11-07",
     "errors": [
-      "incomplete_or_duplicate_future_batch"
+      "incomplete_or_duplicate_future_batch",
+      "next_batch_reservation_unverified"
     ],
     "warnings": [
       "future_stock_below_three_batches"
     ],
     "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
   },
-  "workflowRunId": "42106426788"
+  "workflowRunId": "42311893753"
 }
