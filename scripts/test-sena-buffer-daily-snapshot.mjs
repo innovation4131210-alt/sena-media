@@ -11,7 +11,8 @@ check(()=>assert.throws(()=>buildSnapshot({...channel,id:'wrong'},data),/identit
 check(()=>assert.throws(()=>buildSnapshot({...channel,name:'another-account'},data),/identity/));
 check(()=>assert.throws(()=>buildSnapshot({...channel,isLocked:undefined},data),/availability/));
 check(()=>assert.equal(buildSnapshot({...channel,isDisconnected:true},data).channelAvailable,false));
-check(()=>assert.throws(()=>buildSnapshot(channel,{...data,sent:{...data.sent,pageInfo:{hasNextPage:true}}}),/Incomplete/));
+check(()=>{const s=buildSnapshot(channel,{...data,sent:{...data.sent,pageInfo:{hasNextPage:true}}});assert.equal(s.inventoryComplete,false);assert.equal(s.operationalWindowComplete,true);assert.equal(s.sentHistoryTruncated,true);});
+check(()=>assert.throws(()=>buildSnapshot(channel,{...data,scheduled:{...data.scheduled,pageInfo:{hasNextPage:true}}}),/Incomplete/));
 check(()=>assert.throws(()=>buildSnapshot(channel,{...data,failed:{edges:[]}}),/Incomplete/));
 check(()=>assert.throws(()=>buildSnapshot(channel,{...data,scheduled:connection([{id:'sent1',status:'scheduled'}])}),/duplicate/));
 check(()=>assert.throws(()=>buildSnapshot(channel,{...data,failed:connection([{id:'bad',status:'sent'}])}),/Invalid/));

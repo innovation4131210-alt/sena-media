@@ -65,10 +65,11 @@ export function summarizeContinuity(connections, now=new Date()) {
   const candidates=channels.filter(c=>c.id===id);
   // A failed/incomplete connection must not hide a complete observation from
   // another existing key. Keep all connection errors in the parent report.
-  const verified=c=>c.name===rule.name&&c.service===rule.service&&c.inventoryComplete===true
+  const operational=c=>c.operationalWindowComplete===true||c.inventoryComplete===true;
+  const verified=c=>c.name===rule.name&&c.service===rule.service&&operational(c)
    && ['isDisconnected','isLocked','isQueuePaused'].every(k=>c[k]===false);
-  const channel=candidates.find(verified)??candidates.find(c=>c.name===rule.name&&c.service===rule.service&&c.inventoryComplete===true)??candidates[0];
-  return [rule.lane,channel?evaluateContinuity(channel,channel.posts??[],now,channel.inventoryComplete):{lane:rule.lane,status:'provider_observation_unavailable',ok:false,mutationAllowed:false}];
+  const channel=candidates.find(verified)??candidates.find(c=>c.name===rule.name&&c.service===rule.service&&operational(c))??candidates[0];
+  return [rule.lane,channel?evaluateContinuity(channel,channel.posts??[],now,operational(channel)):{lane:rule.lane,status:'provider_observation_unavailable',ok:false,mutationAllowed:false}];
  }));
 }
 

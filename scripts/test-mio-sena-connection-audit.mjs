@@ -8,7 +8,10 @@ assert.equal(s.knownMioXPostPresent, true);
 assert.equal(s.inventoryComplete, true);
 assert.equal(s.counts.sent, 1);
 assert.equal(JSON.stringify(s).includes('private caption'), false);
-assert.equal(summarize(channel, {...connection, pageInfo:{hasNextPage:true}}).inventoryComplete, false);
+const truncated=summarize(channel, {...connection, pageInfo:{hasNextPage:true}});
+assert.equal(truncated.inventoryComplete, false);
+assert.equal(truncated.operationalWindowComplete, true);
+assert.equal(truncated.historyTruncated, true);
 await assert.rejects(queryBuffer('secret', 'mutation { bad }', {}, () => {throw Error('called');}), /Read-only/);
 let calls=0;
 const mock=async (_url, options) => {
@@ -18,7 +21,7 @@ const mock=async (_url, options) => {
   let data;
   if(query.includes('account {')) data={account:{organizations:[{id:'org'}]}};
   else if(query.includes('channels(input')) data={channels:[channel]};
-  else data={posts:connection};
+  else {assert.match(query,/sort:\[\{field:dueAt,direction:desc\}\]/);data={posts:connection};}
   return {ok:true, json:async()=>({data})};
 };
 const report = await audit([['TEST_KEY','sensitive-value']], mock);

@@ -1,21 +1,9 @@
 name: SENA 30-day rolling queue
 
 on:
+  # The authorized 30-day manifest ended on 2026-10-29. Keep this bounded
+  # legacy path available for forensic/manual use only; do not restart it.
   workflow_dispatch:
-  schedule:
-    - cron: "0 14 * * *"
-  push:
-    branches: [main]
-    paths:
-      - "media/sena-30day-2026-09-28/**"
-      - "automation/30day/publishing-manifest.json"
-      - "scripts/sena-30day-rolling-queue.mjs"
-      - "scripts/sena-three-post-queue.mjs"
-      - "scripts/test-sena-three-post-queue.mjs"
-      - "scripts/test-sena-continuation-queue.mjs"
-      - "automation/30day/sena-grid-policy.json"
-      - "scripts/test-sena-30day-rolling-queue.mjs"
-      - ".github/workflows/sena-30day-rolling-queue.yml"
 
 permissions:
   contents: write

@@ -26,11 +26,16 @@ export function buildSnapshot(channel, data, now = new Date()) {
   }
   const seen = new Set();
   const lists = {};
+  const truncatedHistory = {};
   for (const [name, expectedStatus] of [['sent','sent'],['failed','error'],['scheduled','scheduled']]) {
     const connection = data[name];
-    if (!Array.isArray(connection?.edges) || connection.pageInfo?.hasNextPage !== false) {
-      throw Error(`Incomplete ${name} inventory; do not declare complete or overwrite last-good snapshot`);
+    const pageMore = connection?.pageInfo?.hasNextPage;
+    if (!Array.isArray(connection?.edges) || typeof pageMore !== 'boolean' || (name !== 'sent' && pageMore)) {
+      throw Error(`Incomplete ${name} operational inventory; do not overwrite last-good snapshot`);
     }
+    // Sent is sorted newest-first. More than 100 historical sent posts does not
+    // hide current delivery or future reservations, but it is not full history.
+    if (pageMore) truncatedHistory[name] = true;
     lists[name] = connection.edges.map(({node}) => {
       if (!node?.id || node.status !== expectedStatus || seen.has(node.id)) throw Error('Invalid or duplicate post identity');
       seen.add(node.id);
@@ -38,8 +43,10 @@ export function buildSnapshot(channel, data, now = new Date()) {
     });
   }
   const tokyoDate = new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
+  const inventoryComplete = Object.keys(truncatedHistory).length === 0;
   return {
-    capturedAt:now.toISOString(), tokyoDate, readOnly:true, inventoryComplete:true,
+    capturedAt:now.toISOString(), tokyoDate, readOnly:true, inventoryComplete,
+    operationalWindowComplete:true, sentHistoryTruncated:truncatedHistory.sent===true, truncatedHistory,
     channel:{id:channel.id,name:channel.name,displayName:channel.displayName,
       isDisconnected:channel.isDisconnected,isLocked:channel.isLocked,isQueuePaused:channel.isQueuePaused},
     channelAvailable:!channel.isDisconnected && !channel.isLocked && !channel.isQueuePaused,

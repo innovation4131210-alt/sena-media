@@ -26,6 +26,8 @@ export function summarize(channel, connection) {
     id: channel.id, name: channel.name, service: channel.service,
     isDisconnected: channel.isDisconnected, isLocked: channel.isLocked, isQueuePaused: channel.isQueuePaused,
     inventoryComplete: !connection.pageInfo.hasNextPage,
+    operationalWindowComplete: true,
+    historyTruncated: connection.pageInfo.hasNextPage,
     knownMioXPostPresent: posts.some(post => post.id === KNOWN_MIO_X_POST),
     counts,
     posts: posts.map(post => ({
@@ -50,7 +52,7 @@ export async function audit(keyEntries, transport = fetch, now = new Date()) {
         for (const channel of data.channels) {
           if (!['instagram','threads','twitter','x','tiktok'].includes(String(channel.service).toLowerCase())) continue;
           try {
-            const data = await queryBuffer(key, 'query($organizationId: OrganizationId!, $channelId: ChannelId!) { posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]}}) { edges { node { id text status dueAt sentAt externalLink } } pageInfo { hasNextPage } } }', {organizationId: org.id, channelId: channel.id}, transport);
+            const data = await queryBuffer(key, 'query($organizationId: OrganizationId!, $channelId: ChannelId!) { posts(first:100,input:{organizationId:$organizationId,filter:{channelIds:[$channelId]},sort:[{field:dueAt,direction:desc}]}) { edges { node { id text status dueAt sentAt externalLink } } pageInfo { hasNextPage } } }', {organizationId: org.id, channelId: channel.id}, transport);
             const summary = summarize(channel, data.posts);
             entry.channels.push(summary);
             if (summary.knownMioXPostPresent && ['twitter','x'].includes(String(channel.service).toLowerCase())) {
