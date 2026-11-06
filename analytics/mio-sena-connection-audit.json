@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-06T20:01:54.725Z",
+  "checkedAt": "2026-11-06T23:26:23.175Z",
   "readOnly": true,
   "connections": [
     {
@@ -25,20 +25,14 @@
           "isLocked": false,
           "isQueuePaused": false,
           "inventoryComplete": true,
+          "operationalWindowComplete": true,
+          "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 37,
-            "scheduled": 4
+            "scheduled": 4,
+            "sent": 37
           },
           "posts": [
-            {
-              "id": "6aeca7b0fee5ff2b8d499ac7",
-              "status": "sent",
-              "dueAt": "2026-11-05T23:00:00.000Z",
-              "sentAt": "2026-11-05T23:01:00.765Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfYKblRicUP",
-              "textHash": "fd188e2c80956a74b7ea4eb6a16c31222c8176acc2d7d8435ec971c15c48973b"
-            },
             {
               "id": "6aeafaf2959146d6f47f1f4c",
               "status": "scheduled",
@@ -80,28 +74,20 @@
               "textHash": "f6ba5a4252d0ae042750edf3e6308ef50ef4dcaeeefa67be1cfa2040c0f18d0d"
             },
             {
+              "id": "6aeca7b0fee5ff2b8d499ac7",
+              "status": "sent",
+              "dueAt": "2026-11-05T23:00:00.000Z",
+              "sentAt": "2026-11-05T23:01:00.765Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfYKblRicUP",
+              "textHash": "fd188e2c80956a74b7ea4eb6a16c31222c8176acc2d7d8435ec971c15c48973b"
+            },
+            {
               "id": "6aeaf7ee36f43f48d200e8a9",
               "status": "sent",
               "dueAt": "2026-11-05T11:10:00.000Z",
               "sentAt": "2026-11-05T11:10:12.529Z",
               "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfW5FuLlidr",
               "textHash": "6704e4e5303d96839d9054cd59a492999ea992689aad92a87709d7342801ae9a"
-            },
-            {
-              "id": "6ae7d77d18eb3027c75c76e1",
-              "status": "sent",
-              "dueAt": "2026-11-02T23:00:00.000Z",
-              "sentAt": "2026-11-02T23:01:30.340Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfQcG2Wn_tZ",
-              "textHash": "f3073ac5a25d5c7e3f05d7ca862b104679c85756598872c2f731628a3ee148e4"
-            },
-            {
-              "id": "6ae7be2472a2905273e9fe83",
-              "status": "sent",
-              "dueAt": "2026-11-02T13:45:00.000Z",
-              "sentAt": "2026-11-02T13:46:47.232Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfPcn1iEebV",
-              "textHash": "9689a7410d076da72cae35e1848e92750254798bfd45c47198fcdce3fefae0f7"
             },
             {
               "id": "6ae7b64b167036edac5701b6",
@@ -120,20 +106,28 @@
               "textHash": "927ba3acf5278255ed201e3e1bb1d1b76ab2e93e130f668284e4df4ce1b09504"
             },
             {
+              "id": "6ae7d77d18eb3027c75c76e1",
+              "status": "sent",
+              "dueAt": "2026-11-02T23:00:00.000Z",
+              "sentAt": "2026-11-02T23:01:30.340Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfQcG2Wn_tZ",
+              "textHash": "f3073ac5a25d5c7e3f05d7ca862b104679c85756598872c2f731628a3ee148e4"
+            },
+            {
+              "id": "6ae7be2472a2905273e9fe83",
+              "status": "sent",
+              "dueAt": "2026-11-02T13:45:00.000Z",
+              "sentAt": "2026-11-02T13:46:47.232Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfPcn1iEebV",
+              "textHash": "9689a7410d076da72cae35e1848e92750254798bfd45c47198fcdce3fefae0f7"
+            },
+            {
               "id": "6ae7b5a977831ecad992e50b",
               "status": "sent",
               "dueAt": "2026-11-02T11:10:00.000Z",
               "sentAt": "2026-11-02T11:10:12.486Z",
               "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DfPKtJpFfR7",
               "textHash": "a4b6749f58c4206761decc8df5a64e3ca562359f1ba9ef7bda97c07dbd4309be"
-            },
-            {
-              "id": "6adccf887addc64d5186e829",
-              "status": "sent",
-              "dueAt": "2026-10-25T13:45:00.000Z",
-              "sentAt": "2026-10-25T13:45:12.334Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De62FfdlOLS",
-              "textHash": "400173984ebbf9461164e4a86e25ad49fb8dca81e274a16a8578e000b2dba1a3"
             },
             {
               "id": "6adbf6d20b5343d07057e052",
@@ -144,14 +138,6 @@
               "textHash": "dd2189c87c707eb8b4ad2b9740d8f93e373c0abb71928d60ee26ab636bdeb66b"
             },
             {
-              "id": "6adbf6d1bd33ce99c3f81fb7",
-              "status": "sent",
-              "dueAt": "2026-10-26T11:10:00.000Z",
-              "sentAt": "2026-10-26T11:10:13.740Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De9JJHbEXPr",
-              "textHash": "15a1fa479b1f5fae8ce6514d115413458ba5c24b9e9ada7d73a8fa8deb4fecb9"
-            },
-            {
               "id": "6adbf6d13d5b27036b5a593b",
               "status": "sent",
               "dueAt": "2026-10-27T11:10:00.000Z",
@@ -160,12 +146,20 @@
               "textHash": "db044adfb7ad970c31392ab043c6a6a28ae1a379e728226a1f2be08da2bcd343"
             },
             {
-              "id": "6adbedae775b2a281f0bfb55",
+              "id": "6adbf6d1bd33ce99c3f81fb7",
               "status": "sent",
-              "dueAt": "2026-10-23T23:28:46.193Z",
-              "sentAt": "2026-10-23T23:28:58.856Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De2vTDEDTC2",
-              "textHash": "035a5528392ea142024267fdca9d790010bf675b131f479d88feb7c3f5696f78"
+              "dueAt": "2026-10-26T11:10:00.000Z",
+              "sentAt": "2026-10-26T11:10:13.740Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De9JJHbEXPr",
+              "textHash": "15a1fa479b1f5fae8ce6514d115413458ba5c24b9e9ada7d73a8fa8deb4fecb9"
+            },
+            {
+              "id": "6adccf887addc64d5186e829",
+              "status": "sent",
+              "dueAt": "2026-10-25T13:45:00.000Z",
+              "sentAt": "2026-10-25T13:45:12.334Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De62FfdlOLS",
+              "textHash": "400173984ebbf9461164e4a86e25ad49fb8dca81e274a16a8578e000b2dba1a3"
             },
             {
               "id": "6adaa49ccc1b7cdc08c0b5df",
@@ -182,6 +176,14 @@
               "sentAt": "2026-10-24T11:10:13.724Z",
               "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De3_jOPEf1u",
               "textHash": "caef227d3ee57f0186ea614fdc2149122fe5a9891b05505c4cb946d921b9c373"
+            },
+            {
+              "id": "6adbedae775b2a281f0bfb55",
+              "status": "sent",
+              "dueAt": "2026-10-23T23:28:46.193Z",
+              "sentAt": "2026-10-23T23:28:58.856Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/De2vTDEDTC2",
+              "textHash": "035a5528392ea142024267fdca9d790010bf675b131f479d88feb7c3f5696f78"
             },
             {
               "id": "6adaa49bcc1b7cdc08c0b53b",
@@ -240,22 +242,6 @@
               "textHash": "ae967a4fa17beabb2e93124028119b88e5a5717ec93dc18e089c4101301404db"
             },
             {
-              "id": "6ac385982fb8e857b75fe34c",
-              "status": "sent",
-              "dueAt": "2026-10-05T11:10:11.000Z",
-              "sentAt": "2026-10-05T11:10:11.000Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeHEctMEW6U",
-              "textHash": "bf208b078a1de8a662ea98696f222c85eed441b55b1755e1bbfe22f2106fcc34"
-            },
-            {
-              "id": "6abfb3952570ce55cb5a2ade",
-              "status": "sent",
-              "dueAt": "2026-10-02T13:53:13.633Z",
-              "sentAt": "2026-10-02T13:53:24.008Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/Dd_ovPNFBUR",
-              "textHash": "7b5a57399e5be5508360167c060a067e1f655688b0c2dcdbaa48608f48b516d6"
-            },
-            {
               "id": "6abd528e71c35f5d6933c7a6",
               "status": "sent",
               "dueAt": "2026-10-13T11:10:00.000Z",
@@ -272,28 +258,12 @@
               "textHash": "8f21a5164312e7c85b273c00e925011c89a3673246a6107bc53240f506380722"
             },
             {
-              "id": "6abd528c7aad006ba5cd40af",
-              "status": "sent",
-              "dueAt": "2026-10-07T11:10:00.000Z",
-              "sentAt": "2026-10-07T11:10:10.542Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeMOCKtlDJI",
-              "textHash": "f34305c2d4b36cd99399884855bef65938b0425730a96a26c4b398e69ed7ca4f"
-            },
-            {
               "id": "6abd528c08cc1d765ae47f42",
               "status": "sent",
               "dueAt": "2026-10-11T11:10:00.000Z",
               "sentAt": "2026-10-11T11:10:11.444Z",
               "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeWhNyWlb8F",
               "textHash": "e6c70d9ba5d71675b53db7bd6b010bfc1aa9724858adff2bc6ac653258521f35"
-            },
-            {
-              "id": "6ab75673dffba3cec6efc51c",
-              "status": "sent",
-              "dueAt": "2026-09-26T11:10:00.000Z",
-              "sentAt": "2026-09-26T11:10:12.556Z",
-              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/Ddv5SlClTEI",
-              "textHash": "ef7c712174c10eaa5fe0c66a47829ea01d0f4d857c20ee48ebc86a2d36c94788"
             },
             {
               "id": "6ab755d480521ded552266e7",
@@ -312,6 +282,22 @@
               "textHash": "ef31423d644ae935ca3f83b0c85556440359282d75aa6ae5939f9f2ed8b2a677"
             },
             {
+              "id": "6abd528c7aad006ba5cd40af",
+              "status": "sent",
+              "dueAt": "2026-10-07T11:10:00.000Z",
+              "sentAt": "2026-10-07T11:10:10.542Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeMOCKtlDJI",
+              "textHash": "f34305c2d4b36cd99399884855bef65938b0425730a96a26c4b398e69ed7ca4f"
+            },
+            {
+              "id": "6ac385982fb8e857b75fe34c",
+              "status": "sent",
+              "dueAt": "2026-10-05T11:10:11.000Z",
+              "sentAt": "2026-10-05T11:10:11.000Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeHEctMEW6U",
+              "textHash": "bf208b078a1de8a662ea98696f222c85eed441b55b1755e1bbfe22f2106fcc34"
+            },
+            {
               "id": "6ab755d2f59168c975366bc7",
               "status": "sent",
               "dueAt": "2026-10-05T11:10:00.000Z",
@@ -326,6 +312,14 @@
               "sentAt": "2026-10-03T11:10:22.245Z",
               "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DeB633dFbH3",
               "textHash": "b86378bb2538eda248cc0732182b7d45b029efcc0009603ff2caafe99df82d39"
+            },
+            {
+              "id": "6abfb3952570ce55cb5a2ade",
+              "status": "sent",
+              "dueAt": "2026-10-02T13:53:13.633Z",
+              "sentAt": "2026-10-02T13:53:24.008Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/Dd_ovPNFBUR",
+              "textHash": "7b5a57399e5be5508360167c060a067e1f655688b0c2dcdbaa48608f48b516d6"
             },
             {
               "id": "6ab755d080521ded5522668c",
@@ -352,6 +346,14 @@
               "textHash": "86af430b6959c2d247e31062ed73a17b775cd880c4e2dce1bde005d3ec787bbc"
             },
             {
+              "id": "6ab75673dffba3cec6efc51c",
+              "status": "sent",
+              "dueAt": "2026-09-26T11:10:00.000Z",
+              "sentAt": "2026-09-26T11:10:12.556Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/Ddv5SlClTEI",
+              "textHash": "ef7c712174c10eaa5fe0c66a47829ea01d0f4d857c20ee48ebc86a2d36c94788"
+            },
+            {
               "id": "6ab7534862beb624fb0f8239",
               "status": "sent",
               "dueAt": "2026-09-24T11:22:19.000Z",
@@ -369,21 +371,15 @@
           "isLocked": false,
           "isQueuePaused": false,
           "inventoryComplete": true,
+          "operationalWindowComplete": true,
+          "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "draft": 1,
             "scheduled": 7,
+            "draft": 1,
             "sent": 39
           },
           "posts": [
-            {
-              "id": "6aedc4aa5bf6eca928f1ea37",
-              "status": "draft",
-              "dueAt": "2026-11-06T13:30:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
-              "textHash": "633dc7c8019b46e69eb7c9297fb40f67b232e4e63fa6549ceb76368dfd7dc314"
-            },
             {
               "id": "6aeafe65344f89dac28f2cc4",
               "status": "scheduled",
@@ -441,6 +437,14 @@
               "textHash": "dac6b8246d7eb96fbb05f6bc9c2315c9e42dcb432ce4d05e285137f551a70d4b"
             },
             {
+              "id": "6aedc4aa5bf6eca928f1ea37",
+              "status": "draft",
+              "dueAt": "2026-11-06T13:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "633dc7c8019b46e69eb7c9297fb40f67b232e4e63fa6549ceb76368dfd7dc314"
+            },
+            {
               "id": "6aeac101fb460a603624360d",
               "status": "sent",
               "dueAt": "2026-11-06T10:00:00.000Z",
@@ -449,20 +453,20 @@
               "textHash": "689f1d67b53f7b499279a210fae9e736d2db2b888e852c904dc36528e93b567c"
             },
             {
-              "id": "6aeac0bebf53d0632900b40c",
-              "status": "sent",
-              "dueAt": "2026-11-04T10:00:00.000Z",
-              "sentAt": "2026-11-04T10:01:48.117Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/DfUMdySlQic",
-              "textHash": "19d67faeeba46169aec9bccab2eba3d9dcd84da5e8377480334b887731004772"
-            },
-            {
               "id": "6ae7d40667f87354ddf56011",
               "status": "sent",
               "dueAt": "2026-11-05T10:00:00.000Z",
               "sentAt": "2026-11-05T10:02:35.262Z",
               "externalLink": "https://www.threads.com/@mio.ai_life/post/DfWxWXrIIOG",
               "textHash": "170e47c59238b9ae181aaab40171113a64fbc6e0b9e34cd20c75731b4b91cc39"
+            },
+            {
+              "id": "6aeac0bebf53d0632900b40c",
+              "status": "sent",
+              "dueAt": "2026-11-04T10:00:00.000Z",
+              "sentAt": "2026-11-04T10:01:48.117Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DfUMdySlQic",
+              "textHash": "19d67faeeba46169aec9bccab2eba3d9dcd84da5e8377480334b887731004772"
             },
             {
               "id": "6ae604f87d03407568292f83",
@@ -489,22 +493,6 @@
               "textHash": "147f86237a023a2b59ad9124344db3a981b2d48575e9b897f2309c382601a429"
             },
             {
-              "id": "6adcb3c3775b2a281f32605c",
-              "status": "sent",
-              "dueAt": "2026-10-25T13:30:00.000Z",
-              "sentAt": "2026-10-25T13:30:39.492Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/De60a-HlOhs",
-              "textHash": "07c9c27131afc28536640a202c132dd986d3ee03fcb2b6ae425a7f99fb8872ce"
-            },
-            {
-              "id": "6adbee8f619c5998ff0bc6fa",
-              "status": "sent",
-              "dueAt": "2026-10-23T23:32:32.043Z",
-              "sentAt": "2026-10-23T23:32:43.222Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/De2vumKlCsi",
-              "textHash": "bcaa4e1578c87a72688b71a9c0d2c1f997fed51536f491f0e9657a2540597c8a"
-            },
-            {
               "id": "6adbecf2619c5998ff0b8045",
               "status": "sent",
               "dueAt": "2026-10-26T10:00:00.000Z",
@@ -513,12 +501,28 @@
               "textHash": "a5ad8fff2b18d210697dc67adb2dabe651e2c17350d753f04bc653c452551d79"
             },
             {
+              "id": "6adcb3c3775b2a281f32605c",
+              "status": "sent",
+              "dueAt": "2026-10-25T13:30:00.000Z",
+              "sentAt": "2026-10-25T13:30:39.492Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/De60a-HlOhs",
+              "textHash": "07c9c27131afc28536640a202c132dd986d3ee03fcb2b6ae425a7f99fb8872ce"
+            },
+            {
               "id": "6adbe02ce66871645c7344d4",
               "status": "sent",
               "dueAt": "2026-10-25T10:00:00.000Z",
               "sentAt": "2026-10-25T10:01:18.913Z",
               "externalLink": "https://www.threads.com/@mio.ai_life/post/De6cdaGkf4F",
               "textHash": "5193cbe0ecc52f055bad26f1b66bf59a5bd0df00955f21cb1c59590d16e38ec0"
+            },
+            {
+              "id": "6adbee8f619c5998ff0bc6fa",
+              "status": "sent",
+              "dueAt": "2026-10-23T23:32:32.043Z",
+              "sentAt": "2026-10-23T23:32:43.222Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/De2vumKlCsi",
+              "textHash": "bcaa4e1578c87a72688b71a9c0d2c1f997fed51536f491f0e9657a2540597c8a"
             },
             {
               "id": "6adbdfdf875151e769c544c5",
@@ -535,22 +539,6 @@
               "sentAt": "2026-10-20T10:07:20.000Z",
               "externalLink": "https://www.threads.com/@mio.ai_life/post/DetlMWAm4sN",
               "textHash": "b4197bd101da47f7e02b70249c80490ad991179341eba364444f65025e188ae9"
-            },
-            {
-              "id": "6ad2a585856c36b245927dda",
-              "status": "sent",
-              "dueAt": "2026-10-16T22:30:21.000Z",
-              "sentAt": "2026-10-16T22:30:21.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/DeknCxYI1VZ",
-              "textHash": "c6995d09f9dcff8a72fa23f906afb5f3606cd8f1fb174e5c3707b8816b335a5a"
-            },
-            {
-              "id": "6ad1564564d0ddd6fb94802a",
-              "status": "sent",
-              "dueAt": "2026-10-15T22:39:56.000Z",
-              "sentAt": "2026-10-15T22:39:56.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/DeiDWGHI959",
-              "textHash": "a76b97bc7401844f8022087553768d3d85e07a38bc37ad970e0a6dabd0b30651"
             },
             {
               "id": "6ac90bf793a324c9f64344ee",
@@ -577,12 +565,28 @@
               "textHash": "21d708fdc1f71338143d270b8e93ec87a703827ffaf7d326cfa29752748235f2"
             },
             {
+              "id": "6ad2a585856c36b245927dda",
+              "status": "sent",
+              "dueAt": "2026-10-16T22:30:21.000Z",
+              "sentAt": "2026-10-16T22:30:21.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DeknCxYI1VZ",
+              "textHash": "c6995d09f9dcff8a72fa23f906afb5f3606cd8f1fb174e5c3707b8816b335a5a"
+            },
+            {
               "id": "6ac7aa8759f178cbc7a632b7",
               "status": "sent",
               "dueAt": "2026-10-16T10:00:00.000Z",
               "sentAt": "2026-10-16T10:02:32.747Z",
               "externalLink": "https://www.threads.com/@mio.ai_life/post/DejRc06lmjK",
               "textHash": "1dc629fa36bd76a9eeabb01dc77b70cd96fba1397a79445f96390f008c9bbe9c"
+            },
+            {
+              "id": "6ad1564564d0ddd6fb94802a",
+              "status": "sent",
+              "dueAt": "2026-10-15T22:39:56.000Z",
+              "sentAt": "2026-10-15T22:39:56.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DeiDWGHI959",
+              "textHash": "a76b97bc7401844f8022087553768d3d85e07a38bc37ad970e0a6dabd0b30651"
             },
             {
               "id": "6ac7aa3b0c4a9e468f085f91",
@@ -625,70 +629,6 @@
               "textHash": "95ba65d06e069d8b54237cd9319316c8282506e4317301bed41449e677d96f3e"
             },
             {
-              "id": "6abfb83be7d9d2a43bd6c964",
-              "status": "sent",
-              "dueAt": "2026-10-02T13:57:16.190Z",
-              "sentAt": "2026-10-02T13:57:25.146Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd_pMz1ll6C",
-              "textHash": "244dadf204a2d381e31d03f0a290b2943b98ab5b97397dde23881b812cb6cdfb"
-            },
-            {
-              "id": "6abe40fb1abe1918f85f8069",
-              "status": "sent",
-              "dueAt": "2026-10-01T11:16:03.000Z",
-              "sentAt": "2026-10-01T11:16:03.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd8x42yjbel",
-              "textHash": "a3ee93b3c63d9d9104222706c75c5b10051d7450da98ca3f1af7ab9dadf4ca97"
-            },
-            {
-              "id": "6abd3d277d83b8b091425814",
-              "status": "sent",
-              "dueAt": "2026-09-30T16:47:26.000Z",
-              "sentAt": "2026-09-30T16:47:26.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd6zFQ4kjt9",
-              "textHash": "99df1fa238f669f68c853c51d42412da85f5dd1083abc37281eae484cba5f39d"
-            },
-            {
-              "id": "6ab9dbf5b58dfb490ab5b836",
-              "status": "sent",
-              "dueAt": "2026-09-28T03:16:00.000Z",
-              "sentAt": "2026-09-28T03:16:00.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd0MjsmChLx",
-              "textHash": "358b32815d650060ec7c712d36169a0142f83cb7924889148723ca9cea6a1b80"
-            },
-            {
-              "id": "6ab8fb0d64c3e65bc6c0e70d",
-              "status": "sent",
-              "dueAt": "2026-09-27T11:16:25.000Z",
-              "sentAt": "2026-09-27T11:16:25.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/DdyevlfCI1d",
-              "textHash": "cb6217be2d9dc2b7db8d4bdfb1caeeefb8c0972a66162c251610b7081f4be876"
-            },
-            {
-              "id": "6ab7a970254754cc8c0cce1c",
-              "status": "sent",
-              "dueAt": "2026-09-26T11:15:57.000Z",
-              "sentAt": "2026-09-26T11:15:57.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/Ddv55xojY8S",
-              "textHash": "b7c33143bf63882032cd8290810a7efe56fe249d1d092fb01cdc0e4cfa8f9f3a"
-            },
-            {
-              "id": "6ab738f519f0c32ca3c26f22",
-              "status": "sent",
-              "dueAt": "2026-09-26T03:15:58.000Z",
-              "sentAt": "2026-09-26T03:15:58.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/DdvC94ZCkyI",
-              "textHash": "2a1daa3c37a3be7e689cffcd4f229da9abb88134ca12f545a612baf21e819e76"
-            },
-            {
-              "id": "6ab657fe7d971f8fb68e618f",
-              "status": "sent",
-              "dueAt": "2026-09-25T11:16:09.000Z",
-              "sentAt": "2026-09-25T11:16:09.000Z",
-              "externalLink": "https://www.threads.com/@mio.ai_life/post/DdtVHtGCAt8",
-              "textHash": "d2546cd0657b681ec290529e7ee7b3666f4ad229ff38315549f3e29a0d7e385d"
-            },
-            {
               "id": "6ab3f7634b03091dc1e7540f",
               "status": "sent",
               "dueAt": "2026-10-10T10:00:00.000Z",
@@ -729,12 +669,36 @@
               "textHash": "31deef49282bf4eea4b3ea8aa4948febe6e30259672c16fcc393d6f463920634"
             },
             {
+              "id": "6abfb83be7d9d2a43bd6c964",
+              "status": "sent",
+              "dueAt": "2026-10-02T13:57:16.190Z",
+              "sentAt": "2026-10-02T13:57:25.146Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd_pMz1ll6C",
+              "textHash": "244dadf204a2d381e31d03f0a290b2943b98ab5b97397dde23881b812cb6cdfb"
+            },
+            {
               "id": "6ab3f750355af4ae6434cc74",
               "status": "sent",
               "dueAt": "2026-10-02T10:00:00.000Z",
               "sentAt": "2026-10-02T10:02:51.583Z",
               "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd_OW6InDsk",
               "textHash": "692b4760be18afeb638a14e942e8995f3bab95c8b83e01539837829cac81c378"
+            },
+            {
+              "id": "6abe40fb1abe1918f85f8069",
+              "status": "sent",
+              "dueAt": "2026-10-01T11:16:03.000Z",
+              "sentAt": "2026-10-01T11:16:03.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd8x42yjbel",
+              "textHash": "a3ee93b3c63d9d9104222706c75c5b10051d7450da98ca3f1af7ab9dadf4ca97"
+            },
+            {
+              "id": "6abd3d277d83b8b091425814",
+              "status": "sent",
+              "dueAt": "2026-09-30T16:47:26.000Z",
+              "sentAt": "2026-09-30T16:47:26.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd6zFQ4kjt9",
+              "textHash": "99df1fa238f669f68c853c51d42412da85f5dd1083abc37281eae484cba5f39d"
             },
             {
               "id": "6ab3f74d165f41b888bdd37b",
@@ -751,6 +715,46 @@
               "sentAt": "2026-09-28T10:02:37.835Z",
               "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd07J1Klbmf",
               "textHash": "a3ce4271fa858df6ea9f5f3ac3ce2952e8a75e2db48b0ca8fe4257fe63448250"
+            },
+            {
+              "id": "6ab9dbf5b58dfb490ab5b836",
+              "status": "sent",
+              "dueAt": "2026-09-28T03:16:00.000Z",
+              "sentAt": "2026-09-28T03:16:00.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/Dd0MjsmChLx",
+              "textHash": "358b32815d650060ec7c712d36169a0142f83cb7924889148723ca9cea6a1b80"
+            },
+            {
+              "id": "6ab8fb0d64c3e65bc6c0e70d",
+              "status": "sent",
+              "dueAt": "2026-09-27T11:16:25.000Z",
+              "sentAt": "2026-09-27T11:16:25.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DdyevlfCI1d",
+              "textHash": "cb6217be2d9dc2b7db8d4bdfb1caeeefb8c0972a66162c251610b7081f4be876"
+            },
+            {
+              "id": "6ab7a970254754cc8c0cce1c",
+              "status": "sent",
+              "dueAt": "2026-09-26T11:15:57.000Z",
+              "sentAt": "2026-09-26T11:15:57.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/Ddv55xojY8S",
+              "textHash": "b7c33143bf63882032cd8290810a7efe56fe249d1d092fb01cdc0e4cfa8f9f3a"
+            },
+            {
+              "id": "6ab738f519f0c32ca3c26f22",
+              "status": "sent",
+              "dueAt": "2026-09-26T03:15:58.000Z",
+              "sentAt": "2026-09-26T03:15:58.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DdvC94ZCkyI",
+              "textHash": "2a1daa3c37a3be7e689cffcd4f229da9abb88134ca12f545a612baf21e819e76"
+            },
+            {
+              "id": "6ab657fe7d971f8fb68e618f",
+              "status": "sent",
+              "dueAt": "2026-09-25T11:16:09.000Z",
+              "sentAt": "2026-09-25T11:16:09.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DdtVHtGCAt8",
+              "textHash": "d2546cd0657b681ec290529e7ee7b3666f4ad229ff38315549f3e29a0d7e385d"
             }
           ]
         },
@@ -762,6 +766,8 @@
           "isLocked": false,
           "isQueuePaused": false,
           "inventoryComplete": false,
+          "operationalWindowComplete": true,
+          "historyTruncated": true,
           "knownMioXPostPresent": false,
           "counts": {
             "draft": 2,
@@ -1130,6 +1136,54 @@
               "textHash": "61c52db87187278587077e5594c68dd1a47bad6e700602ab66ff991df08c114e"
             },
             {
+              "id": "6aca2e24431429fbffe598ef",
+              "status": "sent",
+              "dueAt": "2026-10-17T11:32:00.000Z",
+              "sentAt": "2026-10-17T11:32:07.671Z",
+              "externalLink": "https://www.instagram.com/p/DemAf6cETZi/",
+              "textHash": "900aa9f8c124ae896c3e56235e03d42892b4f42d65542766458ec8e95631fe96"
+            },
+            {
+              "id": "6aca2de6e60d470a008b278e",
+              "status": "sent",
+              "dueAt": "2026-10-17T11:31:00.000Z",
+              "sentAt": "2026-10-17T11:31:15.330Z",
+              "externalLink": "https://www.instagram.com/p/DemAZkcFeDQ/",
+              "textHash": "f90ef73c106ea7f865cc53e81d2d18f5bffdb3ec834e7e4560580213755575ad"
+            },
+            {
+              "id": "6aca2db14644e267f86eff36",
+              "status": "sent",
+              "dueAt": "2026-10-17T11:30:00.000Z",
+              "sentAt": "2026-10-17T11:30:39.859Z",
+              "externalLink": "https://www.instagram.com/p/DemAVE8IDwv/",
+              "textHash": "4badc2a117645bc2131b0e93c68b18dbac4621a1c0b9532c8c15f5081e12fd4c"
+            },
+            {
+              "id": "6aca2d6fc3f750a538fc48c8",
+              "status": "sent",
+              "dueAt": "2026-10-16T11:32:00.000Z",
+              "sentAt": "2026-10-16T11:32:07.194Z",
+              "externalLink": "https://www.instagram.com/p/DejbtGaFul_/",
+              "textHash": "9f2a1f8600a44e21cb4988daef49131c808126319812edd725602652547114c0"
+            },
+            {
+              "id": "6aca2cbc5454fba9985f902b",
+              "status": "sent",
+              "dueAt": "2026-10-16T11:31:00.000Z",
+              "sentAt": "2026-10-16T11:31:39.133Z",
+              "externalLink": "https://www.instagram.com/p/Dejbn63ljpd/",
+              "textHash": "bae206d7fadbb7742e7d79bfdc49b0afc5e54964483486567e283a5005a75e6a"
+            },
+            {
+              "id": "6aca2c4d431429fbffe5140e",
+              "status": "sent",
+              "dueAt": "2026-10-16T11:30:00.000Z",
+              "sentAt": "2026-10-16T11:31:25.029Z",
+              "externalLink": "https://www.instagram.com/p/DejbmRSFEMm/",
+              "textHash": "ed551ebb3ba5475487acf188d0d3b3240d0001559ef3110258e70536c3f6d28f"
+            },
+            {
               "id": "6accec3124301f62468a500c",
               "status": "sent",
               "dueAt": "2026-10-15T11:32:00.000Z",
@@ -1178,78 +1232,6 @@
               "textHash": "a89454a4d7e261e6bdb353cc79366c74150863a400de2719c9bf39cb42a7303f"
             },
             {
-              "id": "6acab655d51a51e732433645",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:54:58.000Z",
-              "sentAt": "2026-10-09T22:54:58.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSoS5MIIfI/",
-              "textHash": "9b3e1e53731e1085dc5107b251113d3c37aba2d352a99302529b7ec3fe5472b7"
-            },
-            {
-              "id": "6acab654d51a51e73243363d",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:56:25.000Z",
-              "sentAt": "2026-10-09T22:56:25.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSodddIMQm/",
-              "textHash": "cf38423726a6af42045744045fb3454fb32f492d41e3368570ace5e4af305ae7"
-            },
-            {
-              "id": "6acab654d51a51e73243363b",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:53:24.000Z",
-              "sentAt": "2026-10-09T22:53:24.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSoHd8oNGB/",
-              "textHash": "4cc49c7608d750866005e3c12a63961a3b937bdb198a964db4a51bae95950ee1"
-            },
-            {
-              "id": "6acab654d51a51e732433637",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:55:44.000Z",
-              "sentAt": "2026-10-09T22:55:44.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSoYhiINgg/",
-              "textHash": "4b6adc545d8b382bd348c0cd76a5002536c5639929083c558fd422808d184ab4"
-            },
-            {
-              "id": "6acab654d51a51e732433635",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:57:33.000Z",
-              "sentAt": "2026-10-09T22:57:33.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSol1oIPPd/",
-              "textHash": "09781fa89496ecef8fb48ed511735d94cd838dea39c4aa0b0b33eb3275eacfaa"
-            },
-            {
-              "id": "6acab654d51a51e732433632",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:46:05.000Z",
-              "sentAt": "2026-10-09T22:46:05.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSnR2XoPoJ/",
-              "textHash": "17acba533b3a3b59bf202a5b35ee44a11841e2961e92892a25fcd250eb97656a"
-            },
-            {
-              "id": "6acab654d51a51e73243362e",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:47:39.000Z",
-              "sentAt": "2026-10-09T22:47:39.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSndRLIMV1/",
-              "textHash": "9450f86b3ed46e4e58e4c8bf71015a056563ce5cfad3bd94cbbd586ec72c4afe"
-            },
-            {
-              "id": "6acab654d51a51e73243362c",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:54:03.000Z",
-              "sentAt": "2026-10-09T22:54:03.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSoMQPIE2_/",
-              "textHash": "4ecb988b8e6a0b6203203745a71d9262c2bcf35f18f15d4c3a2080f70bc32dde"
-            },
-            {
-              "id": "6acab654d51a51e732433623",
-              "status": "sent",
-              "dueAt": "2026-10-09T22:52:37.000Z",
-              "sentAt": "2026-10-09T22:52:37.000Z",
-              "externalLink": "https://www.instagram.com/p/DeSoBxSIBfC/",
-              "textHash": "845822c0f44f3f40c3224b0c92379b4f4ccbdbeb2c6babea9dc1d9dac35bf01b"
-            },
-            {
               "id": "6aca4727ed92ed8fa5cf4361",
               "status": "sent",
               "dueAt": "2026-10-13T11:32:00.000Z",
@@ -1272,54 +1254,6 @@
               "sentAt": "2026-10-13T11:30:45.094Z",
               "externalLink": "https://www.instagram.com/p/DebtKRcFTbJ/",
               "textHash": "84ca547ab62853c79d0e54f7d55bd5ce3cfbe0b9048e69de4c342373469a5c39"
-            },
-            {
-              "id": "6aca2e24431429fbffe598ef",
-              "status": "sent",
-              "dueAt": "2026-10-17T11:32:00.000Z",
-              "sentAt": "2026-10-17T11:32:07.671Z",
-              "externalLink": "https://www.instagram.com/p/DemAf6cETZi/",
-              "textHash": "900aa9f8c124ae896c3e56235e03d42892b4f42d65542766458ec8e95631fe96"
-            },
-            {
-              "id": "6aca2de6e60d470a008b278e",
-              "status": "sent",
-              "dueAt": "2026-10-17T11:31:00.000Z",
-              "sentAt": "2026-10-17T11:31:15.330Z",
-              "externalLink": "https://www.instagram.com/p/DemAZkcFeDQ/",
-              "textHash": "f90ef73c106ea7f865cc53e81d2d18f5bffdb3ec834e7e4560580213755575ad"
-            },
-            {
-              "id": "6aca2db14644e267f86eff36",
-              "status": "sent",
-              "dueAt": "2026-10-17T11:30:00.000Z",
-              "sentAt": "2026-10-17T11:30:39.859Z",
-              "externalLink": "https://www.instagram.com/p/DemAVE8IDwv/",
-              "textHash": "4badc2a117645bc2131b0e93c68b18dbac4621a1c0b9532c8c15f5081e12fd4c"
-            },
-            {
-              "id": "6aca2d6fc3f750a538fc48c8",
-              "status": "sent",
-              "dueAt": "2026-10-16T11:32:00.000Z",
-              "sentAt": "2026-10-16T11:32:07.194Z",
-              "externalLink": "https://www.instagram.com/p/DejbtGaFul_/",
-              "textHash": "9f2a1f8600a44e21cb4988daef49131c808126319812edd725602652547114c0"
-            },
-            {
-              "id": "6aca2cbc5454fba9985f902b",
-              "status": "sent",
-              "dueAt": "2026-10-16T11:31:00.000Z",
-              "sentAt": "2026-10-16T11:31:39.133Z",
-              "externalLink": "https://www.instagram.com/p/Dejbn63ljpd/",
-              "textHash": "bae206d7fadbb7742e7d79bfdc49b0afc5e54964483486567e283a5005a75e6a"
-            },
-            {
-              "id": "6aca2c4d431429fbffe5140e",
-              "status": "sent",
-              "dueAt": "2026-10-16T11:30:00.000Z",
-              "sentAt": "2026-10-16T11:31:25.029Z",
-              "externalLink": "https://www.instagram.com/p/DejbmRSFEMm/",
-              "textHash": "ed551ebb3ba5475487acf188d0d3b3240d0001559ef3110258e70536c3f6d28f"
             },
             {
               "id": "6ac8f688443de896597f2ddf",
@@ -1394,6 +1328,78 @@
               "textHash": "37b6764eb1f0de5015661e76cfd321427e431f5f3cd772199e5e6b44134b5e95"
             },
             {
+              "id": "6acab654d51a51e732433635",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:57:33.000Z",
+              "sentAt": "2026-10-09T22:57:33.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSol1oIPPd/",
+              "textHash": "09781fa89496ecef8fb48ed511735d94cd838dea39c4aa0b0b33eb3275eacfaa"
+            },
+            {
+              "id": "6acab654d51a51e73243363d",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:56:25.000Z",
+              "sentAt": "2026-10-09T22:56:25.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSodddIMQm/",
+              "textHash": "cf38423726a6af42045744045fb3454fb32f492d41e3368570ace5e4af305ae7"
+            },
+            {
+              "id": "6acab654d51a51e732433637",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:55:44.000Z",
+              "sentAt": "2026-10-09T22:55:44.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoYhiINgg/",
+              "textHash": "4b6adc545d8b382bd348c0cd76a5002536c5639929083c558fd422808d184ab4"
+            },
+            {
+              "id": "6acab655d51a51e732433645",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:54:58.000Z",
+              "sentAt": "2026-10-09T22:54:58.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoS5MIIfI/",
+              "textHash": "9b3e1e53731e1085dc5107b251113d3c37aba2d352a99302529b7ec3fe5472b7"
+            },
+            {
+              "id": "6acab654d51a51e73243362c",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:54:03.000Z",
+              "sentAt": "2026-10-09T22:54:03.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoMQPIE2_/",
+              "textHash": "4ecb988b8e6a0b6203203745a71d9262c2bcf35f18f15d4c3a2080f70bc32dde"
+            },
+            {
+              "id": "6acab654d51a51e73243363b",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:53:24.000Z",
+              "sentAt": "2026-10-09T22:53:24.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoHd8oNGB/",
+              "textHash": "4cc49c7608d750866005e3c12a63961a3b937bdb198a964db4a51bae95950ee1"
+            },
+            {
+              "id": "6acab654d51a51e732433623",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:52:37.000Z",
+              "sentAt": "2026-10-09T22:52:37.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSoBxSIBfC/",
+              "textHash": "845822c0f44f3f40c3224b0c92379b4f4ccbdbeb2c6babea9dc1d9dac35bf01b"
+            },
+            {
+              "id": "6acab654d51a51e73243362e",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:47:39.000Z",
+              "sentAt": "2026-10-09T22:47:39.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSndRLIMV1/",
+              "textHash": "9450f86b3ed46e4e58e4c8bf71015a056563ce5cfad3bd94cbbd586ec72c4afe"
+            },
+            {
+              "id": "6acab654d51a51e732433632",
+              "status": "sent",
+              "dueAt": "2026-10-09T22:46:05.000Z",
+              "sentAt": "2026-10-09T22:46:05.000Z",
+              "externalLink": "https://www.instagram.com/p/DeSnR2XoPoJ/",
+              "textHash": "17acba533b3a3b59bf202a5b35ee44a11841e2961e92892a25fcd250eb97656a"
+            },
+            {
               "id": "6abd193cda5180c12bfebdec",
               "status": "sent",
               "dueAt": "2026-10-09T11:30:00.000Z",
@@ -1440,14 +1446,6 @@
               "sentAt": "2026-10-04T11:30:39.029Z",
               "externalLink": "https://www.instagram.com/p/DeEh_cileCB/",
               "textHash": "af3bad8f06269a0b369b206c2d2a63aa28d8f8974f0775a9c0b7b8813673e2e0"
-            },
-            {
-              "id": "6ab5c2c57eb36f6708a279c1",
-              "status": "sent",
-              "dueAt": "2026-09-24T23:00:10.000Z",
-              "sentAt": "2026-09-24T23:00:10.000Z",
-              "externalLink": "https://www.instagram.com/stories/sena.virtual.studio/3993571276853859853",
-              "textHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             {
               "id": "6ab52f7ef2918b28ff7437c0",
@@ -1522,6 +1520,14 @@
               "textHash": "b8d45ce68fcab5af48c6576d7fdecb307c51b27c3cfe7335ee0d7eaada546df0"
             },
             {
+              "id": "6ab5c2c57eb36f6708a279c1",
+              "status": "sent",
+              "dueAt": "2026-09-24T23:00:10.000Z",
+              "sentAt": "2026-09-24T23:00:10.000Z",
+              "externalLink": "https://www.instagram.com/stories/sena.virtual.studio/3993571276853859853",
+              "textHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
               "id": "6ab357d798ae6feaa624a5f2",
               "status": "sent",
               "dueAt": "2026-09-24T12:00:00.000Z",
@@ -1538,20 +1544,20 @@
               "textHash": "79d4197e6e1c07530de223acfe8f199875790744c02bed5b83d2a69b32df5fc2"
             },
             {
-              "id": "6ab357d67f829c66807a5e22",
-              "status": "sent",
-              "dueAt": "2026-09-23T13:00:00.000Z",
-              "sentAt": "2026-09-23T13:01:45.994Z",
-              "externalLink": "https://www.instagram.com/p/DdoXp5llZCD/",
-              "textHash": "49baa8eb7d5b3468514fe48fb9019c01381745d38afb317945c82ff7d9656c12"
-            },
-            {
               "id": "6ab357d62aa0e20bb472d3c6",
               "status": "sent",
               "dueAt": "2026-09-24T02:00:00.000Z",
               "sentAt": "2026-09-24T02:00:36.152Z",
               "externalLink": "https://www.instagram.com/p/Ddpwz38FKTR/",
               "textHash": "2d48d37600a11d7590c47b3224a35cc3e6cdc3fbc125d862ad8b0ce040caa055"
+            },
+            {
+              "id": "6ab357d67f829c66807a5e22",
+              "status": "sent",
+              "dueAt": "2026-09-23T13:00:00.000Z",
+              "sentAt": "2026-09-23T13:01:45.994Z",
+              "externalLink": "https://www.instagram.com/p/DdoXp5llZCD/",
+              "textHash": "49baa8eb7d5b3468514fe48fb9019c01381745d38afb317945c82ff7d9656c12"
             },
             {
               "id": "6ab357d5b777b65977f0a865",
@@ -1581,15 +1587,31 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-06T20:01:54.725Z",
+      "evaluatedAt": "2026-11-06T23:26:23.175Z",
       "mutationAllowed": false,
-      "status": "inventory_incomplete",
-      "ok": false
+      "status": "action_required",
+      "ok": false,
+      "cadence": "three_posts_daily",
+      "batchSize": 3,
+      "expectedPublicationDueAt": "2026-11-07T11:30:00.000Z",
+      "todayPublicationStatus": "not_due_for_verification",
+      "publishedIds": [],
+      "publishedUrls": [],
+      "futureDates": [],
+      "nextBatchDate": "2026-11-07",
+      "errors": [
+        "incomplete_or_duplicate_future_batch",
+        "next_batch_reservation_unverified"
+      ],
+      "warnings": [
+        "future_stock_below_three_batches"
+      ],
+      "note": "Sequential publication, not atomic. No catch-up/replacement is authorized by missing observations."
     },
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-06T20:01:54.725Z",
+      "evaluatedAt": "2026-11-06T23:26:23.175Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
@@ -1616,7 +1638,7 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-06T20:01:54.725Z",
+      "evaluatedAt": "2026-11-06T23:26:23.175Z",
       "mutationAllowed": false,
       "status": "observed_delivery_and_coverage",
       "ok": true,
