@@ -122,7 +122,10 @@
     "D40-PM",
     "D41-AM",
     "D41-NOON",
-    "D41-PM"
+    "D41-PM",
+    "D42-AM",
+    "D42-NOON",
+    "D42-PM"
   ],
   "scheduledHistory": [
     {
@@ -808,6 +811,24 @@
       "bufferPostId": "6aee3d43004e4879a7147c8f",
       "dueAt": "2026-11-09T11:30:00.000Z",
       "recordedAt": "2026-11-06T20:49:08+00:00"
+    },
+    {
+      "contentId": "D42-AM",
+      "bufferPostId": "6aef7a1e004e4879a77605c3",
+      "dueAt": "2026-11-09T23:10:00.000Z",
+      "recordedAt": "2026-11-07T19:21:02+00:00"
+    },
+    {
+      "contentId": "D42-NOON",
+      "bufferPostId": "6aef7a1e004e4879a77605f9",
+      "dueAt": "2026-11-10T03:20:00.000Z",
+      "recordedAt": "2026-11-07T19:21:03+00:00"
+    },
+    {
+      "contentId": "D42-PM",
+      "bufferPostId": "6aef7a1f004e4879a776062a",
+      "dueAt": "2026-11-10T11:30:00.000Z",
+      "recordedAt": "2026-11-07T19:21:03+00:00"
     }
   ]
 }
