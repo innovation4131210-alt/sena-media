@@ -1,514 +1,494 @@
 {
   "schemaVersion": 3,
   "posts": {
-    "6ac511e400682644acf1e4e0": {
-      "24": {
-        "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-10-29T04:06:11.052Z",
-        "collectionElapsedHours": 719.2861111111112,
-        "metricElapsedHours": 472.5972366666666,
-        "freshnessLagHours": 246.68887444444454,
-        "status": "missed_metric_window"
-      },
-      "72": {
-        "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-10-29T04:06:11.052Z",
-        "collectionElapsedHours": 719.2861111111112,
-        "metricElapsedHours": 472.5972366666666,
-        "freshnessLagHours": 246.68887444444454,
-        "status": "missed_metric_window"
-      }
-    },
     "6ac665f3e94c2c45e0073184": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-29T04:06:11.051Z",
-        "collectionElapsedHours": 707.6252777777778,
+        "collectionElapsedHours": 714.225,
         "metricElapsedHours": 460.93640305555556,
-        "freshnessLagHours": 246.68887472222224,
+        "freshnessLagHours": 253.28859694444446,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-29T04:06:11.051Z",
-        "collectionElapsedHours": 707.6252777777778,
+        "collectionElapsedHours": 714.225,
         "metricElapsedHours": 460.93640305555556,
-        "freshnessLagHours": 246.68887472222224,
+        "freshnessLagHours": 253.28859694444446,
         "status": "missed_metric_window"
       }
     },
     "6ac665f334c83ad4924db71c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-30T03:06:21.001Z",
-        "collectionElapsedHours": 703.4583333333334,
+        "collectionElapsedHours": 710.0580555555556,
         "metricElapsedHours": 479.7722225,
-        "freshnessLagHours": 223.68611083333337,
+        "freshnessLagHours": 230.2858330555556,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-30T03:06:21.001Z",
-        "collectionElapsedHours": 703.4583333333334,
+        "collectionElapsedHours": 710.0580555555556,
         "metricElapsedHours": 479.7722225,
-        "freshnessLagHours": 223.68611083333337,
+        "freshnessLagHours": 230.2858330555556,
         "status": "missed_metric_window"
       }
     },
     "6ac665f3afc53d16cec0c76c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-30T03:06:21.001Z",
-        "collectionElapsedHours": 695.2847222222222,
+        "collectionElapsedHours": 701.8844444444444,
         "metricElapsedHours": 471.59861138888886,
-        "freshnessLagHours": 223.68611083333332,
+        "freshnessLagHours": 230.28583305555554,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-30T03:06:21.001Z",
-        "collectionElapsedHours": 695.2847222222222,
+        "collectionElapsedHours": 701.8844444444444,
         "metricElapsedHours": 471.59861138888886,
-        "freshnessLagHours": 223.68611083333332,
+        "freshnessLagHours": 230.28583305555554,
         "status": "missed_metric_window"
       }
     },
     "6ac7b528444a36d3be282fea": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-30T03:06:21.001Z",
-        "collectionElapsedHours": 683.6252777777778,
+        "collectionElapsedHours": 690.225,
         "metricElapsedHours": 459.9391669444444,
-        "freshnessLagHours": 223.68611083333337,
+        "freshnessLagHours": 230.2858330555556,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-30T03:06:21.001Z",
-        "collectionElapsedHours": 683.6252777777778,
+        "collectionElapsedHours": 690.225,
         "metricElapsedHours": 459.9391669444444,
-        "freshnessLagHours": 223.68611083333337,
+        "freshnessLagHours": 230.2858330555556,
         "status": "missed_metric_window"
       }
     },
     "6ac7b52882db5af660cb7e4d": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-31T02:06:31.007Z",
-        "collectionElapsedHours": 679.4580555555556,
+        "collectionElapsedHours": 686.0577777777778,
         "metricElapsedHours": 478.77472416666666,
-        "freshnessLagHours": 200.68333138888892,
+        "freshnessLagHours": 207.28305361111114,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-31T02:06:31.007Z",
-        "collectionElapsedHours": 679.4580555555556,
+        "collectionElapsedHours": 686.0577777777778,
         "metricElapsedHours": 478.77472416666666,
-        "freshnessLagHours": 200.68333138888892,
+        "freshnessLagHours": 207.28305361111114,
         "status": "missed_metric_window"
       }
     },
     "6ac7b52882db5af660cb7e76": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-31T02:06:31.007Z",
-        "collectionElapsedHours": 671.2869444444444,
+        "collectionElapsedHours": 677.8866666666667,
         "metricElapsedHours": 470.60361305555557,
-        "freshnessLagHours": 200.68333138888886,
+        "freshnessLagHours": 207.2830536111111,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-31T02:06:31.007Z",
-        "collectionElapsedHours": 671.2869444444444,
+        "collectionElapsedHours": 677.8866666666667,
         "metricElapsedHours": 470.60361305555557,
-        "freshnessLagHours": 200.68333138888886,
+        "freshnessLagHours": 207.2830536111111,
         "status": "missed_metric_window"
       }
     },
     "6ac9064f57c4b87d9cf82412": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-31T02:06:31.007Z",
-        "collectionElapsedHours": 659.625,
+        "collectionElapsedHours": 666.2247222222222,
         "metricElapsedHours": 458.9416686111111,
-        "freshnessLagHours": 200.68333138888892,
+        "freshnessLagHours": 207.28305361111114,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-10-31T02:06:31.007Z",
-        "collectionElapsedHours": 659.625,
+        "collectionElapsedHours": 666.2247222222222,
         "metricElapsedHours": 458.9416686111111,
-        "freshnessLagHours": 200.68333138888892,
+        "freshnessLagHours": 207.28305361111114,
         "status": "missed_metric_window"
       }
     },
     "6ac90650cb5a8140da1e2f8c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-01T01:06:41.003Z",
-        "collectionElapsedHours": 655.4583333333334,
+        "collectionElapsedHours": 662.0580555555556,
         "metricElapsedHours": 477.7777786111111,
-        "freshnessLagHours": 177.68055472222227,
+        "freshnessLagHours": 184.2802769444445,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-01T01:06:41.003Z",
-        "collectionElapsedHours": 655.4583333333334,
+        "collectionElapsedHours": 662.0580555555556,
         "metricElapsedHours": 477.7777786111111,
-        "freshnessLagHours": 177.68055472222227,
+        "freshnessLagHours": 184.2802769444445,
         "status": "missed_metric_window"
       }
     },
     "6ac90650443de8965982301c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-01T01:06:41.003Z",
-        "collectionElapsedHours": 647.2841666666667,
+        "collectionElapsedHours": 653.8838888888889,
         "metricElapsedHours": 469.6036119444444,
-        "freshnessLagHours": 177.68055472222227,
+        "freshnessLagHours": 184.2802769444445,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-01T01:06:41.003Z",
-        "collectionElapsedHours": 647.2841666666667,
+        "collectionElapsedHours": 653.8838888888889,
         "metricElapsedHours": 469.6036119444444,
-        "freshnessLagHours": 177.68055472222227,
+        "freshnessLagHours": 184.2802769444445,
         "status": "missed_metric_window"
       }
     },
     "6aca572bed92ed8fa5d23034": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-01T01:06:41.003Z",
-        "collectionElapsedHours": 635.625,
+        "collectionElapsedHours": 642.2247222222222,
         "metricElapsedHours": 457.9444452777778,
-        "freshnessLagHours": 177.6805547222222,
+        "freshnessLagHours": 184.28027694444444,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-01T01:06:41.003Z",
-        "collectionElapsedHours": 635.625,
+        "collectionElapsedHours": 642.2247222222222,
         "metricElapsedHours": 457.9444452777778,
-        "freshnessLagHours": 177.6805547222222,
+        "freshnessLagHours": 184.28027694444444,
         "status": "missed_metric_window"
       }
     },
     "6aca572bed92ed8fa5d2305d": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T00:06:50.974Z",
-        "collectionElapsedHours": 631.4583333333334,
+        "collectionElapsedHours": 638.0580555555556,
         "metricElapsedHours": 476.7805483333333,
-        "freshnessLagHours": 154.67778500000009,
+        "freshnessLagHours": 161.2775072222223,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T00:06:50.974Z",
-        "collectionElapsedHours": 631.4583333333334,
+        "collectionElapsedHours": 638.0580555555556,
         "metricElapsedHours": 476.7805483333333,
-        "freshnessLagHours": 154.67778500000009,
+        "freshnessLagHours": 161.2775072222223,
         "status": "missed_metric_window"
       }
     },
     "6aca572ced92ed8fa5d23086": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T00:06:50.974Z",
-        "collectionElapsedHours": 623.285,
+        "collectionElapsedHours": 629.8847222222222,
         "metricElapsedHours": 468.607215,
-        "freshnessLagHours": 154.67778499999997,
+        "freshnessLagHours": 161.2775072222222,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T00:06:50.974Z",
-        "collectionElapsedHours": 623.285,
+        "collectionElapsedHours": 629.8847222222222,
         "metricElapsedHours": 468.607215,
-        "freshnessLagHours": 154.67778499999997,
+        "freshnessLagHours": 161.2775072222222,
         "status": "missed_metric_window"
       }
     },
     "6acba8c8b07d37ac97aecac8": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T23:07:01.511Z",
-        "collectionElapsedHours": 611.625,
+        "collectionElapsedHours": 618.2247222222222,
         "metricElapsedHours": 479.95014194444445,
-        "freshnessLagHours": 131.67485805555555,
+        "freshnessLagHours": 138.27458027777777,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T23:07:01.511Z",
-        "collectionElapsedHours": 611.625,
+        "collectionElapsedHours": 618.2247222222222,
         "metricElapsedHours": 479.95014194444445,
-        "freshnessLagHours": 131.67485805555555,
+        "freshnessLagHours": 138.27458027777777,
         "status": "missed_metric_window"
       }
     },
     "6acba8c8b07d37ac97aecaf1": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T23:07:01.511Z",
-        "collectionElapsedHours": 607.4583333333334,
+        "collectionElapsedHours": 614.0580555555556,
         "metricElapsedHours": 475.78347527777777,
-        "freshnessLagHours": 131.6748580555556,
+        "freshnessLagHours": 138.27458027777783,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T23:07:01.511Z",
-        "collectionElapsedHours": 607.4583333333334,
+        "collectionElapsedHours": 614.0580555555556,
         "metricElapsedHours": 475.78347527777777,
-        "freshnessLagHours": 131.6748580555556,
+        "freshnessLagHours": 138.27458027777783,
         "status": "missed_metric_window"
       }
     },
     "6acba8c9f91f772d45d09180": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T23:07:01.511Z",
-        "collectionElapsedHours": 599.2833333333333,
+        "collectionElapsedHours": 605.8830555555555,
         "metricElapsedHours": 467.60847527777776,
-        "freshnessLagHours": 131.67485805555555,
+        "freshnessLagHours": 138.27458027777777,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-02T23:07:01.511Z",
-        "collectionElapsedHours": 599.2833333333333,
+        "collectionElapsedHours": 605.8830555555555,
         "metricElapsedHours": 467.60847527777776,
-        "freshnessLagHours": 131.67485805555555,
+        "freshnessLagHours": 138.27458027777777,
         "status": "missed_metric_window"
       }
     },
     "6accfb53a9fd76c926c96751": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 587.6247222222222,
+        "collectionElapsedHours": 594.2244444444444,
         "metricElapsedHours": 478.95240527777776,
-        "freshnessLagHours": 108.67231694444445,
+        "freshnessLagHours": 115.27203916666667,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 587.6247222222222,
+        "collectionElapsedHours": 594.2244444444444,
         "metricElapsedHours": 478.95240527777776,
-        "freshnessLagHours": 108.67231694444445,
+        "freshnessLagHours": 115.27203916666667,
         "status": "missed_metric_window"
       }
     },
     "6accfb543b24c3eb109fdd8f": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 583.4583333333334,
+        "collectionElapsedHours": 590.0580555555556,
         "metricElapsedHours": 474.78601638888887,
-        "freshnessLagHours": 108.6723169444445,
+        "freshnessLagHours": 115.27203916666673,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 583.4583333333334,
+        "collectionElapsedHours": 590.0580555555556,
         "metricElapsedHours": 474.78601638888887,
-        "freshnessLagHours": 108.6723169444445,
+        "freshnessLagHours": 115.27203916666673,
         "status": "missed_metric_window"
       }
     },
     "6ad0ba4e9911418325fc45f8": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 575.2144444444444,
+        "collectionElapsedHours": 581.8141666666667,
         "metricElapsedHours": 466.5421275,
-        "freshnessLagHours": 108.67231694444445,
+        "freshnessLagHours": 115.27203916666667,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 575.2144444444444,
+        "collectionElapsedHours": 581.8141666666667,
         "metricElapsedHours": 466.5421275,
-        "freshnessLagHours": 108.67231694444445,
+        "freshnessLagHours": 115.27203916666667,
         "status": "missed_metric_window"
       }
     },
     "6accfb543b24c3eb109fddc2": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 575.2813888888888,
+        "collectionElapsedHours": 581.8811111111111,
         "metricElapsedHours": 466.60907194444445,
-        "freshnessLagHours": 108.67231694444439,
+        "freshnessLagHours": 115.27203916666662,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-03T22:07:10.659Z",
-        "collectionElapsedHours": 575.2813888888888,
+        "collectionElapsedHours": 581.8811111111111,
         "metricElapsedHours": 466.60907194444445,
-        "freshnessLagHours": 108.67231694444439,
+        "freshnessLagHours": 115.27203916666662,
         "status": "missed_metric_window"
       }
     },
     "6ace4ceddca660e4919b1194": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-04T21:07:21.186Z",
-        "collectionElapsedHours": 563.6241666666666,
+        "collectionElapsedHours": 570.2238888888888,
         "metricElapsedHours": 477.9547738888889,
-        "freshnessLagHours": 85.66939277777772,
+        "freshnessLagHours": 92.26911499999994,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-04T21:07:21.186Z",
-        "collectionElapsedHours": 563.6241666666666,
+        "collectionElapsedHours": 570.2238888888888,
         "metricElapsedHours": 477.9547738888889,
-        "freshnessLagHours": 85.66939277777772,
+        "freshnessLagHours": 92.26911499999994,
         "status": "missed_metric_window"
       }
     },
     "6ace4ceedca660e4919b11bd": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-04T21:07:21.186Z",
-        "collectionElapsedHours": 559.4583333333334,
+        "collectionElapsedHours": 566.0580555555556,
         "metricElapsedHours": 473.78894055555554,
-        "freshnessLagHours": 85.66939277777783,
+        "freshnessLagHours": 92.26911500000006,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-04T21:07:21.186Z",
-        "collectionElapsedHours": 559.4583333333334,
+        "collectionElapsedHours": 566.0580555555556,
         "metricElapsedHours": 473.78894055555554,
-        "freshnessLagHours": 85.66939277777783,
+        "freshnessLagHours": 92.26911500000006,
         "status": "missed_metric_window"
       }
     },
     "6ace4ceedca660e4919b11e6": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-04T21:07:21.186Z",
-        "collectionElapsedHours": 551.2861111111112,
+        "collectionElapsedHours": 557.8858333333334,
         "metricElapsedHours": 465.6167183333333,
-        "freshnessLagHours": 85.66939277777783,
+        "freshnessLagHours": 92.26911500000006,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-04T21:07:21.186Z",
-        "collectionElapsedHours": 551.2861111111112,
+        "collectionElapsedHours": 557.8858333333334,
         "metricElapsedHours": 465.6167183333333,
-        "freshnessLagHours": 85.66939277777783,
+        "freshnessLagHours": 92.26911500000006,
         "status": "missed_metric_window"
       }
     },
     "6acfd50b199c0449d73b777e": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 539.625,
+        "collectionElapsedHours": 546.2247222222222,
         "metricElapsedHours": 476.95834083333335,
-        "freshnessLagHours": 62.66665916666665,
+        "freshnessLagHours": 69.26638138888887,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 539.625,
+        "collectionElapsedHours": 546.2247222222222,
         "metricElapsedHours": 476.95834083333335,
-        "freshnessLagHours": 62.66665916666665,
+        "freshnessLagHours": 69.26638138888887,
         "status": "missed_metric_window"
       }
     },
     "6acfd50b41e19a94599cfd5f": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 535.4580555555556,
+        "collectionElapsedHours": 542.0577777777778,
         "metricElapsedHours": 472.79139638888887,
-        "freshnessLagHours": 62.666659166666705,
+        "freshnessLagHours": 69.26638138888893,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 535.4580555555556,
+        "collectionElapsedHours": 542.0577777777778,
         "metricElapsedHours": 472.79139638888887,
-        "freshnessLagHours": 62.666659166666705,
+        "freshnessLagHours": 69.26638138888893,
         "status": "missed_metric_window"
       }
     },
     "6acfd50c41e19a94599cfde9": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 527.2855555555556,
+        "collectionElapsedHours": 533.8852777777778,
         "metricElapsedHours": 464.6188963888889,
-        "freshnessLagHours": 62.66665916666665,
+        "freshnessLagHours": 69.26638138888887,
         "status": "missed_metric_window"
       },
       "72": {
@@ -575,71 +555,71 @@
     "6ad2a9d6a3a6cf9b975400c3": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 530.2891666666667,
+        "collectionElapsedHours": 536.8888888888889,
         "metricElapsedHours": 467.6225075,
-        "freshnessLagHours": 62.666659166666705,
+        "freshnessLagHours": 69.26638138888893,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-05T20:07:31.027Z",
-        "collectionElapsedHours": 530.2891666666667,
+        "collectionElapsedHours": 536.8888888888889,
         "metricElapsedHours": 467.6225075,
-        "freshnessLagHours": 62.666659166666705,
+        "freshnessLagHours": 69.26638138888893,
         "status": "missed_metric_window"
       }
     },
     "6ad1234c02e4efb731a7ab10": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-06T19:07:41.113Z",
-        "collectionElapsedHours": 515.625,
+        "collectionElapsedHours": 522.2247222222222,
         "metricElapsedHours": 475.9611425,
-        "freshnessLagHours": 39.663857500000006,
+        "freshnessLagHours": 46.26357972222223,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-06T19:07:41.113Z",
-        "collectionElapsedHours": 515.625,
+        "collectionElapsedHours": 522.2247222222222,
         "metricElapsedHours": 475.9611425,
-        "freshnessLagHours": 39.663857500000006,
+        "freshnessLagHours": 46.26357972222223,
         "status": "missed_metric_window"
       }
     },
     "6ad1234cdb33291ce6e0ff28": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-06T19:07:41.113Z",
-        "collectionElapsedHours": 511.4580555555556,
+        "collectionElapsedHours": 518.0577777777778,
         "metricElapsedHours": 471.7941980555555,
-        "freshnessLagHours": 39.66385750000006,
+        "freshnessLagHours": 46.26357972222229,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-06T19:07:41.113Z",
-        "collectionElapsedHours": 511.4580555555556,
+        "collectionElapsedHours": 518.0577777777778,
         "metricElapsedHours": 471.7941980555555,
-        "freshnessLagHours": 39.66385750000006,
+        "freshnessLagHours": 46.26357972222229,
         "status": "missed_metric_window"
       }
     },
     "6ad1234cb7ec3ccd5186583b": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-06T19:07:41.113Z",
-        "collectionElapsedHours": 503.28694444444443,
+        "collectionElapsedHours": 509.88666666666666,
         "metricElapsedHours": 463.6230869444444,
-        "freshnessLagHours": 39.663857500000006,
+        "freshnessLagHours": 46.26357972222223,
         "status": "missed_metric_window"
       },
       "72": {
@@ -698,40 +678,40 @@
     "6ad27099d8cc58ddf168fca8": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 491.6252777777778,
+        "collectionElapsedHours": 498.225,
         "metricElapsedHours": 474.96418777777774,
-        "freshnessLagHours": 16.66109000000006,
+        "freshnessLagHours": 23.260812222222285,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 491.6252777777778,
+        "collectionElapsedHours": 498.225,
         "metricElapsedHours": 474.96418777777774,
-        "freshnessLagHours": 16.66109000000006,
+        "freshnessLagHours": 23.260812222222285,
         "status": "missed_metric_window"
       }
     },
     "6ad27099de3498bb88f56c20": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 487.4583333333333,
+        "collectionElapsedHours": 494.05805555555554,
         "metricElapsedHours": 470.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "freshnessLagHours": 23.260812222222228,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 487.4583333333333,
+        "collectionElapsedHours": 494.05805555555554,
         "metricElapsedHours": 470.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "freshnessLagHours": 23.260812222222228,
         "status": "missed_metric_window"
       }
     },
@@ -798,51 +778,51 @@
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
+        "observedAt": "2026-11-08T17:23:30+00:00",
         "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 479.28472222222223,
+        "collectionElapsedHours": 485.88444444444445,
         "metricElapsedHours": 462.62363222222217,
-        "freshnessLagHours": 16.66109000000006,
+        "freshnessLagHours": 23.260812222222285,
         "status": "missed_metric_window"
       }
     },
     "6ad3b562769b4579348b5430": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 467.6247222222222,
-        "metricElapsedHours": 450.9636322222222,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.823Z",
+        "collectionElapsedHours": 474.22444444444443,
+        "metricElapsedHours": 473.96633972222224,
+        "freshnessLagHours": 0.2581047222221855,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 467.6247222222222,
-        "metricElapsedHours": 450.9636322222222,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.823Z",
+        "collectionElapsedHours": 474.22444444444443,
+        "metricElapsedHours": 473.96633972222224,
+        "freshnessLagHours": 0.2581047222221855,
         "status": "missed_metric_window"
       }
     },
     "6ad3b562e272c4918f974000": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 463.4580555555556,
-        "metricElapsedHours": 446.7969655555555,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.823Z",
+        "collectionElapsedHours": 470.0577777777778,
+        "metricElapsedHours": 469.79967305555556,
+        "freshnessLagHours": 0.25810472222224234,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 463.4580555555556,
-        "metricElapsedHours": 446.7969655555555,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.823Z",
+        "collectionElapsedHours": 470.0577777777778,
+        "metricElapsedHours": 469.79967305555556,
+        "freshnessLagHours": 0.25810472222224234,
         "status": "missed_metric_window"
       }
     },
@@ -901,282 +881,282 @@
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 455.2825,
-        "metricElapsedHours": 438.62140999999997,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 461.8822222222222,
+        "metricElapsedHours": 461.6241172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad50917a48c8f8371ab33b6": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 443.62444444444446,
-        "metricElapsedHours": 426.9633544444444,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 450.2241666666667,
+        "metricElapsedHours": 449.96606166666663,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 443.62444444444446,
-        "metricElapsedHours": 426.9633544444444,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 450.2241666666667,
+        "metricElapsedHours": 449.96606166666663,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       }
     },
     "6ad50918938409f1d0dfa876": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 439.4583333333333,
-        "metricElapsedHours": 422.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 446.05805555555554,
+        "metricElapsedHours": 445.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 439.4583333333333,
-        "metricElapsedHours": 422.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 446.05805555555554,
+        "metricElapsedHours": 445.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad509180a208cb3237716e7": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 431.28472222222223,
-        "metricElapsedHours": 414.62363222222217,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 437.88444444444445,
+        "metricElapsedHours": 437.6263394444444,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 431.28472222222223,
-        "metricElapsedHours": 414.62363222222217,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 437.88444444444445,
+        "metricElapsedHours": 437.6263394444444,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       }
     },
     "6ad67e32614166e4ec33cad5": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 419.6252777777778,
-        "metricElapsedHours": 402.96418777777774,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 426.225,
+        "metricElapsedHours": 425.96689499999997,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 419.6252777777778,
-        "metricElapsedHours": 402.96418777777774,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 426.225,
+        "metricElapsedHours": 425.96689499999997,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       }
     },
     "6ad67e329060b48b23bbcabb": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 415.4583333333333,
-        "metricElapsedHours": 398.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 422.05805555555554,
+        "metricElapsedHours": 421.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 415.4583333333333,
-        "metricElapsedHours": 398.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 422.05805555555554,
+        "metricElapsedHours": 421.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad67e32651afa7ffa10c6bc": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 407.2816666666667,
-        "metricElapsedHours": 390.62057666666664,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 413.88138888888886,
+        "metricElapsedHours": 413.62328388888886,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 407.2816666666667,
-        "metricElapsedHours": 390.62057666666664,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 413.88138888888886,
+        "metricElapsedHours": 413.62328388888886,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad7bc40a2b5cb9c49fcdf91": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 395.625,
-        "metricElapsedHours": 378.96390999999994,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 402.2247222222222,
+        "metricElapsedHours": 401.9666172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 395.625,
-        "metricElapsedHours": 378.96390999999994,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 402.2247222222222,
+        "metricElapsedHours": 401.9666172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad7bc40bdfe25c556eea917": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 391.4586111111111,
-        "metricElapsedHours": 374.79752111111105,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 398.05833333333334,
+        "metricElapsedHours": 397.80022833333334,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 391.4586111111111,
-        "metricElapsedHours": 374.79752111111105,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 398.05833333333334,
+        "metricElapsedHours": 397.80022833333334,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad7bc41a2b5cb9c49fcdfba": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 383.285,
-        "metricElapsedHours": 366.62390999999997,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 389.8847222222222,
+        "metricElapsedHours": 389.6266172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 383.285,
-        "metricElapsedHours": 366.62390999999997,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 389.8847222222222,
+        "metricElapsedHours": 389.6266172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad90ed24c7ec000c5bdb06f": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 371.625,
-        "metricElapsedHours": 354.96390999999994,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 378.2247222222222,
+        "metricElapsedHours": 377.9666172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 371.625,
-        "metricElapsedHours": 354.96390999999994,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 378.2247222222222,
+        "metricElapsedHours": 377.9666172222222,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad90ed34c7ec000c5bdb0a2": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 367.4583333333333,
-        "metricElapsedHours": 350.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 374.05805555555554,
+        "metricElapsedHours": 373.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 367.4583333333333,
-        "metricElapsedHours": 350.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 374.05805555555554,
+        "metricElapsedHours": 373.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ad90ed34ad1d101dea477bd": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 359.2841666666667,
-        "metricElapsedHours": 342.62307666666663,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 365.88388888888886,
+        "metricElapsedHours": 365.62578388888886,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 359.2841666666667,
-        "metricElapsedHours": 342.62307666666663,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 365.88388888888886,
+        "metricElapsedHours": 365.62578388888886,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ada5f56ad1fc1b552808bf0": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 347.6247222222222,
-        "metricElapsedHours": 330.9636322222222,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 354.22444444444443,
+        "metricElapsedHours": 353.96633944444443,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 347.6247222222222,
-        "metricElapsedHours": 330.9636322222222,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 354.22444444444443,
+        "metricElapsedHours": 353.96633944444443,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ada5f5677984f39b2b3c4cb": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 343.4583333333333,
-        "metricElapsedHours": 326.7972433333333,
-        "freshnessLagHours": 16.66109,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 350.05805555555554,
+        "metricElapsedHours": 349.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
@@ -1235,51 +1215,51 @@
     "6ada5f569a8a68d3cd7698fb": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 335.28472222222223,
-        "metricElapsedHours": 318.62363222222217,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 341.88444444444445,
+        "metricElapsedHours": 341.6263394444444,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.076Z",
-        "collectionElapsedHours": 335.28472222222223,
-        "metricElapsedHours": 318.62363222222217,
-        "freshnessLagHours": 16.66109000000006,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 341.88444444444445,
+        "metricElapsedHours": 341.6263394444444,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       }
     },
     "6adbafc29acae620d813d8d0": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 323.6247222222222,
-        "metricElapsedHours": 306.96363194444444,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 330.22444444444443,
+        "metricElapsedHours": 329.96633944444443,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 323.6247222222222,
-        "metricElapsedHours": 306.96363194444444,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 330.22444444444443,
+        "metricElapsedHours": 329.96633944444443,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6adbafc23d5b27036b4a5986": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 319.4583333333333,
-        "metricElapsedHours": 302.79724305555555,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 326.05805555555554,
+        "metricElapsedHours": 325.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
@@ -1338,40 +1318,40 @@
     "6adbafc28b3d437ddc80dba7": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 311.28222222222223,
-        "metricElapsedHours": 294.6211319444444,
-        "freshnessLagHours": 16.661090277777816,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 317.88194444444446,
+        "metricElapsedHours": 317.6238394444444,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 311.28222222222223,
-        "metricElapsedHours": 294.6211319444444,
-        "freshnessLagHours": 16.661090277777816,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 317.88194444444446,
+        "metricElapsedHours": 317.6238394444444,
+        "freshnessLagHours": 0.2581050000000573,
         "status": "missed_metric_window"
       }
     },
     "6adcf2c16887a2efc1cc85a0": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 299.62416666666667,
-        "metricElapsedHours": 282.96307638888885,
-        "freshnessLagHours": 16.661090277777816,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 306.2238888888889,
+        "metricElapsedHours": 305.9657838888889,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 299.62416666666667,
-        "metricElapsedHours": 282.96307638888885,
-        "freshnessLagHours": 16.661090277777816,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 306.2238888888889,
+        "metricElapsedHours": 305.9657838888889,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
@@ -1430,51 +1410,51 @@
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 295.44138888888887,
-        "metricElapsedHours": 278.7802986111111,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 302.0411111111111,
+        "metricElapsedHours": 301.7830061111111,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6adcf2c10b5343d0709790fa": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 287.2816666666667,
-        "metricElapsedHours": 270.6205763888889,
-        "freshnessLagHours": 16.661090277777816,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 293.88138888888886,
+        "metricElapsedHours": 293.62328388888886,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 287.2816666666667,
-        "metricElapsedHours": 270.6205763888889,
-        "freshnessLagHours": 16.661090277777816,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 293.88138888888886,
+        "metricElapsedHours": 293.62328388888886,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ade487de4be8a4d86be4144": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 275.6247222222222,
-        "metricElapsedHours": 258.96363194444444,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 282.22444444444443,
+        "metricElapsedHours": 281.96633944444443,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 275.6247222222222,
-        "metricElapsedHours": 258.96363194444444,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 282.22444444444443,
+        "metricElapsedHours": 281.96633944444443,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
@@ -1533,42 +1513,42 @@
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 271.4583333333333,
-        "metricElapsedHours": 254.79724305555555,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 278.05805555555554,
+        "metricElapsedHours": 277.79995055555554,
+        "freshnessLagHours": 0.2581050000000005,
         "status": "missed_metric_window"
       }
     },
     "6ade487e6887a2efc11b5a22": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 263.2783333333333,
-        "metricElapsedHours": 246.61724305555555,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 269.87805555555553,
+        "metricElapsedHours": 269.6199505555556,
+        "freshnessLagHours": 0.25810499999994363,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 263.2783333333333,
-        "metricElapsedHours": 246.61724305555555,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.822Z",
+        "collectionElapsedHours": 269.87805555555553,
+        "metricElapsedHours": 269.6199505555556,
+        "freshnessLagHours": 0.25810499999994363,
         "status": "missed_metric_window"
       }
     },
     "6adfb7213ffda7dd058de92c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 251.6238888888889,
-        "metricElapsedHours": 234.9627986111111,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 258.2236111111111,
+        "metricElapsedHours": 257.96550583333334,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       },
       "72": {
@@ -1627,51 +1607,51 @@
     "6adfb721a72c078abdb628f7": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 247.45833333333334,
-        "metricElapsedHours": 230.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 254.05805555555557,
+        "metricElapsedHours": 253.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 247.45833333333334,
-        "metricElapsedHours": 230.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 254.05805555555557,
+        "metricElapsedHours": 253.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6adfb7213c00530d93a5e75c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 239.2786111111111,
-        "metricElapsedHours": 222.61752083333332,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 245.87833333333333,
+        "metricElapsedHours": 245.62022805555554,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 239.2786111111111,
-        "metricElapsedHours": 222.61752083333332,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 245.87833333333333,
+        "metricElapsedHours": 245.62022805555554,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6adfe0405d20d74bbda136d5": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 227.62333333333333,
-        "metricElapsedHours": 210.96224305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 234.22305555555556,
+        "metricElapsedHours": 233.96495027777777,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
@@ -1730,40 +1710,40 @@
     "6ae102c0944977ae0253eaca": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 223.4586111111111,
-        "metricElapsedHours": 206.79752083333332,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 230.05833333333334,
+        "metricElapsedHours": 229.80022805555555,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 223.4586111111111,
-        "metricElapsedHours": 206.79752083333332,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 230.05833333333334,
+        "metricElapsedHours": 229.80022805555555,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae102c0e8126ef614202f28": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 215.28277777777777,
-        "metricElapsedHours": 198.62168749999998,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 221.8825,
+        "metricElapsedHours": 221.62439472222223,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 215.28277777777777,
-        "metricElapsedHours": 198.62168749999998,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 221.8825,
+        "metricElapsedHours": 221.62439472222223,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       }
     },
@@ -1822,51 +1802,51 @@
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 203.62416666666667,
-        "metricElapsedHours": 186.96307638888888,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 210.2238888888889,
+        "metricElapsedHours": 209.9657836111111,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae25700a5c5e21e3b05e73c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 199.45833333333334,
-        "metricElapsedHours": 182.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 206.05805555555557,
+        "metricElapsedHours": 205.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 199.45833333333334,
-        "metricElapsedHours": 182.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 206.05805555555557,
+        "metricElapsedHours": 205.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae257003ad11fb5e050d7a6": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 191.28222222222223,
-        "metricElapsedHours": 174.62113194444444,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 197.88194444444446,
+        "metricElapsedHours": 197.62383916666667,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 191.28222222222223,
-        "metricElapsedHours": 174.62113194444444,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 197.88194444444446,
+        "metricElapsedHours": 197.62383916666667,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
@@ -1925,454 +1905,474 @@
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 179.62472222222223,
-        "metricElapsedHours": 162.96363194444444,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 186.22444444444446,
+        "metricElapsedHours": 185.96633916666667,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae3a85ff473cae772d8b6c4": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 175.45833333333334,
-        "metricElapsedHours": 158.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 182.05805555555557,
+        "metricElapsedHours": 181.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 175.45833333333334,
-        "metricElapsedHours": 158.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 182.05805555555557,
+        "metricElapsedHours": 181.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae3a85ff1e846b65afb2918": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 167.28444444444443,
-        "metricElapsedHours": 150.62335416666664,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 173.88416666666666,
+        "metricElapsedHours": 173.6260613888889,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 167.28444444444443,
-        "metricElapsedHours": 150.62335416666664,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 173.88416666666666,
+        "metricElapsedHours": 173.6260613888889,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       }
     },
     "6ae4f5f4b84259308b9a8223": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 155.625,
-        "metricElapsedHours": 138.9639097222222,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 162.22472222222223,
+        "metricElapsedHours": 161.96661694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 155.625,
-        "metricElapsedHours": 138.9639097222222,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 162.22472222222223,
+        "metricElapsedHours": 161.96661694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae4f5f5eaa24d6f9a37174c": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 143.28444444444443,
-        "metricElapsedHours": 126.62335416666667,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 149.88416666666666,
+        "metricElapsedHours": 149.6260613888889,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 143.28444444444443,
-        "metricElapsedHours": 126.62335416666667,
-        "freshnessLagHours": 16.66109027777776,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 149.88416666666666,
+        "metricElapsedHours": 149.6260613888889,
+        "freshnessLagHours": 0.2581052777777586,
         "status": "missed_metric_window"
       }
     },
     "6ae4f5f51891472093948fb0": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 151.45833333333334,
-        "metricElapsedHours": 134.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 158.05805555555557,
+        "metricElapsedHours": 157.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 151.45833333333334,
-        "metricElapsedHours": 134.79724305555555,
-        "freshnessLagHours": 16.661090277777788,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 158.05805555555557,
+        "metricElapsedHours": 157.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae63dd5cf3a3112f3bc2f97": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 127.45833333333333,
-        "metricElapsedHours": 110.79724277777778,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 134.05805555555557,
+        "metricElapsedHours": 133.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 127.45833333333333,
-        "metricElapsedHours": 110.79724277777778,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 134.05805555555557,
+        "metricElapsedHours": 133.79995027777778,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae52f67a114574349774a42": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 131.62416666666667,
-        "metricElapsedHours": 114.9630763888889,
-        "freshnessLagHours": 16.661090277777774,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 138.2238888888889,
+        "metricElapsedHours": 137.9657836111111,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.075Z",
-        "collectionElapsedHours": 131.62416666666667,
-        "metricElapsedHours": 114.9630763888889,
-        "freshnessLagHours": 16.661090277777774,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 138.2238888888889,
+        "metricElapsedHours": 137.9657836111111,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae63dd6cf3a3112f3bc2fd6": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 119.2825,
-        "metricElapsedHours": 102.62140944444445,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 125.88222222222223,
+        "metricElapsedHours": 125.62411694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 119.2825,
-        "metricElapsedHours": 102.62140944444445,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 125.88222222222223,
+        "metricElapsedHours": 125.62411694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae7b3ac48ce42a6b42ac6b6": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 107.62388888888889,
-        "metricElapsedHours": 90.96279833333334,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 114.22361111111111,
+        "metricElapsedHours": 113.96550583333334,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 107.62388888888889,
-        "metricElapsedHours": 90.96279833333334,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 114.22361111111111,
+        "metricElapsedHours": 113.96550583333334,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "missed_metric_window"
       }
     },
     "6ae7b3ad2da2578c1883b3d0": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 95.2825,
-        "metricElapsedHours": 78.62140944444445,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 101.88222222222223,
+        "metricElapsedHours": 101.62411694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 95.2825,
-        "metricElapsedHours": 78.62140944444445,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 101.88222222222223,
+        "metricElapsedHours": 101.62411694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       }
     },
     "6ae7b3ac01fa08ffbe6ba019": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 103.45833333333333,
-        "metricElapsedHours": 86.79724277777778,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 110.05805555555555,
+        "metricElapsedHours": 109.79995027777778,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 103.45833333333333,
-        "metricElapsedHours": 86.79724277777778,
-        "freshnessLagHours": 16.661090555555546,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 110.05805555555555,
+        "metricElapsedHours": 109.79995027777778,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "missed_metric_window"
       }
     },
     "6ae87cd35a0b78bb030b9786": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 83.625,
-        "metricElapsedHours": 66.96390944444444,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 90.22472222222223,
+        "metricElapsedHours": 89.96661694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 83.625,
-        "metricElapsedHours": 66.96390944444444,
-        "freshnessLagHours": 16.66109055555556,
-        "status": "provider_stale"
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 90.22472222222223,
+        "metricElapsedHours": 89.96661694444444,
+        "freshnessLagHours": 0.258105277777787,
+        "status": "missed_metric_window"
       }
     },
     "6ae87cd33ac2985de1cc7a91": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 79.45805555555556,
-        "metricElapsedHours": 62.796965,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 86.05777777777777,
+        "metricElapsedHours": 85.7996725,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 79.45805555555556,
-        "metricElapsedHours": 62.796965,
-        "freshnessLagHours": 16.66109055555556,
-        "status": "provider_stale"
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 86.05777777777777,
+        "metricElapsedHours": 85.7996725,
+        "freshnessLagHours": 0.2581052777777728,
+        "status": "missed_metric_window"
       }
     },
     "6ae87cd46ee21de9577ae961": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 71.28083333333333,
-        "metricElapsedHours": 54.61974277777777,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 77.88055555555556,
+        "metricElapsedHours": 77.62245027777777,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 71.28083333333333,
-        "metricElapsedHours": 54.61974277777777,
-        "freshnessLagHours": 16.66109055555556,
-        "status": "pending"
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 77.88055555555556,
+        "metricElapsedHours": 77.62245027777777,
+        "freshnessLagHours": 0.258105277777787,
+        "status": "missed_metric_window"
       }
     },
     "6ae9cd0c47205d2c399841f3": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 55.45777777777778,
-        "metricElapsedHours": 38.79668722222222,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 62.0575,
+        "metricElapsedHours": 61.799394722222225,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 55.45777777777778,
-        "metricElapsedHours": 38.79668722222222,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 62.0575,
+        "metricElapsedHours": 61.799394722222225,
+        "freshnessLagHours": 0.2581052777777728,
         "status": "pending"
       }
     },
     "6ae924544e401f604e527e58": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 59.625,
-        "metricElapsedHours": 42.96390944444444,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 66.22472222222223,
+        "metricElapsedHours": 65.96661694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 59.625,
-        "metricElapsedHours": 42.96390944444444,
-        "freshnessLagHours": 16.66109055555556,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.821Z",
+        "collectionElapsedHours": 66.22472222222223,
+        "metricElapsedHours": 65.96661694444444,
+        "freshnessLagHours": 0.258105277777787,
         "status": "pending"
       }
     },
     "6ae9cd0c35443b847a004e58": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 47.27194444444444,
-        "metricElapsedHours": 30.610853888888887,
-        "freshnessLagHours": 16.661090555555557,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 53.87166666666667,
+        "metricElapsedHours": 53.61356111111111,
+        "freshnessLagHours": 0.25810555555555936,
         "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 47.27194444444444,
-        "metricElapsedHours": 30.610853888888887,
-        "freshnessLagHours": 16.661090555555557,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 53.87166666666667,
+        "metricElapsedHours": 53.61356111111111,
+        "freshnessLagHours": 0.25810555555555936,
         "status": "pending"
       }
     },
     "6aebcce401b5398f879ceedc": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 35.625,
-        "metricElapsedHours": 18.963909444444443,
-        "freshnessLagHours": 16.661090555555557,
-        "status": "provider_stale"
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 42.22472222222222,
+        "metricElapsedHours": 41.96661666666667,
+        "freshnessLagHours": 0.25810555555555226,
+        "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 35.625,
-        "metricElapsedHours": 18.963909444444443,
-        "freshnessLagHours": 16.661090555555557,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 42.22472222222222,
+        "metricElapsedHours": 41.96661666666667,
+        "freshnessLagHours": 0.25810555555555226,
         "status": "pending"
       }
     },
     "6aebcce4ff03f6944a14bef7": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 31.458333333333332,
-        "metricElapsedHours": 14.797242777777777,
-        "freshnessLagHours": 16.661090555555553,
-        "status": "provider_stale"
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 38.058055555555555,
+        "metricElapsedHours": 37.79995,
+        "freshnessLagHours": 0.25810555555555226,
+        "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 31.458333333333332,
-        "metricElapsedHours": 14.797242777777777,
-        "freshnessLagHours": 16.661090555555553,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 38.058055555555555,
+        "metricElapsedHours": 37.79995,
+        "freshnessLagHours": 0.25810555555555226,
         "status": "pending"
       }
     },
     "6aebcce4f283c8dd45acb53f": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 23.283333333333335,
-        "metricElapsedHours": 6.622242777777778,
-        "freshnessLagHours": 16.661090555555557,
-        "status": "pending"
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 29.883055555555554,
+        "metricElapsedHours": 29.624950000000002,
+        "freshnessLagHours": 0.25810555555555226,
+        "status": "missed_metric_window"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T18:07:51.074Z",
-        "collectionElapsedHours": 23.283333333333335,
-        "metricElapsedHours": 6.622242777777778,
-        "freshnessLagHours": 16.661090555555557,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 29.883055555555554,
+        "metricElapsedHours": 29.624950000000002,
+        "freshnessLagHours": 0.25810555555555226,
         "status": "pending"
       }
     },
     "6aebcce5ff03f6944a14bf1d": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T23:10:10.756Z",
-        "collectionElapsedHours": 11.624722222222223,
-        "metricElapsedHours": 0.0024322222222222223,
-        "freshnessLagHours": 11.622290000000001,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 18.224444444444444,
+        "metricElapsedHours": 17.966338888888888,
+        "freshnessLagHours": 0.2581055555555558,
         "status": "pending"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-07T23:10:10.756Z",
-        "collectionElapsedHours": 11.624722222222223,
-        "metricElapsedHours": 0.0024322222222222223,
-        "freshnessLagHours": 11.622290000000001,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 18.224444444444444,
+        "metricElapsedHours": 17.966338888888888,
+        "freshnessLagHours": 0.2581055555555558,
         "status": "pending"
       }
     },
     "6aecf46f07115c73fd39c428": {
       "24": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-08T03:20:10.615Z",
-        "collectionElapsedHours": 7.458333333333333,
-        "metricElapsedHours": 0.0026708333333333332,
-        "freshnessLagHours": 7.4556625,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 14.058055555555555,
+        "metricElapsedHours": 13.799949999999999,
+        "freshnessLagHours": 0.2581055555555558,
         "status": "pending"
       },
       "72": {
         "snapshot": null,
-        "observedAt": "2026-11-08T10:47:31+00:00",
-        "metricUpdatedAt": "2026-11-08T03:20:10.615Z",
-        "collectionElapsedHours": 7.458333333333333,
-        "metricElapsedHours": 0.0026708333333333332,
-        "freshnessLagHours": 7.4556625,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 14.058055555555555,
+        "metricElapsedHours": 13.799949999999999,
+        "freshnessLagHours": 0.2581055555555558,
+        "status": "pending"
+      }
+    },
+    "6aecf46f07115c73fd39c44e": {
+      "24": {
+        "snapshot": null,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 5.886111111111111,
+        "metricElapsedHours": 5.628005555555555,
+        "freshnessLagHours": 0.2581055555555558,
+        "status": "pending"
+      },
+      "72": {
+        "snapshot": null,
+        "observedAt": "2026-11-08T17:23:30+00:00",
+        "metricUpdatedAt": "2026-11-08T17:08:00.820Z",
+        "collectionElapsedHours": 5.886111111111111,
+        "metricElapsedHours": 5.628005555555555,
+        "freshnessLagHours": 0.2581055555555558,
         "status": "pending"
       }
     }
   },
-  "generatedAt": "2026-11-08T10:47:31+00:00"
+  "generatedAt": "2026-11-08T17:23:30+00:00"
 }
