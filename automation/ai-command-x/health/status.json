@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-08T19:50:22+00:00",
-  "ok": false,
+  "checkedAt": "2026-11-09T23:48:57+00:00",
+  "ok": true,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
     "name": "ai_command_jp",
@@ -14,30 +14,6 @@
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
     "items": [
-      {
-        "bufferPostId": "6aee3d43229bf05daf0c34db",
-        "contentId": "D41-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-11-09T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6aee3d43004e4879a7147c69",
-        "contentId": "D41-NOON",
-        "contentType": "司令室メモ",
-        "dueAtJst": "2026-11-09T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6aee3d43004e4879a7147c8f",
-        "contentId": "D41-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-11-09T20:30+09:00"
-      },
-      {
-        "bufferPostId": "6aef7a1e004e4879a77605c3",
-        "contentId": "D42-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-11-10T08:10+09:00"
-      },
       {
         "bufferPostId": "6aef7a1e004e4879a77605f9",
         "contentId": "D42-NOON",
@@ -67,11 +43,35 @@
         "contentId": "D43-PM",
         "contentType": "note導線",
         "dueAtJst": "2026-11-11T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6af11b57229bf05dafe59262",
+        "contentId": "D44-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-11-12T08:10+09:00"
+      },
+      {
+        "bufferPostId": "6af25b07223aa16048d76b31",
+        "contentId": "D44-NOON",
+        "contentType": "実務ノウハウ",
+        "dueAtJst": "2026-11-12T12:20+09:00"
+      },
+      {
+        "bufferPostId": "6af25b08d35dff5701c7bfbe",
+        "contentId": "D44-PM",
+        "contentType": "note導線",
+        "dueAtJst": "2026-11-12T20:30+09:00"
+      },
+      {
+        "bufferPostId": "6af25b08b59b34913a42f643",
+        "contentId": "D45-AM",
+        "contentType": "今日の指令",
+        "dueAtJst": "2026-11-13T08:10+09:00"
       }
     ]
   },
-  "unusedPreparedCount": 0,
-  "analyticsAgeMinutes": 146.9,
+  "unusedPreparedCount": 11,
+  "analyticsAgeMinutes": 124.5,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -104,7 +104,5 @@
       "ok": true
     }
   },
-  "errors": [
-    "Prepared backlog too low: 0 unused < 9"
-  ]
+  "errors": []
 }
