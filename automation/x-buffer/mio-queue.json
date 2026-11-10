@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T07:29:35.749Z",
+  "updatedAt": "2026-11-10T15:21:22.181Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -770,7 +770,38 @@
     "channelName": "mio_ai_life_jp",
     "scheduledCount": 0,
     "verifiedVisualCount": 0,
-    "verifiedAt": "2026-11-10T07:29:35.749Z"
+    "verifiedAt": "2026-11-10T15:21:22.181Z"
   },
-  "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner."
+  "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner.",
+  "inventoryHealth": {
+    "schemaVersion": 1,
+    "checkedAt": "2026-11-10T15:21:22.181Z",
+    "status": "exhausted",
+    "ok": false,
+    "severity": "error",
+    "coverageStatus": "empty",
+    "sourceStatus": "exhausted",
+    "futureScheduledCount": 0,
+    "futurePendingCount": 0,
+    "futureReadyPendingCount": 0,
+    "futureBlockedPendingCount": 0,
+    "heldCount": 2,
+    "futureHeldCount": 0,
+    "historicalScheduledCount": 30,
+    "overdueProviderScheduledCount": 0,
+    "invalidProviderScheduledCount": 0,
+    "nextScheduledAt": null,
+    "lastScheduledAt": null,
+    "largestGapHours": null,
+    "thresholds": {
+      "minimumFutureScheduled": 3,
+      "maximumGapHours": 36
+    },
+    "reasons": [
+      "no_future_provider_reservations",
+      "future_source_exhausted"
+    ],
+    "mutationAllowed": false,
+    "note": "Provider reservations and source inventory are separate from execution success. Source readiness does not verify media availability. Observations never authorize catch-up, reuse, or release of held posts."
+  }
 }
