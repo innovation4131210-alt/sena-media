@@ -1,4 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { evaluateXInventoryHealth, reportXInventoryHealth } from "./lib/x-buffer-inventory-health.mjs";
 
 const EXPECTED_CHANNEL_ID = "6ab4f318ea19ca0bded37a49";
 const API_URL = "https://api.buffer.com";
@@ -259,13 +260,16 @@ async function main() {
     verifiedAt: checkedAt,
   };
 
+  queue.inventoryHealth = evaluateXInventoryHealth(queue, existing, checkedAt);
   // Persist the live Buffer audit even when all future posts remain on visual hold.
   await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
-  console.log(JSON.stringify({ ok: true, changed, ...queue.lastRun }, null, 2));
+  console.log(JSON.stringify({ ok: queue.inventoryHealth.ok, executionOk: true, changed, ...queue.lastRun, inventoryHealth: queue.inventoryHealth }, null, 2));
+  reportXInventoryHealth(queue.inventoryHealth, "SENA X");
 }
 
 main().catch((error) => {
   console.error(error.stack ?? error.message);
   process.exit(1);
 });
+
 

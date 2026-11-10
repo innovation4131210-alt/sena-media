@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import './test-x-buffer-inventory-health.mjs';
+const healthCode=(await readFile(new URL('./lib/x-buffer-inventory-health.mjs',import.meta.url),'utf8')).replace(/^export /gm,'');
 const lanes=[['x-buffer-mio-refill.mjs','mio_ai_life_jp','6ab74779ea19ca0bdef024db','twitter'],['x-buffer-sena-refill.mjs','sena_ai_studio','6ab4f318ea19ca0bded37a49','twitter'],['sena-threads-refill.mjs','sena.virtual.studio','6ab75347ea19ca0bdef0d04a','threads']];
 let passed=0;
 for(const [file,handle,id,service] of lanes){
@@ -29,9 +31,9 @@ for(const [file,handle,id,service] of lanes){
    }else throw Error('Unexpected mock operation');
    return {ok:true,text:async()=>JSON.stringify({data})};
   }});
-  vm.runInContext(code,context);
+  vm.runInContext(healthCode+code,context);
   let error;try{await context.run();}catch(e){error=e;}
-  return {error,queue,mutations,rows,inventories};
+  return {error,queue,mutations,rows,inventories,exitCode:context.process.exitCode};
  }
  async function check(name,fn){await fn();passed++;console.log('PASS',file,name);}
  await check('happy path saves verified state',async()=>{const r=await harness();assert.ifError(r.error);assert.equal(r.mutations,1);assert.equal(r.queue.posts[0].status,'scheduled')});
@@ -48,6 +50,27 @@ for(const [file,handle,id,service] of lanes){
  await check('uncertain create recovered from live inventory',async()=>{const r=await harness({throwCreate:true});const retry=await harness({queue:r.queue,rows:r.rows});assert.ifError(retry.error);assert.equal(retry.mutations,0);assert.equal(retry.queue.posts[0].status,'scheduled')});
  await check('readback failure retains ID and recovers later',async()=>{const r=await harness({hideReadback:true});assert.ok(r.error);assert.equal(r.queue.posts[0].status,'created_unverified');const retry=await harness({queue:r.queue,rows:r.rows});assert.ifError(retry.error);assert.equal(retry.mutations,0)});
  await check('recovery mismatched saved ID fails closed',async()=>{const r=await harness({queue:{policy:{enabled:true},posts:[{...target,status:'created_unverified',bufferPostId:'other'}]},rows:[row()]});assert.match(r.error.message,/ID mismatch/);assert.equal(r.mutations,0)});
+
+ if(file.startsWith('x-buffer-')){
+  await check('empty sources and old scheduled rows are unhealthy without mutation',async()=>{
+   const historical={...target,status:'scheduled',dueAt:'2020-01-01T00:00:00Z',bufferPostId:'historical-id'};
+   const held={...target,key:'held-1',status:'held_visual_required',dueAt:'2020-01-02T00:00:00Z'};
+   const r=await harness({queue:{policy:{enabled:true,visualRequired:true},posts:[historical,held]}});
+   assert.ifError(r.error);assert.equal(r.mutations,0);assert.equal(r.exitCode,1);
+   assert.equal(r.queue.lastRun.scheduledCount,0);assert.equal(r.queue.inventoryHealth.status,'exhausted');
+   assert.deepEqual(r.queue.posts,[historical,held]);
+  });
+  await check('past pending expires with no catch-up and reports exhaustion',async()=>{
+   const r=await harness({queue:{policy:{enabled:true,visualRequired:true},posts:[{...target,dueAt:'2020-01-01T00:00:00Z'}]}});
+   assert.ifError(r.error);assert.equal(r.mutations,0);assert.equal(r.exitCode,1);
+   assert.equal(r.queue.posts[0].status,'expired_no_catchup');assert.equal(r.queue.inventoryHealth.status,'exhausted');
+  });
+  await check('one provider reservation warns without failing execution',async()=>{
+   const r=await harness({rows:[row()],queue:{policy:{enabled:true,visualRequired:true},posts:[]}});
+   assert.ifError(r.error);assert.equal(r.mutations,0);assert.equal(r.exitCode,undefined);
+   assert.equal(r.queue.inventoryHealth.status,'low_coverage');assert.equal(r.queue.inventoryHealth.futureScheduledCount,1);
+  });
+ }
  if(file==='x-buffer-sena-refill.mjs'){
   await check('existing scheduled text-only item fails closed',async()=>{const r=await harness({rows:[row({assets:[]})]});assert.match(r.error.message,/Visual-first policy violation/);assert.equal(r.mutations,0)});
   await check('missing mediaUrl goes to visual hold without creating',async()=>{const r=await harness({queue:{policy:{enabled:true,visualRequired:true},posts:[{...target,mediaUrl:null}]}});assert.ifError(r.error);assert.equal(r.mutations,0);assert.equal(r.queue.posts[0].status,'held_visual_required')});
@@ -56,3 +79,4 @@ for(const [file,handle,id,service] of lanes){
 
 }
 console.log(`${passed} tests passed; all filesystem, network, and credentials are mocked.`);
+
