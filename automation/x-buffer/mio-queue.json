@@ -763,6 +763,27 @@
         "readbackRequired": true,
         "status": "original_checked_public_host_missing"
       }
+    },
+    {
+      "key": "mio-x-reserve-R01-2026-11-11",
+      "dueAt": "2026-11-11T03:15:00.000Z",
+      "text": "出かける準備、できました。\n……行き先はまだ決まってません。\n\n※MIOは架空の成人AIキャラクターです。画像はAI制作しています。\n#MIO #秋コーデ",
+      "status": "pending",
+      "mediaUrl": "https://raw.githubusercontent.com/innovation4131210-alt/sena-media/1c57deb2726eafb7238086682e327c24aef792c6/media/mio-x-reserve-2026-09-24/MIO_X_reserve_boots_room_01.jpeg",
+      "sourceImage": "media/mio-x-reserve-2026-09-24/MIO_X_reserve_boots_room_01.jpeg",
+      "sourceSha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca",
+      "exactSourceGitBlob": "37f42ad361acf7b3c251bb6e10cc5afb51e1925b",
+      "visualPlan": {
+        "reserveAssetId": "MIO-R01",
+        "canonicalName": "MIO_X_reserve_boots_room_01.jpeg",
+        "sourceSha256": "4656ae7709b0c8572c7a473c4e2344c6997a9040249a3fb434fbc7cd596f4cca",
+        "width": 1122,
+        "height": 1402,
+        "status": "approved_original_hosted_sha256_verified",
+        "noTextOnlyFallback": true,
+        "readbackRequired": true
+      },
+      "recoveryNote": "User explicitly approved public hosting of exact R01 in innovation4131210-alt/sena-media and MIO X reservation. Prior R01 rows remain held/expired and unused; this is one new future slot, not catch-up. Live identity, duplicate, slot, media and asset checks remain enforced by scheduler."
     }
   ],
   "lastRun": {
