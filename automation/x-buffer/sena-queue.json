@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T07:28:34.763Z",
+  "updatedAt": "2026-11-10T15:21:24.645Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 10,
@@ -483,6 +483,37 @@
     "verifiedVisualCount": 0,
     "heldVisualRequiredCount": 0,
     "created": 0,
-    "verifiedAt": "2026-11-10T07:28:34.763Z"
+    "verifiedAt": "2026-11-10T15:21:24.645Z"
+  },
+  "inventoryHealth": {
+    "schemaVersion": 1,
+    "checkedAt": "2026-11-10T15:21:24.645Z",
+    "status": "exhausted",
+    "ok": false,
+    "severity": "error",
+    "coverageStatus": "empty",
+    "sourceStatus": "exhausted",
+    "futureScheduledCount": 0,
+    "futurePendingCount": 0,
+    "futureReadyPendingCount": 0,
+    "futureBlockedPendingCount": 0,
+    "heldCount": 0,
+    "futureHeldCount": 0,
+    "historicalScheduledCount": 35,
+    "overdueProviderScheduledCount": 0,
+    "invalidProviderScheduledCount": 0,
+    "nextScheduledAt": null,
+    "lastScheduledAt": null,
+    "largestGapHours": null,
+    "thresholds": {
+      "minimumFutureScheduled": 3,
+      "maximumGapHours": 36
+    },
+    "reasons": [
+      "no_future_provider_reservations",
+      "future_source_exhausted"
+    ],
+    "mutationAllowed": false,
+    "note": "Provider reservations and source inventory are separate from execution success. Source readiness does not verify media availability. Observations never authorize catch-up, reuse, or release of held posts."
   }
 }
