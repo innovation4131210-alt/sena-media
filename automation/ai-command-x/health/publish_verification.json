@@ -1,31 +1,18 @@
 {
   "latest": {
-    "checkedAt": "2026-11-10T19:36:15+00:00",
-    "slot": "2026-11-10T20:30+09:00",
+    "checkedAt": "2026-11-11T02:59:03+00:00",
+    "slot": "2026-11-11T08:10+09:00",
     "ok": true,
-    "contentId": "D42-PM",
-    "contentType": "思想",
-    "bufferPostId": "6aef7a1f004e4879a776062a",
+    "contentId": "D43-AM",
+    "contentType": "今日の指令",
+    "bufferPostId": "6af0cda2229bf05dafcea508",
     "bufferStatus": "sent",
-    "sentAt": "2026-11-10T11:31:13.394Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2120117066719957147",
+    "sentAt": "2026-11-10T23:10:06.238Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2120292945475547320",
     "warnings": [],
     "errors": []
   },
   "history": [
-    {
-      "checkedAt": "2026-09-30T12:26:55+00:00",
-      "slot": "2026-09-30T20:30+09:00",
-      "ok": true,
-      "contentId": "D01-PM",
-      "contentType": "作戦報告",
-      "bufferPostId": "6abbafb235689b9f490e2472",
-      "bufferStatus": "sent",
-      "sentAt": "2026-09-30T11:30:21.941Z",
-      "externalLink": "https://x.com/2104714619688554496/status/2105258948374745104",
-      "warnings": [],
-      "errors": []
-    },
     {
       "checkedAt": "2026-09-30T23:48:42+00:00",
       "slot": "2026-10-01T08:10+09:00",
@@ -1570,6 +1557,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-11-10T11:31:13.394Z",
       "externalLink": "https://x.com/2104714619688554496/status/2120117066719957147",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-11-11T02:59:03+00:00",
+      "slot": "2026-11-11T08:10+09:00",
+      "ok": true,
+      "contentId": "D43-AM",
+      "contentType": "今日の指令",
+      "bufferPostId": "6af0cda2229bf05dafcea508",
+      "bufferStatus": "sent",
+      "sentAt": "2026-11-10T23:10:06.238Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2120292945475547320",
       "warnings": [],
       "errors": []
     }
