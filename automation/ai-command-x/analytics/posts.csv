@@ -1,4 +1,10 @@
 contentId,contentType,experimentId,hookVariant,bufferPostId,sentAt,externalLink,hasNoteLink,noteDestination,impressions,likes,comments,reposts,quotes,clicks,saves,bufferEngagementRate,interactionRatePct,clickRatePct,metricsUpdatedAt,text
+D43-NOON,司令室メモ,,,6af0cda2562f2e6de9d9cb0f,2026-11-11T12:20:02+09:00,https://x.com/2104714619688554496/status/2120355844487356696,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-11-11T03:20:11.606Z,"【司令室メモ】
+作業をAIへ渡す前の試験は、簡単な例だけにしない。
+
+通常の入力、情報が欠けた入力、条件が矛盾する入力を一つずつ用意する。各例で期待する出力も先に書く。
+
+僕なら、答えが出るかだけでなく、判断できない場合にどう返すかまで比べる。"
 D43-AM,今日の指令,,,6af0cda2229bf05dafcea508,2026-11-11T08:10:06+09:00,https://x.com/2104714619688554496/status/2120292945475547320,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-11-10T23:10:15.249Z,"【今日の指令】
 AIへ任せる最初の仕事を、作業時間だけで選ばない。
 
@@ -634,13 +640,3 @@ D13-PM,note導線,,,6ac90650443de8965982301c,2026-10-12T20:30:28+09:00,https://x
 
 AI司令書はこちら。
 https://note.com/ai_command/n/nbb052c3cb0ad"
-D13-NOON,実務ノウハウ,,,6ac90650cb5a8140da1e2f8c,2026-10-12T12:20:01+09:00,https://x.com/2104714619688554496/status/2109484203200950413,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-11-01T01:06:41.003Z,"AIにエラー対応を任せるなら、順番を固定する。
-
-ログ確認
-→ 原因候補
-→ 最小修正
-→ 再実行
-→ 成功確認
-
-原因不明のまま何度も再試行させない。
-まず原因を切り分ける。"
