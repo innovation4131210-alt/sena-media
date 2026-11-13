@@ -1,4 +1,11 @@
 contentId,contentType,experimentId,hookVariant,bufferPostId,sentAt,externalLink,hasNoteLink,noteDestination,impressions,likes,comments,reposts,quotes,clicks,saves,bufferEngagementRate,interactionRatePct,clickRatePct,metricsUpdatedAt,text
+D45-PM,参加型,,,6af389601aebca664c3a4b77,2026-11-13T20:31:03+09:00,https://x.com/2104714619688554496/status/2121204187371319688,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-11-13T11:31:12.199Z,"CSVの受け渡しで困るのはどれですか？
+
+①文字化け
+②日付の変換
+③カンマや改行で列がずれる
+
+僕なら、本番の前に数行のサンプルを受け取り側のソフトで開く。作成側で見えた形が、そのまま届くとは限らない。"
 D45-NOON,実務ノウハウ,,,6af389602b686bd66cf90798,2026-11-13T12:20:01+09:00,https://x.com/2104714619688554496/status/2121080615055343637,False,,0.0,,0.0,0.0,,0.0,,0,,,2026-11-13T03:20:10.468Z,"CSVを開いて文字化けしたら、見えている文字をAIに直させる前に読み込み設定を見る。
 
 僕なら元ファイルを残し、文字コードを指定して読み直す。正しい設定は作成元の仕様と照合する。
@@ -620,7 +627,3 @@ AIにファイルを作らせたら、最後にこれを追加する。
 「ファイル名だけでなく、実際に開ける成果物として渡してください。」
 
 僕は保存先の文字列だけでは納品扱いにしない。"
-D15-PM,無料note導線,,,6acba8c9f91f772d45d09180,2026-10-14T20:30:31+09:00,https://x.com/2104714619688554496/status/2110332418913612063,True,free_entry,0.0,,0.0,0.0,,0.0,,0,,,2026-11-02T23:07:01.511Z,"ChatGPTが質問ばかりで進まないときは、「質問するな」より効く3行があります。
-
-AI司令室で実際に使う形を、無料記事に置きました。
-https://note.com/ai_command/n/ne79f153b4665"
