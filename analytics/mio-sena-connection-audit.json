@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-12T21:00:35.606Z",
+  "checkedAt": "2026-11-13T20:36:56.935Z",
   "readOnly": true,
   "connections": [
     {
@@ -19,9 +19,33 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 38
+            "sent": 41
           },
           "posts": [
+            {
+              "id": "6af6946e255a7a3a0dc28e75",
+              "status": "sent",
+              "dueAt": "2026-11-12T11:30:00.000Z",
+              "sentAt": "2026-11-12T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702833735581961524?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "e54df3343b816baf0eed0e49c211582d5077dd704b8dc94c587a9b039fc33046"
+            },
+            {
+              "id": "6af6946e255a7a3a0dc28e77",
+              "status": "sent",
+              "dueAt": "2026-11-11T11:30:00.000Z",
+              "sentAt": "2026-11-11T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702833452164320519?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "ba57a8be7dcf7858e2c7a56976f0f4f32d2d9801afcc89ec58c76ea66ee559a5"
+            },
+            {
+              "id": "6af6946e255a7a3a0dc28e87",
+              "status": "sent",
+              "dueAt": "2026-11-10T11:30:00.000Z",
+              "sentAt": "2026-11-10T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702833221695786258?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "41e3326c66979eef2d8739cb0604de578cc6643d057f0a5a982fcf89651ee52a"
+            },
             {
               "id": "6af2161852840b2b364a7882",
               "status": "sent",
@@ -340,9 +364,25 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 59
+            "sent": 61
           },
           "posts": [
+            {
+              "id": "6af6e1335ef4941a391077fd",
+              "status": "sent",
+              "dueAt": "2026-11-13T09:31:34.000Z",
+              "sentAt": "2026-11-13T09:31:34.000Z",
+              "externalLink": "https://www.instagram.com/p/DfrUGerin9l/",
+              "textHash": "cf7285d24895f7ccae8ea168dc1dc9695424170eee844e67a203e9f84829851e"
+            },
+            {
+              "id": "6af6870a2bc46f01da20f2dc",
+              "status": "sent",
+              "dueAt": "2026-11-12T09:31:35.000Z",
+              "sentAt": "2026-11-12T09:31:35.000Z",
+              "externalLink": "https://www.instagram.com/p/DfovUQIjSaE/",
+              "textHash": "71839368681dcbe2a162ccaa5b6a1f25a8cfe89169e7539cd19d298fc40720ac"
+            },
             {
               "id": "6af53581b8d2098c8507eb52",
               "status": "sent",
@@ -1998,18 +2038,17 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "scheduled": 1,
-            "sent": 46,
+            "sent": 47,
             "draft": 1
           },
           "posts": [
             {
               "id": "6aeafe65344f89dac28f2cc4",
-              "status": "scheduled",
+              "status": "sent",
               "dueAt": "2026-11-13T10:00:00.000Z",
-              "sentAt": null,
-              "externalLink": null,
-              "textHash": "ddfb8df754866ec866cb9ac33f3cf79a95b6da0e4b5d838c4aebd2685500801e"
+              "sentAt": "2026-11-13T10:03:17.883Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DfrXxZ-kcUk",
+              "textHash": "c15f9077711471817b798ec453c6d16c8c92ad1df57deceae7c9e8b8ea8bb927"
             },
             {
               "id": "6aeafe2738630f881379f69d",
@@ -3217,18 +3256,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-12T21:00:35.606Z",
+      "evaluatedAt": "2026-11-13T20:36:56.935Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-13T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-14T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-13",
+      "nextBatchDate": "2026-11-14",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -3240,20 +3279,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-12T21:00:35.606Z",
+      "evaluatedAt": "2026-11-13T20:36:56.935Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-13T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-14T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
-      "futureDates": [
-        "2026-11-13"
-      ],
+      "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-14",
+      "firstUnverifiedDate": "2026-11-15",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -3265,18 +3302,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-12T21:00:35.606Z",
+      "evaluatedAt": "2026-11-13T20:36:56.935Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-13T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-14T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-14",
+      "firstUnverifiedDate": "2026-11-15",
       "errors": [
         "next_day_reservation_unverified"
       ],
