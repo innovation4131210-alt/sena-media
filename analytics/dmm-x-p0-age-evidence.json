@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "generatedOnJstDate": "2026-11-14",
+  "project": "DMM X @ero_mimimimi",
+  "scope": "2026-10-04 first verified post-P0 affiliate batch only",
+  "status": "historical-nearest-available-provider-snapshots",
+  "p0Status": "completed-and-unchanged",
+  "purpose": "Recover approximate 24h/72h/7d evidence from immutable GitHub audit history without querying Buffer again. NOT exact fixed-age snapshots; do not use to claim a controlled format uplift.",
+  "metricTimestampPolicy": "Use each post's metricsUpdatedAt (provider timestamp), not audit checkedAt or GitHub commit time, for elapsed-age comparisons.",
+  "posts": [
+    {
+      "postId": "6ac18a6d814d657011d9ffbd",
+      "format": "discovery",
+      "dueAt": "2026-10-04T12:30:00.000Z",
+      "sentAt": "2026-10-04T12:30:06.762Z",
+      "actress": "倉木華",
+      "contentId": "sone00223",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 33.65,
+          "deviationHours": 9.65,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-05T22:09:21.147Z",
+          "auditCheckedAt": "2026-10-06T20:57:24.151Z",
+          "impressions": 23,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "979e21999a339e1639b6eb4eb6c97e0d96bc4a37",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/979e21999a339e1639b6eb4eb6c97e0d96bc4a37/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 79.66,
+          "deviationHours": 7.66,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-07T20:09:41.085Z",
+          "auditCheckedAt": "2026-10-07T20:58:33.010Z",
+          "impressions": 28,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "2d4ac40ddca5a071d715dac704ac41193ff2dd34",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/2d4ac40ddca5a071d715dac704ac41193ff2dd34/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 194.67,
+          "deviationHours": 26.67,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-12T15:10:31.179Z",
+          "auditCheckedAt": "2026-10-13T08:58:47.165Z",
+          "impressions": 38,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "198cd892bbcf7208b686d7ab8a32b1138bbc8e3a",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/198cd892bbcf7208b686d7ab8a32b1138bbc8e3a/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "postId": "6ac18a707ff895d757bf4771",
+      "format": "decision",
+      "dueAt": "2026-10-04T14:30:00.000Z",
+      "sentAt": "2026-10-04T14:30:06.542Z",
+      "actress": "小野坂ゆいか",
+      "contentId": "sqte00657",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 31.65,
+          "deviationHours": 7.65,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-05T22:09:21.147Z",
+          "auditCheckedAt": "2026-10-06T20:57:24.151Z",
+          "impressions": 16,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "979e21999a339e1639b6eb4eb6c97e0d96bc4a37",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/979e21999a339e1639b6eb4eb6c97e0d96bc4a37/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 77.66,
+          "deviationHours": 5.66,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-07T20:09:41.085Z",
+          "auditCheckedAt": "2026-10-07T20:58:33.010Z",
+          "impressions": 23,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "2d4ac40ddca5a071d715dac704ac41193ff2dd34",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/2d4ac40ddca5a071d715dac704ac41193ff2dd34/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 192.67,
+          "deviationHours": 24.67,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-12T15:10:31.179Z",
+          "auditCheckedAt": "2026-10-13T08:58:47.165Z",
+          "impressions": 31,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "198cd892bbcf7208b686d7ab8a32b1138bbc8e3a",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/198cd892bbcf7208b686d7ab8a32b1138bbc8e3a/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    }
+  ],
+  "conclusion": "Both corrected affiliate posts had zero Buffer-reported clicks in all three available snapshots. Reach and two-post sample are too small for format changes. 7-day checkpoint is ~26-29 hours late; exact 24h, 72h and 7d measures remain unavailable.",
+  "limitations": [
+    "Historical GitHub snapshots provide only nearby ages, not exact 24h/72h/7d timepoints.",
+    "Buffer clicks are not DMM official clicks, conversions, or commission; no revenue estimate follows.",
+    "No policy-hold override, posting change, retry, or new Buffer read was performed.",
+    "Other post batches, including later 21:30/23:30 cohorts, still require separately age-aligned analysis."
+  ]
+}
