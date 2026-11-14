@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-13T20:36:56.935Z",
+  "checkedAt": "2026-11-14T18:48:21.393Z",
   "readOnly": true,
   "connections": [
     {
@@ -873,6 +873,22 @@
           },
           "posts": [
             {
+              "id": "6af8307f76df677fd0fcb1b4",
+              "status": "sent",
+              "dueAt": "2026-11-14T09:57:19.749Z",
+              "sentAt": "2026-11-14T09:57:20.257Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2121542990212497737",
+              "textHash": "5da60bee6e09f543cb2cb112cd7a7c507b4dcde55c67e7616ec16073d6243e21"
+            },
+            {
+              "id": "6af797d650d4db00bba9964e",
+              "status": "sent",
+              "dueAt": "2026-11-13T23:05:48.000Z",
+              "sentAt": "2026-11-13T23:05:48.000Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2121379030880702805",
+              "textHash": "d5d684d4b25795e61d7e1a215524b806b265fefbf145b4527f0ad577b80fafe5"
+            },
+            {
               "id": "6af5ccfca19cb7d4977f71df",
               "status": "sent",
               "dueAt": "2026-11-12T14:28:02.000Z",
@@ -1655,22 +1671,6 @@
               "sentAt": "2026-09-19T11:30:14.558Z",
               "externalLink": "https://x.com/1647584462233010176/status/2101272650165232023",
               "textHash": "19e52ad5f7519bf777c4742033b9f343a1701aa074e83b7c91a3f8021f92e5c8"
-            },
-            {
-              "id": "6aada6b55fe629aa26612533",
-              "status": "sent",
-              "dueAt": "2026-09-19T03:30:00.000Z",
-              "sentAt": "2026-09-19T03:30:11.806Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2101151843388698665",
-              "textHash": "0c60de252155218ac24b9af99866d1c3487f4eed4a9bad347d770a9b560d760b"
-            },
-            {
-              "id": "6aacf2631352d9a11377dfc7",
-              "status": "sent",
-              "dueAt": "2026-09-18T14:30:00.000Z",
-              "sentAt": "2026-09-18T14:30:08.978Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2100955537114325381",
-              "textHash": "4b3972de9f859070dcf3cdac46af8cde8584dae1dda573c66996d9a7eac25e87"
             }
           ]
         }
@@ -3256,18 +3256,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-13T20:36:56.935Z",
+      "evaluatedAt": "2026-11-14T18:48:21.393Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-14T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-15T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-14",
+      "nextBatchDate": "2026-11-15",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -3279,18 +3279,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-13T20:36:56.935Z",
+      "evaluatedAt": "2026-11-14T18:48:21.393Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-14T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-15T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-15",
+      "firstUnverifiedDate": "2026-11-16",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -3302,18 +3302,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-13T20:36:56.935Z",
+      "evaluatedAt": "2026-11-14T18:48:21.393Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-14T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-15T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-15",
+      "firstUnverifiedDate": "2026-11-16",
       "errors": [
         "next_day_reservation_unverified"
       ],
