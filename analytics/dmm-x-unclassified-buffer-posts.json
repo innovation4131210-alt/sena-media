@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "project": "DMM X @ero_mimimimi",
+  "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
+  "evidence": {
+    "auditFile": "analytics/dmm-x-live-audit.json",
+    "auditCheckedAt": "2026-11-14T01:28:37.961Z",
+    "account": "ero_mimimimi",
+    "channelId": "67be5e543b85969eafdb14d7",
+    "postingStateFile": "automation/dmm-x/state.json",
+    "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
+    "inventoryComplete": false
+  },
+  "policyHold": "Commercial DMM affiliate runner disabled; unknown posts are NOT evidence that runner posted.",
+  "unclassifiedSentPosts": [
+    {
+      "bufferPostId": "6af797d650d4db00bba9964e",
+      "sentAt": "2026-11-13T23:05:48.000Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2121379030880702805",
+      "metricsUpdatedAt": "2026-11-13T23:05:58.354Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false
+    },
+    {
+      "bufferPostId": "6af5ccfca19cb7d4977f71df",
+      "sentAt": "2026-11-12T14:28:02.000Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2120886342225997926",
+      "metricsUpdatedAt": "2026-11-12T14:28:12.334Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false
+    },
+    {
+      "bufferPostId": "6ae0ac8de3e26bea1b70f5ff",
+      "sentAt": "2026-10-27T13:52:04.000Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2115079083814216143",
+      "metricsUpdatedAt": "2026-11-13T06:16:50.916Z",
+      "impressionsAtSnapshot": 44,
+      "clicksAtSnapshot": 0,
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false
+    }
+  ],
+  "numberUnclassified": 3,
+  "note": "Only the latest 40-post audit window is covered. This list is not exhaustive, and unknown source/content must not be inferred from timing or URL.",
+  "resolution": "Trace the individual Buffer external IDs and X post texts to an authorized publishing origin. Do not generate replacements or alter MIO/SENA. Continue read-only monitoring while policy hold applies."
+}
