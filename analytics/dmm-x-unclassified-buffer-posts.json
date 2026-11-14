@@ -4,21 +4,38 @@
   "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
   "evidence": {
     "auditFile": "analytics/dmm-x-live-audit.json",
-    "auditCheckedAt": "2026-11-14T01:28:37.961Z",
+    "auditCheckedAt": "2026-11-14T15:20:24.620Z",
     "account": "ero_mimimimi",
     "channelId": "67be5e543b85969eafdb14d7",
     "postingStateFile": "automation/dmm-x/state.json",
     "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
-    "inventoryComplete": false
+    "inventoryComplete": false,
+    "firstRecordedAuditCheckedAt": "2026-11-14T01:28:37.961Z",
+    "auditUpdatedAt": "2026-11-14T15:20:30.779Z",
+    "metricsCoverage": "complete",
+    "samplePosts": 40,
+    "bufferReadMethod": "Read-only persisted GitHub analytics/dmm-x-live-audit.json; no additional Buffer request"
   },
   "policyHold": "Commercial DMM affiliate runner disabled; unknown posts are NOT evidence that runner posted.",
   "unclassifiedSentPosts": [
     {
+      "bufferPostId": "6af8307f76df677fd0fcb1b4",
+      "sentAt": "2026-11-14T09:57:20.257Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2121542990212497737",
+      "metricsUpdatedAt": "2026-11-14T09:57:29.022Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false
+    },
+    {
       "bufferPostId": "6af797d650d4db00bba9964e",
       "sentAt": "2026-11-13T23:05:48.000Z",
       "xUrl": "https://x.com/1647584462233010176/status/2121379030880702805",
-      "metricsUpdatedAt": "2026-11-13T23:05:58.354Z",
-      "impressionsAtSnapshot": 0,
+      "metricsUpdatedAt": "2026-11-14T05:17:00.861Z",
+      "impressionsAtSnapshot": 20,
       "clicksAtSnapshot": 0,
       "classification": "unknown",
       "origin": "unverified",
@@ -41,8 +58,8 @@
       "bufferPostId": "6ae0ac8de3e26bea1b70f5ff",
       "sentAt": "2026-10-27T13:52:04.000Z",
       "xUrl": "https://x.com/1647584462233010176/status/2115079083814216143",
-      "metricsUpdatedAt": "2026-11-13T06:16:50.916Z",
-      "impressionsAtSnapshot": 44,
+      "metricsUpdatedAt": "2026-11-14T05:17:00.861Z",
+      "impressionsAtSnapshot": 46,
       "clicksAtSnapshot": 0,
       "classification": "unknown",
       "origin": "unverified",
@@ -50,7 +67,8 @@
       "recordedInPostingState": false
     }
   ],
-  "numberUnclassified": 3,
-  "note": "Only the latest 40-post audit window is covered. This list is not exhaustive, and unknown source/content must not be inferred from timing or URL.",
-  "resolution": "Trace the individual Buffer external IDs and X post texts to an authorized publishing origin. Do not generate replacements or alter MIO/SENA. Continue read-only monitoring while policy hold applies."
+  "numberUnclassified": 4,
+  "note": "Only latest 40 sent posts sampled; this list may omit older or future posts. None of these four external IDs occurs in the DMM posting state. Timing alone is not evidence of affiliate content or of the posting runner restarting.",
+  "resolution": "Trace authoring source and actual post text for each observed Buffer external ID when primary evidence is available; do not assert affiliate attribution from unknown kind, create replacement posts, or alter MIO/SENA. Commercial runner policy hold remains.",
+  "p0Status": "completed-and-unchanged"
 }
