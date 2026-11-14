@@ -1,0 +1,428 @@
+{
+  "version": 1,
+  "project": "DMM X @ero_mimimimi",
+  "generatedOnJstDate": "2026-11-15",
+  "scope": "2026-10-15 through 2026-10-18 21:30 JST discovery and 23:30 JST decision affiliate pairs; excludes original Oct 4 P0 completion evidence",
+  "status": "historical-nearest-provider-snapshot-reconstruction",
+  "p0Status": "completed-and-unchanged",
+  "method": "Read immutable GitHub audit snapshots only; anchor post age to provider metricsUpdatedAt minus actual sentAt. Each selected observation is within 16 hours of nominal 24h, 72h, or 168h; none is an exact fixed-age measurement. No Buffer request was made.",
+  "summary": {
+    "24h": {
+      "posts": 8,
+      "impressions": 133,
+      "clicks": 0,
+      "ctrPct": 0,
+      "rangeProviderAgeHours": [
+        17.69,
+        22.67
+      ]
+    },
+    "72h": {
+      "posts": 8,
+      "impressions": 174,
+      "clicks": 0,
+      "ctrPct": 0,
+      "rangeProviderAgeHours": [
+        63.7,
+        68.68
+      ]
+    },
+    "168h": {
+      "posts": 8,
+      "impressions": 209,
+      "clicks": 0,
+      "ctrPct": 0,
+      "rangeProviderAgeHours": [
+        155.71,
+        160.69
+      ]
+    }
+  },
+  "posts": [
+    {
+      "bufferPostId": "6ad00973cf4828067a351f32",
+      "format": "discovery",
+      "contentId": "adn00762",
+      "sentAt": "2026-10-15T12:30:42.256Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 22.67,
+          "deviationHours": -1.33,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-16T11:11:10.886Z",
+          "auditCheckedAt": "2026-10-16T23:39:01.160Z",
+          "impressions": 12,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "e483176ed174ee2400a1f15ecc7222d8b98d39a1",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/e483176ed174ee2400a1f15ecc7222d8b98d39a1/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 68.68,
+          "deviationHours": -3.32,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-18T09:11:30.922Z",
+          "auditCheckedAt": "2026-10-18T23:19:22.173Z",
+          "impressions": 17,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "d374616355f9bdc20fbe1af9ee3303305ea2aa16",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/d374616355f9bdc20fbe1af9ee3303305ea2aa16/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 160.69,
+          "deviationHours": -7.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-22T05:12:10.832Z",
+          "auditCheckedAt": "2026-10-22T18:47:32.636Z",
+          "impressions": 25,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "7041eac1a50c09a94294395ed98605c39b5cade8",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/7041eac1a50c09a94294395ed98605c39b5cade8/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad00975cf4828067a352442",
+      "format": "decision",
+      "contentId": "sqte00655",
+      "sentAt": "2026-10-15T14:30:21.706Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 20.68,
+          "deviationHours": -3.32,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-16T11:11:10.886Z",
+          "auditCheckedAt": "2026-10-16T23:39:01.160Z",
+          "impressions": 25,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "e483176ed174ee2400a1f15ecc7222d8b98d39a1",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/e483176ed174ee2400a1f15ecc7222d8b98d39a1/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 66.69,
+          "deviationHours": -5.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-18T09:11:30.922Z",
+          "auditCheckedAt": "2026-10-18T23:19:22.173Z",
+          "impressions": 30,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "d374616355f9bdc20fbe1af9ee3303305ea2aa16",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/d374616355f9bdc20fbe1af9ee3303305ea2aa16/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 158.7,
+          "deviationHours": -9.3,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-22T05:12:10.832Z",
+          "auditCheckedAt": "2026-10-22T18:47:32.636Z",
+          "impressions": 34,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "7041eac1a50c09a94294395ed98605c39b5cade8",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/7041eac1a50c09a94294395ed98605c39b5cade8/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad16048e991a49db3ba7ff3",
+      "format": "discovery",
+      "contentId": "1namh00051",
+      "sentAt": "2026-10-16T12:30:24.758Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 21.68,
+          "deviationHours": -2.32,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-17T10:11:20.971Z",
+          "auditCheckedAt": "2026-10-17T23:10:43.279Z",
+          "impressions": 14,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "2efdc8e4cf972b8245addbd2acc004bc472cbc82",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/2efdc8e4cf972b8245addbd2acc004bc472cbc82/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 67.69,
+          "deviationHours": -4.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-19T08:11:41.080Z",
+          "auditCheckedAt": "2026-10-19T23:57:38.835Z",
+          "impressions": 18,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "37d293c78a7277d213cbb988cbc1d47c4baf4e5e",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/37d293c78a7277d213cbb988cbc1d47c4baf4e5e/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 159.7,
+          "deviationHours": -8.3,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-23T04:12:20.838Z",
+          "auditCheckedAt": "2026-10-23T18:42:22.345Z",
+          "impressions": 22,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "64b55e3bf44c54ba842fcaa17183c73fc9928173",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/64b55e3bf44c54ba842fcaa17183c73fc9928173/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad1604aa82f34dbe137cea5",
+      "format": "decision",
+      "contentId": "sqte00689",
+      "sentAt": "2026-10-16T14:30:42.703Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 19.68,
+          "deviationHours": -4.32,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-17T10:11:20.971Z",
+          "auditCheckedAt": "2026-10-17T23:10:43.279Z",
+          "impressions": 13,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "2efdc8e4cf972b8245addbd2acc004bc472cbc82",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/2efdc8e4cf972b8245addbd2acc004bc472cbc82/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 65.68,
+          "deviationHours": -6.32,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-19T08:11:41.080Z",
+          "auditCheckedAt": "2026-10-19T23:57:38.835Z",
+          "impressions": 17,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "37d293c78a7277d213cbb988cbc1d47c4baf4e5e",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/37d293c78a7277d213cbb988cbc1d47c4baf4e5e/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 157.69,
+          "deviationHours": -10.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-23T04:12:20.838Z",
+          "auditCheckedAt": "2026-10-23T18:42:22.345Z",
+          "impressions": 22,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "64b55e3bf44c54ba842fcaa17183c73fc9928173",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/64b55e3bf44c54ba842fcaa17183c73fc9928173/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad2ada21694d771d50e4ab0",
+      "format": "discovery",
+      "contentId": "snos00152",
+      "sentAt": "2026-10-17T12:30:07.951Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 20.69,
+          "deviationHours": -3.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-18T09:11:30.921Z",
+          "auditCheckedAt": "2026-10-18T23:19:22.173Z",
+          "impressions": 17,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "d374616355f9bdc20fbe1af9ee3303305ea2aa16",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/d374616355f9bdc20fbe1af9ee3303305ea2aa16/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 66.7,
+          "deviationHours": -5.3,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-20T07:11:50.898Z",
+          "auditCheckedAt": "2026-10-20T23:56:27.467Z",
+          "impressions": 21,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "e6bb5f6521f0e719d0f53a3c696a2b817383ee33",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/e6bb5f6521f0e719d0f53a3c696a2b817383ee33/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 158.71,
+          "deviationHours": -9.29,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-24T03:12:31.003Z",
+          "auditCheckedAt": "2026-10-24T17:35:06.324Z",
+          "impressions": 23,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "ed4d8276340c4bd82cad13c1c57dc4acd5eb9dc0",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/ed4d8276340c4bd82cad13c1c57dc4acd5eb9dc0/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad2ada5c34368e4b099b9cd",
+      "format": "decision",
+      "contentId": "sqte00577",
+      "sentAt": "2026-10-17T14:30:08.666Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 18.69,
+          "deviationHours": -5.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-18T09:11:30.921Z",
+          "auditCheckedAt": "2026-10-18T23:19:22.173Z",
+          "impressions": 16,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "d374616355f9bdc20fbe1af9ee3303305ea2aa16",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/d374616355f9bdc20fbe1af9ee3303305ea2aa16/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 64.7,
+          "deviationHours": -7.3,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-20T07:11:50.898Z",
+          "auditCheckedAt": "2026-10-20T23:56:27.467Z",
+          "impressions": 22,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "e6bb5f6521f0e719d0f53a3c696a2b817383ee33",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/e6bb5f6521f0e719d0f53a3c696a2b817383ee33/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 156.71,
+          "deviationHours": -11.29,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-24T03:12:31.003Z",
+          "auditCheckedAt": "2026-10-24T17:35:06.324Z",
+          "impressions": 24,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "ed4d8276340c4bd82cad13c1c57dc4acd5eb9dc0",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/ed4d8276340c4bd82cad13c1c57dc4acd5eb9dc0/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad400ac0b0d72757af9ee11",
+      "format": "discovery",
+      "contentId": "ssis00308",
+      "sentAt": "2026-10-18T12:30:19.678Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 19.69,
+          "deviationHours": -4.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-19T08:11:41.079Z",
+          "auditCheckedAt": "2026-10-19T23:57:38.835Z",
+          "impressions": 20,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "37d293c78a7277d213cbb988cbc1d47c4baf4e5e",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/37d293c78a7277d213cbb988cbc1d47c4baf4e5e/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 65.69,
+          "deviationHours": -6.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-21T06:12:00.926Z",
+          "auditCheckedAt": "2026-10-21T23:42:29.870Z",
+          "impressions": 26,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "5c210016b69c741f46dcfc0b0c99454ee7677b0e",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/5c210016b69c741f46dcfc0b0c99454ee7677b0e/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 157.71,
+          "deviationHours": -10.29,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-25T02:12:40.887Z",
+          "auditCheckedAt": "2026-10-25T17:50:43.784Z",
+          "impressions": 30,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "f03317d086cf516715188ce1aedfc28bc2623df4",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/f03317d086cf516715188ce1aedfc28bc2623df4/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    },
+    {
+      "bufferPostId": "6ad400ae0b0d72757af9ee61",
+      "format": "decision",
+      "contentId": "sqte00641",
+      "sentAt": "2026-10-18T14:30:06.812Z",
+      "ageEvidence": [
+        {
+          "targetHours": 24,
+          "actualProviderAgeHours": 17.69,
+          "deviationHours": -6.31,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-19T08:11:41.079Z",
+          "auditCheckedAt": "2026-10-19T23:57:38.835Z",
+          "impressions": 16,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "37d293c78a7277d213cbb988cbc1d47c4baf4e5e",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/37d293c78a7277d213cbb988cbc1d47c4baf4e5e/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 72,
+          "actualProviderAgeHours": 63.7,
+          "deviationHours": -8.3,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-21T06:12:00.926Z",
+          "auditCheckedAt": "2026-10-21T23:42:29.870Z",
+          "impressions": 23,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "5c210016b69c741f46dcfc0b0c99454ee7677b0e",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/5c210016b69c741f46dcfc0b0c99454ee7677b0e/analytics/dmm-x-live-audit.json"
+        },
+        {
+          "targetHours": 168,
+          "actualProviderAgeHours": 155.71,
+          "deviationHours": -12.29,
+          "exactTargetWindow": false,
+          "providerMetricsUpdatedAt": "2026-10-25T02:12:40.887Z",
+          "auditCheckedAt": "2026-10-25T17:50:43.784Z",
+          "impressions": 29,
+          "clicks": 0,
+          "ctrPct": 0,
+          "sourceCommit": "f03317d086cf516715188ce1aedfc28bc2623df4",
+          "sourceUrl": "https://github.com/innovation4131210-alt/sena-media/blob/f03317d086cf516715188ce1aedfc28bc2623df4/analytics/dmm-x-live-audit.json"
+        }
+      ]
+    }
+  ],
+  "conclusion": "All eight historical affiliate posts have zero Buffer-reported clicks at each of three approximate age checkpoints; total 7d-nearest 209 impressions and 0 clicks. These are descriptive observations, not an identified effect of discovery copy, an experiment, or evidence of DMM commissions. Keep discovery copy, links, and scheduler unchanged until sufficiently powered, comparably aged new data exists.",
+  "limitations": [
+    "Do not mix the 24h/72h/168h snapshots as independent traffic; they are the same 8 posts measured cumulatively.",
+    "Readback ages vary and are not exact; no controlled randomization or first_reply comparator exists.",
+    "Buffer 0 clicks are not proof that DMM official reports show 0 conversions or 0 JPY for these posts.",
+    "The 8-post sample is too small to justify a single-variable optimization.",
+    "Policy-held commercial runner remains disabled; no posting or Buffer mutation.",
+    "Do not modify MIO or SENA."
+  ]
+}
