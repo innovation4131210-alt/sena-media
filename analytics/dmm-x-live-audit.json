@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "checkedAt": "2026-11-15T09:56:50.165Z",
-  "updatedAt": "2026-11-15T09:56:54.363Z",
+  "checkedAt": "2026-11-15T15:52:35.540Z",
+  "updatedAt": "2026-11-15T15:52:41.222Z",
   "readOnly": true,
   "account": "ero_mimimimi",
   "connection": {
@@ -16,15 +16,69 @@
     "complete": false,
     "coverageNote": "Historical inventory exceeds 100 posts; current batch IDs were read back individually.",
     "counts": {
-      "sent": 100
+      "scheduled": 2,
+      "sent": 98
     },
-    "scheduledCount": 0,
-    "scheduled": []
+    "scheduledCount": 2,
+    "scheduled": [
+      {
+        "id": "6af9d4d1548fa9bf5981608d",
+        "dueAt": "2026-11-17T12:30:00.000Z",
+        "kind": null,
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "readback": {
+          "text": "人妻好きに刺さる、今夜の1本💋\n\n『薄い布越し素股で挿入を避けられない…本物人妻のみ在籍する裏オプ不可避 Tバックデリヘル』\n出演：優梨まいな、秋元さちか、Nia\n★4.90（21件）／950円\n\n18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dmdbk00362&af_id=eromimimimi-990&ch=api\n\n#PR",
+          "xWeightedLength": 224,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": null,
+          "actressNamePresent": null,
+          "valueProofPresent": true,
+          "campaignExpected": null,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": true
+        }
+      },
+      {
+        "id": "6af9d4ec9277ea8bd3869ea8",
+        "dueAt": "2026-11-17T14:30:00.000Z",
+        "kind": null,
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "readback": {
+          "text": "VRの没入感がすごい1本、深夜にどうぞ🥽\n\n『【VR】「ウチらのキスで脳イキしてあげる♪」女子寮に入ったボクを絶対キス領域に引きずり込むベロちゅうハーレム』\n出演：小那海あや、胡桃さくら、流川莉央\n★4.67（79件）／1,180円\n\n18歳未満閲覧禁止。\nhttps://al.fanza.co.jp/?lurl=https%3A%2F%2Fvideo.dmm.co.jp%2Fav%2Fcontent%2F%3Fid%3Dsavr00365&af_id=eromimimimi-990&ch=api\n\n#PR",
+          "xWeightedLength": 261,
+          "withinXLimit": true,
+          "isGenericFallbackOnly": false,
+          "hasAffiliateUrl": true,
+          "expectedActressName": null,
+          "actressNamePresent": null,
+          "valueProofPresent": true,
+          "campaignExpected": null,
+          "campaignEvidencePresent": null,
+          "campaignTitle": null,
+          "campaignEnd": null,
+          "p0ChecksPass": true
+        }
+      }
+    ]
   },
   "metrics": {
     "samplePosts": 40,
     "coverage": {
-      "totalSent": 100,
+      "totalSent": 98,
       "selected": 40,
       "attempted": 40,
       "fetched": 40,
@@ -36,11 +90,11 @@
     },
     "freshness": {
       "oldestMetricsUpdatedAt": "2026-11-03T16:14:20.908Z",
-      "newestMetricsUpdatedAt": "2026-11-15T04:17:10.780Z"
+      "newestMetricsUpdatedAt": "2026-11-15T15:32:17.756Z"
     },
     "overall": {
       "posts": 40,
-      "impressions": 1192,
+      "impressions": 1152,
       "clicks": 7,
       "reactions": 2,
       "comments": 3,
@@ -52,40 +106,40 @@
         "comments": 40,
         "reposts": 40
       },
-      "ctrPct": 0.59
+      "ctrPct": 0.61
     },
     "affiliate": {
-      "posts": 24,
-      "impressions": 874,
+      "posts": 23,
+      "impressions": 848,
       "clicks": 7,
       "reactions": 2,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 24,
-        "clicks": 24,
-        "reactions": 24,
-        "comments": 24,
-        "reposts": 24
+        "impressions": 23,
+        "clicks": 23,
+        "reactions": 23,
+        "comments": 23,
+        "reposts": 23
       },
-      "ctrPct": 0.8
+      "ctrPct": 0.83
     },
     "byFormat": {
       "discovery": {
-        "posts": 12,
-        "impressions": 419,
+        "posts": 11,
+        "impressions": 393,
         "clicks": 3,
         "reactions": 1,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 12,
-          "clicks": 12,
-          "reactions": 12,
-          "comments": 12,
-          "reposts": 12
+          "impressions": 11,
+          "clicks": 11,
+          "reactions": 11,
+          "comments": 11,
+          "reposts": 11
         },
-        "ctrPct": 0.72
+        "ctrPct": 0.76
       },
       "decision": {
         "posts": 12,
@@ -122,26 +176,66 @@
         "ctrPct": null
       },
       "direct": {
-        "posts": 24,
-        "impressions": 874,
+        "posts": 23,
+        "impressions": 848,
         "clicks": 7,
         "reactions": 2,
         "comments": 0,
         "reposts": 0,
         "metricCoverage": {
-          "impressions": 24,
-          "clicks": 24,
-          "reactions": 24,
-          "comments": 24,
-          "reposts": 24
+          "impressions": 23,
+          "clicks": 23,
+          "reactions": 23,
+          "comments": 23,
+          "reposts": 23
         },
-        "ctrPct": 0.8
+        "ctrPct": 0.83
       }
     },
     "posts": [
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.267Z",
+        "fetchedAt": "2026-11-15T15:52:35.680Z",
+        "id": "6af9d07773584ed77ba447d9",
+        "sentAt": "2026-11-15T15:32:08.580Z",
+        "externalLink": "https://x.com/1647584462233010176/status/2121989634506821909",
+        "metricsUpdatedAt": "2026-11-15T15:32:17.756Z",
+        "kind": null,
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "impressions": 0,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
+      },
+      {
+        "collectionStatus": "fresh",
+        "fetchedAt": "2026-11-15T15:52:35.837Z",
+        "id": "6af9cf748ebfb1289b9abb59",
+        "sentAt": "2026-11-15T15:28:22.084Z",
+        "externalLink": "https://x.com/1647584462233010176/status/2121988684073340980",
+        "metricsUpdatedAt": "2026-11-15T15:28:31.192Z",
+        "kind": null,
+        "format": null,
+        "linkMode": null,
+        "contentId": null,
+        "sort": null,
+        "discountPct": null,
+        "campaignActive": null,
+        "impressions": 0,
+        "clicks": 0,
+        "reactions": 0,
+        "comments": 0,
+        "reposts": 0
+      },
+      {
+        "collectionStatus": "fresh",
+        "fetchedAt": "2026-11-15T15:52:35.978Z",
         "id": "6af8307f76df677fd0fcb1b4",
         "sentAt": "2026-11-14T09:57:20.257Z",
         "externalLink": "https://x.com/1647584462233010176/status/2121542990212497737",
@@ -161,7 +255,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.377Z",
+        "fetchedAt": "2026-11-15T15:52:36.117Z",
         "id": "6af797d650d4db00bba9964e",
         "sentAt": "2026-11-13T23:05:48.000Z",
         "externalLink": "https://x.com/1647584462233010176/status/2121379030880702805",
@@ -181,7 +275,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.486Z",
+        "fetchedAt": "2026-11-15T15:52:36.251Z",
         "id": "6af5ccfca19cb7d4977f71df",
         "sentAt": "2026-11-12T14:28:02.000Z",
         "externalLink": "https://x.com/1647584462233010176/status/2120886342225997926",
@@ -201,7 +295,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.593Z",
+        "fetchedAt": "2026-11-15T15:52:36.402Z",
         "id": "6ae0ac8de3e26bea1b70f5ff",
         "sentAt": "2026-10-27T13:52:04.000Z",
         "externalLink": "https://x.com/1647584462233010176/status/2115079083814216143",
@@ -221,7 +315,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.691Z",
+        "fetchedAt": "2026-11-15T15:52:36.563Z",
         "id": "6ade78d93d5b27036bf3408a",
         "sentAt": "2026-10-26T14:30:53.294Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114726462682956113",
@@ -241,7 +335,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.789Z",
+        "fetchedAt": "2026-11-15T15:52:36.702Z",
         "id": "6ade78d78b3d437ddc2bfe8b",
         "sentAt": "2026-10-26T12:30:21.434Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114696130084675710",
@@ -261,7 +355,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.885Z",
+        "fetchedAt": "2026-11-15T15:52:36.874Z",
         "id": "6ade78d4e4be8a4d86ca97dd",
         "sentAt": "2026-10-26T03:30:07.735Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114560177017860278",
@@ -281,7 +375,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:50.982Z",
+        "fetchedAt": "2026-11-15T15:52:37.023Z",
         "id": "6add27123d5b27036ba3e649",
         "sentAt": "2026-10-25T14:30:12.542Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114363903807303836",
@@ -301,7 +395,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.078Z",
+        "fetchedAt": "2026-11-15T15:52:37.154Z",
         "id": "6add270f8b3d437ddcdc35c4",
         "sentAt": "2026-10-25T12:30:12.731Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114333705707610148",
@@ -321,7 +415,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.179Z",
+        "fetchedAt": "2026-11-15T15:52:37.283Z",
         "id": "6add270d3d5b27036ba3e5b1",
         "sentAt": "2026-10-25T03:30:06.172Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114197782957371694",
@@ -341,7 +435,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.287Z",
+        "fetchedAt": "2026-11-15T15:52:37.417Z",
         "id": "6adbd51b8b3d437ddc89543e",
         "sentAt": "2026-10-24T14:30:19.841Z",
         "externalLink": "https://x.com/1647584462233010176/status/2114001546790760930",
@@ -361,7 +455,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.390Z",
+        "fetchedAt": "2026-11-15T15:52:37.539Z",
         "id": "6adbd5180b5343d07050495f",
         "sentAt": "2026-10-24T12:30:13.435Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113971320803172528",
@@ -381,7 +475,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.486Z",
+        "fetchedAt": "2026-11-15T15:52:37.747Z",
         "id": "6adbd515bd33ce99c3f03fa4",
         "sentAt": "2026-10-24T03:30:20.268Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113835452876607834",
@@ -401,7 +495,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.611Z",
+        "fetchedAt": "2026-11-15T15:52:37.880Z",
         "id": "6ada9fba8d2197cb2a0751cc",
         "sentAt": "2026-10-23T14:30:36.404Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113639228391236023",
@@ -421,7 +515,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.748Z",
+        "fetchedAt": "2026-11-15T15:52:38.020Z",
         "id": "6ada9fb89ef33e7811aa7ccd",
         "sentAt": "2026-10-23T12:30:32.873Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113609014500008337",
@@ -441,7 +535,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.843Z",
+        "fetchedAt": "2026-11-15T15:52:38.155Z",
         "id": "6ada9fb58d2197cb2a07514f",
         "sentAt": "2026-10-23T03:30:06.996Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113473010669691360",
@@ -461,7 +555,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:51.965Z",
+        "fetchedAt": "2026-11-15T15:52:38.273Z",
         "id": "6ad949ec7d56fe463dad169b",
         "sentAt": "2026-10-22T14:30:36.688Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113276841444229377",
@@ -481,7 +575,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.063Z",
+        "fetchedAt": "2026-11-15T15:52:38.415Z",
         "id": "6ad949ead0598dd30cfb66a5",
         "sentAt": "2026-10-22T12:30:34.723Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113246634419081397",
@@ -501,7 +595,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.211Z",
+        "fetchedAt": "2026-11-15T15:52:38.543Z",
         "id": "6ad949e7b5ae3ccc5eb85b6f",
         "sentAt": "2026-10-22T03:30:20.273Z",
         "externalLink": "https://x.com/1647584462233010176/status/2113110678261125129",
@@ -521,7 +615,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.309Z",
+        "fetchedAt": "2026-11-15T15:52:38.677Z",
         "id": "6ad7f9bb5a0b7fe6fa7c2689",
         "sentAt": "2026-10-21T14:30:28.924Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112914421139853445",
@@ -541,7 +635,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.420Z",
+        "fetchedAt": "2026-11-15T15:52:38.806Z",
         "id": "6ad7f9bac8c16a2bbdb5f7ed",
         "sentAt": "2026-10-21T12:30:36.722Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112884254493347851",
@@ -561,7 +655,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.522Z",
+        "fetchedAt": "2026-11-15T15:52:38.937Z",
         "id": "6ad7f9ba79ac5466f5c752f1",
         "sentAt": "2026-10-21T03:30:12.159Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112748256706912264",
@@ -581,7 +675,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.626Z",
+        "fetchedAt": "2026-11-15T15:52:39.067Z",
         "id": "6ad6a6b69d034d7aedcb0949",
         "sentAt": "2026-10-20T14:30:35.142Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112552059174068610",
@@ -601,7 +695,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.723Z",
+        "fetchedAt": "2026-11-15T15:52:39.202Z",
         "id": "6ad6a6b52d48e20f64bab937",
         "sentAt": "2026-10-20T12:30:36.674Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112521866740973655",
@@ -621,7 +715,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.829Z",
+        "fetchedAt": "2026-11-15T15:52:39.382Z",
         "id": "6ad6a6b5e9c669def5ddf9db",
         "sentAt": "2026-10-20T03:30:05.874Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112385841943212090",
@@ -641,7 +735,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:52.930Z",
+        "fetchedAt": "2026-11-15T15:52:39.533Z",
         "id": "6ad5522aa48c8f8371b9be18",
         "sentAt": "2026-10-19T14:30:26.999Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112189637271724505",
@@ -661,7 +755,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.029Z",
+        "fetchedAt": "2026-11-15T15:52:39.679Z",
         "id": "6ad55227ae173d6e00204583",
         "sentAt": "2026-10-19T12:30:31.849Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112159457798934561",
@@ -681,7 +775,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.131Z",
+        "fetchedAt": "2026-11-15T15:52:39.806Z",
         "id": "6ad552250b0d72757a4180c5",
         "sentAt": "2026-10-19T03:30:22.896Z",
         "externalLink": "https://x.com/1647584462233010176/status/2112023526001475663",
@@ -701,7 +795,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.226Z",
+        "fetchedAt": "2026-11-15T15:52:39.931Z",
         "id": "6ad400ae0b0d72757af9ee61",
         "sentAt": "2026-10-18T14:30:06.812Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111827164756586865",
@@ -721,7 +815,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.328Z",
+        "fetchedAt": "2026-11-15T15:52:40.067Z",
         "id": "6ad400ac0b0d72757af9ee11",
         "sentAt": "2026-10-18T12:30:19.678Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111797019433947301",
@@ -741,7 +835,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.423Z",
+        "fetchedAt": "2026-11-15T15:52:40.237Z",
         "id": "6ad400aaae173d6e00d8d998",
         "sentAt": "2026-10-18T03:30:04.727Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111661061870854533",
@@ -761,7 +855,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.523Z",
+        "fetchedAt": "2026-11-15T15:52:40.400Z",
         "id": "6ad2ada5c34368e4b099b9cd",
         "sentAt": "2026-10-17T14:30:08.666Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111464784675639527",
@@ -781,7 +875,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.624Z",
+        "fetchedAt": "2026-11-15T15:52:40.524Z",
         "id": "6ad2ada21694d771d50e4ab0",
         "sentAt": "2026-10-17T12:30:07.951Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111434582469845444",
@@ -801,7 +895,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.727Z",
+        "fetchedAt": "2026-11-15T15:52:40.658Z",
         "id": "6ad2ada01c7e49ea4c2a277d",
         "sentAt": "2026-10-17T03:30:08.087Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111298688064586062",
@@ -821,7 +915,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.834Z",
+        "fetchedAt": "2026-11-15T15:52:40.798Z",
         "id": "6ad1604aa82f34dbe137cea5",
         "sentAt": "2026-10-16T14:30:42.703Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111102539793920243",
@@ -841,7 +935,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:53.939Z",
+        "fetchedAt": "2026-11-15T15:52:40.931Z",
         "id": "6ad16048e991a49db3ba7ff3",
         "sentAt": "2026-10-16T12:30:24.758Z",
         "externalLink": "https://x.com/1647584462233010176/status/2111072265445974341",
@@ -861,7 +955,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:54.038Z",
+        "fetchedAt": "2026-11-15T15:52:41.079Z",
         "id": "6ad160464ed7d375a4369666",
         "sentAt": "2026-10-16T03:30:08.997Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110936304020054452",
@@ -881,7 +975,7 @@
       },
       {
         "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:54.148Z",
+        "fetchedAt": "2026-11-15T15:52:41.221Z",
         "id": "6ad00975cf4828067a352442",
         "sentAt": "2026-10-15T14:30:21.706Z",
         "externalLink": "https://x.com/1647584462233010176/status/2110740062858096705",
@@ -894,46 +988,6 @@
         "discountPct": 0,
         "campaignActive": false,
         "impressions": 35,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
-      },
-      {
-        "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:54.254Z",
-        "id": "6ad00973cf4828067a351f32",
-        "sentAt": "2026-10-15T12:30:42.256Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2110709949609173394",
-        "metricsUpdatedAt": "2026-11-03T16:14:20.908Z",
-        "kind": "affiliate",
-        "format": "discovery",
-        "linkMode": "direct",
-        "contentId": "adn00762",
-        "sort": "rank",
-        "discountPct": 30,
-        "campaignActive": true,
-        "impressions": 26,
-        "clicks": 0,
-        "reactions": 0,
-        "comments": 0,
-        "reposts": 0
-      },
-      {
-        "collectionStatus": "fresh",
-        "fetchedAt": "2026-11-15T09:56:54.362Z",
-        "id": "6ad00970392879e023534003",
-        "sentAt": "2026-10-15T03:30:06.579Z",
-        "externalLink": "https://x.com/1647584462233010176/status/2110573905060548722",
-        "metricsUpdatedAt": "2026-11-03T16:14:20.908Z",
-        "kind": "engagement",
-        "format": null,
-        "linkMode": null,
-        "contentId": null,
-        "sort": null,
-        "discountPct": null,
-        "campaignActive": null,
-        "impressions": 14,
         "clicks": 0,
         "reactions": 0,
         "comments": 0,
