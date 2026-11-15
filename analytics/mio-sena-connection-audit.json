@@ -1,12 +1,26 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-14T18:48:21.393Z",
+  "checkedAt": "2026-11-15T19:26:39.385Z",
   "readOnly": true,
   "connections": [
     {
       "keyName": "MIO_BUFFER_API_KEY",
       "credentialPresent": true,
       "channels": [
+        {
+          "id": "6af9cd31ece6dfde5fd37d9a",
+          "name": "yurara_hoshi",
+          "service": "twitter",
+          "isDisconnected": false,
+          "isLocked": false,
+          "isQueuePaused": false,
+          "inventoryComplete": true,
+          "operationalWindowComplete": true,
+          "historyTruncated": false,
+          "knownMioXPostPresent": false,
+          "counts": {},
+          "posts": []
+        },
         {
           "id": "6aa6312aea19ca0bde329a87",
           "name": "mio.ai_life",
@@ -353,511 +367,6 @@
           ]
         },
         {
-          "id": "6aa630b7ea19ca0bde329146",
-          "name": "mio.ai_life",
-          "service": "instagram",
-          "isDisconnected": false,
-          "isLocked": false,
-          "isQueuePaused": false,
-          "inventoryComplete": true,
-          "operationalWindowComplete": true,
-          "historyTruncated": false,
-          "knownMioXPostPresent": false,
-          "counts": {
-            "sent": 61
-          },
-          "posts": [
-            {
-              "id": "6af6e1335ef4941a391077fd",
-              "status": "sent",
-              "dueAt": "2026-11-13T09:31:34.000Z",
-              "sentAt": "2026-11-13T09:31:34.000Z",
-              "externalLink": "https://www.instagram.com/p/DfrUGerin9l/",
-              "textHash": "cf7285d24895f7ccae8ea168dc1dc9695424170eee844e67a203e9f84829851e"
-            },
-            {
-              "id": "6af6870a2bc46f01da20f2dc",
-              "status": "sent",
-              "dueAt": "2026-11-12T09:31:35.000Z",
-              "sentAt": "2026-11-12T09:31:35.000Z",
-              "externalLink": "https://www.instagram.com/p/DfovUQIjSaE/",
-              "textHash": "71839368681dcbe2a162ccaa5b6a1f25a8cfe89169e7539cd19d298fc40720ac"
-            },
-            {
-              "id": "6af53581b8d2098c8507eb52",
-              "status": "sent",
-              "dueAt": "2026-11-11T09:32:10.000Z",
-              "sentAt": "2026-11-11T09:32:10.000Z",
-              "externalLink": "https://www.instagram.com/p/DfmKk-pCKZe/",
-              "textHash": "38ad5020f462bad0222fb85addb52875a437b314101b6b5768007e79d69ffe34"
-            },
-            {
-              "id": "6af3e3f8cb88ccdd682c0a18",
-              "status": "sent",
-              "dueAt": "2026-11-10T09:31:48.000Z",
-              "sentAt": "2026-11-10T09:31:48.000Z",
-              "externalLink": "https://www.instagram.com/p/DfjlvIqCO3X/",
-              "textHash": "539db125fdc1732f2eed092a22934822630e849f318bcc6153cea999d0323300"
-            },
-            {
-              "id": "6af2926fb15e37797faf4d3b",
-              "status": "sent",
-              "dueAt": "2026-11-09T09:31:59.000Z",
-              "sentAt": "2026-11-09T09:31:59.000Z",
-              "externalLink": "https://www.instagram.com/p/DfhA99ECG9t/",
-              "textHash": "defa8cc534781cd97d93808a6a486d0b6f5f8d78f5bf7d2540746e414416d1eb"
-            },
-            {
-              "id": "6af140e76f83f6bbb209024c",
-              "status": "sent",
-              "dueAt": "2026-11-08T09:32:02.000Z",
-              "sentAt": "2026-11-08T09:32:02.000Z",
-              "externalLink": "https://www.instagram.com/p/DfecLuGCN7o/",
-              "textHash": "c453fab3dfcb310368fa6c2db68d59b75990cae1f896b345ebb08cb8481247af"
-            },
-            {
-              "id": "6aefef5b419e331d707c4d7b",
-              "status": "sent",
-              "dueAt": "2026-11-07T09:32:02.000Z",
-              "sentAt": "2026-11-07T09:32:02.000Z",
-              "externalLink": "https://www.instagram.com/p/Dfb3YzgCHrV/",
-              "textHash": "98044314d0509114d478ceb8911842bbf2c0062af1ee847bd3b7e403cae2129c"
-            },
-            {
-              "id": "6aee9dd11a794a292c974cd6",
-              "status": "sent",
-              "dueAt": "2026-11-06T09:31:40.000Z",
-              "sentAt": "2026-11-06T09:31:40.000Z",
-              "externalLink": "https://www.instagram.com/p/DfZSjGACAka/",
-              "textHash": "a8a32754d49a3c1094c661510a7cfca7f953871a5462384ef7c5e51982c8adda"
-            },
-            {
-              "id": "6aed4c45e31e349cd706b71a",
-              "status": "sent",
-              "dueAt": "2026-11-05T09:32:16.000Z",
-              "sentAt": "2026-11-05T09:32:16.000Z",
-              "externalLink": "https://www.instagram.com/p/DfWt0mhiIpP/",
-              "textHash": "edcc5f6920ec992d827444caf9f04f0d4db1a1357ddcf19095f669a6af4a8e67"
-            },
-            {
-              "id": "6aebfabd586770bf52ea2130",
-              "status": "sent",
-              "dueAt": "2026-11-04T09:31:42.000Z",
-              "sentAt": "2026-11-04T09:31:42.000Z",
-              "externalLink": "https://www.instagram.com/p/DfUI9kgiGqu/",
-              "textHash": "1fd1479d90ec4b6fbc91b997a7f17c13b27aaa7c7f690a0b105f98075a07dcdf"
-            },
-            {
-              "id": "6ae9aadc5c89612ab7c12ca8",
-              "status": "sent",
-              "dueAt": "2026-11-03T09:31:47.000Z",
-              "sentAt": "2026-11-03T09:31:47.000Z",
-              "externalLink": "https://www.instagram.com/p/DfRkLq5DSrv/",
-              "textHash": "a19a06ff25bd409c4c54bdff8b87d886114333fa53c11252d39c88e4d518f5da"
-            },
-            {
-              "id": "6ae957a8f239874ca22ff9d1",
-              "status": "sent",
-              "dueAt": "2026-11-02T09:31:36.000Z",
-              "sentAt": "2026-11-02T09:31:36.000Z",
-              "externalLink": "https://www.instagram.com/p/DfO_XMICGEa/",
-              "textHash": "1f264f06201d516f798cc07f44a1f6bec93443e1a4913f9ed4b52a7c7ef8f2d7"
-            },
-            {
-              "id": "6ae8061e63e70b734a57a14a",
-              "status": "sent",
-              "dueAt": "2026-11-01T09:31:21.000Z",
-              "sentAt": "2026-11-01T09:31:21.000Z",
-              "externalLink": "https://www.instagram.com/p/DfMai-ojc81/",
-              "textHash": "a0cf61d163c0ac0dcaf4e2be96fbcd99967549c4d54c06116d435f26b8273da4"
-            },
-            {
-              "id": "6ab46e12cdc0a64118080c1d",
-              "status": "sent",
-              "dueAt": "2026-10-27T09:30:00.000Z",
-              "sentAt": "2026-10-27T09:31:20.860Z",
-              "externalLink": "https://www.instagram.com/p/De_ioDcmwOY/",
-              "textHash": "7c2e732af5c4eb4e402dcb2c55e019f1c554b4d8ee4889ab4d7576742d6bfdbf"
-            },
-            {
-              "id": "6ab46e0eccbef1e0a53f6300",
-              "status": "sent",
-              "dueAt": "2026-10-26T09:30:00.000Z",
-              "sentAt": "2026-10-26T09:30:59.270Z",
-              "externalLink": "https://www.instagram.com/p/De89yaHkaV4/",
-              "textHash": "83430fe754209a5fd164b5c1c4c97fc0189e2319cbfbc0e8f9fdaff204dae7ec"
-            },
-            {
-              "id": "6ab46e0bccbef1e0a53f62cc",
-              "status": "sent",
-              "dueAt": "2026-10-25T09:30:00.000Z",
-              "sentAt": "2026-10-25T09:30:42.020Z",
-              "externalLink": "https://www.instagram.com/p/De6Y9asFhas/",
-              "textHash": "d762f84bfa6392b0fa4fff2cb2e4ff5eab395ff4d02008f77a6a84c3df0418c8"
-            },
-            {
-              "id": "6ab46e084ee8bfc2fd2477cc",
-              "status": "sent",
-              "dueAt": "2026-10-24T09:30:00.000Z",
-              "sentAt": "2026-10-24T09:30:41.415Z",
-              "externalLink": "https://www.instagram.com/p/De30Kdhlsr-/",
-              "textHash": "3316cb6aae54a607af9cbffc00015261fc05eb5f6045280b0dd70dd0f02c0664"
-            },
-            {
-              "id": "6ab46e05b4fa591f3ecdc46f",
-              "status": "sent",
-              "dueAt": "2026-10-23T09:30:00.000Z",
-              "sentAt": "2026-10-23T09:30:51.481Z",
-              "externalLink": "https://www.instagram.com/p/De1PY3lFYh8/",
-              "textHash": "def8930ccb98917ff72df593dfe7cc206bbe4333a00c6b7bb6a3b723cc9ced6b"
-            },
-            {
-              "id": "6ab46e02b54e50f39d0dfaf9",
-              "status": "sent",
-              "dueAt": "2026-10-22T09:30:00.000Z",
-              "sentAt": "2026-10-22T09:31:13.022Z",
-              "externalLink": "https://www.instagram.com/p/Deyqoctlkma/",
-              "textHash": "252ff90f42b8dd640a8976436ae0fe1984d60d4334fa7a84a8ef61cf834d78dc"
-            },
-            {
-              "id": "6ad16650ee2c696029ae96c6",
-              "status": "sent",
-              "dueAt": "2026-10-19T09:30:00.000Z",
-              "sentAt": "2026-10-19T09:31:04.186Z",
-              "externalLink": "https://www.instagram.com/p/Deq8O-ukSJT/",
-              "textHash": "bc852c91615cf58b12fc522e7803dde206d87613e8b3a6d4c3c7b84c1b3d6b6e"
-            },
-            {
-              "id": "6ace4e6e50c9e16963ed65e8",
-              "status": "sent",
-              "dueAt": "2026-10-18T09:30:00.000Z",
-              "sentAt": "2026-10-18T09:30:46.513Z",
-              "externalLink": "https://www.instagram.com/p/DeoXX9FG-Aw/",
-              "textHash": "d1ac6d4f83c7c184aa3f6dae53c06a1f224ca7f2a93b76111f0e92abef3fad02"
-            },
-            {
-              "id": "6ace4c3296ad7ea931ccf71e",
-              "status": "sent",
-              "dueAt": "2026-10-17T09:30:00.000Z",
-              "sentAt": "2026-10-17T09:30:37.639Z",
-              "externalLink": "https://www.instagram.com/p/DelymKultWH/",
-              "textHash": "79b15030f4772789bef96fc2748898e8743d7d2eeefd3ad9012b29981e3c1e9a"
-            },
-            {
-              "id": "6ace4b0450c9e16963ebce95",
-              "status": "sent",
-              "dueAt": "2026-10-16T09:30:00.000Z",
-              "sentAt": "2026-10-16T09:30:44.830Z",
-              "externalLink": "https://www.instagram.com/p/DejNz0kHA3b/",
-              "textHash": "29a5830c2319d11b125e5be749fb61daff49a7d767caf1309550a21de3213b35"
-            },
-            {
-              "id": "6ace48122e9dbe360cc7b9df",
-              "status": "sent",
-              "dueAt": "2026-10-15T09:30:00.000Z",
-              "sentAt": "2026-10-15T09:30:56.192Z",
-              "externalLink": "https://www.instagram.com/p/DegpCd6nPVH/",
-              "textHash": "7abe23d5054a100f445148dc710606222a68edc3b3a9b0e090aebfa42f287d58"
-            },
-            {
-              "id": "6ad04a6932aa43b30b11e810",
-              "status": "sent",
-              "dueAt": "2026-10-14T14:50:09.000Z",
-              "sentAt": "2026-10-14T14:50:09.000Z",
-              "externalLink": "https://www.instagram.com/p/DeeouJXyMpW/",
-              "textHash": "1395ca4a4025509874b0998328cf87769a42935ea63b96d64c2b552a99d8cce3"
-            },
-            {
-              "id": "6acef8e0a95c2651d22e9ab3",
-              "status": "sent",
-              "dueAt": "2026-10-13T09:31:24.000Z",
-              "sentAt": "2026-10-13T09:31:24.000Z",
-              "externalLink": "https://www.instagram.com/p/DebfcLzCHuE/",
-              "textHash": "20e45c039c5d7be23559060f400ff4ca2435824ea79917de62382d5047963869"
-            },
-            {
-              "id": "6acda75573c624dee2d14d47",
-              "status": "sent",
-              "dueAt": "2026-10-12T09:31:15.000Z",
-              "sentAt": "2026-10-12T09:31:15.000Z",
-              "externalLink": "https://www.instagram.com/p/DeY6opejSWu/",
-              "textHash": "60f1022e175d36563549e18f38b8cf9d03d1ea4d9fe848149f9fc502ea0f73d7"
-            },
-            {
-              "id": "6acc55ca84c1ebc110c83cfd",
-              "status": "sent",
-              "dueAt": "2026-10-11T09:31:10.000Z",
-              "sentAt": "2026-10-11T09:31:10.000Z",
-              "externalLink": "https://www.instagram.com/p/DeWV1GjjS0R/",
-              "textHash": "d44613e8894a7cf9027122bb11e2c2f28cff8b8db5c4daf501e1639bb83deb16"
-            },
-            {
-              "id": "6acc55ca84c1ebc110c83d04",
-              "status": "sent",
-              "dueAt": "2026-10-11T03:59:25.000Z",
-              "sentAt": "2026-10-11T03:59:25.000Z",
-              "externalLink": "https://www.instagram.com/p/DeVv3CjiAXA/",
-              "textHash": "d213bc2c993bbf78224b609765f5ca41de871bbe533c7b23f075aa90e6814fea"
-            },
-            {
-              "id": "6acb0440d19d39dbf96c3eae",
-              "status": "sent",
-              "dueAt": "2026-10-10T09:31:17.000Z",
-              "sentAt": "2026-10-10T09:31:17.000Z",
-              "externalLink": "https://www.instagram.com/p/DeTxCe-iIPv/",
-              "textHash": "967b80c302cc0dbdc6d8985bf90313909768d3d2498b626de32760340d80b820"
-            },
-            {
-              "id": "6ac9b2b787c32bd42ef80df9",
-              "status": "sent",
-              "dueAt": "2026-10-09T09:31:22.000Z",
-              "sentAt": "2026-10-09T09:31:22.000Z",
-              "externalLink": "https://www.instagram.com/p/DeRMQYciHj6/",
-              "textHash": "4599abe13b989b341f12062c862f8e8524c96a19aeb081895efc5b2e71cf68dd"
-            },
-            {
-              "id": "6ac8612de1e4021ac949ee42",
-              "status": "sent",
-              "dueAt": "2026-10-08T09:31:21.000Z",
-              "sentAt": "2026-10-08T09:31:21.000Z",
-              "externalLink": "https://www.instagram.com/p/DeOneI2jZ1f/",
-              "textHash": "592bb6cc216a8f0c5615734785b2af7e1007a06bf3ee6ba466cecd9696d968e2"
-            },
-            {
-              "id": "6ac70fa35df204dd0301387c",
-              "status": "sent",
-              "dueAt": "2026-10-07T09:31:22.000Z",
-              "sentAt": "2026-10-07T09:31:22.000Z",
-              "externalLink": "https://www.instagram.com/p/DeMCqmfCBcq/",
-              "textHash": "62aab00aef45894cdfe65ad97a9ae6c47d74894e3700573f22ab1294adb27e9b"
-            },
-            {
-              "id": "6ac5cc2842711e3c06edac01",
-              "status": "sent",
-              "dueAt": "2026-10-06T09:31:23.000Z",
-              "sentAt": "2026-10-06T09:31:23.000Z",
-              "externalLink": "https://www.instagram.com/p/DeJd3x9Cq-B/",
-              "textHash": "e1a32811ab2d9050bb4d29b637294be1b7357816890ed6a6bac202488ce79e3c"
-            },
-            {
-              "id": "6ac488af6d589006dcc5aebb",
-              "status": "sent",
-              "dueAt": "2026-10-05T09:31:19.000Z",
-              "sentAt": "2026-10-05T09:31:19.000Z",
-              "externalLink": "https://www.instagram.com/p/DeG5EfHiEG8/",
-              "textHash": "aea1544f7cf72b2745d19ce53f348a2d54b084ea67c6f85114d95c154ac9ea29"
-            },
-            {
-              "id": "6ac201bcac8ef52594465919",
-              "status": "sent",
-              "dueAt": "2026-10-04T01:02:13.000Z",
-              "sentAt": "2026-10-04T01:02:13.000Z",
-              "externalLink": "https://www.instagram.com/p/DeDaAqQiikR/",
-              "textHash": "8297f98416b8ae64627f7e8ebcf03f915531b92672d48694cb091d3fa284014b"
-            },
-            {
-              "id": "6ac201bcac8ef52594465930",
-              "status": "sent",
-              "dueAt": "2026-10-03T12:46:14.000Z",
-              "sentAt": "2026-10-03T12:46:14.000Z",
-              "externalLink": "https://www.instagram.com/reel/DeCFthEEblo/",
-              "textHash": "601b704bf597e2e85fe213ed5c75efdb959c615dc419e057e1b4f333a68c8250"
-            },
-            {
-              "id": "6ac201bcac8ef52594465917",
-              "status": "sent",
-              "dueAt": "2026-10-03T09:31:09.000Z",
-              "sentAt": "2026-10-03T09:31:09.000Z",
-              "externalLink": "https://www.instagram.com/p/DeBveIqjUGV/",
-              "textHash": "1cfdbe2e44fbf52ec738505731850d014a0c2147b77151a27ae4f9140c5e93f6"
-            },
-            {
-              "id": "6abf7a8b0cdcd2d5debb9fd0",
-              "status": "sent",
-              "dueAt": "2026-10-02T01:02:14.000Z",
-              "sentAt": "2026-10-02T01:02:14.000Z",
-              "externalLink": "https://www.instagram.com/p/Dd-QbJgCuuF/",
-              "textHash": "fd53e613ede4bfea0e710f56dc9012ff8f637f154645af7e82cadd318bb47199"
-            },
-            {
-              "id": "6abe3672cbf85677dda8fbd6",
-              "status": "sent",
-              "dueAt": "2026-10-01T09:31:26.000Z",
-              "sentAt": "2026-10-01T09:31:26.000Z",
-              "externalLink": "https://www.instagram.com/p/Dd8l5qgDUcS/",
-              "textHash": "b7a41d433d78bddcfd6eb778d65897120169b0f13ded4c216a9c592372a0c1c5"
-            },
-            {
-              "id": "6abd472784ebefca554c8b7d",
-              "status": "sent",
-              "dueAt": "2026-09-30T16:47:36.000Z",
-              "sentAt": "2026-09-30T16:47:36.000Z",
-              "externalLink": "https://www.instagram.com/stories/mio.ai_life/3997732363845145567",
-              "textHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            },
-            {
-              "id": "6abd3f214fdecbc3ac4ba153",
-              "status": "sent",
-              "dueAt": "2026-09-30T16:47:15.000Z",
-              "sentAt": "2026-09-30T16:47:15.000Z",
-              "externalLink": "https://www.instagram.com/p/Dd6zD5dEkUL/",
-              "textHash": "99df1fa238f669f68c853c51d42412da85f5dd1083abc37281eae484cba5f39d"
-            },
-            {
-              "id": "6aba124056d407964ff17329",
-              "status": "sent",
-              "dueAt": "2026-09-28T01:02:14.000Z",
-              "sentAt": "2026-09-28T01:02:14.000Z",
-              "externalLink": "https://www.instagram.com/p/Ddz9P01Cpmo/",
-              "textHash": "a14d3be03fa15564178463eaee3c6ac4cea6be196059897b21d335f9c52ef46a"
-            },
-            {
-              "id": "6ab8890760523a6f7f41a3be",
-              "status": "sent",
-              "dueAt": "2026-09-27T03:02:11.000Z",
-              "sentAt": "2026-09-27T03:02:11.000Z",
-              "externalLink": "https://www.instagram.com/p/DdxmLkRCmyU/",
-              "textHash": "e65a3fd0d3a12b47260888e902d81938a8c0331f21cc67f4e239b0d018c177cb"
-            },
-            {
-              "id": "6ab77e71cf6b00387aca8658",
-              "status": "sent",
-              "dueAt": "2026-09-26T08:05:00.000Z",
-              "sentAt": "2026-09-26T08:05:00.000Z",
-              "externalLink": "https://www.instagram.com/reel/Ddvj70xj8Qc/",
-              "textHash": "73ac76fd4dc3c0b14374378f7e68746303714cbf4b351721243aa7b920f1c33d"
-            },
-            {
-              "id": "6ab76823d3d788d37597f0e7",
-              "status": "sent",
-              "dueAt": "2026-09-26T01:02:22.000Z",
-              "sentAt": "2026-09-26T01:02:22.000Z",
-              "externalLink": "https://www.instagram.com/p/Dduzq1iihGL/",
-              "textHash": "a82608b676904e43a57822950b9979ffa928e60eb204e02ba0d4720e1cbf026a"
-            },
-            {
-              "id": "6ab6710550533d07deea61c5",
-              "status": "sent",
-              "dueAt": "2026-09-25T03:02:15.000Z",
-              "sentAt": "2026-09-25T03:02:15.000Z",
-              "externalLink": "https://www.instagram.com/p/DdscmUjCJ1-/",
-              "textHash": "938ad908ea76800ddc217c852962863460a324d8ca8e7a4f4fd82875a1b4af5a"
-            },
-            {
-              "id": "6ab5ceed6cbb6ee9c2902290",
-              "status": "sent",
-              "dueAt": "2026-09-24T22:55:54.000Z",
-              "sentAt": "2026-09-24T22:55:54.000Z",
-              "externalLink": "https://www.instagram.com/stories/mio.ai_life/3993569123330329967",
-              "textHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            },
-            {
-              "id": "6ab55cd93bf6328cc98464db",
-              "status": "sent",
-              "dueAt": "2026-09-24T11:31:22.000Z",
-              "sentAt": "2026-09-24T11:31:22.000Z",
-              "externalLink": "https://www.instagram.com/p/DdqyEcrCCDN/",
-              "textHash": "f1c8a02e3e909064b7562fa917967c6c7caac585cae2323e29da0f40ddaeb4ca"
-            },
-            {
-              "id": "6ab55cd93bf6328cc98464df",
-              "status": "sent",
-              "dueAt": "2026-09-24T05:02:14.000Z",
-              "sentAt": "2026-09-24T05:02:14.000Z",
-              "externalLink": "https://www.instagram.com/p/DdqFiPdCCip/",
-              "textHash": "aeb9eb7318c57e214f51b436b4c825ecebc40d25b0ce59952c85cb5fe5d7657d"
-            },
-            {
-              "id": "6ab55cd93bf6328cc98464d8",
-              "status": "sent",
-              "dueAt": "2026-09-24T01:04:17.000Z",
-              "sentAt": "2026-09-24T01:04:17.000Z",
-              "externalLink": "https://www.instagram.com/p/DdpqTSLiHtV/",
-              "textHash": "e712c43a1e16fdfe659262669fef19633602aeb748fedd5e98759b0058ceeb64"
-            },
-            {
-              "id": "6ab4195f1b59884126898704",
-              "status": "sent",
-              "dueAt": "2026-09-23T12:31:30.000Z",
-              "sentAt": "2026-09-23T12:31:30.000Z",
-              "externalLink": "https://www.instagram.com/p/DdoUJoIiKTc/",
-              "textHash": "f92cda5bf5a4acd5fa4bdeba164b31824b9bec43bf709e5fb652574d7fee3747"
-            },
-            {
-              "id": "6ab4195f1b59884126898700",
-              "status": "sent",
-              "dueAt": "2026-09-23T09:31:27.000Z",
-              "sentAt": "2026-09-23T09:31:27.000Z",
-              "externalLink": "https://www.instagram.com/p/Ddn_i59CCLz/",
-              "textHash": "036cc03472d2c7831a2fd9cd5abd7b6d47de4aa0b618903bcdae361447758130"
-            },
-            {
-              "id": "6ab4195f1b59884126898702",
-              "status": "sent",
-              "dueAt": "2026-09-23T06:31:15.000Z",
-              "sentAt": "2026-09-23T06:31:15.000Z",
-              "externalLink": "https://www.instagram.com/p/Ddnq7PaCLo5/",
-              "textHash": "a42c32747d00006020d652fd4dcd6b2b0d1018521eccd107510c5a7efd5c90d3"
-            },
-            {
-              "id": "6aaff4bc2e85bf585792e25a",
-              "status": "sent",
-              "dueAt": "2026-09-21T11:30:00.000Z",
-              "sentAt": "2026-09-21T11:31:11.465Z",
-              "externalLink": "https://www.instagram.com/reel/DdjDq0JlRpZ/",
-              "textHash": "29fec2bb9273b2afecbeb175770eb5a1684c6575449b1a1c22b501120521a76e"
-            },
-            {
-              "id": "6aae40e204838aa1c45f3753",
-              "status": "sent",
-              "dueAt": "2026-09-20T11:30:00.000Z",
-              "sentAt": "2026-09-20T11:31:11.286Z",
-              "externalLink": "https://www.instagram.com/reel/Ddge2ysEyNr/",
-              "textHash": "61f0fe19061c450a000aeb4f26528dab2cbb6255518543dc88e6fcf07382b2b5"
-            },
-            {
-              "id": "6aae3ec3560f708e8151859d",
-              "status": "sent",
-              "dueAt": "2026-09-19T11:30:00.000Z",
-              "sentAt": "2026-09-19T11:30:59.898Z",
-              "externalLink": "https://www.instagram.com/reel/Ddd6CR7EWan/",
-              "textHash": "dcd3fa2679ef407e59484d365331e899d87596f43f70fa7b3a81e36ab1e69d0e"
-            },
-            {
-              "id": "6aa923ebf97eeabe7fba944c",
-              "status": "sent",
-              "dueAt": "2026-09-15T11:30:00.000Z",
-              "sentAt": "2026-09-15T11:30:57.678Z",
-              "externalLink": "https://www.instagram.com/reel/DdTm3dVFZxQ/",
-              "textHash": "49fe40a52e61397954e7c0074d21d0224bac5ae02598b2b2744d686d0532df04"
-            },
-            {
-              "id": "6aa8b7aeaa8377401dc7ef49",
-              "status": "sent",
-              "dueAt": "2026-09-14T11:31:13.000Z",
-              "sentAt": "2026-09-14T11:31:13.000Z",
-              "externalLink": "https://www.instagram.com/reel/DdRCHeviv8P/",
-              "textHash": "9b8cc64da83cd740b271f78924945f08b257b6017fd4e5eb7790017374d0ef27"
-            },
-            {
-              "id": "6aa63b62cafb66a4624ec921",
-              "status": "sent",
-              "dueAt": "2026-09-13T11:30:00.000Z",
-              "sentAt": "2026-09-13T11:30:55.814Z",
-              "externalLink": "https://www.instagram.com/reel/DdOdQUdkdl6/",
-              "textHash": "eb73e62ea1d56f27a9f4c6842082580a3140a546bbe520f21d12d9d06d883bb9"
-            },
-            {
-              "id": "6aa630b97250ec0ecdc5095a",
-              "status": "sent",
-              "dueAt": "2026-09-13T05:06:09.000Z",
-              "sentAt": "2026-09-13T05:06:09.000Z",
-              "externalLink": "https://www.instagram.com/reel/DdNwv9sSgqF/",
-              "textHash": "6d187c7821712555ed7a7506e120db6250069321cdf7edf7f363685a6d32f8b5"
-            }
-          ]
-        },
-        {
           "id": "67be5e543b85969eafdb14d7",
           "name": "ero_mimimimi",
           "service": "twitter",
@@ -869,9 +378,42 @@
           "historyTruncated": true,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 100
+            "scheduled": 2,
+            "sent": 98
           },
           "posts": [
+            {
+              "id": "6af9d4ec9277ea8bd3869ea8",
+              "status": "scheduled",
+              "dueAt": "2026-11-17T14:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "08859adc0d284a9836d708745c3ffe6f104e95e843f0054f81cf8d42d6d559bd"
+            },
+            {
+              "id": "6af9d4d1548fa9bf5981608d",
+              "status": "scheduled",
+              "dueAt": "2026-11-17T12:30:00.000Z",
+              "sentAt": null,
+              "externalLink": null,
+              "textHash": "b224a5d961c672b6f60101d137661d7745d51c828fdd42c86baf35f18eba6dab"
+            },
+            {
+              "id": "6af9d07773584ed77ba447d9",
+              "status": "sent",
+              "dueAt": "2026-11-15T15:32:07.431Z",
+              "sentAt": "2026-11-15T15:32:08.580Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2121989634506821909",
+              "textHash": "d78cc39266f0a37a0eaa49dd0552c95e8f9d4d3a654b760ae1af12a3ce5406e9"
+            },
+            {
+              "id": "6af9cf748ebfb1289b9abb59",
+              "status": "sent",
+              "dueAt": "2026-11-15T15:28:20.288Z",
+              "sentAt": "2026-11-15T15:28:22.084Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2121988684073340980",
+              "textHash": "6dc89c9b0b1f7f43459fd03044b02e4f6240112419b5729647f0987469416c43"
+            },
             {
               "id": "6af8307f76df677fd0fcb1b4",
               "status": "sent",
@@ -1639,38 +1181,6 @@
               "sentAt": "2026-09-20T12:30:08.494Z",
               "externalLink": "https://x.com/1647584462233010176/status/2101650111830835246",
               "textHash": "3e55fe512d73f7cc0f35b60ca1bc78fed16698423193cb480aae8417fdfba995"
-            },
-            {
-              "id": "6aaef81ebb86436624a76742",
-              "status": "sent",
-              "dueAt": "2026-09-20T03:30:00.000Z",
-              "sentAt": "2026-09-20T03:30:05.554Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2101514204549157266",
-              "textHash": "5efed5fe9519c545ad6a201d9b5152bd612a41eaa955934857521c0cdf2e7796"
-            },
-            {
-              "id": "6aae43be24705c90449d8b4e",
-              "status": "sent",
-              "dueAt": "2026-09-19T14:30:00.000Z",
-              "sentAt": "2026-09-19T14:30:06.634Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2101317915962224716",
-              "textHash": "67ba60a6e47e7ad83d230f285e4e7c1f097e2b87ae0b9f77d866bac565aec28c"
-            },
-            {
-              "id": "6aadefe1560f708e814ad2f1",
-              "status": "sent",
-              "dueAt": "2026-09-19T12:30:00.000Z",
-              "sentAt": "2026-09-19T12:30:05.484Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2101287711378170051",
-              "textHash": "52a79ed40aa1aa487ce2ab049b00ca7d549a01fccac6b61c926f52cbf52919da"
-            },
-            {
-              "id": "6aacfcb0e56454555df3b952",
-              "status": "sent",
-              "dueAt": "2026-09-19T11:30:00.000Z",
-              "sentAt": "2026-09-19T11:30:14.558Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2101272650165232023",
-              "textHash": "19e52ad5f7519bf777c4742033b9f343a1701aa074e83b7c91a3f8021f92e5c8"
             }
           ]
         }
@@ -2038,10 +1548,18 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 47,
+            "sent": 48,
             "draft": 1
           },
           "posts": [
+            {
+              "id": "6af997e0313e2f4c6090e7f0",
+              "status": "sent",
+              "dueAt": "2026-11-15T11:30:30.000Z",
+              "sentAt": "2026-11-15T11:30:30.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DfwrX2SDhMd",
+              "textHash": "c39a89077a0df5e2a7d5ce18c067fd7966e06ee408542384cdb71c7928f32467"
+            },
             {
               "id": "6aeafe65344f89dac28f2cc4",
               "status": "sent",
@@ -3256,18 +2774,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-14T18:48:21.393Z",
+      "evaluatedAt": "2026-11-15T19:26:39.385Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-15T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-16T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-15",
+      "nextBatchDate": "2026-11-16",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -3279,18 +2797,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-14T18:48:21.393Z",
+      "evaluatedAt": "2026-11-15T19:26:39.385Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-15T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-16T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-16",
+      "firstUnverifiedDate": "2026-11-17",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -3302,18 +2820,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-14T18:48:21.393Z",
+      "evaluatedAt": "2026-11-15T19:26:39.385Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-15T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-16T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-16",
+      "firstUnverifiedDate": "2026-11-17",
       "errors": [
         "next_day_reservation_unverified"
       ],
