@@ -4,14 +4,14 @@
   "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
   "evidence": {
     "auditFile": "analytics/dmm-x-live-audit.json",
-    "auditCheckedAt": "2026-11-16T01:06:01.341Z",
+    "auditCheckedAt": "2026-11-16T10:11:25.373Z",
     "account": "ero_mimimimi",
     "channelId": "67be5e543b85969eafdb14d7",
     "postingStateFile": "automation/dmm-x/state.json",
     "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
     "inventoryComplete": false,
     "firstRecordedAuditCheckedAt": "2026-11-14T01:28:37.961Z",
-    "auditUpdatedAt": "2026-11-16T01:06:05.070Z",
+    "auditUpdatedAt": "2026-11-16T10:11:31.425Z",
     "metricsCoverage": "complete",
     "samplePosts": 40,
     "bufferReadMethod": "GitHub-stored read-only Buffer snapshot only; no Buffer API re-query in this reconciliation",
@@ -23,12 +23,12 @@
       "bufferPostId": "6afa33c03b1fb8347bfc185d",
       "sentAt": "2026-11-15T22:35:55.958Z",
       "xUrl": "https://x.com/1647584462233010176/status/2122096285352099908",
-      "metricsUpdatedAt": "2026-11-15T22:36:04.986Z",
-      "impressionsAtSnapshot": 0,
-      "clicksAtSnapshot": 0,
+      "metricsUpdatedAt": "2026-11-16T03:17:20.575Z",
+      "impressionsAtSnapshot": 16,
+      "clicksAtSnapshot": 1,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z",
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z",
       "classification": "unknown",
       "origin": "unverified",
       "affiliateAttribution": "unverified",
@@ -38,12 +38,12 @@
       "bufferPostId": "6afa339f5082c0719d072fd3",
       "sentAt": "2026-11-15T22:35:50.149Z",
       "xUrl": "https://x.com/1647584462233010176/status/2122096259854991455",
-      "metricsUpdatedAt": "2026-11-15T22:35:59.194Z",
-      "impressionsAtSnapshot": 0,
-      "clicksAtSnapshot": 0,
+      "metricsUpdatedAt": "2026-11-16T03:17:20.575Z",
+      "impressionsAtSnapshot": 12,
+      "clicksAtSnapshot": 1,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z",
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z",
       "classification": "unknown",
       "origin": "unverified",
       "affiliateAttribution": "unverified",
@@ -58,7 +58,7 @@
       "clicksAtSnapshot": 0,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z",
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z",
       "classification": "unknown",
       "origin": "unverified",
       "affiliateAttribution": "unverified",
@@ -73,7 +73,7 @@
       "clicksAtSnapshot": 0,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z",
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z",
       "classification": "unknown",
       "origin": "unverified",
       "affiliateAttribution": "unverified",
@@ -83,8 +83,8 @@
       "bufferPostId": "6af8307f76df677fd0fcb1b4",
       "sentAt": "2026-11-14T09:57:20.257Z",
       "xUrl": "https://x.com/1647584462233010176/status/2121542990212497737",
-      "metricsUpdatedAt": "2026-11-15T04:17:10.780Z",
-      "impressionsAtSnapshot": 15,
+      "metricsUpdatedAt": "2026-11-16T03:17:20.575Z",
+      "impressionsAtSnapshot": 25,
       "clicksAtSnapshot": 0,
       "classification": "unknown",
       "origin": "unverified",
@@ -92,14 +92,14 @@
       "recordedInPostingState": false,
       "commentsAtSnapshot": 1,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z"
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z"
     },
     {
       "bufferPostId": "6af797d650d4db00bba9964e",
       "sentAt": "2026-11-13T23:05:48.000Z",
       "xUrl": "https://x.com/1647584462233010176/status/2121379030880702805",
-      "metricsUpdatedAt": "2026-11-15T04:17:10.780Z",
-      "impressionsAtSnapshot": 36,
+      "metricsUpdatedAt": "2026-11-16T03:17:20.575Z",
+      "impressionsAtSnapshot": 39,
       "clicksAtSnapshot": 0,
       "classification": "unknown",
       "origin": "unverified",
@@ -107,7 +107,7 @@
       "recordedInPostingState": false,
       "commentsAtSnapshot": 1,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z"
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z"
     },
     {
       "bufferPostId": "6af5ccfca19cb7d4977f71df",
@@ -122,14 +122,14 @@
       "recordedInPostingState": false,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z"
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z"
     },
     {
       "bufferPostId": "6ae0ac8de3e26bea1b70f5ff",
       "sentAt": "2026-10-27T13:52:04.000Z",
       "xUrl": "https://x.com/1647584462233010176/status/2115079083814216143",
-      "metricsUpdatedAt": "2026-11-15T04:17:10.780Z",
-      "impressionsAtSnapshot": 52,
+      "metricsUpdatedAt": "2026-11-16T03:17:20.575Z",
+      "impressionsAtSnapshot": 54,
       "clicksAtSnapshot": 0,
       "classification": "unknown",
       "origin": "unverified",
@@ -137,17 +137,17 @@
       "recordedInPostingState": false,
       "commentsAtSnapshot": 1,
       "repostsAtSnapshot": 1,
-      "latestSnapshotCheckedAt": "2026-11-16T01:06:01.341Z"
+      "latestSnapshotCheckedAt": "2026-11-16T10:11:25.373Z"
     }
   ],
   "numberUnclassified": 8,
-  "note": "Latest GitHub-saved audit sampled 40 of 99 sent posts; inventory.complete=false. 8 sent posts lack canonical posting-state IDs (including two published on 2026-11-16 around 07:35 JST). Two 2026-11-17 21:30/23:30 adult affiliate reservations were canceled successfully per private GitHub execution results; do not restore or generate replacements. One separately observed 2026-11-17 12:30 JST DLsite book promotion has a next-day deadline claim inconsistent with its scheduled day; campaign price itself not verified.",
+  "note": "Latest saved audit: eight source-unclassified sent posts total 146 impressions and 2 clicks. Both new clicks are from two posts published 2026-11-16 07:35 JST, whose commercial/affiliate origin remains unverified. Do not count them as verified DMM conversions. Scheduled 2026-11-17 12:30 JST DLsite book post still contains an inaccurate relative-date claim '明日11/17' and unverified price claims; only 1 scheduled item observed, entire inventory incomplete. Two 2026-11-17 21:30/23:30 adult affiliate posts are canceled (GitHub verified); no replacements. Commercial runner stays paused. Preserve P0 completed.",
   "resolution": "Keep X adult-affiliate commercial runner on policy hold. Do not fill past or canceled slots. Investigate unmatched sent-post origin and the unrelated 12:30 promotional reservation with exact Buffer ID; do not assert that latest 100-item inventory is complete. Correct or hold the future-dated promotional text before sending to avoid misleading 'tomorrow' language. Preserve prior completed P0 state and do not modify MIO/SENA.",
   "p0Status": "completed-and-unchanged",
   "nonStateScheduledPosts": [],
   "numberNonStateScheduled": 0,
   "policyReference": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
-  "lastReviewedAt": "2026-11-16T01:06:01.341Z",
+  "lastReviewedAt": "2026-11-16T10:11:25.373Z",
   "canceledScheduledAffiliatePosts": [
     {
       "bufferPostId": "6af9d4d1548fa9bf5981608d",
@@ -220,13 +220,39 @@
   "numberOtherActiveScheduled": 1,
   "policyStatus": "adult-affiliate-commercial-runner-held; canceled two matched future reservations per private GitHub result; other promotion classification pending",
   "lastReconciliation": {
-    "checkedAt": "2026-11-16T01:06:01.341Z",
-    "liveAuditBlobSha": "f4de67a3fb568f05ff91f6f2e056cb5a7b9edd64",
+    "checkedAt": "2026-11-16T10:11:25.373Z",
+    "liveAuditBlobSha": "68c098f3170541cc03d7b97d28287017160736dd",
     "postingStateBlobSha": "3071fc327d55c1359a738cb4d8695615ad5332d2",
     "privateCancellationBlobSha": "55df9f32623d43bffeeec1d9f1c07ef32c963fd4",
     "bufferRequeried": false,
     "bufferWritePerformed": false,
     "p0Preserved": true,
     "publicGitHubAuditOnly": true
+  },
+  "latestUnclassifiedMetrics": {
+    "posts": 8,
+    "impressions": 146,
+    "clicks": 2,
+    "comments": 3,
+    "reposts": 1
+  },
+  "latestAuditOverallMetrics": {
+    "posts": 40,
+    "impressions": 1145,
+    "clicks": 9,
+    "ctrPct": 0.79
+  },
+  "latestComparedToPriorAudit": {
+    "priorCheckedAt": "2026-11-16T01:06:01.341Z",
+    "currentCheckedAt": "2026-11-16T10:11:25.373Z",
+    "overallImpressionsDelta": 43,
+    "overallClicksDelta": 2,
+    "affiliateImpressionsDelta": 0,
+    "affiliateClicksDelta": 0,
+    "unclassifiedClickChangeSource": [
+      "6afa33c03b1fb8347bfc185d",
+      "6afa339f5082c0719d072fd3"
+    ],
+    "note": "Two additional Buffer clicks belong to unclassified posts; attribution to DMM affiliate or monetary results is unverified."
   }
 }
