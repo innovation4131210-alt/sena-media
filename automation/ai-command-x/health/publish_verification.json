@@ -1,31 +1,18 @@
 {
   "latest": {
-    "checkedAt": "2026-11-15T18:43:40+00:00",
-    "slot": "2026-11-15T20:30+09:00",
+    "checkedAt": "2026-11-16T03:05:16+00:00",
+    "slot": "2026-11-16T08:10+09:00",
     "ok": true,
-    "contentId": "D47-PM",
-    "contentType": "参加型",
-    "bufferPostId": "6af6342048a8bf93e42906e2",
+    "contentId": "D48-AM",
+    "contentType": "今日の指令",
+    "bufferPostId": "6af77fadbb36d00909cc060d",
     "bufferStatus": "sent",
-    "sentAt": "2026-11-15T11:30:30.981Z",
-    "externalLink": "https://x.com/2104714619688554496/status/2121928828171780546",
+    "sentAt": "2026-11-15T23:10:03.329Z",
+    "externalLink": "https://x.com/2104714619688554496/status/2122104872862437641",
     "warnings": [],
     "errors": []
   },
   "history": [
-    {
-      "checkedAt": "2026-10-05T12:24:06+00:00",
-      "slot": "2026-10-05T20:30+09:00",
-      "ok": true,
-      "contentId": "D06-PM",
-      "contentType": "note導線",
-      "bufferPostId": "6abf9b25d2e71b2f33a3363a",
-      "bufferStatus": "sent",
-      "sentAt": "2026-10-05T11:30:37.717Z",
-      "externalLink": "https://x.com/2104714619688554496/status/2107070953679094190",
-      "warnings": [],
-      "errors": []
-    },
     {
       "checkedAt": "2026-10-05T23:47:59+00:00",
       "slot": "2026-10-06T08:10+09:00",
@@ -1570,6 +1557,19 @@
       "bufferStatus": "sent",
       "sentAt": "2026-11-15T11:30:30.981Z",
       "externalLink": "https://x.com/2104714619688554496/status/2121928828171780546",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "checkedAt": "2026-11-16T03:05:16+00:00",
+      "slot": "2026-11-16T08:10+09:00",
+      "ok": true,
+      "contentId": "D48-AM",
+      "contentType": "今日の指令",
+      "bufferPostId": "6af77fadbb36d00909cc060d",
+      "bufferStatus": "sent",
+      "sentAt": "2026-11-15T23:10:03.329Z",
+      "externalLink": "https://x.com/2104714619688554496/status/2122104872862437641",
       "warnings": [],
       "errors": []
     }
