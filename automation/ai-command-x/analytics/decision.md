@@ -1,6 +1,6 @@
 # AI Command X Data Decision
 
-- 取得日時: 2026-11-15T18:12:13+00:00
+- 取得日時: 2026-11-16T03:06:03+00:00
 - 配信記録: 91本。欠損値は0に置き換えない。
 - 購入数・売上・流入元別の購入帰属: 未取得。Xクリックとは別集計。
 - 同じ役割・同じ経過時間で最低3本を比較。現在値の合計だけで勝者を決めない。
@@ -38,7 +38,7 @@
 | 実行ログ | 1 | 0 | 1 | 未取得 | 0 |
 | 運用改善 | 1 | 0 | 1 | 未取得 | 0 |
 - 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。
-- 取得状態: captured_delayed=8 / missed_metric_window=79 / pending=3 / provider_stale=1
+- 取得状態: captured_delayed=8 / missed_metric_window=78 / pending=3 / provider_stale=2
 
 ## 72時間後（許容窓+2時間）
 
@@ -53,7 +53,7 @@
 | 実務ノウハウ | 1 | 0 | 1 | 未取得 | 0 |
 | 思想 | 1 | 1 | 1 | 0 | 1 |
 - 同じ役割で比較する指標が3本分以上そろうまで、勝敗は保留。A/Bは各2本の設計なので記事別の勝者は決めない。
-- 取得状態: captured_delayed=8 / missed_metric_window=73 / pending=9 / provider_stale=1
+- 取得状態: captured_delayed=8 / missed_metric_window=72 / pending=9 / provider_stale=2
 
 ### AM_HOOK_V1
 
