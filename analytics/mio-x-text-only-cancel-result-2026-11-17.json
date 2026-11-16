@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "request": {
+    "version": 1,
+    "project": "MIO X @mio_ai_life_jp",
+    "action": "cancel_exact_text_only_scheduled_posts",
+    "requestedAt": "2026-11-16T23:48:00.000Z",
+    "sourceRun": {
+      "repository": "innovation4131210-alt/sena-media",
+      "workflow": "Refill MIO X Buffer queue",
+      "runId": 43968692147,
+      "observedAt": "2026-11-16T22:18:07.767Z"
+    },
+    "channelId": "6ab74779ea19ca0bdef024db",
+    "bufferPostIds": [
+      "6afa4b21e27333ae35b23fe1",
+      "6afa9f71038aced895b2d8d7",
+      "6afa9fbcc7cc261bef7e792f",
+      "6afa9fdd2fae797390c3543c"
+    ],
+    "reason": "Latest owner run found four live scheduled MIO X posts without image/video assets. MIO X originals are visual-first; cancel exact IDs before publication and do not create replacements or catch-up posts.",
+    "safeguards": {
+      "exactExternalIdsOnly": true,
+      "validateSingleExpectedChannel": true,
+      "validateScheduledOrAlreadyAbsent": true,
+      "validateNoVisualAssetBeforeDelete": true,
+      "requireNoOtherTextOnlyScheduledPosts": true,
+      "fullInventoryRequired": true,
+      "noReplacement": true,
+      "noCatchup": true,
+      "noRetry": true,
+      "noOtherPostMutation": true
+    }
+  },
+  "startedAt": "2026-11-16T23:49:03.933Z",
+  "results": [
+    {
+      "id": "6afa4b21e27333ae35b23fe1",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6afa4b21e27333ae35b23fe1",
+      "dueAt": "2026-11-17T03:30:00.000Z",
+      "text": "DLsiteの30%OFF、明日までです…！\n私がヒロインの小説『終電を逃した推しモデルMIOが、雨のスタジオで「今日は投稿しないで」と耳打ちしてきた話』、385円で読めるのは11/17 23:59まで。\n気になってた人は、ぜひこの機会に…。\nDLsite ▶︎ https://www.dlsite.com/aix/work/=/product_id/RJ01757849.html\n#彼女たちの秘密の夜"
+    },
+    {
+      "id": "6afa9f71038aced895b2d8d7",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6afa9f71038aced895b2d8d7",
+      "dueAt": "2026-11-17T10:00:00.000Z",
+      "text": "みんなはどっち派？🌷 今日の夜ごはん、選ぶならどれがいい？①和食 ②洋食 ③中華 ④麺類 の番号でリプで教えてね"
+    },
+    {
+      "id": "6afa9fbcc7cc261bef7e792f",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6afa9fbcc7cc261bef7e792f",
+      "dueAt": "2026-11-18T10:00:00.000Z",
+      "text": "休日の朝の過ごし方、みんなはどれ派？☀️①早起きして活動 ②ゆっくり寝る ③カフェでまったり ④お散歩 の番号でリプで教えてね"
+    },
+    {
+      "id": "6afa9fdd2fae797390c3543c",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6afa9fdd2fae797390c3543c",
+      "dueAt": "2026-11-19T10:00:00.000Z",
+      "text": "読書のお供に選ぶなら？📖 みおは迷い中…①コーヒー ②紅茶 ③緑茶 ④何もなしで集中 の番号でリプで教えてね"
+    }
+  ],
+  "allRemoved": true,
+  "readbackVerified": true,
+  "completedAt": "2026-11-16T23:49:05.744Z",
+  "noReplacement": true,
+  "noCatchup": true,
+  "noOtherPostMutation": true
+}
