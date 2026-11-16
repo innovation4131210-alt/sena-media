@@ -4,18 +4,20 @@
   "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
   "evidence": {
     "auditFile": "analytics/dmm-x-live-audit.json",
-    "auditCheckedAt": "2026-11-16T10:11:25.373Z",
+    "auditCheckedAt": "2026-11-16T18:55:18.544Z",
     "account": "ero_mimimimi",
     "channelId": "67be5e543b85969eafdb14d7",
     "postingStateFile": "automation/dmm-x/state.json",
     "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
     "inventoryComplete": false,
     "firstRecordedAuditCheckedAt": "2026-11-14T01:28:37.961Z",
-    "auditUpdatedAt": "2026-11-16T10:11:31.425Z",
+    "auditUpdatedAt": "2026-11-16T18:55:23.239Z",
     "metricsCoverage": "complete",
     "samplePosts": 40,
     "bufferReadMethod": "GitHub-stored read-only Buffer snapshot only; no Buffer API re-query in this reconciliation",
-    "cancellationEvidence": "sena-auto-post/analytics/dmm-policy-cancel-result.json"
+    "cancellationEvidence": "sena-auto-post/analytics/dmm-policy-cancel-result.json",
+    "latestActionResult": "sena-auto-post/analytics/dmm-dlsite-hold-2026-11-17-result.json",
+    "latestActionCommit": "26e4261fc80983ee006e81d4a26fec6ce185772d"
   },
   "policyHold": "Public GitHub DMM commercial runner stays disabled (manual dispatch only; job if:false). X Paid Partnerships Policy explicitly includes affiliate commissions and excludes adult and sexual products or entertainment. The unclassified Buffer posts/queue cannot be attributed to that disabled runner.",
   "unclassifiedSentPosts": [
@@ -141,13 +143,13 @@
     }
   ],
   "numberUnclassified": 8,
-  "note": "Latest saved audit: eight source-unclassified sent posts total 146 impressions and 2 clicks. Both new clicks are from two posts published 2026-11-16 07:35 JST, whose commercial/affiliate origin remains unverified. Do not count them as verified DMM conversions. Scheduled 2026-11-17 12:30 JST DLsite book post still contains an inaccurate relative-date claim '明日11/17' and unverified price claims; only 1 scheduled item observed, entire inventory incomplete. Two 2026-11-17 21:30/23:30 adult affiliate posts are canceled (GitHub verified); no replacements. Commercial runner stays paused. Preserve P0 completed.",
-  "resolution": "Keep X adult-affiliate commercial runner on policy hold. Do not fill past or canceled slots. Investigate unmatched sent-post origin and the unrelated 12:30 promotional reservation with exact Buffer ID; do not assert that latest 100-item inventory is complete. Correct or hold the future-dated promotional text before sending to avoid misleading 'tomorrow' language. Preserve prior completed P0 state and do not modify MIO/SENA.",
+  "note": "Latest stored Buffer snapshot (2026-11-16T18:55:18.544Z) had 40 posts / 1145 impressions / 9 clicks, and included one 2026-11-17 12:30 JST scheduled DLsite promotion with incorrect '明日11/17' wording. A later exact-ID Buffer read/delete succeeded at 2026-11-16T21:53:13.585Z; therefore the earlier scheduled snapshot is now superseded by the verified deletion for that one ID only. Affiliate metrics unchanged. Eight source-unclassified sent posts remain unverified. Do not count as DMM conversions. Full Buffer inventory still incomplete.",
+  "resolution": "Incorrect 12:30 scheduled DLsite post canceled by exact ID; no replacement. The 21:30/23:30 adult affiliate posts were canceled earlier. Keep adult-affiliate runner on X policy hold; do not create future adult-affiliate posts or backfill any removed slot. Preserve P0 completed. Investigate unknown sent-post source with existing IDs; do not assume complete inventory. Future relative-date copy must be evaluated at dueAt in Asia/Tokyo.",
   "p0Status": "completed-and-unchanged",
   "nonStateScheduledPosts": [],
   "numberNonStateScheduled": 0,
   "policyReference": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
-  "lastReviewedAt": "2026-11-16T10:11:25.373Z",
+  "lastReviewedAt": "2026-11-16T21:53:13.585Z",
   "canceledScheduledAffiliatePosts": [
     {
       "bufferPostId": "6af9d4d1548fa9bf5981608d",
@@ -195,39 +197,23 @@
     }
   ],
   "numberCanceledScheduledAffiliate": 2,
-  "otherActiveScheduledPosts": [
-    {
-      "bufferPostId": "6afa47ef23504263595e71fd",
-      "dueAt": "2026-11-17T03:30:00.000Z",
-      "dueAtJST": "2026-11-17 12:30",
-      "postType": "DLsite book promotion / authoring source unverified",
-      "affiliateAttribution": "unverified; direct DLsite product URL not sufficient proof of affiliate commission",
-      "recordedInDmmPostingState": false,
-      "xWeightedLength": 192,
-      "p0ChecksPass": true,
-      "hasPromotionUrl": true,
-      "relativeDateClaim": "明日11/17 23:59まで",
-      "relativeDateCorrectAtDueAt": false,
-      "reason": "Scheduled 2026-11-17 12:30 JST, so 2026-11-17 is today, not tomorrow; quote is temporally incorrect when posted",
-      "contentPriceClaim": "DLsite 30%OFF / 385円 until 11/17 23:59; FANZA 385円 until 11/20",
-      "individualPricingIndependentlyVerified": false,
-      "crossProjectPostingIntentVerified": false,
-      "requiresHoldOrCopyCorrectionBeforeDueAt": true,
-      "source": "analytics/dmm-x-live-audit.json",
-      "avoidInventingOrigin": true
-    }
-  ],
-  "numberOtherActiveScheduled": 1,
-  "policyStatus": "adult-affiliate-commercial-runner-held; canceled two matched future reservations per private GitHub result; other promotion classification pending",
+  "otherActiveScheduledPosts": [],
+  "numberOtherActiveScheduled": 0,
+  "policyStatus": "adult-affiliate-commercial-runner-held; 2 adult affiliate reservations previously canceled; 1 incorrect-copy promotional reservation canceled; no replacements",
   "lastReconciliation": {
-    "checkedAt": "2026-11-16T10:11:25.373Z",
-    "liveAuditBlobSha": "68c098f3170541cc03d7b97d28287017160736dd",
-    "postingStateBlobSha": "3071fc327d55c1359a738cb4d8695615ad5332d2",
-    "privateCancellationBlobSha": "55df9f32623d43bffeeec1d9f1c07ef32c963fd4",
-    "bufferRequeried": false,
-    "bufferWritePerformed": false,
+    "checkedAt": "2026-11-16T21:53:13.585Z",
+    "liveAuditCheckedAt": "2026-11-16T18:55:18.544Z",
+    "liveAuditBlobSha": "cbf8ceeda83b257feb6a6ee31fc3ca380df305df",
+    "sourceActionResultBlobSha": "6458405c9e8fd25b01ab8cb5de687260ee1dfec1",
+    "sourceActionCommit": "26e4261fc80983ee006e81d4a26fec6ce185772d",
+    "bufferRequeriedForFullAudit": false,
+    "exactPostReadBeforeDeletion": true,
+    "exactPostDeleted": true,
+    "bufferWritePerformed": true,
+    "onlyDeletedId": "6afa47ef23504263595e71fd",
     "p0Preserved": true,
-    "publicGitHubAuditOnly": true
+    "otherPostsUnchanged": true,
+    "publicGitHubStatusWrite": true
   },
   "latestUnclassifiedMetrics": {
     "posts": 8,
@@ -254,5 +240,23 @@
       "6afa339f5082c0719d072fd3"
     ],
     "note": "Two additional Buffer clicks belong to unclassified posts; attribution to DMM affiliate or monetary results is unverified."
-  }
+  },
+  "canceledMisleadingPromotionalPosts": [
+    {
+      "bufferPostId": "6afa47ef23504263595e71fd",
+      "dueAt": "2026-11-17T03:30:00.000Z",
+      "dueAtJST": "2026-11-17 12:30",
+      "reason": "Scheduled text incorrectly says '明日11/17' at a November 17 publication time; discount and individual price claims not independently verified",
+      "bufferDeletionReportedOk": true,
+      "checkedAgainstLivePostBeforeDeletion": true,
+      "verifiedBy": "private GitHub one-shot action result",
+      "completedAt": "2026-11-16T21:53:13.585Z",
+      "sourceRepo": "innovation4131210-alt/sena-auto-post",
+      "sourcePath": "analytics/dmm-dlsite-hold-2026-11-17-result.json",
+      "commit": "26e4261fc80983ee006e81d4a26fec6ce185772d",
+      "doNotReschedule": true
+    }
+  ],
+  "numberCanceledMisleadingPromotionalPosts": 1,
+  "guardFollowUp": "P0 character-count and generic-fallback checks remain completed. Separate future enhancement: compare relative words (today/tomorrow) and campaign/price claims against each post's actual dueAt JST; require independently verified price validity. This is a content correctness issue, not evidence for discovery CTA optimization."
 }
