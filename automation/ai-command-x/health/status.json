@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-15T20:27:28+00:00",
+  "checkedAt": "2026-11-16T23:46:41+00:00",
   "ok": false,
   "channel": {
     "id": "6abb9a71ea19ca0bde216771",
@@ -8,34 +8,15 @@
     "isLocked": false,
     "isQueuePaused": false
   },
-  "scheduledCount": 3,
+  "scheduledCount": 0,
   "queueIntegrity": {
     "allMappedToSourceOfTruth": true,
     "noDuplicateContentIds": true,
     "inSourceOrder": true,
-    "items": [
-      {
-        "bufferPostId": "6af77fadbb36d00909cc060d",
-        "contentId": "D48-AM",
-        "contentType": "今日の指令",
-        "dueAtJst": "2026-11-16T08:10+09:00"
-      },
-      {
-        "bufferPostId": "6af77fad4b28296eb1176ba3",
-        "contentId": "D48-NOON",
-        "contentType": "実務ノウハウ",
-        "dueAtJst": "2026-11-16T12:20+09:00"
-      },
-      {
-        "bufferPostId": "6af77fad4b28296eb1176bd1",
-        "contentId": "D48-PM",
-        "contentType": "note導線",
-        "dueAtJst": "2026-11-16T20:30+09:00"
-      }
-    ]
+    "items": []
   },
   "unusedPreparedCount": 0,
-  "analyticsAgeMinutes": 135.3,
+  "analyticsAgeMinutes": 141.1,
   "notePublicPages": {
     "home": {
       "url": "https://note.com/ai_command",
@@ -69,7 +50,7 @@
     }
   },
   "errors": [
-    "Scheduled queue below target: 3 < 9",
+    "Scheduled queue below target: 0 < 9",
     "Prepared backlog too low: 0 unused < 9"
   ]
 }
