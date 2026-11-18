@@ -4,20 +4,21 @@
   "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
   "evidence": {
     "auditFile": "analytics/dmm-x-live-audit.json",
-    "auditCheckedAt": "2026-11-18T02:56:32.938Z",
+    "auditCheckedAt": "2026-11-18T10:45:44.514Z",
     "account": "ero_mimimimi",
     "channelId": "67be5e543b85969eafdb14d7",
     "postingStateFile": "automation/dmm-x/state.json",
     "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
     "inventoryComplete": false,
     "firstRecordedAuditCheckedAt": "2026-11-14T01:28:37.961Z",
-    "auditUpdatedAt": "2026-11-18T02:56:35.862Z",
+    "auditUpdatedAt": "2026-11-18T10:45:49.234Z",
     "metricsCoverage": "complete",
     "samplePosts": 40,
     "bufferReadMethod": "GitHub-saved automated read-only Buffer audit; exact-ID status/copy check and cancellation performed separately by private one-shot workflow; no repeated 40-post audit",
     "cancellationEvidence": "sena-auto-post/analytics/dmm-policy-cancel-result.json",
     "latestActionResult": "sena-auto-post/analytics/dmm-policy-hold-2026-11-18-result.json",
-    "latestActionCommit": "4135816050b3847415931abfaffdd4843f59d80c"
+    "latestActionCommit": "4135816050b3847415931abfaffdd4843f59d80c",
+    "latestAuditBlobSha": "8ef02c91c135f11fd7e8feab671fec45dc3fa822"
   },
   "policyHold": "Public GitHub DMM commercial runner stays disabled (manual dispatch only; job if:false). X Paid Partnerships Policy explicitly includes affiliate commissions and excludes adult and sexual products or entertainment. The unclassified Buffer posts/queue cannot be attributed to that disabled runner.",
   "unclassifiedSentPosts": [
@@ -149,7 +150,7 @@
   "nonStateScheduledPosts": [],
   "numberNonStateScheduled": 0,
   "policyReference": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
-  "lastReviewedAt": "2026-11-18T03:52:02.704Z",
+  "lastReviewedAt": "2026-11-19T00:44:10+09:00",
   "canceledScheduledAffiliatePosts": [
     {
       "bufferPostId": "6af9d4d1548fa9bf5981608d",
@@ -197,8 +198,27 @@
     }
   ],
   "numberCanceledScheduledAffiliate": 2,
-  "otherActiveScheduledPosts": [],
-  "numberOtherActiveScheduled": 0,
+  "otherActiveScheduledPosts": [
+    {
+      "bufferPostId": "6afd2fc3c3ee3d22a9332ef4",
+      "dueAt": "2026-11-19T03:30:00.000Z",
+      "dueAtJst": "2026-11-19 12:30",
+      "observedInAccount": "ero_mimimimi",
+      "classification": "unclassified_cross_brand_note_links",
+      "origin": "unverified",
+      "textAsObserved": "MIO・SENAのフォトブック新刊2冊、どちらも¥500・無料サンプルあり。SENA初フォトブック全22枚 https://note.com/sena_ai_studio/n/ne4535d380cf7 ／ MIO Vol.04 全25枚 https://note.com/mio_ai_life_jp/n/nced715223616",
+      "hasDmmAffiliateUrl": false,
+      "bufferHasAffiliateUrlFlag": true,
+      "bufferFlagCaveat": "Audit labels non-DMM note.com URLs as hasAffiliateUrl=true; this is not proof of DMM affiliate attribution.",
+      "p0ChecksPass": false,
+      "p0Status": "historical_completed_unaffected",
+      "status": "present_in_saved_readback_not_live_reconfirmed",
+      "asOf": "2026-11-18T10:45:44.514Z",
+      "action": "no_post_mutation_no_new_booking",
+      "source": "analytics/dmm-x-live-audit.json"
+    }
+  ],
+  "numberOtherActiveScheduled": 1,
   "policyStatus": "adult-affiliate-commercial-runner-held; 2 newly detected Nov 18 adult-affiliate reservations canceled by exact ID; previous Nov 17 three cancellations preserved; no replacements",
   "lastReconciliation": {
     "checkedAt": "2026-11-16T21:53:13.585Z",
@@ -229,24 +249,19 @@
     "ctrPct": 0.76
   },
   "latestComparedToPriorAudit": {
-    "priorCheckedAt": "2026-11-17T03:13:11.706Z",
-    "currentCheckedAt": "2026-11-18T02:56:32.938Z",
+    "priorCheckedAt": "2026-11-18T02:56:32.938Z",
+    "currentCheckedAt": "2026-11-18T10:45:44.514Z",
     "comparablePosts": 40,
     "addedPosts": 0,
     "removedPosts": 0,
-    "overallImpressionsDelta": 20,
+    "overallImpressionsDelta": 0,
     "overallClicksDelta": 0,
     "affiliateImpressionsDelta": 0,
     "affiliateClicksDelta": 0,
-    "unclassifiedImpressionsDelta": 20,
+    "unclassifiedImpressionsDelta": 0,
     "unclassifiedClicksDelta": 0,
-    "changedPostIds": [
-      "6afa33c03b1fb8347bfc185d",
-      "6afa339f5082c0719d072fd3",
-      "6af8307f76df677fd0fcb1b4",
-      "6af797d650d4db00bba9964e"
-    ],
-    "note": "40 IDs match the previous saved sample. Newly observed reach is from unclassified sent posts only; does not imply DMM conversions. Affiliate 813 impressions and 7 Buffer clicks unchanged."
+    "changedPostIds": [],
+    "note": "Metrics unchanged across all 40 matched IDs; newly observed scheduled note cross-promotion is separate from affiliate performance and has unverified origin."
   },
   "canceledMisleadingPromotionalPosts": [
     {
@@ -267,13 +282,17 @@
   "numberCanceledMisleadingPromotionalPosts": 1,
   "guardFollowUp": "P0 character-count and generic-fallback checks remain completed. Separate future enhancement: compare relative words (today/tomorrow) and campaign/price claims against each post's actual dueAt JST; require independently verified price validity. This is a content correctness issue, not evidence for discovery CTA optimization.",
   "latestReadOnlyReconciliation": {
-    "auditCheckedAt": "2026-11-18T02:56:32.938Z",
-    "auditBlobSha": "c5be401387939e74834c2a0b8c4ca75d5b3352a1",
-    "previousTrackedAuditCheckedAt": "2026-11-17T03:13:11.706Z",
+    "auditCheckedAt": "2026-11-18T10:45:44.514Z",
+    "auditBlobSha": "8ef02c91c135f11fd7e8feab671fec45dc3fa822",
+    "previousTrackedAuditCheckedAt": "2026-11-18T02:56:32.938Z",
     "sharedPosts": 40,
+    "addedPosts": 0,
+    "removedPosts": 0,
+    "metricChangedPosts": 0,
     "unclassifiedCount": 8,
+    "activeScheduledObserved": 1,
+    "brandMismatch": "MIO/SENA note cross-promotion queued in DMM X account; origin unverified",
     "bufferApiRequeriedForFullAudit": false,
-    "exactIdReadAndCancelInPrivateWorkflow": true,
     "bookingCreated": false,
     "bookingModified": false,
     "completedP0Preserved": true,
