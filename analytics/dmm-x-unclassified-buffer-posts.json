@@ -4,31 +4,85 @@
   "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
   "evidence": {
     "auditFile": "analytics/dmm-x-live-audit.json",
-    "auditCheckedAt": "2026-11-19T02:37:32.745Z",
+    "auditCheckedAt": "2026-11-19T17:38:37.150Z",
     "account": "ero_mimimimi",
     "channelId": "67be5e543b85969eafdb14d7",
     "postingStateFile": "automation/dmm-x/state.json",
     "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
     "inventoryComplete": false,
     "firstRecordedAuditCheckedAt": "2026-11-14T01:28:37.961Z",
-    "auditUpdatedAt": "2026-11-19T02:37:37.159Z",
+    "auditUpdatedAt": "2026-11-19T17:38:40.131Z",
     "metricsCoverage": "complete",
     "samplePosts": 40,
     "bufferReadMethod": "GitHub-saved automated read-only Buffer audit; exact-ID status/copy check and cancellation performed separately by private one-shot workflow; no repeated 40-post audit",
     "cancellationEvidence": "sena-auto-post/analytics/dmm-policy-cancel-result.json",
     "latestActionResult": "sena-auto-post/analytics/dmm-policy-hold-2026-11-18-result.json",
     "latestActionCommit": "4135816050b3847415931abfaffdd4843f59d80c",
-    "latestAuditBlobSha": "2dcebb001d2a5aee3389432ad8f9a8232046262a",
+    "latestAuditBlobSha": "c269fa17993f05a09a17839adbe7d66ad1fccf36",
     "latestAuditCommit": "e2f28e72f43b53c05780d9e119a63e3104d8258b"
   },
   "policyHold": "Public GitHub DMM commercial runner stays disabled (manual dispatch only; job if:false). X Paid Partnerships Policy explicitly includes affiliate commissions and excludes adult and sexual products or entertainment. The unclassified Buffer posts/queue cannot be attributed to that disabled runner.",
   "unclassifiedSentPosts": [
     {
-      "bufferPostId": "6afd88950046e888b498cd21",
-      "sentAt": "2026-11-18T12:30:25.122Z",
-      "xUrl": "https://x.com/1647584462233010176/status/2123031064872370602",
+      "bufferPostId": "6aff0b5fa4f319b98de06d87",
+      "sentAt": "2026-11-19T14:44:37.000Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123427229736849636",
+      "metricsUpdatedAt": "2026-11-19T14:45:00.738Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "commentsAtSnapshot": 0,
+      "repostsAtSnapshot": 0,
+      "latestSnapshotCheckedAt": "2026-11-19T17:38:37.150Z",
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false,
+      "postTextVerified": false,
+      "scheduledByVerified": false,
+      "observation": "New sent post outside fixed JST slots (23:44); posting source and content not verified"
+    },
+    {
+      "bufferPostId": "6afed8170c8cd932bc958a00",
+      "sentAt": "2026-11-19T14:30:36.942Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123423702746353991",
+      "metricsUpdatedAt": "2026-11-19T14:30:45.940Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "commentsAtSnapshot": 0,
+      "repostsAtSnapshot": 0,
+      "latestSnapshotCheckedAt": "2026-11-19T17:38:37.150Z",
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false,
+      "postTextVerified": false,
+      "scheduledByVerified": false,
+      "observation": "New sent post at fixed JST slot; creation path and content not verified"
+    },
+    {
+      "bufferPostId": "6afed7e290382f73c63bb320",
+      "sentAt": "2026-11-19T12:30:20.734Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123393433666539875",
+      "metricsUpdatedAt": "2026-11-19T12:30:29.985Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "commentsAtSnapshot": 0,
+      "repostsAtSnapshot": 0,
+      "latestSnapshotCheckedAt": "2026-11-19T17:38:37.150Z",
+      "classification": "unknown",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false,
+      "postTextVerified": false,
+      "scheduledByVerified": false,
+      "observation": "New sent post at fixed JST slot; creation path and content not verified"
+    },
+    {
+      "bufferPostId": "6afd885a8847fb828247a532",
+      "sentAt": "2026-11-18T14:30:52.196Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123061378399273260",
       "metricsUpdatedAt": "2026-11-19T00:17:50.716Z",
-      "impressionsAtSnapshot": 11,
+      "impressionsAtSnapshot": 6,
       "clicksAtSnapshot": 0,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
@@ -42,11 +96,11 @@
       "observation": "Newly observed sent record matching fixed 21:30/23:30 JST slot, after separate previously canceled IDs; content and creation source not established"
     },
     {
-      "bufferPostId": "6afd885a8847fb828247a532",
-      "sentAt": "2026-11-18T14:30:52.196Z",
-      "xUrl": "https://x.com/1647584462233010176/status/2123061378399273260",
+      "bufferPostId": "6afd88950046e888b498cd21",
+      "sentAt": "2026-11-18T12:30:25.122Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123031064872370602",
       "metricsUpdatedAt": "2026-11-19T00:17:50.716Z",
-      "impressionsAtSnapshot": 6,
+      "impressionsAtSnapshot": 11,
       "clicksAtSnapshot": 0,
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
@@ -180,14 +234,14 @@
       "latestSnapshotCheckedAt": "2026-11-19T02:37:32.745Z"
     }
   ],
-  "numberUnclassified": 10,
-  "note": "Latest saved Buffer audit 2026-11-19T02:37:32.745Z sampled the same 40 IDs as previous: 1171 impressions / 9 clicks (plus 28 impressions / 0 clicks); affiliate 20 posts unchanged at 766 impressions / 7 clicks. Unclassified 10 posts: 219 impressions / 2 clicks, not DMM revenue. The cross-brand MIO/SENA Nov 19 12:30 promotion was canceled by exact ID with separate absent readback. Nov 18 21:30/23:30 sent-post creation sources/text remain unknown. Buffer inventory is incomplete; P0 remains completed; no publishing or rescheduling is authorized by this record.",
-  "resolution": "Maintain policy hold; do not backfill past slots or recreate canceled posts. The known Nov 19 cross-brand booking was removed (verified). Investigate Nov 18 21:30/23:30 unknown sent posts via exact IDs and source-state only, avoid repeated 40-post Buffer reads. Keep all MIO/SENA accounts and campaigns unchanged. New performance comparisons require matched samples/provider metricsUpdatedAt.",
+  "numberUnclassified": 13,
+  "note": "Latest saved read-only Buffer audit checked 2026-11-20 02:38 JST: 40 sampled, 1096 impressions, 9 clicks, 18 affiliate posts with 716 impressions/7 clicks. Compared with Nov 19 11:37 JST: 37 identical shared-post metrics; 3 old 25-impression posts rotated out; three new unknown sent-post IDs rotated in, two aligned to 21:30/23:30 and one extra at 23:44 JST. No official DMM revenue update or evidence of format uplift.",
+  "resolution": "Maintain adult-affiliate policy hold. Do not refill or recreate posts. Investigate 3 new Nov 19 sent IDs via exact-ID copy/source readback when permitted, especially the extra 23:44 JST post, while preserving the previously unresolved Nov 18 IDs. Inventory is incomplete; no live future vacancy confirmed. P0 remains complete.",
   "p0Status": "completed-and-unchanged",
   "nonStateScheduledPosts": [],
   "numberNonStateScheduled": 0,
   "policyReference": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
-  "lastReviewedAt": "2026-11-19T03:49:47.693Z",
+  "lastReviewedAt": "2026-11-19T21:45:56.200Z",
   "canceledScheduledAffiliatePosts": [
     {
       "bufferPostId": "6af9d4d1548fa9bf5981608d",
@@ -277,16 +331,16 @@
     "publicGitHubStatusWrite": true
   },
   "latestUnclassifiedMetrics": {
-    "posts": 10,
+    "posts": 13,
     "impressions": 219,
     "clicks": 2,
     "comments": 3,
     "reposts": 1,
-    "sourceAuditCheckedAt": "2026-11-19T02:37:32.745Z"
+    "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
   },
   "latestAuditOverallMetrics": {
     "posts": 40,
-    "impressions": 1171,
+    "impressions": 1096,
     "clicks": 9,
     "reactions": 2,
     "comments": 3,
@@ -298,46 +352,49 @@
       "comments": 40,
       "reposts": 40
     },
-    "ctrPct": 0.77,
+    "ctrPct": 0.82,
     "affiliate": {
-      "posts": 20,
-      "impressions": 766,
+      "posts": 18,
+      "impressions": 716,
       "clicks": 7,
       "reactions": 2,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 20,
-        "clicks": 20,
-        "reactions": 20,
-        "comments": 20,
-        "reposts": 20
+        "impressions": 18,
+        "clicks": 18,
+        "reactions": 18,
+        "comments": 18,
+        "reposts": 18
       },
-      "ctrPct": 0.91
+      "ctrPct": 0.98
     },
-    "sourceAuditCheckedAt": "2026-11-19T02:37:32.745Z"
+    "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
   },
   "latestComparedToPriorAudit": {
-    "priorCheckedAt": "2026-11-18T17:34:04.875Z",
-    "currentCheckedAt": "2026-11-19T02:37:32.745Z",
-    "comparablePosts": 40,
-    "addedPosts": 0,
-    "removedPosts": 0,
-    "changedPostIds": [
-      "6afd885a8847fb828247a532",
-      "6afd88950046e888b498cd21",
-      "6afa33c03b1fb8347bfc185d",
-      "6afa339f5082c0719d072fd3",
-      "6af8307f76df677fd0fcb1b4",
-      "6af797d650d4db00bba9964e"
+    "priorCheckedAt": "2026-11-19T02:37:32.745Z",
+    "currentCheckedAt": "2026-11-19T17:38:37.150Z",
+    "comparablePosts": 37,
+    "addedPosts": 3,
+    "removedPosts": 3,
+    "addedPostIds": [
+      "6aff0b5fa4f319b98de06d87",
+      "6afed8170c8cd932bc958a00",
+      "6afed7e290382f73c63bb320"
     ],
-    "sharedPostImpressionsDelta": 28,
+    "removedPostIds": [
+      "6ad2ada5c34368e4b099b9cd",
+      "6ad2ada21694d771d50e4ab0",
+      "6ad2ada01c7e49ea4c2a277d"
+    ],
+    "changedPostIds": [],
+    "sharedPostImpressionsDelta": 0,
     "sharedPostClicksDelta": 0,
-    "overallImpressionsDelta": 28,
+    "overallImpressionsDelta": -75,
     "overallClicksDelta": 0,
-    "affiliateImpressionsDelta": 0,
+    "affiliateImpressionsDelta": -50,
     "affiliateClicksDelta": 0,
-    "note": "Same 40 Buffer IDs as previous audit. Six unclassified post impressions rose by 28 in total, with no additional click; affiliate 20 posts unchanged. No sample rotation in this pair."
+    "note": "40-post sliding sample rotated by 3 posts; 3 older posts (75 impressions, zero clicks) left, 3 new unclassified posts (zero impressions and clicks at provider timestamp) entered. For 37 matched IDs, no metric changes. Sample-level decrease is not an actual account-level decline."
   },
   "canceledMisleadingPromotionalPosts": [
     {
@@ -358,14 +415,14 @@
   "numberCanceledMisleadingPromotionalPosts": 1,
   "guardFollowUp": "P0 character-count and generic-fallback checks remain completed. Separate future enhancement: compare relative words (today/tomorrow) and campaign/price claims against each post's actual dueAt JST; require independently verified price validity. This is a content correctness issue, not evidence for discovery CTA optimization.",
   "latestReadOnlyReconciliation": {
-    "auditCheckedAt": "2026-11-19T02:37:32.745Z",
-    "auditBlobSha": "2dcebb001d2a5aee3389432ad8f9a8232046262a",
-    "previousTrackedAuditCheckedAt": "2026-11-18T17:34:04.875Z",
-    "sharedPosts": 40,
-    "addedPosts": 0,
-    "removedPosts": 0,
-    "metricChangedPosts": 6,
-    "unclassifiedCount": 10,
+    "auditCheckedAt": "2026-11-19T17:38:37.150Z",
+    "auditBlobSha": "c269fa17993f05a09a17839adbe7d66ad1fccf36",
+    "previousTrackedAuditCheckedAt": "2026-11-19T02:37:32.745Z",
+    "sharedPosts": 37,
+    "addedPosts": 3,
+    "removedPosts": 3,
+    "metricChangedPosts": 0,
+    "unclassifiedCount": 13,
     "unclassifiedImpressions": 219,
     "unclassifiedClicks": 2,
     "activeScheduledObserved": 0,
@@ -379,7 +436,30 @@
     "bookingModified": false,
     "completedP0Preserved": true,
     "mutatedGitHubFileOnly": "analytics/dmm-x-unclassified-buffer-posts.json",
-    "decision": "policy hold maintained; no refill; unknown Nov 18 posts require exact text/source classification"
+    "decision": "Policy hold; no backfill. Classify fresh 21:30/23:30 and extra 23:44 sent posts by exact ID if available; source remains unverified. Full Buffer inventory incomplete.",
+    "addedSentPosts": [
+      {
+        "bufferPostId": "6aff0b5fa4f319b98de06d87",
+        "sentAt": "2026-11-19T14:44:37.000Z",
+        "kind": null,
+        "externalLink": "https://x.com/1647584462233010176/status/2123427229736849636",
+        "metricsUpdatedAt": "2026-11-19T14:45:00.738Z"
+      },
+      {
+        "bufferPostId": "6afed8170c8cd932bc958a00",
+        "sentAt": "2026-11-19T14:30:36.942Z",
+        "kind": null,
+        "externalLink": "https://x.com/1647584462233010176/status/2123423702746353991",
+        "metricsUpdatedAt": "2026-11-19T14:30:45.940Z"
+      },
+      {
+        "bufferPostId": "6afed7e290382f73c63bb320",
+        "sentAt": "2026-11-19T12:30:20.734Z",
+        "kind": null,
+        "externalLink": "https://x.com/1647584462233010176/status/2123393433666539875",
+        "metricsUpdatedAt": "2026-11-19T12:30:29.985Z"
+      }
+    ]
   },
   "latestPolicyHold": {
     "sourceAuditCheckedAt": "2026-11-18T02:56:32.938Z",
@@ -460,5 +540,46 @@
     "sourceRepo": "innovation4131210-alt/sena-auto-post",
     "resultPath": "analytics/dmm-cross-brand-hold-2026-11-19-result.json",
     "readbackPath": "analytics/dmm-cross-brand-hold-2026-11-19-readback.json"
-  }
+  },
+  "newlyObservedSentSinceLastAudit": [
+    {
+      "bufferPostId": "6aff0b5fa4f319b98de06d87",
+      "sentAt": "2026-11-19T14:44:37.000Z",
+      "slotJst": "23:44",
+      "xUrl": "https://x.com/1647584462233010176/status/2123427229736849636",
+      "impressions": 0,
+      "clicks": 0,
+      "metricsUpdatedAt": "2026-11-19T14:45:00.738Z",
+      "textNotReadBack": true,
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+    },
+    {
+      "bufferPostId": "6afed8170c8cd932bc958a00",
+      "sentAt": "2026-11-19T14:30:36.942Z",
+      "slotJst": "23:30",
+      "xUrl": "https://x.com/1647584462233010176/status/2123423702746353991",
+      "impressions": 0,
+      "clicks": 0,
+      "metricsUpdatedAt": "2026-11-19T14:30:45.940Z",
+      "textNotReadBack": true,
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+    },
+    {
+      "bufferPostId": "6afed7e290382f73c63bb320",
+      "sentAt": "2026-11-19T12:30:20.734Z",
+      "slotJst": "21:30",
+      "xUrl": "https://x.com/1647584462233010176/status/2123393433666539875",
+      "impressions": 0,
+      "clicks": 0,
+      "metricsUpdatedAt": "2026-11-19T12:30:29.985Z",
+      "textNotReadBack": true,
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+    }
+  ]
 }
