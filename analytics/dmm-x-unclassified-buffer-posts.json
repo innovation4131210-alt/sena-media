@@ -24,6 +24,44 @@
   "policyHold": "Public GitHub DMM commercial runner stays disabled (manual dispatch only; job if:false). X Paid Partnerships Policy explicitly includes affiliate commissions and excludes adult and sexual products or entertainment. The unclassified Buffer posts/queue cannot be attributed to that disabled runner.",
   "unclassifiedSentPosts": [
     {
+      "bufferPostId": "6b00294f5b64b577ebb43e66",
+      "sentAt": "2026-11-20T12:30:08.658Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123755771422802167",
+      "metricsUpdatedAt": "2026-11-20T12:30:17.192Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "commentsAtSnapshot": 0,
+      "repostsAtSnapshot": 0,
+      "latestSnapshotCheckedAt": "2026-11-20T17:16:57.704Z",
+      "classification": "unknown_new_sent_post",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false,
+      "postTextVerified": false,
+      "scheduledByVerified": false,
+      "observation": "Published near 21:30 JST, matching a fixed clock slot; Buffer dueAt, copy and producer not individually verified. No Buffer mutation.",
+      "lastObservedAt": "2026-11-20T17:16:57.704Z"
+    },
+    {
+      "bufferPostId": "6b002978725e9353230a471b",
+      "sentAt": "2026-11-20T14:30:50.888Z",
+      "xUrl": "https://x.com/1647584462233010176/status/2123786149474770981",
+      "metricsUpdatedAt": "2026-11-20T14:30:59.935Z",
+      "impressionsAtSnapshot": 0,
+      "clicksAtSnapshot": 0,
+      "commentsAtSnapshot": 0,
+      "repostsAtSnapshot": 0,
+      "latestSnapshotCheckedAt": "2026-11-20T17:16:57.704Z",
+      "classification": "unknown_new_sent_post",
+      "origin": "unverified",
+      "affiliateAttribution": "unverified",
+      "recordedInPostingState": false,
+      "postTextVerified": false,
+      "scheduledByVerified": false,
+      "observation": "Published near 23:30 JST, matching a fixed clock slot; Buffer dueAt, copy and producer not individually verified. No Buffer mutation.",
+      "lastObservedAt": "2026-11-20T17:16:57.704Z"
+    },
+    {
       "bufferPostId": "6affb69a0239907c31bc5ab9",
       "sentAt": "2026-11-20T03:30:22.294Z",
       "xUrl": "https://x.com/1647584462233010176/status/2123619934886392062",
@@ -293,14 +331,14 @@
       "latestSnapshotCheckedAt": "2026-11-19T02:37:32.745Z"
     }
   ],
-  "numberUnclassified": 14,
+  "numberUnclassified": 16,
   "note": "Latest saved read-only Buffer audit checked 2026-11-20 02:38 JST: 40 sampled, 1096 impressions, 9 clicks, 18 affiliate posts with 716 impressions/7 clicks. Compared with Nov 19 11:37 JST: 37 identical shared-post metrics; 3 old 25-impression posts rotated out; three new unknown sent-post IDs rotated in, two aligned to 21:30/23:30 and one extra at 23:44 JST. No official DMM revenue update or evidence of format uplift.",
   "resolution": "Maintain adult-affiliate policy hold. Do not refill or recreate posts. Investigate 3 new Nov 19 sent IDs via exact-ID copy/source readback when permitted, especially the extra 23:44 JST post, while preserving the previously unresolved Nov 18 IDs. Inventory is incomplete; no live future vacancy confirmed. P0 remains complete.",
   "p0Status": "completed-and-unchanged",
   "nonStateScheduledPosts": [],
   "numberNonStateScheduled": 0,
   "policyReference": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
-  "lastReviewedAt": "2026-11-20T15:49:17.647Z",
+  "lastReviewedAt": "2026-11-20T17:16:57.704Z",
   "canceledScheduledAffiliatePosts": [
     {
       "bufferPostId": "6af9d4d1548fa9bf5981608d",
@@ -390,16 +428,16 @@
     "publicGitHubStatusWrite": true
   },
   "latestUnclassifiedMetrics": {
-    "posts": 14,
+    "posts": 16,
     "impressions": 316,
     "clicks": 4,
     "comments": 3,
     "reposts": 1,
-    "sourceAuditCheckedAt": "2026-11-20T10:33:31.291Z"
+    "sourceAuditCheckedAt": "2026-11-20T17:16:57.704Z"
   },
   "latestAuditOverallMetrics": {
     "posts": 40,
-    "impressions": 1185,
+    "impressions": 1119,
     "clicks": 11,
     "reactions": 2,
     "comments": 3,
@@ -411,49 +449,47 @@
       "comments": 40,
       "reposts": 40
     },
-    "ctrPct": 0.93,
+    "ctrPct": 0.98,
     "affiliate": {
-      "posts": 18,
-      "impressions": 716,
+      "posts": 16,
+      "impressions": 650,
       "clicks": 7,
       "reactions": 2,
       "comments": 0,
       "reposts": 0,
       "metricCoverage": {
-        "impressions": 18,
-        "clicks": 18,
-        "reactions": 18,
-        "comments": 18,
-        "reposts": 18
+        "impressions": 16,
+        "clicks": 16,
+        "reactions": 16,
+        "comments": 16,
+        "reposts": 16
       },
-      "ctrPct": 0.98
+      "ctrPct": 1.08
     },
-    "sourceAuditCheckedAt": "2026-11-20T10:33:31.291Z"
+    "sourceAuditCheckedAt": "2026-11-20T17:16:57.704Z"
   },
   "latestComparedToPriorAudit": {
-    "priorCheckedAt": "2026-11-19T02:37:32.745Z",
-    "currentCheckedAt": "2026-11-19T17:38:37.150Z",
-    "comparablePosts": 37,
-    "addedPosts": 3,
-    "removedPosts": 3,
+    "priorCheckedAt": "2026-11-20T10:33:31.291Z",
+    "currentCheckedAt": "2026-11-20T17:16:57.704Z",
+    "comparablePosts": 38,
+    "addedPosts": 2,
+    "removedPosts": 2,
     "addedPostIds": [
-      "6aff0b5fa4f319b98de06d87",
-      "6afed8170c8cd932bc958a00",
-      "6afed7e290382f73c63bb320"
+      "6b002978725e9353230a471b",
+      "6b00294f5b64b577ebb43e66"
     ],
     "removedPostIds": [
-      "6ad2ada5c34368e4b099b9cd",
-      "6ad2ada21694d771d50e4ab0",
-      "6ad2ada01c7e49ea4c2a277d"
+      "6ad400ae0b0d72757af9ee61",
+      "6ad400ac0b0d72757af9ee11"
     ],
     "changedPostIds": [],
     "sharedPostImpressionsDelta": 0,
     "sharedPostClicksDelta": 0,
-    "overallImpressionsDelta": -75,
+    "overallImpressionsDelta": -66,
     "overallClicksDelta": 0,
-    "affiliateImpressionsDelta": -50,
+    "affiliateImpressionsDelta": -66,
     "affiliateClicksDelta": 0,
-    "note": "40-post sliding sample rotated by 3 posts; 3 older posts (75 impressions, zero clicks) left, 3 new unclassified posts (zero impressions and clicks at provider timestamp) entered. For 37 matched IDs, no metric changes. Sample-level decrease is not an actual account-level decline."
+    "note": "40-post rolling sample replaced two older affiliate posts (66 impressions, zero clicks) with two newly sent unclassified posts (zero impressions and clicks at initial provider timestamp). All 38 common post IDs had unchanged impressions and clicks. Sample decrease is not evidence of actual total loss or conversion change."
   },
   "canceledMisleadingPromotionalPosts": [
     {
@@ -602,43 +638,32 @@
   },
   "newlyObservedSentSinceLastAudit": [
     {
-      "bufferPostId": "6aff0b5fa4f319b98de06d87",
-      "sentAt": "2026-11-19T14:44:37.000Z",
-      "slotJst": "23:44",
-      "xUrl": "https://x.com/1647584462233010176/status/2123427229736849636",
-      "impressions": 0,
-      "clicks": 0,
-      "metricsUpdatedAt": "2026-11-19T14:45:00.738Z",
-      "textNotReadBack": true,
-      "origin": "unverified",
-      "affiliateAttribution": "unverified",
-      "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
-    },
-    {
-      "bufferPostId": "6afed8170c8cd932bc958a00",
-      "sentAt": "2026-11-19T14:30:36.942Z",
+      "bufferPostId": "6b002978725e9353230a471b",
+      "sentAt": "2026-11-20T14:30:50.888Z",
       "slotJst": "23:30",
-      "xUrl": "https://x.com/1647584462233010176/status/2123423702746353991",
+      "xUrl": "https://x.com/1647584462233010176/status/2123786149474770981",
       "impressions": 0,
       "clicks": 0,
-      "metricsUpdatedAt": "2026-11-19T14:30:45.940Z",
+      "metricsUpdatedAt": "2026-11-20T14:30:59.935Z",
       "textNotReadBack": true,
+      "dueAtNotReadBack": true,
       "origin": "unverified",
       "affiliateAttribution": "unverified",
-      "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+      "sourceAuditCheckedAt": "2026-11-20T17:16:57.704Z"
     },
     {
-      "bufferPostId": "6afed7e290382f73c63bb320",
-      "sentAt": "2026-11-19T12:30:20.734Z",
+      "bufferPostId": "6b00294f5b64b577ebb43e66",
+      "sentAt": "2026-11-20T12:30:08.658Z",
       "slotJst": "21:30",
-      "xUrl": "https://x.com/1647584462233010176/status/2123393433666539875",
+      "xUrl": "https://x.com/1647584462233010176/status/2123755771422802167",
       "impressions": 0,
       "clicks": 0,
-      "metricsUpdatedAt": "2026-11-19T12:30:29.985Z",
+      "metricsUpdatedAt": "2026-11-20T12:30:17.192Z",
       "textNotReadBack": true,
+      "dueAtNotReadBack": true,
       "origin": "unverified",
       "affiliateAttribution": "unverified",
-      "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+      "sourceAuditCheckedAt": "2026-11-20T17:16:57.704Z"
     }
   ],
   "latestSameIdMetricsComparison": {
@@ -764,21 +789,28 @@
     "decision": "All five posted bodies are now exact-ID confirmed. Four are promotional; three contain direct FANZA affiliate links and one contains unresolved buff.ly URL. The 23:44 post is an unlinked promotional introduction. No new scheduling, repost, retry, cancellation or content optimization pending resolution of producer route and X paid-partnership policy."
   },
   "latestSavedAuditReconciliation": {
-    "auditCheckedAt": "2026-11-20T10:33:31.291Z",
-    "sourceAuditBlobSha": "affa75e8c11d5b289b0590bd20092164e8dfbc26",
-    "previousSavedAuditCheckedAt": "2026-11-20T02:22:35.635Z",
-    "previous40PostSampleImpressions": 1193,
-    "current40PostSampleImpressions": 1185,
+    "auditCheckedAt": "2026-11-20T17:16:57.704Z",
+    "sourceAuditBlobSha": "6935ca11147653b9ca63eb57793c03e5090c961d",
+    "previousSavedAuditCheckedAt": "2026-11-20T10:33:31.291Z",
+    "previous40PostSampleImpressions": 1185,
+    "current40PostSampleImpressions": 1119,
     "current40PostSampleClicks": 11,
+    "matchedPostCount": 38,
+    "matchedPostImpressionsDelta": 0,
+    "matchedPostClicksDelta": 0,
     "newUnclassifiedSentPostIds": [
-      "6affb69a0239907c31bc5ab9"
+      "6b002978725e9353230a471b",
+      "6b00294f5b64b577ebb43e66"
     ],
     "unknownPostTextVerified": false,
+    "unknownPostDueAtVerified": false,
     "historyCoverageComplete": false,
     "bookingAction": "none",
     "pastSlotRecovery": "none",
     "mioSenaChanged": false,
     "p0CompletedUnchanged": true,
-    "comparisonCaveat": "40-post rolling sample may rotate; do not infer account-level impression decline or new DMM conversions."
+    "postingPolicyHoldStillActive": true,
+    "producerUnverified": true,
+    "comparisonCaveat": "40-post sample shifted by 2 IDs; 66-impression drop was from posts leaving the sample; no new DMM conversions can be inferred. Full future Buffer inventory remains incomplete."
   }
 }
