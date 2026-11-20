@@ -4,21 +4,21 @@
   "purpose": "Persist non-attributed sent-post observations from the read-only Buffer audit without labeling them as DMM affiliate, changing posting state, or querying Buffer again.",
   "evidence": {
     "auditFile": "analytics/dmm-x-live-audit.json",
-    "auditCheckedAt": "2026-11-19T17:38:37.150Z",
+    "auditCheckedAt": "2026-11-20T02:22:35.635Z",
     "account": "ero_mimimimi",
     "channelId": "67be5e543b85969eafdb14d7",
     "postingStateFile": "automation/dmm-x/state.json",
     "postingStateLastDueAt": "2026-10-26T14:30:00.000Z",
     "inventoryComplete": false,
     "firstRecordedAuditCheckedAt": "2026-11-14T01:28:37.961Z",
-    "auditUpdatedAt": "2026-11-19T17:38:40.131Z",
+    "auditUpdatedAt": "2026-11-20T02:22:39.093Z",
     "metricsCoverage": "complete",
     "samplePosts": 40,
     "bufferReadMethod": "GitHub-saved automated read-only Buffer audit; exact-ID status/copy check and cancellation performed separately by private one-shot workflow; no repeated 40-post audit",
     "cancellationEvidence": "sena-auto-post/analytics/dmm-policy-cancel-result.json",
     "latestActionResult": "sena-auto-post/analytics/dmm-policy-hold-2026-11-18-result.json",
     "latestActionCommit": "4135816050b3847415931abfaffdd4843f59d80c",
-    "latestAuditBlobSha": "c269fa17993f05a09a17839adbe7d66ad1fccf36",
+    "latestAuditBlobSha": "31a08b4a46242803671cbdcf3d8ddc91ec350619",
     "latestAuditCommit": "e2f28e72f43b53c05780d9e119a63e3104d8258b"
   },
   "policyHold": "Public GitHub DMM commercial runner stays disabled (manual dispatch only; job if:false). X Paid Partnerships Policy explicitly includes affiliate commissions and excludes adult and sexual products or entertainment. The unclassified Buffer posts/queue cannot be attributed to that disabled runner.",
@@ -33,13 +33,21 @@
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
       "latestSnapshotCheckedAt": "2026-11-19T17:38:37.150Z",
-      "classification": "unknown",
+      "classification": "no_link_intro_post",
       "origin": "unverified",
       "affiliateAttribution": "unverified",
       "recordedInPostingState": false,
-      "postTextVerified": false,
+      "postTextVerified": true,
       "scheduledByVerified": false,
-      "observation": "New sent post outside fixed JST slots (23:44); posting source and content not verified"
+      "observation": "New sent post outside fixed JST slots (23:44); posting source and content not verified",
+      "lastExactReadbackAt": "2026-11-19T23:14:00.856Z",
+      "latestMetrics": {
+        "impressions": 16,
+        "clicks": 0,
+        "comments": 0,
+        "reposts": 0,
+        "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+      }
     },
     {
       "bufferPostId": "6afed8170c8cd932bc958a00",
@@ -51,13 +59,21 @@
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
       "latestSnapshotCheckedAt": "2026-11-19T17:38:37.150Z",
-      "classification": "unknown",
+      "classification": "direct_fanza_affiliate_link_verified",
       "origin": "unverified",
-      "affiliateAttribution": "unverified",
+      "affiliateAttribution": "link_verified_conversion_unverified",
       "recordedInPostingState": false,
-      "postTextVerified": false,
+      "postTextVerified": true,
       "scheduledByVerified": false,
-      "observation": "New sent post at fixed JST slot; creation path and content not verified"
+      "observation": "New sent post at fixed JST slot; creation path and content not verified",
+      "lastExactReadbackAt": "2026-11-19T23:14:00.856Z",
+      "latestMetrics": {
+        "impressions": 17,
+        "clicks": 0,
+        "comments": 0,
+        "reposts": 0,
+        "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+      }
     },
     {
       "bufferPostId": "6afed7e290382f73c63bb320",
@@ -69,13 +85,21 @@
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
       "latestSnapshotCheckedAt": "2026-11-19T17:38:37.150Z",
-      "classification": "unknown",
+      "classification": "direct_fanza_affiliate_link_verified",
       "origin": "unverified",
-      "affiliateAttribution": "unverified",
+      "affiliateAttribution": "link_verified_conversion_unverified",
       "recordedInPostingState": false,
-      "postTextVerified": false,
+      "postTextVerified": true,
       "scheduledByVerified": false,
-      "observation": "New sent post at fixed JST slot; creation path and content not verified"
+      "observation": "New sent post at fixed JST slot; creation path and content not verified",
+      "lastExactReadbackAt": "2026-11-19T23:14:00.856Z",
+      "latestMetrics": {
+        "impressions": 38,
+        "clicks": 1,
+        "comments": 0,
+        "reposts": 0,
+        "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+      }
     },
     {
       "bufferPostId": "6afd885a8847fb828247a532",
@@ -87,13 +111,21 @@
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
       "latestSnapshotCheckedAt": "2026-11-19T02:37:32.745Z",
-      "classification": "unknown",
+      "classification": "direct_fanza_affiliate_link_verified",
       "origin": "unverified",
-      "affiliateAttribution": "unverified",
+      "affiliateAttribution": "link_verified_conversion_unverified",
       "recordedInPostingState": false,
-      "postTextVerified": false,
+      "postTextVerified": true,
       "scheduledByVerified": false,
-      "observation": "Newly observed sent record matching fixed 21:30/23:30 JST slot, after separate previously canceled IDs; content and creation source not established"
+      "observation": "Newly observed sent record matching fixed 21:30/23:30 JST slot, after separate previously canceled IDs; content and creation source not established",
+      "lastExactReadbackAt": "2026-11-19T23:14:00.856Z",
+      "latestMetrics": {
+        "impressions": 14,
+        "clicks": 0,
+        "comments": 0,
+        "reposts": 0,
+        "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+      }
     },
     {
       "bufferPostId": "6afd88950046e888b498cd21",
@@ -105,13 +137,21 @@
       "commentsAtSnapshot": 0,
       "repostsAtSnapshot": 0,
       "latestSnapshotCheckedAt": "2026-11-19T02:37:32.745Z",
-      "classification": "unknown",
+      "classification": "promotional_short_link_destination_unverified",
       "origin": "unverified",
       "affiliateAttribution": "unverified",
       "recordedInPostingState": false,
-      "postTextVerified": false,
+      "postTextVerified": true,
       "scheduledByVerified": false,
-      "observation": "Newly observed sent record matching fixed 21:30/23:30 JST slot, after separate previously canceled IDs; content and creation source not established"
+      "observation": "Newly observed sent record matching fixed 21:30/23:30 JST slot, after separate previously canceled IDs; content and creation source not established",
+      "lastExactReadbackAt": "2026-11-19T23:14:00.856Z",
+      "latestMetrics": {
+        "impressions": 21,
+        "clicks": 1,
+        "comments": 0,
+        "reposts": 0,
+        "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+      }
     },
     {
       "bufferPostId": "6afa33c03b1fb8347bfc185d",
@@ -241,7 +281,7 @@
   "nonStateScheduledPosts": [],
   "numberNonStateScheduled": 0,
   "policyReference": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
-  "lastReviewedAt": "2026-11-19T21:45:56.200Z",
+  "lastReviewedAt": "2026-11-19T23:14:00.856Z",
   "canceledScheduledAffiliatePosts": [
     {
       "bufferPostId": "6af9d4d1548fa9bf5981608d",
@@ -314,7 +354,7 @@
     }
   ],
   "numberOtherActiveScheduled": 0,
-  "policyStatus": "adult-affiliate-commercial-runner-held; 2 newly detected Nov 18 adult-affiliate reservations canceled by exact ID; previous Nov 17 three cancellations preserved; no replacements",
+  "policyStatus": "adult-commercial affiliate policy hold maintained; four commercial posts verified in Nov 18-19 exact-ID readback; content generator and scheduler source unverified; future booking/backfill blocked",
   "lastReconciliation": {
     "checkedAt": "2026-11-16T21:53:13.585Z",
     "liveAuditCheckedAt": "2026-11-16T18:55:18.544Z",
@@ -332,16 +372,16 @@
   },
   "latestUnclassifiedMetrics": {
     "posts": 13,
-    "impressions": 219,
-    "clicks": 2,
+    "impressions": 316,
+    "clicks": 4,
     "comments": 3,
     "reposts": 1,
-    "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+    "sourceAuditCheckedAt": "2026-11-20T02:22:35.635Z"
   },
   "latestAuditOverallMetrics": {
     "posts": 40,
-    "impressions": 1096,
-    "clicks": 9,
+    "impressions": 1193,
+    "clicks": 11,
     "reactions": 2,
     "comments": 3,
     "reposts": 1,
@@ -352,7 +392,7 @@
       "comments": 40,
       "reposts": 40
     },
-    "ctrPct": 0.82,
+    "ctrPct": 0.92,
     "affiliate": {
       "posts": 18,
       "impressions": 716,
@@ -369,7 +409,7 @@
       },
       "ctrPct": 0.98
     },
-    "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
+    "sourceAuditCheckedAt": "2026-11-20T02:22:35.635Z"
   },
   "latestComparedToPriorAudit": {
     "priorCheckedAt": "2026-11-19T02:37:32.745Z",
@@ -581,5 +621,127 @@
       "affiliateAttribution": "unverified",
       "sourceAuditCheckedAt": "2026-11-19T17:38:37.150Z"
     }
-  ]
+  ],
+  "latestSameIdMetricsComparison": {
+    "priorAuditCheckedAt": "2026-11-19T17:38:37.150Z",
+    "currentAuditCheckedAt": "2026-11-20T02:22:35.635Z",
+    "sharedPostCount": 40,
+    "newPostCount": 0,
+    "removedPostCount": 0,
+    "impressionsDelta": 97,
+    "clicksDelta": 2,
+    "changeMainlyFrom": "5 exact-ID posts previously unclassified; 8 of 40 IDs had metric deltas",
+    "source": "GitHub stored audits only, not another Buffer audit"
+  },
+  "latestExactIdReadback": {
+    "verifiedAt": "2026-11-19T23:14:00.856Z",
+    "sourceRepository": "innovation4131210-alt/sena-auto-post",
+    "sourcePath": "analytics/dmm-unclassified-exact-read-2026-11-20-result.json",
+    "sourceBlobSha": "fe6c291fec726ad3c10b3df0ebc2a71d8b6194f4",
+    "workflowRunId": 44635849712,
+    "readOnly": true,
+    "total": 5,
+    "directAffiliateLinksVerified": 3,
+    "promotionalShortLinksUnresolved": 1,
+    "noLinkIntroPosts": 1,
+    "originResolved": false,
+    "records": [
+      {
+        "bufferPostId": "6aff0b5fa4f319b98de06d87",
+        "observedStatus": "sent",
+        "dueAt": "2026-11-19T14:44:37.000Z",
+        "sourceTextReadbackVerified": true,
+        "commercialPromotion": false,
+        "linkEvidence": "no_link_intro_post",
+        "hasPrDisclosure": true,
+        "publisherOrAutomationSource": "unverified",
+        "sentJstSlot": "23:44_nonstandard",
+        "unverifiedMarketingClaims": "Personal purchase and firsthand review assertion not independently supported",
+        "recentMetrics": {
+          "impressions": 16,
+          "clicks": 0,
+          "comments": 0,
+          "reposts": 0,
+          "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+        }
+      },
+      {
+        "bufferPostId": "6afed8170c8cd932bc958a00",
+        "observedStatus": "sent",
+        "dueAt": "2026-11-19T14:30:00.000Z",
+        "sourceTextReadbackVerified": true,
+        "commercialPromotion": true,
+        "linkEvidence": "direct_fanza_affiliate_link_verified",
+        "hasPrDisclosure": true,
+        "publisherOrAutomationSource": "unverified",
+        "sentJstSlot": null,
+        "unverifiedMarketingClaims": "Price/review/offer value not independently reverified at dueAt; FANZA TV free-trial and monthly-fee terms require direct provider verification",
+        "recentMetrics": {
+          "impressions": 17,
+          "clicks": 0,
+          "comments": 0,
+          "reposts": 0,
+          "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+        }
+      },
+      {
+        "bufferPostId": "6afed7e290382f73c63bb320",
+        "observedStatus": "sent",
+        "dueAt": "2026-11-19T12:30:00.000Z",
+        "sourceTextReadbackVerified": true,
+        "commercialPromotion": true,
+        "linkEvidence": "direct_fanza_affiliate_link_verified",
+        "hasPrDisclosure": true,
+        "publisherOrAutomationSource": "unverified",
+        "sentJstSlot": null,
+        "unverifiedMarketingClaims": "Price/review/offer value not independently reverified at dueAt; FANZA TV free-trial and monthly-fee terms require direct provider verification",
+        "recentMetrics": {
+          "impressions": 38,
+          "clicks": 1,
+          "comments": 0,
+          "reposts": 0,
+          "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+        }
+      },
+      {
+        "bufferPostId": "6afd885a8847fb828247a532",
+        "observedStatus": "sent",
+        "dueAt": "2026-11-18T14:30:00.000Z",
+        "sourceTextReadbackVerified": true,
+        "commercialPromotion": true,
+        "linkEvidence": "direct_fanza_affiliate_link_verified",
+        "hasPrDisclosure": true,
+        "publisherOrAutomationSource": "unverified",
+        "sentJstSlot": null,
+        "unverifiedMarketingClaims": "Price/review/offer value not independently reverified at dueAt; FANZA TV free-trial and monthly-fee terms require direct provider verification",
+        "recentMetrics": {
+          "impressions": 14,
+          "clicks": 0,
+          "comments": 0,
+          "reposts": 0,
+          "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+        }
+      },
+      {
+        "bufferPostId": "6afd88950046e888b498cd21",
+        "observedStatus": "sent",
+        "dueAt": "2026-11-18T12:30:00.000Z",
+        "sourceTextReadbackVerified": true,
+        "commercialPromotion": true,
+        "linkEvidence": "promotional_short_link_destination_unverified",
+        "hasPrDisclosure": true,
+        "publisherOrAutomationSource": "unverified",
+        "sentJstSlot": null,
+        "unverifiedMarketingClaims": "Price/review/offer value not independently reverified at dueAt; FANZA TV free-trial and monthly-fee terms require direct provider verification",
+        "recentMetrics": {
+          "impressions": 21,
+          "clicks": 1,
+          "comments": 0,
+          "reposts": 0,
+          "metricsUpdatedAt": "2026-11-19T23:18:01.169Z"
+        }
+      }
+    ],
+    "decision": "All five posted bodies are now exact-ID confirmed. Four are promotional; three contain direct FANZA affiliate links and one contains unresolved buff.ly URL. The 23:44 post is an unlinked promotional introduction. No new scheduling, repost, retry, cancellation or content optimization pending resolution of producer route and X paid-partnership policy."
+  }
 }
