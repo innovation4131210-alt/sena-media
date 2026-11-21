@@ -1,7 +1,7 @@
 {
   "latest": {
-    "checkedAt": "2026-11-21T11:50:18+00:00",
-    "slot": "2026-11-21T12:20+09:00",
+    "checkedAt": "2026-11-21T19:01:27+00:00",
+    "slot": "2026-11-21T20:30+09:00",
     "ok": false,
     "contentId": null,
     "contentType": null,
@@ -11,23 +11,10 @@
     "externalLink": null,
     "warnings": [],
     "errors": [
-      "No sent or scheduled post found for slot 2026-11-21T12:20+09:00"
+      "No sent or scheduled post found for slot 2026-11-21T20:30+09:00"
     ]
   },
   "history": [
-    {
-      "checkedAt": "2026-10-09T04:02:36+00:00",
-      "slot": "2026-10-09T12:20+09:00",
-      "ok": true,
-      "contentId": "D10-NOON",
-      "contentType": "運用改善",
-      "bufferPostId": "6ac511e49a4f7a88bc25d5fe",
-      "bufferStatus": "sent",
-      "sentAt": "2026-10-09T03:20:01.552Z",
-      "externalLink": "https://x.com/2104714619688554496/status/2108397041088958695",
-      "warnings": [],
-      "errors": []
-    },
     {
       "checkedAt": "2026-10-09T12:22:16+00:00",
       "slot": "2026-10-09T20:30+09:00",
@@ -1591,6 +1578,21 @@
       "warnings": [],
       "errors": [
         "No sent or scheduled post found for slot 2026-11-21T12:20+09:00"
+      ]
+    },
+    {
+      "checkedAt": "2026-11-21T19:01:27+00:00",
+      "slot": "2026-11-21T20:30+09:00",
+      "ok": false,
+      "contentId": null,
+      "contentType": null,
+      "bufferPostId": null,
+      "bufferStatus": null,
+      "sentAt": null,
+      "externalLink": null,
+      "warnings": [],
+      "errors": [
+        "No sent or scheduled post found for slot 2026-11-21T20:30+09:00"
       ]
     }
   ]
