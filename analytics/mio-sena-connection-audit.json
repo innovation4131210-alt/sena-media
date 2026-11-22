@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-21T20:12:38.150Z",
+  "checkedAt": "2026-11-22T20:26:36.431Z",
   "readOnly": true,
   "connections": [
     {
@@ -19,9 +19,17 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 8
+            "sent": 9
           },
           "posts": [
+            {
+              "id": "6b021b706154129e2acf1a50",
+              "status": "sent",
+              "dueAt": "2026-11-21T22:30:08.326Z",
+              "sentAt": "2026-11-21T22:30:09.521Z",
+              "externalLink": "https://x.com/2121974378237935616/status/2124269159076786677",
+              "textHash": "6451725526b573971401d7d5038d003482262341926254cfb7218f2ee1250a34"
+            },
             {
               "id": "6b00f5e56b72ddd2d859589f",
               "status": "sent",
@@ -504,6 +512,30 @@
             "sent": 100
           },
           "posts": [
+            {
+              "id": "6b02cce22efb6790ff0c9c06",
+              "status": "sent",
+              "dueAt": "2026-11-22T14:30:00.000Z",
+              "sentAt": "2026-11-22T14:30:16.670Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2124510781706318135",
+              "textHash": "c67283a48f4d81aae77c7f180ee0b4744bf5a8f9e1a8f1b9b08126e8b284020c"
+            },
+            {
+              "id": "6b02cca6736f2a73eb14094c",
+              "status": "sent",
+              "dueAt": "2026-11-22T12:30:00.000Z",
+              "sentAt": "2026-11-22T12:30:18.355Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2124480589633929428",
+              "textHash": "d81debeb383c4c2349767129fb270d63ae1f94c0a7fef43eb0887a9c5307b768"
+            },
+            {
+              "id": "6b02c1a654a75af1d6608066",
+              "status": "sent",
+              "dueAt": "2026-11-22T11:30:00.000Z",
+              "sentAt": "2026-11-22T11:30:11.869Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2124465463014887736",
+              "textHash": "905fd8ee877545c196e4cb3605c7096ad6e68567603d6feccf0251ee2029faf1"
+            },
             {
               "id": "6b017aae957509ff9fb4423e",
               "status": "sent",
@@ -1279,30 +1311,6 @@
               "sentAt": "2026-09-24T14:30:32.474Z",
               "externalLink": "https://x.com/1647584462233010176/status/2103129963759034739",
               "textHash": "920f8bffce337140551008e258e223cf937ba4a37d0665806b6836f75ea13ae8"
-            },
-            {
-              "id": "6ab43e6677db9b2961b9cb3e",
-              "status": "sent",
-              "dueAt": "2026-09-24T12:30:00.000Z",
-              "sentAt": "2026-09-24T12:30:22.570Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2103099721745080563",
-              "textHash": "ab159b893374b52d973c0dd1efdb1a1578da5bb5d55cde2cc50be626817180fd"
-            },
-            {
-              "id": "6ab43e63981b51098bd9f6c2",
-              "status": "sent",
-              "dueAt": "2026-09-24T03:30:00.000Z",
-              "sentAt": "2026-09-24T03:30:05.416Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2102963756028280914",
-              "textHash": "fc8ce4c87cf46b6b9f88ac803af22ee772386a55801d313ceced354fcf185ba9"
-            },
-            {
-              "id": "6ab2ecc998ae6feaa619b1b7",
-              "status": "sent",
-              "dueAt": "2026-09-23T13:03:00.000Z",
-              "sentAt": "2026-09-23T13:04:48.300Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2102745999022211229",
-              "textHash": "b209e73128715bb7da066edf3f252bf8daeff2c9ecd8a9750d834c4bb9a6069e"
             }
           ]
         }
@@ -2896,18 +2904,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-21T20:12:38.150Z",
+      "evaluatedAt": "2026-11-22T20:26:36.431Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-22T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-23T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-22",
+      "nextBatchDate": "2026-11-23",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -2919,18 +2927,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-21T20:12:38.150Z",
+      "evaluatedAt": "2026-11-22T20:26:36.431Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-22T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-23T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-23",
+      "firstUnverifiedDate": "2026-11-24",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -2942,18 +2950,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-21T20:12:38.150Z",
+      "evaluatedAt": "2026-11-22T20:26:36.431Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-22T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-23T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-23",
+      "firstUnverifiedDate": "2026-11-24",
       "errors": [
         "next_day_reservation_unverified"
       ],
