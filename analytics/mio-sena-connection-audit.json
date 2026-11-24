@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-22T20:26:36.431Z",
+  "checkedAt": "2026-11-24T01:08:32.907Z",
   "readOnly": true,
   "connections": [
     {
@@ -19,9 +19,25 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 9
+            "sent": 11
           },
           "posts": [
+            {
+              "id": "6b04d13ebdab57d57696dad6",
+              "status": "sent",
+              "dueAt": "2026-11-23T23:50:22.796Z",
+              "sentAt": "2026-11-23T23:50:24.101Z",
+              "externalLink": "https://x.com/2121974378237935616/status/2125014128615911815",
+              "textHash": "cdf2b1408506da01cc87a38cee64e40f235ca6636bc21d400f618e68d0d233ba"
+            },
+            {
+              "id": "6b03800a3a86d710128758f3",
+              "status": "sent",
+              "dueAt": "2026-11-22T23:51:38.183Z",
+              "sentAt": "2026-11-22T23:51:39.491Z",
+              "externalLink": "https://x.com/2121974378237935616/status/2124652057109868622",
+              "textHash": "acb6e713ee27438b981655b7b669f4b4b1bac2c9bce5ee16495013ddf003fc19"
+            },
             {
               "id": "6b021b706154129e2acf1a50",
               "status": "sent",
@@ -108,9 +124,41 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 48
+            "sent": 52
           },
           "posts": [
+            {
+              "id": "6b0424cf18bed517668ec649",
+              "status": "sent",
+              "dueAt": "2026-11-23T11:30:00.000Z",
+              "sentAt": "2026-11-23T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702834783319117063?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "493b78f15da3cef1415c64e545a8082539769b21534b7b4cdbcd1138d4afe136"
+            },
+            {
+              "id": "6b048ded86c4cd4c7b3244ce",
+              "status": "sent",
+              "dueAt": "2026-11-22T11:30:00.000Z",
+              "sentAt": "2026-11-22T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702834383622868231?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "6a0431de9c13a5a488279e823160572dde108a6fc3cf3b99b433dc92480e1c4f"
+            },
+            {
+              "id": "6b048ded86c4cd4c7b3244d3",
+              "status": "sent",
+              "dueAt": "2026-11-21T11:30:00.000Z",
+              "sentAt": "2026-11-21T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702834128885976338?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "03195e1585f0b0ca4d57dbbd50e16543ca30e5de7ebfa094e1d4707f06a7531d"
+            },
+            {
+              "id": "6b048ded86c4cd4c7b3244d1",
+              "status": "sent",
+              "dueAt": "2026-11-20T11:30:00.000Z",
+              "sentAt": "2026-11-20T11:30:00.000Z",
+              "externalLink": "https://www.tiktok.com/@mio.ai_life/video/7702833741147753746?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+              "textHash": "9afc8012cd84fa684e85a571bd0ca256e5973eafd274e143af09bb9b8a20d633"
+            },
             {
               "id": "6affc7def4ee84c7caf9c8f8",
               "status": "sent",
@@ -512,6 +560,22 @@
             "sent": 100
           },
           "posts": [
+            {
+              "id": "6b0420f05958db29199de59d",
+              "status": "sent",
+              "dueAt": "2026-11-23T14:30:00.000Z",
+              "sentAt": "2026-11-23T14:30:15.745Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2124873165348200741",
+              "textHash": "bf8f7810c80d3e20454d3a5efd80216ada335888de7c9b1139ac147be6f635b1"
+            },
+            {
+              "id": "6b04205d6278e4f21e597027",
+              "status": "sent",
+              "dueAt": "2026-11-23T12:30:00.000Z",
+              "sentAt": "2026-11-23T12:30:11.230Z",
+              "externalLink": "https://x.com/1647584462233010176/status/2124842947585675366",
+              "textHash": "adff4e5e6614c4b5befa63ec01e23b0211df5f680dbe66f7d9df8228a0df8837"
+            },
             {
               "id": "6b02cce22efb6790ff0c9c06",
               "status": "sent",
@@ -1295,22 +1359,6 @@
               "sentAt": "2026-09-25T12:30:44.743Z",
               "externalLink": "https://x.com/1647584462233010176/status/2103462202095087838",
               "textHash": "10bddb5bf7d6a10ead7dbe000d4632295c03fe4ad3bd57ca28874210fd157101"
-            },
-            {
-              "id": "6ab58fe6858bdb85a736f6eb",
-              "status": "sent",
-              "dueAt": "2026-09-25T03:30:00.000Z",
-              "sentAt": "2026-09-25T03:30:06.915Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2103326149979914526",
-              "textHash": "ca654f578dc11fb943324c15fd0fa813780384f3fad8e1fa834a69c6827ebe00"
-            },
-            {
-              "id": "6ab43e680316fca1a94e1d6a",
-              "status": "sent",
-              "dueAt": "2026-09-24T14:30:00.000Z",
-              "sentAt": "2026-09-24T14:30:32.474Z",
-              "externalLink": "https://x.com/1647584462233010176/status/2103129963759034739",
-              "textHash": "920f8bffce337140551008e258e223cf937ba4a37d0665806b6836f75ea13ae8"
             }
           ]
         }
@@ -2904,18 +2952,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-22T20:26:36.431Z",
+      "evaluatedAt": "2026-11-24T01:08:32.907Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-23T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-24T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-23",
+      "nextBatchDate": "2026-11-24",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -2927,18 +2975,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-22T20:26:36.431Z",
+      "evaluatedAt": "2026-11-24T01:08:32.907Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-23T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-24T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-24",
+      "firstUnverifiedDate": "2026-11-25",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -2950,18 +2998,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-22T20:26:36.431Z",
+      "evaluatedAt": "2026-11-24T01:08:32.907Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-23T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-24T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-24",
+      "firstUnverifiedDate": "2026-11-25",
       "errors": [
         "next_day_reservation_unverified"
       ],
