@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "project": "MIO X @mio_ai_life_jp",
+  "action": "cancel_exact_text_only_scheduled_posts",
+  "requestedAt": "2026-11-24T23:27:55.077Z",
+  "sourceRun": {
+    "repository": "innovation4131210-alt/sena-media",
+    "workflow": "Refill MIO X Buffer queue",
+    "runId": 45502303158,
+    "observedAt": "2026-11-24T22:35:29.058Z"
+  },
+  "channelId": "6ab74779ea19ca0bdef024db",
+  "bufferPostIds": [
+    "6b041354271db8fb3d6540ff",
+    "6b0413bdc548472bd1aedfcf",
+    "6b0543819b9ff474ad01f6b0",
+    "6b0543bf2adde9e7672ebe56",
+    "6b05445699746c6d472d4965"
+  ],
+  "reason": "Latest owner run found five live scheduled MIO X posts without image/video assets. MIO X originals are visual-first; cancel only these exact IDs before publication and do not create replacements or catch-up posts.",
+  "safeguards": {
+    "exactChannelIdentityRequired": true,
+    "fullInventoryRequired": true,
+    "scheduledStatusRequired": true,
+    "textOnlyRequired": true,
+    "refuseIfVisualNowPresent": true,
+    "refuseUnrequestedTextOnlyScheduledPosts": true,
+    "postRemovalReadbackRequired": true,
+    "noReplacement": true,
+    "noCatchup": true,
+    "noOtherPostMutation": true,
+    "noRetry": true
+  }
+}
