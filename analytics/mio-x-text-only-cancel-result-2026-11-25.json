@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "request": {
+    "version": 1,
+    "project": "MIO X @mio_ai_life_jp",
+    "action": "cancel_exact_text_only_scheduled_posts",
+    "requestedAt": "2026-11-24T23:27:55.077Z",
+    "sourceRun": {
+      "repository": "innovation4131210-alt/sena-media",
+      "workflow": "Refill MIO X Buffer queue",
+      "runId": 45502303158,
+      "observedAt": "2026-11-24T22:35:29.058Z"
+    },
+    "channelId": "6ab74779ea19ca0bdef024db",
+    "bufferPostIds": [
+      "6b041354271db8fb3d6540ff",
+      "6b0413bdc548472bd1aedfcf",
+      "6b0543819b9ff474ad01f6b0",
+      "6b0543bf2adde9e7672ebe56",
+      "6b05445699746c6d472d4965"
+    ],
+    "reason": "Latest owner run found five live scheduled MIO X posts without image/video assets. MIO X originals are visual-first; cancel only these exact IDs before publication and do not create replacements or catch-up posts.",
+    "safeguards": {
+      "exactChannelIdentityRequired": true,
+      "fullInventoryRequired": true,
+      "scheduledStatusRequired": true,
+      "textOnlyRequired": true,
+      "refuseIfVisualNowPresent": true,
+      "refuseUnrequestedTextOnlyScheduledPosts": true,
+      "postRemovalReadbackRequired": true,
+      "noReplacement": true,
+      "noCatchup": true,
+      "noOtherPostMutation": true,
+      "noRetry": true
+    }
+  },
+  "startedAt": "2026-11-24T23:28:12.968Z",
+  "results": [
+    {
+      "id": "6b041354271db8fb3d6540ff",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b041354271db8fb3d6540ff",
+      "dueAt": "2026-11-25T10:30:00.000Z",
+      "text": "水曜日の夜、おつかれさまです🌙 晩ごはんのあとのデザート、みなさんならどっち？ 1️⃣ あたたかい飲み物とケーキ 2️⃣ さっぱりアイス 番号で教えてください☺️ 私は迷って両方…なんて日もあります。"
+    },
+    {
+      "id": "6b0413bdc548472bd1aedfcf",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b0413bdc548472bd1aedfcf",
+      "dueAt": "2026-11-26T10:30:00.000Z",
+      "text": "木曜の夜ですね🌙 週末まであと少し。みなさんの「金曜夜の楽しみ」はどっち？ 1️⃣ おいしいものを食べる 2️⃣ 好きな動画や音楽に浸る 番号で教えてください☺️ 私は2️⃣で充電するタイプです。"
+    },
+    {
+      "id": "6b0543819b9ff474ad01f6b0",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b0543819b9ff474ad01f6b0",
+      "dueAt": "2026-11-27T10:30:00.000Z",
+      "text": "週末の楽しみ、みんなは何派？ ①おうち映画 ②おでかけ ③とにかく寝る。私は③寄りの①かな…教えてね "
+    },
+    {
+      "id": "6b0543bf2adde9e7672ebe56",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b0543bf2adde9e7672ebe56",
+      "dueAt": "2026-11-28T10:30:00.000Z",
+      "text": "夜、考えごとで眠れない日ってない？ 姉妹みたいな存在の星読み屋さん @yurara_hoshi が、毎朝タロットを1枚引いてるよ。明日のヒントにどうぞ🌙 "
+    },
+    {
+      "id": "6b05445699746c6d472d4965",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b05445699746c6d472d4965",
+      "dueAt": "2026-11-29T10:30:00.000Z",
+      "text": "11月も終わりだね。今年のうちにやりたいこと、みんなはあと何がある？ 私は新しいダンスを1つ覚えたいな "
+    }
+  ],
+  "allRemoved": true,
+  "readbackVerified": true,
+  "completedAt": "2026-11-24T23:28:14.273Z",
+  "noReplacement": true,
+  "noCatchup": true,
+  "noOtherPostMutation": true
+}
