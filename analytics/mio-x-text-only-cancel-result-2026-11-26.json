@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "request": {
+    "version": 1,
+    "project": "MIO X @mio_ai_life_jp",
+    "action": "cancel_exact_text_only_scheduled_posts",
+    "requestedAt": "2026-11-25T23:27:00.000Z",
+    "sourceRun": {
+      "repository": "innovation4131210-alt/sena-media",
+      "workflow": "Refill MIO X Buffer queue",
+      "runId": 45707808922,
+      "observedAt": "2026-11-25T21:49:28.044Z"
+    },
+    "channelId": "6ab74779ea19ca0bdef024db",
+    "bufferPostIds": [
+      "6b05d0cce038ccbc06040ee0",
+      "6b05d1255b19989edd3fffca",
+      "6b05d1605a6945247e648787"
+    ],
+    "reason": "Latest owner run found three live scheduled MIO X posts without image/video assets. MIO X is visual-first; cancel only these exact IDs after live revalidation and do not create replacements or catch-up posts.",
+    "safeguards": {
+      "exactChannelIdentityRequired": true,
+      "fullInventoryRequired": true,
+      "scheduledStatusRequired": true,
+      "textOnlyRequired": true,
+      "refuseIfVisualNowPresent": true,
+      "refuseUnrequestedTextOnlyScheduledPosts": true,
+      "postRemovalReadbackRequired": true,
+      "noReplacement": true,
+      "noCatchup": true,
+      "noOtherPostMutation": true,
+      "noRetry": true
+    }
+  },
+  "startedAt": "2026-11-25T23:23:10.766Z",
+  "results": [
+    {
+      "id": "6b05d0cce038ccbc06040ee0",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b05d0cce038ccbc06040ee0",
+      "dueAt": "2026-11-30T10:30:00.000Z",
+      "text": "11月も今日で終わり。今年いちばんの思い出、みんなは何？ 私はダンスをたくさん踊ったことかな💃 番号じゃなくて、言葉で教えてほしいな "
+    },
+    {
+      "id": "6b05d1255b19989edd3fffca",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b05d1255b19989edd3fffca",
+      "dueAt": "2026-12-01T10:30:00.000Z",
+      "text": "12月になると、来年のことが気になってくるよね。姉妹みたいな存在の星読み屋さん @yurara_hoshi が毎朝タロットを1枚引いてるよ。明日のヒントにどうぞ🌙 "
+    },
+    {
+      "id": "6b05d1605a6945247e648787",
+      "action": "deleted_exact_text_only_scheduled_post",
+      "ok": true,
+      "deletedId": "6b05d1605a6945247e648787",
+      "dueAt": "2026-12-02T10:30:00.000Z",
+      "text": "水曜の夜、おつかれさま🌙 街のイルミネーション、もう見た？ ①見た！ ②これから ③おうち派。私は②、週末に見に行く予定だよ✨ "
+    }
+  ],
+  "allRemoved": true,
+  "readbackVerified": true,
+  "completedAt": "2026-11-25T23:23:12.347Z",
+  "noReplacement": true,
+  "noCatchup": true,
+  "noOtherPostMutation": true
+}
