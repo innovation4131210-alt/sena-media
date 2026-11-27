@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-26T22:30:21.251Z",
+  "checkedAt": "2026-11-27T22:14:59.903Z",
   "readOnly": true,
   "connections": [
     {
@@ -29,9 +29,17 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 44
+            "sent": 45
           },
           "posts": [
+            {
+              "id": "6b0967c7431038557713321e",
+              "status": "sent",
+              "dueAt": "2026-11-27T11:21:38.000Z",
+              "sentAt": "2026-11-27T11:21:38.000Z",
+              "externalLink": "https://www.threads.com/@sena.virtual.studio/post/DgPj5h4Dzy6",
+              "textHash": "188a6dbcdd06e2df871e5d67e5c84738d28e767375bf65dd4f5369678b5d663e"
+            },
             {
               "id": "6b0814295d8433edd9d0209a",
               "status": "sent",
@@ -398,10 +406,18 @@
           "historyTruncated": false,
           "knownMioXPostPresent": false,
           "counts": {
-            "sent": 53,
+            "sent": 54,
             "draft": 1
           },
           "posts": [
+            {
+              "id": "6b096596645f8022e2f6f6e7",
+              "status": "sent",
+              "dueAt": "2026-11-27T11:12:16.000Z",
+              "sentAt": "2026-11-27T11:12:16.000Z",
+              "externalLink": "https://www.threads.com/@mio.ai_life/post/DgPi05ij7yB",
+              "textHash": "46babc28746227517f0766ae53a755205c7b3daeb2cd0a86d992bfa04508f7fd"
+            },
             {
               "id": "6b081415f4d46cd34a4e2d65",
               "status": "sent",
@@ -1664,18 +1680,18 @@
     "sena_instagram": {
       "lane": "sena_instagram",
       "expectedTimeJst": "20:30",
-      "evaluatedAt": "2026-11-26T22:30:21.251Z",
+      "evaluatedAt": "2026-11-27T22:14:59.903Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
       "cadence": "three_posts_daily",
       "batchSize": 3,
-      "expectedPublicationDueAt": "2026-11-27T11:30:00.000Z",
+      "expectedPublicationDueAt": "2026-11-28T11:30:00.000Z",
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
-      "nextBatchDate": "2026-11-27",
+      "nextBatchDate": "2026-11-28",
       "errors": [
         "next_batch_reservation_unverified"
       ],
@@ -1687,18 +1703,18 @@
     "mio_threads": {
       "lane": "mio_threads",
       "expectedTimeJst": "19:00",
-      "evaluatedAt": "2026-11-26T22:30:21.251Z",
+      "evaluatedAt": "2026-11-27T22:14:59.903Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-27T10:00:00.000Z",
+      "expectedPublicationDueAt": "2026-11-28T10:00:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-28",
+      "firstUnverifiedDate": "2026-11-29",
       "errors": [
         "next_day_reservation_unverified"
       ],
@@ -1710,18 +1726,18 @@
     "sena_threads": {
       "lane": "sena_threads",
       "expectedTimeJst": "20:10",
-      "evaluatedAt": "2026-11-26T22:30:21.251Z",
+      "evaluatedAt": "2026-11-27T22:14:59.903Z",
       "mutationAllowed": false,
       "status": "action_required",
       "ok": false,
-      "expectedPublicationDueAt": "2026-11-27T11:10:00.000Z",
+      "expectedPublicationDueAt": "2026-11-28T11:10:00.000Z",
       "publicationGraceMinutes": 60,
       "todayPublicationStatus": "not_due_for_verification",
       "publishedIds": [],
       "publishedUrls": [],
       "futureDates": [],
       "consecutiveFutureDays": 0,
-      "firstUnverifiedDate": "2026-11-28",
+      "firstUnverifiedDate": "2026-11-29",
       "errors": [
         "next_day_reservation_unverified"
       ],
