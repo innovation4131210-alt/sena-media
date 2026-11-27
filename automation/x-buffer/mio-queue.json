@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T08:47:04.066Z",
+  "updatedAt": "2026-11-27T21:27:13.951Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -795,12 +795,12 @@
     "channelName": "mio_ai_life_jp",
     "scheduledCount": 5,
     "verifiedVisualCount": 5,
-    "verifiedAt": "2026-11-27T08:47:04.066Z"
+    "verifiedAt": "2026-11-27T21:27:13.951Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner.",
   "inventoryHealth": {
     "schemaVersion": 1,
-    "checkedAt": "2026-11-27T08:47:04.066Z",
+    "checkedAt": "2026-11-27T21:27:13.951Z",
     "status": "source_exhausted",
     "ok": false,
     "severity": "warning",
