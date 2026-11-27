@@ -1,7 +1,7 @@
 {
   "latest": {
-    "checkedAt": "2026-11-27T05:19:56+00:00",
-    "slot": "2026-11-27T12:20+09:00",
+    "checkedAt": "2026-11-27T13:12:14+00:00",
+    "slot": "2026-11-27T20:30+09:00",
     "ok": false,
     "contentId": null,
     "contentType": null,
@@ -11,23 +11,10 @@
     "externalLink": null,
     "warnings": [],
     "errors": [
-      "No sent or scheduled post found for slot 2026-11-27T12:20+09:00"
+      "No sent or scheduled post found for slot 2026-11-27T20:30+09:00"
     ]
   },
   "history": [
-    {
-      "checkedAt": "2026-10-13T12:26:03+00:00",
-      "slot": "2026-10-13T20:30+09:00",
-      "ok": true,
-      "contentId": "D14-PM",
-      "contentType": "参加型",
-      "bufferPostId": "6aca572ced92ed8fa5d23086",
-      "bufferStatus": "sent",
-      "sentAt": "2026-10-13T11:30:25.858Z",
-      "externalLink": "https://x.com/2104714619688554496/status/2109970007178297856",
-      "warnings": [],
-      "errors": []
-    },
     {
       "checkedAt": "2026-10-14T02:08:48+00:00",
       "slot": "2026-10-14T08:10+09:00",
@@ -1617,6 +1604,21 @@
       "warnings": [],
       "errors": [
         "No sent or scheduled post found for slot 2026-11-27T12:20+09:00"
+      ]
+    },
+    {
+      "checkedAt": "2026-11-27T13:12:14+00:00",
+      "slot": "2026-11-27T20:30+09:00",
+      "ok": false,
+      "contentId": null,
+      "contentType": null,
+      "bufferPostId": null,
+      "bufferStatus": null,
+      "sentAt": null,
+      "externalLink": null,
+      "warnings": [],
+      "errors": [
+        "No sent or scheduled post found for slot 2026-11-27T20:30+09:00"
       ]
     }
   ]
