@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T21:27:13.951Z",
+  "updatedAt": "2026-11-28T08:03:10.165Z",
   "policy": {
     "enabled": true,
     "maxScheduled": 9,
@@ -793,20 +793,20 @@
   "lastRun": {
     "channelId": "6ab74779ea19ca0bdef024db",
     "channelName": "mio_ai_life_jp",
-    "scheduledCount": 5,
-    "verifiedVisualCount": 5,
-    "verifiedAt": "2026-11-27T21:27:13.951Z"
+    "scheduledCount": 4,
+    "verifiedVisualCount": 4,
+    "verifiedAt": "2026-11-28T08:03:10.165Z"
   },
   "refillReason": "Bridge Oct 10-12 after repeated successful owner runs produced no pending approved intents; use only unique QC-accepted existing visuals, then return normal replenishment to the MIO photo-production owner.",
   "inventoryHealth": {
     "schemaVersion": 1,
-    "checkedAt": "2026-11-27T21:27:13.951Z",
+    "checkedAt": "2026-11-28T08:03:10.165Z",
     "status": "source_exhausted",
     "ok": false,
     "severity": "warning",
     "coverageStatus": "sufficient_observed",
     "sourceStatus": "exhausted",
-    "futureScheduledCount": 5,
+    "futureScheduledCount": 4,
     "futurePendingCount": 0,
     "futureReadyPendingCount": 0,
     "futureBlockedPendingCount": 0,
@@ -815,7 +815,7 @@
     "historicalScheduledCount": 31,
     "overdueProviderScheduledCount": 0,
     "invalidProviderScheduledCount": 0,
-    "nextScheduledAt": "2026-11-27T23:00:00.000Z",
+    "nextScheduledAt": "2026-11-28T23:00:00.000Z",
     "lastScheduledAt": "2026-12-01T23:00:00.000Z",
     "largestGapHours": 24,
     "thresholds": {
